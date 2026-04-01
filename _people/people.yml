@@ -1,0 +1,20 @@
+# People Configuration
+# Add course instructors and teaching assistants here
+
+- given: Your
+  family: Name
+  institution: Your Institution
+  url: http://example.com
+  role: Instructor
+  bio: >
+    Brief biography or description of the instructor.
+  
+# Add more people as needed:
+# - given: Another
+#   family: Instructor
+#   institution: Institution Name
+#   url: http://example.com
+#   role: Teaching Assistant
+#   bio: >
+#     Biography here
+

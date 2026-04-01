@@ -1,0 +1,65 @@
+# LaMD Configuration Template for Course
+# Update these settings for your specific course
+
+# Author information - update with your details
+author:
+  - given: YOUR_GIVEN_NAME
+    family: YOUR_FAMILY_NAME
+    institution: YOUR_INSTITUTION
+    url: YOUR_URL
+
+# Directory paths
+macrosdir: macros # Macro directory (optional, or use shared macros)
+bibdir: $HOME/lawrennd/bibliography # Bibliography directory
+postsdir: ../_lectures/ # Where compiled lecture HTML files go
+slidesdir: ../slides/ # Where compiled slides go
+notesdir: ../_notes/ # Where compiled notes go
+notebooksdir: ../_notebooks/ # Where compiled notebooks go
+practicalsdir: ../_practicals/ # Where compiled practicals go
+snippetsdir: $HOME/lawrennd/snippets # Directory for reusable content snippets
+writediagramsdir: . # Where to write generated diagrams
+scriptsdir: ../scripts/ # Directory for scripts
+diagramsdir: ./slides/diagrams/ # Directory for diagrams
+
+# Layout and styling
+slidesheader: slides-header.html
+notation: talk-notation.tex
+layout: lecture # Default layout for lectures
+
+# Output format settings (True/False)
+posts: True # Generate HTML lecture pages
+docx: False # Generate Word documents
+notespdf: False # Generate PDF notes
+slidesipynb: False # Generate Jupyter notebooks for slides
+pptx: False # Generate PowerPoint presentations
+pdf: False # Generate PDF lectures
+assignment: False # Generate assignment format
+ipynb: True # Generate Jupyter notebooks
+reveal: True # Use reveal.js for slides
+
+# Website configuration
+url: "https://GITHUB_ORG.github.io/" # the base hostname & protocol for your site
+baseurl: COURSECODE/
+talkcss: https://inverseprobability.com/assets/css/talks.css
+people: ../_people/people.yml
+
+# Use shared macros from lamd installation
+macrosdir: $HOME/lawrennd/lamd/lamd/macros
+
+# Slide transition effect
+transition: None # Options: None, fade, slide, convex, concave, zoom
+
+# Custom templates (optional)
+potx: custom-reference.potx 
+dotx: custom-reference.dotx
+
+# Venue information (update for your course)
+venue: COURSE_VENUE_NAME
+
+# GitHub Pages configuration
+ghub:
+  - organization: GITHUB_ORG # Your GitHub username or organization
+    repository: COURSECODE # Repository name
+    branch: gh-pages # Branch for GitHub Pages
+    directory: _lamd # Directory containing source files
+

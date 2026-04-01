@@ -1,0 +1,107 @@
+# Course Configuration Template
+# Replace COURSECODE with your course code (e.g., mlfc, advds, mlphysical)
+# Replace COURSETITLE with your course title
+
+title: COURSETITLE
+description: COURSE_DESCRIPTION
+baseurl: "/COURSECODE"
+url: "https://mlatcl.github.io"
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+github_username: mlatcl
+colab: https://colab.research.google.com
+nbviewer: https://nbviewer.jupyter.org
+
+slidesdir: slides
+reveal:
+  width: 512
+  height: 384
+youtube:
+  width: 512
+  height: 384
+
+# Collections
+collections:
+  updates:
+    output: true
+  lectures:
+    permalink: /lectures/:title:output_ext
+    output: true
+    sort_by: week
+  casestudies:
+    permalink: /casestudies/:title:output_ext
+    output: true
+    sort_by: label
+  practicals:
+    permalink: /practicals/:title:output_ext
+    output: true
+    sort_by: week
+    directory: _practicals
+  projects:
+    permalink: /projects/:title:output_ext
+    output: true
+    sort_by: date
+    directory: _projects
+
+# GitHub integration
+ghub:
+  edit: true
+  repository: COURSECODE
+
+future: true
+  
+# Build settings
+plugins:
+- jekyll-feed
+- jekyll-seo-tag
+- jekyll-remote-theme
+- jekyll-paginate-v2
+
+sass:
+  sass_dir: _sass
+
+# Pagination
+pagination:
+  enabled: true
+  per_page: 5
+  permalink: '/page/:num/'
+  title: ':title'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+
+# Use the ML@CL Jekyll theme
+remote_theme: mlatcl/jekyll-theme
+twitter_svg: ./assets/images/social-tw.svg
+facebook_svg: ./assets/images/social-fb.svg
+instagram_svg: ./assets/images/social-in.svg
+image_root: ./assets/images/
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - slides/reveal.js/plugin/markdown/example
+  - slides/reveal.js/plugin/markdown/example
+  - slides/reveal.js-3.8.0/plugin/markdown/example
+  - slides/reveal.js-3.8.0/test/
+  - slides/reveal.js-3.8.0/css/theme/
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - node_modules
+  - vendor
+  - .git
+  - .github
+  - .DS_Store
+  - backlog/
+  - cip/
+  - ai-requirements/
+  - tenets/
+  - docs/
+  - scripts/
+  - test/
+
