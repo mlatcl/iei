@@ -26,8 +26,8 @@ This will interactively prompt you for:
 ### Option B: Manual Customization
 
 Edit these files and replace placeholders:
-- `_config.yml` - Replace `COURSECODE`, `COURSETITLE`, `COURSE_DESCRIPTION`
-- `_lamd/_lamd.yml` - Replace `COURSECODE` and author information
+- `_config.yml` - Replace `iei`, `Innformation, Energy and Intelligence`, `This course looks at the relationship between information, energy and intelligence. The idea iis to provide students with a solid grounding in the sets of tools that can help us understand the limits of what an intelligent system might be able to do. This module builds mathematical machinery needed to answer that question rigorously. Entropy appears in three apparently separate traditions — thermodynamics (Boltzmann, Gibbs), information theory (Shannon), and Bayesian inference (Jaynes) — and turns out to be the same mathematical object viewed from different operational assumptions. Information geometry (Amari) provides the unifying geometric language.`
+- `_lamd/_lamd.yml` - Replace `iei` and author information
 - `index.html` - Update course description
 - `_people/people.yml` - Add your information
 
@@ -41,7 +41,7 @@ bundle install
 
 ```bash
 bundle exec jekyll serve
-# Visit http://localhost:4000/COURSECODE/
+# Visit http://localhost:4000/iei/
 ```
 
 ## 5. Create Your First Lecture

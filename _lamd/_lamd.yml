@@ -3,10 +3,10 @@
 
 # Author information - update with your details
 author:
-  - given: YOUR_GIVEN_NAME
-    family: YOUR_FAMILY_NAME
-    institution: YOUR_INSTITUTION
-    url: YOUR_URL
+  - given: Neil
+    family: Lawrence
+    institution: University of Cambridge
+    url: https://inverseprobability.com
 
 # Directory paths
 bibdir: $HOME/lawrennd/bibliography # Bibliography directory
@@ -37,8 +37,8 @@ ipynb: True # Generate Jupyter notebooks
 reveal: True # Use reveal.js for slides
 
 # Website configuration
-url: "https://GITHUB_ORG.github.io/" # the base hostname & protocol for your site
-baseurl: COURSECODE/
+url: "https://mlatcl.github.io/" # the base hostname & protocol for your site
+baseurl: iei/
 talkcss: https://inverseprobability.com/assets/css/talks.css
 people: ../_people/people.yml
 
@@ -53,12 +53,12 @@ potx: custom-reference.potx
 dotx: custom-reference.dotx
 
 # Venue information (update for your course)
-venue: COURSE_VENUE_NAME
+venue: TBA
 
 # GitHub Pages configuration
 ghub:
-  - organization: GITHUB_ORG # Your GitHub username or organization
-    repository: COURSECODE # Repository name
+  - organization: mlatcl # Your GitHub username or organization
+    repository: iei # Repository name
     branch: gh-pages # Branch for GitHub Pages
     directory: _lamd # Directory containing source files
 

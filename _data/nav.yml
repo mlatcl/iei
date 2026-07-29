@@ -3,15 +3,15 @@
 
 main_nav:
   - label: Overview
-    link: /COURSECODE/
+    link: /iei/
   - label: About
-    link: /COURSECODE/about/
+    link: /iei/about/
   - label: Lectures
-    link: /COURSECODE/lectures/
+    link: /iei/lectures/
   - label: Practicals
-    link: /COURSECODE/practicals/
+    link: /iei/practicals/
   - label: Assessment
-    link: /COURSECODE/assessment/
+    link: /iei/assessment/
   - label: ML@CL Group
     link: /
     submenu_item:
