@@ -30,11 +30,10 @@ Students should have an undergraduate-level understanding of probability and sta
 
 Primary references (all covered in lectures):*
 
- Shannon, C.E. (1948). "A Mathematical Theory of Communication." *Bell System Technical Journal*, 27, 379–423. 
- Jaynes, E.T. (1957). "Information Theory and Statistical Mechanics." *Physical Review*, 106(4), 620–630.  
-Landauer, R. (1961). "Irreversibility and Heat Generation in the Computing Process." *IBM Journal of Research and Development*, 5(3), 183–191. 
- Watanabe, S. (1960). "Information Theoretical Analysis of Multivariate Correlation." *IBM Journal of Research and Development*, 4(1), 66–82. 
- Amari, S. & Nagaoka, H. (2000). *Methods of Information Geometry*. AMS/Oxford University Press. *(Chapters 1–3)*  
-Lawrence, N.D. (2025). "The Inaccessible Game." *(Course notes; distributed via Moodle)*  *Supporting textbooks:*  
- Cover, T.M. & Thomas, J.A. (2006). *Elements of Information Theory* (2nd ed.). Wiley. *(Background reference for Weeks 1–4)*  
-MacKay, D.J.C. (2003). *Information Theory, Inference, and Learning Algorithms*. Cambridge University Press. *(Freely available online; relevant chapters indicated per session)* 
+* Shannon, C.E. (1948). "A Mathematical Theory of Communication." *Bell System Technical Journal*, 27, 379–423. 
+* Jaynes, E.T. (1957). "Information Theory and Statistical Mechanics." *Physical Review*, 106(4), 620–630.
+* Landauer, R. (1961). "Irreversibility and Heat Generation in the Computing Process." *IBM Journal of Research and Development*, 5(3), 183–191. 
+* Watanabe, S. (1960). "Information Theoretical Analysis of Multivariate Correlation." *IBM Journal of Research and Development*, 4(1), 66–82. 
+* Amari, S. & Nagaoka, H. (2000). *Methods of Information Geometry*. AMS/Oxford University Press. *(Chapters 1–3)*  
+* Cover, T.M. & Thomas, J.A. (2006). *Elements of Information Theory* (2nd ed.). Wiley. *(Background reference for Weeks 1–4)*  
+* MacKay, D.J.C. (2003). *Information Theory, Inference, and Learning Algorithms*. Cambridge University Press. *(Freely available online; relevant chapters indicated per session)* 
