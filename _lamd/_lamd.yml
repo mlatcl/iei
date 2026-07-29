@@ -9,7 +9,6 @@ author:
     url: YOUR_URL
 
 # Directory paths
-macrosdir: macros # Macro directory (optional, or use shared macros)
 bibdir: $HOME/lawrennd/bibliography # Bibliography directory
 postsdir: ../_lectures/ # Where compiled lecture HTML files go
 slidesdir: ../slides/ # Where compiled slides go
