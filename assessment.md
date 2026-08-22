@@ -1,6 +1,6 @@
 <!-- VIBECOURSE-GENERATED: run `./whats-next generate-site` to update -->
 ---
-layout: page
+layout: lecture-home
 title: Assessment
 permalink: /assessment/
 ---

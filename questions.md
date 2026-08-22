@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: lecture-home
 title: Questions
 permalink: /questions/
 ---

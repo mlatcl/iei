@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: lecture-home
 title: About
 permalink: /about/
 ---
