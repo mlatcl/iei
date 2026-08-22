@@ -125,7 +125,7 @@
 <div>
 <ul>
 <li class="fragment">Quiz 3 (ten minutes)</li>
-<li class="fragment">Multi-information; (I+H=C)</li>
+<li class="fragment">Same marginals, different joints; then (I+H=C)</li>
 <li class="fragment">Why (I=C) forces von Neumann entropy</li>
 </ul>
 </div>
@@ -135,6 +135,205 @@
 </section>
 <section id="multi-information" class="slide level2">
 <h2>Multi-Information</h2>
+</section>
+<section id="sampling-two-dimensional-variables" class="slide level2">
+<h2>Sampling Two Dimensional Variables</h2>
+<div id="animation-independent_velocities" class="lamd-animation" role="region" aria-label="" data-animation-group="independent_velocities">
+<noscript>
+<style>#animation-independent_velocities .animation-controls{display:none}#animation-independent_velocities .independent_velocities~.independent_velocities{display:none}</style>
+</noscript>
+<div class="animation-controls">
+<p><small></small> <input id="range-independent_velocities" type="range" min="0" max="7" value="0" aria-label="Frame slider for " aria-valuemin="0" aria-valuemax="7" aria-valuenow="0" onchange="typeof lamdSetDivs==='function'&&lamdSetDivs('independent_velocities')" oninput="typeof lamdSetDivs==='function'&&lamdSetDivs('independent_velocities')"> <button type="button" onclick="typeof lamdPlusDivs==='function'&&lamdPlusDivs(-1,'independent_velocities');" aria-label="Previous frame">❮</button> <button type="button" onclick="typeof lamdPlusDivs==='function'&&lamdPlusDivs(1,'independent_velocities');" aria-label="Next frame">❯</button></p>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+try{
+if(typeof showDivs==='function'){showDivs(1,'independent_velocities');}
+else{
+console.warn('[lamd] figure-animate.js not loaded; animation "'+'independent_velocities'+'" degraded to static first frame.');
+var c=document.getElementById('animation-independent_velocities');
+if(c){var ctrl=c.querySelector('.animation-controls');if(ctrl){ctrl.style.display='none';}}
+var f=document.getElementsByClassName('independent_velocities');
+for(var i=1;i<f.length;i++){f[i].style.display='none';}
+if(f.length>0){f[0].style.display='block';}
+}
+}catch(e){console.warn('[lamd] Animation "'+'independent_velocities'+'" failed to initialize:',e);}
+});
+</script>
+<div class="independent_velocities" style="text-align:center;" role="img" aria-label="independent_velocities" data-animation-frame="independent_velocities">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/independent_velocities000.svg" width="70%" style=" ">
+</object>
+</div>
+<div class="independent_velocities" style="text-align:center;" role="img" aria-label="independent_velocities" data-animation-frame="independent_velocities">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/independent_velocities001.svg" width="70%" style=" ">
+</object>
+</div>
+<div class="independent_velocities" style="text-align:center;" role="img" aria-label="independent_velocities" data-animation-frame="independent_velocities">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/independent_velocities002.svg" width="70%" style=" ">
+</object>
+</div>
+<div class="independent_velocities" style="text-align:center;" role="img" aria-label="independent_velocities" data-animation-frame="independent_velocities">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/independent_velocities003.svg" width="70%" style=" ">
+</object>
+</div>
+<div class="independent_velocities" style="text-align:center;" role="img" aria-label="independent_velocities" data-animation-frame="independent_velocities">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/independent_velocities004.svg" width="70%" style=" ">
+</object>
+</div>
+<div class="independent_velocities" style="text-align:center;" role="img" aria-label="independent_velocities" data-animation-frame="independent_velocities">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/independent_velocities005.svg" width="70%" style=" ">
+</object>
+</div>
+<div class="independent_velocities" style="text-align:center;" role="img" aria-label="independent_velocities" data-animation-frame="independent_velocities">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/independent_velocities006.svg" width="70%" style=" ">
+</object>
+</div>
+<div class="independent_velocities" style="text-align:center;" role="img" aria-label="independent_velocities" data-animation-frame="independent_velocities">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/independent_velocities007.svg" width="70%" style=" ">
+</object>
+</div>
+</div>
+</section>
+<section id="correlation" class="slide level2">
+<h2>Correlation</h2>
+<div>
+<ul>
+<li class="fragment">Correlation is when two variables are dependent</li>
+</ul>
+</div>
+</section>
+<section id="sampling-two-dimensional-variables-1" class="slide level2">
+<h2>Sampling Two Dimensional Variables</h2>
+<div id="animation-correlated_velocities" class="lamd-animation" role="region" aria-label="" data-animation-group="correlated_velocities">
+<noscript>
+<style>#animation-correlated_velocities .animation-controls{display:none}#animation-correlated_velocities .correlated_velocities~.correlated_velocities{display:none}</style>
+</noscript>
+<div class="animation-controls">
+<p><small></small> <input id="range-correlated_velocities" type="range" min="0" max="7" value="0" aria-label="Frame slider for " aria-valuemin="0" aria-valuemax="7" aria-valuenow="0" onchange="typeof lamdSetDivs==='function'&&lamdSetDivs('correlated_velocities')" oninput="typeof lamdSetDivs==='function'&&lamdSetDivs('correlated_velocities')"> <button type="button" onclick="typeof lamdPlusDivs==='function'&&lamdPlusDivs(-1,'correlated_velocities');" aria-label="Previous frame">❮</button> <button type="button" onclick="typeof lamdPlusDivs==='function'&&lamdPlusDivs(1,'correlated_velocities');" aria-label="Next frame">❯</button></p>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+try{
+if(typeof showDivs==='function'){showDivs(1,'correlated_velocities');}
+else{
+console.warn('[lamd] figure-animate.js not loaded; animation "'+'correlated_velocities'+'" degraded to static first frame.');
+var c=document.getElementById('animation-correlated_velocities');
+if(c){var ctrl=c.querySelector('.animation-controls');if(ctrl){ctrl.style.display='none';}}
+var f=document.getElementsByClassName('correlated_velocities');
+for(var i=1;i<f.length;i++){f[i].style.display='none';}
+if(f.length>0){f[0].style.display='block';}
+}
+}catch(e){console.warn('[lamd] Animation "'+'correlated_velocities'+'" failed to initialize:',e);}
+});
+</script>
+<div class="correlated_velocities" style="text-align:center;" role="img" aria-label="correlated_velocities" data-animation-frame="correlated_velocities">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/correlated_velocities000.svg" width="70%" style=" ">
+</object>
+</div>
+<div class="correlated_velocities" style="text-align:center;" role="img" aria-label="correlated_velocities" data-animation-frame="correlated_velocities">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/correlated_velocities001.svg" width="70%" style=" ">
+</object>
+</div>
+<div class="correlated_velocities" style="text-align:center;" role="img" aria-label="correlated_velocities" data-animation-frame="correlated_velocities">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/correlated_velocities002.svg" width="70%" style=" ">
+</object>
+</div>
+<div class="correlated_velocities" style="text-align:center;" role="img" aria-label="correlated_velocities" data-animation-frame="correlated_velocities">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/correlated_velocities003.svg" width="70%" style=" ">
+</object>
+</div>
+<div class="correlated_velocities" style="text-align:center;" role="img" aria-label="correlated_velocities" data-animation-frame="correlated_velocities">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/correlated_velocities004.svg" width="70%" style=" ">
+</object>
+</div>
+<div class="correlated_velocities" style="text-align:center;" role="img" aria-label="correlated_velocities" data-animation-frame="correlated_velocities">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/correlated_velocities005.svg" width="70%" style=" ">
+</object>
+</div>
+<div class="correlated_velocities" style="text-align:center;" role="img" aria-label="correlated_velocities" data-animation-frame="correlated_velocities">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/correlated_velocities006.svg" width="70%" style=" ">
+</object>
+</div>
+<div class="correlated_velocities" style="text-align:center;" role="img" aria-label="correlated_velocities" data-animation-frame="correlated_velocities">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/correlated_velocities007.svg" width="70%" style=" ">
+</object>
+</div>
+</div>
+</section>
+<section id="independent-gaussians" class="slide level2">
+<h2>Independent Gaussians</h2>
+<div class="figure">
+<div id="independent-gaussians-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/independent-gaussians.svg" width="60%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+Two independent Gaussians for the <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> velocity of a ball.
+</aside>
+</section>
+<section id="correlated-gaussians" class="slide level2">
+<h2>Correlated Gaussians</h2>
+<div class="figure">
+<div id="correlated-gaussians-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/correlated-gaussians.svg" width="60%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+A correlated Gaussian for the <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> velocity of a ball. If all balls were correlated in this way, this would imply that the whole box is moving towards the upper right or bottom left.
+</aside>
+</section>
+<section id="anticorrelated-gaussians" class="slide level2">
+<h2>Anticorrelated Gaussians</h2>
+<div class="figure">
+<div id="anti-correlated-gaussians-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/anti-correlated-gaussians.svg" width="60%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+An anti-correlated Gaussian for the <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> velocity of a ball. If all balls were anti-correlated in this way, this would imply that the whole box is moving towards the upper left or bottom right.
+</aside>
+</section>
+<section id="the-classical-observer" class="slide level2">
+<h2>The Classical Observer</h2>
+<div class="figure">
+<div id="observer-composite-independent-figure" class="figure-frame">
+<object class data="https://mlatcl.github.io/iei/slides/diagrams/physics/observer-composite-independent.svg" width="90%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+Here the observer is monitoring the movements of the particles. We’ve plotted the velocities alongside the 1 standard deviation contour of their theoretical distribution.
+</aside>
+</section>
+<section id="the-classical-observer---correlated" class="slide level2">
+<h2>The Classical Observer - Correlated</h2>
+<div class="figure">
+<div id="observer-composite-correlated-figure" class="figure-frame">
+<object class data="https://mlatcl.github.io/iei/slides/diagrams/physics/observer-composite-correlated.svg" width="90%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+Again the observer is monitoring the movements of the particles, but here their motion is correlated (<span class="math inline">\(\rho=0.95\)</span>).
+</aside>
+</section>
+<section id="the-classical-observer---anti-correlated" class="slide level2">
+<h2>The Classical Observer - Anti-correlated</h2>
+<div class="figure">
+<div id="observer-composite-anti-correlated-figure" class="figure-frame">
+<object class data="https://mlatcl.github.io/iei/slides/diagrams/physics/observer-composite-anti-correlated.svg" width="90%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+Here the observer is monitoring the movements of the particles, but here their motion is anti-correlated (<span class="math inline">\(\rho=-0.95\)</span>).
+</aside>
+<aside class="notes">
+Conceptually, imagine a classic physics setup where you can see inside a box: there are a number of particles moving around, sampled from random Gaussians. If you plot their velocities, they sit within a circle. In this case, the marginal <span class="math inline">\(h_i\)</span> would be their velocity in each direction. The marginal distribution in each direction is Gaussian. Now, if the particles are correlated — everything tending to move in one diagonal direction — interestingly, the marginal entropies are the same. Although these are correlated, I’m not saying anything about the correlation when I conserve the marginal entropies, because if you look at the marginal distribution in each direction, it’s the same as in the uncorrelated case. And if they’re anti-correlated, it’s the same again. So I’m not making any statements about independence with this constraint.
+</aside>
 </section>
 <section id="the-i-h-c-structure" class="slide level2">
 <h2>The <span class="math inline">\(I + H = C\)</span> Structure</h2>
@@ -321,6 +520,15 @@ And the faithful states, the ones where <span class="math inline">\(\rho\)</span
 <li>Implies <em>faithful</em> states (full rank <span class="math inline">\(\rho\)</span>)</li>
 <li>Pure states are on <em>boundary</em> of family</li>
 <li>BKM Metric is <em>divergent</em></li>
+</ul>
+</section>
+<section id="maximum-entropy-and-density-matrices" class="slide level2">
+<h2>Maximum Entropy and Density Matrices</h2>
+<ul>
+<li>Jaynes recognized density matrices as quantum extension</li>
+<li>Same maximum entropy principle applies</li>
+<li>Von Neumann entropy: <span class="math inline">\(S = -\text{Tr}(\rho \log \rho)\)</span></li>
+<li>Provides unified approach to classical and quantum systems</li>
 </ul>
 </section>
 <section id="purely-entropic-readings-first-attempt" class="slide level2">

@@ -125,8 +125,8 @@
 <div>
 <ul>
 <li class="fragment">Shannon (H); Boltzmann (S = kH)</li>
+<li class="fragment">Dasher: (H) as bits, (p) as the next letter</li>
 <li class="fragment">Partition function as a generating function</li>
-<li class="fragment">Chain rule and channel capacity (statements)</li>
 </ul>
 </div>
 </section>
@@ -152,6 +152,149 @@
 <li class="fragment">Machines share information 300 million times faster than humans</li>
 </ul>
 </div>
+</section>
+<section id="brownian-motion-and-wiener" class="slide level2">
+<h2>Brownian Motion and Wiener</h2>
+<div class="figure">
+<div id="albert-einstein-photo-figure" class="figure-frame">
+<div class="centered centered" style="">
+<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/Albert_Einstein_photo_1921.jpg" width="40%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
+</div>
+</div>
+</div>
+<aside class="notes">
+Albert Einstein’s 1905 paper on Brownian motion introduced stochastic differential equations which can be used to model the ‘curve of a simple molecule of air.’
+</aside>
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
+<div class="figure">
+<div id="russell-wiener-russell-figure" class="figure-frame">
+<div class="lamd-columns" style="display:flex; width:100%; justify-content:center; align-items:center; column-gap:1em;">
+<div style="flex:0 0 30%; max-width:30%;">
+<center>
+<div class="centered centered" style="">
+<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/philosophy/Bertrand_Russell_1957.jpg" width="100%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
+</div>
+</center>
+<center>
+<em>Betrand Russell</em>
+</center>
+</div>
+<div style="flex:0 0 30%; max-width:30%;">
+<center>
+<div class="centered centered" style="">
+<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/Albert_Einstein_photo_1921.jpg" width="85%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
+</div>
+</center>
+<center>
+<em>Albert Einstein</em>
+</center>
+</div>
+<div style="flex:0 0 30%; max-width:30%;">
+<center>
+<div class="centered centered" style="">
+<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/Norbert_wiener.jpg" width="100%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
+</div>
+</center>
+<center>
+<em>Norbert Wiener</em>
+</center>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes">
+Bertrand Russell (1872-1970), Albert Einstein (1879-1955), Norbert Wiener, (1894-1964)
+</aside>
+<aside class="notes">
+Wiener came to Cambridge in 1913. Russell showed him Einstein’s 1905 paper on Brownian motion (<span class="citation" data-cites="Einstein-brownian05">Einstein (1905)</span>)
+</aside>
+</section>
+<section id="brownian-motion" class="slide level2">
+<h2>Brownian Motion</h2>
+<div class="figure">
+<div id="brownian-motion-figure" class="figure-frame">
+<div class="centered" style="">
+<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/brownian-motion.gif" width="40%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
+</div>
+</div>
+</div>
+<aside class="notes">
+Brownian motion of a large particle in a group of smaller particles. The movement is known as a <em>Wiener process</em> after Norbert Wiener.
+</aside>
+</section>
+<section id="stochasticity-and-control" class="slide level2">
+<h2>Stochasticity and Control</h2>
+<div class="figure">
+<div id="norbert-wiener-yellow-peril-figure" class="figure-frame">
+<div class="lamd-columns" style="display:flex; width:100%; justify-content:center; align-items:center; column-gap:1em;">
+<div style="flex:0 0 45%; max-width:45%;">
+<div class="centered centered" style="">
+<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/Norbert_wiener.jpg" width="100%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
+</div>
+</div>
+<div style="flex:0 0 45%; max-width:45%;">
+<div class="centered" style="">
+<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/books/wiener-yellow-peril.png" width="100%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
+</div>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes">
+Norbert Wiener (1894 - 1964). Founder of cybernetics and the information era. He used Gibbs’s ideas to develop a “theory of ignorance” that he deployed in early communication. On the right is Wiener’s wartime report that used stochastic processes in forecasting with applications in radar control (image from <span class="citation" data-cites="Coales-yellow14">Coales and Kane (2014)</span>).
+</aside>
+</section>
+<section id="dasher" class="slide level2">
+<h2>Dasher</h2>
+</section>
+<section id="dasher-arithmetic-coding-as-interface" class="slide level2">
+<h2>Dasher: Arithmetic Coding as Interface</h2>
+<ul>
+<li>Letters sized by P(char | context) — large target = common = cheap</li>
+<li>Move mouse <strong>right</strong> to zoom toward your chosen letter</li>
+<li>Move mouse <strong>left</strong> to back up</li>
+<li>Character committed when zoomed close enough</li>
+<li><em>Ease of selection ∝ probability ∝ 1 / information cost</em></li>
+</ul>
+</section>
+<section id="section-1" class="slide level2">
+<h2></h2>
+<div class="figure">
+<div id="dasher-visualisation-figure" class="figure-frame">
+<div style="width:100%;font-family:&#39;Courier New&#39;,monospace;font-size:0.85em">
+<div style="display:flex;justify-content:space-between;align-items:center;
+            padding:6px 14px;background:#131320;border-bottom:1px solid #2a2a3e">
+<p><span style="color:#4ecdc4;letter-spacing:3px;font-size:14px">DASHER</span> <span style="color:#404068;font-style:italic;font-size:10px;flex:1;margin:0 12px;
+               overflow:hidden;text-overflow:ellipsis;white-space:nowrap"> screen height ∝ probability ∝ ease of selection ∝ low information </span> <button id="dasher-reset"
+    style="background:#1a1a2e;border:1px solid #2a2a3e;color:#505080;
+           padding:3px 10px;cursor:pointer;font-family:inherit;font-size:11px;
+           border-radius:3px">Reset</button></p>
+</div>
+<div style="display:flex;align-items:center;gap:12px;padding:5px 14px;
+            background:#0f0f1e;border-bottom:1px solid #1e1e32;min-height:34px">
+<p><span style="font-size:9px;color:#404068">TYPED:</span> <span id="dasher-text" style="font-size:16px;color:#4ecdc4;letter-spacing:2px;flex:1;
+           overflow:hidden;text-overflow:ellipsis;white-space:nowrap">▋</span> <span style="background:#131320;border:1px solid #2a2a3e;border-radius:3px;
+               padding:2px 7px;font-size:11px;color:#505080;white-space:nowrap"> bits: <span id="dasher-bits" style="color:#ffd93d">0.0</span></span> <span style="background:#131320;border:1px solid #2a2a3e;border-radius:3px;
+               padding:2px 7px;font-size:11px;color:#505080;white-space:nowrap"> avg: <span id="dasher-avgbits" style="color:#ffd93d">—</span> b/ch</span> <span style="background:#131320;border:1px solid #2a2a3e;border-radius:3px;
+               padding:2px 7px;font-size:11px;color:#505080;white-space:nowrap"> H(next): <span id="dasher-entropy" style="color:#ffd93d">—</span></span></p>
+</div>
+<div style="position:relative;width:100%;height:380px;cursor:crosshair;overflow:hidden">
+<canvas id="dasher-canvas" style="display:block;width:100%;height:100%">
+</canvas>
+</div>
+<div style="padding:5px 14px;background:#0f0f1e;border-top:1px solid #1e1e32;
+            font-size:9px;color:#303055;text-align:center">
+<p>Move mouse <strong style="color:#4ecdc460">right</strong> to write · <strong style="color:#4ecdc460">left</strong> to erase · vertical position aims · Backspace removes last · Escape resets</p>
+</div>
+</div>
+<script src="../scripts//dasher/dasher.js"></script>
+</div>
+</div>
+<aside class="notes">
+Dasher: continuous-zoom arithmetic coding interface. Move the mouse to the right to zoom toward the character at your vertical cursor position. Character height is proportional to P(char | context), so common letters present large targets. Try typing “th” — ‘e’ expands to fill nearly the whole display.
+</aside>
 </section>
 <section id="the-partition-function" class="slide level2">
 <h2>The Partition Function</h2>
@@ -224,8 +367,16 @@
 <li>blog: <a href="http://inverseprobability.com/blog.html">http://inverseprobability.com</a></li>
 </ul>
 </section>
-<section id="references" class="slide level2 scrollable">
-<h2 class="scrollable">References</h2>
+<section id="references" class="slide level2 unnumbered scrollable">
+<h2 class="unnumbered scrollable">References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-Coales-yellow14" class="csl-entry" role="doc-biblioentry">
+Coales, J.F., Kane, S.J., 2014. The <span>“yellow peril”</span> and after. IEEE Control Systems Magazine 34, 65–69. <a href="https://doi.org/10.1109/MCS.2013.2287387">https://doi.org/10.1109/MCS.2013.2287387</a>
+</div>
+<div id="ref-Einstein-brownian05" class="csl-entry" role="doc-biblioentry">
+Einstein, A., 1905. Über die von der molekularkinetischen <span>T</span>heorie der <span>W</span>ärme geforderte <span>B</span>ewegung von in ruhenden <span>F</span>lüssigkeiten suspendierten <span>T</span>eilchen. Annalen der Physik 322, 549–560. <a href="https://doi.org/10.1002/andp.19053220806">https://doi.org/10.1002/andp.19053220806</a>
+</div>
+</div>
 </section>
     </div>
   </div>
