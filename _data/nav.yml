@@ -8,10 +8,10 @@ main_nav:
     link: /iei/about/
   - label: Lectures
     link: /iei/lectures/
+  - label: Worksheets
+    link: /iei/practicals/
   - label: Questions
     link: /iei/questions/
-  - label: Practicals
-    link: /iei/practicals/
   - label: Assessment
     link: /iei/assessment/
   - label: ML@CL Group
