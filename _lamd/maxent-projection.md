@@ -1,7 +1,6 @@
 ---
 title: "Projection, Natural Gradient, and Optimal Protocols"
 week: 6
-session: 1
 layout: lecture
 date: 2026-11-17
 venue: FW26, William Gates Building

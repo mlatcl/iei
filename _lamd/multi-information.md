@@ -1,7 +1,6 @@
 ---
 title: "Multi-Information and von Neumann Entropy"
 week: 7
-session: 1
 layout: lecture
 date: 2026-11-24
 venue: FW26, William Gates Building

@@ -1,7 +1,6 @@
 ---
 title: "Maximum Entropy and the Exponential Family"
 week: 4
-session: 1
 layout: lecture
 date: 2026-11-03
 venue: FW26, William Gates Building

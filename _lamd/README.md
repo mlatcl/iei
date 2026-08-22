@@ -24,9 +24,12 @@ This will generate:
 
 ## File Naming Convention
 
-Lectures should be named following this pattern:
-- `01-01-topic-name.md` - Week 1, Session 1
-- `02-03-another-topic.md` - Week 2, Session 3
+Lectures use a descriptive slug. The week number is in frontmatter; `maketalk` prefixes outputs with it. Do not put `01-` in the source filename.
+
+- `motivation-boltzmann.md` — `week: 1` in frontmatter
+- `shannon-entropy.md` — `week: 2`
+
+There is one session per week, so do not set a `session` field.
 
 Practicals and worksheets should include `-practical` in the name so they are not treated as lectures:
 

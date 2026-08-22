@@ -1,7 +1,6 @@
 ---
 title: "Motivation; Boltzmann, Free Energy, Entropy"
 week: 1
-session: 1
 layout: lecture
 date: 2026-10-13
 venue: FW26, William Gates Building

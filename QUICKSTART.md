@@ -48,9 +48,9 @@ bundle exec jekyll serve
 
 ```bash
 cd _lamd
-cp sample-lecture.md 01-01-introduction.md
-# Edit the file with your content
-maketalk 01-01-introduction.md
+cp sample-lecture.md introduction.md
+# Edit the file; set week in frontmatter. Do not prefix the filename with 01-.
+maketalk introduction.md
 ```
 
 This will generate:

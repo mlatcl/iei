@@ -1,7 +1,6 @@
 ---
 title: "Fisher Metric and Thermodynamic Length"
 week: 5
-session: 1
 layout: lecture
 date: 2026-11-10
 venue: FW26, William Gates Building

@@ -1,13 +1,9 @@
-# Update BASE to the stem of the current lecture file you are building,
-# e.g. if the file is 01-01-introduction.md then BASE=01-01-introduction
-BASE=introduction
-
-# Update LAMDDIR to your local checkout of lawrennd/lamd
-LAMDDIR=$(HOME)/lawrennd/lamd/lamd
-MAKEFILESDIR=$(LAMDDIR)/makefiles
-INCLUDESDIR=$(LAMDDIR)/includes
-TEMPLATESDIR=$(LAMDDIR)/templates
-SCRIPTDIR=$(LAMDDIR)/scripts
+BASE=08-limits-on-intelligence
+LAMDDIR=/Users/neil/lawrennd/lamd/lamd
+MAKEFILESDIR=/Users/neil/lawrennd/lamd/lamd/makefiles
+INCLUDESDIR=/Users/neil/lawrennd/lamd/lamd/includes
+TEMPLATESDIR=/Users/neil/lawrennd/lamd/lamd/templates
+SCRIPTDIR=/Users/neil/lawrennd/lamd/lamd/scripts
 
 # Profiling disabled
 TIME_CMD=

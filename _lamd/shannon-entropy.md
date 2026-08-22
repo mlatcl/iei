@@ -1,7 +1,6 @@
 ---
 title: "Shannon Entropy and the Partition Function"
 week: 2
-session: 1
 layout: lecture
 date: 2026-10-20
 venue: FW26, William Gates Building

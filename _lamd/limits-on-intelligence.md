@@ -1,7 +1,6 @@
 ---
 title: "Probability Transport and Limits on Intelligence"
 week: 8
-session: 1
 layout: lecture
 date: 2026-12-01
 venue: FW26, William Gates Building

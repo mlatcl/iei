@@ -1,7 +1,6 @@
 ---
 title: "Maxwell's Demon and Landauer's Principle"
 week: 3
-session: 1
 layout: lecture
 date: 2026-10-27
 venue: FW26, William Gates Building

@@ -1,7 +1,6 @@
 ---
 title: "Sample Lecture Title"
 week: 1
-session: 1
 featured_image: slides/diagrams/sample-diagram.svg
 abstract: >
   This is a sample lecture file. Replace this with your actual lecture content.
