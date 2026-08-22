@@ -84,7 +84,9 @@ reading:
 
 \include{_information/includes/the-matrix-exponential-family.md}
 
-\notes{STUB. Classically \(I=C\) forces \(H=0\), a delta. A pure entangled state has \(S(\rho)=-\mathrm{Tr}(\rho\log\rho)=0\) with positive marginal entropies. Matrix exponential family is the quantum MaxEnt family. This is LO11.}
+\include{_physics/includes/jaynes-density-matrices.md}
+
+\notes{STUB. Classically \(I=C\) forces \(H=0\), a delta. A pure entangled state has \(S(\rho)=-\mathrm{Tr}(\rho\log\rho)=0\) with positive marginal entropies. Matrix exponential family is the quantum MaxEnt family. Jaynes already applied MaxEnt to \(\rho\) in 1963: same Lagrange move, operators in place of functions. This is LO11.}
 
 \subsection{Purely Entropic Readings: First Attempt}
 

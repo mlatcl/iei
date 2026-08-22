@@ -76,7 +76,10 @@ reading:
 
 \include{_ai/includes/embodiment-factors-walking-vs-light.md}
 
-\notes{Two human no-gos now sit next to each other. Landauer: you cannot erase a bit for less than \(k_B T\ln 2\). Embodiment: you cannot communicate at machine bandwidth. *The Atomic Human* [@Lawrence-atomic24] takes the second as the defining constraint on human intelligence — we are locked in relative to the machine, and we overcome it by modelling other minds, not by opening a wider channel. Probability's job, on the human side, is to say how that narrow budget is spent. The full intelligence question is week 8.}
+\include{_books/includes/the-diving-bell-and-the-butterfly.md}
+\include{_ai/includes/shannon-bauby.md}
+
+\notes{Two human no-gos now sit next to each other. Landauer: you cannot erase a bit for less than \(k_B T\ln 2\). Embodiment: you cannot communicate at machine bandwidth. *The Atomic Human* [@Lawrence-atomic24] takes the second as the defining constraint on human intelligence — we are locked in relative to the machine, and we overcome it by modelling other minds, not by opening a wider channel. Bauby is the extreme of that fence: Shannon lets us count how locked in he is. Probability's job, on the human side, is to say how that narrow budget is spent. The full intelligence question is week 8.}
 
 \slidesincremental{
 * No-go: \(k_B T\ln 2\) per bit erased

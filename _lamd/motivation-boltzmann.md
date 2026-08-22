@@ -42,7 +42,7 @@ reading:
 \slidesincremental{
 * Room FW26; eight Tuesdays from today
 * Entropy forbids; probability prescribes
-* Today: perpetual motion, human bandwidth, Boltzmann
+* Today: perpetual motion, human bandwidth, Laplace, Boltzmann
 }
 
 \notes{
@@ -51,8 +51,8 @@ reading:
 | Minutes | Block |
 |--------:|-------|
 | 0–15 | Course mechanics; the questions list; the theme |
-| 15–40 | Perpetual motion (no-go for engines); *Atomic Human* bandwidth (no-go for us) |
-| 40–55 | Boltzmann distribution as the prescription |
+| 15–45 | Perpetual motion; *Atomic Human* bandwidth; Laplace's demon and gremlin |
+| 45–55 | Boltzmann distribution as the prescription |
 | 55–65 | Break |
 | 65–100 | Free-energy decomposition: \(TS\) is the subtraction, \(F\) is what remains |
 | 100–120 | Name dissipation; Schottky named; Worksheet 1; LLM exercise |
@@ -90,7 +90,10 @@ reading:
 
 \include{_ai/includes/embodiment-factors-short.md}
 
-\notes{Two no-gos, then, before any calculation: you cannot have work without entropy production, and you cannot communicate as a human at machine rates. Probability's job, from here on, is to say what to do *inside* those fences.}
+\include{_physics/includes/laplace-portrait.md}
+\include{_physics/includes/laplaces-determinism.md}
+
+\notes{Laplace's "intelligence sufficiently vast" is the superintelligence claim in 1814 language. The demon is a no-go: you do not have the model, the data, or the compute. Three pages later the gremlin is the prescription: probability is relative, in part to this ignorance, in part to our knowledge. That is the week's pair before any calculation.}
 
 \subsection{Entropy and the Boltzmann Distribution}
 

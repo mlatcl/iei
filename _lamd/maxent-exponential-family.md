@@ -60,11 +60,15 @@ reading:
 
 \include{_physics/includes/jaynes-maximum-entropy.md}
 
-\notes{STUB. Recover the canonical ensemble from a mean-energy constraint. Recover the Gaussian from mean and variance. MaxEnt is the week's pair in one move: entropy as a prohibition on extra structure (do not assume more than you know), probability as the recipe (this is the \(p\) you should adopt). This is LO5.}
+\include{_physics/includes/dieroll.md}
+
+\notes{STUB. Recover the canonical ensemble from a mean-energy constraint. Recover the Gaussian from mean and variance. The die is the running example: mean 4.5, not 3.5. MaxEnt is the week's pair in one move: entropy as a prohibition on extra structure (do not assume more than you know), probability as the recipe (this is the \(p\) you should adopt). This is LO5.}
 
 \subsection{The Exponential Family}
 
 \include{_physics/includes/exponential-families.md}
+
+\include{_physics/includes/maximum-entropy-formalism.md}
 
 \notes{STUB. \(p(x\mid\theta) = \exp(\theta\cdot T(x) - A(\theta))\). Why canonical, Gaussian, and Bernoulli all belong. Flag the matrix exponential family for week 7. This is LO6.}
 

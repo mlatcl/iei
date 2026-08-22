@@ -49,7 +49,7 @@ reading:
 | Minutes | Block |
 |--------:|-------|
 | 0–10 | Collect Worksheet 1; preview Quiz 1 (27 October) |
-| 10–45 | Shannon axioms; why \(H\) measures information; equivalence to Boltzmann |
+| 10–45 | Shannon axioms; Wiener from Gibbs; equivalence to Boltzmann |
 | 45–55 | Dasher |
 | 55–65 | Break |
 | 65–100 | Canonical ensemble; \(Z\) as generating function; bath revisited |
@@ -60,7 +60,9 @@ reading:
 
 \include{_policy/includes/shannon-information.md}
 
-\notes{STUB. Derive \(H = -\sum p_i\log p_i\) from the Shannon axioms. Fair coin, biased coin, uniform over eight outcomes. Thermodynamic entropy \(S = kH\): same object, different operational reading. \(H\) is the no-go half of Shannon: it bounds what a code cannot do. The distribution \(p\) is the prescription: it *is* the code, or the belief. This is LO2.}
+\include{_physics/includes/brownian-wiener.md}
+
+\notes{STUB. Derive \(H = -\sum p_i\log p_i\) from the Shannon axioms. Fair coin, biased coin, uniform over eight outcomes. Thermodynamic entropy \(S = kH\): same object, different operational reading. \(H\) is the no-go half of Shannon: it bounds what a code cannot do. The distribution \(p\) is the prescription: it *is* the code, or the belief. This is LO2. Wiener's line from Gibbs to communication is why Shannon's \(H\) and Boltzmann's \(S\) are the same object: a theory of ignorance, not a theory of knowledge.}
 
 \subsection{Dasher}
 
