@@ -39,7 +39,7 @@ reading:
 
 \slidesincremental{
 * Quiz 3 (ten minutes)
-* Multi-information; \(I+H=C\)
+* Same marginals, different joints; then \(I+H=C\)
 * Why \(I=C\) forces von Neumann entropy
 }
 
@@ -49,7 +49,7 @@ reading:
 | Minutes | Block |
 |--------:|-------|
 | 0–10 | Quiz 3 (Moodle; LO8–LO9) |
-| 10–55 | Multi-information versus mutual information; \(I+H=C\) |
+| 10–55 | Same marginals, different joints; multi-information; \(I+H=C\) |
 | 55–65 | Break |
 | 65–100 | Classical limit \(I=C\Rightarrow H=0\); von Neumann entropy; matrix exponential family |
 | 100–120 | First attempt at the two “purely entropic” questions; release Worksheet 4 |
@@ -60,6 +60,13 @@ reading:
 \notes{Ten MCQs on the Fisher metric, natural gradient, and dual flatness. New parameterised family. Feedback before lecture 8 if possible; Quiz 4 does not depend on this score.}
 
 \subsection{Multi-Information}
+
+\include{_ml/includes/velocity-independent-sample.md}
+\include{_ml/includes/velocity-correlated-sample.md}
+\include{_ml/includes/velocity-gaussian-contours.md}
+\include{_physics/includes/classical-observer-velocities.md}
+
+\notes{Independent, correlated, and anti-correlated velocities can share the same one-dimensional Gaussians. The marginal entropies \(h_x\) and \(h_y\) do not see the tilt. The joint does. Multi-information is that leftover: \(I=\sum h_i-H\). Define it from the pictures before any conservation law.}
 
 \include{_physics/includes/i-plus-h-equals-c.md}
 

@@ -39,8 +39,8 @@ reading:
 
 \slidesincremental{
 * Shannon \(H\); Boltzmann \(S = kH\)
+* Dasher: \(H\) as bits, \(p\) as the next letter
 * Partition function as a generating function
-* Chain rule and channel capacity (statements)
 }
 
 \notes{
@@ -49,7 +49,8 @@ reading:
 | Minutes | Block |
 |--------:|-------|
 | 0–10 | Collect Worksheet 1; preview Quiz 1 (27 October) |
-| 10–55 | Shannon axioms; why \(H\) measures information; equivalence to Boltzmann |
+| 10–45 | Shannon axioms; why \(H\) measures information; equivalence to Boltzmann |
+| 45–55 | Dasher |
 | 55–65 | Break |
 | 65–100 | Canonical ensemble; \(Z\) as generating function; bath revisited |
 | 100–120 | Chain rule; channel capacity (statement); three framings named |
@@ -60,6 +61,12 @@ reading:
 \include{_policy/includes/shannon-information.md}
 
 \notes{STUB. Derive \(H = -\sum p_i\log p_i\) from the Shannon axioms. Fair coin, biased coin, uniform over eight outcomes. Thermodynamic entropy \(S = kH\): same object, different operational reading. \(H\) is the no-go half of Shannon: it bounds what a code cannot do. The distribution \(p\) is the prescription: it *is* the code, or the belief. This is LO2.}
+
+\subsection{Dasher}
+
+\include{_ml/includes/dasher.md}
+
+\notes{Dasher is the pair in one interface. Letter height is \(p(\mathrm{char}\mid\mathrm{context})\); the information cost of a hit is \(-\log p\). \(H(\mathrm{next})\) is the no-go on the remaining rate. The language model is the prescription: this is the next letter you should make easy to hit. The bits-per-second counter is the same kind of number as the human bandwidth no-go from lecture 1 — here spent on a pointer, not on speech.}
 
 \subsection{The Partition Function}
 
