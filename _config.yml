@@ -1,15 +1,17 @@
-# Course Configuration Template
-
-title: Information, Energy and Intelligence
-description: This course looks at the relationship between information, energy and intelligence. The idea iis to provide students with a solid grounding in the sets of tools that can help us understand the limits of what an intelligent system might be able to do. This module builds mathematical machinery needed to answer that question rigorously. Entropy appears in three apparently separate traditions — thermodynamics (Boltzmann, Gibbs), information theory (Shannon), and Bayesian inference (Jaynes) — and turns out to be the same mathematical object viewed from different operational assumptions. Information geometry (Amari) provides the unifying geometric language.
+# VIBECOURSE-GENERATED: run `./whats-next generate-site` to update
+title: Information, Entropy and Intelligence
+description: >
+  Develop the mathematical connections between thermodynamics, information theory, and Bayesian inference, and understand how they provide a toolkit for reasoning about the foundations of intelligent systems.
 baseurl: "/iei"
 url: "https://mlatcl.github.io"
+
+github_username: mlatcl
+# END VIBECOURSE-GENERATED
 
 # Build settings
 markdown: kramdown
 permalink: pretty
 
-github_username: mlatcl
 colab: https://colab.research.google.com
 nbviewer: https://nbviewer.jupyter.org
 

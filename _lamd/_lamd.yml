@@ -3,10 +3,13 @@
 
 # Author information - update with your details
 author:
-  - given: Neil
+  - given: Neil D.
     family: Lawrence
     institution: University of Cambridge
-    url: https://inverseprobability.com
+    gscholar: r3SJcvoAAAAJ
+    twitter: lawrennd
+    orcid: 0000-0001-9258-1030
+    url: http://inverseprobability.com
 
 # Directory paths
 bibdir: $HOME/lawrennd/bibliography # Bibliography directory
@@ -52,8 +55,9 @@ transition: None # Options: None, fade, slide, convex, concave, zoom
 potx: custom-reference.potx 
 dotx: custom-reference.dotx
 
-# Venue information (update for your course)
-venue: TBA
+# Venue information
+room: FW26
+venue: FW26, William Gates Building
 
 # GitHub Pages configuration
 ghub:
