@@ -6,7 +6,7 @@ This directory contains the source files for your course lectures and practicals
 
 - `_lamd.yml` - Configuration file for LaMD processing
 - `*.md` - Lecture source files in LaMD format
-- `*-practical.md` - Practical exercise files
+- `*-practical.md` - Worksheets (compile with `maketalk`; layout: practical)
 
 ## Usage
 
@@ -28,8 +28,14 @@ Lectures should be named following this pattern:
 - `01-01-topic-name.md` - Week 1, Session 1
 - `02-03-another-topic.md` - Week 2, Session 3
 
-Practicals should include `-practical` in the name:
-- `01-01-topic-practical.md`
+Practicals and worksheets should include `-practical` in the name so they are not treated as lectures:
+
+- `01-thermodynamics-practical.md` — Worksheet 1
+- `02-maxent-practical.md` — Worksheet 2
+- `03-geometry-practical.md` — Worksheet 3
+- `04-intelligence-practical.md` — Worksheet 4
+
+Compile a worksheet with `maketalk 01-thermodynamics-practical.md` from this directory. Output goes to `../_practicals/` and `../_notebooks/`.
 
 ## LaMD Commands
 
