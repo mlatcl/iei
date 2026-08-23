@@ -84,7 +84,7 @@ reading:
 
 \include{_information/includes/perpetual-motion-superintelligence-analogy.md}
 
-\notes{That is entropy as a no-go for engines. There is a second motivation, about us rather than about cars. Human communication sits at about 100 bits per second; machines sit at billions. *The Atomic Human* [@Lawrence-atomic24] takes that bandwidth gap as the defining constraint on human intelligence: we are locked in relative to the machine. That is also a no-go. It does not tell you how to think. It tells you that you cannot think at machine bandwidth.}
+\notes{That is entropy as a no-go for engines. There is a second motivation, about us rather than about cars. Human communication sits at about 2000 bits per minute; machines sit at billions. *The Atomic Human* [@Lawrence-atomic24] takes that bandwidth gap as the defining constraint on human intelligence: we are locked in relative to the machine. That is also a no-go. It does not tell you how to think. It tells you that you cannot think at machine bandwidth.}
 
 \include{_books/includes/the-atomic-human.md}
 
@@ -99,21 +99,21 @@ reading:
 
 \include{_physics/includes/entropy-intro.md}
 
-\notes{STUB. Derive \(p_i \propto e^{-E_i/kT}\) and \(Z\). This is the prescription. Given the energies and the bath, probability tells you the occupation. The second law has already said you cannot put all the mass on the ground state while matching a prescribed mean energy. Boltzmann is what you should do instead.}
+\notes{STUB. Derive $p_i \propto e^{-E_i/kT}$ and $Z$. This is the prescription. Given the energies and the bath, probability tells you the occupation. The second law has already said you cannot put all the mass on the ground state while matching a prescribed mean energy. Boltzmann is what you should do instead.}
 
 \subsection{Free Energy Decomposition}
 
-\notes{STUB. \(U = \langle E \rangle\), \(S = -k\sum p_i \log p_i\), \(F = U - TS = -kT\log Z\). Available energy is what remains after the entropic no-go has taken its cut: \(U\) is what you have, \(TS\) is unavailable, \(F\) is what probability and the bath still allow you to do. This is LO1.}
+\notes{STUB. $U = \langle E \rangle$, $S = -k\sum p_i \log p_i$, $F = U - TS = -kT\log Z$. Available energy is what remains after the entropic no-go has taken its cut: $U$ is what you have, $TS$ is unavailable, $F$ is what probability and the bath still allow you to do. This is LO1.}
 
 \slidesincremental{
 * No-go: you cannot occupy as you please
-* Prescription: \(p_i = e^{-\beta E_i}/Z\)
-* Accounting: \(F = U - TS\)
+* Prescription: $p_i = e^{-\beta E_i}/Z$
+* Accounting: $F = U - TS$
 }
 
 \subsection{Thermodynamic Bath and Schottky's Anomaly}
 
-\notes{STUB. A thermodynamic bath is the large system that justifies the canonical ensemble: it fixes \(T\) and exchanges energy. The two-state system \(E\in\{0,\varepsilon\}\) is the running example for Worksheet 1 and Quiz 1. Its heat capacity has a peak (Schottky's anomaly). Name the peak today; the purely entropic reading waits until weeks 7–8.}
+\notes{STUB. A thermodynamic bath is the large system that justifies the canonical ensemble: it fixes $T$ and exchanges energy. The two-state system $E\in\{0,\varepsilon\}$ is the running example for Worksheet 1 and Quiz 1. Its heat capacity has a peak (Schottky's anomaly). Name the peak today; the purely entropic reading waits until weeks 7–8.}
 
 \slidesincremental{
 * Bath: why the canonical ensemble exists
@@ -121,12 +121,12 @@ reading:
 * Entropic reading of Schottky: not today
 }
 
-\subsection{Finite Time Costs More Than \(\Delta F\)}
+\subsection{Finite Time Costs More Than $\Delta F$}
 
-\notes{STUB. Quasi-static processes achieve \(W = \Delta F\). Finite-time processes dissipate more. Do not define thermodynamic length today. Name the fact. Weeks 5–6 will identify the extra cost with Fisher–Rao length (Crooks). Week 8 will ask what that bound means for intelligence.}
+\notes{STUB. Quasi-static processes achieve $W = \Delta F$. Finite-time processes dissipate more. Do not define thermodynamic length today. Name the fact. Weeks 5–6 will identify the extra cost with Fisher–Rao length (Crooks). Week 8 will ask what that bound means for intelligence.}
 
 \slidesincremental{
-* Quasi-static: \(W = \Delta F\)
+* Quasi-static: $W = \Delta F$
 * Finite time: extra dissipation
 * Length comes in week 5
 }
@@ -144,7 +144,7 @@ reading:
 
 \subsection{This Week's Pair}
 
-\notes{No-go: the second law; human communication at \(\sim 100\) bits per second. Prescription: the Boltzmann occupation. Free energy is the accounting of that pair.}
+\notes{No-go: the second law; human communication at $\sim 100$ bits per second. Prescription: the Boltzmann occupation. Free energy is the accounting of that pair.}
 
 \include{_information/includes/entropy-nogo-pair.md}
 
