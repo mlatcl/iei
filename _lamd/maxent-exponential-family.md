@@ -52,6 +52,7 @@ reading:
 \slidesincremental{
 * MaxEnt with Lagrange multipliers
 * Exponential family as the MaxEnt family
+* Legendre: entropy as conjugate of $A(\theta)$
 * Three perspectives: the intended comparison
 }
 
@@ -63,8 +64,9 @@ reading:
 | 0–10 | Collect Worksheet 2; preview Quiz 2 |
 | 10–55 | Jaynes; Lagrange multipliers; die and Gaussian |
 | 55–65 | Break |
-| 65–100 | Exponential family; canonical, Gaussian, Bernoulli |
-| 100–120 | LO7 synthesis; “how is entropy understood today?” |
+| 65–95 | Exponential family; canonical, Gaussian, Bernoulli |
+| 95–110 | Legendre transform: $F=U-TS$ again; $H=A-\theta\cdot\eta$ |
+| 110–120 | LO7 synthesis; “how is entropy understood today?” |
 }
 
 \subsection{Maximum Entropy}
@@ -88,6 +90,12 @@ reading:
 
 \notes{STUB. $p(x\mid\theta) = \exp(\theta\cdot T(x) - A(\theta))$. Why canonical, Gaussian, and Bernoulli all belong. Flag the matrix exponential family for week 7. This is LO6.}
 
+\subsection{The Legendre Transform}
+
+\include{_information/includes/legendre-transform.md}
+
+\notes{The formula $H = A - \theta\cdot\eta$ is already on the board. Name it. Helmholtz $F = U - TS$ was the same subtraction. The conjugate pair $(\theta,\eta)$ is why week 5 has two flat charts. Check on the Bernoulli: $A = \log(1+e^{\theta})$ must recover binary entropy. Dual connections wait for week 5; $m$-projection waits for week 6.}
+
 \subsection{Three Perspectives}
 
 \notes{STUB. Shannon: channel capacity and compression. Boltzmann/Gibbs: macrostate counting at equilibrium. Jaynes/Bayes: least-committal inference under constraint. Same $H$; the difference is what the probability is over and who is inferring. All three agree that $H$ forbids and $p$ prescribes. This is LO7, and the intended answer to “how is entropy understood today?” until week 7 revises it.}
@@ -106,8 +114,8 @@ reading:
 \slidesincremental{
 * What is the maximum entropy principle?
 * What is the exponential family?
+* What is the Legendre transform?
 * How is entropy understood today?
-* Information and entropy? (three framings)
 }
 
 \subsection{This Week's Pair}

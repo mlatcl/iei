@@ -67,7 +67,7 @@ reading:
 
 \include{_information-game/includes/fisher-information-geometry.md}
 
-\notes{STUB. Manifold of distributions; \(g_{ij} = \mathbb{E}[\partial_i\log p\cdot\partial_j\log p]\). e-flat and m-flat coordinates on exponential families. Pythagorean theorem for KL. This is LO8.}
+\notes{STUB. Manifold of distributions; \(g_{ij} = \mathbb{E}[\partial_i\log p\cdot\partial_j\log p]\). e-flat and m-flat coordinates on exponential families. Those two charts are last week's Legendre pair: \(\eta = \nabla A(\theta)\), and the two potentials \(A(\theta)\) and \(A^*(\eta) = \theta\cdot\eta - A\) have Hessians that are inverse metrics. Pythagorean theorem for KL. This is LO8.}
 
 \subsection{Thermodynamic Length (Crooks)}
 
@@ -92,6 +92,7 @@ where \(\mathcal{I}\) is the Fisher matrix already on the board. In the linear-r
 \slidesincremental{
 * What is thermodynamic length?
 * Fisher metric as a Riemannian metric
+* Dual charts: last week's Legendre pair
 }
 
 \notes{Interpret later: optimal trajectories and intelligence (week 8); natural gradient as descent in the same metric (week 6).}

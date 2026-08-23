@@ -110,7 +110,7 @@ reading:
 
 \subsection{Free Energy Decomposition}
 
-\notes{STUB. $U = \langle E \rangle$, $S = -k\sum p_i \log p_i$, $F = U - TS = -kT\log Z$. Available energy is what remains after the entropic no-go has taken its cut: $U$ is what you have, $TS$ is unavailable, $F$ is what probability and the bath still allow you to do. This is LO1.}
+\notes{STUB. $U = \langle E \rangle$, $S = -k\sum p_i \log p_i$, $F = U - TS = -kT\log Z$. Available energy is what remains after the entropic no-go has taken its cut: $U$ is what you have, $TS$ is unavailable, $F$ is what probability and the bath still allow you to do. Name the subtraction; do not yet call it a Legendre transform — that waits for week 4, when the same move produces $H = A - \theta\cdot\eta$. This is LO1.}
 
 \slidesincremental{
 * No-go: you cannot occupy as you please

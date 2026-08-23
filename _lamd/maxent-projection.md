@@ -52,7 +52,7 @@ reading:
 
 \subsection{MaxEnt as Projection}
 
-\notes{STUB. MaxEnt is the m-projection of the uniform distribution onto the constraint surface. This is why the exponential family appeared in week 4. This is LO9 (first half).}
+\notes{STUB. MaxEnt is the m-projection of the uniform distribution onto the constraint surface. The constraint is written in moment coordinates \(\eta\); the exponential family is a straight line in \(\theta\). That is why week 4's Legendre pair is not decoration: you project in one chart and travel in the other. This is LO9 (first half).}
 
 \slidesincremental{
 * Uniform, then constrain
@@ -88,7 +88,7 @@ reading:
 \slidesincremental{
 * MaxEnt as a projection
 * Why natural gradient is the correct gradient
-* Thermodynamic length as a geodesic problem
+* The exponential family, now geometrically
 }
 
 \subsection{This Week's Pair}

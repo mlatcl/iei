@@ -35,6 +35,7 @@ Class tests examine the *applied* form of the define-stage questions, on a new e
 - How is entropy understood today?
 - What is the difference between equilibrium and non-equilibrium thermodynamics?
 - What is the purely entropic interpretation of Schottky's anomaly?
+- What is the Legendre transform? (you have already written $F = U - TS$)
 
 ## Lecture 2 — 20 October — Shannon Entropy
 
@@ -66,6 +67,7 @@ Quiz 1 occupies the first ten minutes.
 
 - What is the maximum entropy principle?
 - What is the exponential family?
+- What is the Legendre transform? (Helmholtz was the first example; $H = A - \theta\cdot\eta$ is the second)
 - What is the relationship between information and entropy?
 - How is entropy understood today? (intended answer: LO7)
 
@@ -76,6 +78,7 @@ Quiz 2 occupies the first ten minutes.
 **Define this week**
 
 - What is thermodynamic length? (Crooks: Fisher–Rao length of a path of equilibrium states)
+- How does the Legendre transform produce the dual coordinates of information geometry?
 
 **Named, not yet answered**
 
@@ -86,7 +89,7 @@ Quiz 2 occupies the first ten minutes.
 **Define this week**
 
 - Thermodynamic length as a geodesic problem (minimum-dissipation protocol)
-- The exponential family, now geometrically
+- The exponential family, now geometrically (project in $\eta$, travel in $\theta$)
 
 ## Lecture 7 — 24 November — Multi-Information
 
