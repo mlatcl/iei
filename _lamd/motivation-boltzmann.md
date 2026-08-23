@@ -54,7 +54,7 @@ reading:
 | 15–45 | Perpetual motion; *Atomic Human* bandwidth; Laplace's demon and gremlin |
 | 45–55 | Boltzmann distribution as the prescription |
 | 55–65 | Break |
-| 65–100 | Free-energy decomposition: \(TS\) is the subtraction, \(F\) is what remains |
+| 65–100 | Free-energy decomposition: $TS$ is the subtraction, $F$ is what remains |
 | 100–120 | Name dissipation; Schottky named; Worksheet 1; LLM exercise |
 }
 
