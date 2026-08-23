@@ -101,6 +101,8 @@ reading:
 
 \notes{STUB. Derive $p_i \propto e^{-E_i/kT}$ and $Z$. This is the prescription. Given the energies and the bath, probability tells you the occupation. The second law has already said you cannot put all the mass on the ground state while matching a prescribed mean energy. Boltzmann is what you should do instead.}
 
+\include{_physics/includes/coldness-and-temperature.md}
+
 \subsection{Free Energy Decomposition}
 
 \notes{STUB. $U = \langle E \rangle$, $S = -k\sum p_i \log p_i$, $F = U - TS = -kT\log Z$. Available energy is what remains after the entropic no-go has taken its cut: $U$ is what you have, $TS$ is unavailable, $F$ is what probability and the bath still allow you to do. This is LO1.}

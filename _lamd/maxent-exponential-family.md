@@ -62,7 +62,7 @@ reading:
 
 \include{_physics/includes/dieroll.md}
 
-\notes{STUB. Recover the canonical ensemble from a mean-energy constraint. Recover the Gaussian from mean and variance. The die is the running example: mean 4.5, not 3.5. MaxEnt is the week's pair in one move: entropy as a prohibition on extra structure (do not assume more than you know), probability as the recipe (this is the \(p\) you should adopt). This is LO5.}
+\notes{STUB. Recover the canonical ensemble from a mean-energy constraint. Recover the Gaussian from mean and variance. The die is the running example: mean 4.5, not 3.5. The Lagrange multiplier on mean energy is the coldness $\beta$ from week 1: entropy first, energy the constraint. MaxEnt is the week's pair in one move: entropy as a prohibition on extra structure (do not assume more than you know), probability as the recipe (this is the $p$ you should adopt). This is LO5.}
 
 \subsection{The Exponential Family}
 
@@ -70,17 +70,17 @@ reading:
 
 \include{_physics/includes/maximum-entropy-formalism.md}
 
-\notes{STUB. \(p(x\mid\theta) = \exp(\theta\cdot T(x) - A(\theta))\). Why canonical, Gaussian, and Bernoulli all belong. Flag the matrix exponential family for week 7. This is LO6.}
+\notes{STUB. $p(x\mid\theta) = \exp(\theta\cdot T(x) - A(\theta))$. Why canonical, Gaussian, and Bernoulli all belong. Flag the matrix exponential family for week 7. This is LO6.}
 
 \subsection{Three Perspectives}
 
-\notes{STUB. Shannon: channel capacity and compression. Boltzmann/Gibbs: macrostate counting at equilibrium. Jaynes/Bayes: least-committal inference under constraint. Same \(H\); the difference is what the probability is over and who is inferring. All three agree that \(H\) forbids and \(p\) prescribes. This is LO7, and the intended answer to “how is entropy understood today?” until week 7 revises it.}
+\notes{STUB. Shannon: channel capacity and compression. Boltzmann/Gibbs: macrostate counting at equilibrium. Jaynes/Bayes: least-committal inference under constraint. Same $H$; the difference is what the probability is over and who is inferring. All three agree that $H$ forbids and $p$ prescribes. This is LO7, and the intended answer to “how is entropy understood today?” until week 7 revises it.}
 
 \slidesincremental{
 * Shannon: a code
 * Boltzmann: a macrostate
 * Jaynes: a state of knowledge
-* All three: \(H\) forbids, \(p\) prescribes
+* All three: $H$ forbids, $p$ prescribes
 }
 
 \subsection{Define This Week}

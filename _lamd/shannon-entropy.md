@@ -38,8 +38,8 @@ reading:
 \subsection{This Session}
 
 \slidesincremental{
-* Shannon \(H\); Boltzmann \(S = kH\)
-* Dasher: \(H\) as bits, \(p\) as the next letter
+* Shannon $H$; Boltzmann $S = kH$
+* Dasher: $H$ as bits, $p$ as the next letter
 * Partition function as a generating function
 }
 
@@ -52,7 +52,7 @@ reading:
 | 10–45 | Shannon axioms; Wiener from Gibbs; equivalence to Boltzmann |
 | 45–55 | Dasher |
 | 55–65 | Break |
-| 65–100 | Canonical ensemble; \(Z\) as generating function; bath revisited |
+| 65–100 | Canonical ensemble; $Z$ as generating function; bath revisited |
 | 100–120 | Chain rule; channel capacity (statement); three framings named |
 }
 
@@ -62,40 +62,40 @@ reading:
 
 \include{_physics/includes/brownian-wiener.md}
 
-\notes{STUB. Derive \(H = -\sum p_i\log p_i\) from the Shannon axioms. Fair coin, biased coin, uniform over eight outcomes. Thermodynamic entropy \(S = kH\): same object, different operational reading. \(H\) is the no-go half of Shannon: it bounds what a code cannot do. The distribution \(p\) is the prescription: it *is* the code, or the belief. This is LO2. Wiener's line from Gibbs to communication is why Shannon's \(H\) and Boltzmann's \(S\) are the same object: a theory of ignorance, not a theory of knowledge.}
+\notes{STUB. Derive $H = -\sum p_i\log p_i$ from the Shannon axioms. Fair coin, biased coin, uniform over eight outcomes. Thermodynamic entropy $S = kH$: same object, different operational reading. $H$ is the no-go half of Shannon: it bounds what a code cannot do. The distribution $p$ is the prescription: it *is* the code, or the belief. This is LO2. Wiener's line from Gibbs to communication is why Shannon's $H$ and Boltzmann's $S$ are the same object: a theory of ignorance, not a theory of knowledge.}
 
 \subsection{Dasher}
 
 \include{_ml/includes/dasher.md}
 
-\notes{Dasher is the pair in one interface. Letter height is \(p(\mathrm{char}\mid\mathrm{context})\); the information cost of a hit is \(-\log p\). \(H(\mathrm{next})\) is the no-go on the remaining rate. The language model is the prescription: this is the next letter you should make easy to hit. The bits-per-second counter is the same kind of number as the human bandwidth no-go from lecture 1 — here spent on a pointer, not on speech.}
+\notes{Dasher is the pair in one interface. Letter height is $p(\mathrm{char}\mid\mathrm{context})$; the information cost of a hit is $-\log p$. $H(\mathrm{next})$ is the no-go on the remaining rate. The language model is the prescription: this is the next letter you should make easy to hit. The bits-per-second counter is the same kind of number as the human bandwidth no-go from lecture 1 — here spent on a pointer, not on speech.}
 
 \subsection{The Partition Function}
 
-\notes{STUB. Canonical ensemble from the bath. \(Z(\beta) = \sum_i e^{-\beta E_i}\). Mean energy \(U = -\partial_\beta\log Z\), \(F = -\beta^{-1}\log Z\), \(S = \beta(U-F)\). Compute these for the two-state system. This is LO3. \(Z\) is the constructive twin of last week's second-law no-go: it tells you what \(U\), \(S\), and \(F\) *are*. Equilibrium versus non-equilibrium: the canonical ensemble *is* an equilibrium construction. Finite-time driving leaves that manifold; the cost is still only named.}
+\notes{STUB. Canonical ensemble from the bath. $Z(\beta) = \sum_i e^{-\beta E_i}$. Mean energy $U = -\partial_\beta\log Z$, $F = -\beta^{-1}\log Z$, $S = \beta(U-F)$. Compute these for the two-state system. This is LO3. $\beta$ is the coldness named last week: $Z$ is written in the entropy-first variable. $T$ remains the bath parameter. Equilibrium versus non-equilibrium: the canonical ensemble *is* an equilibrium construction. Finite-time driving leaves that manifold; the cost is still only named.}
 
 \slidesincremental{
-* \(U = -\partial_\beta \log Z\)
-* \(F = -\beta^{-1}\log Z\)
+* $U = -\partial_\beta \log Z$
+* $F = -\beta^{-1}\log Z$
 * Bath justifies the canonical ensemble
 }
 
 \subsection{Scaffolding, Not Outcomes}
 
-\notes{STUB. Chain rule: \(H(X,Y) = H(X) + H(Y|X)\). Needed in week 7 for multi-information. Channel capacity: you cannot send faster than \(C\). That is the week's cleanest no-go. The capacity-achieving input \(p(x)\) is the prescription: this is the distribution you should use. Data-processing inequality: processing cannot create information — another no-go. Mention, do not prove. None of these is a learning outcome; the pair is the reason they are here.}
+\notes{STUB. Chain rule: $H(X,Y) = H(X) + H(Y|X)$. Needed in week 7 for multi-information. Channel capacity: you cannot send faster than $C$. That is the week's cleanest no-go. The capacity-achieving input $p(x)$ is the prescription: this is the distribution you should use. Data-processing inequality: processing cannot create information — another no-go. Mention, do not prove. None of these is a learning outcome; the pair is the reason they are here.}
 
 \slidesincremental{
-* No-go: \(R \le C\); processing cannot create information
-* Prescription: the \(p(x)\) that achieves \(C\)
+* No-go: $R \le C$; processing cannot create information
+* Prescription: the $p(x)$ that achieves $C$
 * Chain rule: needed in week 7
 }
 
 \subsection{Three Framings, First Pass}
 
-\notes{Information, thermodynamic, and Bayesian readings of the same \(H\) are named today. The intended comparison is LO7, week 4. A student who answers “how is entropy understood today?” with only Shannon is not finished.}
+\notes{Information, thermodynamic, and Bayesian readings of the same $H$ are named today. The intended comparison is LO7, week 4. A student who answers “how is entropy understood today?” with only Shannon is not finished.}
 
 \slidesincremental{
-* Same \(H\); three operational assumptions
+* Same $H$; three operational assumptions
 * Synthesis is week 4
 }
 
@@ -111,7 +111,7 @@ reading:
 
 \subsection{This Week's Pair}
 
-\notes{No-go: \(R\le C\); the data-processing inequality. Prescription: the capacity-achieving input; \(Z\) as a generating function.}
+\notes{No-go: $R\le C$; the data-processing inequality. Prescription: the capacity-achieving input; $Z$ as a generating function.}
 
 \include{_information/includes/entropy-nogo-pair.md}
 
