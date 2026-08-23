@@ -43,4 +43,4 @@ Four take-home mini-project worksheets (15% each, 60% total), each consisting of
 
 ## Recommended Reading
 
-Shannon (1948), *Bell System Technical Journal*; Jaynes (1957), *Physical Review*; Landauer (1961), *IBM Journal*; Amari & Nagaoka (2000), *Methods of Information Geometry* (Chapters 1–3). Cover & Thomas (2006) and MacKay (2003) as background references.
+Shannon (1948), *Bell System Technical Journal*; Jaynes (1957), *Physical Review*; Landauer (1961), *IBM Journal*; Amari & Nagaoka (2000), *Methods of Information Geometry* (Chapters 1–3); Crooks (2007), *Physical Review Letters*. Cover & Thomas (2006) and MacKay (2003) as background. Welling, Lu and Holdijk (2026), *Generative AI and Stochastic Thermodynamics* (GAIST), is a supplementary monograph: Chapter 3 for free energy, Chapter 5 for the ELBO, Chapters 14 and 22 for the Wasserstein and Schrödinger-bridge geometries. It is not a substitute for Crooks (2007) or Amari.

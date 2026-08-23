@@ -90,6 +90,15 @@ D_{KL}(P||Q) = \int \log\left(\frac{dP}{dQ}\right)dP
 <li><strong>Schrödinger bridge.</strong> Maximum-entropy interpolation between (p) and (q).</li>
 </ul>
 <p>Optimal intelligence, in this module’s voice, is a protocol that moves belief or state under an entropic budget. The three geometries are three prescriptions — three answers to “what should I do?” Crooks, Landauer, and (I+H=C) are the no-gos. Superintelligence that updates infinitely fast, or at zero dissipation, is a zero-duration or zero-length protocol: it claims to repeal the no-go.</p>
+<h2 id="gaist-on-the-wasserstein-and-schrödinger-geometries">GAIST on the Wasserstein and Schrödinger Geometries</h2>
+<div style="text-align:right">
+<span class="editsection-bracket" style="">[</span><span class="editsection" style=""><a href="https://github.com/lawrennd/snippets/edit/main/_information/includes/welling-three-geometries.md" target="_blank" onclick="ga('send', 'event', 'Edit Page', 'Edit', 'https://github.com/lawrennd/snippets/edit/main/_information/includes/welling-three-geometries.md', 13);">edit</a></span><span class="editsection-bracket" style="">]</span>
+</div>
+<p>Chapter 14 of <span class="citation" data-cites="Welling-generative26">(Welling et al., 2026)</span> is the discrete-time Schrödinger bridge: minimise <span class="math inline">\(D_{\mathrm{KL}}[Q\|P]\)</span> subject to fixed endpoint marginals <span class="math inline">\(q_0 = \mu\)</span> and <span class="math inline">\(q_{t_f} = \nu\)</span>. When the reference <span class="math inline">\(P\)</span> is uniform this is Jaynes’ maximum caliber — MaxEnt over paths. The algorithm is iterative proportional fitting. Chapter 22 retells the same story in continuous time: Wasserstein distance via Monge, Kantorovich and Benamou–Brenier (Section 22.2); dissipated work as the OT action (Section 22.3); the Schrödinger bridge as OT plus an osmotic Fisher-information term (Section 22.6).</p>
+<p>Section 22.3 states a thermodynamic speed limit <span class="math display">\[
+\Sigma_{\tau_f} \ge \frac{W_2^2[\rho_0,\rho_{\tau_f}]}{T\tau_f}
+\]</span> and a finite-time correction to Landauer <span class="citation" data-cites="Landauer-irreversibility61">(Landauer, 1961)</span>, following Proesmans, Ehrich and Bechhoefer (2020). That inequality is tight in the Wasserstein geometry. It is <em>not</em> Crooks’ <span class="math inline">\(\mathcal{L}^2/\tau\)</span> bound. GAIST presents <span class="math inline">\(W_2^2/(T\tau)\)</span> as the thermodynamic speed limit because the book is working in overdamped dissipative dynamics with a ground-cost interpretation. We are not collapsing the three geometries: Fisher–Rao / Crooks remains the near-equilibrium length on the equilibrium manifold; Wasserstein is minimum ground-cost of moving mass; the Schrödinger bridge is the maximum-entropy interpolation.</p>
+<p>Read Chapter 14 and Sections 22.2–22.3 for the Wasserstein and Schrödinger prescriptions. Keep Crooks (2007) for Fisher–Rao. Peyré and Cuturi remain the place to get the OT intuition without the physics.</p>
 <h2 id="limits-on-intelligence">Limits on Intelligence</h2>
 <h2 id="information-theoretic-limits-on-intelligence">Information-Theoretic Limits on Intelligence</h2>
 <div style="text-align:right">
@@ -132,6 +141,13 @@ D_{KL}(P||Q) = \int \log\left(\frac{dP}{dQ}\right)dP
 <span class="editsection-bracket" style="">[</span><span class="editsection" style=""><a href="https://github.com/mlatcl/iei/edit/gh-pages/_lamd/limits-on-intelligence.md" target="_blank" onclick="ga('send', 'event', 'Edit Page', 'Edit', 'https://github.com/mlatcl/iei/edit/gh-pages/_lamd/limits-on-intelligence.md', 13);">edit</a></span><span class="editsection-bracket" style="">]</span>
 </div>
 <p>No further assessed work. Quiz 4 feedback within the 21-day ACS window. The last LLM exercise: ask the model what thermodynamic length has to do with intelligence, then write down whether it offered a no-go, a prescription, or collapsed the two.</p>
+<h2 id="further-reading">Further Reading</h2>
+<ul>
+<li><p>Chapters 1–2 of <span class="citation" data-cites="Peyre-cuturi19">Peyré and Cuturi (2019)</span></p></li>
+<li><p>Chapter 14 and Sections 22.2–22.3 of <span class="citation" data-cites="Welling-generative26">Welling et al. (2026)</span></p></li>
+<li><p>the whole paper of <span class="citation" data-cites="Crooks-length07">Crooks (2007)</span></p></li>
+<li><p>Chapter 1 of <span class="citation" data-cites="Lawrence-atomic24">Lawrence (2024)</span></p></li>
+</ul>
 <h2 id="thanks">Thanks!</h2>
 <p>For more information on these subjects and more you might want to check the following resources.</p>
 <ul>
@@ -144,8 +160,20 @@ D_{KL}(P||Q) = \int \log\left(\frac{dP}{dQ}\right)dP
 </ul>
 <h1 class="unnumbered" id="references">References</h1>
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-Crooks-length07" class="csl-entry" role="doc-biblioentry">
+Crooks, G.E., 2007. Measuring thermodynamic length. Phys. Rev. Lett. 99, 100602. <a href="https://doi.org/10.1103/PhysRevLett.99.100602">https://doi.org/10.1103/PhysRevLett.99.100602</a>
+</div>
 <div id="ref-Landauer-irreversibility61" class="csl-entry" role="doc-biblioentry">
 Landauer, R., 1961. Irreversibility and heat generation in the computing process. IBM Journal of Research and Development 5, 183–191. <a href="https://doi.org/10.1147/rd.53.0183">https://doi.org/10.1147/rd.53.0183</a>
+</div>
+<div id="ref-Lawrence-atomic24" class="csl-entry" role="doc-biblioentry">
+Lawrence, N.D., 2024. The atomic human: Understanding ourselves in the age of AI. Allen Lane.
+</div>
+<div id="ref-Peyre-cuturi19" class="csl-entry" role="doc-biblioentry">
+Peyré, G., Cuturi, M., 2019. Computational optimal transport. Now Publishers.
+</div>
+<div id="ref-Welling-generative26" class="csl-entry" role="doc-biblioentry">
+Welling, M., Lu, S., Holdijk, L., 2026. Generative AI and stochastic thermodynamics: A tale of free energies. Cambridge University Press.
 </div>
 </div>
 

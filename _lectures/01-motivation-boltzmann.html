@@ -1,7 +1,7 @@
 ---
 title: "Motivation; Boltzmann, Free Energy, Entropy"
 venue: "FW26, William Gates Building"
-abstract: "<p>Entropy offers no-go theorems; probability tells us what to do. We meet that split in two motivations — perpetual motion, and the bandwidth gap between humans and machines from <em>The Atomic Human</em> — and then in the Boltzmann distribution and the free-energy decomposition (F = U - TS).</p>"
+abstract: "<p>Entropy offers no-go theorems; probability tells us what to do. We meet that split in two motivations — perpetual motion, and the bandwidth gap between humans and machines from <em>The Atomic Human</em> — and then in the Boltzmann distribution and the free-energy decomposition <span class="math inline">\(F = U - TS\)</span>.</p>"
 author:
 - given: Neil D.
   family: Lawrence
@@ -64,7 +64,7 @@ categories:
 </tr>
 <tr class="odd">
 <td style="text-align: right;">65–100</td>
-<td>Free-energy decomposition: (TS) is the subtraction, (F) is what remains</td>
+<td>Free-energy decomposition: <span class="math inline">\(TS\)</span> is the subtraction, <span class="math inline">\(F\)</span> is what remains</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">100–120</td>
@@ -94,7 +94,7 @@ categories:
 <p>How might we make an equivalent statement for the bizarre claims around superintelligence? Some inspiration comes from Maxwell’s demon, an “intelligent” entity which operates against the laws of thermodynamics. The inspiration comes because the demon suggests that for the second law to hold there must be a relationship between the demon’s decisions and thermodynamic entropy.</p>
 <p>One of the resolutions comes from Landauer’s principle, the notion that erasure of information requires heat dissipation. This suggests there are fundamental information-theoretic constraints on intelligent systems, just as there are thermodynamic constraints on engines.</p>
 <p>I’ve no doubt that AI technologies will transform our world just as much as the automobile has. But I also have no doubt that the promise of superintelligence is just as silly as the promise of perpetual motion. The inaccessible game provides one way of understanding why.</p>
-<p>That is entropy as a no-go for engines. There is a second motivation, about us rather than about cars. Human communication sits at about 100 bits per second; machines sit at billions. <em>The Atomic Human</em> <span class="citation" data-cites="Lawrence-atomic24">(Lawrence, 2024)</span> takes that bandwidth gap as the defining constraint on human intelligence: we are locked in relative to the machine. That is also a no-go. It does not tell you how to think. It tells you that you cannot think at machine bandwidth.</p>
+<p>That is entropy as a no-go for engines. There is a second motivation, about us rather than about cars. Human communication sits at about 2000 bits per minute; machines sit at billions. <em>The Atomic Human</em> <span class="citation" data-cites="Lawrence-atomic24">(Lawrence, 2024)</span> takes that bandwidth gap as the defining constraint on human intelligence: we are locked in relative to the machine. That is also a no-go. It does not tell you how to think. It tells you that you cannot think at machine bandwidth.</p>
 <h1 id="the-atomic-human">The Atomic Human</h1>
 <div style="text-align:right">
 <span class="editsection-bracket" style="">[</span><span class="editsection" style=""><a href="https://github.com/lawrennd/snippets/edit/main/_books/includes/the-atomic-human.md" target="_blank" onclick="ga('send', 'event', 'Edit Page', 'Edit', 'https://github.com/lawrennd/snippets/edit/main/_books/includes/the-atomic-human.md', 13);">edit</a></span><span class="editsection-bracket" style="">]</span>
@@ -445,25 +445,58 @@ behaviour is provided by follow-on scripts such as maxwell.js.
 </div>
 </div>
 <p>Presumably he meant that the creation of a black hole seemed to transgress the second law of thermodynamics, although later Hawking was able to show that blackholes do evaporate, but the time scales at which this evaporation occurs is many orders of magnitude slower than other processes in the universe.</p>
-<p>STUB. Derive (p_i e^{-E_i/kT}) and (Z). This is the prescription. Given the energies and the bath, probability tells you the occupation. The second law has already said you cannot put all the mass on the ground state while matching a prescribed mean energy. Boltzmann is what you should do instead.</p>
-<h2 id="free-energy-decomposition">Free Energy Decomposition</h2>
+<p>STUB. Derive <span class="math inline">\(p_i \propto e^{-E_i/kT}\)</span> and <span class="math inline">\(Z\)</span>. This is the prescription. Given the energies and the bath, probability tells you the occupation. The second law has already said you cannot put all the mass on the ground state while matching a prescribed mean energy. Boltzmann is what you should do instead.</p>
+<h2 id="coldness-and-temperature">Coldness and Temperature</h2>
 <div style="text-align:right">
-<span class="editsection-bracket" style="">[</span><span class="editsection" style=""><a href="https://github.com/mlatcl/iei/edit/gh-pages/_lamd/motivation-boltzmann.md" target="_blank" onclick="ga('send', 'event', 'Edit Page', 'Edit', 'https://github.com/mlatcl/iei/edit/gh-pages/_lamd/motivation-boltzmann.md', 13);">edit</a></span><span class="editsection-bracket" style="">]</span>
+<span class="editsection-bracket" style="">[</span><span class="editsection" style=""><a href="https://github.com/lawrennd/snippets/edit/main/_physics/includes/coldness-and-temperature.md" target="_blank" onclick="ga('send', 'event', 'Edit Page', 'Edit', 'https://github.com/lawrennd/snippets/edit/main/_physics/includes/coldness-and-temperature.md', 13);">edit</a></span><span class="editsection-bracket" style="">]</span>
 </div>
-<p>STUB. (U = E ), (S = -kp_i p_i), (F = U - TS = -kTZ). Available energy is what remains after the entropic no-go has taken its cut: (U) is what you have, (TS) is unavailable, (F) is what probability and the bath still allow you to do. This is LO1.</p>
+<p>The Boltzmann occupation can be written in two ways, <span class="math display">\[
+p_i = \frac{e^{-E_i/kT}}{Z}
+= \frac{e^{-\beta E_i}}{Z},
+\qquad
+\beta = \frac{1}{kT}.
+\]</span> The mathematics is the same, but the emphasis is different.</p>
+<p><span class="math inline">\(T\)</span> is the variable of the bath. It is what a thermometer reports, and it is the intensive parameter in the Helmholtz accounting <span class="math inline">\(F = U - TS\)</span>. In that representation energy comes first and entropy is the correction: <span class="math inline">\(TS\)</span> is the cut the second law takes from <span class="math inline">\(U\)</span>.</p>
+<p><span class="math inline">\(\beta\)</span> is <em>coldness</em>. It is the variable conjugate to energy. In that representation entropy comes first: you maximise <span class="math inline">\(S\)</span> (or write a generating function in <span class="math inline">\(\beta\)</span>) and energy is the constraint. Temperature is then a derived reading, <span class="math inline">\(T = 1/k\beta = (\partial S/\partial U)^{-1}\)</span>.</p>
+<p>We will use both. Weeks 1–2 keep <span class="math inline">\(T\)</span> in view so the bath is familiar, and they already compute in <span class="math inline">\(\beta\)</span> because that is the natural argument of <span class="math inline">\(Z\)</span>. Week 4 makes the <span class="math inline">\(\beta\)</span>-first order honest: the Lagrange multiplier on a mean-energy constraint <em>is</em> coldness, and it is the natural parameter of the exponential family. Weeks 5–6 then treat <span class="math inline">\(\beta\)</span> as a coordinate on that family. A student who still hears <span class="math inline">\(\beta\)</span> as ``one over the thermometer’’ will miss why the geometry is written in those coordinates.</p>
+<h2 id="free-energy-decomposition">Free Energy Decomposition</h2>
+<p>STUB. <span class="math inline">\(U = \langle E \rangle\)</span>, <span class="math inline">\(S = -k\sum p_i \log p_i\)</span>, <span class="math inline">\(F = U - TS = -kT\log Z\)</span>. Available energy is what remains after the entropic no-go has taken its cut: <span class="math inline">\(U\)</span> is what you have, <span class="math inline">\(TS\)</span> is unavailable, <span class="math inline">\(F\)</span> is what probability and the bath still allow you to do. This is LO1.</p>
+<h2 id="welling-lu-and-holdijk">Welling, Lu and Holdijk</h2>
+<div style="text-align:right">
+<span class="editsection-bracket" style="">[</span><span class="editsection" style=""><a href="https://github.com/lawrennd/snippets/edit/main/_books/includes/welling-lu-holdijk.md" target="_blank" onclick="ga('send', 'event', 'Edit Page', 'Edit', 'https://github.com/lawrennd/snippets/edit/main/_books/includes/welling-lu-holdijk.md', 13);">edit</a></span><span class="editsection-bracket" style="">]</span>
+</div>
+<p>Welling, Lu and Holdijk’s <em>Generative AI and Stochastic Thermodynamics</em> (GAIST, <span class="citation" data-cites="Welling-generative26">(Welling et al., 2026)</span>) is a supplementary text for this module, not a required one. The book asks whether generative models and nonequilibrium thermodynamics are the same mathematics. Its answer is that they are: variational free energy is the ELBO, inference is a system relaxing (heat), and learning is work done on the Hamiltonian. Entropy is missing information in Jaynes’ sense. The closing slogan is that free energy is all you need.</p>
+<p>That is a different question from ours. We ask whether superintelligence is a perpetual-motion claim, and we treat entropy as a no-go. Use the book for the physics of free energy, for the ELBO identification, and for the Wasserstein and Schrödinger-bridge geometries. Do not use it as a substitute for Crooks (2007), Amari, or the three-perspective comparison in week 4. A draft is on the course site.</p>
+<h2 id="gaist-on-boltzmann-and-free-energy">GAIST on Boltzmann and Free Energy</h2>
+<div style="text-align:right">
+<span class="editsection-bracket" style="">[</span><span class="editsection" style=""><a href="https://github.com/lawrennd/snippets/edit/main/_information/includes/welling-boltzmann-free-energy.md" target="_blank" onclick="ga('send', 'event', 'Edit Page', 'Edit', 'https://github.com/lawrennd/snippets/edit/main/_information/includes/welling-boltzmann-free-energy.md', 13);">edit</a></span><span class="editsection-bracket" style="">]</span>
+</div>
+<p>The opening essay, ``Why Stochastic Thermodynamics of Machine Learning?’’ <span class="citation" data-cites="Welling-generative26">(Welling et al., 2026)</span>, states the free-energy decomposition we use today: entropy measures the information we are missing; we subtract it from the energy and call what remains free energy, the energy still free to perform work. Maxwell’s demon appears there as a knowledge engine — not yet as Landauer’s cost. That cost is week 3.</p>
+<p>Chapter 3 is the physics we need for LO1. Section 3.2 introduces the Hamiltonian, the microcanonical and canonical ensembles, and the passage from the partition function to <span class="math inline">\(U\)</span>, <span class="math inline">\(S\)</span>, and <span class="math inline">\(F\)</span>. Section 3.3 writes the first law and splits an energy change into heat and work: <span class="math display">\[
+\delta U = \int \delta\rho\,\mathrm{H} + \int \rho\,\delta\mathrm{H}.
+\]</span> The first term is heat (<span class="math inline">\(\rho\)</span> changes at fixed Hamiltonian); the second is work (the Hamiltonian changes at fixed <span class="math inline">\(\rho\)</span>). That is the same accounting as <span class="math inline">\(F = U - TS\)</span>: <span class="math inline">\(TS\)</span> is the cut taken by ignorance, <span class="math inline">\(F\)</span> is what remains.</p>
+<p>Read Chapter 3, not the whole book. Callen remains the undergraduate thermodynamics reference. GAIST does not discuss perpetual motion or the human bandwidth constraint; those motivations are ours.</p>
 <h2 id="thermodynamic-bath-and-schottkys-anomaly">Thermodynamic Bath and Schottky’s Anomaly</h2>
-<p>STUB. A thermodynamic bath is the large system that justifies the canonical ensemble: it fixes (T) and exchanges energy. The two-state system (E{0,}) is the running example for Worksheet 1 and Quiz 1. Its heat capacity has a peak (Schottky’s anomaly). Name the peak today; the purely entropic reading waits until weeks 7–8.</p>
-<h2 id="finite-time-costs-more-than-f">Finite Time Costs More Than (F)</h2>
-<p>STUB. Quasi-static processes achieve (W = F). Finite-time processes dissipate more. Do not define thermodynamic length today. Name the fact. Weeks 5–6 will identify the extra cost with Fisher–Rao length (Crooks). Week 8 will ask what that bound means for intelligence.</p>
+<p>STUB. A thermodynamic bath is the large system that justifies the canonical ensemble: it fixes <span class="math inline">\(T\)</span> and exchanges energy. The two-state system <span class="math inline">\(E\in\{0,\varepsilon\}\)</span> is the running example for Worksheet 1 and Quiz 1. Its heat capacity has a peak (Schottky’s anomaly). Name the peak today; the purely entropic reading waits until weeks 7–8.</p>
+<h2 id="finite-time-costs-more-than-delta-f">Finite Time Costs More Than <span class="math inline">\(\Delta F\)</span></h2>
+<p>STUB. Quasi-static processes achieve <span class="math inline">\(W = \Delta F\)</span>. Finite-time processes dissipate more. Do not define thermodynamic length today. Name the fact. Weeks 5–6 will identify the extra cost with Fisher–Rao length (Crooks). Week 8 will ask what that bound means for intelligence.</p>
 <h2 id="define-this-week">Define This Week</h2>
 <p>Interpret later: how entropy is understood today; equilibrium versus non-equilibrium; the purely entropic Schottky reading.</p>
 <h2 id="this-weeks-pair">This Week’s Pair</h2>
-<p>No-go: the second law; human communication at (100) bits per second. Prescription: the Boltzmann occupation. Free energy is the accounting of that pair.</p>
+<p>No-go: the second law; human communication at <span class="math inline">\(\sim 100\)</span> bits per second. Prescription: the Boltzmann occupation. Free energy is the accounting of that pair.</p>
 <h2 id="after-this-lecture">After This Lecture</h2>
 <div style="text-align:right">
 <span class="editsection-bracket" style="">[</span><span class="editsection" style=""><a href="https://github.com/mlatcl/iei/edit/gh-pages/_lamd/motivation-boltzmann.md" target="_blank" onclick="ga('send', 'event', 'Edit Page', 'Edit', 'https://github.com/mlatcl/iei/edit/gh-pages/_lamd/motivation-boltzmann.md', 13);">edit</a></span><span class="editsection-bracket" style="">]</span>
 </div>
 <p>Worksheet 1: three-state Boltzmann sampling, free-energy decomposition, Shannon entropy of simple sources; 300-word LLM reflection. Ask the model whether entropy is a constraint or a recipe, then write down which half it missed. Due 20 October, start of lecture 2.</p>
+<h2 id="further-reading">Further Reading</h2>
+<ul>
+<li><p>Chapter 1 of <span class="citation" data-cites="Lawrence-atomic24">Lawrence (2024)</span></p></li>
+<li><p>Why Stochastic Thermodynamics of Machine Learning? of <span class="citation" data-cites="Welling-generative26">Welling et al. (2026)</span></p></li>
+<li><p>Chapter 3 of <span class="citation" data-cites="Welling-generative26">Welling et al. (2026)</span></p></li>
+<li><p>Chapters 1–4 of <span class="citation" data-cites="Callen-thermostatistics85">Callen (1985)</span></p></li>
+<li><p>Chapters 5–6 of <span class="citation" data-cites="Callen-thermostatistics85">Callen (1985)</span></p></li>
+</ul>
 <h2 id="thanks">Thanks!</h2>
 <p>For more information on these subjects and more you might want to check the following resources.</p>
 <ul>
@@ -481,6 +514,9 @@ Ananthanarayanan, R., Esser, S.K., Simon, H.D., Modha, D.S., 2009. The cat is ou
 </div>
 <div id="ref-Boltzmann-warmetheorie77" class="csl-entry" role="doc-biblioentry">
 Boltzmann, L., n.d. Über die <span>B</span>eziehung zwischen dem zweiten <span>H</span>auptsatze der mechanischen <span>W</span>armetheorie und der <span>W</span>ahrscheinlichkeitsrechnung, respective den <span>S</span>ätzen über das wärmegleichgewicht. Sitzungberichte der Kaiserlichen Akademie der Wissenschaften. Mathematisch-Naturwissen Classe. Abt. II LXXVI, 373–435.
+</div>
+<div id="ref-Callen-thermostatistics85" class="csl-entry" role="doc-biblioentry">
+Callen, H.B., 1985. Thermodynamics and an introduction to thermostatistics, 2nd ed. Wiley, New York.
 </div>
 <div id="ref-Eddington:nature29" class="csl-entry" role="doc-biblioentry">
 Eddington, A.S., 1929. The nature of the physical world. Dent (London). <a href="https://doi.org/10.2307/2180099">https://doi.org/10.2307/2180099</a>
@@ -502,6 +538,9 @@ Reed, C., Durlach, N.I., 1998. Note on information transfer rates in human commu
 </div>
 <div id="ref-Kim-translation15" class="csl-entry" role="doc-biblioentry">
 Sharp, K., Matschinsky, F., 2015. Translation of <span>L</span>udwig <span>B</span>oltzmann’s paper <span>“on the relationship between the second fundamental theorem of the mechanical theory of heat and probability calculations regarding the conditions for thermal equilibrium.”</span> Entropy 17, 1971–2009. <a href="https://doi.org/10.3390/e17041971">https://doi.org/10.3390/e17041971</a>
+</div>
+<div id="ref-Welling-generative26" class="csl-entry" role="doc-biblioentry">
+Welling, M., Lu, S., Holdijk, L., 2026. Generative AI and stochastic thermodynamics: A tale of free energies. Cambridge University Press.
 </div>
 </div>
 <section class="footnotes" role="doc-endnotes">

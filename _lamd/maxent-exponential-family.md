@@ -30,6 +30,19 @@ reading:
     author: "Jaynes"
     chapter: "Chapters 11–12"
     estimated_hours: 2
+  - title: "Information Theory, Inference, and Learning Algorithms"
+    author: "MacKay"
+    chapter: "Chapter 22"
+    estimated_hours: 1
+  - title: "Elements of Information Theory"
+    author: "Cover and Thomas"
+    chapter: "Chapter 12"
+    estimated_hours: 1
+  - title: "Generative AI and Stochastic Thermodynamics"
+    author: "Welling, Lu and Holdijk"
+    chapter: "§1.5.5; Chapter 5"
+    estimated_hours: 1
+    required: false
 ---
 
 \notes{Worksheet 2 is due at the start of this session. No class test. Quiz 2 is 10 November (MaxEnt, exponential family, Landauer).}
@@ -64,6 +77,9 @@ reading:
 
 \notes{STUB. Recover the canonical ensemble from a mean-energy constraint. Recover the Gaussian from mean and variance. The die is the running example: mean 4.5, not 3.5. The Lagrange multiplier on mean energy is the coldness $\beta$ from week 1: entropy first, energy the constraint. MaxEnt is the week's pair in one move: entropy as a prohibition on extra structure (do not assume more than you know), probability as the recipe (this is the $p$ you should adopt). This is LO5.}
 
+\addreading{@MacKay-information03}{Chapter 22}
+\addreading{@Cover:elements91}{Chapter 12}
+
 \subsection{The Exponential Family}
 
 \include{_physics/includes/exponential-families.md}
@@ -82,6 +98,8 @@ reading:
 * Jaynes: a state of knowledge
 * All three: $H$ forbids, $p$ prescribes
 }
+
+\include{_information/includes/welling-maxent-elbo.md}
 
 \subsection{Define This Week}
 

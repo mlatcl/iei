@@ -70,6 +70,12 @@ categories:
 <p>STUB. Steepest descent in the Fisher metric is (-F^{-1}L). It removes arbitrary parameterisation dependence. Same metric whose length is thermodynamic length. This is LO9 (second half).</p>
 <h2 id="geodesics-as-optimal-protocols">Geodesics as Optimal Protocols</h2>
 <p>STUB. Last week’s no-go was (W_{}^2/). This week’s prescription is the geodesic: the path you should take if you want to meet that bound. Natural gradient is the local form of the same instruction — step in the direction the metric says is steepest. Compute or sketch one geodesic on a two-parameter exponential family (Gaussian in ((,^2)), or the two-state system in ()). Do not yet contrast this geometry with Wasserstein or Schrödinger bridges — that is lecture 8.</p>
+<h2 id="gaist-on-minimum-dissipation-protocols">GAIST on Minimum-Dissipation Protocols</h2>
+<div style="text-align:right">
+<span class="editsection-bracket" style="">[</span><span class="editsection" style=""><a href="https://github.com/lawrennd/snippets/edit/main/_information/includes/welling-geodesics-and-work.md" target="_blank" onclick="ga('send', 'event', 'Edit Page', 'Edit', 'https://github.com/lawrennd/snippets/edit/main/_information/includes/welling-geodesics-and-work.md', 13);">edit</a></span><span class="editsection-bracket" style="">]</span>
+</div>
+<p><span class="citation" data-cites="Welling-generative26">(Welling et al., 2026)</span> has a theory of minimum-dissipation protocols. It is not this week’s theory. Sections 22.3–22.4 minimise dissipated work in the Benamou–Brenier formulation of optimal transport. The geodesic that saturates the bound lives in the <em>Wasserstein</em> metric, and the bound is <span class="math inline">\(\Sigma \ge W_2^2/(T\tau)\)</span>. Counterdiabatic driving (Section 22.4) prescribes a path of densities and solves for the control that the system must follow.</p>
+<p>We are still on the equilibrium manifold, with the Fisher metric. Today’s geodesic is Crooks’ minimum-dissipation protocol; today’s local instruction is the natural gradient <span class="math inline">\(F^{-1}\nabla L\)</span>. GAIST does not treat m-projection, dual flatness, or the natural gradient. Stay with Amari this week. Wasserstein and the Schrödinger bridge arrive in week 8, where the three geometries must be kept apart.</p>
 <h2 id="define-this-week">Define This Week</h2>
 <h2 id="this-weeks-pair">This Week’s Pair</h2>
 <p>No-go: you cannot beat (^2/). Prescription: descend by the natural gradient; travel by the geodesic.</p>
@@ -78,6 +84,11 @@ categories:
 <span class="editsection-bracket" style="">[</span><span class="editsection" style=""><a href="https://github.com/mlatcl/iei/edit/gh-pages/_lamd/maxent-projection.md" target="_blank" onclick="ga('send', 'event', 'Edit Page', 'Edit', 'https://github.com/mlatcl/iei/edit/gh-pages/_lamd/maxent-projection.md', 13);">edit</a></span><span class="editsection-bracket" style="">]</span>
 </div>
 <p>Quiz 3 at the start of lecture 7 (24 November): Fisher metric, natural gradient, dual flatness, on a new parameterised family.</p>
+<h2 id="further-reading">Further Reading</h2>
+<ul>
+<li><p>Sections 22.3–22.4 (Wasserstein geodesics, not Fisher–Rao) of <span class="citation" data-cites="Welling-generative26">Welling et al. (2026)</span></p></li>
+<li><p>Chapters 3–4 of <span class="citation" data-cites="Amari-information16">Amari (2016)</span></p></li>
+</ul>
 <h2 id="thanks">Thanks!</h2>
 <p>For more information on these subjects and more you might want to check the following resources.</p>
 <ul>
@@ -88,5 +99,13 @@ categories:
 <li>newspaper: <a href="http://www.theguardian.com/profile/neil-lawrence">Guardian Profile Page</a></li>
 <li>blog: <a href="http://inverseprobability.com/blog.html">http://inverseprobability.com</a></li>
 </ul>
-<h1 id="references">References</h1>
+<h1 class="unnumbered" id="references">References</h1>
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-Amari-information16" class="csl-entry" role="doc-biblioentry">
+Amari, S., 2016. Information geometry and its applications, Applied mathematical sciences. Springer, Tokyo. <a href="https://doi.org/10.1007/978-4-431-55978-8">https://doi.org/10.1007/978-4-431-55978-8</a>
+</div>
+<div id="ref-Welling-generative26" class="csl-entry" role="doc-biblioentry">
+Welling, M., Lu, S., Holdijk, L., 2026. Generative AI and stochastic thermodynamics: A tale of free energies. Cambridge University Press.
+</div>
+</div>
 

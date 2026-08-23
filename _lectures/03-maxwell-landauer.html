@@ -230,6 +230,12 @@ Q_{\text{dissipated}} \geq k_BT\log 2.
 <p>The insight is that erasure requires both redistributing marginal entropy (to maintain the constraint) and increasing total entropy <span class="math inline">\(H\)</span> (second law), which necessarily reduces multi-information <span class="math inline">\(I\)</span> and invokes dissipation.</p>
 <p>The information-theoretic constraint provides the foundation, with thermodynamic energy appearing as its dual in the large-system limit. This reverses the usual derivation where information bounds follow from thermodynamics — here thermodynamic bounds follow from information theory.</p>
 <p>STUB. Landauer (1961): erasing one bit in a bath at temperature (T) dissipates at least (k_B T). That is a no-go. The demon’s <em>policy</em> — which molecules to let through — is the prescription: probability telling the demon what to do. The policy does not repeal the no-go. Erasure of the stored outcomes restores the second law. This is LO4.</p>
+<h2 id="gaist-on-maxwell-and-landauer">GAIST on Maxwell and Landauer</h2>
+<div style="text-align:right">
+<span class="editsection-bracket" style="">[</span><span class="editsection" style=""><a href="https://github.com/lawrennd/snippets/edit/main/_information/includes/welling-maxwell-landauer.md" target="_blank" onclick="ga('send', 'event', 'Edit Page', 'Edit', 'https://github.com/lawrennd/snippets/edit/main/_information/includes/welling-maxwell-landauer.md', 13);">edit</a></span><span class="editsection-bracket" style="">]</span>
+</div>
+<p>Section 3.3 of <span class="citation" data-cites="Welling-generative26">(Welling et al., 2026)</span>, pages 49–52, is the book’s account of today’s pair. Heat is energy stored in fluctuations we cannot couple to; work is energy stored in a few accessible macroscopic degrees of freedom. The split is subjective: it depends on the devices we can build. Maxwell’s demon is the being who <em>can</em> couple to the molecules, and so appears to extract work from a single bath.</p>
+<p>The resolution is Landauer and Bennett <span class="citation" data-cites="Landauer-irreversibility61 Bennett-thermodynamics82">(Bennett, 1982; Landauer, 1961)</span>: the demon must acquire, store, and erase information, and that process increases entropy by at least as much as the system lost. The modern review is <span class="citation" data-cites="Parrondo-thermodynamics15">Parrondo et al. (2015)</span>. GAIST does not develop Szilard’s engine, and does not yet state the <span class="math inline">\(k_B T\ln 2\)</span> bound as a calculation. Read Landauer’s two pages for that. The finite-time correction to Landauer — you cannot saturate <span class="math inline">\(k_B T\ln 2\)</span> in finite time — is Section 22.3, and waits until week 8.</p>
 <h2 id="information-and-intelligence-first-cut">Information and Intelligence: First Cut</h2>
 <h2 id="embodiment-factors-walking-vs-light-speed">Embodiment Factors: Walking vs Light Speed</h2>
 <p>Imagine human communication as moving at walking pace. The average person speaks about 160 words per minute, which is roughly 2000 bits per minute. If we compare this to walking speed, roughly 1 m/s we can think of this as the speed at which our thoughts can be shared with others.</p>
@@ -295,6 +301,12 @@ Q_{\text{dissipated}} \geq k_BT\log 2.
 <span class="editsection-bracket" style="">[</span><span class="editsection" style=""><a href="https://github.com/mlatcl/iei/edit/gh-pages/_lamd/maxwell-landauer.md" target="_blank" onclick="ga('send', 'event', 'Edit Page', 'Edit', 'https://github.com/mlatcl/iei/edit/gh-pages/_lamd/maxwell-landauer.md', 13);">edit</a></span><span class="editsection-bracket" style="">]</span>
 </div>
 <p>Worksheet 2: Maxwell / Landauer, MaxEnt, exponential family. Due 3 November. Quiz 2 is 10 November and will use a <em>new</em> example.</p>
+<h2 id="further-reading">Further Reading</h2>
+<ul>
+<li><p>the whole paper of <span class="citation" data-cites="Landauer-irreversibility61">Landauer (1961)</span></p></li>
+<li><p>Section 3.3, pages 49–52 of <span class="citation" data-cites="Welling-generative26">Welling et al. (2026)</span></p></li>
+<li><p>Chapter 1 of <span class="citation" data-cites="Lawrence-atomic24">Lawrence (2024)</span></p></li>
+</ul>
 <h2 id="thanks">Thanks!</h2>
 <p>For more information on these subjects and more you might want to check the following resources.</p>
 <ul>
@@ -312,6 +324,9 @@ Alemi, A.A., Fischer, I., 2019. Ther<span>ML</span>: The thermodynamics of machi
 </div>
 <div id="ref-Bennet-thermodynamics82" class="csl-entry" role="doc-biblioentry">
 Bennet, C.H., 1982. The thermodynamics of computation—a review. International Journal of Theoretical Physics 21, 906–940.
+</div>
+<div id="ref-Bennett-thermodynamics82" class="csl-entry" role="doc-biblioentry">
+Bennett, C.H., 1982. The thermodynamics of computation—–a review. International Journal of Theoretical Physics 21, 905–940.
 </div>
 <div id="ref-Brillouin-maxwell51" class="csl-entry" role="doc-biblioentry">
 Brillouin, L., 1951. Maxwell’s demon cannot operate: Information and entropy. i. Journal of Applied Physics 22, 334–337. <a href="https://doi.org/10.1063/1.1699951">https://doi.org/10.1063/1.1699951</a>
@@ -345,6 +360,9 @@ Shannon, C.E., 1948. A mathematical theory of communication. The Bell System Tec
 </div>
 <div id="ref-Szilard-intelligenter29" class="csl-entry" role="doc-biblioentry">
 Szilard, L., 1929. <span>Ü</span>ber die <span>E</span>ntropieverminderung in einem thermodynamischen <span>S</span>ystem bei <span>E</span>ingriffen intelligenter <span>W</span>esen. Zeitschrift f<span>ü</span>r Physik 53, 840–856. <a href="https://doi.org/10.1007/BF01341281">https://doi.org/10.1007/BF01341281</a>
+</div>
+<div id="ref-Welling-generative26" class="csl-entry" role="doc-biblioentry">
+Welling, M., Lu, S., Holdijk, L., 2026. Generative AI and stochastic thermodynamics: A tale of free energies. Cambridge University Press.
 </div>
 </div>
 

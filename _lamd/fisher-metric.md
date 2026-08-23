@@ -77,11 +77,15 @@ $$
 $$
 where \(\mathcal{I}\) is the Fisher matrix already on the board. In the linear-response regime \(\langle W_{\mathrm{ex}}\rangle \ge \mathcal{L}^2/\tau\). That inequality is the no-go. The metric that defines the length is the prescription for how to measure a change of state. Define today. Do not ask what this has to do with intelligence — that is lecture 8.}
 
+\addreading{@Crooks-length07}{the whole paper}
+
 \slidesincremental{
 * No-go: \(\langle W_{\mathrm{ex}}\rangle \ge \mathcal{L}^2/\tau\)
 * Prescription: length is measured with the Fisher metric
 * Intelligence question: week 8
 }
+
+\include{_information/includes/welling-crooks-fluctuation.md}
 
 \subsection{Define This Week}
 

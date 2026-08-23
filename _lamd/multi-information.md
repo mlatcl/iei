@@ -31,6 +31,16 @@ reading:
     chapter: "Chapter 11"
     estimated_hours: 2
     required: false
+  - title: "Information Theoretical Analysis of Multivariate Correlation"
+    author: "Watanabe"
+    chapter: "whole paper"
+    estimated_hours: 1
+    required: false
+  - title: "Information Theory and Statistical Mechanics"
+    author: "Jaynes"
+    chapter: "Brandeis lectures (1963)"
+    estimated_hours: 1
+    required: false
 ---
 
 \notes{Quiz 3 occupies the first ten minutes. Then multi-information and the passage to quantum probability. Worksheet 4 is released; due at the start of lecture 8 (1 December). That is a one-week turnaround.}

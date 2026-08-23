@@ -60,7 +60,7 @@ categories:
 </tr>
 <tr class="odd">
 <td style="text-align: right;">65–100</td>
-<td>Canonical ensemble; (Z) as generating function; bath revisited</td>
+<td>Canonical ensemble; <span class="math inline">\(Z\)</span> as generating function; bath revisited</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">100–120</td>
@@ -74,7 +74,7 @@ categories:
 <span class="editsection-bracket" style="">[</span><span class="editsection" style=""><a href="https://github.com/lawrennd/snippets/edit/main/_policy/includes/shannon-information.md" target="_blank" onclick="ga('send', 'event', 'Edit Page', 'Edit', 'https://github.com/lawrennd/snippets/edit/main/_policy/includes/shannon-information.md', 13);">edit</a></span><span class="editsection-bracket" style="">]</span>
 </div>
 <p>To properly understand the relationship between human and machine intelligence, we need to step back from eugenic notions of rankable intelligence toward a more fundamental measure: information theory.</p>
-<p>The field of <em>information theory</em> was introduced by Claude Shannon, an American mathematician who worked for Bell Labs <span class="citation" data-cites="Shannon-info48">Shannon (1948)</span>. Shannon was trying to understand how to make the most efficient use of resources within the telephone network. To do this he developed an approach to quantifying information by associating it with probability, making information fungible by removing context.</p>
+<p>The field of <em>information theory</em> was introduced by Claude Shannon, an American mathematician who worked for Bell Labs <span class="citation" data-cites="Shannon-info48">Shannon (1948a)</span>. Shannon was trying to understand how to make the most efficient use of resources within the telephone network. To do this he developed an approach to quantifying information by associating it with probability, making information fungible by removing context.</p>
 <p>A typical human, when speaking, shares information at around 2,000 bits per minute. Two machines will share information at 600 billion bits per minute. In other words, machines can share information 300 million times faster than us. This is equivalent to us traveling at walking pace, and the machine traveling at the speed of light.</p>
 <p>From this perspective, machine decision-making belongs to an utterly different realm to that of humans. Consideration of the relative merits of the two needs to take these differences into account. This difference between human and machine underpins the revolution in algorithmic decision-making that has already begun reshaping our society <span class="citation" data-cites="Lawrence-atomic24">Lawrence (2024)</span>.</p>
 <h2 id="brownian-motion-and-wiener">Brownian Motion and Wiener</h2>
@@ -167,7 +167,7 @@ categories:
 </div>
 </div>
 <p>Wiener himself used the processes in his work. He was focused on mathematical theories of communication. Between the world wars he was based at Massachusetts Institute of Technology where the burgeoning theory of electrical engineering was emerging, with a particular focus on communication lines. Winer developed theories of communication that used Gibbs’s entropy to encode information. He also used the ideas behind the Wiener process for developing tracking methods for radar systems in the second world war. These processes are what we know of now as Gaussian processes (<span class="citation" data-cites="Wiener-yellow49">Wiener (1949)</span>).</p>
-<p>STUB. Derive (H = -p_ip_i) from the Shannon axioms. Fair coin, biased coin, uniform over eight outcomes. Thermodynamic entropy (S = kH): same object, different operational reading. (H) is the no-go half of Shannon: it bounds what a code cannot do. The distribution (p) is the prescription: it <em>is</em> the code, or the belief. This is LO2. Wiener’s line from Gibbs to communication is why Shannon’s (H) and Boltzmann’s (S) are the same object: a theory of ignorance, not a theory of knowledge.</p>
+<p>STUB. Derive <span class="math inline">\(H = -\sum p_i\log p_i\)</span> from the Shannon axioms. Fair coin, biased coin, uniform over eight outcomes. Thermodynamic entropy <span class="math inline">\(S = kH\)</span>: same object, different operational reading. <span class="math inline">\(H\)</span> is the no-go half of Shannon: it bounds what a code cannot do. The distribution <span class="math inline">\(p\)</span> is the prescription: it <em>is</em> the code, or the belief. This is LO2. Wiener’s line from Gibbs to communication is why Shannon’s <span class="math inline">\(H\)</span> and Boltzmann’s <span class="math inline">\(S\)</span> are the same object: a theory of ignorance, not a theory of knowledge.</p>
 <h2 id="dasher">Dasher</h2>
 <h2 id="dasher-arithmetic-coding-as-interface">Dasher: Arithmetic Coding as Interface</h2>
 <div style="text-align:right">
@@ -213,22 +213,38 @@ categories:
 <p>Figure: Dasher: continuous-zoom arithmetic coding interface. Move the mouse to the right to zoom toward the character at your vertical cursor position. Character height is proportional to P(char | context), so common letters present large targets. Try typing “th” — ‘e’ expands to fill nearly the whole display.</p>
 </div>
 </div>
-<p>Dasher is the pair in one interface. Letter height is (p()); the information cost of a hit is (-p). (H()) is the no-go on the remaining rate. The language model is the prescription: this is the next letter you should make easy to hit. The bits-per-second counter is the same kind of number as the human bandwidth no-go from lecture 1 — here spent on a pointer, not on speech.</p>
+<p>Dasher is the pair in one interface. Letter height is <span class="math inline">\(p(\mathrm{char}\mid\mathrm{context})\)</span>; the information cost of a hit is <span class="math inline">\(-\log p\)</span>. <span class="math inline">\(H(\mathrm{next})\)</span> is the no-go on the remaining rate. The language model is the prescription: this is the next letter you should make easy to hit. The bits-per-second counter is the same kind of number as the human bandwidth no-go from lecture 1 — here spent on a pointer, not on speech.</p>
 <h2 id="the-partition-function">The Partition Function</h2>
-<p>STUB. Canonical ensemble from the bath. (Z() = <em>i e^{-E_i}). Mean energy (U = -</em>Z), (F = -^{-1}Z), (S = (U-F)). Compute these for the two-state system. This is LO3. (Z) is the constructive twin of last week’s second-law no-go: it tells you what (U), (S), and (F) <em>are</em>. Equilibrium versus non-equilibrium: the canonical ensemble <em>is</em> an equilibrium construction. Finite-time driving leaves that manifold; the cost is still only named.</p>
+<p>STUB. Canonical ensemble from the bath. <span class="math inline">\(Z(\beta) = \sum_i e^{-\beta E_i}\)</span>. Mean energy <span class="math inline">\(U = -\partial_\beta\log Z\)</span>, <span class="math inline">\(F = -\beta^{-1}\log Z\)</span>, <span class="math inline">\(S = \beta(U-F)\)</span>. Compute these for the two-state system. This is LO3. <span class="math inline">\(\beta\)</span> is the coldness named last week: <span class="math inline">\(Z\)</span> is written in the entropy-first variable. <span class="math inline">\(T\)</span> remains the bath parameter. Equilibrium versus non-equilibrium: the canonical ensemble <em>is</em> an equilibrium construction. Finite-time driving leaves that manifold; the cost is still only named.</p>
+<h2 id="gaist-on-entropy-and-the-partition-function">GAIST on Entropy and the Partition Function</h2>
+<div style="text-align:right">
+<span class="editsection-bracket" style="">[</span><span class="editsection" style=""><a href="https://github.com/lawrennd/snippets/edit/main/_information/includes/welling-entropy-partition.md" target="_blank" onclick="ga('send', 'event', 'Edit Page', 'Edit', 'https://github.com/lawrennd/snippets/edit/main/_information/includes/welling-entropy-partition.md', 13);">edit</a></span><span class="editsection-bracket" style="">]</span>
+</div>
+<p>Section 1.2.3 of <span class="citation" data-cites="Welling-generative26">(Welling et al., 2026)</span> defines Shannon entropy as expected surprisal, <span class="math inline">\(\mathrm{S}[p] = -\int p\log p\)</span>, in nats. It computes the Gaussian entropy and shows that it depends only on <span class="math inline">\(\sigma\)</span>, not on <span class="math inline">\(\mu\)</span>. Section 1.2.4 introduces KL as relative entropy, the information lost when <span class="math inline">\(q\)</span> stands in for <span class="math inline">\(p\)</span>, and records the chain-rule decomposition of KL. That is useful scaffolding for week 7; it is not Shannon’s chain rule for <span class="math inline">\(H\)</span>.</p>
+<p>Section 3.2.4 is the generating-function half of today’s lecture: from <span class="math inline">\(Z\)</span> to mean energy, entropy, and free energy. Read those two sections. Do not look here for the Shannon axioms, for <span class="math inline">\(S = kH\)</span>, or for channel capacity. Those are MacKay and Shannon (1948). GAIST treats entropy as a property of a distribution, not as a no-go on a code.</p>
 <h2 id="scaffolding-not-outcomes">Scaffolding, Not Outcomes</h2>
-<p>STUB. Chain rule: (H(X,Y) = H(X) + H(Y|X)). Needed in week 7 for multi-information. Channel capacity: you cannot send faster than (C). That is the week’s cleanest no-go. The capacity-achieving input (p(x)) is the prescription: this is the distribution you should use. Data-processing inequality: processing cannot create information — another no-go. Mention, do not prove. None of these is a learning outcome; the pair is the reason they are here.</p>
+<p>STUB. Chain rule: <span class="math inline">\(H(X,Y) = H(X) + H(Y|X)\)</span>. Needed in week 7 for multi-information. Channel capacity: you cannot send faster than <span class="math inline">\(C\)</span>. That is the week’s cleanest no-go. The capacity-achieving input <span class="math inline">\(p(x)\)</span> is the prescription: this is the distribution you should use. Data-processing inequality: processing cannot create information — another no-go. Mention, do not prove. None of these is a learning outcome; the pair is the reason they are here.</p>
 <h2 id="three-framings-first-pass">Three Framings, First Pass</h2>
-<p>Information, thermodynamic, and Bayesian readings of the same (H) are named today. The intended comparison is LO7, week 4. A student who answers “how is entropy understood today?” with only Shannon is not finished.</p>
+<p>Information, thermodynamic, and Bayesian readings of the same <span class="math inline">\(H\)</span> are named today. The intended comparison is LO7, week 4. A student who answers “how is entropy understood today?” with only Shannon is not finished.</p>
 <h2 id="define-this-week">Define This Week</h2>
 <p>Interpret later: how entropy is understood today (week 4, then week 7); chain rule as the source of multi-information (week 7).</p>
 <h2 id="this-weeks-pair">This Week’s Pair</h2>
-<p>No-go: (RC); the data-processing inequality. Prescription: the capacity-achieving input; (Z) as a generating function.</p>
+<p>No-go: <span class="math inline">\(R\le C\)</span>; the data-processing inequality. Prescription: the capacity-achieving input; <span class="math inline">\(Z\)</span> as a generating function.</p>
 <h2 id="after-this-lecture">After This Lecture</h2>
 <div style="text-align:right">
 <span class="editsection-bracket" style="">[</span><span class="editsection" style=""><a href="https://github.com/mlatcl/iei/edit/gh-pages/_lamd/shannon-entropy.md" target="_blank" onclick="ga('send', 'event', 'Edit Page', 'Edit', 'https://github.com/mlatcl/iei/edit/gh-pages/_lamd/shannon-entropy.md', 13);">edit</a></span><span class="editsection-bracket" style="">]</span>
 </div>
 <p>Quiz 1 at the start of lecture 3 (27 October): ten Moodle questions, ten minutes, two-state system and a binary source — not the three-state / die examples from Worksheet 1. Device required. No notes. LLM exercise: ask whether Shannon entropy is a bound or a recipe.</p>
+<h2 id="further-reading">Further Reading</h2>
+<ul>
+<li><p>Sections 1–6 of <span class="citation" data-cites="Shannon-mathematical48">Shannon (1948b)</span></p></li>
+<li><p>Chapters 1–4 of <span class="citation" data-cites="MacKay-information03">MacKay (2003)</span></p></li>
+<li><p>Chapter 2 of <span class="citation" data-cites="Cover:elements91">Cover and Thomas (1991)</span></p></li>
+<li><p>Sections 1.2.3–1.2.4 and 3.2.4 of <span class="citation" data-cites="Welling-generative26">Welling et al. (2026)</span></p></li>
+<li><p>Chapter 16 of <span class="citation" data-cites="Callen-thermostatistics85">Callen (1985)</span></p></li>
+<li><p>Chapter 7 of <span class="citation" data-cites="Cover:elements91">Cover and Thomas (1991)</span></p></li>
+<li><p>Chapters 8–10 of <span class="citation" data-cites="MacKay-information03">MacKay (2003)</span></p></li>
+</ul>
 <h2 id="thanks">Thanks!</h2>
 <p>For more information on these subjects and more you might want to check the following resources.</p>
 <ul>
@@ -241,14 +257,29 @@ categories:
 </ul>
 <h1 class="unnumbered" id="references">References</h1>
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-Callen-thermostatistics85" class="csl-entry" role="doc-biblioentry">
+Callen, H.B., 1985. Thermodynamics and an introduction to thermostatistics, 2nd ed. Wiley, New York.
+</div>
 <div id="ref-Coales-yellow14" class="csl-entry" role="doc-biblioentry">
 Coales, J.F., Kane, S.J., 2014. The <span>“yellow peril”</span> and after. IEEE Control Systems Magazine 34, 65–69. <a href="https://doi.org/10.1109/MCS.2013.2287387">https://doi.org/10.1109/MCS.2013.2287387</a>
+</div>
+<div id="ref-Cover:elements91" class="csl-entry" role="doc-biblioentry">
+Cover, T.M., Thomas, J.A., 1991. Elements of information theory. Wiley, New York.
 </div>
 <div id="ref-Lawrence-atomic24" class="csl-entry" role="doc-biblioentry">
 Lawrence, N.D., 2024. The atomic human: Understanding ourselves in the age of AI. Allen Lane.
 </div>
+<div id="ref-MacKay-information03" class="csl-entry" role="doc-biblioentry">
+MacKay, D.J.C., 2003. Information theory, inference and learning algorithms. Cambridge University Press, Cambridge, U.K.
+</div>
 <div id="ref-Shannon-info48" class="csl-entry" role="doc-biblioentry">
-Shannon, C.E., 1948. A mathematical theory of communication. The Bell System Technical Journal 27, 379–423, 623–656. <a href="https://doi.org/10.1002/j.1538-7305.1948.tb01338.x">https://doi.org/10.1002/j.1538-7305.1948.tb01338.x</a>
+Shannon, C.E., 1948a. A mathematical theory of communication. The Bell System Technical Journal 27, 379–423, 623–656. <a href="https://doi.org/10.1002/j.1538-7305.1948.tb01338.x">https://doi.org/10.1002/j.1538-7305.1948.tb01338.x</a>
+</div>
+<div id="ref-Shannon-mathematical48" class="csl-entry" role="doc-biblioentry">
+Shannon, C.E., 1948b. A mathematical theory of communication. The Bell System Technical Journal 27, 379–423. <a href="https://doi.org/10.1002/j.1538-7305">https://doi.org/10.1002/j.1538-7305</a>
+</div>
+<div id="ref-Welling-generative26" class="csl-entry" role="doc-biblioentry">
+Welling, M., Lu, S., Holdijk, L., 2026. Generative AI and stochastic thermodynamics: A tale of free energies. Cambridge University Press.
 </div>
 <div id="ref-Wiener-exprodigy53" class="csl-entry" role="doc-biblioentry">
 Wiener, N., 1953. Ex-prodigy: My childhood and youth. mitp, Cambridge, MA.

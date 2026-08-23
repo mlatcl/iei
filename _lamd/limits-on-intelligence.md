@@ -27,10 +27,24 @@ in_class_test:
   covers: [LO10, LO11, LO13]
 worksheet_due: W4
 reading:
+  - title: "Measuring Thermodynamic Length"
+    author: "Crooks"
+    chapter: "whole paper"
+    estimated_hours: 1
+  - title: "The Atomic Human"
+    author: "Lawrence"
+    chapter: "Chapter 1"
+    estimated_hours: 1
+    required: false
   - title: "Computational Optimal Transport"
     author: "Peyré and Cuturi"
     chapter: "Chapters 1–2"
     estimated_hours: 2
+    required: false
+  - title: "Generative AI and Stochastic Thermodynamics"
+    author: "Welling, Lu and Holdijk"
+    chapter: "Chapter 14; §§22.2–22.3"
+    estimated_hours: 1
     required: false
 ---
 
@@ -82,11 +96,17 @@ Optimal intelligence, in this module's voice, is a protocol that moves belief or
 * Do not collapse the three
 }
 
+\include{_information/includes/welling-three-geometries.md}
+
+\addreading{@Crooks-length07}{the whole paper}
+
 \subsection{Limits on Intelligence}
 
 \include{_information/includes/information-limits-on-intelligence.md}
 
 \include{_information-game/includes/unified-intelligence-perspective.md}
+
+\addreading{@Lawrence-atomic24}{Chapter 1}
 
 \notes{STUB. Evaluate a superintelligence claim with three no-gos: Landauer, \(\mathcal{L}^2/\tau\), \(I+H=C\). The human bandwidth constraint from lecture 1 — *The Atomic Human* — is the same kind of statement: you cannot communicate as a human at machine rates, and intelligence that ignores that fence is not an intelligence we have. Named tools, not new outcomes: requisite variety, the Good Regulator in its entropic form, information bottleneck, data-processing inequality. Viable-system material is optional colour if time remains. This is LO13.}
 

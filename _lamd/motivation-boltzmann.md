@@ -30,8 +30,13 @@ reading:
     required: false
   - title: "Thermodynamics and an Introduction to Thermostatistics"
     author: "Callen"
-    chapter: "Chapters 1–4"
+    chapter: "Chapters 1–4 (postulates); 5–6 (maximum work, Helmholtz)"
     estimated_hours: 2
+    required: false
+  - title: "Generative AI and Stochastic Thermodynamics"
+    author: "Welling, Lu and Holdijk"
+    chapter: "Chapter 3"
+    estimated_hours: 1
     required: false
 ---
 
@@ -112,6 +117,12 @@ reading:
 * Prescription: $p_i = e^{-\beta E_i}/Z$
 * Accounting: $F = U - TS$
 }
+
+\include{_books/includes/welling-lu-holdijk.md}
+\include{_information/includes/welling-boltzmann-free-energy.md}
+
+\addreading{@Callen-thermostatistics85}{Chapters 1--4}
+\addreading{@Callen-thermostatistics85}{Chapters 5--6}
 
 \subsection{Thermodynamic Bath and Schottky's Anomaly}
 

@@ -30,6 +30,16 @@ reading:
     author: "Landauer"
     chapter: "whole paper"
     estimated_hours: 1
+  - title: "The Atomic Human"
+    author: "Lawrence"
+    chapter: "Chapter 1"
+    estimated_hours: 1
+    required: false
+  - title: "Generative AI and Stochastic Thermodynamics"
+    author: "Welling, Lu and Holdijk"
+    chapter: "§3.3, pp. 49–52"
+    estimated_hours: 0.5
+    required: false
 ---
 
 \notes{Quiz 1 occupies the first ten minutes. Invigilated Moodle, own device, no notes, no network, no LLMs. Then 110 minutes of teaching. Worksheet 2 is released; due 3 November.}
@@ -72,6 +82,8 @@ reading:
 
 \notes{STUB. Landauer (1961): erasing one bit in a bath at temperature \(T\) dissipates at least \(k_B T\ln 2\). That is a no-go. The demon's *policy* — which molecules to let through — is the prescription: probability telling the demon what to do. The policy does not repeal the no-go. Erasure of the stored outcomes restores the second law. This is LO4.}
 
+\include{_information/includes/welling-maxwell-landauer.md}
+
 \subsection{Information and Intelligence: First Cut}
 
 \include{_ai/includes/embodiment-factors-walking-vs-light.md}
@@ -80,6 +92,8 @@ reading:
 \include{_ai/includes/shannon-bauby.md}
 
 \notes{Two human no-gos now sit next to each other. Landauer: you cannot erase a bit for less than \(k_B T\ln 2\). Embodiment: you cannot communicate at machine bandwidth. *The Atomic Human* [@Lawrence-atomic24] takes the second as the defining constraint on human intelligence — we are locked in relative to the machine, and we overcome it by modelling other minds, not by opening a wider channel. Bauby is the extreme of that fence: Shannon lets us count how locked in he is. Probability's job, on the human side, is to say how that narrow budget is spent. The full intelligence question is week 8.}
+
+\addreading{@Lawrence-atomic24}{Chapter 1}
 
 \slidesincremental{
 * No-go: \(k_B T\ln 2\) per bit erased

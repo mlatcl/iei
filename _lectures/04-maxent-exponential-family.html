@@ -275,7 +275,7 @@ Z(\ldots) = \sum_{i=1}^n \exp(-\lambda_1 f_1(x_i) - \ldots - \lambda_m f_m(x_i))
 \]</span> <span class="math display">\[
 \langle f_k \rangle = -\frac{\partial}{\partial \lambda_k}\log Z(\lambda_1,\ldots,\lambda_m) \quad k=1,2,\ldots,m.
 \]</span></p>
-<p>STUB. Recover the canonical ensemble from a mean-energy constraint. Recover the Gaussian from mean and variance. The die is the running example: mean 4.5, not 3.5. MaxEnt is the week’s pair in one move: entropy as a prohibition on extra structure (do not assume more than you know), probability as the recipe (this is the (p) you should adopt). This is LO5.</p>
+<p>STUB. Recover the canonical ensemble from a mean-energy constraint. Recover the Gaussian from mean and variance. The die is the running example: mean 4.5, not 3.5. The Lagrange multiplier on mean energy is the coldness <span class="math inline">\(\beta\)</span> from week 1: entropy first, energy the constraint. MaxEnt is the week’s pair in one move: entropy as a prohibition on extra structure (do not assume more than you know), probability as the recipe (this is the <span class="math inline">\(p\)</span> you should adopt). This is LO5.</p>
 <h2 id="the-exponential-family">The Exponential Family</h2>
 <h2 id="exponential-families">Exponential Families</h2>
 <div style="text-align:right">
@@ -345,9 +345,16 @@ G_{ij}(\boldsymbol{\theta}) = \begin{cases}
 <p>For the inaccessible game, exponential families provide the setting where information dynamics have their cleanest mathematical form.</p>
 <h2 id="looking-ahead">Looking Ahead</h2>
 <p>We’ll see that the form <span class="math inline">\(\nabla H = -G(\boldsymbol{\theta})\boldsymbol{\theta}\)</span> is crucial for deriving the dynamics of the inaccessible game. The natural parameters will be our coordinates, the Fisher information will be our “information topography,” and entropy gradients will drive the system’s evolution.</p>
-<p>STUB. (p(x) = (T(x) - A())). Why canonical, Gaussian, and Bernoulli all belong. Flag the matrix exponential family for week 7. This is LO6.</p>
+<p>STUB. <span class="math inline">\(p(x\mid\theta) = \exp(\theta\cdot T(x) - A(\theta))\)</span>. Why canonical, Gaussian, and Bernoulli all belong. Flag the matrix exponential family for week 7. This is LO6.</p>
 <h2 id="three-perspectives">Three Perspectives</h2>
-<p>STUB. Shannon: channel capacity and compression. Boltzmann/Gibbs: macrostate counting at equilibrium. Jaynes/Bayes: least-committal inference under constraint. Same (H); the difference is what the probability is over and who is inferring. All three agree that (H) forbids and (p) prescribes. This is LO7, and the intended answer to “how is entropy understood today?” until week 7 revises it.</p>
+<p>STUB. Shannon: channel capacity and compression. Boltzmann/Gibbs: macrostate counting at equilibrium. Jaynes/Bayes: least-committal inference under constraint. Same <span class="math inline">\(H\)</span>; the difference is what the probability is over and who is inferring. All three agree that <span class="math inline">\(H\)</span> forbids and <span class="math inline">\(p\)</span> prescribes. This is LO7, and the intended answer to “how is entropy understood today?” until week 7 revises it.</p>
+<h2 id="gaist-on-maxent-and-free-energy">GAIST on MaxEnt and Free Energy</h2>
+<div style="text-align:right">
+<span class="editsection-bracket" style="">[</span><span class="editsection" style=""><a href="https://github.com/lawrennd/snippets/edit/main/_information/includes/welling-maxent-elbo.md" target="_blank" onclick="ga('send', 'event', 'Edit Page', 'Edit', 'https://github.com/lawrennd/snippets/edit/main/_information/includes/welling-maxent-elbo.md', 13);">edit</a></span><span class="editsection-bracket" style="">]</span>
+</div>
+<p>Section 1.5.5 of <span class="citation" data-cites="Welling-generative26">(Welling et al., 2026)</span> is Jaynes’ maximum entropy principle as a convex programme. The constraints are normalisation and a prescribed mean energy. The stationarity condition recovers the Boltzmann distribution; the Lagrange multiplier on energy is <span class="math inline">\(\beta = 1/k_B T\)</span>. The dual Lagrangian is the equilibrium entropy, <span class="math inline">\(S = \beta(E - F)\)</span>. That is LO5 in an optimisation dialect. Read it after Jaynes (1957), not instead of it.</p>
+<p>Chapter 5 is the book’s central identification, and the reason the book exists. The thermodynamic variational free energy <span class="math inline">\(\mathcal{F}_{\mathrm{TD}}[q] = U[q] - T\mathrm{S}[q]\)</span> is the ELBO once the Hamiltonian is identified with <span class="math inline">\(-\log p(x,z)\)</span> and <span class="math inline">\(T = 1\)</span>. Changing <span class="math inline">\(q\)</span> at fixed Hamiltonian is heat: that is the E-step, inference as relaxation. Changing the Hamiltonian at fixed <span class="math inline">\(q\)</span> is work: that is the M-step, learning. The equilibrium free energy is <span class="math inline">\(-\log p(x)\)</span>. This is the generative-model translation of <span class="math inline">\(F = U - TS\)</span>.</p>
+<p>Use Chapter 5 as a fourth voice in the LO7 comparison, not as a replacement for it. GAIST is willing to say there is no real difference between these theories. We are not. Shannon, Boltzmann and Jaynes agree on the functional <span class="math inline">\(H\)</span> and disagree about what the probability is over. The ELBO identification is a <em>correspondence</em>, useful and precise. It does not collapse the operational assumptions.</p>
 <h2 id="define-this-week">Define This Week</h2>
 <h2 id="this-weeks-pair">This Week’s Pair</h2>
 <p>No-go: do not assume more than the constraints. Prescription: the exponential family.</p>
@@ -356,6 +363,14 @@ G_{ij}(\boldsymbol{\theta}) = \begin{cases}
 <span class="editsection-bracket" style="">[</span><span class="editsection" style=""><a href="https://github.com/mlatcl/iei/edit/gh-pages/_lamd/maxent-exponential-family.md" target="_blank" onclick="ga('send', 'event', 'Edit Page', 'Edit', 'https://github.com/mlatcl/iei/edit/gh-pages/_lamd/maxent-exponential-family.md', 13);">edit</a></span><span class="editsection-bracket" style="">]</span>
 </div>
 <p>Quiz 2 at the start of lecture 5 (10 November): MaxEnt, exponential family, Landauer, on a four-sided spinner and a Bernoulli — not the Worksheet 2 examples.</p>
+<h2 id="further-reading">Further Reading</h2>
+<ul>
+<li><p>Chapters 11–12 of <span class="citation" data-cites="Jaynes-probability03">Jaynes (2003)</span></p></li>
+<li><p>the whole paper of <span class="citation" data-cites="Jaynes-information57">Jaynes (1957)</span></p></li>
+<li><p>Chapter 22 of <span class="citation" data-cites="MacKay-information03">MacKay (2003)</span></p></li>
+<li><p>Chapter 12 of <span class="citation" data-cites="Cover:elements91">Cover and Thomas (1991)</span></p></li>
+<li><p>Section 1.5.5 and Chapter 5 of <span class="citation" data-cites="Welling-generative26">Welling et al. (2026)</span></p></li>
+</ul>
 <h2 id="thanks">Thanks!</h2>
 <p>For more information on these subjects and more you might want to check the following resources.</p>
 <ul>
@@ -371,8 +386,20 @@ G_{ij}(\boldsymbol{\theta}) = \begin{cases}
 <div id="ref-Amari-information16" class="csl-entry" role="doc-biblioentry">
 Amari, S., 2016. Information geometry and its applications, Applied mathematical sciences. Springer, Tokyo. <a href="https://doi.org/10.1007/978-4-431-55978-8">https://doi.org/10.1007/978-4-431-55978-8</a>
 </div>
+<div id="ref-Cover:elements91" class="csl-entry" role="doc-biblioentry">
+Cover, T.M., Thomas, J.A., 1991. Elements of information theory. Wiley, New York.
+</div>
+<div id="ref-Jaynes-probability03" class="csl-entry" role="doc-biblioentry">
+Jaynes, E.T., 2003. Probability theory: The logic of science. Cambridge University Press, Cambridge, UK.
+</div>
 <div id="ref-Jaynes-information57" class="csl-entry" role="doc-biblioentry">
 Jaynes, E.T., 1957. Information theory and statistical mechanics. Physical Review 106, 620–630. <a href="https://doi.org/10.1103/PhysRev.106.620">https://doi.org/10.1103/PhysRev.106.620</a>
+</div>
+<div id="ref-MacKay-information03" class="csl-entry" role="doc-biblioentry">
+MacKay, D.J.C., 2003. Information theory, inference and learning algorithms. Cambridge University Press, Cambridge, U.K.
+</div>
+<div id="ref-Welling-generative26" class="csl-entry" role="doc-biblioentry">
+Welling, M., Lu, S., Holdijk, L., 2026. Generative AI and stochastic thermodynamics: A tale of free energies. Cambridge University Press.
 </div>
 </div>
 

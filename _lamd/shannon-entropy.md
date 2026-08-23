@@ -29,8 +29,22 @@ reading:
     estimated_hours: 2
   - title: "Information Theory, Inference, and Learning Algorithms"
     author: "MacKay"
-    chapter: "Chapters 1–4"
+    chapter: "Chapters 1–4; 8–10"
     estimated_hours: 3
+  - title: "Elements of Information Theory"
+    author: "Cover and Thomas"
+    chapter: "Chapters 2 and 7"
+    estimated_hours: 2
+  - title: "Thermodynamics and an Introduction to Thermostatistics"
+    author: "Callen"
+    chapter: "Chapter 16"
+    estimated_hours: 1
+    required: false
+  - title: "Generative AI and Stochastic Thermodynamics"
+    author: "Welling, Lu and Holdijk"
+    chapter: "§1.2.3–1.2.4; §3.2.4"
+    estimated_hours: 0.5
+    required: false
 ---
 
 \notes{Worksheet 1 is due at the start of this session. No class test. Quiz 1 is in seven days: Boltzmann, partition function, Shannon entropy, on a *new* example.}
@@ -64,6 +78,10 @@ reading:
 
 \notes{STUB. Derive $H = -\sum p_i\log p_i$ from the Shannon axioms. Fair coin, biased coin, uniform over eight outcomes. Thermodynamic entropy $S = kH$: same object, different operational reading. $H$ is the no-go half of Shannon: it bounds what a code cannot do. The distribution $p$ is the prescription: it *is* the code, or the belief. This is LO2. Wiener's line from Gibbs to communication is why Shannon's $H$ and Boltzmann's $S$ are the same object: a theory of ignorance, not a theory of knowledge.}
 
+\addreading{@Shannon-mathematical48}{Sections 1--6}
+\addreading{@MacKay-information03}{Chapters 1--4}
+\addreading{@Cover:elements91}{Chapter 2}
+
 \subsection{Dasher}
 
 \include{_ml/includes/dasher.md}
@@ -80,9 +98,16 @@ reading:
 * Bath justifies the canonical ensemble
 }
 
+\include{_information/includes/welling-entropy-partition.md}
+
+\addreading{@Callen-thermostatistics85}{Chapter 16}
+
 \subsection{Scaffolding, Not Outcomes}
 
 \notes{STUB. Chain rule: $H(X,Y) = H(X) + H(Y|X)$. Needed in week 7 for multi-information. Channel capacity: you cannot send faster than $C$. That is the week's cleanest no-go. The capacity-achieving input $p(x)$ is the prescription: this is the distribution you should use. Data-processing inequality: processing cannot create information — another no-go. Mention, do not prove. None of these is a learning outcome; the pair is the reason they are here.}
+
+\addreading{@Cover:elements91}{Chapter 7}
+\addreading{@MacKay-information03}{Chapters 8--10}
 
 \slidesincremental{
 * No-go: $R \le C$; processing cannot create information

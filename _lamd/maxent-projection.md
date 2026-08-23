@@ -79,6 +79,10 @@ reading:
 * Other geometries: week 8
 }
 
+\include{_information/includes/welling-geodesics-and-work.md}
+
+\addreading{@Amari-information16}{Chapters 3--4}
+
 \subsection{Define This Week}
 
 \slidesincremental{
