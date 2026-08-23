@@ -71,7 +71,7 @@ reading:
 
 \subsection{Geodesics as Optimal Protocols}
 
-\notes{STUB. Last week's no-go was \(\langle W_{\mathrm{ex}}\rangle\ge\mathcal{L}^2/\tau\). This week's prescription is the geodesic: the path you should take if you want to meet that bound. Natural gradient is the local form of the same instruction — step in the direction the metric says is steepest. Compute or sketch one geodesic on a two-parameter exponential family (Gaussian in \((\mu,\sigma^2)\), or the two-state system in \(\beta\)). Do not yet contrast this geometry with Wasserstein or Schrödinger bridges — that is lecture 8.}
+\notes{STUB. Last week's no-go was \(\langle W_{\mathrm{ex}}\rangle\ge\mathcal{L}^2/\tau\). This week's prescription is the geodesic: the path you should take if you want to meet that bound. Natural gradient is the local form of the same instruction — step in the direction the metric says is steepest. Compute or sketch one geodesic on a two-parameter exponential family (Gaussian in \((\mu,\sigma^2)\), or the two-state system in \(\beta\)). Do not yet contrast this geometry with Wasserstein or Schrödinger bridges — that is lecture 8. Sinkhorn as an alternating \(m\)-projection onto two marginal constraint sets waits with them.}
 
 \slidesincremental{
 * No-go: \(\mathcal{L}^2/\tau\) (last week)
@@ -89,6 +89,14 @@ reading:
 * MaxEnt as a projection
 * Why natural gradient is the correct gradient
 * The exponential family, now geometrically
+}
+
+\subsection{Named, Not Yet Answered}
+
+\notes{An alternating \(m\)-projection onto two constraint sets is how Sinkhorn enforces two prescribed marginals. Name it; do not compute it. Week 8.}
+
+\slidesincremental{
+* Alternating \(m\)-projection onto two constraint sets? (week 8)
 }
 
 \subsection{This Week's Pair}

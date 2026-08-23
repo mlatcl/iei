@@ -36,9 +36,14 @@ reading:
     chapter: "Chapter 1"
     estimated_hours: 1
     required: false
+  - title: "Sinkhorn Distances: Lightspeed Computation of Optimal Transportation Distances"
+    author: "Cuturi"
+    chapter: "§§3–4 (Sinkhorn distances and algorithm)"
+    estimated_hours: 1
+    required: false
   - title: "Computational Optimal Transport"
     author: "Peyré and Cuturi"
-    chapter: "Chapters 1–2"
+    chapter: "Chapters 1–2; §4.2 (Sinkhorn, optional)"
     estimated_hours: 2
     required: false
   - title: "Generative AI and Stochastic Thermodynamics"
@@ -64,7 +69,7 @@ reading:
 | Minutes | Block |
 |--------:|-------|
 | 0–10 | Quiz 4 (Moodle; LO10, LO11, LO13) |
-| 10–55 | Agency as transport; Wasserstein; Schrödinger bridge |
+| 10–55 | Agency as transport; Wasserstein; Schrödinger bridge; Sinkhorn as the discrete MaxEnt coupling |
 | 55–65 | Break |
 | 65–95 | Crooks versus Wasserstein versus Schrödinger; \(\mathcal{L}^2/\tau\) as a third bound |
 | 95–120 | LO13: Landauer, \(I+H=C\), requisite variety / Good Regulator as named tools; close the Week 1 question |
@@ -78,7 +83,9 @@ reading:
 
 \include{_information-game/includes/schrodingers-bridge-perspective.md}
 
-\notes{STUB. Shannon abstracted a code as probability over symbols. The analogous move: abstract an agent as the transport of probability mass between distributions. Optimal transport (Wasserstein) is minimum ground-cost. The Schrödinger bridge is the maximum-entropy stochastic interpolation. Students need the intuition, not the technical development. This is LO12.}
+\notes{STUB. Shannon abstracted a code as probability over symbols. The analogous move: abstract an agent as the transport of probability mass between distributions --- an *act* as a coupling. Optimal transport (Wasserstein) is minimum ground-cost. The Schrödinger bridge is the maximum-entropy stochastic interpolation. On a discrete grid that interpolation is entropy-regularized OT; Sinkhorn (iterative proportional fitting) is the iteration that computes the coupling. It is a prescription in the Schrödinger geometry, not a Crooks geodesic, and Wasserstein only in the \(\varepsilon\to 0\) limit. One \(2\times 2\) or \(3\times 3\) table is enough --- the two-spin size from week 4, now with prescribed *marginals* rather than three moments. Students need the intuition, not the technical development. This is LO12.
+
+The entropic constraint in Sinkhorn distances has a direct connection to week 7: @Cuturi-sinkhorn13 shows that constraining \(\mathrm{KL}(P \| rc^T) \le \alpha\) is equivalent to constraining the mutual information \(I(X;Y) \le \alpha\) of the coupling. The week 7 identity \(I + H = C\) relates mutual information to capacity; here we see mutual information serving as a budget on how deterministic the transport plan can be.}
 
 \subsection{Three Geometries}
 
@@ -86,7 +93,7 @@ reading:
 
 - **Fisher–Rao / Crooks.** Near-equilibrium, finite-time. Minimise dissipation. Speed limit \(\langle W_{\mathrm{ex}}\rangle\ge\mathcal{L}^2/\tau\).
 - **Wasserstein.** Optimal transport. Minimise a ground-cost of moving mass on the sample space. A different metric.
-- **Schrödinger bridge.** Maximum-entropy interpolation between \(p\) and \(q\).
+- **Schrödinger bridge.** Maximum-entropy interpolation between \(p\) and \(q\). Sinkhorn / IPF is the algorithm that computes the discrete coupling; it is not a fourth geometry.
 
 Optimal intelligence, in this module's voice, is a protocol that moves belief or state under an entropic budget. The three geometries are three prescriptions — three answers to “what should I do?”. Crooks, Landauer, and \(I+H=C\) are the no-gos. Superintelligence that updates infinitely fast, or at zero dissipation, is a zero-duration or zero-length protocol: it claims to repeal the no-go.}
 
@@ -99,6 +106,8 @@ Optimal intelligence, in this module's voice, is a protocol that moves belief or
 \include{_information/includes/welling-three-geometries.md}
 
 \addreading{@Crooks-length07}{the whole paper}
+
+\addreading{@Cuturi-sinkhorn13}{§§3–4 (optional)}
 
 \subsection{Limits on Intelligence}
 
@@ -114,6 +123,7 @@ Optimal intelligence, in this module's voice, is a protocol that moves belief or
 
 \slidesincremental{
 * Optimal trajectories and optimal intelligence?
+* Transport plan as an act; which geometry is Sinkhorn?
 * Information and intelligence? (final)
 * Purely entropic Good Regulator and Schottky
 * How is entropy understood today? (last revision)

@@ -71,6 +71,10 @@ Quiz 1 occupies the first ten minutes.
 - What is the relationship between information and entropy?
 - How is entropy understood today? (intended answer: LO7)
 
+**Named, not yet answered**
+
+- What if MaxEnt is over a coupling, with two prescribed marginals rather than a list of moments? (Sinkhorn; week 8)
+
 ## Lecture 5 — 10 November — Fisher Metric
 
 Quiz 2 occupies the first ten minutes.
@@ -90,6 +94,10 @@ Quiz 2 occupies the first ten minutes.
 
 - Thermodynamic length as a geodesic problem (minimum-dissipation protocol)
 - The exponential family, now geometrically (project in $\eta$, travel in $\theta$)
+
+**Named, not yet answered**
+
+- What is an alternating $m$-projection onto two constraint sets? (Sinkhorn; week 8)
 
 ## Lecture 7 — 24 November — Multi-Information
 
@@ -111,10 +119,19 @@ Quiz 3 occupies the first ten minutes.
 
 Quiz 4 occupies the first ten minutes.
 
+**Define this week**
+
+- What is a coupling of two distributions?
+- What is entropy-regularized optimal transport, and why is its solution an exponential family?
+- What does Sinkhorn iterate, and which of the three geometries does it compute?
+
 **Interpret this week**
 
 - How do optimal trajectories in thermodynamic length relate to optimal intelligence?
 - What is the relationship between information and intelligence? (final)
+- How is a transport plan an abstraction of an action, the way $p$ is an abstraction of a code?
+- In entropic OT, what is the no-go and what is the prescription?
+- Is “optimal intelligence” cheapest rearrangement, least-committal rearrangement, or minimum-dissipation protocol? Name the geometry.
 - What is the data processing inequality?
 - What is the information bottleneck?
 - How is entropy treated in early cybernetics?
@@ -125,4 +142,4 @@ Quiz 4 occupies the first ten minutes.
 - What are the information constraints on a human?
 - What is the purely entropic interpretation of Schottky's anomaly?
 
-The cybernetics cluster (requisite variety, Good Regulator, bottleneck, viable system) is used in lecture 8 as named evaluation tools for LO13. It is not a separate outcome.
+The cybernetics cluster (requisite variety, Good Regulator, bottleneck, viable system) is used in lecture 8 as named evaluation tools for LO13. It is not a separate outcome. Sinkhorn is named under LO12 as the discrete algorithm for the Schrödinger / entropic coupling, not as a fourth geometry.

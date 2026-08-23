@@ -122,6 +122,14 @@ reading:
 * How is entropy understood today?
 }
 
+\subsection{Named, Not Yet Answered}
+
+\notes{The two-spin example constrained three moments of a joint. The same exponential family with *two prescribed marginals* is a MaxEnt coupling. The algorithm is Sinkhorn. Week 8.}
+
+\slidesincremental{
+* MaxEnt over a coupling, not a list of moments? (week 8)
+}
+
 \subsection{This Week's Pair}
 
 \notes{No-go: do not assume more than the constraints. Prescription: the exponential family.}

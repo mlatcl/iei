@@ -70,7 +70,7 @@ outcomes:
     text: "Students will be able to articulate how the movement of probability mass between distributions provides an abstraction of intelligent agency — analogous to Shannon's use of probability to abstract a communication code — and sketch the role of optimal transport and Schrödinger bridges in formalising this abstraction."
     bloom_level: evaluate
     week: 8
-    notes: "Shannon: probability over symbols abstracts a code. Analogy: probability transport abstracts an agent. Three geometries of an optimal change of state, which must not be collapsed: (1) Fisher–Rao / Crooks thermodynamic length — near-eq, minimum dissipation, bound L²/τ; (2) Wasserstein — minimum ground-cost of moving mass; (3) Schrödinger bridge — maximum-entropy interpolation between p and q. Students need the intuition, not the technical details, and must say which geometry they are using."
+    notes: "Shannon: probability over symbols abstracts a code. Analogy: probability transport abstracts an agent (an act as a coupling). Three geometries of an optimal change of state, which must not be collapsed: (1) Fisher–Rao / Crooks thermodynamic length — near-eq, minimum dissipation, bound L²/τ; (2) Wasserstein — minimum ground-cost of moving mass; (3) Schrödinger bridge — maximum-entropy interpolation between p and q. Sinkhorn / IPF is the discrete algorithm for (3), entropy-regularized OT; it is not a fourth geometry, and Wasserstein only as ε→0. Students need the intuition, not the technical details, and must say which geometry they are using."
 
   - id: LO13
     text: "Students will be able to evaluate claims about the capabilities of intelligent systems using Landauer's principle, the perpetual motion analogy, and the information-theoretic constraints derived from the inaccessible game framework."
@@ -115,7 +115,7 @@ the Schrödinger bridge.
 The closing abstraction echoes Shannon's founding move: just as Shannon abstracted
 communication as probability over symbols, we can abstract *intelligent agency* as the
 transport of probability mass between distributions — an idea formalised by optimal transport
-and Schrödinger bridges.
+and Schrödinger bridges, with Sinkhorn as the discrete MaxEnt algorithm for the latter.
 
 ## Pedagogy
 
