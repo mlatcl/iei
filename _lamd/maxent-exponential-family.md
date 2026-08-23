@@ -71,7 +71,7 @@ reading:
 
 \subsection{Maximum Entropy}
 
-\include{_physics/includes/lagrange-multipliers-review.md}
+\include{_physics/includes/lagrange-multipliers.md}
 
 \include{_physics/includes/jaynes-maximum-entropy.md}
 
