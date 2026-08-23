@@ -11,7 +11,7 @@ abstract: >
   meet that split in two motivations — perpetual motion, and the
   bandwidth gap between humans and machines from *The Atomic Human* —
   and then in the Boltzmann distribution and the free-energy
-  decomposition \(F = U - TS\).
+  decomposition $F = U - TS$.
 author:
 - given: Neil D.
   family: Lawrence
