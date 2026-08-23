@@ -28,6 +28,9 @@ __pycache__/
 # Ignore node_modules if any JS tooling is used
 node_modules/
 
+# In-class quizzes stay local. Do not commit question papers.
+assessments/in-class-quiz*.md
+
 # Ignore compiled site output
 _site/
 

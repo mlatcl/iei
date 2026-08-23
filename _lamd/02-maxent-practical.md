@@ -77,7 +77,7 @@ energies = np.array([0.0, epsilon])
 \notes{
 - 60--74: optimiser runs; distribution matches Jaynes; Landauer covered at a surface level.
 - 75--79: markdown cells show why the Lagrange multiplier is \(\beta\); reflection finds a non-trivial tension between Bayesian and thermodynamic readings.
-- 80--89: extension beyond the brief (multivariate MaxEnt, or the entropy landscape on the simplex).
+- 80--89: extension beyond the brief --- two spins with a prescribed correlation $\langle s_1 s_2\rangle$, recovering $J$, or the entropy landscape on the simplex.
 - 90--100: original insight -- for example, a new constraint type with a predicted family, checked after the prediction.
 }
 

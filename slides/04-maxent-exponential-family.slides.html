@@ -126,6 +126,7 @@
 <ul>
 <li class="fragment">MaxEnt with Lagrange multipliers</li>
 <li class="fragment">Exponential family as the MaxEnt family</li>
+<li class="fragment">Legendre: entropy as conjugate of <span class="math inline">\(A(\theta)\)</span></li>
 <li class="fragment">Three perspectives: the intended comparison</li>
 </ul>
 </div>
@@ -441,6 +442,100 @@ G_{ij} = \begin{cases}
 <p><strong>Next steps:</strong> * Natural parameters → coordinate system * Fisher information → information topography<br />
 * Entropy gradients → drive dynamics * <span class="math inline">\(\nabla H = -G(\boldsymbol{\theta})\boldsymbol{\theta}\)</span> → key to everything</p>
 </section>
+<section id="softmax-is-maxent-with-features" class="slide level2">
+<h2>Softmax is MaxEnt with Features</h2>
+<div>
+<ul>
+<li class="fragment">Two-level <span class="math inline">\(\Leftrightarrow\)</span> Bernoulli</li>
+<li class="fragment"><span class="math inline">\(\theta = -\beta\varepsilon\)</span> or <span class="math inline">\(\mathrm{logit}(\pi)\)</span></li>
+<li class="fragment">Same <span class="math inline">\(A(\theta)=\log(1+e^{\theta})\)</span></li>
+</ul>
+</div>
+</section>
+<section id="features-not-just-the-outcome" class="slide level2">
+<h2>Features, Not Just the Outcome</h2>
+<p><span class="math display">\[
+p(y\mid x)=\frac{\exp(\theta\cdot f(x,y))}{\sum_{y&#39;}\exp(\theta\cdot f(x,y&#39;))}
+\]</span> * Constraint: expected features match the data * Same multipliers as the die</p>
+</section>
+<section id="maximum-likelihood-is-the-same-fit" class="slide level2">
+<h2>Maximum Likelihood is the Same Fit</h2>
+<div>
+<ul>
+<li class="fragment">MaxEnt with features <span class="math inline">\(=\)</span> softmax</li>
+<li class="fragment">Softmax MLE <span class="math inline">\(=\)</span> moment matching</li>
+<li class="fragment">The die was <span class="math inline">\(f(x)=x\)</span></li>
+</ul>
+</div>
+</section>
+<section id="two-spins-one-coupling" class="slide level2">
+<h2>Two Spins, One Coupling</h2>
+<p><span class="math display">\[
+p(s)\propto\exp(h_1 s_1+h_2 s_2+J s_1 s_2)
+\]</span> * Constraints: <span class="math inline">\(\langle s_1\rangle\)</span>, <span class="math inline">\(\langle s_2\rangle\)</span>, <span class="math inline">\(\langle s_1 s_2\rangle\)</span> * <span class="math inline">\(J\)</span> is the multiplier on a correlation</p>
+</section>
+<section id="the-same-hamiltonian-two-readings" class="slide level2">
+<h2>The Same Hamiltonian, Two Readings</h2>
+<div>
+<ul>
+<li class="fragment">Physics: two interacting moments</li>
+<li class="fragment">ML: a two-unit Boltzmann machine</li>
+<li class="fragment">Inverse Ising <span class="math inline">\(=\)</span> match the moments</li>
+</ul>
+</div>
+</section>
+<section id="the-legendre-transform" class="slide level2">
+<h2>The Legendre Transform</h2>
+</section>
+<section id="the-legendre-transform-1" class="slide level2">
+<h2>The Legendre Transform</h2>
+<div>
+<ul>
+<li class="fragment">Week 1: <span class="math inline">\(F = U - TS\)</span></li>
+<li class="fragment">Same subtraction, new name</li>
+<li class="fragment">Why the exponential family has two charts</li>
+</ul>
+</div>
+</section>
+<section id="swap-the-independent-variable" class="slide level2">
+<h2>Swap the Independent Variable</h2>
+<p><span class="math display">\[
+y = \phi&#39;(x),\qquad \phi^*(y) = xy - \phi(x)
+\]</span> * Convex <span class="math inline">\(\phi\)</span>: the slope is a coordinate * <span class="math inline">\(\phi^*\)</span> is the same information, different argument * The pair inverts: <span class="math inline">\(x = (\phi^*)&#39;(y)\)</span></p>
+</section>
+<section id="helmholtz-was-the-first-example" class="slide level2">
+<h2>Helmholtz Was the First Example</h2>
+<div>
+<ul>
+<li class="fragment"><span class="math inline">\(U(S)\)</span>: energy as a function of entropy</li>
+<li class="fragment"><span class="math inline">\(T = \partial U/\partial S\)</span>: the slope</li>
+<li class="fragment"><span class="math inline">\(F(T) = U - TS\)</span>: same physics, bath coordinates</li>
+</ul>
+</div>
+</section>
+<section id="entropy-as-conjugate-of-the-log-partition" class="slide level2">
+<h2>Entropy as Conjugate of the Log-Partition</h2>
+<p><span class="math display">\[
+\boldsymbol{\eta} = \nabla A(\boldsymbol{\theta}),\qquad H = A(\boldsymbol{\theta}) - \boldsymbol{\theta}\cdot\boldsymbol{\eta}
+\]</span> * <span class="math inline">\(A\)</span> is convex: Hessian <span class="math inline">\(=\)</span> Fisher <span class="math inline">\(=\)</span> covariance * <span class="math inline">\(A^*(\boldsymbol{\eta}) = \boldsymbol{\theta}\cdot\boldsymbol{\eta} - A = -H\)</span> * Same move as <span class="math inline">\(F = U - TS\)</span></p>
+</section>
+<section id="bernoulli-check-the-arithmetic" class="slide level2">
+<h2>Bernoulli: Check the Arithmetic</h2>
+<p>Bernoulli: <span class="math inline">\(\theta = \mathrm{logit}(p)\)</span>, <span class="math inline">\(A = \log(1+e^{\theta})\)</span>, <span class="math inline">\(\eta = p\)</span> <span class="math display">\[
+H = A - \theta p = -p\log p -(1-p)\log(1-p)
+\]</span> * If the subtraction misses <span class="math inline">\(H\)</span>, the signs are wrong</p>
+</section>
+<section id="two-charts-named-for-later" class="slide level2">
+<h2>Two Charts, Named for Later</h2>
+<div>
+<ul>
+<li class="fragment"><span class="math inline">\(\boldsymbol{\theta}\)</span>: <span class="math inline">\(e\)</span>-coordinates (natural parameters)</li>
+<li class="fragment"><span class="math inline">\(\boldsymbol{\eta}\)</span>: <span class="math inline">\(m\)</span>-coordinates (moments)</li>
+<li class="fragment">Dual flatness: week 5</li>
+<li class="fragment"><span class="math inline">\(m\)</span>-projection: week 6</li>
+</ul>
+</div>
+</section>
 <section id="three-perspectives" class="slide level2">
 <h2>Three Perspectives</h2>
 <div>
@@ -458,8 +553,8 @@ G_{ij} = \begin{cases}
 <ul>
 <li class="fragment">What is the maximum entropy principle?</li>
 <li class="fragment">What is the exponential family?</li>
+<li class="fragment">What is the Legendre transform?</li>
 <li class="fragment">How is entropy understood today?</li>
-<li class="fragment">Information and entropy? (three framings)</li>
 </ul>
 </div>
 </section>
@@ -491,6 +586,11 @@ G_{ij} = \begin{cases}
 <li><p>the whole paper of <span class="citation" data-cites="Jaynes-information57">Jaynes (1957)</span></p></li>
 <li><p>Chapter 22 of <span class="citation" data-cites="MacKay-information03">MacKay (2003)</span></p></li>
 <li><p>Chapter 12 of <span class="citation" data-cites="Cover:elements91">Cover and Thomas (1991)</span></p></li>
+<li><p>Exercises 22.12–22.13 of <span class="citation" data-cites="MacKay-information03">MacKay (2003)</span></p></li>
+<li><p>the whole paper of <span class="citation" data-cites="Berger-maximum96">(<strong>Berger-maximum96?</strong>)</span></p></li>
+<li><p>the original one-dimensional model of <span class="citation" data-cites="Ising-ferromagnetism25">Ising (1925)</span></p></li>
+<li><p>Boltzmann machines of <span class="citation" data-cites="Ackley-boltzmann85">Ackley et al. (1985)</span></p></li>
+<li><p>pairwise MaxEnt on a retina of <span class="citation" data-cites="Schneidman-weak06">(<strong>Schneidman-weak06?</strong>)</span></p></li>
 <li><p>Section 1.5.5 and Chapter 5 of <span class="citation" data-cites="Welling-generative26">Welling et al. (2026)</span></p></li>
 </ul>
 </section>
@@ -508,8 +608,14 @@ G_{ij} = \begin{cases}
 <section id="references" class="slide level2 unnumbered scrollable">
 <h2 class="unnumbered scrollable">References</h2>
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-Ackley-boltzmann85" class="csl-entry" role="doc-biblioentry">
+Ackley, D., Hinton, G.E., Sejnowski, T.J., 1985. A learning algorithm for <span>B</span>oltzmann machines. Cognitive Science 9, 147–169.
+</div>
 <div id="ref-Cover:elements91" class="csl-entry" role="doc-biblioentry">
 Cover, T.M., Thomas, J.A., 1991. Elements of information theory. Wiley, New York.
+</div>
+<div id="ref-Ising-ferromagnetism25" class="csl-entry" role="doc-biblioentry">
+Ising, E., 1925. Beitrag zur <span>T</span>heorie des <span>F</span>erromagnetismus. Zeitschrift f<span>ü</span>r Physik 31, 253–258. <a href="https://doi.org/10.1007/BF02980577">https://doi.org/10.1007/BF02980577</a>
 </div>
 <div id="ref-Jaynes-probability03" class="csl-entry" role="doc-biblioentry">
 Jaynes, E.T., 2003. Probability theory: The logic of science. Cambridge University Press, Cambridge, UK.
@@ -521,7 +627,7 @@ Jaynes, E.T., 1957. Information theory and statistical mechanics. Physical Revie
 MacKay, D.J.C., 2003. Information theory, inference and learning algorithms. Cambridge University Press, Cambridge, U.K.
 </div>
 <div id="ref-Welling-generative26" class="csl-entry" role="doc-biblioentry">
-Welling, M., Lu, S., Holdijk, L., 2026. Generative AI and stochastic thermodynamics: A tale of free energies. Cambridge University Press.
+Welling, M., Lu, S., Holdijk, L., 2026. Generative AI and stochastic thermodynamics: A tale of free energies. Cambridge University Press, Cambridge, U.K.
 </div>
 </div>
 </section>

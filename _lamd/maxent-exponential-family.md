@@ -64,7 +64,7 @@ reading:
 | 0–10 | Collect Worksheet 2; preview Quiz 2 |
 | 10–55 | Jaynes; Lagrange multipliers; die and Gaussian |
 | 55–65 | Break |
-| 65–95 | Exponential family; canonical, Gaussian, Bernoulli |
+| 65–95 | Exponential family; two-level $=$ Bernoulli; softmax; two-spin Hamiltonian |
 | 95–110 | Legendre transform: $F=U-TS$ again; $H=A-\theta\cdot\eta$ |
 | 110–120 | LO7 synthesis; “how is entropy understood today?” |
 }
@@ -88,7 +88,11 @@ reading:
 
 \include{_physics/includes/maximum-entropy-formalism.md}
 
-\notes{STUB. $p(x\mid\theta) = \exp(\theta\cdot T(x) - A(\theta))$. Why canonical, Gaussian, and Bernoulli all belong. Flag the matrix exponential family for week 7. This is LO6.}
+\notes{$p(x\mid\theta) = \exp(\theta\cdot T(x) - A(\theta))$. Canonical, Gaussian, and Bernoulli belong because each is MaxEnt for its moments. The two-level system from week 1 *is* the Bernoulli: $\theta=-\beta\varepsilon$. Softmax is that calculation with a feature map. The two-spin example is the first sufficient statistic that is a product. Flag the matrix exponential family for week 7. This is LO6.}
+
+\include{_ml/includes/softmax-as-maxent.md}
+
+\include{_physics/includes/two-spin-maxent.md}
 
 \subsection{The Legendre Transform}
 
