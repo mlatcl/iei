@@ -44,8 +44,9 @@ Compile a worksheet with `maketalk 01-thermodynamics-practical.md` from this dir
 
 Common LaMD commands used in lecture files:
 
-- `\notes{}` - Content for lecture notes (not in slides)
-- `\slides{}` - Content for slides only  
+- `\notes{}` - Content for lecture notes and notebooks (not on slides)
+- `\speakernotes{}` - Presenter-only cues in reveal.js (delivery, timing, worksheet pointers)
+- `\slides{}` - Content for slides only
 - `\subsection{}` - Section heading
 - `\code{}` - Executable code block
 - `\setupcode{}` - Setup code (hidden in output)

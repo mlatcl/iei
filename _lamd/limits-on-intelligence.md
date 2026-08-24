@@ -83,19 +83,75 @@ reading:
 
 \include{_information-game/includes/schrodingers-bridge-perspective.md}
 
-\notes{STUB. Shannon abstracted a code as probability over symbols. The analogous move: abstract an agent as the transport of probability mass between distributions --- an *act* as a coupling. Optimal transport (Wasserstein) is minimum ground-cost. The Schrödinger bridge is the maximum-entropy stochastic interpolation. On a discrete grid that interpolation is entropy-regularized OT; Sinkhorn (iterative proportional fitting) is the iteration that computes the coupling. It is a prescription in the Schrödinger geometry, not a Crooks geodesic, and Wasserstein only in the \(\varepsilon\to 0\) limit. One \(2\times 2\) or \(3\times 3\) table is enough --- the two-spin size from week 4, now with prescribed *marginals* rather than three moments. Students need the intuition, not the technical development. This is LO12.
+<!-- SNIPPET: _information-game/includes/agency-as-transport.md -->
 
-The entropic constraint in Sinkhorn distances has a direct connection to week 7: @Cuturi-sinkhorn13 shows that constraining \(\mathrm{KL}(P \| rc^T) \le \alpha\) is equivalent to constraining the mutual information \(I(X;Y) \le \alpha\) of the coupling. The week 7 identity \(I + H = C\) relates mutual information to capacity; here we see mutual information serving as a budget on how deterministic the transport plan can be.}
+\newslides{Agency as Transport}
+
+\slides{Shannon abstracted a code as probability over symbols. The analogous move: an agent transports probability mass from $p$ to $q$.}
+
+\slidesincremental{
+* Wasserstein: minimum ground-cost transport
+* Schrödinger bridge: maximum-entropy stochastic interpolation
+* Sinkhorn: discrete algorithm; not a fourth geometry
+}
+
+\speakernotes{LO12. One $2\times 2$ table is enough — week 4 moments, prescribed marginals. Worksheet 4 Part B.}
+
+\notes{On a discrete grid, Schrödinger interpolation is entropy-regularised optimal transport. Sinkhorn is the discrete algorithm, not a fourth geometry.}
+
+\setupplotcode{import numpy as np
+import matplotlib.pyplot as plt
+import mlai}
+
+\plotcode{# Toy 2x2 transport plan between marginals p and q
+p = np.array([0.6, 0.4])
+q = np.array([0.5, 0.5])
+C = np.array([[0., 1.], [1., 0.]])  # ground cost
+# Greedy illustration — not optimal, just visual
+P = np.array([[0.5, 0.1], [0.0, 0.4]])
+fig, ax = plt.subplots(figsize=(5, 4))
+im = ax.imshow(P, cmap='Blues')
+ax.set_xticks([0,1]); ax.set_yticks([0,1])
+ax.set_xlabel('target'); ax.set_ylabel('source')
+ax.set_title('Transport plan $P$ (illustrative)')
+plt.colorbar(im, ax=ax, fraction=0.046)
+mlai.write_figure('transport-plan-2x2.svg', directory='./ml')}
+
+\figure{\includediagram{\diagramsDir/ml/transport-plan-2x2}{55%}}{Illustrative $2\times 2$ coupling — week 4 moments become week 8 marginals.}{transport-plan-2x2}
+
+\slides{
+\includediagram{\diagramsDir/ml/transport-plan-2x2}{55%}
+}
+
+<!-- /SNIPPET: _information-game/includes/agency-as-transport.md -->
+
+\notes{The entropic constraint in Sinkhorn distances has a direct connection to week 7: @Cuturi-sinkhorn13 shows that constraining $\mathrm{KL}(P \| rc^T) \le \alpha$ is equivalent to constraining the mutual information $I(X;Y) \le \alpha$ of the coupling. The week 7 identity $I + H = C$ relates mutual information to capacity; here we see mutual information serving as a budget on how deterministic the transport plan can be.}
 
 \subsection{Three Geometries}
 
-\notes{STUB. Do not collapse these.
+<!-- SNIPPET: _information/includes/three-geometries-compared.md -->
 
-- **Fisher–Rao / Crooks.** Near-equilibrium, finite-time. Minimise dissipation. Speed limit \(\langle W_{\mathrm{ex}}\rangle\ge\mathcal{L}^2/\tau\).
-- **Wasserstein.** Optimal transport. Minimise a ground-cost of moving mass on the sample space. A different metric.
-- **Schrödinger bridge.** Maximum-entropy interpolation between \(p\) and \(q\). Sinkhorn / IPF is the algorithm that computes the discrete coupling; it is not a fourth geometry.
+\newslides{Three Geometries — Do Not Collapse}
 
-Optimal intelligence, in this module's voice, is a protocol that moves belief or state under an entropic budget. The three geometries are three prescriptions — three answers to “what should I do?”. Crooks, Landauer, and \(I+H=C\) are the no-gos. Superintelligence that updates infinitely fast, or at zero dissipation, is a zero-duration or zero-length protocol: it claims to repeal the no-go.}
+\slides{Optimal intelligence, in this module's voice, is a protocol under an entropic budget.}
+
+\slidesincremental{
+* **Fisher–Rao / Crooks** — near-equilibrium; $\langle W_{\mathrm{ex}}\rangle\ge\mathcal{L}^2/\tau$
+* **Wasserstein** — minimum ground-cost on sample space
+* **Schrödinger bridge** — max-entropy interpolation; Sinkhorn computes it
+}
+
+\speakernotes{Three prescriptions — three answers to “what should I do?”. Crooks, Landauer, $I+H=C$ are the no-gos. Worksheet 4 Part B: where is perpetual motion tight?}
+
+\notes{Superintelligence at zero dissipation or infinite update rate is perpetual motion: it claims to repeal a no-go. Students must say where the analogy is tight and where it breaks.}
+
+\setupcode{geometries = {
+    'Crooks/Fisher-Rao': {'minimise': 'dissipation', 'no_go': 'L^2/tau'},
+    'Wasserstein': {'minimise': 'ground cost', 'no_go': 'mass conservation'},
+    'Schrodinger': {'minimise': 'relative entropy', 'no_go': 'fixed marginals'},
+}}
+
+<!-- /SNIPPET: _information/includes/three-geometries-compared.md -->
 
 \slidesincremental{
 * No-gos: Landauer, \(\mathcal{L}^2/\tau\), \(I+H=C\)
@@ -117,7 +173,27 @@ Optimal intelligence, in this module's voice, is a protocol that moves belief or
 
 \addreading{@Lawrence-atomic24}{Chapter 1}
 
-\notes{STUB. Evaluate a superintelligence claim with three no-gos: Landauer, \(\mathcal{L}^2/\tau\), \(I+H=C\). The human bandwidth constraint from lecture 1 — *The Atomic Human* — is the same kind of statement: you cannot communicate as a human at machine rates, and intelligence that ignores that fence is not an intelligence we have. Named tools, not new outcomes: requisite variety, the Good Regulator in its entropic form, information bottleneck, data-processing inequality. Viable-system material is optional colour if time remains. This is LO13.}
+<!-- SNIPPET: _information/includes/limits-on-intelligence-synthesis.md -->
+
+\newslides{Evaluating Superintelligence Claims}
+
+\slides{Apply three no-gos and name which geometry you are using as the prescription.}
+
+\slidesincremental{
+* Landauer: $k_B T\ln 2$ per bit erased
+* Crooks: $\langle W_{\mathrm{ex}}\rangle\ge\mathcal{L}^2/\tau$
+* Conservation: $I+H=C$ with fixed marginals
+* Human bandwidth: $\sim 100$ bits/s — *The Atomic Human*
+}
+
+\speakernotes{LO13. Named tools only — requisite variety, Good Regulator, bottleneck, DPI. Close Week 1: entropy forbids; probability prescribes.}
+
+\notes{Requisite variety, Good Regulator in entropic form, information bottleneck, and data-processing inequality are named tools, not new outcomes. Viable-system material is optional colour. Prescriptions operate inside fences set by physics and embodiment.}
+
+\setupcode{no_gos = ['Landauer', 'Crooks L^2/tau', 'I+H=C', 'human bandwidth']
+prescriptions = ['Boltzmann/MaxEnt p', 'Crooks geodesic', 'Wasserstein plan', 'Schrodinger bridge']
+
+<!-- /SNIPPET: _information/includes/limits-on-intelligence-synthesis.md -->
 
 \subsection{Interpret This Week}
 

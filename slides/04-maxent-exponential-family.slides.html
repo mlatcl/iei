@@ -134,105 +134,48 @@
 <section id="maximum-entropy" class="slide level2">
 <h2>Maximum Entropy</h2>
 </section>
-<section id="lagrange-multipliers-a-primer" class="slide level2">
-<h2>Lagrange Multipliers: A Primer</h2>
-<p><strong>Problem from Lecture 3:</strong></p>
+<section id="lagrange-multipliers" class="slide level2">
+<h2>Lagrange Multipliers</h2>
 <ul>
-<li>Dynamics: <span class="math inline">\(\dot{\boldsymbol{\theta}} = -G(\boldsymbol{\theta})\boldsymbol{\theta}\)</span></li>
-<li>Assumes marginal entropy conservation “just works”</li>
-<li>Need general framework for explicit constraints</li>
-</ul>
-<p><strong>Solution:</strong> Lagrange multipliers</p>
-</section>
-<section id="review-constrained-optimisation" class="slide level2">
-<h2>Review: Constrained Optimisation</h2>
-<p><strong>Standard Lagrange Multipliers:</strong> <span class="math display">\[
-\mathscr{L}(\mathbf{x}, \lambda) = f(\mathbf{x}) + \lambda(g(\mathbf{x}) - c)
-\]</span></p>
-<p><strong>Optimality conditions:</strong></p>
-<ul>
-<li><span class="math inline">\(\nabla f + \lambda \nabla g = 0\)</span> (gradient perpendicular to constraint)</li>
-<li><span class="math inline">\(g(\mathbf{x}) = c\)</span> (constraint satisfied)</li>
+<li>Constrained optimisation appears throughout inference and physics</li>
+<li>Lagrange multipliers convert constraints into terms in an auxiliary function</li>
+<li>At the optimum, the objective gradient is normal to the constraint surface</li>
 </ul>
 </section>
-<section id="geometric-interpretation" class="slide level2">
-<h2>Geometric Interpretation</h2>
-<p><strong>Geometric Picture:</strong></p>
-<p><em>Gradient <span class="math inline">\(\nabla f\)</span> perpendicular to constraint surface</em></p>
+<section id="one-equality-constraint" class="slide level2">
+<h2>One Equality Constraint</h2>
+<p><strong>Single constraint:</strong> <span class="math display">\[
+\mathscr{L}(\mathbf{x}, \lambda) = f(\mathbf{x}) + \lambda\bigl(g(\mathbf{x}) - c\bigr)
+\]</span></p>
+<p><strong>Stationarity:</strong> <span class="math display">\[
+\nabla f + \lambda \nabla g = 0, \qquad g(\mathbf{x}) = c
+\]</span></p>
+</section>
+<section id="geometric-picture" class="slide level2">
+<h2>Geometric picture</h2>
 <ul>
-<li>If not perpendicular → could improve <span class="math inline">\(f\)</span> while staying on constraint</li>
-<li>Multiplier <span class="math inline">\(\lambda\)</span> measures “strength” of constraint</li>
+<li>At a constrained optimum, <span class="math inline">\(\nabla f\)</span> is normal to the constraint surface</li>
+<li>If <span class="math inline">\(\nabla f\)</span> had a component tangent to the surface, we could improve <span class="math inline">\(f\)</span> without leaving it</li>
+<li><span class="math inline">\(\lambda\)</span> is the strength of the constraint force</li>
 </ul>
 </section>
-<section id="from-optimisation-to-dynamics" class="slide level2">
-<h2>From Optimisation to Dynamics</h2>
-<p><strong>Constraint Maintenance:</strong> <span class="math display">\[
-\sum h_i(\boldsymbol{\theta}(t)) = C \quad \forall t
+<section id="several-equality-constraints" class="slide level2">
+<h2>Several Equality Constraints</h2>
+<p><strong>Several constraints:</strong> <span class="math display">\[
+\mathscr{L} = f(\mathbf{x}) + \sum_k \lambda_k \bigl(g_k(\mathbf{x}) - c_k\bigr)
 \]</span></p>
-<p><strong>Implicit form:</strong> <span class="math display">\[
-a(\boldsymbol{\theta})^\top \dot{\boldsymbol{\theta}} = 0
+<p><strong>Stationarity:</strong> <span class="math display">\[
+\nabla f + \sum_k \lambda_k \nabla g_k = 0, \qquad g_k(\mathbf{x}) = c_k
 \]</span></p>
-<p>where <span class="math inline">\(a(\boldsymbol{\theta}) = \sum_i \nabla h_i\)</span></p>
-<p><em>Stay on constraint surface by moving tangent to it</em></p>
 </section>
-<section id="tangent-space-projection" class="slide level2">
-<h2>Tangent Space Projection</h2>
-<p><strong>Tangent Space Projector:</strong> <span class="math display">\[
-\Pi_\parallel = I - \frac{aa^\top}{a^\top a}
-\]</span></p>
-<p><strong>Properties:</strong></p>
-<ul>
-<li><span class="math inline">\(\Pi_\parallel a = 0\)</span> (kills normal component)</li>
-<li><span class="math inline">\(\Pi_\parallel^2 = \Pi_\parallel\)</span> (idempotent)</li>
-<li>If <span class="math inline">\(a^\top v = 0\)</span> then <span class="math inline">\(\Pi_\parallel v = v\)</span></li>
-</ul>
-<p><em>Projects any vector onto tangent space</em></p>
-</section>
-<section id="lagrangian-for-dynamics" class="slide level2">
-<h2>Lagrangian for Dynamics</h2>
-<p><strong>Information Lagrangian:</strong> <span class="math display">\[
-\mathscr{L}(\boldsymbol{\theta}, \nu) = -H(\boldsymbol{\theta}) + \nu\left(\sum h_i - C\right)
-\]</span></p>
-<ul>
-<li><span class="math inline">\(-H\)</span>: Minimize negative entropy = maximize entropy</li>
-<li><span class="math inline">\(\nu\)</span>: Lagrange multiplier (time-dependent!)</li>
-<li>Constraint: <span class="math inline">\(\sum h_i = C\)</span></li>
-</ul>
-<p><em><span class="math inline">\(\nu(t)\)</span> adjusts to maintain constraint during evolution</em></p>
-</section>
-<section id="constrained-gradient-flow" class="slide level2">
-<h2>Constrained Gradient Flow</h2>
-<p><strong>Constrained Dynamics:</strong> <span class="math display">\[
-\dot{\boldsymbol{\theta}} = -G(\boldsymbol{\theta})\boldsymbol{\theta} - \nu(t) a(\boldsymbol{\theta})
-\]</span></p>
-<ul>
-<li>First term: MEP (entropy increase)</li>
-<li>Second term: Constraint force (maintains <span class="math inline">\(\sum h_i = C\)</span>)</li>
-<li><span class="math inline">\(\nu(t)\)</span>: Adjusts to enforce constraint</li>
-</ul>
-<p><em>Two competing forces: increase entropy vs. stay on manifold</em></p>
-</section>
-<section id="why-constraint-maintenance-works" class="slide level2">
-<h2>Why Constraint Maintenance Works</h2>
-<p><strong>Constraint Maintenance:</strong></p>
-<p>Require: <span class="math inline">\(a^\top \dot{\boldsymbol{\theta}} = 0\)</span></p>
+<section id="a-worked-example" class="slide level2">
+<h2>A Worked Example</h2>
+<p><strong>Example:</strong> minimise <span class="math inline">\(\frac{1}{2}(x^2+y^2)\)</span> subject to <span class="math inline">\(x+y=1\)</span></p>
 <p><span class="math display">\[
-\nu(t) = -\frac{a^\top G\boldsymbol{\theta}}{a^\top a}
+\mathscr{L} = \frac{1}{2}(x^2+y^2) + \lambda(x+y-1)
 \]</span></p>
-<p><strong>Result:</strong> <span class="math display">\[
-\dot{\boldsymbol{\theta}} = -\Pi_\parallel G\boldsymbol{\theta}
-\]</span></p>
-<p><em>Projected entropy gradient stays on manifold</em></p>
-</section>
-<section id="summary-lagrangian-formulation" class="slide level2">
-<h2>Summary: Lagrangian Formulation</h2>
-<p><strong>Key Results:</strong></p>
-<ul>
-<li>Constrained dynamics: <span class="math inline">\(\dot{\boldsymbol{\theta}} = -G\boldsymbol{\theta} - \nu a\)</span></li>
-<li>Multiplier: <span class="math inline">\(\nu = -\frac{a^\top G\boldsymbol{\theta}}{a^\top a}\)</span> (automatic!)</li>
-<li>Geometric: <span class="math inline">\(\dot{\boldsymbol{\theta}} = -\Pi_\parallel G\boldsymbol{\theta}\)</span> (projected)</li>
-</ul>
-<p><strong>Next:</strong> Properties of <span class="math inline">\(\nu(t)\)</span> and equilibria</p>
+<p><strong>Solution:</strong> <span class="math inline">\(x = y = \frac{1}{2}\)</span>, <span class="math inline">\(\lambda = -\frac{1}{2}\)</span></p>
+<p><em>Closest point on a line; same pattern as constrained energy or <span class="math inline">\(\|\mathbf{w}\|^2\)</span> with a linear constraint</em></p>
 </section>
 <section id="jaynes-and-maximum-entropy" class="slide level2">
 <h2>Jaynes and Maximum Entropy</h2>

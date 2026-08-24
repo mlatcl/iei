@@ -33,7 +33,9 @@ word_count: 300
 
 \section{Worksheet 1}
 
-\notes{Released after lecture 1 (13 October). Due at the start of lecture 2 (20 October). Estimated three hours. This worksheet is 15% of the module mark.}
+\notes{Released after lecture 1 (13 October). Due at the start of lecture 2 (20 October). Estimated three hours. This worksheet is 15% of the module mark.
+
+**Builds on the lecture.** Part A uses the three-state energies $E=\{0,1,3\}$ plotted in the free-energy diagram from lecture 1. Reuse the `boltzmann()` function pattern from the lecture notebook. Quiz 1 uses the *two-state* system from the Schottky demo, not this three-state example.}
 
 \notes{Submit a Jupyter notebook (`.ipynb`) and a short written reflection (`.md`) on Moodle. Name the notebook `crsid_worksheet1.ipynb`.}
 

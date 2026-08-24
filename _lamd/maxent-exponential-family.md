@@ -77,7 +77,59 @@ reading:
 
 \include{_physics/includes/dieroll.md}
 
-\notes{STUB. Recover the canonical ensemble from a mean-energy constraint. Recover the Gaussian from mean and variance. The die is the running example: mean 4.5, not 3.5. The Lagrange multiplier on mean energy is the coldness $\beta$ from week 1: entropy first, energy the constraint. MaxEnt is the week's pair in one move: entropy as a prohibition on extra structure (do not assume more than you know), probability as the recipe (this is the $p$ you should adopt). This is LO5.}
+<!-- SNIPPET: _physics/includes/maxent-canonical-gaussian.md -->
+
+\newslides{MaxEnt Recovers Boltzmann and Gaussian}
+
+\slides{Jaynes' die (mean 4.5, not 3.5) is the running example. The same Lagrange move recovers physics and statistics.}
+
+\slidesincremental{
+* One constraint: mean energy $\Rightarrow$ $p_i \propto e^{-\beta E_i}$
+* Two constraints: mean and variance $\Rightarrow$ Gaussian
+* Lagrange multiplier on energy is coldness $\beta$ from week 1
+}
+
+\speakernotes{LO5. After die demo, recover canonical ensemble and Gaussian on the board. Worksheet 2 implements the die.}
+
+\notes{Maximum entropy is the week's pair in one move: entropy forbids assuming more structure than the constraints; probability is the recipe. One mean-energy constraint gives Boltzmann weights; mean and variance give the Gaussian. The Lagrange multiplier on energy is coldness $\beta$.}
+
+\setupplotcode{import numpy as np
+import matplotlib.pyplot as plt
+from scipy.optimize import minimize
+import mlai}
+
+\plotcode{faces = np.arange(1, 7)
+
+def maxent_die(target_mean):
+    def objective(p):
+        p = np.clip(p, 1e-12, 1)
+        p = p / p.sum()
+        return np.sum(p * np.log(p))
+    cons = (
+        {'type': 'eq', 'fun': lambda p: np.sum(p) - 1},
+        {'type': 'eq', 'fun': lambda p: np.dot(p, faces) - target_mean},
+    )
+    p0 = np.ones(6) / 6
+    res = minimize(objective, p0, constraints=cons)
+    return res.x
+
+p_jaynes = maxent_die(4.5)
+p_unif = np.ones(6) / 6
+fig, ax = plt.subplots(figsize=(7, 4))
+ax.bar(faces - 0.2, p_unif, width=0.35, label='uniform')
+ax.bar(faces + 0.2, p_jaynes, width=0.35, label='MaxEnt mean=4.5')
+ax.set_xlabel('face')
+ax.set_ylabel('probability')
+ax.legend()
+mlai.write_figure('jaynes-die-maxent.svg', directory='./ml')}
+
+\figure{\includediagram{\diagramsDir/ml/jaynes-die-maxent}{75%}}{Jaynes' die: MaxEnt subject to mean 4.5 versus the uniform distribution.}{jaynes-die-maxent}
+
+\slides{
+\includediagram{\diagramsDir/ml/jaynes-die-maxent}{75%}
+}
+
+<!-- /SNIPPET: _physics/includes/maxent-canonical-gaussian.md -->
 
 \addreading{@MacKay-information03}{Chapter 22}
 \addreading{@Cover:elements91}{Chapter 12}
@@ -88,7 +140,9 @@ reading:
 
 \include{_physics/includes/maximum-entropy-formalism.md}
 
-\notes{$p(x\mid\theta) = \exp(\theta\cdot T(x) - A(\theta))$. Canonical, Gaussian, and Bernoulli belong because each is MaxEnt for its moments. The two-level system from week 1 *is* the Bernoulli: $\theta=-\beta\varepsilon$. Softmax is that calculation with a feature map. The two-spin example is the first sufficient statistic that is a product. Flag the matrix exponential family for week 7. This is LO6.}
+\speakernotes{LO6. Two-level system = Bernoulli with $\theta=-\beta\varepsilon$. Flag matrix exponential family for week 7.}
+
+\notes{$p(x\mid\theta)=\exp(\theta\cdot T(x)-A(\theta))$. Canonical, Gaussian, and Bernoulli belong because each is MaxEnt for its moments. Softmax is the same calculation with a feature map. The two-spin example is the first sufficient statistic that is a product.}
 
 \include{_ml/includes/softmax-as-maxent.md}
 
@@ -98,11 +152,39 @@ reading:
 
 \include{_information/includes/legendre-transform.md}
 
-\notes{The formula $H = A - \theta\cdot\eta$ is already on the board. Name it. Helmholtz $F = U - TS$ was the same subtraction. The conjugate pair $(\theta,\eta)$ is why week 5 has two flat charts. Check on the Bernoulli: $A = \log(1+e^{\theta})$ must recover binary entropy. Dual connections wait for week 5; $m$-projection waits for week 6.}
+\speakernotes{Name the Legendre transform. Check Bernoulli: $A=\log(1+e^\theta)$ recovers binary entropy. Dual charts week 5; $m$-projection week 6.}
+
+\notes{$H=A-\theta\cdot\eta$ is the same subtraction as Helmholtz $F=U-TS$. The conjugate pair $(\theta,\eta)$ is why week 5 has two flat charts on the exponential family.}
 
 \subsection{Three Perspectives}
 
-\notes{STUB. Shannon: channel capacity and compression. Boltzmann/Gibbs: macrostate counting at equilibrium. Jaynes/Bayes: least-committal inference under constraint. Same $H$; the difference is what the probability is over and who is inferring. All three agree that $H$ forbids and $p$ prescribes. This is LO7, and the intended answer to “how is entropy understood today?” until week 7 revises it.}
+<!-- SNIPPET: _information/includes/three-perspectives-entropy.md -->
+
+\newslides{Three Perspectives on Entropy}
+
+\slides{Same $H$; three operational assumptions about what probability is over.}
+
+\slidesincremental{
+* Shannon: a code — capacity and compression
+* Boltzmann/Gibbs: a macrostate at equilibrium
+* Jaynes/Bayes: a state of knowledge under constraint
+* All three: $H$ forbids, $p$ prescribes
+}
+
+\speakernotes{LO7 — intended answer to “how is entropy understood today?” until week 7. Worksheet 2 Part B: Bayesian vs thermodynamic MaxEnt.}
+
+\notes{Shannon treats $H$ as a code bound; Boltzmann counts macrostates at equilibrium; Jaynes treats $p$ as least-committal inference under constraint. All three agree: $H$ forbids, $p$ prescribes.}
+
+\setupcode{import numpy as np
+
+def perspective_table(H_value, p_maxent, p_uniform):
+    return {
+        'Shannon': {'no_go': f'rate cannot exceed {H_value:.2f} bits', 'prescription': 'use capacity-achieving p'},
+        'Boltzmann': {'no_go': 'cannot beat equilibrium occupancy', 'prescription': 'Boltzmann weights'},
+        'Jaynes': {'no_go': 'cannot assume more than constraints', 'prescription': 'MaxEnt p'},
+    }}
+
+<!-- /SNIPPET: _information/includes/three-perspectives-entropy.md -->
 
 \slidesincremental{
 * Shannon: a code

@@ -76,7 +76,53 @@ reading:
 
 \include{_physics/includes/brownian-wiener.md}
 
-\notes{STUB. Derive $H = -\sum p_i\log p_i$ from the Shannon axioms. Fair coin, biased coin, uniform over eight outcomes. Thermodynamic entropy $S = kH$: same object, different operational reading. $H$ is the no-go half of Shannon: it bounds what a code cannot do. The distribution $p$ is the prescription: it *is* the code, or the belief. This is LO2. Wiener's line from Gibbs to communication is why Shannon's $H$ and Boltzmann's $S$ are the same object: a theory of ignorance, not a theory of knowledge.}
+<!-- SNIPPET: _information/includes/shannon-entropy-derivation.md -->
+
+\newslides{Shannon Entropy from Axioms}
+
+\slides{Shannon asked: what number measures uncertainty in a discrete distribution $p=(p_1,\ldots,p_n)$?}
+
+\slidesincremental{
+* Continuity; maximum at uniform; additive for independent parts
+* Result: $H(p) = -\sum_i p_i \log p_i$
+* No-go: codes cannot beat $H$ on average; prescription: $p$ *is* the code or belief
+}
+
+\speakernotes{Sketch the axioms; do not prove uniqueness. Board: fair coin, $p=0.9$, uniform-8. LO2. Wiener: Gibbs → communication.}
+
+\notes{Shannon entropy $H=-\sum_i p_i\log p_i$ measures uncertainty. Thermodynamic entropy $S=kH$ uses the same functional form with a different operational reading: $H$ bounds what a code cannot do; the distribution $p$ is the prescription — the code or the belief.}
+
+\setupplotcode{import numpy as np
+import matplotlib.pyplot as plt
+import mlai}
+
+\plotcode{p = np.linspace(0.01, 0.99, 200)
+H = [-q*np.log2(q)-(1-q)*np.log2(1-q) for q in p]
+fig, ax = plt.subplots(figsize=(7, 4))
+ax.plot(p, H, linewidth=2)
+ax.scatter([0.5, 0.9], [1.0, 0.469], s=80, zorder=3)
+ax.set_xlabel('$p$ (probability of 0)')
+ax.set_ylabel('$H$ (bits)')
+ax.set_title('Binary entropy')
+mlai.write_figure('binary-entropy.svg', directory='./ml')}
+
+\figure{\includediagram{\diagramsDir/ml/binary-entropy}{70%}}{Binary entropy is maximal at $p=\frac12$ and falls as the source becomes predictable.}{binary-entropy}
+
+\slides{
+\includediagram{\diagramsDir/ml/binary-entropy}{70%}
+}
+
+\setupcode{import numpy as np}
+
+\code{def shannon_entropy(probs, base=2):
+    p = np.asarray(probs, dtype=float)
+    p = p[p > 0]
+    H = -np.sum(p * np.log(p))
+    return H / np.log(base) if base == 2 else H
+
+# Worksheet 1 tabulates fair coin, p=0.9, uniform-8, Boltzmann at beta=1}
+
+<!-- /SNIPPET: _information/includes/shannon-entropy-derivation.md -->
 
 \addreading{@Shannon-mathematical48}{Sections 1--6}
 \addreading{@MacKay-information03}{Chapters 1--4}
@@ -90,7 +136,62 @@ reading:
 
 \subsection{The Partition Function}
 
-\notes{STUB. Canonical ensemble from the bath. $Z(\beta) = \sum_i e^{-\beta E_i}$. Mean energy $U = -\partial_\beta\log Z$, $F = -\beta^{-1}\log Z$, $S = \beta(U-F)$. Compute these for the two-state system. This is LO3. $\beta$ is the coldness named last week: $Z$ is written in the entropy-first variable. $T$ remains the bath parameter. Equilibrium versus non-equilibrium: the canonical ensemble *is* an equilibrium construction. Finite-time driving leaves that manifold; the cost is still only named.}
+<!-- SNIPPET: _physics/includes/partition-function-generating.md -->
+
+\newslides{$Z$ as Generating Function}
+
+\slides{The canonical ensemble from the bath: fix $\beta$ and let the small system fluctuate.}
+
+\slidesincremental{
+* $Z(\beta) = \sum_i e^{-\beta E_i}$
+* $U = -\partial_\beta \log Z$, \quad $F = -\beta^{-1}\log Z$, \quad $S = \beta(U-F)$
+* Equilibrium = on the $\beta$-manifold; finite-time driving leaves it
+}
+
+\speakernotes{LO3. Work the two-state example on the board — Quiz 1 running example. Finite-time cost: named lecture 1, Crooks week 5.}
+
+\notes{The partition function $Z(\beta)=\sum_i e^{-\beta E_i}$ is a generating function: $U=-\partial_\beta\log Z$, $F=-\beta^{-1}\log Z$, $S=\beta(U-F)$. The canonical ensemble is an equilibrium construction; driving in finite time leaves that manifold.}
+
+\setupplotcode{import numpy as np
+import matplotlib.pyplot as plt
+import mlai}
+
+\plotcode{eps = 1.0
+beta = np.linspace(0.1, 3.0, 300)
+Z = 1.0 + np.exp(-beta * eps)
+U = eps / (1.0 + np.exp(beta * eps))
+F = -np.log(Z) / beta
+S = beta * (U - F)
+fig, ax = plt.subplots(figsize=(7, 4))
+ax.plot(beta, U, label='$U$')
+ax.plot(beta, S, label='$S$')
+ax.plot(beta, F, label='$F$')
+ax.set_xlabel(r'$\beta$')
+ax.legend()
+ax.set_title('Two-state system')
+mlai.write_figure('two-state-partition.svg', directory='./ml')}
+
+\figure{\includediagram{\diagramsDir/ml/two-state-partition}{75%}}{Thermodynamic quantities from $Z(\beta)$ for the two-state system used in Quiz 1.}{two-state-partition}
+
+\slides{
+\includediagram{\diagramsDir/ml/two-state-partition}{75%}
+}
+
+\setupcode{import numpy as np
+
+def partition(energies, beta):
+    return np.sum(np.exp(-beta * np.asarray(energies)))
+
+def thermo_from_Z(beta, energies):
+    e = np.asarray(energies, dtype=float)
+    Z = partition(e, beta)
+    p = np.exp(-beta * e) / Z
+    U = np.sum(p * e)
+    F = -np.log(Z) / beta
+    S = beta * (U - F)
+    return U, S, F}
+
+<!-- /SNIPPET: _physics/includes/partition-function-generating.md -->
 
 \slidesincremental{
 * $U = -\partial_\beta \log Z$
@@ -104,7 +205,45 @@ reading:
 
 \subsection{Scaffolding, Not Outcomes}
 
-\notes{STUB. Chain rule: $H(X,Y) = H(X) + H(Y|X)$. Needed in week 7 for multi-information. Channel capacity: you cannot send faster than $C$. That is the week's cleanest no-go. The capacity-achieving input $p(x)$ is the prescription: this is the distribution you should use. Data-processing inequality: processing cannot create information — another no-go. Mention, do not prove. None of these is a learning outcome; the pair is the reason they are here.}
+<!-- SNIPPET: _information/includes/channel-capacity-chain-rule.md -->
+
+\newslides{Chain Rule and Capacity}
+
+\slides{Two results we will need later — stated, not proved today.}
+
+\slidesincremental{
+* Chain rule: $H(X,Y) = H(X) + H(Y|X)$ — source of week 7's $I+H=C$
+* Capacity: no rate above $C$; achieving $C$ requires the capacity-achieving $p(x)$
+* Data processing: processing cannot create information
+}
+
+\speakernotes{State chain rule and capacity; do not prove. Mention data-processing inequality only. Scaffolding for week 7.}
+
+\notes{The chain rule $H(X,Y)=H(X)+H(Y|X)$ is the algebraic source of multi-information. Channel capacity $C$ is a no-go on rate; the capacity-achieving input distribution is the prescription. Processing cannot create information.}
+
+\setupplotcode{import numpy as np
+import matplotlib.pyplot as plt
+import mlai}
+
+\plotcode{eps = 0.1
+p = np.linspace(0.01, 0.99, 200)
+H = lambda q: -q*np.log2(q)-(1-q)*np.log2(1-q)
+I = H(p) - H(eps)
+fig, ax = plt.subplots(figsize=(7, 4))
+ax.plot(p, I, linewidth=2)
+ax.scatter([0.5], [H(0.5) - H(eps)], s=80, color='red', zorder=3)
+ax.set_xlabel('input bias $p(x=1)$')
+ax.set_ylabel('$I(X;Y)$ (bits)')
+ax.set_title('Binary symmetric channel')
+mlai.write_figure('bsc-capacity.svg', directory='./ml')}
+
+\figure{\includediagram{\diagramsDir/ml/bsc-capacity}{70%}}{Mutual information for a binary symmetric channel; capacity is achieved at uniform input.}{bsc-capacity}
+
+\slides{
+\includediagram{\diagramsDir/ml/bsc-capacity}{70%}
+}
+
+<!-- /SNIPPET: _information/includes/channel-capacity-chain-rule.md -->
 
 \addreading{@Cover:elements91}{Chapter 7}
 \addreading{@MacKay-information03}{Chapters 8--10}
@@ -117,12 +256,14 @@ reading:
 
 \subsection{Three Framings, First Pass}
 
-\notes{Information, thermodynamic, and Bayesian readings of the same $H$ are named today. The intended comparison is LO7, week 4. A student who answers “how is entropy understood today?” with only Shannon is not finished.}
-
 \slidesincremental{
 * Same $H$; three operational assumptions
 * Synthesis is week 4
 }
+
+\speakernotes{Name the three framings today. Full LO7 synthesis is week 4; a Shannon-only answer is incomplete.}
+
+\notes{Information, thermodynamic, and Bayesian readings of the same $H$ differ in what the probability is over and who is inferring. The intended comparison is LO7 in week 4.}
 
 \subsection{Define This Week}
 

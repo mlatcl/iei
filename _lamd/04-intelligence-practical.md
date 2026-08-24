@@ -34,7 +34,9 @@ word_count: 500
 
 \section{Worksheet 4}
 
-\notes{Released after lecture 7 (24 November). Due at the start of lecture 8 (1 December), *before* Quiz 4. Estimated three hours. This is the capstone worksheet, 15% of the module mark.}
+\notes{Released after lecture 7 (24 November). Due at the start of lecture 8 (1 December), *before* Quiz 4. Estimated three hours. This is the capstone worksheet, 15% of the module mark.
+
+**Builds on the lecture.** Part A1–A2 use the $I+H=C$ family from lecture 7 (`multi-information-rho` figure). Part A3 repeats the Bell-state code from the lecture notebook. Part B mirrors lecture 8's three-geometries slide and perpetual-motion synthesis.}
 
 \notes{Submit `crsid_worksheet4.ipynb` and `crsid_worksheet4.md` on Moodle. LLMs are permitted. Authenticity is checked by Quiz 4 at the start of lecture 8, on a *new* example (three independent coins; a GHZ state rather than a Bell state).}
 

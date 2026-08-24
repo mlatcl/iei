@@ -80,7 +80,51 @@ reading:
 
 \include{_information-game/includes/landauer-from-inaccessible-game.md}
 
-\notes{STUB. Landauer (1961): erasing one bit in a bath at temperature \(T\) dissipates at least \(k_B T\ln 2\). That is a no-go. The demon's *policy* — which molecules to let through — is the prescription: probability telling the demon what to do. The policy does not repeal the no-go. Erasure of the stored outcomes restores the second law. This is LO4.}
+<!-- SNIPPET: _information/includes/landauer-principle-worked.md -->
+
+\newslides{Landauer's Principle}
+
+\slides{The demon measures; Szilard's engine stores one bit. Neither violates the second law until the record is erased.}
+
+\slidesincremental{
+* Landauer (1961): erasing one bit at $T$ costs at least $k_B T \ln 2$
+* No-go: you cannot erase for free
+* Prescription: the demon's policy — which molecules to let through
+}
+
+\speakernotes{LO4. Policy does not repeal the no-go. Live: `landauer_cost(300)`. Worksheet 2 Part B: compute and explain.}
+
+\notes{Landauer (1961): erasing one bit in a bath at temperature $T$ dissipates at least $k_B T\ln 2$. Erasure of stored outcomes restores the second law. The demon's measurement policy is the prescription; it does not repeal the bound.}
+
+\setupplotcode{import numpy as np
+import matplotlib.pyplot as plt
+import mlai}
+
+\plotcode{kB = 1.380649e-23
+T = np.linspace(100, 400, 200)
+E_bit = kB * T * np.log(2)
+fig, ax = plt.subplots(figsize=(7, 4))
+ax.plot(T, E_bit * 1e21, linewidth=2)
+ax.axvline(300, color='gray', linestyle='--', alpha=0.7)
+ax.scatter([300], [kB * 300 * np.log(2) * 1e21], s=80, color='red', zorder=3)
+ax.set_xlabel('$T$ (K)')
+ax.set_ylabel('minimum erasure cost ($10^{-21}$ J per bit)')
+mlai.write_figure('landauer-cost.svg', directory='./ml')}
+
+\figure{\includediagram{\diagramsDir/ml/landauer-cost}{70%}}{Landauer's minimum heat dissipation per erased bit as a function of bath temperature.}{landauer-cost}
+
+\slides{
+\includediagram{\diagramsDir/ml/landauer-cost}{70%}
+}
+
+\setupcode{kB = 1.380649e-23
+
+def landauer_cost(T_kelvin, n_bits=1):
+    return n_bits * kB * T_kelvin * np.log(2)}
+
+\code{# landauer_cost(300) -> ~2.87e-21 joules per bit}
+
+<!-- /SNIPPET: _information/includes/landauer-principle-worked.md -->
 
 \include{_information/includes/welling-maxwell-landauer.md}
 

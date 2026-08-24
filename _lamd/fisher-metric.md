@@ -67,15 +67,102 @@ reading:
 
 \include{_information-game/includes/fisher-information-geometry.md}
 
-\notes{STUB. Manifold of distributions; \(g_{ij} = \mathbb{E}[\partial_i\log p\cdot\partial_j\log p]\). e-flat and m-flat coordinates on exponential families. Those two charts are last week's Legendre pair: \(\eta = \nabla A(\theta)\), and the two potentials \(A(\theta)\) and \(A^*(\eta) = \theta\cdot\eta - A\) have Hessians that are inverse metrics. Pythagorean theorem for KL. This is LO8.}
+<!-- SNIPPET: _information-game/includes/fisher-metric-worked.md -->
+
+\newslides{The Fisher Metric}
+
+\slides{A statistical manifold: each point is a distribution $p(x\mid\theta)$.}
+
+\slidesincremental{
+* Fisher matrix: $g_{ij} = \mathbb{E}[\partial_i\log p\,\partial_j\log p]$
+* Exponential families: e-flat ($\theta$) and m-flat ($\eta$) charts
+* Pythagorean theorem for KL on dual flats
+}
+
+\speakernotes{LO8. Connect to week 4 Legendre pair. Worksheet 3: Gaussian Fisher matrix and gradient comparison.}
+
+\notes{The Fisher matrix $g_{ij}=\mathbb{E}[\partial_i\log p\,\partial_j\log p]$ defines a Riemannian metric on the statistical manifold. On exponential families, e-flat ($\theta$) and m-flat ($\eta$) charts are dual; Hessians of $A$ and $A^*$ are inverse metrics. The Pythagorean theorem for KL holds on dual flats.}
+
+\setupplotcode{import numpy as np
+import matplotlib.pyplot as plt
+import mlai}
+
+\plotcode{mu, sigma2 = 0.0, 1.0
+sigma2_grid = np.linspace(0.3, 4.0, 200)
+g11 = 1.0 / sigma2_grid
+g22 = 0.5 / sigma2_grid ** 2
+fig, ax = plt.subplots(figsize=(7, 4))
+ax.plot(sigma2_grid, g11, label='$g_{11}=1/\\sigma^2$')
+ax.plot(sigma2_grid, g22, label='$g_{22}=1/(2\\sigma^4)$')
+ax.set_xlabel('$\\sigma^2$')
+ax.set_ylabel('Fisher component')
+ax.legend()
+ax.set_title('Gaussian Fisher matrix at $\\mu=0$')
+mlai.write_figure('gaussian-fisher-eigen.svg', directory='./ml')}
+
+\figure{\includediagram{\diagramsDir/ml/gaussian-fisher-eigen}{70%}}{Fisher components for $\mathcal{N}(0,\sigma^2)$ blow up as $\sigma^2\to 0$.}{gaussian-fisher-eigen}
+
+\slides{
+\includediagram{\diagramsDir/ml/gaussian-fisher-eigen}{70%}
+}
+
+<!-- /SNIPPET: _information-game/includes/fisher-metric-worked.md -->
 
 \subsection{Thermodynamic Length (Crooks)}
 
-\notes{STUB. Crooks (2007): for a slow protocol \(\lambda(t)\) on the equilibrium manifold,
+<!-- SNIPPET: _information/includes/crooks-thermodynamic-length.md -->
+
+\newslides{Thermodynamic Length (Crooks)}
+
+\slides{For a slow protocol $\lambda(t)$ on the equilibrium manifold, define length with the Fisher metric.}
+
 $$
-\mathcal{L} = \int_0^\tau \sqrt{\dot\lambda^\top \mathcal{I}(\lambda)\,\dot\lambda}\,dt,
+\mathcal{L} = \int_0^\tau \sqrt{\dot\lambda^\top \mathcal{I}(\lambda)\,\dot\lambda}\,dt
 $$
-where \(\mathcal{I}\) is the Fisher matrix already on the board. In the linear-response regime \(\langle W_{\mathrm{ex}}\rangle \ge \mathcal{L}^2/\tau\). That inequality is the no-go. The metric that defines the length is the prescription for how to measure a change of state. Define today. Do not ask what this has to do with intelligence — that is lecture 8.}
+
+\slidesincremental{
+* No-go: $\langle W_{\mathrm{ex}}\rangle \ge \mathcal{L}^2/\tau$ in linear response
+* Prescription: measure change of state with the Fisher metric
+* Intelligence question: week 8
+}
+
+\speakernotes{Define length today; do not interpret for intelligence until lecture 8. Worksheet 3: straight-line path $(0,1)\to(2,4)$.}
+
+\notes{Crooks (2007): for a slow protocol on the equilibrium manifold, thermodynamic length is Fisher–Rao length. In linear response, $\langle W_{\mathrm{ex}}\rangle\ge\mathcal{L}^2/\tau$. The metric is the prescription for measuring a change of state.}
+
+\setupplotcode{import numpy as np
+import matplotlib.pyplot as plt
+import mlai}
+
+\plotcode{def fisher_gaussian(mu, sigma2):
+    return np.array([[1.0 / sigma2, 0.0], [0.0, 0.5 / sigma2 ** 2]])
+
+def straight_line(t):
+    return np.array([0.0, 1.0]) + t * np.array([2.0, 3.0])
+
+ts = np.linspace(0, 1, 200)
+path = np.array([straight_line(t) for t in ts])
+speed = np.gradient(path, ts, axis=0)
+length_sq = 0.0
+for i in range(len(ts)):
+    g = fisher_gaussian(*path[i])
+    v = speed[i]
+    length_sq += np.sqrt(v @ g @ v) * (ts[1] - ts[0])
+fig, ax = plt.subplots(figsize=(6, 5))
+ax.plot(path[:, 0], path[:, 1], 'k-', linewidth=2)
+ax.scatter([0, 2], [1, 4], s=80, c=['green', 'red'])
+ax.set_xlabel('$\\mu$')
+ax.set_ylabel('$\\sigma^2$')
+ax.set_title('Worksheet 3 path in mean parameters')
+mlai.write_figure('crooks-path-sketch.svg', directory='./ml')}
+
+\figure{\includediagram{\diagramsDir/ml/crooks-path-sketch}{65%}}{Straight-line path in $(\mu,\sigma^2)$ whose Fisher–Rao length Worksheet 3 computes.}{crooks-path-sketch}
+
+\slides{
+\includediagram{\diagramsDir/ml/crooks-path-sketch}{65%}
+}
+
+<!-- /SNIPPET: _information/includes/crooks-thermodynamic-length.md -->
 
 \addreading{@Crooks-length07}{the whole paper}
 

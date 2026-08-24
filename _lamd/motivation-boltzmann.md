@@ -104,13 +104,110 @@ reading:
 
 \include{_physics/includes/entropy-intro.md}
 
-\notes{STUB. Derive $p_i \propto e^{-E_i/kT}$ and $Z$. This is the prescription. Given the energies and the bath, probability tells you the occupation. The second law has already said you cannot put all the mass on the ground state while matching a prescribed mean energy. Boltzmann is what you should do instead.}
+<!-- SNIPPET: _physics/includes/boltzmann-derivation.md -->
+
+\newslides{The Boltzmann Prescription}
+
+\slides{The second law forbids putting all probability on the ground state while matching a prescribed mean energy $U$. Among all distributions with the right $U$, pick the one with largest entropy.}
+
+\slidesincremental{
+* Constraints: $\sum_i p_i = 1$ and $\sum_i p_i E_i = U$
+* MaxEnt: $p_i \propto e^{-\beta E_i}$ with coldness $\beta = 1/kT$
+* Normalise: $Z(\beta)=\sum_i e^{-\beta E_i}$, so $p_i = e^{-\beta E_i}/Z$
+}
+
+\speakernotes{Derive on the board. Lagrange multipliers → Boltzmann. Coldness $\beta$ next; $T$ is the bath reading. Worksheet 1: three-state; Quiz 1: two-state.}
+
+\notes{Maximum entropy subject to normalisation and fixed mean energy gives $p_i = e^{-\beta E_i}/Z$. The prescription follows from the no-go: you cannot put all weight on the ground state while matching $U$.}
+
+\setupplotcode{import numpy as np
+import matplotlib.pyplot as plt
+import mlai}
+
+\plotcode{energies = np.array([0.0, 1.0])
+beta = np.linspace(0.1, 3.0, 200)
+Z = np.sum(np.exp(-beta[:, None] * energies), axis=1)
+p0 = np.exp(-beta * energies[0]) / Z
+p1 = np.exp(-beta * energies[1]) / Z
+fig, ax = plt.subplots(figsize=(7, 4))
+ax.plot(beta, p0, linewidth=2, label='$p_0$ (ground)')
+ax.plot(beta, p1, linewidth=2, label='$p_1$ (excited)')
+ax.set_xlabel(r'coldness $\beta$')
+ax.set_ylabel('occupation')
+ax.legend()
+ax.set_title('Two-state Boltzmann occupations')
+mlai.write_figure('two-state-boltzmann.svg', directory='./ml')}
+
+\figure{\includediagram{\diagramsDir/ml/two-state-boltzmann}{75%}}{Occupation of a two-state system as coldness increases. At low $\beta$ both states are populated; at high $\beta$ the ground state dominates.}{two-state-boltzmann}
+
+\slides{
+\includediagram{\diagramsDir/ml/two-state-boltzmann}{75%}
+}
+
+\setupcode{import numpy as np}
+
+\code{def boltzmann(energies, beta):
+    """Boltzmann probabilities $p_i \\propto e^{-\\beta E_i}$."""
+    log_w = -beta * np.asarray(energies, dtype=float)
+    log_w -= log_w.max()
+    w = np.exp(log_w)
+    return w / w.sum()
+
+# Live check: boltzmann([0, 1], 1.0) -> (0.731, 0.269)}
+
+\speakernotes{Run the notebook cell live. Students reimplement in Worksheet 1 Part A.}
+
+<!-- /SNIPPET: _physics/includes/boltzmann-derivation.md -->
 
 \include{_physics/includes/coldness-and-temperature.md}
 
 \subsection{Free Energy Decomposition}
 
-\notes{STUB. $U = \langle E \rangle$, $S = -k\sum p_i \log p_i$, $F = U - TS = -kT\log Z$. Available energy is what remains after the entropic no-go has taken its cut: $U$ is what you have, $TS$ is unavailable, $F$ is what probability and the bath still allow you to do. Name the subtraction; do not yet call it a Legendre transform — that waits for week 4, when the same move produces $H = A - \theta\cdot\eta$. This is LO1.}
+<!-- SNIPPET: _physics/includes/free-energy-decomposition.md -->
+
+\newslides{Free Energy Accounting}
+
+\slides{Once $p_i = e^{-\beta E_i}/Z$ is fixed, thermodynamics is bookkeeping.}
+
+\slidesincremental{
+* Mean energy: $U = \langle E\rangle = \sum_i p_i E_i$
+* Entropy: $S = -k\sum_i p_i \log p_i$
+* Helmholtz free energy: $F = U - TS = -kT\log Z$
+}
+
+\speakernotes{LO1. Read $F=U-TS$ as available energy. Name the subtraction; Legendre transform waits for week 4.}
+
+\notes{Helmholtz free energy $F=U-TS=-kT\log Z$ accounts for what remains after the entropic no-go takes its cut: $U$ is total energy, $TS$ is unavailable, $F$ is what the bath still allows you to do.}
+
+\setupplotcode{import numpy as np
+import matplotlib.pyplot as plt
+import mlai}
+
+\plotcode{energies = np.array([0.0, 1.0, 3.0])
+beta = np.linspace(0.05, 2.5, 200)
+Z = np.sum(np.exp(-beta[:, None] * energies), axis=1)
+p = np.exp(-beta[:, None] * energies) / Z[:, None]
+U = (p * energies).sum(axis=1)
+S = -np.sum(p * np.log(p + 1e-300), axis=1)
+F = U - S / beta
+F_check = -np.log(Z) / beta
+fig, ax = plt.subplots(figsize=(7, 4))
+ax.plot(beta, U, label='$U(\\beta)$')
+ax.plot(beta, S, label='$S(\\beta)$ (nats)')
+ax.plot(beta, F, label='$F(\\beta)$')
+ax.plot(beta, F_check, 'k--', alpha=0.5, label='$-\\ln Z/\\beta$')
+ax.set_xlabel(r'$\beta$')
+ax.legend()
+ax.set_title('Three-state system: Worksheet 1 energies')
+mlai.write_figure('three-state-thermo.svg', directory='./ml')}
+
+\figure{\includediagram{\diagramsDir/ml/three-state-thermo}{75%}}{$U$, $S$, and $F$ for the Worksheet 1 three-state system. Students verify $F=-\ln Z/\beta$ numerically.}{three-state-thermo}
+
+\slides{
+\includediagram{\diagramsDir/ml/three-state-thermo}{75%}
+}
+
+<!-- /SNIPPET: _physics/includes/free-energy-decomposition.md -->
 
 \slidesincremental{
 * No-go: you cannot occupy as you please
@@ -126,7 +223,51 @@ reading:
 
 \subsection{Thermodynamic Bath and Schottky's Anomaly}
 
-\notes{STUB. A thermodynamic bath is the large system that justifies the canonical ensemble: it fixes $T$ and exchanges energy. The two-state system $E\in\{0,\varepsilon\}$ is the running example for Worksheet 1 and Quiz 1. Its heat capacity has a peak (Schottky's anomaly). Name the peak today; the purely entropic reading waits until weeks 7–8.}
+<!-- SNIPPET: _physics/includes/thermodynamic-bath-schottky.md -->
+
+\newslides{The Bath and Schottky's Anomaly}
+
+\slides{A thermodynamic bath is the large system that justifies the canonical ensemble: it fixes $T$ and exchanges energy with a small system.}
+
+\slidesincremental{
+* Two-state system: $E\in\{0,\varepsilon\}$ — Quiz 1 running example
+* Heat capacity: $C = \partial U/\partial T$ peaks at intermediate $T$
+* Schottky's anomaly: both states populated; maximal thermal response
+}
+
+\speakernotes{Name the Schottky peak. Entropic reading waits for weeks 7–8. Quiz 1 uses this two-state system.}
+
+\notes{A thermodynamic bath fixes $T$ and exchanges energy with a small system, justifying the canonical ensemble. Heat capacity $C=\partial U/\partial T$ peaks when both states are equally populated — Schottky's anomaly.}
+
+\setupplotcode{import numpy as np
+import matplotlib.pyplot as plt
+import mlai}
+
+\plotcode{epsilon = 1.0
+beta = np.linspace(0.05, 5.0, 400)
+p1 = 1.0 / (1.0 + np.exp(beta * epsilon))
+U = p1 * epsilon
+C = (epsilon ** 2) * p1 * (1 - p1) * beta ** 2
+T = 1.0 / beta
+fig, axes = plt.subplots(1, 2, figsize=(10, 4))
+axes[0].plot(T, U, 'C0', linewidth=2)
+axes[0].set_xlabel('$T$ ($k=1$)')
+axes[0].set_ylabel('$U$')
+axes[0].set_title('Mean energy')
+axes[1].plot(T, C, 'C1', linewidth=2)
+axes[1].set_xlabel('$T$')
+axes[1].set_ylabel('$C$')
+axes[1].set_title('Schottky heat-capacity peak')
+plt.tight_layout()
+mlai.write_figure('schottky-two-state.svg', directory='./ml')}
+
+\figure{\includediagram{\diagramsDir/ml/schottky-two-state}{85%}}{Mean energy and heat capacity of a two-state system. The Schottky peak appears when $p_0\approx p_1\approx\frac12$.}{schottky-two-state}
+
+\slides{
+\includediagram{\diagramsDir/ml/schottky-two-state}{85%}
+}
+
+<!-- /SNIPPET: _physics/includes/thermodynamic-bath-schottky.md -->
 
 \slidesincremental{
 * Bath: why the canonical ensemble exists
@@ -136,7 +277,47 @@ reading:
 
 \subsection{Finite Time Costs More Than $\Delta F$}
 
-\notes{STUB. Quasi-static processes achieve $W = \Delta F$. Finite-time processes dissipate more. Do not define thermodynamic length today. Name the fact. Weeks 5–6 will identify the extra cost with Fisher–Rao length (Crooks). Week 8 will ask what that bound means for intelligence.}
+<!-- SNIPPET: _physics/includes/finite-time-dissipation-intro.md -->
+
+\newslides{Quasi-Static versus Finite Time}
+
+\slides{Equilibrium thermodynamics gives a prescription for *reversible* work. Real protocols take time.}
+
+\speakernotes{Do not define thermodynamic length today. Name quasi-static $W=\Delta F$ versus finite-time excess. Crooks in weeks 5–6; intelligence in week 8.}
+
+\notes{Quasi-static processes achieve reversible work $W=\Delta F$. Finite-time driving dissipates additional energy beyond the equilibrium bound.}
+
+\setupplotcode{import numpy as np
+import matplotlib.pyplot as plt
+import mlai}
+
+\plotcode{def two_state_F(beta, eps=1.0):
+    Z = 1.0 + np.exp(-beta * eps)
+    return -np.log(Z) / beta
+
+beta0, beta1 = 0.5, 2.0
+path = np.linspace(beta0, beta1, 80)
+F_path = two_state_F(path)
+fig, ax = plt.subplots(figsize=(7, 4))
+ax.plot(path, F_path, 'k-', linewidth=2, label='$F(\\beta)$')
+ax.annotate('', xy=(beta1, two_state_F(beta1)), xytext=(beta0, two_state_F(beta0)),
+            arrowprops=dict(arrowstyle='->', color='green', lw=2))
+ax.text(1.0, -0.55, 'quasi-static: $W=\\Delta F$', color='green')
+ax.annotate('', xy=(beta1, two_state_F(beta1) + 0.15), xytext=(beta0, two_state_F(beta0) + 0.15),
+            arrowprops=dict(arrowstyle='->', color='red', lw=2))
+ax.text(1.0, -0.35, 'finite time: $W > \\Delta F$', color='red')
+ax.set_xlabel(r'$\beta$')
+ax.set_ylabel('$F$')
+ax.legend()
+mlai.write_figure('finite-time-sketch.svg', directory='./ml')}
+
+\figure{\includediagram{\diagramsDir/ml/finite-time-sketch}{70%}}{Cartoon of quasi-static versus finite-time driving between two equilibrium states.}{finite-time-sketch}
+
+\slides{
+\includediagram{\diagramsDir/ml/finite-time-sketch}{70%}
+}
+
+<!-- /SNIPPET: _physics/includes/finite-time-dissipation-intro.md -->
 
 \slidesincremental{
 * Quasi-static: $W = \Delta F$

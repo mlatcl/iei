@@ -33,7 +33,9 @@ word_count: 400
 
 \section{Worksheet 2}
 
-\notes{Released after lecture 3 (27 October). Due at the start of lecture 4 (3 November). Estimated three hours. This worksheet is 15% of the module mark.}
+\notes{Released after lecture 3 (27 October). Due at the start of lecture 4 (3 November). Estimated three hours. This worksheet is 15% of the module mark.
+
+**Builds on the lecture.** Part A implements the Jaynes die shown in lecture 4 (`jaynes-die-maxent` figure). The Landauer reflection uses `landauer_cost(300)` from lecture 3. The two-level MaxEnt task connects the Lagrange multiplier to coldness $\beta$ from lecture 1.}
 
 \notes{Submit `crsid_worksheet2.ipynb` and `crsid_worksheet2.md` on Moodle. LLMs are permitted. Authenticity is checked by Quiz 2 at the start of lecture 5 (10 November), on a *new* example.}
 
