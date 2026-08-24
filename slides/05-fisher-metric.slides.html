@@ -187,9 +187,60 @@ G_{ij} = \delta_{ij}\pi_i - \pi_i\pi_j
 <h2>Why This Matters for The Inaccessible Game</h2>
 <p><strong>Three Roles in TIG:</strong> 1. Gradient flow metric: appears in <span class="math inline">\(\dot{\boldsymbol{\theta}} = -G\boldsymbol{\theta}\)</span> 2. Information distance: measures distinguishability 3. Emergence indicator: structure changes signal regimes</p>
 <p><em>Fisher information as geometry → key to everything</em></p>
+<!-- SNIPPET: _information-game/includes/fisher-metric-worked.md -->
+<p>A statistical manifold: each point is a distribution <span class="math inline">\(p(x\mid\theta)\)</span>.</p>
+<div>
+<ul>
+<li class="fragment">Fisher matrix: <span class="math inline">\(g_{ij} = \mathbb{E}[\partial_i\log p\,\partial_j\log p]\)</span></li>
+<li class="fragment">Exponential families: e-flat (<span class="math inline">\(\theta\)</span>) and m-flat (<span class="math inline">\(\eta\)</span>) charts</li>
+<li class="fragment">Pythagorean theorem for KL on dual flats</li>
+</ul>
+</div>
+<aside class="notes">
+LO8. Connect to week 4 Legendre pair. Worksheet 3: Gaussian Fisher matrix and gradient comparison.
+</aside>
+<div class="figure">
+<div id="gaussian-fisher-eigen-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/gaussian-fisher-eigen.svg" width="70%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+Fisher components for <span class="math inline">\(\mathcal{N}(0,\sigma^2)\)</span> blow up as <span class="math inline">\(\sigma^2\to 0\)</span>.
+</aside>
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/gaussian-fisher-eigen.svg" width="70%" style=" ">
+</object>
+<!-- /SNIPPET: _information-game/includes/fisher-metric-worked.md -->
 </section>
 <section id="thermodynamic-length-crooks" class="slide level2">
 <h2>Thermodynamic Length (Crooks)</h2>
+<!-- SNIPPET: _information/includes/crooks-thermodynamic-length.md -->
+<p>For a slow protocol <span class="math inline">\(\lambda(t)\)</span> on the equilibrium manifold, define length with the Fisher metric.</p>
+<p><span class="math display">\[
+\mathcal{L} = \int_0^\tau \sqrt{\dot\lambda^\top \mathcal{I}(\lambda)\,\dot\lambda}\,dt
+\]</span></p>
+<div>
+<ul>
+<li class="fragment">No-go: <span class="math inline">\(\langle W_{\mathrm{ex}}\rangle \ge \mathcal{L}^2/\tau\)</span> in linear response</li>
+<li class="fragment">Prescription: measure change of state with the Fisher metric</li>
+<li class="fragment">Intelligence question: week 8</li>
+</ul>
+</div>
+<aside class="notes">
+Define length today; do not interpret for intelligence until lecture 8. Worksheet 3: straight-line path <span class="math inline">\((0,1)\to(2,4)\)</span>.
+</aside>
+<div class="figure">
+<div id="crooks-path-sketch-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/crooks-path-sketch.svg" width="65%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+Straight-line path in <span class="math inline">\((\mu,\sigma^2)\)</span> whose Fisher–Rao length Worksheet 3 computes.
+</aside>
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/crooks-path-sketch.svg" width="65%" style=" ">
+</object>
+<!-- /SNIPPET: _information/includes/crooks-thermodynamic-length.md -->
 <div>
 <ul>
 <li class="fragment">No-go: (W_{}^2/)</li>

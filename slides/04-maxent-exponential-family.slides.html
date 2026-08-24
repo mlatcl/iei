@@ -288,6 +288,30 @@ Z(\ldots) = \sum_{i=1}^n \exp(-\lambda_1 f_1(x_i) - \ldots - \lambda_m f_m(x_i))
 \]</span> <span class="math display">\[
 \langle f_k \rangle = -\frac{\partial}{\partial \lambda_k}\log Z(\lambda_1,\ldots,\lambda_m) \quad k=1,2,\ldots,m.
 \]</span></small></p>
+<!-- SNIPPET: _physics/includes/maxent-canonical-gaussian.md -->
+<p>Jaynes’ die (mean 4.5, not 3.5) is the running example. The same Lagrange move recovers physics and statistics.</p>
+<div>
+<ul>
+<li class="fragment">One constraint: mean energy <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(p_i \propto e^{-\beta E_i}\)</span></li>
+<li class="fragment">Two constraints: mean and variance <span class="math inline">\(\Rightarrow\)</span> Gaussian</li>
+<li class="fragment">Lagrange multiplier on energy is coldness <span class="math inline">\(\beta\)</span> from week 1</li>
+</ul>
+</div>
+<aside class="notes">
+LO5. After die demo, recover canonical ensemble and Gaussian on the board. Worksheet 2 implements the die.
+</aside>
+<div class="figure">
+<div id="jaynes-die-maxent-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/jaynes-die-maxent.svg" width="75%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+Jaynes’ die: MaxEnt subject to mean 4.5 versus the uniform distribution.
+</aside>
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/jaynes-die-maxent.svg" width="75%" style=" ">
+</object>
+<!-- /SNIPPET: _physics/includes/maxent-canonical-gaussian.md -->
 </section>
 <section id="the-exponential-family" class="slide level2">
 <h2>The Exponential Family</h2>
@@ -384,6 +408,9 @@ G_{ij} = \begin{cases}
 <h2>Looking Ahead</h2>
 <p><strong>Next steps:</strong> * Natural parameters → coordinate system * Fisher information → information topography<br />
 * Entropy gradients → drive dynamics * <span class="math inline">\(\nabla H = -G(\boldsymbol{\theta})\boldsymbol{\theta}\)</span> → key to everything</p>
+<aside class="notes">
+LO6. Two-level system = Bernoulli with <span class="math inline">\(\theta=-\beta\varepsilon\)</span>. Flag matrix exponential family for week 7.
+</aside>
 </section>
 <section id="softmax-is-maxent-with-features" class="slide level2">
 <h2>Softmax is MaxEnt with Features</h2>
@@ -478,9 +505,26 @@ H = A - \theta p = -p\log p -(1-p)\log(1-p)
 <li class="fragment"><span class="math inline">\(m\)</span>-projection: week 6</li>
 </ul>
 </div>
+<aside class="notes">
+Name the Legendre transform. Check Bernoulli: <span class="math inline">\(A=\log(1+e^\theta)\)</span> recovers binary entropy. Dual charts week 5; <span class="math inline">\(m\)</span>-projection week 6.
+</aside>
 </section>
 <section id="three-perspectives" class="slide level2">
 <h2>Three Perspectives</h2>
+<!-- SNIPPET: _information/includes/three-perspectives-entropy.md -->
+<p>Same <span class="math inline">\(H\)</span>; three operational assumptions about what probability is over.</p>
+<div>
+<ul>
+<li class="fragment">Shannon: a code — capacity and compression</li>
+<li class="fragment">Boltzmann/Gibbs: a macrostate at equilibrium</li>
+<li class="fragment">Jaynes/Bayes: a state of knowledge under constraint</li>
+<li class="fragment">All three: <span class="math inline">\(H\)</span> forbids, <span class="math inline">\(p\)</span> prescribes</li>
+</ul>
+</div>
+<aside class="notes">
+LO7 — intended answer to “how is entropy understood today?” until week 7. Worksheet 2 Part B: Bayesian vs thermodynamic MaxEnt.
+</aside>
+<!-- /SNIPPET: _information/includes/three-perspectives-entropy.md -->
 <div>
 <ul>
 <li class="fragment">Shannon: a code</li>
@@ -498,6 +542,14 @@ H = A - \theta p = -p\log p -(1-p)\log(1-p)
 <li class="fragment">What is the exponential family?</li>
 <li class="fragment">What is the Legendre transform?</li>
 <li class="fragment">How is entropy understood today?</li>
+</ul>
+</div>
+</section>
+<section id="named-not-yet-answered" class="slide level2">
+<h2>Named, Not Yet Answered</h2>
+<div>
+<ul>
+<li class="fragment">MaxEnt over a coupling, not a list of moments? (week 8)</li>
 </ul>
 </div>
 </section>
@@ -530,10 +582,10 @@ H = A - \theta p = -p\log p -(1-p)\log(1-p)
 <li><p>Chapter 22 of <span class="citation" data-cites="MacKay-information03">MacKay (2003)</span></p></li>
 <li><p>Chapter 12 of <span class="citation" data-cites="Cover:elements91">Cover and Thomas (1991)</span></p></li>
 <li><p>Exercises 22.12–22.13 of <span class="citation" data-cites="MacKay-information03">MacKay (2003)</span></p></li>
-<li><p>the whole paper of <span class="citation" data-cites="Berger-maximum96">(<strong>Berger-maximum96?</strong>)</span></p></li>
+<li><p>the whole paper of <span class="citation" data-cites="Berger-maximum96">Berger et al. (1996)</span></p></li>
 <li><p>the original one-dimensional model of <span class="citation" data-cites="Ising-ferromagnetism25">Ising (1925)</span></p></li>
 <li><p>Boltzmann machines of <span class="citation" data-cites="Ackley-boltzmann85">Ackley et al. (1985)</span></p></li>
-<li><p>pairwise MaxEnt on a retina of <span class="citation" data-cites="Schneidman-weak06">(<strong>Schneidman-weak06?</strong>)</span></p></li>
+<li><p>pairwise MaxEnt on a retina of <span class="citation" data-cites="Schneidman-weak06">Schneidman et al. (2006)</span></p></li>
 <li><p>Section 1.5.5 and Chapter 5 of <span class="citation" data-cites="Welling-generative26">Welling et al. (2026)</span></p></li>
 </ul>
 </section>
@@ -554,6 +606,9 @@ H = A - \theta p = -p\log p -(1-p)\log(1-p)
 <div id="ref-Ackley-boltzmann85" class="csl-entry" role="doc-biblioentry">
 Ackley, D., Hinton, G.E., Sejnowski, T.J., 1985. A learning algorithm for <span>B</span>oltzmann machines. Cognitive Science 9, 147–169.
 </div>
+<div id="ref-Berger-maximum96" class="csl-entry" role="doc-biblioentry">
+Berger, A.L., Pietra, S.A.D., Pietra, V.J.D., 1996. A maximum entropy approach to natural language processing. Computational Linguistics 22, 39–71.
+</div>
 <div id="ref-Cover:elements91" class="csl-entry" role="doc-biblioentry">
 Cover, T.M., Thomas, J.A., 1991. Elements of information theory. Wiley, New York.
 </div>
@@ -568,6 +623,9 @@ Jaynes, E.T., 1957. Information theory and statistical mechanics. Physical Revie
 </div>
 <div id="ref-MacKay-information03" class="csl-entry" role="doc-biblioentry">
 MacKay, D.J.C., 2003. Information theory, inference and learning algorithms. Cambridge University Press, Cambridge, U.K.
+</div>
+<div id="ref-Schneidman-weak06" class="csl-entry" role="doc-biblioentry">
+Schneidman, E., II, M.J.B., Segev, R., Bialek, W., 2006. Weak pairwise correlations imply strongly correlated network states in a neural population. Nature 440, 1007–1012. <a href="https://doi.org/10.1038/nature04701">https://doi.org/10.1038/nature04701</a>
 </div>
 <div id="ref-Welling-generative26" class="csl-entry" role="doc-biblioentry">
 Welling, M., Lu, S., Holdijk, L., 2026. Generative AI and stochastic thermodynamics: A tale of free energies. Cambridge University Press, Cambridge, U.K.

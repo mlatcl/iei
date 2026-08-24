@@ -132,6 +132,30 @@
 </section>
 <section id="maxent-as-projection" class="slide level2">
 <h2>MaxEnt as Projection</h2>
+<!-- SNIPPET: _information/includes/maxent-m-projection.md -->
+<p>Start from a reference <span class="math inline">\(r\)</span> — often uniform. Impose moment constraints <span class="math inline">\(\mathbb{E}[T(X)]=\eta\)</span>.</p>
+<div>
+<ul>
+<li class="fragment">MaxEnt distribution <span class="math inline">\(q\)</span> minimises <span class="math inline">\(\mathrm{KL}(q\|r)\)</span> subject to constraints</li>
+<li class="fragment">On an exponential family this is the <span class="math inline">\(m\)</span>-projection onto the constraint surface</li>
+<li class="fragment">Constraint in <span class="math inline">\(\eta\)</span>; exponential family is a straight line in <span class="math inline">\(\theta\)</span></li>
+</ul>
+</div>
+<aside class="notes">
+LO9 (first half). Optional: Worksheet 3 Pythagorean check on Jaynes die.
+</aside>
+<div class="figure">
+<div id="m-projection-die-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/m-projection-die.svg" width="75%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+MaxEnt die as <span class="math inline">\(m\)</span>-projection of the uniform reference.
+</aside>
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/m-projection-die.svg" width="75%" style=" ">
+</object>
+<!-- /SNIPPET: _information/includes/maxent-m-projection.md -->
 <div>
 <ul>
 <li class="fragment">Uniform, then constrain</li>
@@ -141,6 +165,30 @@
 </section>
 <section id="natural-gradient" class="slide level2">
 <h2>Natural Gradient</h2>
+<!-- SNIPPET: _information/includes/natural-gradient-worked.md -->
+<p>Vanilla gradient ascent depends on how you parameterise <span class="math inline">\(\theta\)</span>. Natural gradient does not.</p>
+<div>
+<ul>
+<li class="fragment">Steepest ascent in Fisher metric: <span class="math inline">\(\theta \leftarrow \theta + \eta\, F^{-1}\nabla L\)</span></li>
+<li class="fragment">Same <span class="math inline">\(F\)</span> as Crooks’ <span class="math inline">\(\mathcal{I}\)</span></li>
+<li class="fragment">Worksheet 3 compares trajectories on the Gaussian plane</li>
+</ul>
+</div>
+<aside class="notes">
+LO9 (second half). Demo vanilla vs natural paths — Worksheet 3 core task.
+</aside>
+<div class="figure">
+<div id="natural-gradient-paths-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/natural-gradient-paths.svg" width="65%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+Vanilla versus natural gradient paths for Gaussian MLE — Worksheet 3 core task.
+</aside>
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/natural-gradient-paths.svg" width="65%" style=" ">
+</object>
+<!-- /SNIPPET: _information/includes/natural-gradient-worked.md -->
 <div>
 <ul>
 <li class="fragment">Vanilla gradient depends on coordinates</li>
@@ -151,6 +199,30 @@
 </section>
 <section id="geodesics-as-optimal-protocols" class="slide level2">
 <h2>Geodesics as Optimal Protocols</h2>
+<!-- SNIPPET: _information/includes/geodesic-optimal-protocol.md -->
+<p>Last week’s no-go: <span class="math inline">\(\langle W_{\mathrm{ex}}\rangle\ge\mathcal{L}^2/\tau\)</span>. This week’s prescription: travel by the geodesic.</p>
+<div>
+<ul>
+<li class="fragment">Geodesic = shortest Fisher–Rao path between equilibria</li>
+<li class="fragment">Natural gradient = local steepest descent in the same metric</li>
+<li class="fragment">Wasserstein and Schrödinger bridges: week 8</li>
+</ul>
+</div>
+<aside class="notes">
+Sketch geodesic vs straight line. Worksheet 3 integrates the straight line; higher marks compare paths. Sinkhorn: week 8 only.
+</aside>
+<div class="figure">
+<div id="geodesic-vs-straight-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/geodesic-vs-straight.svg" width="65%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+Worksheet 3 uses the straight line; higher marks compare a second path.
+</aside>
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/geodesic-vs-straight.svg" width="65%" style=" ">
+</object>
+<!-- /SNIPPET: _information/includes/geodesic-optimal-protocol.md -->
 <div>
 <ul>
 <li class="fragment">No-go: (^2/) (last week)</li>
@@ -166,6 +238,14 @@
 <li class="fragment">MaxEnt as a projection</li>
 <li class="fragment">Why natural gradient is the correct gradient</li>
 <li class="fragment">The exponential family, now geometrically</li>
+</ul>
+</div>
+</section>
+<section id="named-not-yet-answered" class="slide level2">
+<h2>Named, Not Yet Answered</h2>
+<div>
+<ul>
+<li class="fragment">Alternating (m)-projection onto two constraint sets? (week 8)</li>
 </ul>
 </div>
 </section>

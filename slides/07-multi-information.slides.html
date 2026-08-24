@@ -334,6 +334,9 @@ Here the observer is monitoring the movements of the particles, but here their m
 <aside class="notes">
 Conceptually, imagine a classic physics setup where you can see inside a box: there are a number of particles moving around, sampled from random Gaussians. If you plot their velocities, they sit within a circle. In this case, the marginal <span class="math inline">\(h_i\)</span> would be their velocity in each direction. The marginal distribution in each direction is Gaussian. Now, if the particles are correlated — everything tending to move in one diagonal direction — interestingly, the marginal entropies are the same. Although these are correlated, I’m not saying anything about the correlation when I conserve the marginal entropies, because if you look at the marginal distribution in each direction, it’s the same as in the uncorrelated case. And if they’re anti-correlated, it’s the same again. So I’m not making any statements about independence with this constraint.
 </aside>
+<aside class="notes">
+Define multi-information from the velocity pictures before stating <span class="math inline">\(I+H=C\)</span>. Same marginals, different joints.
+</aside>
 </section>
 <section id="the-i-h-c-structure" class="slide level2">
 <h2>The <span class="math inline">\(I + H = C\)</span> Structure</h2>
@@ -421,6 +424,30 @@ H(A \cup \{x\}) - H(A) \geq H(B \cup \{x\}) - H(B)
 * Tradeoff: <span class="math inline">\(H + I = C\)</span> * Submodularity: diminishing returns</p>
 <p><em>Next (L3):</em> Derive basic dynamics</p>
 <p><em>Later (L6-9):</em> Regime emergence</p>
+<!-- SNIPPET: _physics/includes/multi-information-worked.md -->
+<p>Mutual information is the pairwise case. Multi-information (Watanabe) generalises to <span class="math inline">\(n\)</span> variables.</p>
+<div>
+<ul>
+<li class="fragment"><span class="math inline">\(I = \sum_i h_i - H \ge 0\)</span></li>
+<li class="fragment">With fixed marginal entropies <span class="math inline">\(C = \sum_i h_i\)</span>, conservation <span class="math inline">\(I + H = C\)</span></li>
+<li class="fragment"><span class="math inline">\(I\)</span> = stored correlation; <span class="math inline">\(H\)</span> = free uncertainty</li>
+</ul>
+</div>
+<aside class="notes">
+LO10. Point back to velocity demos: same marginals, different joints. Worksheet 4 Part A.
+</aside>
+<div class="figure">
+<div id="multi-information-rho-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/multi-information-rho.svg" width="75%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+Multi-information and joint entropy for uniform-marginal binary pairs; <span class="math inline">\(I+H=C\)</span> with <span class="math inline">\(C=2\)</span>.
+</aside>
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/multi-information-rho.svg" width="75%" style=" ">
+</object>
+<!-- /SNIPPET: _physics/includes/multi-information-worked.md -->
 </section>
 <section id="the-inaccessible-game" class="slide level2">
 <h2>The Inaccessible Game</h2>
@@ -530,9 +557,46 @@ And the faithful states, the ones where <span class="math inline">\(\rho\)</span
 <li>Von Neumann entropy: <span class="math inline">\(S = -\text{Tr}(\rho \log \rho)\)</span></li>
 <li>Provides unified approach to classical and quantum systems</li>
 </ul>
+<!-- SNIPPET: _physics/includes/von-neumann-bell-state.md -->
+<p>Classically, <span class="math inline">\(I=C\)</span> forces <span class="math inline">\(H=0\)</span> — a delta joint. Quantum mechanics breaks that pattern.</p>
+<div>
+<ul>
+<li class="fragment"><span class="math inline">\(S(\rho) = -\mathrm{Tr}(\rho\log\rho)\)</span></li>
+<li class="fragment">Bell state: <span class="math inline">\(S(\rho)=0\)</span> but marginals have <span class="math inline">\(S&gt;0\)</span></li>
+<li class="fragment">Matrix exponential family = quantum MaxEnt</li>
+</ul>
+</div>
+<aside class="notes">
+LO11. Run Bell-state cell. Worksheet 4: <span class="math inline">\(S(\rho)=0\)</span> with <span class="math inline">\(S(\rho_A)&gt;0\)</span>.
+</aside>
+<!-- /SNIPPET: _physics/includes/von-neumann-bell-state.md -->
 </section>
 <section id="purely-entropic-readings-first-attempt" class="slide level2">
 <h2>Purely Entropic Readings: First Attempt</h2>
+<!-- SNIPPET: _physics/includes/schottky-good-regulator-preview.md -->
+<p>Two course questions get a first answer today; lecture 8 completes them.</p>
+<div>
+<ul>
+<li class="fragment">Schottky peak: two-state reservoir filling and emptying</li>
+<li class="fragment">Good Regulator: regulator must hold enough <span class="math inline">\(I\)</span> to model the system</li>
+<li class="fragment">Worksheet 4 and lecture 8 finish the argument</li>
+</ul>
+</div>
+<aside class="notes">
+Schottky preview — link to lecture 1 peak. Good Regulator as <span class="math inline">\(I\)</span>/<span class="math inline">\(H\)</span> constraint. Lecture 8 completes both.
+</aside>
+<div class="figure">
+<div id="schottky-entropy-preview-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/schottky-entropy-preview.svg" width="70%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+Single two-state entropy versus temperature — preview of the entropic Schottky reading.
+</aside>
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/schottky-entropy-preview.svg" width="70%" style=" ">
+</object>
+<!-- /SNIPPET: _physics/includes/schottky-good-regulator-preview.md -->
 <div>
 <ul>
 <li class="fragment">Schottky, entropically: a two-state reservoir</li>
