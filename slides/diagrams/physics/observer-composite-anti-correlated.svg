@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 900 460"
+   width="900"
+   height="460"
+   version="1.1"
+   id="svg1241"
+   sodipodi:docname="observer-composite.svg"
+   inkscape:version="1.2.1 (9c6d41e, 2022-07-14)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1243"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="0.51304348"
+     inkscape:cx="438.55932"
+     inkscape:cy="230"
+     inkscape:window-width="729"
+     inkscape:window-height="480"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg1241" />
+  <defs
+     id="defs1101">
+    <!-- Velocity arrow (red) -->
+    <marker
+       id="vel-arrow"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="5"
+       markerHeight="5"
+       orient="auto">
+      <path
+         d="M 0 0 L 10 5 L 0 10 z"
+         fill="#c0392b"
+         id="path1095" />
+    </marker>
+    <!-- Axis / connection arrow (grey) -->
+    <marker
+       id="grey-arrow"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="5"
+       markerHeight="5"
+       orient="auto">
+      <path
+         d="M 0,0 10,5 0,10 Z"
+         fill="#888888"
+         id="path1098" />
+    </marker>
+  </defs>
+  <!-- Panel backgrounds -->
+  <!-- <rect x="0"   y="0"   width="420" height="460" fill="#f0f0f4" rx="5"/> -->
+  <!-- <rect x="430" y="0"   width="470" height="193" fill="#edf3fa" rx="5"/> -->
+  <!-- <rect x="430" y="203" width="470" height="257" fill="#f8f8f6" rx="5"/> -->
+  <!-- <line x1="425" y1="0"   x2="425" y2="460" stroke="#bbb" stroke-width="1"/> -->
+  <!-- <line x1="430" y1="198" x2="900" y2="198" stroke="#bbb" stroke-width="1"/> -->
+  <!-- <!-\- Panel italic labels -\-> -->
+  <!-- <text x="210" y="22"  text-anchor="middle" -->
+  <!--       font-family="Georgia,serif" font-size="13" font-style="italic" fill="#666">microstate</text> -->
+  <!-- <text x="665" y="18"  text-anchor="middle" -->
+  <!--       font-family="Georgia,serif" font-size="13" font-style="italic" fill="#666">observer</text> -->
+  <!-- <text x="665" y="220" text-anchor="middle" -->
+  <!--       font-family="Georgia,serif" font-size="13" font-style="italic" fill="#666">macrostate</text> -->
+  <!-- Connecting arrows (narrative flow) -->
+  <!-- Box to Observer: curved dashed arrow crossing panel divider -->
+  <!-- Observer to Gaussian: short dashed vertical arrow -->
+  <!-- <line -->
+  <!--    x1="665" -->
+  <!--    y1="195" -->
+  <!--    x2="665" -->
+  <!--    y2="207" -->
+  <!--    stroke="#999" -->
+  <!--    stroke-width="1.5" -->
+  <!--    stroke-dasharray="3 2" -->
+  <!--    marker-end="url(#grey-arrow)" -->
+  <!--    id="line1105" /> -->
+  <!-- GROUP 1: Billiard box with stationary balls, velocity shown as red arrows -->
+  <g
+     id="billiard-box">
+    <rect
+       x="35"
+       y="45"
+       width="350"
+       height="370"
+       fill="#fffef9"
+       stroke="#2c2c2c"
+       stroke-width="3"
+       rx="2"
+       id="rect1107" />
+    <!-- Velocity arrows (drawn under balls) -->
+    <!-- Ball 1 centre (120,110), unit vel (-1.24, -0.988), 63px shaft -->
+    <line
+       x1="120"
+       y1="110"
+       x2="199"
+       y2="168"
+       stroke="#c0392b"
+       stroke-width="2.5"
+       marker-end="url(#vel-arrow)"
+       id="line1109" />
+    <circle
+       cx="120"
+       cy="110"
+       r="10"
+       fill="#2980b9"
+       stroke="#1a5c88"
+       stroke-width="2"
+       id="circle1121" />
+    <!-- Ball 2 centre (260,155), unit vel (-0.124, -0.443) -->
+    <line
+       x1="260"
+       y1="155"
+       x2="219"
+       y2="98"
+       stroke="#c0392b"
+       stroke-width="2.5"
+       marker-end="url(#vel-arrow)"
+       id="line1111" />
+    <circle
+       cx="260"
+       cy="155"
+       r="10"
+       fill="#2980b9"
+       stroke="#1a5c88"
+       stroke-width="2"
+       id="circle1123" />
+    <!-- Ball 3 centre (90,255), unit vel (1.094,0.745) -->
+    <line
+       x1="90"
+       y1="255"
+       x2="48"
+       y2="200"
+       stroke="#c0392b"
+       stroke-width="2.5"
+       marker-end="url(#vel-arrow)"
+       id="line1110" />
+    <circle
+       cx="90"
+       cy="255"
+       r="10"
+       fill="#2980b9"
+       stroke="#1a5c88"
+       stroke-width="2"
+       id="circle1125" />
+    <!-- Ball 4 centre (310,290), unit vel (-1.02,-0.87) -->
+    <line
+       x1="310"
+       y1="290"
+       x2="254"
+       y2="197"
+       stroke="#c0392b"
+       stroke-width="2.5"
+       marker-end="url(#vel-arrow)"
+       id="line1115" />
+    <circle
+       cx="310"
+       cy="290"
+       r="10"
+       fill="#2980b9"
+       stroke="#1a5c88"
+       stroke-width="2"
+       id="circle1127" />
+    <!-- Ball 5 centre (195,315), unit vel (-0.326, 0.045) -->
+    <line
+       x1="195"
+       y1="315"
+       x2="245"
+       y2="357"
+       stroke="#c0392b"
+       stroke-width="2.5"
+       marker-end="url(#vel-arrow)"
+       id="line1117" />
+    <circle
+       cx="195"
+       cy="315"
+       r="10"
+       fill="#2980b9"
+       stroke="#1a5c88"
+       stroke-width="2"
+       id="circle1129" />
+    <!-- Ball 6 centre (340,92), unit vel (-1.114, -1.349) -->
+    <line
+       x1="340"
+       y1="92"
+       x2="280"
+       y2="23"
+       stroke="#c0392b"
+       stroke-width="2.5"
+       marker-end="url(#vel-arrow)"
+       id="line1119" />
+    <circle
+       cx="340"
+       cy="92"
+       r="10"
+       fill="#2980b9"
+       stroke="#1a5c88"
+       stroke-width="2"
+       id="circle1131" />
+  </g>
+  <!-- GROUP 2: Box cover (opacity=0 in static; animate to 1 to hide microstate) -->
+  <g
+     id="box-cover"
+     opacity="0">
+    <rect
+       x="35"
+       y="45"
+       width="350"
+       height="370"
+       fill="#2c2c40"
+       rx="2"
+       opacity="0.93"
+       id="rect1134" />
+    <!-- Padlock body -->
+    <rect
+       x="193"
+       y="198"
+       width="34"
+       height="28"
+       rx="5"
+       fill="#8a8aaa"
+       id="rect1136" />
+    <!-- Padlock shackle -->
+    <path
+       d="M 200 198 Q 200 176 210 176 Q 220 176 220 198"
+       fill="none"
+       stroke="#8a8aaa"
+       stroke-width="5"
+       stroke-linecap="round"
+       id="path1138" />
+    <text
+       x="210"
+       y="250"
+       text-anchor="middle"
+       font-family="sans-serif"
+       font-size="12"
+       fill="#aaa"
+       letter-spacing="1"
+       id="text1140">closed</text>
+  </g>
+  <!-- GROUP 3: Observer eye – included from observer-eye-side.svg, flipped to look left.
+       transform: translate(900,0) scale(-1,1) flips the x-axis and repositions so the
+       image still occupies x=[430,900] in parent coordinates.
+       preserveAspectRatio="xMidYMid slice" fills the box and crops symmetrically. -->
+  <rect x="580" y="50"  width="170" height="120" fill="white" rx="5"/> 
+  <image
+     id="observer-eye"
+     href="observer-eye-side.svg"
+     xlink:href="observer-eye-side.svg"
+     x="0"
+     y="3"
+     width="470"
+     height="250"
+     transform="translate(800,50) scale(-0.5,0.5)"
+     preserveAspectRatio="xMidYMid slice" />
+  <!-- GROUP 4: Gaussian scatter plot -->
+  <!-- Centre (665, 330); scale 50px per sigma; independent sample -->
+  <g
+     id="gaussian-scatter">
+    <!-- White background so points stand out on any slide background -->
+    <rect
+       x="520"
+       y="190"
+       width="300"
+       height="285"
+       fill="white"
+       opacity="1"
+       id="scatter-bg" />
+    <!-- Axes -->
+    <line
+       x1="543"
+       y1="330"
+       x2="793"
+       y2="330"
+       stroke="#555"
+       stroke-width="1.5"
+       marker-end="url(#grey-arrow)"
+       id="line1144" />
+    <line
+       x1="665"
+       y1="453"
+       x2="665"
+       y2="213"
+       stroke="#555"
+       stroke-width="1.5"
+       marker-end="url(#grey-arrow)"
+       id="line1146" />
+    <!-- x-axis ticks at -2sigma, -sigma, +sigma, +2sigma -->
+    <line
+       x1="565"
+       y1="326"
+       x2="565"
+       y2="334"
+       stroke="#666"
+       stroke-width="2"
+       id="line1148" />
+    <line
+       x1="615"
+       y1="326"
+       x2="615"
+       y2="334"
+       stroke="#666"
+       stroke-width="2"
+       id="line1150" />
+    <line
+       x1="715"
+       y1="326"
+       x2="715"
+       y2="334"
+       stroke="#666"
+       stroke-width="2"
+       id="line1152" />
+    <line
+       x1="765"
+       y1="326"
+       x2="765"
+       y2="334"
+       stroke="#666"
+       stroke-width="2"
+       id="line1154" />
+    <!-- y-axis ticks -->
+    <line
+       x1="661"
+       y1="430"
+       x2="669"
+       y2="430"
+       stroke="#666"
+       stroke-width="2"
+       id="line1156" />
+    <line
+       x1="661"
+       y1="380"
+       x2="669"
+       y2="380"
+       stroke="#666"
+       stroke-width="2"
+       id="line1158" />
+    <line
+       x1="661"
+       y1="280"
+       x2="669"
+       y2="280"
+       stroke="#666"
+       stroke-width="2"
+       id="line1160" />
+    <line
+       x1="661"
+       y1="230"
+       x2="669"
+       y2="230"
+       stroke="#666"
+       stroke-width="2"
+       id="line1162" />
+    <!-- Axis labels -->
+    <text
+       x="796"
+       y="335"
+       font-family="Georgia,serif"
+       font-size="24"
+       font-style="italic"
+       fill="#444"
+       id="text1164">v</text>
+    <text
+       x="803"
+       y="338"
+       font-family="Georgia,serif"
+       font-size="15"
+       font-style="italic"
+       fill="#444"
+       id="text1166">x</text>
+    <text
+       x="657"
+       y="212"
+       text-anchor="end"
+       font-family="Georgia,serif"
+       font-size="24"
+       font-style="italic"
+       fill="#444"
+       id="text1168">v</text>
+    <text
+       x="659"
+       y="215"
+       font-family="Georgia,serif"
+       font-size="15"
+       font-style="italic"
+       fill="#444"
+       id="text1170">y</text>
+    <!-- sigma label on x-axis positive tick -->
+    <text
+       x="715"
+       y="344"
+       text-anchor="middle"
+       font-family="Georgia,serif"
+       font-size="15"
+       fill="#999"
+       id="text1172">σ</text>
+    <!-- 1-sigma contour ellipse (rho=0.95, major semi-axis ~69.8, minor ~11.18, tilted 45deg) -->
+    <ellipse
+       cx="665"
+       cy="330"
+       rx="69.8"
+       ry="11.18"
+       fill="none"
+       stroke="#2471a3"
+       stroke-width="3"
+       opacity="0.7"
+       transform="rotate(45 665 330)"
+       id="ellipse1174" />
+    <!-- 6 scatter points: svg_x = 665 + 50*x, svg_y = 330 - 50*y -->
+    <circle
+       cx="726"
+       cy="376"
+       r="3.5"
+       fill="#2471a3"
+       opacity="0.75"
+       id="circle1176" />
+    <circle
+       cx="632"
+       cy="284"
+       r="3.5"
+       fill="#2471a3"
+       opacity="0.75"
+       id="circle1178" />
+    <circle
+       cx="632"
+       cy="286"
+       r="3.5"
+       fill="#2471a3"
+       opacity="0.75"
+       id="circle1180" />
+    <circle
+       cx="620"
+       cy="285"
+       r="3.5"
+       fill="#2471a3"
+       opacity="0.75"
+       id="circle1182" />
+    <circle
+       cx="705"
+       cy="364"
+       r="3.5"
+       fill="#2471a3"
+       opacity="0.75"
+       id="circle1184" />
+    <circle
+       cx="617"
+       cy="275"
+       r="3.5"
+       fill="#2471a3"
+       opacity="0.75"
+       id="circle1186" />
+  </g>
+</svg>
