@@ -129,7 +129,7 @@ ax.set_xlabel('$\\rho$')
 ax.set_ylabel('bits')
 ax.legend()
 ax.set_title('Worksheet 4 Part A2 family: $I+H=2$')
-mlai.write_figure('multi-information-rho.svg', directory='./ml')}
+mlai.write_figure('multi-information-rho.svg', directory='\writeDiagramsDir/ml')}
 
 \figure{\includediagram{\diagramsDir/ml/multi-information-rho}{75%}}{Multi-information and joint entropy for uniform-marginal binary pairs; $I+H=C$ with $C=2$.}{multi-information-rho}
 
@@ -219,7 +219,7 @@ ax.plot(1/beta, H, linewidth=2)
 ax.set_xlabel('$T$')
 ax.set_ylabel('$H$ (bits, single spin)')
 ax.set_title('Schottky: entropy capacity of one two-level system')
-mlai.write_figure('schottky-entropy-preview.svg', directory='./ml')}
+mlai.write_figure('schottky-entropy-preview.svg', directory='\writeDiagramsDir/ml')}
 
 \figure{\includediagram{\diagramsDir/ml/schottky-entropy-preview}{70%}}{Single two-state entropy versus temperature — preview of the entropic Schottky reading.}{schottky-entropy-preview}
 

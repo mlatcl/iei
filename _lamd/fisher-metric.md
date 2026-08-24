@@ -98,7 +98,7 @@ ax.set_xlabel('$\\sigma^2$')
 ax.set_ylabel('Fisher component')
 ax.legend()
 ax.set_title('Gaussian Fisher matrix at $\\mu=0$')
-mlai.write_figure('gaussian-fisher-eigen.svg', directory='./ml')}
+mlai.write_figure('gaussian-fisher-eigen.svg', directory='\writeDiagramsDir/ml')}
 
 \figure{\includediagram{\diagramsDir/ml/gaussian-fisher-eigen}{70%}}{Fisher components for $\mathcal{N}(0,\sigma^2)$ blow up as $\sigma^2\to 0$.}{gaussian-fisher-eigen}
 
@@ -154,7 +154,7 @@ ax.scatter([0, 2], [1, 4], s=80, c=['green', 'red'])
 ax.set_xlabel('$\\mu$')
 ax.set_ylabel('$\\sigma^2$')
 ax.set_title('Worksheet 3 path in mean parameters')
-mlai.write_figure('crooks-path-sketch.svg', directory='./ml')}
+mlai.write_figure('crooks-path-sketch.svg', directory='\writeDiagramsDir/ml')}
 
 \figure{\includediagram{\diagramsDir/ml/crooks-path-sketch}{65%}}{Straight-line path in $(\mu,\sigma^2)$ whose Fisher–Rao length Worksheet 3 computes.}{crooks-path-sketch}
 

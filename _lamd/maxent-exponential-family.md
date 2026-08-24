@@ -121,7 +121,7 @@ ax.bar(faces + 0.2, p_jaynes, width=0.35, label='MaxEnt mean=4.5')
 ax.set_xlabel('face')
 ax.set_ylabel('probability')
 ax.legend()
-mlai.write_figure('jaynes-die-maxent.svg', directory='./ml')}
+mlai.write_figure('jaynes-die-maxent.svg', directory='\writeDiagramsDir/ml')}
 
 \figure{\includediagram{\diagramsDir/ml/jaynes-die-maxent}{75%}}{Jaynes' die: MaxEnt subject to mean 4.5 versus the uniform distribution.}{jaynes-die-maxent}
 

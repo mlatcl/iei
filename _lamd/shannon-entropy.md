@@ -104,7 +104,7 @@ ax.scatter([0.5, 0.9], [1.0, 0.469], s=80, zorder=3)
 ax.set_xlabel('$p$ (probability of 0)')
 ax.set_ylabel('$H$ (bits)')
 ax.set_title('Binary entropy')
-mlai.write_figure('binary-entropy.svg', directory='./ml')}
+mlai.write_figure('binary-entropy.svg', directory='\writeDiagramsDir/ml')}
 
 \figure{\includediagram{\diagramsDir/ml/binary-entropy}{70%}}{Binary entropy is maximal at $p=\frac12$ and falls as the source becomes predictable.}{binary-entropy}
 
@@ -169,7 +169,7 @@ ax.plot(beta, F, label='$F$')
 ax.set_xlabel(r'$\beta$')
 ax.legend()
 ax.set_title('Two-state system')
-mlai.write_figure('two-state-partition.svg', directory='./ml')}
+mlai.write_figure('two-state-partition.svg', directory='\writeDiagramsDir/ml')}
 
 \figure{\includediagram{\diagramsDir/ml/two-state-partition}{75%}}{Thermodynamic quantities from $Z(\beta)$ for the two-state system used in Quiz 1.}{two-state-partition}
 
@@ -235,7 +235,7 @@ ax.scatter([0.5], [H(0.5) - H(eps)], s=80, color='red', zorder=3)
 ax.set_xlabel('input bias $p(x=1)$')
 ax.set_ylabel('$I(X;Y)$ (bits)')
 ax.set_title('Binary symmetric channel')
-mlai.write_figure('bsc-capacity.svg', directory='./ml')}
+mlai.write_figure('bsc-capacity.svg', directory='\writeDiagramsDir/ml')}
 
 \figure{\includediagram{\diagramsDir/ml/bsc-capacity}{70%}}{Mutual information for a binary symmetric channel; capacity is achieved at uniform input.}{bsc-capacity}
 

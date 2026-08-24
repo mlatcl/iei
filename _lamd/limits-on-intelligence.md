@@ -115,7 +115,7 @@ ax.set_xticks([0,1]); ax.set_yticks([0,1])
 ax.set_xlabel('target'); ax.set_ylabel('source')
 ax.set_title('Transport plan $P$ (illustrative)')
 plt.colorbar(im, ax=ax, fraction=0.046)
-mlai.write_figure('transport-plan-2x2.svg', directory='./ml')}
+mlai.write_figure('transport-plan-2x2.svg', directory='\writeDiagramsDir/ml')}
 
 \figure{\includediagram{\diagramsDir/ml/transport-plan-2x2}{55%}}{Illustrative $2\times 2$ coupling — week 4 moments become week 8 marginals.}{transport-plan-2x2}
 

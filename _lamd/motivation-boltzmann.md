@@ -136,7 +136,7 @@ ax.set_xlabel(r'coldness $\beta$')
 ax.set_ylabel('occupation')
 ax.legend()
 ax.set_title('Two-state Boltzmann occupations')
-mlai.write_figure('two-state-boltzmann.svg', directory='./ml')}
+mlai.write_figure('two-state-boltzmann.svg', directory='\writeDiagramsDir/ml')}
 
 \figure{\includediagram{\diagramsDir/ml/two-state-boltzmann}{75%}}{Occupation of a two-state system as coldness increases. At low $\beta$ both states are populated; at high $\beta$ the ground state dominates.}{two-state-boltzmann}
 
@@ -199,7 +199,7 @@ ax.plot(beta, F_check, 'k--', alpha=0.5, label='$-\\ln Z/\\beta$')
 ax.set_xlabel(r'$\beta$')
 ax.legend()
 ax.set_title('Three-state system: Worksheet 1 energies')
-mlai.write_figure('three-state-thermo.svg', directory='./ml')}
+mlai.write_figure('three-state-thermo.svg', directory='\writeDiagramsDir/ml')}
 
 \figure{\includediagram{\diagramsDir/ml/three-state-thermo}{75%}}{$U$, $S$, and $F$ for the Worksheet 1 three-state system. Students verify $F=-\ln Z/\beta$ numerically.}{three-state-thermo}
 
@@ -259,7 +259,7 @@ axes[1].set_xlabel('$T$')
 axes[1].set_ylabel('$C$')
 axes[1].set_title('Schottky heat-capacity peak')
 plt.tight_layout()
-mlai.write_figure('schottky-two-state.svg', directory='./ml')}
+mlai.write_figure('schottky-two-state.svg', directory='\writeDiagramsDir/ml')}
 
 \figure{\includediagram{\diagramsDir/ml/schottky-two-state}{85%}}{Mean energy and heat capacity of a two-state system. The Schottky peak appears when $p_0\approx p_1\approx\frac12$.}{schottky-two-state}
 
@@ -309,7 +309,7 @@ ax.text(1.0, -0.35, 'finite time: $W > \\Delta F$', color='red')
 ax.set_xlabel(r'$\beta$')
 ax.set_ylabel('$F$')
 ax.legend()
-mlai.write_figure('finite-time-sketch.svg', directory='./ml')}
+mlai.write_figure('finite-time-sketch.svg', directory='\writeDiagramsDir/ml')}
 
 \figure{\includediagram{\diagramsDir/ml/finite-time-sketch}{70%}}{Cartoon of quasi-static versus finite-time driving between two equilibrium states.}{finite-time-sketch}
 

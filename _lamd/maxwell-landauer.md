@@ -109,7 +109,7 @@ ax.axvline(300, color='gray', linestyle='--', alpha=0.7)
 ax.scatter([300], [kB * 300 * np.log(2) * 1e21], s=80, color='red', zorder=3)
 ax.set_xlabel('$T$ (K)')
 ax.set_ylabel('minimum erasure cost ($10^{-21}$ J per bit)')
-mlai.write_figure('landauer-cost.svg', directory='./ml')}
+mlai.write_figure('landauer-cost.svg', directory='\writeDiagramsDir/ml')}
 
 \figure{\includediagram{\diagramsDir/ml/landauer-cost}{70%}}{Landauer's minimum heat dissipation per erased bit as a function of bath temperature.}{landauer-cost}
 

@@ -19,9 +19,9 @@ notesdir: ../_notes/ # Where compiled notes go
 notebooksdir: ../_notebooks/ # Where compiled notebooks go
 practicalsdir: ../_practicals/ # Where compiled practicals go
 snippetsdir: $HOME/lawrennd/snippets # Directory for reusable content snippets
-writediagramsdir: . # Where to write generated diagrams
-scriptsdir: ../scripts/ # Directory for scripts
-diagramsdir: $HOME/lawrennd/slides/diagrams/ # Shared diagram sources (copied to ../slides/diagrams/ for publish)
+writediagramsdir: ../slides/diagrams # Where to write generated diagrams (plot code uses \writeDiagramsDir)
+scriptsdir: https://inverseprobability.com/talks/scripts/ # Ballworld JS hosted on talks site (see CIP-0010)
+diagramsdir: ../slides/diagrams/ # Diagram sources for build/copy and publish tree
 diagramswebpath: slides/diagrams # Published URL path under url+baseurl (keep HTML img src correct)
 
 # Layout and styling

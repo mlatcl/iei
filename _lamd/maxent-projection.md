@@ -92,7 +92,7 @@ ax.set_xlabel('face')
 ax.set_ylabel('probability')
 ax.legend()
 ax.set_title('$m$-projection of uniform onto mean=4.5')
-mlai.write_figure('m-projection-die.svg', directory='./ml')}
+mlai.write_figure('m-projection-die.svg', directory='\writeDiagramsDir/ml')}
 
 \figure{\includediagram{\diagramsDir/ml/m-projection-die}{75%}}{MaxEnt die as $m$-projection of the uniform reference.}{m-projection-die}
 
@@ -168,7 +168,7 @@ ax.plot(path_v[:, 0], path_v[:, 1], 'C0-', label='vanilla')
 ax.plot(path_n[:, 0], path_n[:, 1], 'C1-', label='natural')
 ax.scatter([2], [4], s=80, c='red', label='target')
 ax.set_xlabel('$\\mu$'); ax.set_ylabel('$\\sigma^2$'); ax.legend()
-mlai.write_figure('natural-gradient-paths.svg', directory='./ml')}
+mlai.write_figure('natural-gradient-paths.svg', directory='\writeDiagramsDir/ml')}
 
 \figure{\includediagram{\diagramsDir/ml/natural-gradient-paths}{65%}}{Vanilla versus natural gradient paths for Gaussian MLE — Worksheet 3 core task.}{natural-gradient-paths}
 
@@ -216,7 +216,7 @@ ax.plot(detour[:,0], detour[:,1], 'C1--', linewidth=2, label='detour')
 ax.scatter([0,2],[1,4], s=60, c=['green','red'])
 ax.set_xlabel('$\\mu$'); ax.set_ylabel('$\\sigma^2$'); ax.legend()
 ax.set_title('Two paths — which is shorter in Fisher length?')
-mlai.write_figure('geodesic-vs-straight.svg', directory='./ml')}
+mlai.write_figure('geodesic-vs-straight.svg', directory='\writeDiagramsDir/ml')}
 
 \figure{\includediagram{\diagramsDir/ml/geodesic-vs-straight}{65%}}{Worksheet 3 uses the straight line; higher marks compare a second path.}{geodesic-vs-straight}
 
