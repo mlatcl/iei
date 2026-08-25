@@ -25,3 +25,7 @@ Banks are generated from `scripts/quiz_banks/build_banks.py` (edit that script, 
 ```
 
 Drawn sittings land in `assessments/generated/` (gitignored). Import `.gift` into Moodle.
+
+Follow-on items use optional `depends_on: base-id` (see CIP-0008). The draw unlocks
+them only after the base is in the sitting, and weights bases that unlock locked
+mass more heavily.
