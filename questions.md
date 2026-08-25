@@ -50,6 +50,7 @@ Class tests examine the *applied* form of the define-stage questions, on a new e
 
 - What is the data processing inequality?
 - How is entropy understood today? (Shannon alone is not the intended answer)
+- Shannon entropy versus differential entropy? (full contrast: week 5)
 
 ## Lecture 3 — 27 October — Maxwell and Landauer
 
@@ -82,7 +83,12 @@ Quiz 2 occupies the first ten minutes.
 **Define this week**
 
 - What is thermodynamic length? (Crooks: Fisher–Rao length of a path of equilibrium states)
+- What is KL divergence?
+- What is the difference between Shannon entropy and differential entropy?
 - How does the Legendre transform produce the dual coordinates of information geometry?
+- What does it mean for an exponential family to be e-flat and m-flat?
+- What is dual flatness?
+- What is the Pythagorean theorem for KL divergence on dual flats?
 
 **Named, not yet answered**
 
@@ -94,6 +100,8 @@ Quiz 2 occupies the first ten minutes.
 
 - Thermodynamic length as a geodesic problem (minimum-dissipation protocol)
 - The exponential family, now geometrically (project in $\eta$, travel in $\theta$)
+- What is maximum entropy as an $m$-projection?
+- What is natural gradient descent, and why is it the geometrically correct gradient?
 
 **Named, not yet answered**
 

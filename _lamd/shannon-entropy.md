@@ -214,6 +214,8 @@ def thermo_from_Z(beta, energies):
 
 \include{_information/includes/welling-entropy-partition.md}
 
+\notes{GAIST §1.2.3 uses $-\int p\log p$ for Gaussians — that is *differential* entropy. It can be negative and is not bounded like discrete Shannon $H\in[0,\log n]$. Week 5 introduces KL divergence, which is always $\ge 0$ discrete and continuous. That is why MaxEnt projections minimise $\mathrm{KL}(\cdot\|r)$, not raw $H$.}
+
 \addreading{@Callen-thermostatistics85}{Chapter 16}
 
 \subsection{Scaffolding, Not Outcomes}

@@ -66,7 +66,7 @@ reading:
 
 \speakernotes{LO9 (first half). Optional: Worksheet 3 Pythagorean check on Jaynes die.}
 
-\notes{MaxEnt is the $m$-projection of a reference distribution (often uniform) onto the constraint surface written in moment coordinates $\eta$. On an exponential family the constraint surface is a straight line in natural parameters $\theta$.}
+\notes{MaxEnt is the $m$-projection of a reference distribution (often uniform) onto the constraint surface written in moment coordinates $\eta$. Week 5: $\mathrm{KL}$ is non-negative even when differential entropy is not — the same $\min\mathrm{KL}(q\|r)$ recipe applies to Jaynes' die (discrete) and the Gaussian (continuous). On an exponential family the constraint surface is a straight line in natural parameters $\theta$.}
 
 \setupplotcode{import numpy as np
 import matplotlib.pyplot as plt
