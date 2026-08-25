@@ -180,6 +180,7 @@ mlai.write_figure('transport-plan-2x2.svg', directory='\writeDiagramsDir/ml')}
 \slides{Apply three no-gos and name which geometry you are using as the prescription.}
 
 \slidesincremental{
+* Historical thread: Carnot $\to$ Clausius $\to$ Boltzmann $\to$ Shannon $\to$ Landauer $\to$ here
 * Landauer: $k_B T\ln 2$ per bit erased
 * Crooks: $\langle W_{\mathrm{ex}}\rangle\ge\mathcal{L}^2/\tau$
 * Conservation: $I+H=C$ with fixed marginals

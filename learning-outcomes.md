@@ -4,7 +4,7 @@ outcomes:
     text: "Students will be able to decompose the Boltzmann distribution into contributions from internal energy, entropy, and Helmholtz free energy, and interpret each term's physical and informational meaning."
     bloom_level: analyse
     week: 1
-    notes: "p_i ∝ exp(-E_i/kT); Z; F = -kT log Z = U - TS. Available (free) energy is what remains after the entropic no-go. Theme introduced here: entropy forbids; probability prescribes. Motivations: perpetual motion, and the human–machine bandwidth gap from The Atomic Human (Lawrence, 2024)."
+    notes: "p_i ∝ exp(-E_i/kT); Z; F = -kT log Z = U - TS. Available (free) energy is what remains after the entropic no-go. Theme introduced here: entropy forbids; probability prescribes. Historical thread: Carnot (1824, engines) → Clausius (1850s–1865, second law; entropy named) → Boltzmann/Gibbs (statistical count) → Shannon/Jaynes (information). Motivations: perpetual motion, and the human–machine bandwidth gap from The Atomic Human (Lawrence, 2024)."
 
   - id: LO2
     text: "Students will be able to derive Shannon entropy as a measure of uncertainty and prove its formal equivalence to thermodynamic (Gibbs) entropy in equilibrium statistical mechanics."
@@ -22,7 +22,7 @@ outcomes:
     text: "Students will be able to explain Maxwell's demon thought experiment, identify where the apparent violation of the second law arises, and apply Landauer's principle to show that information erasure restores thermodynamic consistency."
     bloom_level: analyse
     week: 3
-    notes: "Maxwell (1867); Landauer (1961): erasing one bit costs k_B T ln 2. The demon must store measurement outcomes; erasure of that memory is the thermodynamic cost. This is the first rigorous link between intelligence (decision-making) and entropy. Motivates the inaccessible game."
+    notes: "Maxwell (1867); Landauer (1961): erasing one bit costs k_B T ln 2. The demon must store measurement outcomes; erasure of that memory is the thermodynamic cost. Clausius's macroscopic second law is what the demon appears to violate; Landauer completes the ledger. This is the first rigorous link between intelligence (decision-making) and entropy. Motivates the inaccessible game."
 
   - id: LO5
     text: "Students will be able to apply Jaynes' maximum entropy principle, using Lagrange multipliers, to derive the least-committal probability distribution consistent with a set of moment constraints."

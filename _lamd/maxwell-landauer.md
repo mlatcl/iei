@@ -30,6 +30,16 @@ reading:
     author: "Landauer"
     chapter: "whole paper"
     estimated_hours: 1
+  - title: "Thermodynamics of information"
+    author: "Parrondo, Horowitz and Sagawa"
+    chapter: "whole review"
+    estimated_hours: 1
+    required: false
+  - title: "Feynman Lectures on Computation"
+    author: "Feynman and Hey"
+    chapter: "Chapter 5"
+    estimated_hours: 0.5
+    required: false
   - title: "The Atomic Human"
     author: "Lawrence"
     chapter: "Chapter 1"
@@ -60,7 +70,7 @@ reading:
 | 0–10 | Quiz 1 (Moodle; LO1–LO3) |
 | 10–55 | Maxwell's demon; where the apparent violation sits |
 | 55–65 | Break |
-| 65–100 | Szilard; Landauer; erasure as the thermodynamic cost |
+| 65–100 | Szilard; Feynman piston chain; Parrondo framework; Landauer |
 | 100–120 | Intelligence, first cut; human bandwidth; release Worksheet 2 |
 }
 
@@ -70,9 +80,80 @@ reading:
 
 \subsection{Maxwell's Demon}
 
+<!-- SNIPPET: _physics/includes/clausius-second-law-thread.md -->
+
+\newslides{Clausius's Second Law}
+
+\slides{Maxwell's demon acts against the second law Clausius had made explicit thirty years earlier.}
+
+\slidesincremental{
+* Carnot (1824): engine efficiency has a ceiling
+* Clausius (1850s–1865): second law; entropy named and conserved in the books
+* Maxwell (1867): a demon seems to violate that law
+* Landauer (1961): erasure cost restores Clausius's bookkeeping
+}
+
+\speakernotes{Historical thread, not a new formula. The demon episode is where intelligence meets Clausius's macroscopic law; Landauer is where information enters the ledger.}
+
+\notes{Maxwell wrote that his demon would act "in contradiction to the second law of thermodynamics" — the law Clausius had formulated for heat engines and irreversible processes. Szilard and Landauer do not replace Clausius; they extend the same no-go to stored outcomes and erased bits. The demon's sorting policy remains a prescription; it cannot repeal the law Clausius stated.}
+
+<!-- /SNIPPET: _physics/includes/clausius-second-law-thread.md -->
+
 \include{_physics/includes/maxwells-demon.md}
 
 \include{_physics/includes/szilards-engine.md}
+
+<!-- SNIPPET: _physics/includes/feynman-szilard-piston-chain.md -->
+
+\newslides{One Bit, One Piston Stroke}
+
+\slides{Szilard: knowing which half holds the molecule lets an isothermal expansion extract $W_{\mathrm{ext}} = k_B T \ln 2$.}
+
+\slidesincremental{
+* Shannon count: $H(M)=\ln 2$ nats for unbiased left/right ($1$ bit)
+* Thermodynamic count: $W_{\mathrm{ext}} = k_B T H(M)$ in natural units
+* Same uncertainty; one names bits, the other names extractable work
+}
+
+\speakernotes{Operational bridge before Landauer. Write $H(M)=\ln 2$ next to $k_BT\ln 2$. Students should see one number in two readings.}
+
+\notes{Szilard (1929): partition, measure which side, expand from $V_0/2$ to $V_0$ against a thermal bath. For one molecule the work is $k_BT\ln 2$. If the outcome is equiprobable, $H(M)=\ln 2$ nats and $W_{\mathrm{ext}} = k_B T H(M)$. This is the first link in the chain from Shannon bits (week 2) to Landauer's joules (next section).}
+
+\newslides{Feynman's Piston Chain}
+
+\slides{Feynman treats a known microstate as fuel — a low-entropy tape you can spend.}
+
+\slidesincremental{
+* *Lectures on Computation* (Ch. 5): Szilard step repeated; each stroke needs a fresh bit
+* Vol. I, Ch. 46: a ratchet alone cannot mine a single bath — fluctuations break the pawl
+* Chain: Maxwell $\to$ Szilard $\to$ measurement $\to$ work $\to$ erasure
+}
+
+\speakernotes{Feynman is the pedagogy; Parrondo is the modern ledger. Ratchet is the autonomous-demon cautionary tale.}
+
+\notes{In *Feynman Lectures on Computation* (Hey ed., Ch. 5) Feynman uses the Szilard box with a piston on the occupied side: information about position is operational fuel. A chain of such strokes is only sustainable if you keep supplying low-entropy records or pay to erase them. In *The Feynman Lectures on Physics* [@Feynman-volumeI63], Ch. 46, he shows that a one-bath ratchet fails because thermal kicks on the pawl destroy rectification — the same fluctuation physics Smoluchowski and Parrondo et al. cite for autonomous demons. The historical chain is Maxwell (sort by velocity), Szilard (sort by position, one bit), Landauer (pay on erase).}
+
+<!-- /SNIPPET: _physics/includes/feynman-szilard-piston-chain.md -->
+
+<!-- SNIPPET: _physics/includes/thermodynamics-of-information-parrondo.md -->
+
+\newslides{Thermodynamics of Information}
+
+\slides{Clausius's second law says nothing about information; reconciling the pictures is a modern subject.}
+
+\slidesincremental{
+* Task 1: refine the second law — feedback work $W \ge -k_B T\, I(X;M)$
+* Task 2: information is physical — outcomes live in metastable memory states
+* Cycle: measure $\to$ feedback $\to$ reset (Landauer on the memory)
+}
+
+\speakernotes{Parrondo et al. survey. Szilard saturates $W = k_BT H(M)$ when $I(X;M)=H(M)$. Lab demos on colloids and single electrons.}
+
+\notes{Parrondo, Horowitz and Sagawa [@Parrondo-thermodynamics15] frame the thermodynamics of information as non-equilibrium thermodynamics for states updated by measurement. Shannon entropy of the microstate, multiplied by $k_B$, is the operative entropy for isothermal processes far from equilibrium. A measurement that correlates system $X$ with outcome $M$ raises non-equilibrium free energy by $k_B T I(X;M)$, so feedback can extract work bounded by that mutual information. In a cyclic Szilard engine with error-free measurement, $I(X;M)=H(M)=\ln 2$ and $W_{\mathrm{ext}}=k_BT\ln 2$ saturates the bound. The memory where $M$ is stored must be physical (Landauer: metastable wells, broken ergodicity). Over measure–feedback–reset, the mutual-information work is paid either during measurement or during erasure — the cost cannot disappear from the ledger. Stochastic thermodynamics and fluctuation theorems now reproduce Szilard and Landauer in the lab; we cite the review rather than reproducing the full formalism here.}
+
+\addreading{@Parrondo-thermodynamics15}{introduction and Szilárd engine section}
+
+<!-- /SNIPPET: _physics/includes/thermodynamics-of-information-parrondo.md -->
 
 \subsection{Landauer's Principle}
 

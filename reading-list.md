@@ -47,7 +47,7 @@ reading:
     edition: 2
     required: false
     estimated_hours: 4
-    notes: "Chapters 1-4 for the postulational formulation (entropy as primitive); Chapters 5-6 for the maximum work theorem and Helmholtz free energy $F=U-TS$; Chapter 16 for the canonical ensemble. Best undergraduate-level treatment for LO1 and LO3. Weeks 1-2."
+    notes: "Chapters 1-4 for the postulational formulation (entropy as primitive); Chapters 5-6 for the maximum work theorem and Helmholtz free energy $F=U-TS$; Chapter 16 for the canonical ensemble. Carnot (1824) and Clausius (1850s, entropy 1865) in the historical thread before Boltzmann. Best undergraduate-level treatment for LO1 and LO3. Weeks 1-2."
 
   - title: "Quantum Computation and Quantum Information"
     authors: "Nielsen, M. A. & Chuang, I. L."
@@ -73,6 +73,28 @@ reading:
     notes: "Supplementary. Draft on the course site. Ch. 3 for Boltzmann, free energy, Maxwell/Landauer (weeks 1–3); §1.5.5 and Ch. 5 for MaxEnt and the ELBO (week 4); Ch. 14 and §§22.2–22.3 for the Schrödinger bridge, Wasserstein, and finite-time Landauer (week 8). The Crooks in this book is the 1999 fluctuation theorem (Ch. 17), not thermodynamic length. The speed limit in Ch. 22 is W₂²/(Tτ), not L²/τ. Does not cover Amari, multi-information, or von Neumann entropy."
 
   # Primary papers
+  - title: "Reflections on the Motive Power of Fire"
+    authors: "Carnot, S."
+    year: 1824
+    required: false
+    estimated_hours: 0.5
+    notes: "Optional primary source. Heat-engine efficiency before Clausius. Week 1 historical thread (LO1)."
+
+  - title: "Thermodynamics of information"
+    authors: "Parrondo, J. M. R., Horowitz, J. M. & Sagawa, T."
+    year: 2015
+    url: "https://doi.org/10.1038/nphys3230"
+    required: false
+    estimated_hours: 1
+    notes: "Modern review: Szilárd engine, feedback second law $W \ge -k_B T I(X;M)$, memories, Landauer, experiments. Week 3 (LO4)."
+
+  - title: "Feynman Lectures on Computation"
+    authors: "Feynman, R. P. & Hey, A. J. G. (ed.)"
+    year: 1996
+    required: false
+    estimated_hours: 0.5
+    notes: "Chapter 5: reversible computation, Szilard engine, known microstate as fuel. Complement with Feynman Lectures Vol. I, Ch. 46 (ratchet). Week 3 (LO4)."
+
   - title: "Irreversibility and Heat Generation in the Computing Process"
     authors: "Landauer, R."
     year: 1961
@@ -165,7 +187,7 @@ A supplementary monograph from the 2024 AIMS lectures. Variational free energy i
 | Weeks | Read | Do not expect |
 |-------|------|----------------|
 | 1–2 | Ch. 3 (ensembles, $F=U-TS$, heat as $\delta\rho$, work as $\delta H$); §1.2.3–1.2.4 (entropy, KL) | Perpetual motion; Shannon axioms; channel capacity |
-| 3 | §3.3, pp. 49–52 (Maxwell, Landauer, Bennett) | Szilard's engine; the $k_B T\ln 2$ calculation (read Landauer) |
+| 3 | §3.3, pp. 49–52 (Maxwell, Landauer, Bennett); optional Parrondo et al. (2015) | Szilard's engine calculation; full fluctuation-theorem formalism |
 | 4 | §1.5.5 (MaxEnt $\to$ canonical); Ch. 5 (ELBO as nonequilibrium free energy) | The three-perspective comparison. GAIST collapses thermo and ML; we do not. |
 | 5–6 | Nothing required. Ch. 17 is the *other* Crooks (1999 fluctuation theorem). | Thermodynamic length; Fisher–Rao; Amari; natural gradient. The speed limit in Ch. 22 is Wasserstein. |
 | 7 | — | Multi-information; $I+H=C$; von Neumann entropy |
@@ -175,6 +197,12 @@ A supplementary monograph from the 2024 AIMS lectures. Variational free energy i
 
 **Landauer (1961)** — "Irreversibility and Heat Generation in the Computing Process," *IBM J. Res. Dev.*
 Two pages; should be read in full. Week 3 (LO4).
+
+**Parrondo, Horowitz & Sagawa (2015)** — "Thermodynamics of information," *Nature Physics* 11, 131–139. ([doi](https://doi.org/10.1038/nphys3230))
+Accessible review of Szilárd's engine, the feedback second law, physical memories, and laboratory realizations. Week 3 (LO4).
+
+**Feynman & Hey (1996)** — *Feynman Lectures on Computation*
+Chapter 5 on reversible computation and the Szilard engine; known microstate as thermodynamic fuel. Pair with *The Feynman Lectures on Physics* Vol. I, Ch. 46 (ratchet and one-bath caution). Week 3 (LO4).
 
 **Jaynes (1957)** — "Information Theory and Statistical Mechanics," *Phys. Rev.* 106, 620.
 The original maximum entropy paper; very readable. Week 4 (LO5).

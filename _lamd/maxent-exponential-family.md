@@ -165,15 +165,17 @@ mlai.write_figure('jaynes-die-maxent.svg', directory='\writeDiagramsDir/ml')}
 \slides{Same $H$; three operational assumptions about what probability is over.}
 
 \slidesincremental{
+* Carnot/Clausius: a heat engine — efficiency and the second law
 * Shannon: a code — capacity and compression
+* Szilard/Landauer: a bit in memory — $k_B T \ln 2$ work and erasure
 * Boltzmann/Gibbs: a macrostate at equilibrium
 * Jaynes/Bayes: a state of knowledge under constraint
-* All three: $H$ forbids, $p$ prescribes
+* All four layers: $H$ forbids, $p$ prescribes
 }
 
-\speakernotes{LO7 — intended answer to “how is entropy understood today?” until week 7. Worksheet 2 Part B: Bayesian vs thermodynamic MaxEnt.}
+\speakernotes{LO7 — intended answer to “how is entropy understood today?” until week 7. Carnot/Clausius is macroscopic; Szilard/Landauer links bits to joules; Shannon and Jaynes are information layers.}
 
-\notes{Shannon treats $H$ as a code bound; Boltzmann counts macrostates at equilibrium; Jaynes treats $p$ as least-committal inference under constraint. All three agree: $H$ forbids, $p$ prescribes.}
+\notes{Clausius gives the macroscopic second law and names entropy. Shannon treats $H$ as a code bound; Szilard and Landauer tie one bit to $k_BT\ln 2$ of work and erasure; Boltzmann counts macrostates at equilibrium; Jaynes treats $p$ as least-committal inference under constraint. All agree: $H$ forbids, $p$ prescribes.}
 
 \setupcode{import numpy as np
 
@@ -187,10 +189,12 @@ def perspective_table(H_value, p_maxent, p_uniform):
 <!-- /SNIPPET: _information/includes/three-perspectives-entropy.md -->
 
 \slidesincremental{
+* Carnot/Clausius: engines and the second law
 * Shannon: a code
+* Szilard/Landauer: a bit in memory
 * Boltzmann: a macrostate
 * Jaynes: a state of knowledge
-* All three: $H$ forbids, $p$ prescribes
+* All layers: $H$ forbids, $p$ prescribes
 }
 
 \include{_information/includes/welling-maxent-elbo.md}

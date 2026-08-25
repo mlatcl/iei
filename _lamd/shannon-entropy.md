@@ -273,10 +273,11 @@ mlai.write_figure('bsc-capacity.svg', directory='\writeDiagramsDir/ml')}
 
 \slidesincremental{
 * Same $H$; three operational assumptions
+* Week 3: one bit $\leftrightarrow$ $k_B T \ln 2$ joules (Szilard, Landauer)
 * Synthesis is week 4
 }
 
-\speakernotes{Name the three framings today. Full LO7 synthesis is week 4; a Shannon-only answer is incomplete.}
+\speakernotes{Name the three framings today. Week 3 makes the bit operational in a piston stroke. Full LO7 synthesis is week 4.}
 
 \notes{Information, thermodynamic, and Bayesian readings of the same $H$ differ in what the probability is over and who is inferring. The intended comparison is LO7 in week 4.}
 

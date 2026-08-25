@@ -47,7 +47,7 @@ reading:
 \slidesincremental{
 * Room FW26; eight Tuesdays from today
 * Entropy forbids; probability prescribes
-* Today: perpetual motion, human bandwidth, Laplace, Boltzmann
+* Today: perpetual motion, Carnot and Clausius, human bandwidth, Laplace, Boltzmann
 }
 
 \notes{
@@ -56,9 +56,10 @@ reading:
 | Minutes | Block |
 |--------:|-------|
 | 0–15 | Course mechanics; the questions list; the theme |
-| 15–45 | Perpetual motion; *Atomic Human* bandwidth; Laplace's demon and gremlin |
-| 45–55 | Boltzmann distribution as the prescription |
-| 55–65 | Break |
+| 15–40 | Perpetual motion; Carnot and Clausius (historical thread) |
+| 40–50 | *Atomic Human* bandwidth; Laplace's demon and gremlin |
+| 50–58 | Boltzmann distribution as the prescription |
+| 58–65 | Break |
 | 65–100 | Free-energy decomposition: $TS$ is the subtraction, $F$ is what remains |
 | 100–120 | Name dissipation; Schottky named; Worksheet 1; LLM exercise |
 }
@@ -89,7 +90,43 @@ reading:
 
 \include{_information/includes/perpetual-motion-superintelligence-analogy.md}
 
-\notes{That is entropy as a no-go for engines. A second motivation is embodiment. Human communication sits at about 2000 bits per minute; machines sit at billions. *The Atomic Human* [@Lawrence-atomic24] treats that gap as a bottleneck on intelligence: we are locked in relative to the machine not because thought is slow, but because externalising it is. That shapes what intelligence can be; it is not a thermodynamic no-go in the same sense as the second law.}
+<!-- SNIPPET: _physics/includes/clausius-carnot-second-law.md -->
+
+\subsection{Carnot and Clausius}
+
+\notes{The course follows a historical thread as well as a mathematical one. Sadi Carnot (1796–1832) asked, in 1824, what limits the efficiency of a heat engine. Rudolf Clausius (1822–1888) built on Carnot and Kelvin to state the second law of thermodynamics in several equivalent forms, and in 1865 he coined the name *entropy* for the state function that tracks irreversibility. Boltzmann and Gibbs, later in the same century, gave the microscopic count behind Clausius's macroscopic $S$. Shannon and Jaynes, in the twentieth century, reuse the same functional form with different operational readings. Keep that chain in view: engines first, then entropy as a named quantity, then statistics, then information.}
+
+\newslides{Before Boltzmann: Heat Engines}
+
+\slidesincremental{
+* Carnot (1824): no real engine beats a reversible cycle between two baths
+* Clausius (1850s): heat cannot flow from cold to hot without work
+* Clausius (1865): names *entropy* — the state's transformation content
+}
+
+\speakernotes{Carnot is the efficiency question; Clausius is the second law and the word entropy. Perpetual motion fails because it tries to evade that toll.}
+
+\newslides{Clausius and the No-Go}
+
+\slides{Clausius: the entropy of the universe tends to a maximum.}
+
+\slidesincremental{
+* No-go: you cannot run a cyclic engine that converts heat entirely into work
+* Same no-go as perpetual motion — Clausius makes the prohibition explicit
+* Prescription comes later: Boltzmann weights, then Shannon/Jaynes (this term)
+}
+
+\notes{Clausius did not give the Boltzmann distribution. He gave the macroscopic balance that any prescription must respect. When we derive $p_i \propto e^{-\beta E_i}/Z$ shortly, read it as the statistical answer to a constraint Clausius already framed: fixed mean energy, maximum entropy, no perpetual motion.}
+
+\slidesincremental{
+* Macroscopic: Carnot $\to$ Clausius (second law, entropy named)
+* Microscopic: Maxwell, Boltzmann, Gibbs (same $S$, counted states)
+* Information: Shannon, Jaynes (same $H$, different job)
+}
+
+<!-- /SNIPPET: _physics/includes/clausius-carnot-second-law.md -->
+
+\notes{That is entropy as a no-go for engines. Clausius names it and states the second law before we derive Boltzmann's prescription. A second motivation is embodiment. Human communication sits at about 2000 bits per minute; machines sit at billions. *The Atomic Human* [@Lawrence-atomic24] treats that gap as a bottleneck on intelligence: we are locked in relative to the machine not because thought is slow, but because externalising it is. That shapes what intelligence can be; it is not a thermodynamic no-go in the same sense as the second law.}
 
 \include{_books/includes/the-atomic-human.md}
 
@@ -350,11 +387,11 @@ mlai.write_figure('finite-time-sketch.svg', directory='\writeDiagramsDir/ml')}
 * What is Schottky's anomaly?
 }
 
-\notes{Interpret later: how entropy is understood today; equilibrium versus non-equilibrium; the purely entropic Schottky reading.}
+\notes{Interpret later: how entropy is understood today; equilibrium versus non-equilibrium; the purely entropic Schottky reading. Define-stage answer to "How was entropy discovered?": Carnot on engines; Clausius names entropy and states the second law (1865); Boltzmann and Gibbs give the statistical count; Shannon and Jaynes reuse $H$ with different operational readings.}
 
 \subsection{This Week's Pair}
 
-\notes{No-go: the second law. Prescription: the Boltzmann occupation. Free energy is the accounting of that pair. Human bandwidth is named separately as a bottleneck — counted in bits today, derived as $H$ in lecture 2.}
+\notes{No-go: the second law (Clausius's macroscopic statement; perpetual motion fails here). Prescription: the Boltzmann occupation. Free energy is the accounting of that pair. Human bandwidth is named separately as a bottleneck — counted in bits today, derived as $H$ in lecture 2.}
 
 \include{_information/includes/entropy-nogo-pair.md}
 

@@ -20,6 +20,7 @@ Class tests examine the *applied* form of the define-stage questions, on a new e
 **Define this week**
 
 - How was entropy discovered?
+- Who were Carnot and Clausius, and what did each contribute?
 - What is the relationship between energy and entropy?
 - What is a thermodynamic bath?
 - What is Schottky's anomaly?
@@ -59,6 +60,9 @@ Quiz 1 occupies the first ten minutes.
 **Define this week**
 
 - What is Maxwell's demon?
+- How does one Shannon bit relate to thermodynamic work? (Szilard; Feynman piston chain)
+- How does Landauer's principle relate to Clausius's second law?
+- What is the thermodynamics of information? (Parrondo et al.; first cut)
 - What is the relationship between information and intelligence? (first cut: Landauer)
 - What are the information constraints on a human? (bandwidth and erasure)
 
