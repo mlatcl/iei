@@ -32,18 +32,13 @@ platform: Moodle
 **Format**: 10 auto-marked questions on Moodle (MCQ, T/F, matching, fill-blank). No notes, no internet, no LLMs.  
 **Covers**: Weeks 1–2 material (LO1, LO2, LO3).
 
-Question **pool** lives in `quiz-banks/q1-boltzmann-shannon.yaml` (target 100 items). Each sitting draws 10 questions stratified by outcome. Examples use a two-state system and binary sources—not the three-state / die examples from Worksheet 1.
+Question pool: `quiz-banks/q1-boltzmann-shannon.yaml` (100 items). Draw 10 stratified by outcome. Examples use two-state / binary sources — not Worksheet 1's three-state / die.
 
 ## Marking
 
 Auto-graded by Moodle. 1 mark per correct item. Total: 10 marks → scaled to 10% of module grade.
 
-## Bank status
-
-| Metric | Value |
-|--------|-------|
-| Pool target | 100 |
-| Current items | 15 (starter scaffold) |
-| Types | MCQ, true/false, matching, fill-blank |
-
-Grow the bank before Week 3; validate and export with VibeCourse quiz tooling (CIP-0008).
+```bash
+./vc validate-quiz-bank assessments/quiz-banks/q1-boltzmann-shannon.yaml
+./vc draw-quiz assessments/in-class-quiz1.md --seed 42
+```

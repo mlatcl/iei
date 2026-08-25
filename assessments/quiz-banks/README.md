@@ -1,33 +1,27 @@
 # IEI in-class quiz question banks
 
-YAML pools for **Q1–Q4** in-class Moodle quizzes. Schema follows VibeCourse **CIP-0008** / **REQ-0009**.
+YAML pools for **Q1–Q4**. Schema: VibeCourse CIP-0008 / REQ-0009.
 
-| Bank file | Assessment | Weeks / outcomes | Pool target |
-|-----------|------------|------------------|-------------|
-| `q1-boltzmann-shannon.yaml` | `in-class-quiz1.md` (Q1) | Weeks 1–2; LO1–LO3 | 100 |
-| `q2-*.yaml` | `in-class-quiz2.md` | (planned) | 100 |
-| `q3-*.yaml` | `in-class-quiz3.md` | (planned) | 100 |
-| `q4-*.yaml` | `in-class-quiz4.md` | (planned) | 100 |
+| Bank | Assessment | Outcomes | Items |
+|------|------------|----------|------:|
+| `q1-boltzmann-shannon.yaml` | `in-class-quiz1.md` | LO1–LO3 | 100 |
+| `q2-maxent-landauer.yaml` | `in-class-quiz2.md` | LO4–LO7 | 100 |
+| `q3-fisher-geometry.yaml` | `in-class-quiz3.md` | LO8–LO9 | 100 |
+| `q4-multiinfo-limits.yaml` | `in-class-quiz4.md` | LO10–LO13 | 100 |
 
 ## Sitting
 
-- **10 minutes**, **10 questions** per sitting (`questions_per_sitting`).
-- Draw is **stratified by learning outcome** when tooling is available.
-- Live delivery: Moodle at start of lecture (see assessment metadata).
+- **10 minutes**, **10 questions** per sitting, stratified by outcome.
+- Delivery: Moodle at start of lecture (see assessment metadata).
 
-## Maintenance
+## Rebuild
 
-1. Add items to the YAML bank (not to the long question list in `in-class-quiz*.md`).
-2. Tag each item with `outcomes` and varied `type` where possible.
-3. Grow each bank toward **100 items** before the corresponding quiz week.
-4. Align new items with `questions.md` and lecture learning outcomes.
-
-Validation and draw scripts (when installed from VibeCourse):
+Banks are generated from `scripts/quiz_banks/build_banks.py` (edit that script, then regenerate):
 
 ```bash
+.venv-vibecourse/bin/python scripts/quiz_banks/build_banks.py
 ./vc validate-quiz-bank assessments/quiz-banks/q1-boltzmann-shannon.yaml
 ./vc draw-quiz assessments/in-class-quiz1.md --seed 42
-./vc --quiz-banks
 ```
 
-Export drawn sittings to GIFT for Moodle import rather than hand-typing each sitting.
+Drawn sittings land in `assessments/generated/` (gitignored). Import `.gift` into Moodle.
