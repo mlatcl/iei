@@ -172,10 +172,6 @@ mlai.write_figure('natural-gradient-paths.svg', directory='\writeDiagramsDir/ml'
 
 \figure{\includediagram{\diagramsDir/ml/natural-gradient-paths}{65%}}{Vanilla versus natural gradient paths for Gaussian MLE — Worksheet 3 core task.}{natural-gradient-paths}
 
-\slides{
-\includediagram{\diagramsDir/ml/natural-gradient-paths}{65%}
-}
-
 <!-- /SNIPPET: _information/includes/natural-gradient-worked.md -->
 
 \slidesincremental{
@@ -220,9 +216,6 @@ mlai.write_figure('geodesic-vs-straight.svg', directory='\writeDiagramsDir/ml')}
 
 \figure{\includediagram{\diagramsDir/ml/geodesic-vs-straight}{65%}}{Worksheet 3 uses the straight line; higher marks compare a second path.}{geodesic-vs-straight}
 
-\slides{
-\includediagram{\diagramsDir/ml/geodesic-vs-straight}{65%}
-}
 
 <!-- /SNIPPET: _information/includes/geodesic-optimal-protocol.md -->
 
