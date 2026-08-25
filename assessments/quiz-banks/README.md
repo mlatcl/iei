@@ -22,9 +22,11 @@ Banks are generated from `scripts/quiz_banks/build_banks.py` (edit that script, 
 .venv-vibecourse/bin/python scripts/quiz_banks/build_banks.py
 ./vc validate-quiz-bank assessments/quiz-banks/q1-boltzmann-shannon.yaml
 ./vc draw-quiz assessments/in-class-quiz1.md --seed 42
+./vc draw-quiz assessments/in-class-quiz1.md --seed 42 --answers-tex
 ```
 
-Drawn sittings land in `assessments/generated/` (gitignored). Import `.gift` into Moodle.
+Drawn sittings land in `assessments/generated/` (gitignored). Import `.gift` into Moodle;
+compile `Q1-sitting.tex` with `pdflatex` for hard copies (`Q1-answers.tex` is the marker key).
 
 Follow-on items use optional `depends_on: base-id` (see CIP-0008). The draw unlocks
 them only after the base is in the sitting, and weights bases that unlock locked
