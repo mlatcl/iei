@@ -70,6 +70,19 @@ reading:
 | 100–120 | Chain rule; channel capacity (statement); three framings named |
 }
 
+\newslides{From Lecture 1}
+
+\slides{Lecture 1 counted human communication in Shannon's bits — a bottleneck on how fast thought can leave the body.}
+
+\slidesincremental{
+* Today: derive $H$ and connect $S = kH$
+* The bottleneck remains; we gain the measure behind the bit
+}
+
+\speakernotes{Callback before axioms. Bandwidth is not a thermodynamic no-go — it constrains intelligence. $H$ is the formal account of uncertainty in $p$.}
+
+\notes{Week 1 introduced Shannon's portrait and embodiment factors in bits per second. This lecture derives $H=-\sum_i p_i\log p_i$ and shows that Boltzmann entropy uses the same functional form. The human–machine bandwidth gap is a communication bottleneck; channel capacity is the analogous no-go on *codes*, not on embodiment.}
+
 \subsection{Shannon Entropy}
 
 \include{_policy/includes/shannon-information.md}
@@ -132,7 +145,7 @@ mlai.write_figure('binary-entropy.svg', directory='\writeDiagramsDir/ml')}
 
 \include{_ml/includes/dasher.md}
 
-\notes{Dasher is the pair in one interface. Letter height is $p(\mathrm{char}\mid\mathrm{context})$; the information cost of a hit is $-\log p$. $H(\mathrm{next})$ is the no-go on the remaining rate. The language model is the prescription: this is the next letter you should make easy to hit. The bits-per-second counter is the same kind of number as the human bandwidth no-go from lecture 1 — here spent on a pointer, not on speech.}
+\notes{Dasher is the pair in one interface. Letter height is $p(\mathrm{char}\mid\mathrm{context})$; the information cost of a hit is $-\log p$. $H(\mathrm{next})$ is the no-go on the remaining rate. The language model is the prescription: this is the next letter you should make easy to hit. The bits-per-second counter is the same unit as lecture 1's bandwidth bottleneck — here spent on a pointer, not on speech.}
 
 \subsection{The Partition Function}
 
