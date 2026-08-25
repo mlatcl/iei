@@ -26,6 +26,7 @@ Validation and draw scripts (when installed from VibeCourse):
 
 ```bash
 ./vc validate-quiz-bank assessments/quiz-banks/q1-boltzmann-shannon.yaml
+./vc draw-quiz assessments/in-class-quiz1.md --seed 42
 ./vc --quiz-banks
 ```
 
