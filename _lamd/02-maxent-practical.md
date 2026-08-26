@@ -13,8 +13,9 @@ venue: FW26, William Gates Building
 abstract: >
   Recover Jaynes' die, the canonical ensemble, and the Gaussian from
   maximum entropy. Then explain Maxwell's demon and Landauer in your own
-  words, and contrast a Bayesian LLM account of MaxEnt with the
-  thermodynamic one.
+  words — including the Ellis dissipation ledger versus the Landauer
+  information ledger — and contrast a Bayesian LLM account of MaxEnt with
+  the thermodynamic one.
 author:
 - given: Neil D.
   family: Lawrence
@@ -35,7 +36,7 @@ word_count: 400
 
 \notes{Released after lecture 3 (27 October). Due at the start of lecture 4 (3 November). Estimated three hours. This worksheet is 15% of the module mark.
 
-**Builds on the lecture.** Part A implements the Jaynes die shown in lecture 4 (`jaynes-die-maxent` figure). The Landauer reflection uses `landauer_cost(300)` from lecture 3. The two-level MaxEnt task connects the Lagrange multiplier to coldness $\beta$ from lecture 1.}
+**Builds on the lecture.** Part A implements the Jaynes die shown in lecture 4 (`jaynes-die-maxent` figure). The Landauer reflection uses `landauer_cost(300)` from lecture 3 and the Ellis excerpt (`readings/ellis-maxwell-demon-excerpt.md`). The two-level MaxEnt task connects the Lagrange multiplier to coldness $\beta$ from lecture 1.}
 
 \notes{Submit `crsid_worksheet2.ipynb` and `crsid_worksheet2.md` on Moodle. LLMs are permitted. Authenticity is checked by Quiz 2 at the start of lecture 5 (10 November), on a *new* example.}
 
@@ -70,17 +71,23 @@ energies = np.array([0.0, epsilon])
 
 \section{Part B -- Reflection}
 
-\writeassignment{Maxwell's demon (200 words). Explain in your own words why the demon appears to violate the second law, and how Landauer's principle restores consistency. What is the *minimum* thermodynamic cost, in joules, of erasing one bit at room temperature (300 K)?}{20}{}
+\subsection{Reading for Part B (i)(ii)}
+
+\notes{Required: `readings/ellis-maxwell-demon-excerpt.md` in the module repository (also on Moodle). Optional full talk: \url{https://www.youtube.com/watch?v=U4ENbYa60Uw}.}
+
+\include{../readings/ellis-maxwell-demon-excerpt.md}
+
+\writeassignment{Maxwell's demon and two ledgers (~200 words). **(i)** In your own words: why does the demon appear to violate the second law, and how does Landauer's principle restore consistency? What is the *minimum* thermodynamic cost, in joules, of erasing one bit at room temperature (300 K)? **(ii)** Using the Ellis excerpt above: he argues dissipation at measurement and gating suffices, and rejects the information/erasure story as circular. Landauer/Bennett argues erasure of a stored bit is logically irreversible regardless of physical substrate. Which account matches the **generality** of the second law itself — and what would the other side need to prove to match it? Take a position in a few sentences.}{20}{}
 
 \writeassignment{Bayesian perspective (200 words). Ask an LLM: "Explain the maximum entropy principle from a Bayesian perspective." Summarise the response. Identify one point of agreement and one point of tension between the Bayesian and thermodynamic readings of MaxEnt. Include the key LLM response as an appendix, not counted in the word limit.}{25}{}
 
 \section{Marking}
 
 \notes{
-- 60--74: optimiser runs; distribution matches Jaynes; Landauer covered at a surface level.
-- 75--79: markdown cells show why the Lagrange multiplier is \(\beta\); reflection finds a non-trivial tension between Bayesian and thermodynamic readings.
-- 80--89: extension beyond the brief --- two spins with a prescribed correlation $\langle s_1 s_2\rangle$, recovering $J$, or the entropy landscape on the simplex.
-- 90--100: original insight -- for example, a new constraint type with a predicted family, checked after the prediction.
+- 60--74: optimiser runs; distribution matches Jaynes; Landauer covered at a surface level; Part B (ii) names Ellis or Landauer without comparing generality.
+- 75--79: markdown cells show why the Lagrange multiplier is \(\beta\); reflection finds a non-trivial tension (Bayesian vs thermodynamic MaxEnt, or Ellis circularity vs Landauer generality gap).
+- 80--89: extension beyond the brief --- two spins with prescribed $\langle s_1 s_2\rangle$, entropy landscape on the simplex, *or* full Ellis talk/transcript with a proposed lemma that would make the dissipation ledger substrate-independent.
+- 90--100: original insight -- for example, a new constraint type with a predicted family, checked after the prediction; or a synthesis reframing one ledger in terms of the other.
 }
 
 \section{Submission}

@@ -96,6 +96,14 @@ reading:
     estimated_hours: 1
     notes: "Modern review: Szilárd engine, feedback second law $W \ge -k_B T I(X;M)$, memories, Landauer, experiments. Week 3 (LO4)."
 
+  - title: "Maxwell's Demon? (Maxwell Day 2024)"
+    authors: "Ellis, J."
+    year: 2024
+    url: "https://www.youtube.com/watch?v=U4ENbYa60Uw"
+    required: false
+    estimated_hours: 0.25
+    notes: "Dissipation-first alternative to the information ledger. Required excerpt: readings/ellis-maxwell-demon-excerpt.md (Worksheet 2). Full video optional."
+
   - title: "Feynman Lectures on Computation"
     authors: "Feynman, R. P. & Hey, A. J. G. (ed.)"
     year: 1996
@@ -110,6 +118,16 @@ reading:
     required: true
     estimated_hours: 1
     notes: "The two-page original paper establishing Landauer's principle. Should be read directly. Week 3 (LO4)."
+
+  - title: "The Thermodynamics of Computation — A Review"
+    authors: "Bennett, C. H."
+    year: 1982
+    journal: "International Journal of Theoretical Physics"
+    volume: 21
+    pages: "905-940"
+    required: false
+    estimated_hours: 1
+    notes: "Szilard engine, Maxwell's demon resolution, logical irreversibility of erasure (phase-space compression). Non-circular counterpart to Ellis's circularity charge. Worksheet 2 Part B (ii); optional with Landauer (1961). Week 3 (LO4)."
 
   - title: "Information Theory and Statistical Mechanics"
     authors: "Jaynes, E. T."
@@ -195,7 +213,7 @@ A supplementary monograph from the 2024 AIMS lectures. Variational free energy i
 | Weeks | Read | Do not expect |
 |-------|------|----------------|
 | 1–2 | Ch. 3 (ensembles, $F=U-TS$, heat as $\delta\rho$, work as $\delta H$); §1.2.3–1.2.4 (entropy, KL) | Perpetual motion; Shannon axioms; channel capacity |
-| 3 | §3.3, pp. 49–52 (Maxwell, Landauer, Bennett); optional Parrondo et al. (2015) | Szilard's engine calculation; full fluctuation-theorem formalism |
+| 3 | §3.3, pp. 49–52 (Maxwell, Landauer, Bennett); optional Parrondo et al. (2015); Ellis excerpt (Worksheet 2) | Szilard's engine calculation; full fluctuation-theorem formalism |
 | 4 | §1.5.5 (MaxEnt $\to$ canonical); Ch. 5 (ELBO as nonequilibrium free energy) | The three-perspective comparison. GAIST collapses thermo and ML; we do not. |
 | 5–6 | Nothing required. Ch. 17 is the *other* Crooks (1999 fluctuation theorem). | Thermodynamic length; Fisher–Rao; Amari; natural gradient. The speed limit in Ch. 22 is Wasserstein. |
 | 7 | — | Multi-information; $I+H=C$; von Neumann entropy |
@@ -206,8 +224,14 @@ A supplementary monograph from the 2024 AIMS lectures. Variational free energy i
 **Landauer (1961)** — "Irreversibility and Heat Generation in the Computing Process," *IBM J. Res. Dev.*
 Two pages; should be read in full. Week 3 (LO4).
 
+**Bennett (1982)** — "The thermodynamics of computation—a review," *Int. J. Theor. Phys.* **21**, 905–940.
+Szilard's engine, the demon resolution, and erasure as logically irreversible phase-space compression. Optional with Landauer; the reference to cite against Ellis's circularity charge in Worksheet 2.
+
 **Parrondo, Horowitz & Sagawa (2015)** — "Thermodynamics of information," *Nature Physics* 11, 131–139. ([doi](https://doi.org/10.1038/nphys3230))
 Accessible review of Szilárd's engine, the feedback second law, physical memories, laboratory realizations, and molecular-scale engines. Week 3 (LO4).
+
+**Ellis (2024)** — *Maxwell's Demon?* Maxwell Day lecture ([video](https://www.youtube.com/watch?v=U4ENbYa60Uw); excerpt in `readings/ellis-maxwell-demon-excerpt.md`)
+Dissipation-first reading of the demon: defined results (measurement, located trap door) already pay thermodynamically. Worksheet 2 compares this with the Landauer/Bennett information ledger. Full talk optional (~50 min).
 
 **Lawrence (2025)** — [Information Engines](https://inverseprobability.com/talks/notes/information-engines.html) (seminar notes)
 Optional depth: Jaynes' world, car-engine versus ATP synthase scale contrast, unified intelligence perspective. Week 3 and week 7 bridge; full synthesis week 8.

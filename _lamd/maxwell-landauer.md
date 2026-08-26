@@ -30,6 +30,11 @@ reading:
     author: "Landauer"
     chapter: "whole paper"
     estimated_hours: 1
+  - title: "The Thermodynamics of Computation — A Review"
+    author: "Bennett"
+    chapter: "Szilard engine; demon resolution; logical irreversibility of erasure"
+    estimated_hours: 1
+    required: false
   - title: "Thermodynamics of information"
     author: "Parrondo, Horowitz and Sagawa"
     chapter: "whole review"
@@ -101,6 +106,24 @@ reading:
 <!-- /SNIPPET: _physics/includes/clausius-second-law-thread.md -->
 
 \include{_physics/includes/maxwells-demon.md}
+
+\newslides{Two Ledgers for the Same No-Go}
+
+\slides{John Ellis (Maxwell Day 2024): the demon fails because measurement and a located trap door already dissipate.}
+
+\slidesincremental{
+* **Dissipation ledger:** defined results (scatter, switch, barrier) already pay thermodynamically
+* **Information ledger:** Szilard $\to$ stored outcome $\to$ Landauer erasure $\to$ Parrondo bound
+* Bennett (1982): erasure cost from phase-space compression — not circular [@Bennett-thermodynamics82]
+* Both restore Clausius; they disagree on the *bookkeeping* variable
+* Worksheet 2 asks: which account matches the generality of the second law?
+}
+
+\speakernotes{Ellis rejects information-as-fuel and circular Landauer pedagogy. Bennett derives erasure from phase-space compression — substrate-independent. Curated excerpt on Moodle/repo; full talk optional.}
+
+\notes{John Ellis, Maxwell Day 2024 (Cambridge). Dissipation-first: measurement scatters; the trap door is a switch in a metastable well — its position is already a physical memory degree of freedom, not a separate notebook. Information-first: the Feynman/Szilard/Landauer/Parrondo chain in this lecture. The generality question — mechanism-independent law versus mechanism-specific rebuttals — is Worksheet 2 Part B (i)(ii). Bad textbook Landauer says erasure must cost entropy because otherwise the second law fails; @Bennett-thermodynamics82 derives the demon resolution from logical irreversibility of erasure (phase-space compression) — the non-circular version students should cite against Ellis.}
+
+\addreading{@Bennett-thermodynamics82}{Szilard engine and demon resolution (logical irreversibility of erasure)}
 
 \include{_physics/includes/szilards-engine.md}
 
@@ -252,9 +275,9 @@ mlai.write_figure('car-engine-info-scale.svg', directory='\writeDiagramsDir/ml')
 * Prescription: the demon's policy — which molecules to let through
 }
 
-\speakernotes{LO4. Policy does not repeal the no-go. Live: `landauer_cost(300)`. Worksheet 2 Part B: compute and explain.}
+\speakernotes{LO4. Policy does not repeal the no-go. Live: `landauer_cost(300)`. Worksheet 2 Part B: compute and explain; Ellis excerpt for the two-ledgers comparison. Trap-door position is already a physical memory degree of freedom — Landauer prices reset, not a separate notebook.}
 
-\notes{Landauer (1961): erasing one bit in a bath at temperature $T$ dissipates at least $k_B T\ln 2$. Erasure of stored outcomes restores the second law. The demon's measurement policy is the prescription; it does not repeal the bound.}
+\notes{Landauer (1961): erasing one bit in a bath at temperature $T$ dissipates at least $k_B T\ln 2$. Erasure of stored outcomes restores the second law. The demon's measurement policy is the prescription; it does not repeal the bound. Ellis agrees the demon fails but locates the cost at measurement and gating; @Bennett-thermodynamics82 completes the information ledger: erasure is logically irreversible, so phase-space compression costs at least $k_B T\ln 2$ per bit — derived, not assumed to save Clausius.}
 
 \setupplotcode{import numpy as np
 import matplotlib.pyplot as plt

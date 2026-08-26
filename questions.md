@@ -67,6 +67,11 @@ Quiz 1 occupies the first ten minutes.
 - What is the relationship between information and intelligence? (first cut: Landauer)
 - What are the information constraints on a human? (bandwidth and erasure)
 
+**Interpret (Worksheet 2; revisit week 8)**
+
+- Dissipation ledger (Ellis) versus information ledger (Szilard/Landauer/Bennett): same no-go, different bookkeeping — which argument matches the generality of the second law?
+- Does Landauer *derive* the erasure cost, or *assume* the second law to save it? (Contrast bad textbook circularity with Bennett (1982) on logical irreversibility of erasure.)
+
 ## Lecture 4 — 3 November — MaxEnt and Synthesis
 
 **Define this week**
