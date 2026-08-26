@@ -1,45 +1,68 @@
-# LaMD Configuration for VibeCourse Module
-# Edit author information and GitHub settings before running maketalk.
+# LaMD Configuration Template for Course
+# Update these settings for your specific course
 
+# Author information - update with your details
 author:
-- given: ""
-  family: ""
-  institution: ""
-  url: ""
+  - given: Neil D.
+    family: Lawrence
+    institution: University of Cambridge
+    gscholar: r3SJcvoAAAAJ
+    twitter: lawrennd
+    orcid: 0000-0001-9258-1030
+    url: http://inverseprobability.com
 
-layout: lecture
-venue: ""
-talkcss: https://inverseprobability.com/assets/css/talks.css
-bibdir: $HOME/lawrennd/bibliography/
-people: ../_people/people.yml
-postsdir: ../_lectures/
-slidesdir: ../slides/
-notesdir: ../_notes/
-notebooksdir: ../_notebooks/
-practicalsdir: ../_practicals/
-snippetsdir: $HOME/lawrennd/snippets/
-writediagramsdir: .
-scriptsdir: ../scripts/
-diagramsdir: ./slides/diagrams/
+# Directory paths
+bibdir: $HOME/lawrennd/bibliography # Bibliography directory
+postsdir: ../_lectures/ # Where compiled lecture HTML files go
+slidesdir: ../slides/ # Where compiled slides go
+notesdir: ../_notes/ # Where compiled notes go
+notebooksdir: ../_notebooks/ # Where compiled notebooks go
+practicalsdir: ../_practicals/ # Where compiled practicals go
+snippetsdir: $HOME/lawrennd/snippets # Directory for reusable content snippets
+writediagramsdir: ../slides/diagrams # Where to write generated diagrams (plot code uses \writeDiagramsDir)
+scriptsdir: https://inverseprobability.com/talks/scripts/ # Ballworld JS hosted on talks site (see CIP-0010)
+diagramsdir: ../slides/diagrams/ # Diagram sources for build/copy and publish tree
+diagramswebpath: slides/diagrams # Published URL path under url+baseurl (keep HTML img src correct)
+
+# Layout and styling
 slidesheader: slides-header.html
+notation: talk-notation.tex
+layout: lecture # Default layout for lectures
 
-posts: True
-docx: False
-notespdf: False
-slidesipynb: False
-pptx: False
-pdf: False
-assignment: False
-ipynb: True
-reveal: True
+# Output format settings (True/False)
+posts: True # Generate HTML lecture pages
+docx: False # Generate Word documents
+notespdf: False # Generate PDF notes
+slidesipynb: False # Generate Jupyter notebooks for slides
+pptx: False # Generate PowerPoint presentations
+pdf: False # Generate PDF lectures
+assignment: False # Generate assignment format
+ipynb: True # Generate Jupyter notebooks
+reveal: True # Use reveal.js for slides
 
-baseurl: "iei/"
-url: "https://mlatcl.github.io/"
+# Website configuration
+url: "https://mlatcl.github.io/" # the base hostname & protocol for your site
+baseurl: iei/
+talkcss: https://inverseprobability.com/assets/css/talks.css
+people: ../_people/people.yml
+
+# Use shared macros from lamd installation
 macrosdir: $HOME/lawrennd/lamd/lamd/macros
-transition: None
 
+# Slide transition effect
+transition: None # Options: None, fade, slide, convex, concave, zoom
+
+# Custom templates (optional)
+potx: custom-reference.potx 
+dotx: custom-reference.dotx
+
+# Venue information
+room: FW26
+venue: FW26, William Gates Building
+
+# GitHub Pages configuration
 ghub:
-- organization: GITHUB_ORG
-  repository: iei
-  branch: gh-pages
-  directory: _lamd
+  - organization: mlatcl # Your GitHub username or organization
+    repository: iei # Repository name
+    branch: gh-pages # Branch for GitHub Pages
+    directory: _lamd # Directory containing source files
