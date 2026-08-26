@@ -226,7 +226,9 @@ mlai.write_figure('car-engine-info-scale.svg', directory='\writeDiagramsDir/ml')
 * Biology composes $\sim 10^3$–$10^4$ such engines per cell; the brain's ATP budget is built from them
 }
 
-\speakernotes{Parrondo Fig. 1c–d: colloidal and single-electron Szilard engines in the lab. ATP synthase is evolution's rotary implementation at the same scale.}
+\figure{\includeyoutube{kXpzp4RDGJI}{800}{600}{130}}{ATP Synthase in action.}{atp-synthase-in-action}
+
+\speakernotes{Parrondo Fig. 1c–d: colloidal and single-electron Szilard engines in the lab. ATP synthase is evolution's rotary implementation at the same scale. Play the animation from the information-engines talk: rotary $\gamma$ subunit driven by proton transits through the membrane.}
 
 \notes{ATP synthase synthesises ATP from ADP and phosphate using the proton-motive force. The gradient is both energy reservoir and signal about cellular state. Each proton transit is a discrete event at room temperature; the $\gamma$ subunit rotates in steps as protons bind and release — a molecular ratchet of the kind Feynman analysed, but coupled to a chemical fuel (gradient) not a single bath. Rough accounting: $\sim 10^4$ ATP per synaptic event, $\sim 4\times 10^4$ protons; $\sim 10^{14}$ synapses with sparse firing gives $\sim 10^{18}$ protons/s brain-wide, each with several thermal degrees of freedom — petabit-per-second *physical* throughput distributed across vast numbers of mitochondria and synthase copies, not a single memory register. That is how life improves free-energy conversion where a car engine cannot: nanoscale composition of many information engines, not one demon on a macroscopic shaft. See the information-engines talk and @Parrondo-thermodynamics15 for laboratory Szilárd engines; Roh et al. for cryo-EM structure of rotary proton pumps.}
 
