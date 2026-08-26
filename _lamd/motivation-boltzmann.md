@@ -161,7 +161,7 @@ reading:
 
 \newslides{The Boltzmann Prescription}
 
-\slides{The second law forbids putting all probability on the ground state while matching a prescribed mean energy $U$. Among all distributions with the right $U$, pick the one with largest entropy.}
+\slides{For a prescribed mean energy $U$. Among all distributions with the right $U$, pick the one with largest entropy.}
 
 \slidesincremental{
 * Constraints: $\sum_i p_i = 1$ and $\sum_i p_i E_i = U$
@@ -171,7 +171,7 @@ reading:
 
 \speakernotes{Derive on the board. Lagrange multipliers → Boltzmann. Coldness $\beta$ next; $T$ is the bath reading. Worksheet 1: three-state; Quiz 1: two-state.}
 
-\notes{Maximum entropy subject to normalisation and fixed mean energy gives $p_i = e^{-\beta E_i}/Z$. The prescription follows from the no-go: you cannot put all weight on the ground state while matching $U$.}
+\notes{Maximum entropy subject to normalisation and fixed mean energy gives $p_i = e^{-\beta E_i}/Z$.}
 
 \setupplotcode{import numpy as np
 import matplotlib.pyplot as plt
@@ -193,9 +193,6 @@ mlai.write_figure('two-state-boltzmann.svg', directory='\writeDiagramsDir/ml')}
 
 \figure{\includediagram{\diagramsDir/ml/two-state-boltzmann}{75%}}{Occupation of a two-state system as coldness increases. At low $\beta$ both states are populated; at high $\beta$ the ground state dominates.}{two-state-boltzmann}
 
-\slides{
-\includediagram{\diagramsDir/ml/two-state-boltzmann}{75%}
-}
 
 \setupcode{import numpy as np}
 
@@ -230,7 +227,7 @@ mlai.write_figure('two-state-boltzmann.svg', directory='\writeDiagramsDir/ml')}
 
 \speakernotes{LO1. Read $F=U-TS$ as available energy. Name the subtraction; Legendre transform waits for week 4.}
 
-\notes{Helmholtz free energy $F=U-TS=-kT\log Z$ accounts for what remains after the entropic no-go takes its cut: $U$ is total energy, $TS$ is unavailable, $F$ is what the bath still allows you to do.}
+\notes{Helmholtz free energy $F=U-TS=-kT\log Z$ accounts for what remains after the entropy takes its cut: $U$ is total energy, $TS$ is unavailable, $F$ is what the bath still allows you to do.}
 
 \setupplotcode{import numpy as np
 import matplotlib.pyplot as plt

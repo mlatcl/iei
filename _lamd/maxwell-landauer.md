@@ -84,7 +84,7 @@ reading:
 
 \newslides{Clausius's Second Law}
 
-\slides{Maxwell's demon acts against the second law Clausius had made explicit thirty years earlier.}
+\slides{Maxwell's demon seems to act against the second law Clausius had made explicit thirty years earlier.}
 
 \slidesincremental{
 * Carnot (1824): engine efficiency has a ceiling
