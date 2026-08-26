@@ -8,9 +8,9 @@ room: FW26
 transition: None
 abstract: >
   In-class Quiz 1, then Maxwell's demon and Landauer's principle. Erasing
-  one bit costs \(k_B T\ln 2\) — a no-go. The demon's policy is a
-  prescription. Human bandwidth from *The Atomic Human* sits next to
-  Landauer as a second no-go on intelligence.
+  one bit costs $k_B T\ln 2$. Feedback work is bounded by
+  mutual information;  at
+  molecular scale ATP synthase approximates an information engine. 
 author:
 - given: Neil D.
   family: Lawrence
@@ -70,8 +70,9 @@ reading:
 | 0–10 | Quiz 1 (Moodle; LO1–LO3) |
 | 10–55 | Maxwell's demon; where the apparent violation sits |
 | 55–65 | Break |
-| 65–100 | Szilard; Feynman piston chain; Parrondo framework; Landauer |
-| 100–120 | Intelligence, first cut; human bandwidth; release Worksheet 2 |
+| 65–98 | Szilard; Feynman; Parrondo; information engines; car engine vs ATP synthase |
+| 98–115 | Landauer; erasure as the thermodynamic cost |
+| 115–120 | Intelligence, first cut; human bandwidth; release Worksheet 2 |
 }
 
 \subsection{Quiz 1}
@@ -155,6 +156,82 @@ reading:
 
 <!-- /SNIPPET: _physics/includes/thermodynamics-of-information-parrondo.md -->
 
+<!-- SNIPPET: _information-game/includes/information-engines-intelligence-cut.md -->
+
+\subsection{Information Engines}
+
+\newslides{Information Engines}
+
+\slides{An *information engine* converts stored or acquired information into extractable work — Szilard is the textbook case.}
+
+\slidesincremental{
+* First model of intelligence (information-engines talk): policy under a thermodynamic ledger
+* Feedback bound (Parrondo / Sagawa–Ueda): $W \ge -k_B T\, I(X;M)$ on average in a cycle
+* Memory is physical: metastable states, channel capacity $\le n$ bits for $n$ stored outcomes
+* Prescription: measurement policy; no-go: pay on reset (Landauer, next)
+}
+
+\speakernotes{Name information engines before the scale argument. Students should not think Maxwell's demon scales to a car ECU without a bandwidth reckoning.}
+
+\notes{This block condenses `_information-game/includes/intelligence-thermodynamics-connection.md` from the information-engines talk. The full talk also develops Markov blankets, generalised Jarzynski with feedback, and Ashby requisite variety; we name those in week 8. Here the point is operational: intelligence as feedback control is an information engine only if the memory and measurement bandwidth can support the mutual information the second law demands.}
+
+<!-- /SNIPPET: _information-game/includes/information-engines-intelligence-cut.md -->
+
+<!-- SNIPPET: _physics/includes/car-engine-vs-atp-synthase-scale.md -->
+
+\newslides{Why Not Demon-Upgrade Your Car?}
+
+\slides{Equipartition: each thermal degree of freedom carries $\sim k_B T/2$ of energy — information per bit is tiny beside macroscopic power flow.}
+
+\slidesincremental{
+* Example: $70\,\mathrm{kW}$ engine at $T \approx 370\,\mathrm{K}$
+* Thermal throughput $\sim 2P/(k_B T) \approx 3\times 10^{25}$ DOF per second
+* One bit per DOF $\Rightarrow$ $\sim 10^{25}$ bits/s — orders of magnitude above all human storage and communication
+* Carnot already caps efficiency; demon-style feedback cannot close the gap at this scale
+}
+
+\speakernotes{Live the numbers. World data stock is $\sim 10^2$ zettabytes total, not per second. The demon is not a practical prescription for macroscopic engines.}
+
+\notes{At human scale the energy in random thermal motion swamps any ledger we could maintain in bits. A feedback controller that tried to match $I(X;M)$ to the work flow of a car engine would need memory and measurement bandwidth beyond physical possibility. Clausius and Carnot already state the macroscopic no-go; information thermodynamics explains why importing Szilard into a gearbox does not help.}
+
+\setupplotcode{import numpy as np
+import matplotlib.pyplot as plt
+import mlai}
+
+\plotcode{kB = 1.380649e-23
+P = 70e3  # W
+T = 370.0  # K
+dof_per_s = 2 * P / (kB * T)
+bits_per_s = dof_per_s
+world_zb = 149
+world_bits = world_zb * 8e21
+fig, ax = plt.subplots(figsize=(7, 3.5))
+ax.bar(['Engine (bits/s)\n1 bit per DOF', 'World data stock\n(bits)'],
+       [bits_per_s, world_bits], color=['#c44', '#48c'])
+ax.set_yscale('log')
+ax.set_ylabel('bits (log scale)')
+ax.set_title('Macroscopic engine vs global information stock')
+mlai.write_figure('car-engine-info-scale.svg', directory='\writeDiagramsDir/ml')}
+
+\figure{\includediagram{\diagramsDir/ml/car-engine-info-scale}{75%}}{Order-of-magnitude contrast: thermal degrees of freedom in a 70 kW engine versus total world data stock (very rough).}{car-engine-info-scale}
+
+\newslides{ATP Synthase: Where Information \emph{Does} Matter}
+
+\slides{Molecular machines operate where $k_B T$ is the energy scale and thermal fluctuations are the environment — not a nuisance to fight.}
+
+\slidesincremental{
+* ATP synthase: rotary motor driven by proton flow down the mitochondrial gradient
+* $\sim 3$–$4$ protons per ATP; proton arrival is a discrete yes/no — a bit-scale measurement
+* Ratcheted Brownian motion: information about which side/proton phase drives rotation
+* Biology composes $\sim 10^3$–$10^4$ such engines per cell; the brain's ATP budget is built from them
+}
+
+\speakernotes{Parrondo Fig. 1c–d: colloidal and single-electron Szilard engines in the lab. ATP synthase is evolution's rotary implementation at the same scale.}
+
+\notes{ATP synthase synthesises ATP from ADP and phosphate using the proton-motive force. The gradient is both energy reservoir and signal about cellular state. Each proton transit is a discrete event at room temperature; the $\gamma$ subunit rotates in steps as protons bind and release — a molecular ratchet of the kind Feynman analysed, but coupled to a chemical fuel (gradient) not a single bath. Rough accounting: $\sim 10^4$ ATP per synaptic event, $\sim 4\times 10^4$ protons; $\sim 10^{14}$ synapses with sparse firing gives $\sim 10^{18}$ protons/s brain-wide, each with several thermal degrees of freedom — petabit-per-second *physical* throughput distributed across vast numbers of mitochondria and synthase copies, not a single memory register. That is how life improves free-energy conversion where a car engine cannot: nanoscale composition of many information engines, not one demon on a macroscopic shaft. See the information-engines talk and @Parrondo-thermodynamics15 for laboratory Szilárd engines; Roh et al. for cryo-EM structure of rotary proton pumps.}
+
+<!-- /SNIPPET: _physics/includes/car-engine-vs-atp-synthase-scale.md -->
+
 \subsection{Landauer's Principle}
 
 \include{_information-game/includes/landauer-shannon-connection.md}
@@ -194,9 +271,6 @@ mlai.write_figure('landauer-cost.svg', directory='\writeDiagramsDir/ml')}
 
 \figure{\includediagram{\diagramsDir/ml/landauer-cost}{70%}}{Landauer's minimum heat dissipation per erased bit as a function of bath temperature.}{landauer-cost}
 
-\slides{
-\includediagram{\diagramsDir/ml/landauer-cost}{70%}
-}
 
 \setupcode{kB = 1.380649e-23
 
@@ -216,13 +290,13 @@ def landauer_cost(T_kelvin, n_bits=1):
 \include{_books/includes/the-diving-bell-and-the-butterfly.md}
 \include{_ai/includes/shannon-bauby.md}
 
-\notes{Two human no-gos now sit next to each other. Landauer: you cannot erase a bit for less than \(k_B T\ln 2\). Embodiment: you cannot communicate at machine bandwidth. *The Atomic Human* [@Lawrence-atomic24] takes the second as the defining constraint on human intelligence — we are locked in relative to the machine, and we overcome it by modelling other minds, not by opening a wider channel. Bauby is the extreme of that fence: Shannon lets us count how locked in he is. Probability's job, on the human side, is to say how that narrow budget is spent. The full intelligence question is week 8.}
+\notes{Landauer: you cannot erase a bit for less than \(k_B T\ln 2\). Embodiment: you cannot communicate at machine bandwidth. *The Atomic Human* [@Lawrence-atomic24] takes the second as the defining constraint on human intelligence — we are locked in relative to the machine, and we overcome it by modelling other minds, not by opening a wider channel. Bauby is the extreme of that fence: Shannon lets us count how locked in he is. Probability's job, on the human side, is to say how that narrow budget is spent. The full intelligence question is week 8.}
 
 \addreading{@Lawrence-atomic24}{Chapter 1}
 
 \slidesincremental{
-* No-go: \(k_B T\ln 2\) per bit erased
-* No-go: \(\sim 100\) bits per second for a human
+* No-go: $k_B T\ln 2$ per bit erased
+* No-go: $\sim 100$ bits per second for a human
 * Prescription: the demon's policy; how we spend the human budget
 }
 
@@ -230,13 +304,11 @@ def landauer_cost(T_kelvin, n_bits=1):
 
 \slidesincremental{
 * What is Maxwell's demon?
+* Why cannot feedback upgrade a car engine like ATP synthase?
 * Information and intelligence? (first cut)
 * Information constraints on a human? (bandwidth)
 }
 
-\subsection{This Week's Pair}
-
-\notes{No-go: Landauer; human bandwidth. Prescription: the demon's measurement policy; how a locked-in intelligence spends its channel.}
 
 \include{_information/includes/entropy-nogo-pair.md}
 

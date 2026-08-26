@@ -1,6 +1,6 @@
-<!-- VIBECOURSE-GENERATED: run `./whats-next generate-site` to update -->
+<!-- VIBECOURSE-GENERATED: run `./vc generate-site` to update -->
 ---
-layout: lecture-home
+layout: page
 title: Assessment
 permalink: /assessment/
 ---
@@ -14,12 +14,12 @@ This module uses 8 assessment components totalling 100%.
 | ID | Title | Type | Mode | Weight | Due Week | Delivery |
 |---|---|---|---|---|---|---|
 | W1 | Worksheet 1: Thermodynamics and Shannon Entropy | mini-project | summative | 15% | 2 | take-home |
-| Q1 | In-Class Quiz 1: Boltzmann, Partition Function, Shannon Entropy | take-home-test | summative | 10% | 3 | in-class |
+| Q1 | In-Class Quiz 1: Boltzmann, Partition Function, Shannon Entropy | in-class-quiz | summative | 10% | 3 | in-class |
 | W2 | Worksheet 2: Maxwell's Demon, MaxEnt, and the Exponential Family | mini-project | summative | 15% | 4 | take-home |
-| Q2 | In-Class Quiz 2: MaxEnt, Exponential Family, Landauer | take-home-test | summative | 10% | 5 | in-class |
+| Q2 | In-Class Quiz 2: MaxEnt, Exponential Family, Landauer | in-class-quiz | summative | 10% | 5 | in-class |
 | W3 | Worksheet 3: Information Geometry and Thermodynamic Length | mini-project | summative | 15% | 6 | take-home |
-| Q3 | In-Class Quiz 3: Fisher Metric, Natural Gradient, Dually Flat Geometry | take-home-test | summative | 10% | 7 | in-class |
-| Q4 | In-Class Quiz 4: Multi-Information, I+H=C, Von Neumann Entropy, Limits on Intelligence | take-home-test | summative | 10% | 8 | in-class |
+| Q3 | In-Class Quiz 3: Fisher Metric, Natural Gradient, Dually Flat Geometry | in-class-quiz | summative | 10% | 7 | in-class |
+| Q4 | In-Class Quiz 4: Multi-Information, I+H=C, Von Neumann Entropy, Limits on Intelligence | in-class-quiz | summative | 10% | 8 | in-class |
 | W4 | Worksheet 4: Multi-Information, Von Neumann Entropy, and Limits on Intelligence | mini-project | summative | 15% | 8 | take-home |
 
 ## Component Details
@@ -32,9 +32,9 @@ This module uses 8 assessment components totalling 100%.
 
 ### Q1: In-Class Quiz 1: Boltzmann, Partition Function, Shannon Entropy
 
-**Type**: take-home-test | **Weight**: 10% | **Due week**: 3 | **Delivery**: in-class
+**Type**: in-class-quiz | **Weight**: 10% | **Due week**: 3 | **Delivery**: in-class
 **Estimated workload**: 0.2h
-**AI robustness**: Invigilated in-class test. Students complete the quiz on Moodle on their own device at the start of the Week 3 lecture. No external resources permitted. Physical presence makes LLM use impractical.
+**AI robustness**: Invigilated in-class test on Moodle. Random draw from a large bank reduces repeatability. No external resources.
 
 ### W2: Worksheet 2: Maxwell's Demon, MaxEnt, and the Exponential Family
 
@@ -44,9 +44,9 @@ This module uses 8 assessment components totalling 100%.
 
 ### Q2: In-Class Quiz 2: MaxEnt, Exponential Family, Landauer
 
-**Type**: take-home-test | **Weight**: 10% | **Due week**: 5 | **Delivery**: in-class
+**Type**: in-class-quiz | **Weight**: 10% | **Due week**: 5 | **Delivery**: in-class
 **Estimated workload**: 0.2h
-**AI robustness**: Invigilated in-class test at the start of the Week 5 lecture. No external resources. Physical presence makes LLM use impractical.
+**AI robustness**: Invigilated in-class test on Moodle. Random draw from a large bank. No external resources.
 
 ### W3: Worksheet 3: Information Geometry and Thermodynamic Length
 
@@ -56,15 +56,15 @@ This module uses 8 assessment components totalling 100%.
 
 ### Q3: In-Class Quiz 3: Fisher Metric, Natural Gradient, Dually Flat Geometry
 
-**Type**: take-home-test | **Weight**: 10% | **Due week**: 7 | **Delivery**: in-class
+**Type**: in-class-quiz | **Weight**: 10% | **Due week**: 7 | **Delivery**: in-class
 **Estimated workload**: 0.2h
-**AI robustness**: Invigilated in-class test at the start of the Week 7 lecture. No external resources. Physical presence makes LLM use impractical.
+**AI robustness**: Invigilated in-class test on Moodle. Random draw from a large bank. No external resources.
 
 ### Q4: In-Class Quiz 4: Multi-Information, I+H=C, Von Neumann Entropy, Limits on Intelligence
 
-**Type**: take-home-test | **Weight**: 10% | **Due week**: 8 | **Delivery**: in-class
+**Type**: in-class-quiz | **Weight**: 10% | **Due week**: 8 | **Delivery**: in-class
 **Estimated workload**: 0.2h
-**AI robustness**: Invigilated in-class test in Week 8. No external resources. Physical presence makes LLM use impractical.
+**AI robustness**: Invigilated in-class test on Moodle. Random draw from a large bank. No external resources.
 
 ### W4: Worksheet 4: Multi-Information, Von Neumann Entropy, and Limits on Intelligence
 

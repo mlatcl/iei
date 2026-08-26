@@ -22,7 +22,7 @@ outcomes:
     text: "Students will be able to explain Maxwell's demon thought experiment, identify where the apparent violation of the second law arises, and apply Landauer's principle to show that information erasure restores thermodynamic consistency."
     bloom_level: analyse
     week: 3
-    notes: "Maxwell (1867); Landauer (1961): erasing one bit costs k_B T ln 2. The demon must store measurement outcomes; erasure of that memory is the thermodynamic cost. Clausius's macroscopic second law is what the demon appears to violate; Landauer completes the ledger. This is the first rigorous link between intelligence (decision-making) and entropy. Motivates the inaccessible game."
+    notes: "Maxwell (1867); Landauer (1961): erasing one bit costs k_B T ln 2. Feedback work bounded by k_B T I(X;M) (Parrondo/Sagawa–Ueda). Macroscopic engines (car) cannot exploit demon-style feedback — thermal DOF/s dwarfs any bit memory; molecular machines (ATP synthase) operate at the scale where information thermodynamics applies. First rigorous link between decision-making and entropy; motivates inaccessible game (week 7)."
 
   - id: LO5
     text: "Students will be able to apply Jaynes' maximum entropy principle, using Lagrange multipliers, to derive the least-committal probability distribution consistent with a set of moment constraints."

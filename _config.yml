@@ -1,4 +1,4 @@
-# VIBECOURSE-GENERATED: run `./whats-next generate-site` to update
+# VIBECOURSE-GENERATED: run `./vc generate-site` to update
 title: Information, Entropy and Intelligence
 description: >
   Develop the mathematical connections between thermodynamics, information theory, and Bayesian inference, and understand how they provide a toolkit for reasoning about the foundations of intelligent systems.
@@ -6,6 +6,8 @@ baseurl: "/iei"
 url: "https://mlatcl.github.io"
 
 github_username: mlatcl
+# END VIBECOURSE-GENERATED
+
 # END VIBECOURSE-GENERATED
 
 # Build settings

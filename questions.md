@@ -61,6 +61,7 @@ Quiz 1 occupies the first ten minutes.
 
 - What is Maxwell's demon?
 - How does one Shannon bit relate to thermodynamic work? (Szilard; Feynman piston chain)
+- Why cannot Maxwell-demon feedback improve a car engine the way ATP synthase uses information?
 - How does Landauer's principle relate to Clausius's second law?
 - What is the thermodynamics of information? (Parrondo et al.; first cut)
 - What is the relationship between information and intelligence? (first cut: Landauer)

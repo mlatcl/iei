@@ -1,4 +1,4 @@
-<!-- VIBECOURSE-GENERATED: run `./whats-next generate-site` to update -->
+<!-- VIBECOURSE-GENERATED: run `./vc generate-site` to update -->
 # Information, Entropy and Intelligence
 
 **Principal lecturer:** Prof Neil Lawrence  
@@ -6,6 +6,8 @@
 **Code:** L172  
 **Term:** Michaelmas  
 **Hours:** 16 (8 × 2hr lectures)  
+**When:** Tuesdays, 13 October – 1 December 2026  
+**Where:** FW26, William Gates Building  
 **Class limit:** max. 10 students  
 **Prerequisites:** Undergraduate-level probability and statistics (distributions, Bayes theorem), linear algebra (matrix operations, eigenvalues), and basic multivariate calculus. No prior physics or thermodynamics assumed.
 
@@ -15,14 +17,16 @@ Develop the mathematical connections between thermodynamics, information theory,
 
 ## Syllabus
 
-Entropy appears in three apparently separate traditions — thermodynamics (Boltzmann, Gibbs), information theory (Shannon), and Bayesian inference (Jaynes) — and turns out to be the same mathematical object viewed from different operational assumptions. The course covers:
+Entropy appears in three apparently separate traditions — thermodynamics (Boltzmann, Gibbs), information theory (Shannon), and Bayesian inference (Jaynes) — and turns out to be the same mathematical object viewed from different operational assumptions. The operational split is: **entropy forbids, probability prescribes.** The course covers:
 
-1. the Boltzmann distribution, free energy, and the partition function as a generating function,
+1. that theme, via perpetual motion and the human–machine bandwidth gap of *The Atomic Human*; the Boltzmann distribution and free energy,
 2. Shannon entropy and its formal equivalence to thermodynamic entropy; the exponential family as the MaxEnt family,
 3. Maxwell's demon and Landauer's principle: the thermodynamic cost of decision-making,
-4. information geometry: the Fisher metric, dually flat geometry, and natural gradient descent,
+4. information geometry: the Fisher metric, Crooks' thermodynamic length, dually flat geometry, and natural gradient descent,
 5. multi-information, an entropy game, quantum information,
-6. further advanced topics such as probability transport, Schrödinger bridges, and information-theoretic limits on intelligent agency.
+6. probability transport, Schrödinger bridges, and information-theoretic limits on intelligent agency.
+
+Four ten-minute in-class Moodle quizzes sit at the start of lectures 3, 5, 7 and 8.
 
 Each lecture is followed by a formative self-study exercise exploring the session's central concept from thermodynamic, information-theoretic, and Bayesian perspectives.
 
@@ -36,4 +40,4 @@ Four take-home mini-project worksheets (15% each, 60% total), each consisting of
 
 ## Recommended Reading
 
-Shannon (1948), *Bell System Technical Journal*; Jaynes (1957), *Physical Review*; Landauer (1961), *IBM Journal*; Amari & Nagaoka (2000), *Methods of Information Geometry* (Chapters 1–3). Cover & Thomas (2006) and MacKay (2003) as background references.
+Shannon (1948), *Bell System Technical Journal*; Jaynes (1957), *Physical Review*; Landauer (1961), *IBM Journal*; Amari & Nagaoka (2000), *Methods of Information Geometry* (Chapters 1–3); Crooks (2007), *Physical Review Letters*. Cover & Thomas (2006) and MacKay (2003) as background. Welling, Lu and Holdijk (2026), *Generative AI and Stochastic Thermodynamics* (GAIST), is a supplementary monograph: Chapter 3 for free energy, Chapter 5 for the ELBO, Chapters 14 and 22 for the Wasserstein and Schrödinger-bridge geometries. It is not a substitute for Crooks (2007) or Amari.

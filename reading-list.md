@@ -80,6 +80,14 @@ reading:
     estimated_hours: 0.5
     notes: "Optional primary source. Heat-engine efficiency before Clausius. Week 1 historical thread (LO1)."
 
+  - title: "Information Engines (seminar notes)"
+    authors: "Lawrence"
+    year: 2025
+    url: "https://inverseprobability.com/talks/notes/information-engines.html"
+    required: false
+    estimated_hours: 1
+    notes: "Optional. Jaynes' world, unified intelligence perspective, car-engine vs ATP synthase scale argument in full. Week 3 (LO4) and week 7 bridge."
+
   - title: "Thermodynamics of information"
     authors: "Parrondo, J. M. R., Horowitz, J. M. & Sagawa, T."
     year: 2015
@@ -199,7 +207,10 @@ A supplementary monograph from the 2024 AIMS lectures. Variational free energy i
 Two pages; should be read in full. Week 3 (LO4).
 
 **Parrondo, Horowitz & Sagawa (2015)** — "Thermodynamics of information," *Nature Physics* 11, 131–139. ([doi](https://doi.org/10.1038/nphys3230))
-Accessible review of Szilárd's engine, the feedback second law, physical memories, and laboratory realizations. Week 3 (LO4).
+Accessible review of Szilárd's engine, the feedback second law, physical memories, laboratory realizations, and molecular-scale engines. Week 3 (LO4).
+
+**Lawrence (2025)** — [Information Engines](https://inverseprobability.com/talks/notes/information-engines.html) (seminar notes)
+Optional depth: Jaynes' world, car-engine versus ATP synthase scale contrast, unified intelligence perspective. Week 3 and week 7 bridge; full synthesis week 8.
 
 **Feynman & Hey (1996)** — *Feynman Lectures on Computation*
 Chapter 5 on reversible computation and the Szilard engine; known microstate as thermodynamic fuel. Pair with *The Feynman Lectures on Physics* Vol. I, Ch. 46 (ratchet and one-bath caution). Week 3 (LO4).

@@ -143,6 +143,27 @@ mlai.write_figure('multi-information-rho.svg', directory='\writeDiagramsDir/ml')
 
 \include{_information-game/includes/inaccessible-game-introduction.md}
 
+<!-- SNIPPET: _information-game/includes/jaynes-world-two-bin-bridge.md -->
+
+\newslides{Jaynes' World (Optional Bridge)}
+
+\slides{The inaccessible game is the minimal dynamics behind the information-engines talk — optional depth, not examinable detail.}
+
+\slidesincremental{
+* Simplest case: two-bin $p$, $(1-p)$; entropy $S(p) = -p\log p - (1-p)\log(1-p)$
+* Fisher information $G(\theta) = p(1-p)$ on the log-odds chart — week 5
+* Near $p\to 0,1$: $G\to 0$ — critical slowing; marginals become information reservoirs
+* Same $I+H=C$ story: structure ($I$) versus free uncertainty ($H$)
+}
+
+\speakernotes{Point to inverseprobability.com information-engines notes and two-bin snippets for students who want the full Jaynes-world tour. Week 8 unifies the lenses.}
+
+\notes{Optional bridge to the information-engines seminar material (`talks/_ai/information-engines.md`). The two-bin histogram is the smallest Jaynes-world instance: entropy ascent on the simplex with Fisher metric $G(\theta)=p(1-p)$. Critical slowing at the boundaries is where metastable information reservoirs appear — the same physical picture as Parrondo's double-well memory. Four-bin saddles, gradient flow, and the uncertainty principle between parameters and capacity are in the talk; we do not lecture them here. Students who followed natural gradient in week 6 already have the local geometry this game uses.}
+
+\addreading{Information Engines seminar notes}{https://inverseprobability.com/talks/notes/information-engines.html — Jaynes' world and unified intelligence perspective}
+
+<!-- /SNIPPET: _information-game/includes/jaynes-world-two-bin-bridge.md -->
+
 \subsection{Von Neumann Entropy}
 
 \include{_physics/includes/origin-paradox-shannon-von-neumann.md}
