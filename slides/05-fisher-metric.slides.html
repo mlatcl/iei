@@ -125,6 +125,7 @@
 <div>
 <ul>
 <li class="fragment">Quiz 2 (ten minutes)</li>
+<li class="fragment">KL divergence; Shannon vs differential entropy</li>
 <li class="fragment">Fisher metric; dually flat geometry</li>
 <li class="fragment">Thermodynamic length: define, do not interpret</li>
 </ul>
@@ -132,6 +133,49 @@
 </section>
 <section id="quiz-2" class="slide level2">
 <h2>Quiz 2</h2>
+</section>
+<section id="kl-divergence-and-two-entropies" class="slide level2">
+<h2>KL Divergence and Two Entropies</h2>
+<!-- SNIPPET: _information/includes/kl-divergence-discrete-continuous.md -->
+<p>Week 2 derived Shannon entropy for discrete <span class="math inline">\(p=(p_1,\ldots,p_n)\)</span>.</p>
+<div>
+<ul>
+<li class="fragment"><span class="math inline">\(0 \le H(p) \le \log n\)</span> on <span class="math inline">\(n\)</span> outcomes</li>
+<li class="fragment">Maximum at uniform; zero on a delta</li>
+<li class="fragment">Code interpretation: average length cannot beat <span class="math inline">\(H\)</span></li>
+</ul>
+</div>
+<p>Comparing two distributions needs a functional that is always sensible.</p>
+<div>
+<ul>
+<li class="fragment"><span class="math inline">\(\mathrm{KL}(p\|q) = \sum_i p_i \log(p_i/q_i)\)</span> discrete; <span class="math inline">\(\int p\log(p/q)\,dx\)</span> continuous</li>
+<li class="fragment">Always <span class="math inline">\(\mathrm{KL}(p\|q) \ge 0\)</span>; zero iff <span class="math inline">\(p = q\)</span> (same support)</li>
+<li class="fragment">Extra surprise when <span class="math inline">\(q\)</span> stands in for <span class="math inline">\(p\)</span> — not a metric, but a directed cost</li>
+</ul>
+</div>
+<aside class="notes">
+LO8 setup. Board: <span class="math inline">\(\mathrm{KL}(p\|q)\neq\mathrm{KL}(q\|p)\)</span>. Jaynes die week 4 minimised <span class="math inline">\(\mathrm{KL}(p\|r)\)</span> without naming it. Week 6: <span class="math inline">\(m\)</span>-projection.
+</aside>
+<p>Week 4’s Gaussian uses <span class="math inline">\(-\int p\log p\)</span> — differential entropy.</p>
+<div>
+<ul>
+<li class="fragment">Same integral symbol; different operational meaning</li>
+<li class="fragment">Can be <strong>negative</strong>; not bounded below</li>
+<li class="fragment">Not a code-length bound — compare distributions with <strong>KL</strong></li>
+</ul>
+</div>
+<div class="figure">
+<div id="entropy-bounded-vs-differential-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/entropy-bounded-vs-differential.svg" width="90%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+Left: binary Shannon entropy is bounded. Right: Gaussian differential entropy can be negative.
+</aside>
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/entropy-bounded-vs-differential.svg" width="90%" style=" ">
+</object>
+<!-- /SNIPPET: _information/includes/kl-divergence-discrete-continuous.md -->
 </section>
 <section id="the-fisher-metric" class="slide level2">
 <h2>The Fisher Metric</h2>
@@ -261,6 +305,8 @@ Straight-line path in <span class="math inline">\((\mu,\sigma^2)\)</span> whose 
 <div>
 <ul>
 <li class="fragment">What is thermodynamic length?</li>
+<li class="fragment">What is KL divergence?</li>
+<li class="fragment">Shannon entropy versus differential entropy</li>
 <li class="fragment">Fisher metric as a Riemannian metric</li>
 <li class="fragment">Dual charts: last week’s Legendre pair</li>
 </ul>
