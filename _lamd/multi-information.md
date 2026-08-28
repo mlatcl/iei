@@ -8,7 +8,7 @@ room: FW26
 transition: None
 abstract: >
   In-class Quiz 3, then Watanabe's multi-information, the conservation
-  law \(I+H=C\), and the argument that the classical limit \(I=C\) forces
+  law $I+H=C$, and the argument that the classical limit $I=C$ forces
   a move to von Neumann entropy. First attempt at the two “purely
   entropic interpretation” questions.
 author:
@@ -49,8 +49,8 @@ reading:
 
 \slidesincremental{
 * Quiz 3 (ten minutes)
-* Same marginals, different joints; then \(I+H=C\)
-* Why \(I=C\) forces von Neumann entropy
+* Same marginals, different joints; then $I+H=C$
+* Why $I=C$ forces von Neumann entropy
 }
 
 \notes{
@@ -59,9 +59,9 @@ reading:
 | Minutes | Block |
 |--------:|-------|
 | 0–10 | Quiz 3 (Moodle; LO8–LO9) |
-| 10–55 | Same marginals, different joints; multi-information; \(I+H=C\) |
+| 10–55 | Same marginals, different joints; multi-information; $I+H=C$ |
 | 55–65 | Break |
-| 65–100 | Classical limit \(I=C\Rightarrow H=0\); von Neumann entropy; matrix exponential family |
+| 65–100 | Classical limit $I=C\Rightarrow H=0$; von Neumann entropy; matrix exponential family |
 | 100–120 | First attempt at the two “purely entropic” questions; release Worksheet 4 |
 }
 
@@ -252,7 +252,7 @@ mlai.write_figure('schottky-entropy-preview.svg', directory='\writeDiagramsDir/m
 
 \slidesincremental{
 * Schottky, entropically: a two-state reservoir
-* Good Regulator, entropically: a constraint on \(I\) and \(H\)
+* Good Regulator, entropically: a constraint on $I$ and $H$
 * Finish these in week 8
 }
 
@@ -264,11 +264,6 @@ mlai.write_figure('schottky-entropy-preview.svg', directory='\writeDiagramsDir/m
 * What is the matrix exponential family?
 }
 
-\subsection{This Week's Pair}
-
-\notes{No-go: classically \(I=C\) forces \(H=0\). Prescription: the joint you may still hold; quantum, the state \(\rho\).}
-
-\include{_information/includes/entropy-nogo-pair.md}
 
 \subsection{After This Lecture}
 

@@ -227,7 +227,7 @@ def thermo_from_Z(beta, energies):
 \slides{Two results we will need later — stated, not proved today.}
 
 \slidesincremental{
-* Chain rule: $H(X,Y) = H(X) + H(Y|X)$ — source of week 7's $I+H=C$
+* Chain rule: $H(X,Y) = H(X) + H(Y|X)$ 
 * Capacity: no rate above $C$; achieving $C$ requires the capacity-achieving $p(x)$
 * Data processing: processing cannot create information
 }
@@ -290,12 +290,6 @@ mlai.write_figure('bsc-capacity.svg', directory='\writeDiagramsDir/ml')}
 }
 
 \notes{Interpret later: how entropy is understood today (week 4, then week 7); chain rule as the source of multi-information (week 7).}
-
-\subsection{This Week's Pair}
-
-\notes{No-go: $R\le C$; the data-processing inequality. Prescription: the capacity-achieving input; $Z$ as a generating function.}
-
-\include{_information/includes/entropy-nogo-pair.md}
 
 \subsection{After This Lecture}
 

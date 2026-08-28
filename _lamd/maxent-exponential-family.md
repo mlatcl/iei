@@ -73,9 +73,15 @@ reading:
 
 \include{_physics/includes/lagrange-multipliers.md}
 
-\include{_physics/includes/jaynes-maximum-entropy.md}
+\subsection{Jaynes and Maximum Entropy}
 
+\figure{\includejpg{\diagramsDir/physics/e-t-jaynes}{40%}}{Ed Jaynes who developed the maximum entropy principle}{e-t-jaynes}
+
+\include{_physics/includes/maximum-entropy-motivation.md}
 \include{_physics/includes/dieroll.md}
+\include{_physics/includes/maximum-entropy-formalism.md}
+
+\addreading{@Jaynes-information57}{the whole paper}
 
 <!-- SNIPPET: _physics/includes/maxent-canonical-gaussian.md -->
 
@@ -216,11 +222,6 @@ def perspective_table(H_value, p_maxent, p_uniform):
 * MaxEnt over a coupling, not a list of moments? (week 8)
 }
 
-\subsection{This Week's Pair}
-
-\notes{No-go: do not assume more than the constraints. Prescription: the exponential family.}
-
-\include{_information/includes/entropy-nogo-pair.md}
 
 \subsection{After This Lecture}
 
@@ -228,7 +229,6 @@ def perspective_table(H_value, p_maxent, p_uniform):
 
 \slidesincremental{
 * Quiz 2: 10 November, first ten minutes
-* LLM: is MaxEnt a prohibition or a recipe?
 }
 
 \reading

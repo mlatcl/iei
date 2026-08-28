@@ -10,8 +10,8 @@ abstract: >
   In-class Quiz 4, then intelligent agency as transport of probability
   mass. Three geometries of an optimal change of state — Crooks /
   Fisher–Rao, Wasserstein, and the Schrödinger bridge — and the
-  evaluation of superintelligence claims with Landauer, \(\mathcal{L}^2/\tau\),
-  and \(I+H=C\).
+  evaluation of superintelligence claims with Landauer, $\mathcal{L}^2/\tau$,
+  and $I+H=C$.
 author:
 - given: Neil D.
   family: Lawrence
@@ -77,11 +77,42 @@ reading:
 
 \subsection{Quiz 4}
 
-\notes{Ten MCQs on multi-information, \(I+H=C\), von Neumann entropy, and the perpetual-motion analogy. Three independent coins and a GHZ state — not the Worksheet 4 examples.}
+\notes{Ten MCQs on multi-information, $I+H=C$, von Neumann entropy, and the perpetual-motion analogy. Three independent coins and a GHZ state — not the Worksheet 4 examples.}
 
 \subsection{Agency as Transport}
 
-\include{_information-game/includes/schrodingers-bridge-perspective.md}
+<!-- SNIPPET: _information-game/includes/schrodingers-bridge-perspective.md -->
+
+\subsection{Erwin Schrödinger}
+
+\figure{\includejpg{\diagramsDir/physics/erwin-schrödinger_1933}{40%}}{Erwin Schrödinger, the Austrian physicist, photographed in 1933.}{erwin-schrodinger-1933}
+
+\subsection{Schrödinger's Bridge and Optimal Information Transport}
+
+\notes{Given an initial and a final probability distribution, what is the most likely stochastic process that connects them? This question was posed by Erwin Schrödinger in 1931. 
+}
+
+\slides{
+* Schrödinger's bridge problem:
+  * Find most likely stochastic process between two distributions
+  * Minimum relative entropy solution
+  * Optimal transport of probability mass
+  * Discrete MaxEnt coupling: Sinkhorn / IPF
+}
+
+<!-- TODO: Visualisation of initial probability and final probability with stochastic process moving between them. -->
+
+\comment{On the left have a Gaussian distribution 1D ploted with the vertical axis as its base. On the right, have a mixture of two Gaussians on the right. Do a discrete grid to solve the problems using Sinkhorn.}
+
+\comment{Show how the Wasserstein distance with entropic regularisation relates to the Schroedinger bridge problem.}
+
+
+\newslide{Intelligence as Optimal Control}
+
+
+\addreading{@Peyre-cuturi19}{Chapters 1--2; §4.2 (Sinkhorn, optional)}
+
+<!-- /SNIPPET _information-game/includes/schrodingers-bridge-perspective.md -->
 
 <!-- SNIPPET: _information-game/includes/agency-as-transport.md -->
 
@@ -206,11 +237,6 @@ prescriptions = ['Boltzmann/MaxEnt p', 'Crooks geodesic', 'Wasserstein plan', 'S
 * How is entropy understood today? (last revision)
 }
 
-\subsection{This Week's Pair}
-
-\notes{No-go: Landauer, \(\mathcal{L}^2/\tau\), \(I+H=C\), human bandwidth. Prescription: which geometry you are using for the path.}
-
-\include{_information/includes/entropy-nogo-pair.md}
 
 \subsection{After This Lecture}
 

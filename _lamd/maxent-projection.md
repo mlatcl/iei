@@ -34,7 +34,7 @@ reading:
 
 \slidesincremental{
 * MaxEnt as m-projection
-* Natural gradient: \(F^{-1}\nabla L\)
+* Natural gradient: $F^{-1}\nabla L$
 * Geodesics = minimum-dissipation protocols
 }
 
@@ -96,9 +96,6 @@ mlai.write_figure('m-projection-die.svg', directory='\writeDiagramsDir/ml')}
 
 \figure{\includediagram{\diagramsDir/ml/m-projection-die}{75%}}{MaxEnt die as $m$-projection of the uniform reference.}{m-projection-die}
 
-\slides{
-\includediagram{\diagramsDir/ml/m-projection-die}{75%}
-}
 
 <!-- /SNIPPET: _information/includes/maxent-m-projection.md -->
 
@@ -177,7 +174,7 @@ mlai.write_figure('natural-gradient-paths.svg', directory='\writeDiagramsDir/ml'
 \slidesincremental{
 * Vanilla gradient depends on coordinates
 * Natural gradient does not
-* Same \(F\) as Crooks' \(\mathcal{I}\)
+* Same $F$ as Crooks' $\mathcal{I}$
 }
 
 \subsection{Geodesics as Optimal Protocols}
@@ -220,8 +217,8 @@ mlai.write_figure('geodesic-vs-straight.svg', directory='\writeDiagramsDir/ml')}
 <!-- /SNIPPET: _information/includes/geodesic-optimal-protocol.md -->
 
 \slidesincremental{
-* No-go: \(\mathcal{L}^2/\tau\) (last week)
-* Prescription: the geodesic; \(F^{-1}\nabla L\)
+* No-go: $\mathcal{L}^2/\tau$ (last week)
+* Prescription: the geodesic; $F^{-1}\nabla L$
 * Other geometries: week 8
 }
 
@@ -239,17 +236,15 @@ mlai.write_figure('geodesic-vs-straight.svg', directory='\writeDiagramsDir/ml')}
 
 \subsection{Named, Not Yet Answered}
 
-\notes{An alternating \(m\)-projection onto two constraint sets is how Sinkhorn enforces two prescribed marginals. Name it; do not compute it. Week 8.}
+\notes{An alternating $m$-projection onto two constraint sets is how Sinkhorn enforces two prescribed marginals. Name it; do not compute it. Week 8.}
 
 \slidesincremental{
-* Alternating \(m\)-projection onto two constraint sets? (week 8)
+* Alternating $m$-projection onto two constraint sets? (week 8)
 }
 
 \subsection{This Week's Pair}
 
-\notes{No-go: you cannot beat \(\mathcal{L}^2/\tau\). Prescription: descend by the natural gradient; travel by the geodesic.}
-
-\include{_information/includes/entropy-nogo-pair.md}
+\notes{No-go: you cannot beat $\mathcal{L}^2/\tau$. Prescription: descend by the natural gradient; travel by the geodesic.}
 
 \subsection{After This Lecture}
 

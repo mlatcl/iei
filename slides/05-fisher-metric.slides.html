@@ -176,9 +176,7 @@ Left: binary Shannon entropy is bounded. Right: Gaussian differential entropy ca
 <object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/entropy-bounded-vs-differential.svg" width="90%" style=" ">
 </object>
 <!-- /SNIPPET: _information/includes/kl-divergence-discrete-continuous.md -->
-</section>
-<section id="the-fisher-metric" class="slide level2">
-<h2>The Fisher Metric</h2>
+<!-- SNIPPET: _information-game/includes/fisher-information-geometry.md -->
 </section>
 <section id="fisher-information-as-geometry" class="slide level2">
 <h2>Fisher Information as Geometry</h2>
@@ -226,11 +224,7 @@ G_{ij} = \delta_{ij}\pi_i - \pi_i\pi_j
 <section id="information-geometry-the-big-picture" class="slide level2">
 <h2>Information Geometry: The Big Picture</h2>
 <p><strong>Information Geometry:</strong> * Fisher metric → Riemannian geometry * Exponential families → dually flat structure * Geodesics → shortest paths between distributions * Zero curvature → special “flat” structure * <em>Key for constrained dynamics later</em></p>
-</section>
-<section id="why-this-matters-for-the-inaccessible-game" class="slide level2">
-<h2>Why This Matters for The Inaccessible Game</h2>
-<p><strong>Three Roles in TIG:</strong> 1. Gradient flow metric: appears in <span class="math inline">\(\dot{\boldsymbol{\theta}} = -G\boldsymbol{\theta}\)</span> 2. Information distance: measures distinguishability 3. Emergence indicator: structure changes signal regimes</p>
-<p><em>Fisher information as geometry → key to everything</em></p>
+<!-- /SNIPPET: _information-game/includes/fisher-information-geometry.md -->
 <!-- SNIPPET: _information-game/includes/fisher-metric-worked.md -->
 <p>A statistical manifold: each point is a distribution <span class="math inline">\(p(x\mid\theta)\)</span>.</p>
 <div>
@@ -252,12 +246,7 @@ LO8. Connect to week 4 Legendre pair. Worksheet 3: Gaussian Fisher matrix and gr
 <aside class="notes">
 Fisher components for <span class="math inline">\(\mathcal{N}(0,\sigma^2)\)</span> blow up as <span class="math inline">\(\sigma^2\to 0\)</span>.
 </aside>
-<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/gaussian-fisher-eigen.svg" width="70%" style=" ">
-</object>
 <!-- /SNIPPET: _information-game/includes/fisher-metric-worked.md -->
-</section>
-<section id="thermodynamic-length-crooks" class="slide level2">
-<h2>Thermodynamic Length (Crooks)</h2>
 <!-- SNIPPET: _information/includes/crooks-thermodynamic-length.md -->
 <p>For a slow protocol <span class="math inline">\(\lambda(t)\)</span> on the equilibrium manifold, define length with the Fisher metric.</p>
 <p><span class="math display">\[
@@ -282,12 +271,10 @@ Define length today; do not interpret for intelligence until lecture 8. Workshee
 <aside class="notes">
 Straight-line path in <span class="math inline">\((\mu,\sigma^2)\)</span> whose Fisher–Rao length Worksheet 3 computes.
 </aside>
-<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/crooks-path-sketch.svg" width="65%" style=" ">
-</object>
 <!-- /SNIPPET: _information/includes/crooks-thermodynamic-length.md -->
 <div>
 <ul>
-<li class="fragment">No-go: (W_{}^2/)</li>
+<li class="fragment">No-go: <span class="math inline">\(\langle W_{\mathrm{ex}}\rangle \ge \mathcal{L}^2/\tau\)</span></li>
 <li class="fragment">Prescription: length is measured with the Fisher metric</li>
 <li class="fragment">Intelligence question: week 8</li>
 </ul>
@@ -314,15 +301,6 @@ Straight-line path in <span class="math inline">\((\mu,\sigma^2)\)</span> whose 
 </section>
 <section id="this-weeks-pair" class="slide level2">
 <h2>This Week’s Pair</h2>
-</section>
-<section id="the-theme" class="slide level2">
-<h2>The Theme</h2>
-<div>
-<ul>
-<li class="fragment">Entropy: what you cannot do</li>
-<li class="fragment">Probability: what you should do</li>
-</ul>
-</div>
 </section>
 <section id="after-this-lecture" class="slide level2">
 <h2>After This Lecture</h2>

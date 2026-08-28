@@ -107,7 +107,9 @@ reading:
 
 \include{_physics/includes/maxwells-demon.md}
 
-\newslides{Two Ledgers for the Same No-Go}
+
+
+\subsection{A Different Perspective}
 
 \slides{John Ellis (Maxwell Day 2024): the demon fails because measurement and a located trap door already dissipate.}
 
@@ -119,13 +121,32 @@ reading:
 * Worksheet 2 asks: which account matches the generality of the second law?
 }
 
+
+\newslide{}
+
+\figure{\includeyoutube{U4ENbYa60Uw}{800}{600}}{John Ellis presenting on Maxwell's demon at the Cambridge philosophical society's Maxwell day.}{ellis-maxwells-demon}
+
 \speakernotes{Ellis rejects information-as-fuel and circular Landauer pedagogy. Bennett derives erasure from phase-space compression — substrate-independent. Curated excerpt on Moodle/repo; full talk optional.}
 
 \notes{John Ellis, Maxwell Day 2024 (Cambridge). Dissipation-first: measurement scatters; the trap door is a switch in a metastable well — its position is already a physical memory degree of freedom, not a separate notebook. Information-first: the Feynman/Szilard/Landauer/Parrondo chain in this lecture. The generality question — mechanism-independent law versus mechanism-specific rebuttals — is Worksheet 2 Part B (i)(ii). Bad textbook Landauer says erasure must cost entropy because otherwise the second law fails; @Bennett-thermodynamics82 derives the demon resolution from logical irreversibility of erasure (phase-space compression) — the non-circular version students should cite against Ellis.}
 
 \addreading{@Bennett-thermodynamics82}{Szilard engine and demon resolution (logical irreversibility of erasure)}
 
-\include{_physics/includes/szilards-engine.md}
+<!-- SNIPPET: _physics/includes/szilards-engine.md -->
+
+\subsection{Szilard's Engine}
+
+\figure{<div><canvas id="szilard-canvas" width="900" height="500" style="border:1px solid black;display:inline;text-align:center"></canvas>
+<div><button id="szilard-newball" style="text-align:right">New Ball</button><button id="szilard-pause" style="text-align:right">Pause</button></div>
+
+\include{_scripts/includes/szilard-js.md}
+</div>}{Szilard's Engine}{szilards-engine}
+
+
+\notes{John Norton refers to Szilard's engine as the "worst thought experiment" @Norton-worst18 in science.}
+
+<!-- /SNIPPET: _physics/includes/szilards-engine.md -->
+
 
 <!-- SNIPPET: _physics/includes/feynman-szilard-piston-chain.md -->
 
@@ -334,16 +355,12 @@ def landauer_cost(T_kelvin, n_bits=1):
 * Information constraints on a human? (bandwidth)
 }
 
-
-\include{_information/includes/entropy-nogo-pair.md}
-
 \subsection{After This Lecture}
 
 \notes{Worksheet 2: Maxwell / Landauer, MaxEnt, exponential family. Due 3 November. Quiz 2 is 10 November and will use a *new* example.}
 
 \slidesincremental{
 * Worksheet 2 released; due 3 November
-* LLM: does the demon evade a no-go, or follow a prescription?
 }
 
 \reading

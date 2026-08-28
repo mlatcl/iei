@@ -386,11 +386,6 @@ mlai.write_figure('finite-time-sketch.svg', directory='\writeDiagramsDir/ml')}
 
 \notes{Interpret later: how entropy is understood today; equilibrium versus non-equilibrium; the purely entropic Schottky reading. Define-stage answer to "How was entropy discovered?": Carnot on engines; Clausius names entropy and states the second law (1865); Boltzmann and Gibbs give the statistical count; Shannon and Jaynes reuse $H$ with different operational readings.}
 
-\subsection{This Week's Pair}
-
-\notes{No-go: the second law (Clausius's macroscopic statement; perpetual motion fails here). Prescription: the Boltzmann occupation. Free energy is the accounting of that pair. Human bandwidth is named separately as a bottleneck — counted in bits today, derived as $H$ in lecture 2.}
-
-\include{_information/includes/entropy-nogo-pair.md}
 
 \subsection{After This Lecture}
 
