@@ -243,7 +243,6 @@ prescriptions = ['Boltzmann/MaxEnt p', 'Crooks geodesic', 'Wasserstein plan', 'S
 \notes{No further assessed work. Quiz 4 feedback within the 21-day ACS window. The last LLM exercise: ask the model what thermodynamic length has to do with intelligence, then write down whether it offered a no-go, a prescription, or collapsed the two.}
 
 \slidesincremental{
-* Last LLM exercise: no-go, prescription, or a collapse?
 * The Week 1 question should now have a precise answer
 }
 
