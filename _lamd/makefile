@@ -1,4 +1,4 @@
-BASE=intro-review-motivation
+BASE=boltzmann-free-energy
 LAMDDIR=/Users/neil/lawrennd/lamd/lamd
 MAKEFILESDIR=/Users/neil/lawrennd/lamd/lamd/makefiles
 INCLUDESDIR=/Users/neil/lawrennd/lamd/lamd/includes

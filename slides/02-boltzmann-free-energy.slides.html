@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <meta name="dcterms.date" content="2026-10-13">
-  <title>Motivation; Boltzmann, Free Energy, Entropy</title>
+  <meta name="dcterms.date" content="2026-10-20">
+  <title>Boltzmann, Free Energy, and Entropy</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -107,9 +107,9 @@
     <div class="slides">
 
 <section id="title-slide">
-  <h1 class="title">Motivation; Boltzmann, Free Energy, Entropy</h1>
+  <h1 class="title">Boltzmann, Free Energy, and Entropy</h1>
   <p class="author" style="text-align:center"><a href="http://inverseprobability.com">Neil D. Lawrence</a></p>
-  <p class="date" style="text-align:center"><time>2026-10-13</time></p>
+  <p class="date" style="text-align:center"><time>2026-10-20</time></p>
   <p class="venue" style="text-align:center">FW26, William Gates Building</p>
 </section>
 
@@ -124,34 +124,25 @@
 <h2>This Session</h2>
 <div>
 <ul>
-<li class="fragment">Room FW26; eight Tuesdays from today</li>
-<li class="fragment">Entropy forbids; probability prescribes</li>
-<li class="fragment">Today: perpetual motion, Carnot and Clausius, human bandwidth, Laplace, Boltzmann</li>
+<li class="fragment">Quiz 1 (ten minutes)</li>
+<li class="fragment">Boltzmann derivation; free energy <span class="math inline">\(F=U-TS\)</span></li>
+<li class="fragment">Bath, Schottky, finite-time dissipation named</li>
 </ul>
 </div>
 </section>
-<section id="course-mechanics" class="slide level2">
-<h2>Course Mechanics</h2>
+<section id="quiz-1" class="slide level2">
+<h2>Quiz 1</h2>
 <div>
 <ul>
-<li class="fragment">Four Moodle quizzes (start of lectures 3, 5, 7, 8)</li>
-<li class="fragment">Four worksheets (notebook + reflection)</li>
-<li class="fragment">After each lecture: pose the central idea to an LLM from three sides</li>
-</ul>
-</div>
-</section>
-<section id="questions-we-will-return-to" class="slide level2">
-<h2>Questions We Will Return To</h2>
-<div>
-<ul>
-<li class="fragment">Meet the questions today</li>
-<li class="fragment">Define later; interpret later still</li>
-<li class="fragment">Two of them only make sense after week 7</li>
+<li class="fragment">Device required; Moodle open</li>
+<li class="fragment">No notes, no network, no LLMs</li>
+<li class="fragment">Ten minutes</li>
 </ul>
 </div>
 </section>
 <section id="entropy-forbids-probability-prescribes" class="slide level2">
 <h2>Entropy Forbids; Probability Prescribes</h2>
+<p>When modelling in practice, we often account for this with cost functions. We There’s a funny thing about entropy too. A friustrating thing about modellingSo why should we look at entropy? One idea that will emerge across the course is the notion that probability tells us what a system will do. But entropy (somehow) tells us what a system won’t do. For example, we know that perpetual motion machines can’t exist because, by the second law of thermodynamics, the cause entropy to be produced. This tells us that if we see a wheel spinning, and we are not injecting energy into the wheel, eventually the wheel will stop spinning. It doesn’t tell us the dynamics by which the spinning will stop. It doesn’t tell us when it will stop. It just tells us that it won’t keep spinning for ever. If we had the probability distribution that described the system, that would tell us when the wheel was likely to stop. So somehow probability tells us what’s going to happen, where as entropy tells us whats not going to happen. We’ll explore this intuition as we go through the course, but its behind the idea why we might look to entropy to place limits on the performance of an intelligent system.}</p>
 <div>
 <ul>
 <li class="fragment">Entropy: no-go theorems</li>
@@ -169,9 +160,7 @@
 <li class="fragment">We will draw this idea out every week</li>
 </ul>
 </div>
-</section>
-<section id="motivation" class="slide level2">
-<h2>Motivation</h2>
+<p>###{From the Seed to the Derivation}</p>
 </section>
 <section id="perpetual-motion-and-superintelligence" class="slide level2">
 <h2>Perpetual Motion and Superintelligence</h2>
@@ -337,9 +326,9 @@ Embodiment factors are the ratio between our ability to compute and our ability 
 <p>We are already counting in Shannon’s bits — embodiment is a communication bottleneck, not yet a theorem.</p>
 <div>
 <ul>
-<li class="fragment">Lecture 2: why <em>bits</em>, and <span class="math inline">\(H=-\sum_i p_i\log p_i\)</span> from axioms</li>
+<li class="fragment">Lecture 3: why <em>bits</em>, and <span class="math inline">\(H=-\sum_i p_i\log p_i\)</span> from axioms</li>
 <li class="fragment">Same functional form as Boltzmann <span class="math inline">\(S\)</span>; different operational reading</li>
-<li class="fragment">The intelligence question sharpens in lecture 3 (Landauer, Bauby)</li>
+<li class="fragment">The intelligence question sharpens in lecture 4 (Landauer, Bauby)</li>
 </ul>
 </div>
 <aside class="notes">
@@ -647,7 +636,7 @@ Eddington makes his feelings about the primacy of the second law clear. This pri
 </ul>
 </div>
 <aside class="notes">
-Derive on the board. Lagrange multipliers → Boltzmann. Coldness <span class="math inline">\(\beta\)</span> next; <span class="math inline">\(T\)</span> is the bath reading. Worksheet 1: three-state; Quiz 1: two-state.
+Derive on the board. Lagrange multipliers → Boltzmann. Coldness <span class="math inline">\(\beta\)</span> next; <span class="math inline">\(T\)</span> is the bath reading. Derive on the board. Two-state occupations for intuition; three-state free-energy plot below.
 </aside>
 <div class="figure">
 <div id="two-state-boltzmann-figure" class="figure-frame">
@@ -659,7 +648,7 @@ Derive on the board. Lagrange multipliers → Boltzmann. Coldness <span class="m
 Occupation of a two-state system as coldness increases. At low <span class="math inline">\(\beta\)</span> both states are populated; at high <span class="math inline">\(\beta\)</span> the ground state dominates.
 </aside>
 <aside class="notes">
-Run the notebook cell live. Students reimplement in Worksheet 1 Part A.
+Run the notebook cell live.
 </aside>
 <!-- /SNIPPET: _physics/includes/boltzmann-derivation.md -->
 </section>
@@ -695,7 +684,7 @@ Run the notebook cell live. Students reimplement in Worksheet 1 Part A.
 </ul>
 </div>
 <aside class="notes">
-LO1. Read <span class="math inline">\(F=U-TS\)</span> as available energy. Name the subtraction; Legendre transform waits for week 4.
+LO1. Read <span class="math inline">\(F=U-TS\)</span> as available energy. Name the subtraction; Legendre transform waits for week 5.
 </aside>
 <div class="figure">
 <div id="three-state-thermo-figure" class="figure-frame">
@@ -704,7 +693,7 @@ LO1. Read <span class="math inline">\(F=U-TS\)</span> as available energy. Name 
 </div>
 </div>
 <aside class="notes">
-<span class="math inline">\(U\)</span>, <span class="math inline">\(S\)</span>, and <span class="math inline">\(F\)</span> for the Worksheet 1 three-state system. Students verify <span class="math inline">\(F=-\ln Z/\beta\)</span> numerically.
+<span class="math inline">\(U\)</span>, <span class="math inline">\(S\)</span>, and <span class="math inline">\(F\)</span> for the Worksheet 1 three-state system. Verify <span class="math inline">\(F=-\ln Z/\beta\)</span> numerically.
 </aside>
 <object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/three-state-thermo.svg" width="75%" style=" ">
 </object>
@@ -723,13 +712,13 @@ LO1. Read <span class="math inline">\(F=U-TS\)</span> as available energy. Name 
 <p>A thermodynamic bath is the large system that justifies the canonical ensemble: it fixes <span class="math inline">\(T\)</span> and exchanges energy with a small system.</p>
 <div>
 <ul>
-<li class="fragment">Two-state system: <span class="math inline">\(E\in\{0,\varepsilon\}\)</span> — Quiz 1 running example</li>
+<li class="fragment">Two-state system: <span class="math inline">\(E\in\{0,\varepsilon\}\)</span></li>
 <li class="fragment">Heat capacity: <span class="math inline">\(C = \partial U/\partial T\)</span> peaks at intermediate <span class="math inline">\(T\)</span></li>
 <li class="fragment">Schottky’s anomaly: both states populated; maximal thermal response</li>
 </ul>
 </div>
 <aside class="notes">
-Name the Schottky peak. Entropic reading waits for weeks 7–8. Quiz 1 uses this two-state system.
+Name the Schottky peak. Entropic reading waits for week 8.
 </aside>
 <div class="figure">
 <div id="schottky-two-state-figure" class="figure-frame">
@@ -756,7 +745,7 @@ Mean energy and heat capacity of a two-state system. The Schottky peak appears w
 <!-- SNIPPET: _physics/includes/finite-time-dissipation-intro.md -->
 <p>Equilibrium thermodynamics gives a prescription for <em>reversible</em> work. Real protocols take time.</p>
 <aside class="notes">
-Do not define thermodynamic length today. Name quasi-static <span class="math inline">\(W=\Delta F\)</span> versus finite-time excess. Crooks in weeks 5–6; intelligence in week 8.
+Do not define thermodynamic length today. Name quasi-static <span class="math inline">\(W=\Delta F\)</span> versus finite-time excess. Crooks in weeks 6–7; intelligence in week 8.
 </aside>
 <div class="figure">
 <div id="finite-time-sketch-figure" class="figure-frame">
@@ -774,7 +763,7 @@ Cartoon of quasi-static versus finite-time driving between two equilibrium state
 <ul>
 <li class="fragment">Quasi-static: <span class="math inline">\(W = \Delta F\)</span></li>
 <li class="fragment">Finite time: extra dissipation</li>
-<li class="fragment">Length comes in week 5</li>
+<li class="fragment">Length comes in week 6</li>
 </ul>
 </div>
 </section>
@@ -788,13 +777,11 @@ Cartoon of quasi-static versus finite-time driving between two equilibrium state
 <li class="fragment">What is Schottky’s anomaly?</li>
 </ul>
 </div>
-</section>
-<section id="after-this-lecture" class="slide level2">
-<h2>After This Lecture</h2>
+<p>###{After This Lecture}</p>
 <div>
 <ul>
-<li class="fragment">Worksheet 1 released; due 20 October</li>
-<li class="fragment">LLM: is entropy a constraint or a recipe?</li>
+<li class="fragment">Next: Shannon <span class="math inline">\(H\)</span> and <span class="math inline">\(Z\)</span> as generating function</li>
+<li class="fragment">LLM probe: is free energy a bound or a recipe?</li>
 </ul>
 </div>
 </section>
