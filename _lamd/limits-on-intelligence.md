@@ -1,31 +1,27 @@
 ---
 title: "Probability Transport and Limits on Intelligence"
 week: 8
+session: 2
 layout: lecture
 date: 2026-12-01
 venue: FW26, William Gates Building
 room: FW26
 transition: None
 abstract: >
-  In-class Quiz 4, then intelligent agency as transport of probability
-  mass. Three geometries of an optimal change of state — Crooks /
-  Fisher–Rao, Wasserstein, and the Schrödinger bridge — and the
-  evaluation of superintelligence claims with Landauer, $\mathcal{L}^2/\tau$,
-  and $I+H=C$.
+  Second half of the final session: intelligent agency as transport of
+  probability mass. Three geometries of an optimal change of state —
+  Crooks / Fisher–Rao, Wasserstein, and the Schrödinger bridge — and
+  the evaluation of superintelligence claims with Landauer,
+  $\mathcal{L}^2/\tau$, and $I+H=C$.
 author:
 - given: Neil D.
   family: Lawrence
   institution: University of Cambridge
   url: http://inverseprobability.com
 outcomes: [LO12, LO13]
-duration_hours: 2
+duration_hours: 1
 type: lecture
-in_class_test:
-  id: Q4
-  duration_minutes: 10
-  slot: start
-  covers: [LO10, LO11, LO13]
-worksheet_due: W4
+in_class_test: null
 reading:
   - title: "Measuring Thermodynamic Length"
     author: "Crooks"
@@ -58,26 +54,20 @@ reading:
 \subsection{This Session}
 
 \slidesincremental{
-* Quiz 4 (ten minutes)
-* Three geometries of an optimal change of state
-* Superintelligence as perpetual motion, now with bounds
+* Probability transport; three geometries
+* Superintelligence as perpetual motion, with bounds
+* Close the Week 1 question
 }
 
 \notes{
-**Time plan (120 minutes)**
+**Time plan (60 minutes, second half of final session)**
 
 | Minutes | Block |
 |--------:|-------|
-| 0–10 | Quiz 4 (Moodle; LO10, LO11, LO13) |
-| 10–55 | Agency as transport; Wasserstein; Schrödinger bridge; Sinkhorn as the discrete MaxEnt coupling |
-| 55–65 | Break |
-| 65–95 | Crooks versus Wasserstein versus Schrödinger; \(\mathcal{L}^2/\tau\) as a third bound |
-| 95–120 | LO13: Landauer, \(I+H=C\), requisite variety / Good Regulator as named tools; close the Week 1 question |
+| 0–25 | Agency as transport; Wasserstein; Schrödinger bridge; Sinkhorn |
+| 25–50 | Crooks versus Wasserstein versus Schrödinger; $\mathcal{L}^2/\tau$ |
+| 50–60 | LO13 tools; close the Week 1 question |
 }
-
-\subsection{Quiz 4}
-
-\notes{Ten MCQs on multi-information, $I+H=C$, von Neumann entropy, and the perpetual-motion analogy. Three independent coins and a GHZ state — not the Worksheet 4 examples.}
 
 \subsection{Agency as Transport}
 
@@ -240,7 +230,7 @@ prescriptions = ['Boltzmann/MaxEnt p', 'Crooks geodesic', 'Wasserstein plan', 'S
 
 \subsection{After This Lecture}
 
-\notes{No further assessed work. Quiz 4 feedback within the 21-day ACS window. The last LLM exercise: ask the model what thermodynamic length has to do with intelligence, then write down whether it offered a no-go, a prescription, or collapsed the two.}
+\notes{Quiz 4 opened the session. No further assessed work after today. Feedback within the 21-day ACS window. The last LLM exercise: ask the model what thermodynamic length has to do with intelligence, then write down whether it offered a no-go, a prescription, or collapsed the two.}
 
 \slidesincremental{
 * The Week 1 question should now have a precise answer

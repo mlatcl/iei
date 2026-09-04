@@ -4,23 +4,20 @@ YAML pools for **Q1–Q4**. Schema: VibeCourse CIP-0008 / REQ-0009.
 
 | Bank | Assessment | Outcomes | Items |
 |------|------------|----------|------:|
-| `q1-boltzmann-shannon.yaml` | `in-class-quiz1.md` | LO1–LO3 | 100 |
-| `q2-maxent-landauer.yaml` | `in-class-quiz2.md` | LO4–LO7 | 100 |
+| `q1-probability-entropy-foundations.yaml` | `in-class-quiz1.md` | LO1–LO2 | 100 |
+| `q2-maxent-landauer.yaml` | `in-class-quiz2.md` | LO3–LO7 | 100 |
 | `q3-fisher-geometry.yaml` | `in-class-quiz3.md` | LO8–LO9 | 100 |
 | `q4-multiinfo-limits.yaml` | `in-class-quiz4.md` | LO10–LO13 | 100 |
 
 ## Sitting
 
 - **10 minutes**, **10 questions** per sitting, stratified by outcome.
-- Delivery: Moodle at start of lecture (see assessment metadata).
+- Delivery: Moodle at start of lectures **2, 5, 7 and 8** (see assessment metadata).
 
 ## Rebuild
 
-Banks are generated from `scripts/quiz_banks/build_banks.py` (edit that script, then regenerate):
-
 ```bash
-.venv-vibecourse/bin/python scripts/quiz_banks/build_banks.py
-./vc validate-quiz-bank assessments/quiz-banks/q1-boltzmann-shannon.yaml
+./vc validate-quiz-bank assessments/quiz-banks/q1-probability-entropy-foundations.yaml
 ./vc draw-quiz assessments/in-class-quiz1.md --seed 42
 ./vc draw-quiz assessments/in-class-quiz1.md --seed 42 --answers-tex
 ```

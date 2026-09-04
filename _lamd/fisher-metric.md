@@ -1,17 +1,17 @@
 ---
 title: "Fisher Metric and Thermodynamic Length"
-week: 5
+week: 6
 layout: lecture
-date: 2026-11-10
+date: 2026-11-17
 venue: FW26, William Gates Building
 room: FW26
 transition: None
 abstract: >
-  In-class Quiz 2, then the manifold of probability distributions with the
-  Fisher information matrix as its metric. Crooks' thermodynamic length is
-  the Fisher–Rao length of a path of equilibrium states. Students should
-  be able to *define* thermodynamic length today; the intelligence
-  question waits for week 8.
+  The manifold of probability distributions with the Fisher information
+  matrix as its metric. Crooks' thermodynamic length is the Fisher–Rao
+  length of a path of equilibrium states. Students should be able to
+  *define* thermodynamic length today; the intelligence question waits
+  for week 8.
 author:
 - given: Neil D.
   family: Lawrence
@@ -20,11 +20,7 @@ author:
 outcomes: [LO8]
 duration_hours: 2
 type: lecture
-in_class_test:
-  id: Q2
-  duration_minutes: 10
-  slot: start
-  covers: [LO4, LO5, LO6]
+in_class_test: null
 worksheet_released: W3
 reading:
   - title: "Information Geometry and Its Applications"
@@ -37,12 +33,12 @@ reading:
     estimated_hours: 1
 ---
 
-\notes{Quiz 2 occupies the first ten minutes. Then Fisher geometry and the definition of thermodynamic length. Worksheet 3 is released; due 17 November.}
+\notes{No class test today. Fisher geometry and the definition of thermodynamic length. Worksheet 3 is released; due 24 November (start of lecture 7). Quiz 3 is then.}
 
 \subsection{This Session}
 
 \slidesincremental{
-* Quiz 2 (ten minutes)
+* Fisher metric; thermodynamic length
 * KL divergence; Shannon vs differential entropy
 * Fisher metric; dually flat geometry
 * Thermodynamic length: define, do not interpret
@@ -53,7 +49,7 @@ reading:
 
 | Minutes | Block |
 |--------:|-------|
-| 0–10 | Quiz 2 (Moodle; LO4–LO6) |
+| 0–10 | Recap MaxEnt / exponential family; release Worksheet 3 |
 | 10–30 | KL divergence; Shannon vs differential entropy |
 | 30–55 | Statistical manifold; Fisher metric |
 | 55–65 | Break |
@@ -61,17 +57,13 @@ reading:
 | 85–120 | Crooks: length as Fisher–Rao length; $\langle W_{\mathrm{ex}}\rangle \ge \mathcal{L}^2/\tau$; release Worksheet 3 |
 }
 
-\subsection{Quiz 2}
-
-\notes{Ten MCQs on MaxEnt, the exponential family, and Landauer. New examples. Feedback within seven days.}
-
 \subsection{KL Divergence and Two Entropies}
 
 <!-- SNIPPET: _information/includes/kl-divergence-discrete-continuous.md -->
 
 \newslides{Discrete Shannon Entropy Is Bounded}
 
-\slides{Week 2 derived Shannon entropy for discrete $p=(p_1,\ldots,p_n)$.}
+\slides{Week 3 derived Shannon entropy for discrete $p=(p_1,\ldots,p_n)$.}
 
 \slidesincremental{
 * $0 \le H(p) \le \log n$ on $n$ outcomes
@@ -95,7 +87,7 @@ reading:
 
 \newslides{Differential Entropy Is a Different Object}
 
-\slides{Week 4's Gaussian uses $-\int p\log p$ — differential entropy.}
+\slides{Week 5's Gaussian uses $-\int p\log p$ — differential entropy.}
 
 \slidesincremental{
 * Same integral symbol; different operational meaning
@@ -310,7 +302,7 @@ These geometric properties will be essential when we study constrained informati
 * Pythagorean theorem for KL on dual flats
 }
 
-\speakernotes{LO8. Connect to week 4 Legendre pair. Worksheet 3: Gaussian Fisher matrix and gradient comparison.}
+\speakernotes{LO8. Connect to week 5 Legendre pair. Worksheet 3: Gaussian Fisher matrix and gradient comparison.}
 
 \notes{The Fisher matrix $g_{ij}=\mathbb{E}[\partial_i\log p\,\partial_j\log p]$ defines a Riemannian metric on the statistical manifold. On exponential families, e-flat ($\theta$) and m-flat ($\eta$) charts are dual; Hessians of $A$ and $A^*$ are inverse metrics. The Pythagorean theorem for KL holds on dual flats.}
 
@@ -416,10 +408,10 @@ mlai.write_figure('crooks-path-sketch.svg', directory='\writeDiagramsDir/ml')}
 
 \subsection{After This Lecture}
 
-\notes{Worksheet 3: Fisher matrix for a Gaussian; vanilla versus natural gradient; Crooks length of the straight-line path from $(0,1)$ to $(2,4)$. Due 17 November. Quiz 3 is 24 November.}
+\notes{Worksheet 3: Fisher matrix for a Gaussian; vanilla versus natural gradient; Crooks length of the straight-line path from $(0,1)$ to $(2,4)$. Due 24 November. Quiz 3 is 24 November at the start of lecture 7.}
 
 \slidesincremental{
-* Worksheet 3 released; due 17 November
+* Worksheet 3 released; due 24 November
 * LLM exercise: thermodynamic length, two sides
 }
 

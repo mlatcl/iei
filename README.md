@@ -6,7 +6,7 @@
 **Code:** L172  
 **Term:** Michaelmas  
 **Hours:** 16 (8 × 2hr lectures)  
-**When:** Tuesdays, 13 October – 1 December 2026  
+**When:** Tuesdays 10:00–12:00, 13 October – 1 December 2026  
 **Where:** FW26, William Gates Building  
 **Class limit:** max. 10 students  
 **Prerequisites:** Undergraduate-level probability and statistics (distributions, Bayes theorem), linear algebra (matrix operations, eigenvalues), and basic multivariate calculus. No prior physics or thermodynamics assumed.

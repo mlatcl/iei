@@ -5,11 +5,12 @@ type: mini-project
 mode: summative
 weight: 15
 word_count: 400
-due_week: 4
-due_date: 2026-11-03
-released: 2026-10-27
+due_week: 5
+due_date: 2026-11-10
+due_time: "10:00"
+released: 2026-11-03
 source: _lamd/02-maxent-practical.md
-outcomes: [LO4, LO5, LO6, LO7]
+outcomes: [LO3, LO4, LO5, LO6, LO7]
 feedback:
   type: written
   deadline_days: 14
@@ -25,9 +26,9 @@ authentication:
 
 Student-facing brief (LaMD, compiles to a notebook): [`_lamd/02-maxent-practical.md`](../_lamd/02-maxent-practical.md).
 
-Released 27 October (lecture 3). Due at the start of lecture 4, 3 November.
+Released 3 November (lecture 4). Due Tuesday 10 November 2026, 10:00 (start of lecture 5).
 
-Submit: `crsid_worksheet2.ipynb` and `crsid_worksheet2.md`.
+Submit: `candidatenumber_worksheet2.ipynb` and `candidatenumber_worksheet2.md`.
 
 ## Marking Guidance
 

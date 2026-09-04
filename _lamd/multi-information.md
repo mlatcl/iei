@@ -1,30 +1,29 @@
 ---
 title: "Multi-Information and von Neumann Entropy"
-week: 7
+week: 8
 layout: lecture
-date: 2026-11-24
+date: 2026-12-01
 venue: FW26, William Gates Building
 room: FW26
 transition: None
 abstract: >
-  In-class Quiz 3, then Watanabe's multi-information, the conservation
+  In-class Quiz 4, then Watanabe's multi-information, the conservation
   law $I+H=C$, and the argument that the classical limit $I=C$ forces
-  a move to von Neumann entropy. First attempt at the two “purely
-  entropic interpretation” questions.
+  a move to von Neumann entropy. First half of the final session; limits
+  on intelligence follow.
 author:
 - given: Neil D.
   family: Lawrence
   institution: University of Cambridge
   url: http://inverseprobability.com
 outcomes: [LO10, LO11]
-duration_hours: 2
+duration_hours: 1
 type: lecture
+worksheet_due: W4
 in_class_test:
-  id: Q3
+  id: Q4
   duration_minutes: 10
-  slot: start
-  covers: [LO8, LO9]
-worksheet_released: W4
+  timing: start
 reading:
   - title: "Quantum Computation and Quantum Information"
     author: "Nielsen and Chuang"
@@ -43,31 +42,29 @@ reading:
     required: false
 ---
 
-\notes{Quiz 3 occupies the first ten minutes. Then multi-information and the passage to quantum probability. Worksheet 4 is released; due at the start of lecture 8 (1 December). That is a one-week turnaround.}
+\notes{Final session, first hour. Quiz 4 occupies the first ten minutes. Then multi-information and von Neumann entropy. Worksheet 4 is due at the start of this lecture. Limits on intelligence follow in the second hour.}
 
 \subsection{This Session}
 
 \slidesincremental{
-* Quiz 3 (ten minutes)
+* Quiz 4 (ten minutes)
 * Same marginals, different joints; then $I+H=C$
 * Why $I=C$ forces von Neumann entropy
 }
 
 \notes{
-**Time plan (120 minutes)**
+**Time plan (60 minutes, first half of final session)**
 
 | Minutes | Block |
 |--------:|-------|
-| 0–10 | Quiz 3 (Moodle; LO8–LO9) |
-| 10–55 | Same marginals, different joints; multi-information; $I+H=C$ |
-| 55–65 | Break |
-| 65–100 | Classical limit $I=C\Rightarrow H=0$; von Neumann entropy; matrix exponential family |
-| 100–120 | First attempt at the two “purely entropic” questions; release Worksheet 4 |
+| 0–10 | Quiz 4 (Moodle) |
+| 10–35 | Same marginals, different joints; multi-information; $I+H=C$ |
+| 35–60 | Classical limit $I=C\Rightarrow H=0$; von Neumann entropy |
 }
 
-\subsection{Quiz 3}
+\subsection{Quiz 4}
 
-\notes{Ten MCQs on the Fisher metric, natural gradient, and dual flatness. New parameterised family. Feedback before lecture 8 if possible; Quiz 4 does not depend on this score.}
+\notes{Ten MCQs from the multi-information / limits bank. Auto-graded.}
 
 \subsection{Multi-Information}
 

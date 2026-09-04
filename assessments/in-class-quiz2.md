@@ -30,7 +30,7 @@ platform: Moodle
 
 **Administered**: Start of Week 5 lecture (first 10 minutes).  
 **Format**: 10 auto-marked questions on Moodle. No notes, no internet, no LLMs.  
-**Covers**: Weeks 3–4 material (LO4–LO7).
+**Covers**: Weeks 4–5 material (LO4–LO7): Maxwell/Landauer and MaxEnt / exponential family.
 
 Question pool: `quiz-banks/q2-maxent-landauer.yaml` (100 items). Spinner / Bernoulli examples — not Worksheet 2's die / Gaussian.
 

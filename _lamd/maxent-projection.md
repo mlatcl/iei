@@ -1,8 +1,8 @@
 ---
 title: "Projection, Natural Gradient, and Optimal Protocols"
-week: 6
+week: 7
 layout: lecture
-date: 2026-11-17
+date: 2026-11-24
 venue: FW26, William Gates Building
 room: FW26
 transition: None
@@ -19,8 +19,12 @@ author:
 outcomes: [LO9]
 duration_hours: 2
 type: lecture
-in_class_test: null
+in_class_test:
+  id: Q3
+  duration_minutes: 10
+  timing: start
 worksheet_due: W3
+worksheet_released: W4
 reading:
   - title: "Information Geometry and Its Applications"
     author: "Amari"
@@ -28,7 +32,7 @@ reading:
     estimated_hours: 2
 ---
 
-\notes{Worksheet 3 is due at the start of this session. No class test. Quiz 3 is 24 November (Fisher metric, natural gradient, dual flatness).}
+\notes{Worksheet 3 is due at the start of this session. Quiz 3 occupies the first ten minutes (Fisher metric, natural gradient, dual flatness). Worksheet 4 is released; due 1 December.}
 
 \subsection{This Session}
 
@@ -66,7 +70,7 @@ reading:
 
 \speakernotes{LO9 (first half). Optional: Worksheet 3 Pythagorean check on Jaynes die.}
 
-\notes{MaxEnt is the $m$-projection of a reference distribution (often uniform) onto the constraint surface written in moment coordinates $\eta$. Week 5: $\mathrm{KL}$ is non-negative even when differential entropy is not — the same $\min\mathrm{KL}(q\|r)$ recipe applies to Jaynes' die (discrete) and the Gaussian (continuous). On an exponential family the constraint surface is a straight line in natural parameters $\theta$.}
+\notes{MaxEnt is the $m$-projection of a reference distribution (often uniform) onto the constraint surface written in moment coordinates $\eta$. Week 6: $\mathrm{KL}$ is non-negative even when differential entropy is not — the same $\min\mathrm{KL}(q\|r)$ recipe applies to Jaynes' die (discrete) and the Gaussian (continuous). On an exponential family the constraint surface is a straight line in natural parameters $\theta$.}
 
 \setupplotcode{import numpy as np
 import matplotlib.pyplot as plt

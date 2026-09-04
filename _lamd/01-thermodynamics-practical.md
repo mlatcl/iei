@@ -1,26 +1,25 @@
 ---
-title: "Worksheet 1: Thermodynamics and Shannon Entropy"
+title: "Worksheet 1: Socratic Dialogue on Boltzmann and Entropy"
 practical: 1
 week: 1
 layout: practical
 assignment: True
-ipynb: True
+ipynb: False
 reveal: False
 transition: None
 date: 2026-10-20
 released: 2026-10-13
 venue: FW26, William Gates Building
 abstract: >
-  Sample from a Boltzmann distribution, decompose the free energy, and
-  compute Shannon entropy of simple sources. Then compare thermodynamic
-  and information-theoretic accounts of entropy, using an LLM as an
-  epistemic tool rather than as an authority.
+  Explore the Boltzmann distribution and entropy *before* lecture 2 by
+  acting as Socrates in dialogue with an LLM: curiosity first, then
+  skepticism. Submit one ten-turn transcript and a short reflection.
 author:
 - given: Neil D.
   family: Lawrence
   institution: University of Cambridge
   url: http://inverseprobability.com
-outcomes: [LO1, LO2, LO3]
+outcomes: [LO1, LO2]
 duration_hours: 3
 type: practical
 assessment_id: W1
@@ -29,76 +28,51 @@ due_week: 2
 word_count: 300
 ---
 
-\define{\incrementQuestionMarkCounter{marks}}{}
-
 \section{Worksheet 1}
 
-\notes{Released after lecture 1 (13 October). Due at the start of lecture 2 (20 October). Estimated three hours. This worksheet is 15% of the module mark.
+\notes{Released after lecture 1 (13 October). Due by 10:00 at the start of lecture 2 (20 October). Estimated three hours. This worksheet is 15% of the module mark (5 curiosity + 5 skepticism + 5 reflection).}
 
-**Builds on the lecture.** Part A uses the three-state energies $E=\{0,1,3\}$ plotted in the free-energy diagram from lecture 1. Reuse the `boltzmann()` function pattern from the lecture notebook. Quiz 1 uses the *two-state* system from the Schottky demo, not this three-state example.}
+\notes{Submit on Moodle, anonymously: `candidatenumber_worksheet1_dialogue.md` and `candidatenumber_worksheet1_reflection.md`. Use the template provided. Do **not** put your name or CRSid on the files or in the YAML.}
 
-\notes{Submit a Jupyter notebook (`.ipynb`) and a short written reflection (`.md`) on Moodle. Name the notebook `crsid_worksheet1.ipynb`.}
+\notes{Quiz 1 at the start of lecture 2 checks the probability and entropy review from lecture 1 and the seeds this worksheet asks you to press.}
 
-\notes{LLMs are explicitly permitted for code generation, debugging, and exploration. The reflection asks you to use one deliberately. Authenticity is checked by Quiz 1 at the start of lecture 3 (27 October), which applies the same ideas to a *new* example under invigilated conditions.}
+\section{Role: You Are Socrates}
 
-\setupcode{import numpy as np
-import matplotlib.pyplot as plt}
+\notes{Large language models answer expansively. They are weak at sustained Socratic questioning. You take Socrates' role (*elenchus*: test consistency by questioning, not by lecturing).}
 
-\section{Part A -- Code}
+\notes{
+1. **Curiosity.** Open with a genuine question about Boltzmann weights, temperature / $\beta$, entropy, or free energy. Let the model give a long answer.
+2. **Skepticism.** Take a portion of that answer and press it: "If that were true, then…" / "But doesn't that contradict…" / "What would have to be false for this to fail?"
+3. Aim for about **ten** prompt/answer turns in the submitted chain. Early turns open; later turns probe.
+4. You may try several LLMs. Submit **one** conversation only. Record the model in the YAML header.
+}
 
-\notes{A running example for later: the *two-state* system \(E\in\{0,\varepsilon\}\) is what Quiz 1 will use, and its heat capacity has a peak (Schottky's anomaly). You do not need to compute that peak here. This worksheet uses a *three-state* system so that the quiz cannot be answered by pattern-matching to your own plots.}
+\section{Seed Material (Enough to Start)}
 
-\codeassignment{A three-state system has energy levels \(E_0=0\), \(E_1=1\), \(E_2=3\) in units of \(k_B\). Write functions for the partition function \(Z(\beta)\) and the Boltzmann probabilities \(p_i = e^{-\beta E_i}/Z\). Draw 10,000 samples and plot the empirical frequencies against the analytic probabilities for \(\beta\in\{0.1, 0.5, 1.0, 2.0\}\).}{
-energies = np.array([0.0, 1.0, 3.0])
+\notes{From lecture 1 you have:
 
-def partition(beta, energies=energies):
-    # return Z(beta)
-    pass
+* Product / sum / Bayes; Bernoulli, binomial, Poisson, multinomial, Gaussian.
+* Shannon entropy (review): $H(p)=-\sum_i p_i\log p_i$ (bits or nats).
+* Theme: entropy forbids; probability prescribes.
+* Seed formula: $p_i = e^{-\beta E_i}/Z$ with $Z=\sum_i e^{-\beta E_i}$ and coldness $\beta=1/kT$.
 
-def boltzmann(beta, energies=energies):
-    # return the array of probabilities p_i
-    pass
+Lecture 2 will derive and account for free energy $F=U-TS$. This worksheet is exploration *before* that lecture. You are not expected to know the full derivation yet — you are expected to ask sharp questions and notice when the model is vague, circular, or conflates thermodynamic entropy with Shannon $H$.}
 
-def sample_boltzmann(beta, n=10000, energies=energies):
-    # return n integer samples in {0, 1, 2}
-    pass
+\section{What to Submit}
 
-# Plot empirical frequencies against analytic p_i for each beta
-}{20}{}
-
-\codeassignment{Using the same three-level system, compute and plot as a function of \(\beta\): mean energy \(U=\langle E\rangle\), entropy \(S=-\sum_i p_i\ln p_i\) (nats), and Helmholtz free energy \(F=U-S/\beta\). Verify numerically that \(F=-\ln Z/\beta\).}{
-def mean_energy(beta, energies=energies):
-    pass
-
-def entropy(beta, energies=energies):
-    pass
-
-def free_energy(beta, energies=energies):
-    pass
-
-# Plot U, S, F against beta. Check F == -log(Z)/beta.
-}{20}{}
-
-\codeassignment{Write `shannon_entropy(probs)` returning \(H=-\sum_i p_i\log_2 p_i\) in bits. Apply it to a fair coin, a biased coin with \(p=0.9\), a uniform distribution over eight outcomes, and the Boltzmann distribution from the first question at \(\beta=1\). Print a table and state which has the highest and lowest entropy, and why.}{
-def shannon_entropy(probs):
-    pass
-
-# fair coin, biased coin, uniform-8, Boltzmann at beta=1
-}{15}{}
-
-\section{Part B -- Reflection}
-
-\writeassignment{Ask an LLM (your choice) the following two questions *separately*: (1) "Explain entropy from a thermodynamic perspective." (2) "Explain entropy from an information-theoretic perspective." Write a 300-word critical synthesis that (a) identifies what each framing illuminates that the other does not, (b) notes any point at which the two explanations used the same mathematics but described it differently, (c) states in one sentence the essential difference in *operational assumption*, and (d) says whether each framing treated entropy as a no-go (what you cannot do) or as a recipe (what you should do), and which half the model missed. Include the key LLM responses as an appendix, not counted in the word limit.}{45}{}
+\notes{
+* **Dialogue** (template): YAML frontmatter + ten Prompt/Answer pairs.
+* **Reflection** (~300 words): what you learned; where the model was strong; where it was thin or inconsistent; whether entropy was treated as a no-go or a recipe.
+}
 
 \section{Marking}
 
 \notes{
-- 60--74: code runs; reflection identifies surface differences between the framings.
-- 75--79: reflection shows what the operational assumptions are; code is annotated with the physics.
-- 80--89: reflection finds a non-obvious connection or tension; code extends the brief (for example, animates relaxation to equilibrium).
-- 90--100: original synthesis that reframes one perspective in terms of the other in a way not present in the LLM responses.
+* **Curiosity (5):** quality of opening and exploratory prompts — do they invite substantive explanation rather than yes/no trivia?
+* **Skepticism (5):** quality of probes — do later turns press consequences, contradictions, or missing assumptions?
+* **Reflection (5):** insight into what the exchange taught you about the subject *and* about the model's limits.
 }
 
 \section{Submission}
 
-\notes{Upload `crsid_worksheet1.ipynb` and `crsid_worksheet1.md` to Moodle before the start of lecture 2 on 20 October.}
+\notes{Upload both files to Moodle by 10:00 on Tuesday 20 October (start of lecture 2). Filenames use your **candidate number** only.}

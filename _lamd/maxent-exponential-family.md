@@ -1,8 +1,8 @@
 ---
 title: "Maximum Entropy and the Exponential Family"
-week: 4
+week: 5
 layout: lecture
-date: 2026-11-03
+date: 2026-11-10
 venue: FW26, William Gates Building
 room: FW26
 transition: None
@@ -10,7 +10,7 @@ abstract: >
   Jaynes' maximum entropy principle, the exponential family as the MaxEnt
   family, and the first synthesis of the three operational readings of
   entropy. This is the intended answer to “how is entropy understood today?”,
-  to be revised again after von Neumann entropy in week 7.
+  to be revised again after von Neumann entropy in week 8.
 author:
 - given: Neil D.
   family: Lawrence
@@ -19,7 +19,10 @@ author:
 outcomes: [LO5, LO6, LO7]
 duration_hours: 2
 type: lecture
-in_class_test: null
+in_class_test:
+  id: Q2
+  duration_minutes: 10
+  timing: start
 worksheet_due: W2
 reading:
   - title: "Information Theory and Statistical Mechanics"
@@ -45,7 +48,7 @@ reading:
     required: false
 ---
 
-\notes{Worksheet 2 is due at the start of this session. No class test. Quiz 2 is 10 November (MaxEnt, exponential family, Landauer).}
+\notes{Worksheet 2 is due at the start of this session. Quiz 2 occupies the first ten minutes (MaxEnt, exponential family, Landauer).}
 
 \subsection{This Session}
 
@@ -61,7 +64,7 @@ reading:
 
 | Minutes | Block |
 |--------:|-------|
-| 0–10 | Collect Worksheet 2; preview Quiz 2 |
+| 0–10 | Quiz 2 (Moodle); collect Worksheet 2 |
 | 10–55 | Jaynes; Lagrange multipliers; die and Gaussian |
 | 55–65 | Break |
 | 65–95 | Exponential family; two-level $=$ Bernoulli; softmax; two-spin Hamiltonian |
@@ -158,9 +161,9 @@ mlai.write_figure('jaynes-die-maxent.svg', directory='\writeDiagramsDir/ml')}
 
 \include{_information/includes/legendre-transform.md}
 
-\speakernotes{Name the Legendre transform. Check Bernoulli: $A=\log(1+e^\theta)$ recovers binary entropy. Dual charts week 5; $m$-projection week 6.}
+\speakernotes{Name the Legendre transform. Check Bernoulli: $A=\log(1+e^\theta)$ recovers binary entropy. Dual charts week 6; $m$-projection week 6.}
 
-\notes{$H=A-\theta\cdot\eta$ is the same subtraction as Helmholtz $F=U-TS$. The conjugate pair $(\theta,\eta)$ is why week 5 has two flat charts on the exponential family.}
+\notes{$H=A-\theta\cdot\eta$ is the same subtraction as Helmholtz $F=U-TS$. The conjugate pair $(\theta,\eta)$ is why week 6 has two flat charts on the exponential family.}
 
 \subsection{Three Perspectives}
 
@@ -225,7 +228,7 @@ def perspective_table(H_value, p_maxent, p_uniform):
 
 \subsection{After This Lecture}
 
-\notes{Quiz 2 at the start of lecture 5 (10 November): MaxEnt, exponential family, Landauer, on a four-sided spinner and a Bernoulli — not the Worksheet 2 examples.}
+\notes{Quiz 2 opens this session (10 November): MaxEnt, exponential family, Landauer, on a four-sided spinner and a Bernoulli — not the Worksheet 2 examples.}
 
 \slidesincremental{
 * Quiz 2: 10 November, first ten minutes

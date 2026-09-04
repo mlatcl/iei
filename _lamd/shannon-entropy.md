@@ -1,8 +1,8 @@
 ---
 title: "Shannon Entropy and the Partition Function"
-week: 2
+week: 3
 layout: lecture
-date: 2026-10-20
+date: 2026-10-27
 venue: FW26, William Gates Building
 room: FW26
 transition: None
@@ -21,7 +21,6 @@ outcomes: [LO2, LO3]
 duration_hours: 2
 type: lecture
 in_class_test: null
-worksheet_due: W1
 reading:
   - title: "A Mathematical Theory of Communication"
     author: "Shannon"
@@ -47,7 +46,7 @@ reading:
     required: false
 ---
 
-\notes{Worksheet 1 is due at the start of this session. No class test. Quiz 1 is in seven days: Boltzmann, partition function, Shannon entropy, on a *new* example.}
+\notes{No class test today. Boltzmann and free energy were last week. Today: Shannon $H$ and the partition function as a generating function.}
 
 \subsection{This Session}
 
@@ -62,7 +61,7 @@ reading:
 
 | Minutes | Block |
 |--------:|-------|
-| 0–10 | Collect Worksheet 1; preview Quiz 1 (27 October) |
+| 0–10 | Recap Boltzmann / free energy; preview Maxwell (next week) |
 | 10–45 | Shannon axioms; Wiener from Gibbs; equivalence to Boltzmann |
 | 45–55 | Dasher |
 | 55–65 | Break |
@@ -72,7 +71,7 @@ reading:
 
 \newslides{From Lecture 1}
 
-\slides{Lecture 1 counted human communication in Shannon's bits — a bottleneck on how fast thought can leave the body.}
+\slides{Lecture 1–2 counted human communication in Shannon's bits — a bottleneck on how fast thought can leave the body.}
 
 \slidesincremental{
 * Today: derive $H$ and connect $S = kH$
@@ -161,7 +160,7 @@ mlai.write_figure('binary-entropy.svg', directory='\writeDiagramsDir/ml')}
 * Equilibrium = on the $\beta$-manifold; finite-time driving leaves it
 }
 
-\speakernotes{LO3. Work the two-state example on the board — Quiz 1 running example. Finite-time cost: named lecture 1, Crooks week 5.}
+\speakernotes{LO3. Work the two-state example on the board. Finite-time cost: named lecture 2, Crooks week 6.}
 
 \notes{The partition function $Z(\beta)=\sum_i e^{-\beta E_i}$ is a generating function: $U=-\partial_\beta\log Z$, $F=-\beta^{-1}\log Z$, $S=\beta(U-F)$. The canonical ensemble is an equilibrium construction; driving in finite time leaves that manifold.}
 
@@ -184,7 +183,7 @@ ax.legend()
 ax.set_title('Two-state system')
 mlai.write_figure('two-state-partition.svg', directory='\writeDiagramsDir/ml')}
 
-\figure{\includediagram{\diagramsDir/ml/two-state-partition}{75%}}{Thermodynamic quantities from $Z(\beta)$ for the two-state system used in Quiz 1.}{two-state-partition}
+\figure{\includediagram{\diagramsDir/ml/two-state-partition}{75%}}{Thermodynamic quantities from $Z(\beta)$ for the two-state system used as a running example.}{two-state-partition}
 
 \slides{
 \includediagram{\diagramsDir/ml/two-state-partition}{75%}
@@ -293,10 +292,10 @@ mlai.write_figure('bsc-capacity.svg', directory='\writeDiagramsDir/ml')}
 
 \subsection{After This Lecture}
 
-\notes{Quiz 1 at the start of lecture 3 (27 October): ten Moodle questions, ten minutes, two-state system and a binary source — not the three-state / die examples from Worksheet 1. Device required. No notes. LLM exercise: ask whether Shannon entropy is a bound or a recipe.}
+\notes{Next week: Maxwell's demon and Landauer. LLM exercise: ask whether Shannon entropy is a bound or a recipe.}
 
 \slidesincremental{
-* Quiz 1: 27 October, first ten minutes
+* Next: Maxwell and Landauer (3 November)
 * LLM: is Shannon entropy a bound or a recipe?
 }
 

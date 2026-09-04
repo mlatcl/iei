@@ -33,11 +33,11 @@ word_count: 400
 
 \section{Worksheet 3}
 
-\notes{Released after lecture 5 (10 November). Due at the start of lecture 6 (17 November). Estimated three hours. This worksheet is 15% of the module mark.
+\notes{Released after lecture 6 (17 November). Due by 10:00 at the start of lecture 7 (24 November). Estimated three hours. This worksheet is 15% of the module mark.
 
 **Builds on the lecture.** The Fisher matrix and natural-gradient trajectories repeat the lecture 5–6 demos (`gaussian-fisher-eigen`, `natural-gradient-paths`, `crooks-path-sketch`). Part A3 integrates Fisher–Rao length along the same straight-line path $(0,1)\to(2,4)$ sketched in lecture 5.}
 
-\notes{Submit `crsid_worksheet3.ipynb` and `crsid_worksheet3.md` on Moodle. LLMs are permitted. Authenticity is checked by Quiz 3 at the start of lecture 7 (24 November), on a *new* parameterised family.}
+\notes{Submit `candidatenumber_worksheet3.ipynb` and `candidatenumber_worksheet3.md` on Moodle. LLMs are permitted. Use the Lecture 1 habit: curiosity first, then skeptical probes. Authenticity is checked by Quiz 3 at the start of lecture 7 (24 November), on a *new* parameterised family.}
 
 \notes{Lecture 5 defined Crooks' thermodynamic length as the Fisher--Rao length of a path of equilibrium states. You will compute that length for a straight-line path in \((\mu,\sigma^2)\). You do not yet need to say what this has to do with intelligence -- that is lecture 8.}
 
@@ -108,4 +108,4 @@ def straight_line(t):
 
 \section{Submission}
 
-\notes{Upload both files to Moodle before the start of lecture 6 on 17 November.}
+\notes{Upload both files to Moodle by 10:00 on Tuesday 17 November (start of lecture 6).}

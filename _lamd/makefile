@@ -1,4 +1,4 @@
-BASE=limits-on-intelligence
+BASE=intro-review-motivation
 LAMDDIR=/Users/neil/lawrennd/lamd/lamd
 MAKEFILESDIR=/Users/neil/lawrennd/lamd/lamd/makefiles
 INCLUDESDIR=/Users/neil/lawrennd/lamd/lamd/includes

@@ -55,7 +55,7 @@ Class tests examine the *applied* form of the define-stage questions, on a new e
 
 ## Lecture 3 — 27 October — Maxwell and Landauer
 
-Quiz 1 occupies the first ten minutes.
+Quizzes occupy the first ten minutes of lectures 2, 5, 7 and 8.
 
 **Define this week**
 

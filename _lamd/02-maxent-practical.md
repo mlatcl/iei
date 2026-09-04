@@ -34,11 +34,11 @@ word_count: 400
 
 \section{Worksheet 2}
 
-\notes{Released after lecture 3 (27 October). Due at the start of lecture 4 (3 November). Estimated three hours. This worksheet is 15% of the module mark.
+\notes{Released after lecture 4 (3 November). Due by 10:00 at the start of lecture 5 (10 November). Estimated three hours. This worksheet is 15% of the module mark.
 
 **Builds on the lecture.** Part A implements the Jaynes die shown in lecture 4 (`jaynes-die-maxent` figure). The Landauer reflection uses `landauer_cost(300)` from lecture 3 and the Ellis excerpt (`readings/ellis-maxwell-demon-excerpt.md`). The two-level MaxEnt task connects the Lagrange multiplier to coldness $\beta$ from lecture 1.}
 
-\notes{Submit `crsid_worksheet2.ipynb` and `crsid_worksheet2.md` on Moodle. LLMs are permitted. Authenticity is checked by Quiz 2 at the start of lecture 5 (10 November), on a *new* example.}
+\notes{Submit `candidatenumber_worksheet2.ipynb` and `candidatenumber_worksheet2.md` on Moodle. LLMs are permitted. Use the Lecture 1 habit: curiosity first, then skeptical probes (you need not submit a full ten-turn Socratic transcript). Authenticity is checked by Quiz 2 at the start of lecture 5 (10 November), on a *new* example.}
 
 \setupcode{import numpy as np
 import matplotlib.pyplot as plt
@@ -92,4 +92,4 @@ energies = np.array([0.0, epsilon])
 
 \section{Submission}
 
-\notes{Upload both files to Moodle before the start of lecture 4 on 3 November.}
+\notes{Upload both files to Moodle by 10:00 on Tuesday 3 November (start of lecture 4).}

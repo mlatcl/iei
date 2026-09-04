@@ -1,12 +1,12 @@
 ---
 id: Q1
-title: "In-Class Quiz 1: Boltzmann, Partition Function, Shannon Entropy"
+title: "In-Class Quiz 1: Probability and Entropy Foundations"
 type: in-class-quiz
 mode: summative
 weight: 10
-due_week: 3
+due_week: 2
 outcomes: [LO1, LO2, LO3]
-question_bank: quiz-banks/q1-boltzmann-shannon.yaml
+question_bank: quiz-banks/q1-probability-entropy-foundations.yaml
 questions_per_sitting: 10
 pool_target: 100
 draw:
@@ -26,19 +26,19 @@ duration_minutes: 10
 platform: Moodle
 ---
 
-# In-Class Quiz 1: Boltzmann, Partition Function, Shannon Entropy
+# In-Class Quiz 1: Probability and Entropy Foundations
 
-**Administered**: Start of Week 3 lecture (first 10 minutes).  
+**Administered**: Start of Week 2 lecture (first 10 minutes).  
 **Format**: 10 auto-marked questions on Moodle (MCQ, T/F, matching, fill-blank). No notes, no internet, no LLMs.  
-**Covers**: Weeks 1–2 material (LO1, LO2, LO3).
+**Covers**: Lecture 1 probability and entropy review; Week 1 Boltzmann / theme seeds pressed in Worksheet 1 (LO1–LO3 foundations / seeds).
 
-Question pool: `quiz-banks/q1-boltzmann-shannon.yaml` (100 items). Draw 10 stratified by outcome. Examples use two-state / binary sources — not Worksheet 1's three-state / die.
+Question pool: `quiz-banks/q1-probability-entropy-foundations.yaml` (100 items). Draw 10 stratified by outcome.
 
 ## Marking
 
 Auto-graded by Moodle. 1 mark per correct item. Total: 10 marks → scaled to 10% of module grade.
 
 ```bash
-./vc validate-quiz-bank assessments/quiz-banks/q1-boltzmann-shannon.yaml
+./vc validate-quiz-bank assessments/quiz-banks/q1-probability-entropy-foundations.yaml
 ./vc draw-quiz assessments/in-class-quiz1.md --seed 42
 ```

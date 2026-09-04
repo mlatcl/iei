@@ -1,16 +1,15 @@
 ---
 title: "Maxwell's Demon and Landauer's Principle"
-week: 3
+week: 4
 layout: lecture
-date: 2026-10-27
+date: 2026-11-03
 venue: FW26, William Gates Building
 room: FW26
 transition: None
 abstract: >
-  In-class Quiz 1, then Maxwell's demon and Landauer's principle. Erasing
-  one bit costs $k_B T\ln 2$. Feedback work is bounded by
-  mutual information;  at
-  molecular scale ATP synthase approximates an information engine. 
+  Maxwell's demon and Landauer's principle. Erasing one bit costs
+  $k_B T\ln 2$. Feedback work is bounded by mutual information; at
+  molecular scale ATP synthase approximates an information engine.
 author:
 - given: Neil D.
   family: Lawrence
@@ -19,11 +18,7 @@ author:
 outcomes: [LO4]
 duration_hours: 2
 type: lecture
-in_class_test:
-  id: Q1
-  duration_minutes: 10
-  slot: start
-  covers: [LO1, LO2, LO3]
+in_class_test: null
 worksheet_released: W2
 reading:
   - title: "Irreversibility and Heat Generation in the Computing Process"
@@ -57,13 +52,13 @@ reading:
     required: false
 ---
 
-\notes{Quiz 1 occupies the first ten minutes. Invigilated Moodle, own device, no notes, no network, no LLMs. Then 110 minutes of teaching. Worksheet 2 is released; due 3 November.}
+\notes{No class test today. Worksheet 2 is released; due 10 November (start of lecture 5).}
 
 \subsection{This Session}
 
 \slidesincremental{
-* Quiz 1 (ten minutes)
 * Maxwell's demon and Landauer
+* Information engines; car vs ATP synthase
 * Information and intelligence: first cut
 }
 
@@ -72,17 +67,13 @@ reading:
 
 | Minutes | Block |
 |--------:|-------|
-| 0–10 | Quiz 1 (Moodle; LO1–LO3) |
+| 0–10 | Recap Shannon / partition; release Worksheet 2 |
 | 10–55 | Maxwell's demon; where the apparent violation sits |
 | 55–65 | Break |
 | 65–98 | Szilard; Feynman; Parrondo; information engines; car engine vs ATP synthase |
 | 98–115 | Landauer; erasure as the thermodynamic cost |
 | 115–120 | Intelligence, first cut; human bandwidth; release Worksheet 2 |
 }
-
-\subsection{Quiz 1}
-
-\notes{Ten MCQs. Two-state system and a binary source, not the Worksheet 1 examples. Auto-graded. Feedback within seven days, before Worksheet 2 is due.}
 
 \subsection{Maxwell's Demon}
 

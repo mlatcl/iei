@@ -9,7 +9,7 @@ permalink: /about/
 **Code:** L172  
 **Term:** Michaelmas  
 **Hours:** 16 (8 × 2hr lectures)  
-**When:** Tuesdays, 13 October – 1 December 2026  
+**When:** Tuesdays 10:00–12:00, 13 October – 1 December 2026  
 **Where:** FW26, William Gates Building  
 **Class limit:** max. 10 students  
 **Prerequisites:** Undergraduate-level probability and statistics (distributions, Bayes theorem), linear algebra (matrix operations, eigenvalues), and basic multivariate calculus. No prior physics or thermodynamics assumed.
@@ -22,16 +22,16 @@ Develop the mathematical connections between thermodynamics, information theory,
 
 Entropy appears in three apparently separate traditions — thermodynamics (Boltzmann, Gibbs), information theory (Shannon), and Bayesian inference (Jaynes) — and turns out to be the same mathematical object viewed from different operational assumptions. The operational split is: **entropy forbids, probability prescribes.** The course covers:
 
-1. that theme, via perpetual motion and the human–machine bandwidth gap of *The Atomic Human*; the Boltzmann distribution and free energy,
+1. probability and entropy review; Socratic LLM method; that theme via perpetual motion and the human–machine bandwidth gap of *The Atomic Human*; then the Boltzmann distribution and free energy,
 2. Shannon entropy and its formal equivalence to thermodynamic entropy; the exponential family as the MaxEnt family,
 3. Maxwell's demon and Landauer's principle: the thermodynamic cost of decision-making,
 4. information geometry: the Fisher metric, Crooks' thermodynamic length, dually flat geometry, and natural gradient descent,
 5. multi-information, an entropy game, quantum information,
 6. probability transport, Schrödinger bridges, and information-theoretic limits on intelligent agency.
 
-Four ten-minute in-class Moodle quizzes sit at the start of lectures 3, 5, 7 and 8.
+Four ten-minute in-class Moodle quizzes sit at the start of lectures 2, 5, 7 and 8.
 
-Each lecture is followed by a formative self-study exercise exploring the session's central concept from thermodynamic, information-theoretic, and Bayesian perspectives.
+Worksheets use LLMs under a Socratic protocol introduced in lecture 1: students act as Socrates (curiosity, then skepticism). Worksheet 1 is a ten-turn dialogue; later worksheets mix code with shorter LLM probes. Submissions are anonymous (candidate number, not CRSid or name).
 
 ## Objectives
 
@@ -39,7 +39,7 @@ Equip students to reason rigorously about entropy across thermodynamics, informa
 
 ## Assessment
 
-Four take-home mini-project worksheets (15% each, 60% total), each consisting of a short Python notebook and a written reflection. Four short in-class Moodle quizzes (10% each, 40% total).
+Four take-home worksheets (15% each, 60% total). Worksheet 1 is a Socratic LLM dialogue plus reflection; later worksheets combine a short Python notebook with written reflection. Four short in-class Moodle quizzes (10% each, 40% total).
 
 ## Recommended Reading
 
