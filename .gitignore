@@ -28,7 +28,10 @@ __pycache__/
 # Ignore node_modules if any JS tooling is used
 node_modules/
 
-# In-class quiz metadata is committed; question pools live in quiz-banks/.
+# Quiz question pools and their generators stay OUT of git (instructor-only).
+# Keep assessments/quiz-banks/README.md tracked; ignore the YAML pools.
+assessments/quiz-banks/*.yaml
+scripts/quiz_banks/build_banks.py
 # Drawn Moodle sittings (export from quiz-banks tooling)
 assessments/generated/
 
