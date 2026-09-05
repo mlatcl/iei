@@ -93,18 +93,18 @@ reading:
 \newslides{Joint, Marginal, Conditional}
 
 \slidesincremental{
-* Joint (x,y)$: both
-* Marginal (x)$: $ regardless of $
-* Conditional (x\mid y)$: $ given $
+* Joint $P(x,y)$: both
+* Marginal $P(x)$: $ regardless of $y$
+* Conditional $P(x\mid y)$: $x$ given $y$
 }
 
-\notes{Notation: we often write (x,y)$ for (X=x,Y=y)$. Unlike a generic bivariate function, (x,y)=P(y,x)$.}
+\notes{Notation: we often write $P(x,y)$ for $P(X=x,Y=y)$. Unlike a generic bivariate function, $P(x,y)=P(y,x)$.}
 
 \newslides{Product Rule and Sum Rule}
 
 \slidesincremental{
-* Product: (x,y)=P(x\mid y)P(y)$
-* Sum: (y)=\sum_x P(x,y)$
+* Product: $P(x,y)=P(x\mid y)P(y)$
+* Sum: $P(y)=\sum_x P(x,y)$
 * Both are normalising bookkeeping, not modelling assumptions
 }
 
