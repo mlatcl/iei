@@ -86,46 +86,6 @@ reading:
 
 \include{_information/includes/entropy-nogo-probability-prescription.md}
 
-\subsection{Worksheets and LLMs: Can you be Socrates?}
-
-\newslides{Curiosity, Then Skepticism}
-
-\notes{The general approach we'd like to take to this course is that of a "community of inquiry" (see Chapter 4, @Lipman-thinking12). The unusual modern twist on this notion is that the LLMs themselves become part of that community.}
-
-\notes{Each of us will have different perspectives on what an LLM does and does not provide. You are welcome to bring those perspectives into your work. In particular, for each worksheet, you will be asked to reflect on the LLM responses and the process. Part of that reflection should be specific to the exercise and what you learnt about the subject. But I would like part of that reflection to be general about your understanding of the LLM and what it does and doesn't provide. For worksheets 2, 3, and 4 a portion of that reflection will be on how you feel your understanding of LLMs as a tool of inquiry has evolved (if it evolved!).} 
-
-\notes{The premise on which the assessment model is based is twofold (1) a form of questioning enquiry generally called "the Socratic method" is an informative way of exploring a topic. (2) Current generation of LLMs is weak at sustained Socratic dialogue. They tend to answer expansively. (3) The "Socratic method" can be deployed by reversing the role of Socrates and the student, so you will need to take on the role of Socrates.}
-
-\notes{The general background is an idea that in order to develop your understanding of a subject through interaction with an LLM you need two components to your enquiry: *curiousity* and *skepticism*. The curiousity allows you to generate the prompt and the LLM to regurgitate some of its knowled (or perform searches that it summarises). But the skepticism engages with that summary through challenging the conclusions that the LLM has. In the Socratic *elenchus* that challenge is through pointing out a logical inconsistency that arises  (@Vlastos-socratic93), perhaps through a side implication. For our purpose that challenge may not take exactly that form. But it should push back on the narrative the LLM provides. Generating such push back also requires you to engage with the material the LLM has provided.}
-
-\notes{For Socrates these are curated dialogues (written by Plato, e.g. @Fowler-euthyphro14). So its normally the case that his challenges hit home. In your case, that won't normally be the case. And we don't expect you to curate your dialogue. What we'd like instead is a period of inquiry that is then summarised by a single dialogue that is played out with one LLM in a short session of 10 prompts and responses.}
-
-
-\slidesincremental{
-* Curiosity: open a question; let the model give a long answer
-* Skepticism: take a claim and press it — "if that were true, then ..."
-* Active thought is the point; the transcript is evidence of the probe
-}
-
-\notes{Classical Socratic practice (*elenchus*) tests consistency by questioning, not by lecturing. Contemporary seminar pedagogy keeps the same habit: the questioner holds the inquiry. Current LLMs default to exposition and agreement; they rarely sustain adversarial follow-ups without being steered. Assigning the student the Socrates role forces engagement with the subject matter rather than passive acceptance of a fluent summary.}
-
-\newslides{Worksheet Habit}
-
-\slidesincremental{
-* Explore with as many models as you like
-* Submit **one** conversation of about ten prompt/answer turns
-* Early turns: open and curious; later turns: skeptical probes
-* Then a short reflection on what you learned
-}
-
-\notes{Worksheets are marked with 5 points for curiosity, 5 for skepticism, and 5 points for the reflection (15% of the module). You will be provided with a markdown template for your answers. The YAML frontmatter records candidate number, model, and interface. Do not put your name or CRSid anywhere on the submission (Cambridge coursework is marked anonymously wherever possible) use your candidate number (Moodle blind grading number or the assignment number issued by the course office).}
-
-\slidesincremental{
-* Template: assessments/handouts/ (dialogue + reflection)
-* Filename: `candidatenumber_worksheet1_dialogue.md` (and reflection)
-* Quiz 1 (next week) checks foundations you should have met here and in W1
-}
-
 <!-- SNIPPET: _information/includes/probability-review-compact.md -->
 
 \subsection{Probability Review}
@@ -172,7 +132,7 @@ $$
 
 <!-- SNIPPET: _information/includes/common-distributions-review.md -->
 
-###{Common Distributions}
+\subsection{Common Distributions}
 
 \newslides{Named Distributions You Need}
 
@@ -209,6 +169,51 @@ $$
 \notes{Differential entropy of a Gaussian grows with $\sigma$ and can be negative — that subtlety waits until week 6. Today: recognise the density and the two parameters.}
 
 <!-- /SNIPPET: _information/includes/common-distributions-review.md -->
+
+\subsection{Doubt}
+
+
+
+\subsection{Worksheets and LLMs: Can you be Socrates?}
+
+\newslides{Curiosity, Then Skepticism}
+
+\notes{The general approach we'd like to take to this course is that of a "community of inquiry" (see Chapter 4, @Lipman-thinking12). The unusual modern twist on this notion is that the LLMs themselves become part of that community.}
+
+\notes{Each of us will have different perspectives on what an LLM does and does not provide. You are welcome to bring those perspectives into your work. In particular, for each worksheet, you will be asked to reflect on the LLM responses and the process. Part of that reflection should be specific to the exercise and what you learnt about the subject. But I would like part of that reflection to be general about your understanding of the LLM and what it does and doesn't provide. For worksheets 2, 3, and 4 a portion of that reflection will be on how you feel your understanding of LLMs as a tool of inquiry has evolved (if it evolved!).} 
+
+\notes{The premise on which the assessment model is based is twofold (1) a form of questioning enquiry generally called "the Socratic method" is an informative way of exploring a topic. (2) Current generation of LLMs is weak at sustained Socratic dialogue. They tend to answer expansively. (3) The "Socratic method" can be deployed by reversing the role of Socrates and the student, so you will need to take on the role of Socrates.}
+
+\notes{The general background is an idea that in order to develop your understanding of a subject through interaction with an LLM you need two components to your enquiry: *curiousity* and *skepticism*. The curiousity allows you to generate the prompt and the LLM to regurgitate some of its knowled (or perform searches that it summarises). But the skepticism engages with that summary through challenging the conclusions that the LLM has. In the Socratic *elenchus* that challenge is through pointing out a logical inconsistency that arises  (@Vlastos-socratic93), perhaps through a side implication. For our purpose that challenge may not take exactly that form. But it should push back on the narrative the LLM provides. Generating such push back also requires you to engage with the material the LLM has provided.}
+
+\notes{For Socrates these are curated dialogues (written by Plato, e.g. @Fowler-euthyphro14). So its normally the case that his challenges hit home. In your case, that won't normally be the case. And we don't expect you to curate your dialogue. What we'd like instead is a period of inquiry that is then summarised by a single dialogue that is played out with one LLM in a short session of 10 prompts and responses.}
+
+
+\slidesincremental{
+* Curiosity: open a question; let the model give a long answer
+* Skepticism: take a claim and press it — "if that were true, then ..."
+* Active thought is the point; the transcript is evidence of the probe
+}
+
+\notes{Classical Socratic practice (*elenchus*) tests consistency by questioning, not by lecturing. Contemporary seminar pedagogy keeps the same habit: the questioner holds the inquiry. Current LLMs default to exposition and agreement; they rarely sustain adversarial follow-ups without being steered. Assigning the student the Socrates role forces engagement with the subject matter rather than passive acceptance of a fluent summary.}
+
+\newslides{Worksheet Habit}
+
+\slidesincremental{
+* Explore with as many models as you like
+* Submit **one** conversation of about ten prompt/answer turns
+* Early turns: open and curious; later turns: skeptical probes
+* Then a short reflection on what you learned
+}
+
+\notes{Worksheets are marked with 5 points for curiosity, 5 for skepticism, and 5 points for the reflection (15% of the module). You will be provided with a markdown template for your answers. The YAML frontmatter records candidate number, model, and interface. Do not put your name or CRSid anywhere on the submission (Cambridge coursework is marked anonymously wherever possible) use your candidate number (Moodle blind grading number or the assignment number issued by the course office).}
+
+\slidesincremental{
+* Template: assessments/handouts/ (dialogue + reflection)
+* Filename: `candidatenumber_worksheet1_dialogue.md` (and reflection)
+* Quiz 1 (next week) checks foundations you should have met here and in W1
+}
+
 
 <!-- SNIPPET: _information/includes/entropy-review.md -->
 
