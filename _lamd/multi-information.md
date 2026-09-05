@@ -7,10 +7,11 @@ venue: FW26, William Gates Building
 room: FW26
 transition: None
 abstract: >
-  In-class Quiz 4, then Watanabe's multi-information, the conservation
-  law $I+H=C$, and the argument that the classical limit $I=C$ forces
-  a move to von Neumann entropy. First half of the final session; limits
-  on intelligence follow.
+  Watanabe's multi-information, the conservation law $I+H=C$, the
+  data-processing inequality, and the information bottleneck as the
+  no-go/prescription pair on $I$. The classical limit $I=C$ then forces
+  a move to von Neumann entropy. First half of the final session;
+  limits on intelligence follow.
 author:
 - given: Neil D.
   family: Lawrence
@@ -35,6 +36,16 @@ reading:
     chapter: "whole paper"
     estimated_hours: 1
     required: false
+  - title: "The Information Bottleneck Method"
+    author: "Tishby, Pereira and Bialek"
+    chapter: "the method (Allerton 1999 / arXiv physics/0004057)"
+    estimated_hours: 1
+    required: false
+  - title: "Elements of Information Theory"
+    author: "Cover and Thomas"
+    chapter: "Theorem 2.8.1 (data-processing inequality)"
+    estimated_hours: 0.5
+    required: false
   - title: "Information Theory and Statistical Mechanics"
     author: "Jaynes"
     chapter: "Brandeis lectures (1963)"
@@ -42,24 +53,29 @@ reading:
     required: false
 ---
 
-\notes{Final session, first hour. Quiz 4 occupies the first ten minutes. Then multi-information and von Neumann entropy. Worksheet 4 is due at the start of this lecture. Limits on intelligence follow in the second hour.}
+\notes{Quiz 4 occupies the first ten minutes. Then multi-information, the data-processing inequality, the information bottleneck, and von Neumann entropy. Worksheet 4 is due at the start of this lecture. Limits on intelligence follow.}
 
 \subsection{This Session}
 
 \slidesincremental{
 * Quiz 4 (ten minutes)
 * Same marginals, different joints; then $I+H=C$
+* DPI and the information bottleneck
 * Why $I=C$ forces von Neumann entropy
 }
 
 \notes{
-**Time plan (60 minutes, first half of final session)**
+**Time plan (60 minutes, first half of the final session)**
 
 | Minutes | Block |
 |--------:|-------|
 | 0–10 | Quiz 4 (Moodle) |
-| 10–35 | Same marginals, different joints; multi-information; $I+H=C$ |
-| 35–60 | Classical limit $I=C\Rightarrow H=0$; von Neumann entropy |
+| 10–28 | Same marginals, different joints; multi-information; $I+H=C$ |
+| 28–40 | Data-processing inequality (proof) |
+| 40–52 | Information bottleneck |
+| 52–60 | Classical limit $I=C\Rightarrow H=0$; von Neumann entropy |
+
+The optional Jaynes-world bridge and the Schottky / Good Regulator preview are notes-only; lecture 8 finishes those readings. DPI and IB are taught here (LO10), not named as week-8 tools.
 }
 
 \subsection{Quiz 4}
@@ -136,30 +152,44 @@ mlai.write_figure('multi-information-rho.svg', directory='\writeDiagramsDir/ml')
 
 <!-- /SNIPPET: _physics/includes/multi-information-worked.md -->
 
+\include{_information/includes/data-processing-inequality.md}
+
+\include{_information/includes/information-bottleneck.md}
+
+<!-- SNIPPET: _information/includes/information-bottleneck-curve.md -->
+
+\setupplotcode{import numpy as np
+import matplotlib.pyplot as plt
+import mlai}
+
+\plotcode{Ixy = 1.0
+ix_t = np.linspace(0.0, 2.0, 300)
+it_y_bound = np.minimum(ix_t, Ixy)
+fig, ax = plt.subplots(figsize=(7, 4))
+ax.fill_between(ix_t, 0.0, it_y_bound, alpha=0.25)
+ax.plot(ix_t, it_y_bound, linewidth=2, label=r'DPI: $I(T;Y)\le\min(I(X;T),I(X;Y))$')
+ax.axhline(Ixy, linestyle='--', linewidth=1)
+ax.set_xlabel(r'$I(X;T)$ (bits)')
+ax.set_ylabel(r'$I(T;Y)$ (bits)')
+ax.set_title('Feasible region for a representation $T$')
+ax.legend(loc='upper left')
+mlai.write_figure('information-bottleneck-region.svg', directory='\\writeDiagramsDir/ml')}
+
+\figure{\includediagram{\diagramsDir/ml/information-bottleneck-region}{75%}}{DPI supplies the feasible region. The information bottleneck traces the upper boundary: keep $I(T;Y)$, spend as little $I(X;T)$ as possible.}{information-bottleneck-region}
+
+\slides{
+\includediagram{\diagramsDir/ml/information-bottleneck-region}{75%}
+}
+
+<!-- /SNIPPET: _information/includes/information-bottleneck-curve.md -->
+
 \subsection{The Inaccessible Game}
 
 \include{_information-game/includes/inaccessible-game-introduction.md}
 
-<!-- SNIPPET: _information-game/includes/jaynes-world-two-bin-bridge.md -->
-
-\newslides{Jaynes' World (Optional Bridge)}
-
-\slides{The inaccessible game is the minimal dynamics behind the information-engines talk — optional depth, not examinable detail.}
-
-\slidesincremental{
-* Simplest case: two-bin $p$, $(1-p)$; entropy $S(p) = -p\log p - (1-p)\log(1-p)$
-* Fisher information $G(\theta) = p(1-p)$ on the log-odds chart — week 5
-* Near $p\to 0,1$: $G\to 0$ — critical slowing; marginals become information reservoirs
-* Same $I+H=C$ story: structure ($I$) versus free uncertainty ($H$)
-}
-
-\speakernotes{Point to inverseprobability.com information-engines notes and two-bin snippets for students who want the full Jaynes-world tour. Week 8 unifies the lenses.}
-
-\notes{Optional bridge to the information-engines seminar material (`talks/_ai/information-engines.md`). The two-bin histogram is the smallest Jaynes-world instance: entropy ascent on the simplex with Fisher metric $G(\theta)=p(1-p)$. Critical slowing at the boundaries is where metastable information reservoirs appear — the same physical picture as Parrondo's double-well memory. Four-bin saddles, gradient flow, and the uncertainty principle between parameters and capacity are in the talk; we do not lecture them here. Students who followed natural gradient in week 6 already have the local geometry this game uses.}
+\notes{Optional depth, not lectured today: the two-bin Jaynes-world tour in the information-engines seminar notes. Students who followed natural gradient in week 6 already have the local geometry that game uses.}
 
 \addreading{Information Engines seminar notes}{https://inverseprobability.com/talks/notes/information-engines.html — Jaynes' world and unified intelligence perspective}
-
-<!-- /SNIPPET: _information-game/includes/jaynes-world-two-bin-bridge.md -->
 
 \subsection{Von Neumann Entropy}
 
@@ -208,55 +238,14 @@ print('S(rho_A)=', von_neumann(partial_trace_A(rho)))}
 
 \subsection{Purely Entropic Readings: First Attempt}
 
-<!-- SNIPPET: _physics/includes/schottky-good-regulator-preview.md -->
-
-\newslides{Purely Entropic Readings (Preview)}
-
-\slides{Two course questions get a first answer today; lecture 8 completes them.}
-
-\slidesincremental{
-* Schottky peak: two-state reservoir filling and emptying
-* Good Regulator: regulator must hold enough $I$ to model the system
-* Worksheet 4 and lecture 8 finish the argument
-}
-
-\speakernotes{Schottky preview — link to lecture 1 peak. Good Regulator as $I$/$H$ constraint. Lecture 8 completes both.}
-
-\notes{Schottky connects back to lecture 1's heat-capacity peak. Good Regulator restates Ashby: variety in the regulator must match variety in the system — here as a constraint on $I$ and $H$. Students will not finish these today.}
-
-\setupplotcode{import numpy as np
-import matplotlib.pyplot as plt
-import mlai}
-
-\plotcode{beta = np.linspace(0.05, 5.0, 400)
-p1 = 1.0 / (1.0 + np.exp(beta))
-H = -(1-p1)*np.log2(1-p1+1e-300) - p1*np.log2(p1+1e-300)
-I = np.log2(2) - H  # two-state with C=1 bit marginal each... sketch total C=2 for pair later
-fig, ax = plt.subplots(figsize=(7, 4))
-ax.plot(1/beta, H, linewidth=2)
-ax.set_xlabel('$T$')
-ax.set_ylabel('$H$ (bits, single spin)')
-ax.set_title('Schottky: entropy capacity of one two-level system')
-mlai.write_figure('schottky-entropy-preview.svg', directory='\writeDiagramsDir/ml')}
-
-\figure{\includediagram{\diagramsDir/ml/schottky-entropy-preview}{70%}}{Single two-state entropy versus temperature — preview of the entropic Schottky reading.}{schottky-entropy-preview}
-
-\slides{
-\includediagram{\diagramsDir/ml/schottky-entropy-preview}{70%}
-}
-
-<!-- /SNIPPET: _physics/includes/schottky-good-regulator-preview.md -->
-
-\slidesincremental{
-* Schottky, entropically: a two-state reservoir
-* Good Regulator, entropically: a constraint on $I$ and $H$
-* Finish these in week 8
-}
+\notes{Schottky and the Good Regulator get a first answer today in notes, not on slides. Lecture 8 completes both. Schottky connects back to lecture 1's heat-capacity peak. Good Regulator restates Ashby: variety in the regulator must match variety in the system --- here as a constraint on $I$ and $H$, now with DPI and the bottleneck in hand.}
 
 \subsection{Define This Week}
 
 \slidesincremental{
 * Multi-information versus mutual information?
+* What is the data processing inequality?
+* What is the information bottleneck?
 * What is von Neumann entropy?
 * What is the matrix exponential family?
 }
@@ -264,11 +253,10 @@ mlai.write_figure('schottky-entropy-preview.svg', directory='\writeDiagramsDir/m
 
 \subsection{After This Lecture}
 
-\notes{Worksheet 4: multi-information, von Neumann, limits on intelligence. Due 1 December, *before* Quiz 4. Quiz 4 is the first ten minutes of lecture 8.}
+\notes{Worksheet 4 was due at the start of this lecture, before Quiz 4. Limits on intelligence follow in the second hour.}
 
 \slidesincremental{
-* Worksheet 4 released; due 1 December
-* Quiz 4: 1 December, first ten minutes
+* Limits on intelligence follow
 }
 
 \reading

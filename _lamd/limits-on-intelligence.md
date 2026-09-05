@@ -205,12 +205,13 @@ mlai.write_figure('transport-plan-2x2.svg', directory='\writeDiagramsDir/ml')}
 * Landauer: $k_B T\ln 2$ per bit erased
 * Crooks: $\langle W_{\mathrm{ex}}\rangle\ge\mathcal{L}^2/\tau$
 * Conservation: $I+H=C$ with fixed marginals
+* DPI: processing cannot create $I$; IB: spend $I$ on relevance
 * Human bandwidth: $\sim 100$ bits/s — *The Atomic Human*
 }
 
-\speakernotes{LO13. Named tools only — requisite variety, Good Regulator, bottleneck, DPI. Close Week 1: entropy forbids; probability prescribes.}
+\speakernotes{LO13. Use week-7 tools: DPI and the information bottleneck. Requisite variety and the Good Regulator remain named colour. Close Week 1: entropy forbids; probability prescribes.}
 
-\notes{Requisite variety, Good Regulator in entropic form, information bottleneck, and data-processing inequality are named tools, not new outcomes. Viable-system material is optional colour. Prescriptions operate inside fences set by physics and embodiment.}
+\notes{Data-processing inequality and the information bottleneck were taught in week 7 (LO10). Today they are evaluation tools, not new outcomes: a claim that an intelligent system will just process more is a DPI violation; a system that keeps only what is relevant for action is an IB statement. Requisite variety and the Good Regulator in entropic form remain named colour. Viable-system material is optional. Prescriptions operate inside fences set by physics and embodiment.}
 
 \setupcode{no_gos = ['Landauer', 'Crooks L^2/tau', 'I+H=C', 'human bandwidth']
 prescriptions = ['Boltzmann/MaxEnt p', 'Crooks geodesic', 'Wasserstein plan', 'Schrodinger bridge']
@@ -223,6 +224,7 @@ prescriptions = ['Boltzmann/MaxEnt p', 'Crooks geodesic', 'Wasserstein plan', 'S
 * Optimal trajectories and optimal intelligence?
 * Transport plan as an act; which geometry is Sinkhorn?
 * Information and intelligence? (final)
+* Data processing and the bottleneck, as evaluation tools
 * Purely entropic Good Regulator and Schottky
 * How is entropy understood today? (last revision)
 }

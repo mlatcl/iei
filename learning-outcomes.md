@@ -10,7 +10,7 @@ outcomes:
     text: "Students will be able to derive Shannon entropy as a measure of uncertainty and prove its formal equivalence to thermodynamic (Gibbs) entropy in equilibrium statistical mechanics."
     bloom_level: apply
     week: 3
-    notes: "Shannon H = -Σ p_i log p_i; Boltzmann S = k H. H bounds what a code cannot do; p is the code or the belief. Channel capacity (R ≤ C) and the capacity-achieving input are this week's pair, taught as scaffolding."
+    notes: "Shannon H = -Σ p_i log p_i; Boltzmann S = k H. H bounds what a code cannot do; p is the code or the belief. Channel capacity (R ≤ C) and the capacity-achieving input are this week's pair, taught as scaffolding. Mutual information I(X;Y)=H(X)−H(X|Y) is defined from the chain rule. The data-processing inequality is stated, not proved; proof and the information bottleneck wait for week 7 (LO10)."
 
   - id: LO3
     text: "Students will be able to derive the canonical ensemble and use the partition function to compute mean energy, entropy, and free energy for simple systems."
@@ -58,7 +58,7 @@ outcomes:
     text: "Students will be able to define multi-information I, state the conservation law I + H = C, and explain the analogy between this structure and the kinetic/potential energy trade-off in classical mechanics."
     bloom_level: analyse
     week: 8
-    notes: "Watanabe (1960). I = Σ h_i - H ≥ 0. Fourth axiom of the inaccessible game: Σ h_i = C, so I + H = C. I ~ potential energy (stored correlation); H ~ kinetic energy (free uncertainty)."
+    notes: "Watanabe (1960). I = Σ h_i - H ≥ 0. Mutual information is the pairwise case. Fourth axiom of the inaccessible game: Σ h_i = C, so I + H = C. I ~ potential energy (stored correlation); H ~ kinetic energy (free uncertainty). Data-processing inequality (Cover & Thomas Thm 2.8.1): if X→Y→Z is Markov, I(X;Z)≤I(X;Y) — processing cannot create information. Information bottleneck (Tishby, Pereira, Bialek 1999): the prescription inside that fence — minimise I(X;T) subject to I(T;Y)≥R, or min I(X;T)−β I(T;Y). Named in week 2; taught this week; used in week 8 (LO13). Not separate outcomes."
 
   - id: LO11
     text: "Students will be able to explain why the classical limit I = C requires H = 0, argue that sustaining high marginal entropies alongside I = C forces a move beyond classical probability, and show that von Neumann entropy S(ρ) = −Tr(ρ log ρ) satisfies S = 0 for a pure entangled state while its marginals carry positive entropy."
@@ -76,7 +76,7 @@ outcomes:
     text: "Students will be able to evaluate claims about the capabilities of intelligent systems using Landauer's principle, the perpetual motion analogy, and the information-theoretic constraints derived from the inaccessible game framework."
     bloom_level: evaluate
     week: 8
-    notes: "Closes the loop opened in Week 1. Superintelligence ~ perpetual motion: both promise to repeal a no-go. Evaluate with Landauer, L²/τ, I+H=C, and the human bandwidth constraint from The Atomic Human. The three geometries are prescriptions, not further no-gos."
+    notes: "Closes the loop opened in Week 1. Superintelligence ~ perpetual motion: both promise to repeal a no-go. Evaluate with Landauer, L²/τ, I+H=C, and the human bandwidth constraint from The Atomic Human. DPI and the information bottleneck are available as week-7 tools (LO10), not new outcomes: a claim that ‘just processes more’ is a DPI violation; keeping only what is relevant for action is an IB statement. The three geometries are prescriptions, not further no-gos."
 ---
 
 # Learning Outcomes
@@ -138,7 +138,7 @@ Eight Tuesdays, 13 October – 1 December 2026, 10:00–12:00, FW26, William Gat
 | 4 | 3 Nov | MaxEnt; exponential family; three-perspective synthesis | LO5, LO6, LO7 | W2 due |
 | 5 | 10 Nov | Fisher metric; thermodynamic length defined (Crooks) | LO8 | Q2 (10 min); W3 released |
 | 6 | 17 Nov | MaxEnt as projection; natural gradient; geodesics | LO9 | W3 due |
-| 7 | 24 Nov | Multi-information; I + H = C; von Neumann entropy | LO10, LO11 | Q3 (10 min); W4 released |
+| 7 | 24 Nov | Multi-information; DPI; information bottleneck; I + H = C; von Neumann | LO10, LO11 | Q3 (10 min); W4 released |
 | 8 | 1 Dec | Three geometries; limits on intelligence | LO12, LO13 | Q4 (10 min); W4 due |
 
 ## Outcome summary
@@ -154,7 +154,7 @@ Eight Tuesdays, 13 October – 1 December 2026, 10:00–12:00, FW26, William Gat
 | LO7  | Compare three perspectives on entropy                 | Evaluate    | 4    |
 | LO8  | Fisher metric and dually flat geometry                | Analyse     | 5    |
 | LO9  | MaxEnt as projection; natural gradient                | Apply       | 6    |
-| LO10 | Multi-information and I + H = C                       | Analyse     | 7    |
+| LO10 | Multi-information; DPI; information bottleneck       | Analyse     | 7    |
 | LO11 | I = C forces quantum: von Neumann entropy             | Analyse     | 7    |
 | LO12 | Probability transport as abstraction of agency        | Evaluate    | 8    |
 | LO13 | Information-theoretic limits on intelligence          | Evaluate    | 8    |

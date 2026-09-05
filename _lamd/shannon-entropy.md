@@ -9,9 +9,10 @@ transition: None
 abstract: >
   Shannon entropy as a measure of uncertainty, and its formal equivalence
   to thermodynamic entropy. The partition function as a generating function
-  for mean energy, entropy, and free energy. The chain rule and the
-  statement of channel capacity are introduced as scaffolding, not as
-  outcomes.
+  for mean energy, entropy, and free energy. The chain rule, mutual
+  information, channel capacity, and the data-processing inequality are
+  introduced as scaffolding: $I$ and DPI are stated today and proved
+  in week 7.
 author:
 - given: Neil D.
   family: Lawrence
@@ -32,7 +33,7 @@ reading:
     estimated_hours: 3
   - title: "Elements of Information Theory"
     author: "Cover and Thomas"
-    chapter: "Chapters 2 and 7"
+    chapter: "Chapters 2 and 7; Theorem 2.8.1 stated, not proved"
     estimated_hours: 2
   - title: "Thermodynamics and an Introduction to Thermostatistics"
     author: "Callen"
@@ -54,6 +55,7 @@ reading:
 * Shannon $H$; Boltzmann $S = kH$
 * Dasher: $H$ as bits, $p$ as the next letter
 * Partition function as a generating function
+* Scaffolding: $I(X;Y)$, capacity, DPI (statement)
 }
 
 \notes{
@@ -66,7 +68,7 @@ reading:
 | 45–55 | Dasher |
 | 55–65 | Break |
 | 65–100 | Canonical ensemble; $Z$ as generating function; bath revisited |
-| 100–120 | Chain rule; channel capacity (statement); three framings named |
+| 100–120 | Chain rule; define $I(X;Y)$; capacity (statement); DPI (statement) |
 }
 
 \newslides{From Lecture 1}
@@ -221,19 +223,20 @@ def thermo_from_Z(beta, energies):
 
 <!-- SNIPPET: _information/includes/channel-capacity-chain-rule.md -->
 
-\newslides{Chain Rule and Capacity}
+\newslides{Chain Rule, Mutual Information, Capacity}
 
-\slides{Two results we will need later — stated, not proved today.}
+\slides{Four results we will need later --- stated, not proved today.}
 
 \slidesincremental{
-* Chain rule: $H(X,Y) = H(X) + H(Y|X)$ 
+* Chain rule: $H(X,Y) = H(X) + H(Y|X)$
+* Mutual information: $I(X;Y) = H(X)-H(X|Y) = H(X)+H(Y)-H(X,Y)$
 * Capacity: no rate above $C$; achieving $C$ requires the capacity-achieving $p(x)$
-* Data processing: processing cannot create information
+* Data processing: if $X\to Y\to Z$ is Markov, $I(X;Z)\le I(X;Y)$
 }
 
-\speakernotes{State chain rule and capacity; do not prove. Mention data-processing inequality only. Scaffolding for week 7.}
+\speakernotes{Define $I$ from the chain rule. State DPI; do not prove. Proof and the information bottleneck are week 7 (LO10). Capacity remains this week's no-go/prescription pair.}
 
-\notes{The chain rule $H(X,Y)=H(X)+H(Y|X)$ is the algebraic source of multi-information. Channel capacity $C$ is a no-go on rate; the capacity-achieving input distribution is the prescription. Processing cannot create information.}
+\notes{The chain rule $H(X,Y)=H(X)+H(Y|X)$ is the algebraic source of multi-information. Mutual information $I(X;Y)=H(X)-H(X|Y)$ is the pairwise case; we do not yet treat $n>2$. Channel capacity $C$ is a no-go on rate; the capacity-achieving input distribution is the prescription. The data-processing inequality is the no-go on $I$: processing cannot create information. Cover and Thomas Theorem 2.8.1 is the reading; the proof waits for week 7, when $I$ is first-class.}
 
 \setupplotcode{import numpy as np
 import matplotlib.pyplot as plt
@@ -265,7 +268,7 @@ mlai.write_figure('bsc-capacity.svg', directory='\writeDiagramsDir/ml')}
 \slidesincremental{
 * No-go: $R \le C$; processing cannot create information
 * Prescription: the $p(x)$ that achieves $C$
-* Chain rule: needed in week 7
+* Week 7: prove DPI; information bottleneck as the prescription on $I$
 }
 
 \subsection{Three Framings, First Pass}
@@ -286,9 +289,10 @@ mlai.write_figure('bsc-capacity.svg', directory='\writeDiagramsDir/ml')}
 * Why is entropy a sensible measure of information?
 * Equilibrium versus non-equilibrium? (first cut)
 * Channel capacity? (statement)
+* Mutual information? (definition)
 }
 
-\notes{Interpret later: how entropy is understood today (week 4, then week 7); chain rule as the source of multi-information (week 7).}
+\notes{Interpret later: how entropy is understood today (week 4, then week 7); chain rule as the source of multi-information (week 7). DPI is named today; define-stage proof is week 7.}
 
 \subsection{After This Lecture}
 

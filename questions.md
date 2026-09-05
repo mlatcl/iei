@@ -44,12 +44,14 @@ Class tests examine the *applied* form of the define-stage questions, on a new e
 
 - Why is entropy a sensible measure of information?
 - What is the chain rule of entropy?
+- What is mutual information? (definition from the chain rule)
 - What is Shannon's channel capacity theorem? (statement)
 - What is the difference between equilibrium and non-equilibrium thermodynamics? (first cut)
 
 **Named, not yet answered**
 
-- What is the data processing inequality?
+- What is the data processing inequality? (statement today; proof week 7)
+- What is the information bottleneck? (week 7)
 - How is entropy understood today? (Shannon alone is not the intended answer)
 - Shannon entropy versus differential entropy? (full contrast: week 5)
 
@@ -124,6 +126,8 @@ Quiz 3 occupies the first ten minutes.
 **Define this week**
 
 - What is the multi-information and what is mutual information?
+- What is the data processing inequality?
+- What is the information bottleneck?
 - What is von Neumann entropy?
 - What is the matrix exponential family?
 
@@ -150,8 +154,8 @@ Quiz 4 occupies the first ten minutes.
 - How is a transport plan an abstraction of an action, the way $p$ is an abstraction of a code?
 - In entropic OT, what is the no-go and what is the prescription?
 - Is “optimal intelligence” cheapest rearrangement, least-committal rearrangement, or minimum-dissipation protocol? Name the geometry.
-- What is the data processing inequality?
-- What is the information bottleneck?
+- What is the data processing inequality? (interpret: a superintelligence that “just processes more”)
+- What is the information bottleneck? (interpret: intelligence as relevant compression)
 - How is entropy treated in early cybernetics?
 - What is the law of requisite variety?
 - What is the Good Regulator Theorem?
@@ -160,4 +164,4 @@ Quiz 4 occupies the first ten minutes.
 - What are the information constraints on a human?
 - What is the purely entropic interpretation of Schottky's anomaly?
 
-The cybernetics cluster (requisite variety, Good Regulator, bottleneck, viable system) is used in lecture 8 as named evaluation tools for LO13. It is not a separate outcome. Sinkhorn is named under LO12 as the discrete algorithm for the Schrödinger / entropic coupling, not as a fourth geometry.
+The cybernetics cluster (requisite variety, Good Regulator, viable system) is used in lecture 8 as named evaluation tools for LO13. It is not a separate outcome. The data-processing inequality and the information bottleneck are taught in lecture 7 under LO10 and *used* here. Sinkhorn is named under LO12 as the discrete algorithm for the Schrödinger / entropic coupling, not as a fourth geometry.

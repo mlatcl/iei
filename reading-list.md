@@ -15,7 +15,7 @@ reading:
     edition: 2
     required: true
     estimated_hours: 8
-    notes: "A complement to MacKay. Chapters 2, 7, and 12 most relevant (entropy, channel capacity, maximum entropy). Weeks 2 and 4."
+    notes: "A complement to MacKay. Chapters 2, 7, and 12 most relevant (entropy, channel capacity, maximum entropy). Theorem 2.8.1 is the data-processing inequality: stated week 2, proved week 7. Weeks 2, 4, and 7."
 
   - title: "Probability Theory: The Logic of Science"
     authors: "Jaynes, E. T."
@@ -169,6 +169,14 @@ reading:
     estimated_hours: 1
     notes: "Defines multi-information (total correlation). Week 7 (LO10)."
 
+  - title: "The Information Bottleneck Method"
+    authors: "Tishby, N., Pereira, F. C. & Bialek, W."
+    year: 1999
+    url: "https://arxiv.org/abs/physics/0004057"
+    required: false
+    estimated_hours: 1
+    notes: "Optional. Least-committal representation T of X that keeps I(T;Y). The prescription inside the data-processing inequality. Week 7 (LO10)."
+
   - title: "Information Theory and Statistical Mechanics"
     authors: "Jaynes, E. T."
     year: 1963
@@ -185,7 +193,7 @@ reading:
 Chapters 1–4 for entropy; Chapters 8–10 for dependent variables and the noisy channel; Chapter 22 for maximum entropy. The primary accessible reference for weeks 2 and 4.
 
 **Cover & Thomas (2006)** — *Elements of Information Theory* (2nd ed.)
-The rigorous complement to MacKay. Chapter 2 (entropy), Chapter 7 (channel capacity), Chapter 12 (maximum entropy). Weeks 2 and 4.
+The rigorous complement to MacKay. Chapter 2 (entropy), Chapter 7 (channel capacity), Chapter 12 (maximum entropy). Theorem 2.8.1 is the data-processing inequality: stated in week 2, proved in week 7. Weeks 2, 4, and 7.
 
 **Jaynes (2003)** — *Probability Theory: The Logic of Science* ([free online](https://bayes.wustl.edu/etj/prob/book.pdf))
 Chapters 11–12 on maximum entropy. The primary source for the Bayesian perspective (LO5–LO7). Week 4.
@@ -216,7 +224,7 @@ A supplementary monograph from the 2024 AIMS lectures. Variational free energy i
 | 3 | §3.3, pp. 49–52 (Maxwell, Landauer, Bennett); optional Parrondo et al. (2015); Ellis excerpt (Worksheet 2) | Szilard's engine calculation; full fluctuation-theorem formalism |
 | 4 | §1.5.5 (MaxEnt $\to$ canonical); Ch. 5 (ELBO as nonequilibrium free energy) | The three-perspective comparison. GAIST collapses thermo and ML; we do not. |
 | 5–6 | Nothing required. Ch. 17 is the *other* Crooks (1999 fluctuation theorem). | Thermodynamic length; Fisher–Rao; Amari; natural gradient. The speed limit in Ch. 22 is Wasserstein. |
-| 7 | — | Multi-information; $I+H=C$; von Neumann entropy |
+| 7 | — | Multi-information; $I+H=C$; DPI; information bottleneck; von Neumann entropy |
 | 8 | Ch. 14 (Schrödinger bridge, maximum caliber); §§22.2–22.3 ($W_2$, $\Sigma\ge W_2^2/(T\tau)$, finite-time Landauer) | A substitute for Crooks (2007). Keep the three geometries distinct. |
 
 ## Primary papers (required)
@@ -250,6 +258,9 @@ Thermodynamic length as Fisher–Rao length; dissipation $\ge \mathcal{L}^2/\tau
 
 **Watanabe (1960)** — "Information Theoretical Analysis of Multivariate Correlation," *IBM J. Res. Dev.*
 The original multi-information paper. Week 7 (LO10).
+
+**Tishby, Pereira & Bialek (1999)** — "The Information Bottleneck Method," Allerton / [arXiv:physics/0004057](https://arxiv.org/abs/physics/0004057).
+Optional. The variational problem $\min I(X;T)-\beta I(T;Y)$: keep relevance, discard the rest. Week 7 (LO10); used in week 8.
 
 **Jaynes (1963)** — "Information Theory and Statistical Mechanics," Brandeis lectures.
 MaxEnt applied to density matrices. Week 7 (LO11).

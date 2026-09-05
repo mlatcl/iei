@@ -36,7 +36,7 @@ word_count: 500
 
 \notes{Released after lecture 7 (24 November). Due by 10:00 at the start of lecture 8 (1 December), *before* Quiz 4. Estimated three hours. This is the capstone worksheet, 15% of the module mark.
 
-**Builds on the lecture.** Part A1–A2 use the $I+H=C$ family from lecture 7 (`multi-information-rho` figure). Part A3 repeats the Bell-state code from the lecture notebook. Part B mirrors lecture 8's three-geometries slide and perpetual-motion synthesis.}
+**Builds on the lecture.** Part A1–A2 use the $I+H=C$ family from lecture 7 (`multi-information-rho` figure). Part A3 repeats the Bell-state code from the lecture notebook. Part B mirrors lecture 8's three-geometries slide and perpetual-motion synthesis, and may use the data-processing inequality and the information bottleneck taught under LO10.
 
 \notes{Submit `candidatenumber_worksheet4.ipynb` and `candidatenumber_worksheet4.md` on Moodle. LLMs are permitted. Use the Lecture 1 habit: curiosity first, then skeptical probes. Authenticity is checked by Quiz 4 at the start of lecture 8, on a *new* example (three independent coins; a GHZ state rather than a Bell state).}
 
@@ -84,7 +84,7 @@ def partial_trace_B(rho):
 
 \writeassignment{Three geometries (200 words). Shannon abstracted a code as probability over symbols. Write a short argument for why *probability transport* -- moving a distribution from \(p\) to \(q\) -- is a natural abstraction of agency. Then distinguish, in your own words, three notions of an optimal trajectory that this module has named: Crooks / Fisher--Rao thermodynamic length, Wasserstein optimal transport, and the Schrödinger bridge. What would it mean to collapse them, and why must you not?}{25}{}
 
-\writeassignment{The perpetual motion analogy (300 words). Using at least two formal no-gos from the course (Landauer, \(\mathcal{L}^2/\tau\), \(I+H=C\), human bandwidth, the inaccessible game), argue why unbounded intelligence -- a system that processes information without entropic cost -- has the same shape as perpetual motion. Say which of your constraints are no-gos and which of the three geometries are prescriptions. Where is the analogy tight? Where does it break down? If you used an LLM, include the key responses as an appendix, not counted in the word limit.}{25}{}
+\writeassignment{The perpetual motion analogy (300 words). Using at least two formal no-gos from the course (Landauer, \(\mathcal{L}^2/\tau\), \(I+H=C\), the data-processing inequality, human bandwidth, the inaccessible game), argue why unbounded intelligence -- a system that processes information without entropic cost -- has the same shape as perpetual motion. Say which of your constraints are no-gos and which of the three geometries (or the information bottleneck) are prescriptions. Where is the analogy tight? Where does it break down? If you used an LLM, include the key responses as an appendix, not counted in the word limit.}{25}{}
 
 \section{Marking}
 
