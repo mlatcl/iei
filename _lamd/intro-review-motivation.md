@@ -276,11 +276,17 @@ $$
 
 <!-- /SNIPPET: _physics/includes/clausius-carnot-second-law.md -->
 
+\speakernotes{NOw shift to explaining the relationship between what we're teaching and how we're teaching. Our objective is to get information in you. Why do we have to do it in such a complex way. Need to lace this description of the atomic human with the pedagogy we're using.}
+
 \include{_books/includes/the-atomic-human.md}
 
 \include{_ai/includes/embodiment-factors-celsius.md}
 
 \notes{Shannon measured information in bits. Human communication is slow relative to machines — the embodiment factor. Lecture 3 derives $H$; today we only need the bit as a unit of uncertainty and of bandwidth.}
+
+\speakernotes{This may need to move to Lecture 2 depending on how much work we have introducing the pedagogy.}
+
+\comment{I think this means worksheet 1 might be about the general ideas presented here. Allowing them to bring skepticism. THe core idea of bandwidht limitations and how it effects the architecture of an intelligence???}
 
 \include{_physics/includes/laplace-portrait.md}
 \include{_physics/includes/laplaces-determinism.md}
