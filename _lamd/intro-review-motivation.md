@@ -7,10 +7,9 @@ venue: FW26, William Gates Building
 room: FW26
 transition: None
 abstract: >
-  Course mechanics and the Socratic worksheet method; a review of
-  probability and elementary entropy; then the course theme — entropy
-  forbids, probability prescribes — via perpetual motion, human
-  bandwidth, and a seeded Boltzmann distribution for Worksheet 1 to
+  Course motivation, mechanics and the 'Socratic' worksheet method; a review of
+  probability; the course theme of probability driving possibilities and entropy driving impossibilities. Entropy reminder, examples of uses of entropy and information theory in perpetual motion, and human
+  bandwidth. Review of the Boltzmann distribution for Worksheet 1 to
   interrogate before lecture 2.
 author:
 - given: Neil D.
