@@ -49,8 +49,8 @@ reading:
 * Probability and entropy review; then motivation and a Boltzmann seed
 }
 
-\notes{
-**Time plan (120 minutes)**
+\newslide{Time Plan}
+\notes{**Time plan (120 minutes)**}
 
 | Minutes | Block |
 |--------:|-------|
@@ -62,7 +62,6 @@ reading:
 | 95–115 | Motivation: perpetual motion, bandwidth; Boltzmann seed |
 | 115–120 | Worksheet 1 brief; Quiz 1 preview |
 
-}
 
 \subsection{Course Mechanics}
 
