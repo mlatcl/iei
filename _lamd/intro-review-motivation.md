@@ -93,7 +93,7 @@ reading:
 
 \slidesincremental{
 * Joint $P(x,y)$: both
-* Marginal $P(x)$: $ regardless of $y$
+* Marginal $P(x)$: regardless of $y$
 * Conditional $P(x\mid y)$: $x$ given $y$
 }
 
