@@ -130,6 +130,47 @@
 </ul>
 </div>
 </section>
+<section id="time-plan" class="slide level2">
+<h2>Time Plan</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Minutes</th>
+<th>Block</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">0–15</td>
+<td>Course mechanics; questions list; the motivation and theme</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">15–35</td>
+<td>‘Socratic’ approach: curiosity, skepticism, submission rules</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">35–65</td>
+<td>Probability review: product/sum/Bayes; basic distributions</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">65–75</td>
+<td>Break</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">75–95</td>
+<td>Entropy review (elementary <span class="math inline">\(H\)</span>); bits and nats</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">95–115</td>
+<td>Motivation: perpetual motion, bandwidth; Boltzmann seed</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">115–120</td>
+<td>Worksheet 1 brief; Quiz 1 preview</td>
+</tr>
+</tbody>
+</table>
+</section>
 <section id="course-mechanics" class="slide level2">
 <h2>Course Mechanics</h2>
 <div>
@@ -176,7 +217,7 @@
 <div>
 <ul>
 <li class="fragment">Joint <span class="math inline">\(P(x,y)\)</span>: both</li>
-<li class="fragment">Marginal <span class="math inline">\(P(x)\)</span>: $ regardless of <span class="math inline">\(y\)</span></li>
+<li class="fragment">Marginal <span class="math inline">\(P(x)\)</span>: regardless of <span class="math inline">\(y\)</span></li>
 <li class="fragment">Conditional <span class="math inline">\(P(x\mid y)\)</span>: <span class="math inline">\(x\)</span> given <span class="math inline">\(y\)</span></li>
 </ul>
 </div>
@@ -194,7 +235,7 @@ P(y\mid x)=\frac{P(x\mid y)P(y)}{P(x)}
 <ul>
 <li class="fragment">Follows from the product rule and symmetry of the joint</li>
 <li class="fragment">Inverts the conditioning — updates a prior given a likelihood</li>
-<li class="fragment">(x)=_y P(xy)P(y)$ when $ is discrete</li>
+<li class="fragment"><span class="math inline">\(P(x)=\sum_y P(x\mid y)P(y)\)</span> when <span class="math inline">\(y\)</span> is discrete</li>
 </ul>
 </div>
 <!-- /SNIPPET: _information/includes/probability-review-compact.md -->
@@ -350,7 +391,7 @@ Seed only. Full free-energy accounting is lecture 2. Worksheet 1 asks students t
 </div>
 <!-- /SNIPPET: _physics/includes/clausius-carnot-second-law.md -->
 <aside class="notes">
-NOw shift to explaining the relationship between what we’re teaching and how we’re teaching. Our objective is to get information in you. Why do we have to do it in such a complex way. Need to lace this description of the atomic human with the pedagogy we’re using.
+Now shift to explaining the relationship between what we’re teaching and how we’re teaching. Our objective is to get information in you. Why do we have to do it in such a complex way. Need to lace this description of the atomic human with the pedagogy we’re using.
 </aside>
 </section>
 <section id="section" class="slide level2">
@@ -550,6 +591,38 @@ To Laplace, determinism is a strawman. Ignorance of mechanism and data leads to 
 </object>
 -->
 </section>
+<section id="laplaces-gremlin-1" class="slide level2">
+<h2>Laplace’s Gremlin</h2>
+<div class="figure">
+<div id="probability-relative-in-part-figure" class="figure-frame">
+<div class="centered" style="">
+<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/philosophicaless00lapliala_18_cropped.png" width="60%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
+</div>
+</div>
+</div>
+<aside class="notes">
+To Laplace, determinism is a strawman. Ignorance of mechanism and data leads to uncertainty which should be dealt with through probability.
+</aside>
+<blockquote>
+<p><em>Philosophical Essay on Probabilities</em> <span class="citation" data-cites="Laplace-essai14">Laplace (1814)</span> pg 5</p>
+</blockquote>
+<aside class="notes">
+I like to refer to this notion as “Laplace’s Gremlin,” because the lack of knowledge is the “gremlin of uncertainty” that inhibits the “deterministic demon”
+</aside>
+</section>
+<section id="section-8" class="slide level2">
+<h2></h2>
+<div class="figure">
+<div id="germlins-think-its-fun-to-hurt-you-figure" class="figure-frame">
+<div class="centered centered" style="">
+<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/ai/gremlins-think-its-fun-to-hurt-you.jpg" width="40%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
+</div>
+</div>
+</div>
+<aside class="notes">
+Gremlins are seen as the cause of a number of challenges in this World War II poster.
+</aside>
+</section>
 <section id="boltzmann-seed" class="slide level2">
 <h2>Boltzmann Seed</h2>
 <p>For fixed mean energy <span class="math inline">\(U\)</span>, the maximum-entropy occupation is the Boltzmann distribution.</p>
@@ -560,6 +633,9 @@ To Laplace, determinism is a strawman. Ignorance of mechanism and data leads to 
 <li class="fragment">Week 2: derive, account with free energy <span class="math inline">\(F=U-TS\)</span>, name the bath</li>
 </ul>
 </div>
+<aside class="notes">
+Do not derive Lagrange multipliers today. State the formula so Worksheet 1 has a concrete claim to open and then press. Students should leave curious about why <em>this</em> exponential, what <span class="math inline">\(\beta\)</span> means, and whether entropy here is a constraint or a recipe.
+</aside>
 <aside class="notes">
 Optional live check. Deep dive and free-energy plots are lecture 2.
 </aside>
@@ -607,6 +683,9 @@ Optional live check. Deep dive and free-energy plots are lecture 2.
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
 <div id="ref-Bishop:book06" class="csl-entry" role="doc-biblioentry">
 Bishop, C.M., 2006. Pattern recognition and machine learning. springer.
+</div>
+<div id="ref-Laplace-essai14" class="csl-entry" role="doc-biblioentry">
+Laplace, P.S., 1814. Essai philosophique sur les probabilités, 2nd ed. Courcier, Paris.
 </div>
 <div id="ref-Lawrence-atomic24" class="csl-entry" role="doc-biblioentry">
 Lawrence, N.D., 2024. The atomic human: Understanding ourselves in the age of AI. Allen Lane.
