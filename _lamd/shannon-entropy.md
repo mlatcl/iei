@@ -144,7 +144,7 @@ mlai.write_figure('binary-entropy.svg', directory='\writeDiagramsDir/ml')}
 
 \subsection{Dasher}
 
-\include{_ml/includes/dasher.md}
+\include{_information/includes/dasher.md}
 
 \notes{Dasher is the pair in one interface. Letter height is $p(\mathrm{char}\mid\mathrm{context})$; the information cost of a hit is $-\log p$. $H(\mathrm{next})$ is the no-go on the remaining rate. The language model is the prescription: this is the next letter you should make easy to hit. The bits-per-second counter is the same unit as lecture 1's bandwidth bottleneck — here spent on a pointer, not on speech.}
 
