@@ -126,6 +126,7 @@
 <ul>
 <li class="fragment">Quiz 4 (ten minutes)</li>
 <li class="fragment">Same marginals, different joints; then <span class="math inline">\(I+H=C\)</span></li>
+<li class="fragment">DPI and the information bottleneck</li>
 <li class="fragment">Why <span class="math inline">\(I=C\)</span> forces von Neumann entropy</li>
 </ul>
 </div>
@@ -449,6 +450,49 @@ Multi-information and joint entropy for uniform-marginal binary pairs; <span cla
 </object>
 <!-- /SNIPPET: _physics/includes/multi-information-worked.md -->
 </section>
+<section id="data-processing-inequality" class="slide level2">
+<h2>Data-Processing Inequality</h2>
+<p>If <span class="math inline">\(X\to Y\to Z\)</span> is a Markov chain, processing cannot create information about <span class="math inline">\(X\)</span>.</p>
+<div>
+<ul>
+<li class="fragment">Markov: <span class="math inline">\(p(z\mid x,y)=p(z\mid y)\)</span>, equivalently <span class="math inline">\(I(X;Z\mid Y)=0\)</span></li>
+<li class="fragment"><span class="math inline">\(I(X;Y,Z)=I(X;Y)+I(X;Z\mid Y)=I(X;Y)\)</span></li>
+<li class="fragment"><span class="math inline">\(I(X;Y,Z)=I(X;Z)+I(X;Y\mid Z)\ge I(X;Z)\)</span></li>
+<li class="fragment">Therefore <span class="math inline">\(I(X;Z)\le I(X;Y)\)</span></li>
+</ul>
+</div>
+<aside class="notes">
+LO10. Cover and Thomas Theorem 2.8.1. Board the two expansions of <span class="math inline">\(I(X;Y,Z)\)</span>. No-go: you cannot process your way to more <span class="math inline">\(I\)</span>.
+</aside>
+</section>
+<section id="information-bottleneck" class="slide level2">
+<h2>Information Bottleneck</h2>
+<p>Least-committal <span class="math inline">\(T\)</span> given a relevance constraint — MaxEnt, now on mutual information.</p>
+<div>
+<ul>
+<li class="fragment">Markov: <span class="math inline">\(Y \leftrightarrow X \leftrightarrow T\)</span></li>
+<li class="fragment">Minimise <span class="math inline">\(I(X;T)\)</span> subject to <span class="math inline">\(I(T;Y)\ge R\)</span></li>
+<li class="fragment">Lagrangian: <span class="math inline">\(I(X;T)-\beta I(T;Y)\)</span></li>
+<li class="fragment">DPI bound: <span class="math inline">\(I(T;Y)\le I(X;Y)\)</span></li>
+</ul>
+</div>
+<aside class="notes">
+LO10. <span class="math inline">\(\beta\to 0\)</span> discards everything; <span class="math inline">\(\beta\to\infty\)</span> keeps <span class="math inline">\(T=X\)</span>. Optimal <span class="math inline">\(p(t\mid x)\)</span> is Boltzmann / exponential family. Week 8 uses this as a tool, not a new outcome.
+</aside>
+<!-- SNIPPET: _information/includes/information-bottleneck-curve.md -->
+<div class="figure">
+<div id="information-bottleneck-region-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/information-bottleneck-region.svg" width="75%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+DPI supplies the feasible region. The information bottleneck traces the upper boundary: keep <span class="math inline">\(I(T;Y)\)</span>, spend as little <span class="math inline">\(I(X;T)\)</span> as possible.
+</aside>
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/information-bottleneck-region.svg" width="75%" style=" ">
+</object>
+<!-- /SNIPPET: _information/includes/information-bottleneck-curve.md -->
+</section>
 <section id="the-inaccessible-game" class="slide level2">
 <h2>The Inaccessible Game</h2>
 </section>
@@ -488,20 +532,6 @@ Multi-information and joint entropy for uniform-marginal binary pairs; <span cla
 <li>Landauer’s principle derivable</li>
 <li>Bridge between information and physics</li>
 </ul>
-<!-- SNIPPET: _information-game/includes/jaynes-world-two-bin-bridge.md -->
-<p>The inaccessible game is the minimal dynamics behind the information-engines talk — optional depth, not examinable detail.</p>
-<div>
-<ul>
-<li class="fragment">Simplest case: two-bin <span class="math inline">\(p\)</span>, <span class="math inline">\((1-p)\)</span>; entropy <span class="math inline">\(S(p) = -p\log p - (1-p)\log(1-p)\)</span></li>
-<li class="fragment">Fisher information <span class="math inline">\(G(\theta) = p(1-p)\)</span> on the log-odds chart — week 5</li>
-<li class="fragment">Near <span class="math inline">\(p\to 0,1\)</span>: <span class="math inline">\(G\to 0\)</span> — critical slowing; marginals become information reservoirs</li>
-<li class="fragment">Same <span class="math inline">\(I+H=C\)</span> story: structure (<span class="math inline">\(I\)</span>) versus free uncertainty (<span class="math inline">\(H\)</span>)</li>
-</ul>
-</div>
-<aside class="notes">
-Point to inverseprobability.com information-engines notes and two-bin snippets for students who want the full Jaynes-world tour. Week 8 unifies the lenses.
-</aside>
-<!-- /SNIPPET: _information-game/includes/jaynes-world-two-bin-bridge.md -->
 </section>
 <section id="von-neumann-entropy" class="slide level2">
 <h2>Von Neumann Entropy</h2>
@@ -587,43 +617,14 @@ LO11. Run Bell-state cell. Worksheet 4: <span class="math inline">\(S(\rho)=0\)<
 </section>
 <section id="purely-entropic-readings-first-attempt" class="slide level2">
 <h2>Purely Entropic Readings: First Attempt</h2>
-<!-- SNIPPET: _physics/includes/schottky-good-regulator-preview.md -->
-<p>Two course questions get a first answer today; lecture 8 completes them.</p>
-<div>
-<ul>
-<li class="fragment">Schottky peak: two-state reservoir filling and emptying</li>
-<li class="fragment">Good Regulator: regulator must hold enough <span class="math inline">\(I\)</span> to model the system</li>
-<li class="fragment">Worksheet 4 and lecture 8 finish the argument</li>
-</ul>
-</div>
-<aside class="notes">
-Schottky preview — link to lecture 1 peak. Good Regulator as <span class="math inline">\(I\)</span>/<span class="math inline">\(H\)</span> constraint. Lecture 8 completes both.
-</aside>
-<div class="figure">
-<div id="schottky-entropy-preview-figure" class="figure-frame">
-<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/schottky-entropy-preview.svg" width="70%" style=" ">
-</object>
-</div>
-</div>
-<aside class="notes">
-Single two-state entropy versus temperature — preview of the entropic Schottky reading.
-</aside>
-<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/schottky-entropy-preview.svg" width="70%" style=" ">
-</object>
-<!-- /SNIPPET: _physics/includes/schottky-good-regulator-preview.md -->
-<div>
-<ul>
-<li class="fragment">Schottky, entropically: a two-state reservoir</li>
-<li class="fragment">Good Regulator, entropically: a constraint on <span class="math inline">\(I\)</span> and <span class="math inline">\(H\)</span></li>
-<li class="fragment">Finish these in week 8</li>
-</ul>
-</div>
 </section>
 <section id="define-this-week" class="slide level2">
 <h2>Define This Week</h2>
 <div>
 <ul>
 <li class="fragment">Multi-information versus mutual information?</li>
+<li class="fragment">What is the data processing inequality?</li>
+<li class="fragment">What is the information bottleneck?</li>
 <li class="fragment">What is von Neumann entropy?</li>
 <li class="fragment">What is the matrix exponential family?</li>
 </ul>
@@ -633,8 +634,7 @@ Single two-state entropy versus temperature — preview of the entropic Schottky
 <h2>After This Lecture</h2>
 <div>
 <ul>
-<li class="fragment">Worksheet 4 released; due 1 December</li>
-<li class="fragment">Quiz 4: 1 December, first ten minutes</li>
+<li class="fragment">Limits on intelligence follow</li>
 </ul>
 </div>
 </section>
@@ -642,6 +642,8 @@ Single two-state entropy versus temperature — preview of the entropic Schottky
 <h2 class="scrollable">Further Reading</h2>
 <ul>
 <li><p>the whole paper of <span class="citation" data-cites="Watanabe-multiinformation60">Watanabe (1960)</span></p></li>
+<li><p>Theorem 2.8.1 of <span class="citation" data-cites="Cover:elements91">Cover and Thomas (1991)</span></p></li>
+<li><p>the method; optional of <span class="citation" data-cites="Tishby:bottleneck99">Tishby et al. (1999)</span></p></li>
 <li><p>https://inverseprobability.com/talks/notes/information-engines.html — Jaynes’ world and unified intelligence perspective of Information Engines seminar notes</p></li>
 <li><p>Chapter 11 of <span class="citation" data-cites="Nielsen-quantum10">Nielsen and Chuang (2010)</span></p></li>
 <li><p>the Brandeis lectures of <span class="citation" data-cites="Jaynes-information63">Jaynes (1963)</span></p></li>
@@ -661,11 +663,17 @@ Single two-state entropy versus temperature — preview of the entropic Schottky
 <section id="references" class="slide level2 unnumbered scrollable">
 <h2 class="unnumbered scrollable">References</h2>
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-Cover:elements91" class="csl-entry" role="doc-biblioentry">
+Cover, T.M., Thomas, J.A., 1991. Elements of information theory. Wiley, New York.
+</div>
 <div id="ref-Jaynes-information63" class="csl-entry" role="doc-biblioentry">
 Jaynes, E.T., 1963. Information theory and statistical mechanics, in: Ford, K.W. (Ed.), Brandeis University Summer Institute Lectures in Theoretical Physics, Vol. 3: Statistical Physics. W. A. Benjamin, Inc., New York, pp. 181–218.
 </div>
 <div id="ref-Nielsen-quantum10" class="csl-entry" role="doc-biblioentry">
 Nielsen, M.A., Chuang, I.L., 2010. Quantum computation and quantum information, 10th Anniversary. ed. Cambridge University Press, Cambridge, UK.
+</div>
+<div id="ref-Tishby:bottleneck99" class="csl-entry" role="doc-biblioentry">
+Tishby, N., Pereira, F.C., Bialek, W., 1999. The information bottleneck method, in: Proceedings of the 37th Annual Allerton Conference on Communication, Control and Computing. pp. 368–377.
 </div>
 <div id="ref-Watanabe-multiinformation60" class="csl-entry" role="doc-biblioentry">
 Watanabe, S., 1960. Information theoretical analysis of multivariate correlation. IBM Journal of Research and Development 4, 66–82. <a href="https://doi.org/10.1147/rd.41.0066">https://doi.org/10.1147/rd.41.0066</a>
