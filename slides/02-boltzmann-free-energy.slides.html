@@ -140,27 +140,8 @@
 </ul>
 </div>
 </section>
-<section id="entropy-forbids-probability-prescribes" class="slide level2">
-<h2>Entropy Forbids; Probability Prescribes</h2>
-<p>When modelling in practice, we often account for this with cost functions. We There’s a funny thing about entropy too. A friustrating thing about modellingSo why should we look at entropy? One idea that will emerge across the course is the notion that probability tells us what a system will do. But entropy (somehow) tells us what a system won’t do. For example, we know that perpetual motion machines can’t exist because, by the second law of thermodynamics, the cause entropy to be produced. This tells us that if we see a wheel spinning, and we are not injecting energy into the wheel, eventually the wheel will stop spinning. It doesn’t tell us the dynamics by which the spinning will stop. It doesn’t tell us when it will stop. It just tells us that it won’t keep spinning for ever. If we had the probability distribution that described the system, that would tell us when the wheel was likely to stop. So somehow probability tells us what’s going to happen, where as entropy tells us whats not going to happen. We’ll explore this intuition as we go through the course, but its behind the idea why we might look to entropy to place limits on the performance of an intelligent system.}</p>
-<div>
-<ul>
-<li class="fragment">Entropy: no-go theorems</li>
-<li class="fragment">Probability: what we should do</li>
-<li class="fragment">Same <span class="math inline">\(H\)</span>, two jobs</li>
-</ul>
-</div>
-</section>
-<section id="two-jobs" class="slide level2">
-<h2>Two Jobs</h2>
-<div>
-<ul>
-<li class="fragment">No-go: what is forbidden</li>
-<li class="fragment">Prescription: the <span class="math inline">\(p\)</span> you should adopt</li>
-<li class="fragment">We will draw this idea out every week</li>
-</ul>
-</div>
-<p>###{From the Seed to the Derivation}</p>
+<section id="from-the-seed-to-the-derivation" class="slide level2">
+<h2>From the Seed to the Derivation</h2>
 </section>
 <section id="perpetual-motion-and-superintelligence" class="slide level2">
 <h2>Perpetual Motion and Superintelligence</h2>
@@ -232,400 +213,6 @@ Carnot is the efficiency question; Clausius is the second law and the word entro
 </ul>
 </div>
 <!-- /SNIPPET: _physics/includes/clausius-carnot-second-law.md -->
-</section>
-<section id="section" class="slide level2">
-<h2></h2>
-<div class="figure">
-<div id="the-atomic-human-figure" class="figure-frame">
-<div class="centered centered" style="">
-<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/books/the-atomic-human.jpg" width="40%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
-</div>
-</div>
-</div>
-<aside class="notes">
-<a href="https://the-atomic-human.ai">The Atomic Human</a> <span class="citation" data-cites="Lawrence-atomic24">(Lawrence, 2024)</span>.
-</aside>
-</section>
-<section id="information-and-embodiment" class="slide level2">
-<h2>Information and Embodiment</h2>
-<div class="figure">
-<div id="claude-shannon-figure" class="figure-frame">
-<center>
-<div class="centered centered" style="">
-<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/ClaudeShannon_MFO3807.jpg" width="40%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
-</div>
-</center>
-<center>
-<em>Claude Shannon</em>
-</center>
-</div>
-</div>
-<aside class="notes">
-Claude Shannon (1916-2001)
-</aside>
-<aside class="notes">
-Just as we measure temperature. Just as Celsius gave us the scale for temperature, so entropy measures ignorance. Formalised most famously by Claude Shannon
-</aside>
-</section>
-<section id="embodiment-factors" class="slide level2">
-<h2>Embodiment Factors</h2>
-<div class="figure">
-<div id="embodiment-factors-table-figure" class="figure-frame">
-<table>
-<tr>
-<td>
-</td>
-<td align="center">
-<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ai/processor.svg" width="15%" style=" ">
-</object>
-</td>
-<td align="center">
-<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/human.svg" width="60%" style=" ">
-</object>
-</td>
-</tr>
-<tr>
-<td>
-bits/min
-</td>
-<td align="center">
-billions
-</td>
-<td align="center">
-2,000
-</td>
-</tr>
-<tr>
-<td>
-billion <br>calculations/s
-</td>
-<td align="center">
-~100
-</td>
-<td align="center">
-a billion
-</td>
-</tr>
-<tr>
-<td>
-embodiment
-</td>
-<td align="center">
-20 minutes
-</td>
-<td align="center">
-5 billion years
-</td>
-</tr>
-</table>
-</div>
-</div>
-<aside class="notes">
-Embodiment factors are the ratio between our ability to compute and our ability to communicate. Relative to the machine we are also locked in. In the table we represent embodiment as the length of time it would take to communicate one second’s worth of computation. For computers it is a matter of minutes, but for a human, it is a matter of thousands of millions of years.
-</aside>
-<p>We are already counting in Shannon’s bits — embodiment is a communication bottleneck, not yet a theorem.</p>
-<div>
-<ul>
-<li class="fragment">Lecture 3: why <em>bits</em>, and <span class="math inline">\(H=-\sum_i p_i\log p_i\)</span> from axioms</li>
-<li class="fragment">Same functional form as Boltzmann <span class="math inline">\(S\)</span>; different operational reading</li>
-<li class="fragment">The intelligence question sharpens in lecture 4 (Landauer, Bauby)</li>
-</ul>
-</div>
-<aside class="notes">
-Portrait and table are enough today. Forward pointer only — do not derive <span class="math inline">\(H\)</span>.
-</aside>
-</section>
-<section id="section-1" class="slide level2">
-<h2></h2>
-<div class="figure">
-<div id="pierre-simon-laplace-image-figure" class="figure-frame">
-<div class="centered" style="">
-<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/ml/Pierre-Simon_Laplace.png" width="30%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
-</div>
-</div>
-</div>
-<aside class="notes">
-Pierre-Simon Laplace 1749-1827.
-</aside>
-</section>
-<section id="section-2" class="slide level2">
-<h2></h2>
-<div class="figure">
-<div id="laplaces-determinism-google-books-figure" class="figure-frame">
-<div class="centered" style="">
-<a href="https://play.google.com/books/reader?id=1YQPAAAAQAAJ&amp;pg=PR17-IA2"><img data-src="https://mlatcl.github.io/iei/slides/diagrams/books/1YQPAAAAQAAJ-PR17-IA2.png" /></a>
-</div>
-</div>
-</div>
-<aside class="notes">
-Laplace’s determinism book reference.
-</aside>
-</section>
-<section id="section-3" class="slide level2">
-<h2></h2>
-<div class="figure">
-<div id="laplaces-determinism-english-figure" class="figure-frame">
-<div class="centered" style="">
-<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/laplacesDeterminismEnglish.png" width="60%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
-</div>
-</div>
-</div>
-<aside class="notes">
-Laplace’s determinsim in English translation.
-</aside>
-</section>
-<section id="section-4" class="slide level2">
-<h2></h2>
-<div class="figure">
-<div id="laplaces-demon-cropped-figure" class="figure-frame">
-<div class="centered" style="">
-<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/philosophicaless00lapliala_16_cropped.png" width="60%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
-</div>
-</div>
-</div>
-<aside class="notes">
-</aside>
-<!--<object data="https://mlatcl.github.io/iei/slides/diagrams/physics/philosophicaless00lapliala.pdf" type="application/pdf" width="80%" height="">
-    <embed src="https://mlatcl.github.io/iei/slides/diagrams/physics/philosophicaless00lapliala.pdf" type="application/pdf">
-        <p>This browser does not support PDF viewing. Please download the PDF to view it: <a href="https://mlatcl.github.io/iei/slides/diagrams/physics/philosophicaless00lapliala.pdf">Download PDF</a>.</p>
-    </embed>
-</object>-->
-</section>
-<section id="laplaces-gremlin" class="slide level2">
-<h2>Laplace’s Gremlin</h2>
-</section>
-<section id="section-5" class="slide level2">
-<h2></h2>
-<div class="figure">
-<div id="laplaces-gremlin-google-books-figure" class="figure-frame">
-<div class="centered" style="">
-<a href="https://play.google.com/books/reader?id=1YQPAAAAQAAJ&amp;pg=PR17-IA4"><img data-src="https://mlatcl.github.io/iei/slides/diagrams/books/1YQPAAAAQAAJ-PR17-IA4.png" /></a>
-</div>
-</div>
-</div>
-<aside class="notes">
-Laplace’s gremlin in the original French.
-</aside>
-</section>
-<section id="section-6" class="slide level2">
-<h2></h2>
-<div class="figure">
-<div id="probability-relative-in-part-figure" class="figure-frame">
-<div class="centered" style="">
-<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/philosophicaless00lapliala.png" width="60%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
-</div>
-</div>
-</div>
-<aside class="notes">
-To Laplace, determinism is a strawman. Ignorance of mechanism and data leads to uncertainty which should be dealt with through probability.
-</aside>
-</section>
-<section id="section-7" class="slide level2">
-<h2></h2>
-<div class="figure">
-<div id="probability-relative-in-part-cropped-figure" class="figure-frame">
-<div class="centered" style="">
-<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/philosophicaless00lapliala_18_cropped.png" width="60%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
-</div>
-</div>
-</div>
-<aside class="notes">
-</aside>
-<!--<object data="https://mlatcl.github.io/iei/slides/diagrams/physics/philosophicaless00lapliala.pdf" type="application/pdf" width="80%" height="">
-    <embed src="https://mlatcl.github.io/iei/slides/diagrams/physics/philosophicaless00lapliala.pdf" type="application/pdf">
-        <p>This browser does not support PDF viewing. Please download the PDF to view it: <a href="https://mlatcl.github.io/iei/slides/diagrams/physics/philosophicaless00lapliala.pdf">Download PDF</a>.</p>
-    </embed>
-</object>
--->
-</section>
-<section id="entropy-and-the-boltzmann-distribution" class="slide level2">
-<h2>Entropy and the Boltzmann Distribution</h2>
-</section>
-<section id="hydrodynamica" class="slide level2">
-<h2>Hydrodynamica</h2>
-</section>
-<section id="section-8" class="slide level2">
-<h2></h2>
-<div class="figure">
-<div id="hydrodynamica-danielis-bernoulli-figure" class="figure-frame">
-<div class="centered" style="">
-<a href="https://play.google.com/books/reader?id=3yRVAAAAcAAJ&amp;pg=PP7"><img data-src="https://mlatcl.github.io/iei/slides/diagrams/books/3yRVAAAAcAAJ-PP7.png" /></a>
-</div>
-</div>
-</div>
-<aside class="notes">
-Daniel Bernoulli’s <em>Hydrodynamica</em> published in 1738. It was one of the first works to use the idea of conservation of energy. It used Newton’s laws to predict the behaviour of gases.
-</aside>
-</section>
-<section id="section-9" class="slide level2">
-<h2></h2>
-<div class="figure">
-<div id="bernoulli-kinetic-theory-chapter-figure" class="figure-frame">
-<div class="centered" style="">
-<a href="https://play.google.com/books/reader?id=3yRVAAAAcAAJ&amp;pg=PA200"><img data-src="https://mlatcl.github.io/iei/slides/diagrams/books/3yRVAAAAcAAJ-PA200.png" /></a>
-</div>
-</div>
-</div>
-<aside class="notes">
-Daniel Bernoulli’s chapter on the kinetic theory of gases, for a review on the context of this chapter see <span class="citation" data-cites="Mikhailov:hydrodynamica05">Mikhailov (n.d.)</span>. For 1738 this is extraordinary thinking. The notion of kinetic theory of gases wouldn’t become fully accepted in Physics until 1908 when a model of Einstein’s was verified by Jean Baptiste Perrin.
-</aside>
-</section>
-<section id="entropy-billiards" class="slide level2">
-<h2>Entropy Billiards</h2>
-<div class="figure">
-<div id="entropy-billiards-js-figure" class="figure-frame">
-<div style="display:flex;flex-wrap:wrap;gap:8px;align-items:flex-start">
-<div style="flex:1 1 400px;min-width:0">
-<canvas id="multiball-canvas" width="700" height="500" style="border:1px solid black;display:block;width:100%">
-</canvas>
-</div>
-<div style="flex:0 1 280px;min-width:0;display:flex;flex-direction:column;gap:6px">
-<div>
-Velocity-bin entropy:
-<output id="multiball-entropy">
-</output>
-</div>
-<div id="multiball-histogram-canvas" style="width:100%;height:250px">
-
-</div>
-<div style="display:flex;flex-wrap:wrap;gap:4px">
-<button id="multiball-newball">
-New Ball
-</button>
-<button id="multiball-pause">
-Pause
-</button>
-<button id="multiball-skip">
-Skip 1000s
-</button>
-<button id="multiball-histogram">
-Histogram
-</button>
-</div>
-</div>
-</div>
-<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-<!--
-Loads the shared Ballworld runtime used by interactive physics demos
-(e.g. multiball, Maxwell, Szilard, kappenball). Scenario-specific
-behaviour is provided by follow-on scripts such as maxwell.js.
--->
-<script src="https://inverseprobability.com/talks/scripts//ballworld/ballworld.js"></script>
-<script src="https://inverseprobability.com/talks/scripts//ballworld/multiball.js"></script>
-</div>
-</div>
-<aside class="notes">
-Bernoulli’s simple kinetic models of gases assume that the molecules of air operate like billiard balls. The displayed entropy is the Shannon entropy of the observed velocity histogram (a coarse-grained proxy, not full thermodynamic entropy).
-</aside>
-</section>
-<section id="section-10" class="slide level2">
-<h2></h2>
-<div class="figure">
-<div id="gaussian-histogram-figure" class="figure-frame">
-<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/gaussian-histogram.svg" width="80%" style=" ">
-</object>
-</div>
-</div>
-<aside class="notes">
-James Clerk Maxwell 1831-1879 Derived distribution of velocities of particles in an ideal gas (elastic fluid).
-</aside>
-</section>
-<section id="section-11" class="slide level2">
-<h2></h2>
-<div class="figure">
-<div id="maxwell-boltzmann-gibbs-figure" class="figure-frame">
-<div class="lamd-columns" style="display:flex; width:100%; justify-content:center; align-items:center; column-gap:1em;">
-<div style="flex:0 0 30%; max-width:30%;">
-<div class="centered" style="">
-<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/james-clerk-maxwell.png" width="100%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
-</div>
-</div>
-<div style="flex:0 0 30%; max-width:30%;">
-<div class="centered centered" style="">
-<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/boltzmann2.jpg" width="100%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
-</div>
-</div>
-<div style="flex:0 0 30%; max-width:30%;">
-<div class="centered centered" style="">
-<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/j-w-gibbs.jpg" width="100%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
-</div>
-</div>
-</div>
-</div>
-</div>
-<aside class="notes">
-James Clerk Maxwell (1831-1879), Ludwig Boltzmann (1844-1906) Josiah Willard Gibbs (1839-1903)
-</aside>
-</section>
-<section id="section-12" class="slide level2">
-<h2></h2>
-<div class="figure">
-<div id="boltzmann-warmetheorie-figure" class="figure-frame">
-<div class="centered" style="">
-<a href="https://play.google.com/books/reader?id=Vuk5AQAAMAAJ&amp;pg=PA373"><img data-src="https://mlatcl.github.io/iei/slides/diagrams/books/Vuk5AQAAMAAJ-PA373.png" /></a>
-</div>
-</div>
-</div>
-<aside class="notes">
-Boltzmann’s paper <span class="citation" data-cites="Boltzmann-warmetheorie77">Boltzmann (n.d.)</span> which introduced the relationship between entropy and probability. A translation with notes is available in <span class="citation" data-cites="Kim-translation15">Sharp and Matschinsky (2015)</span>.
-</aside>
-</section>
-<section id="section-13" class="slide level2">
-<h2></h2>
-<div class="figure">
-<div id="eddington-book-figure" class="figure-frame">
-<div class="lamd-columns" style="display:flex; width:100%; justify-content:center; align-items:center; column-gap:1em;">
-<div style="flex:0 0 49%; max-width:49%;">
-<div class="centered centered" style="">
-<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/arthur-stanley-eddington.jpg" width="100%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
-</div>
-</div>
-<div style="flex:0 0 49%; max-width:49%;">
-<div class="centered" style="">
-<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/natureofphysical00eddi_7.png" width="80%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
-</div>
-</div>
-</div>
-</div>
-</div>
-<aside class="notes">
-Eddington’s book on the Nature of the Physical World <span class="citation" data-cites="Eddington:nature29">(Eddington, 1929)</span>
-</aside>
-</section>
-<section id="section-14" class="slide level2">
-<h2></h2>
-<div class="figure">
-<div id="physical-world-chandra-figure" class="figure-frame">
-<div class="lamd-columns" style="display:flex; width:100%; justify-content:center; align-items:center; column-gap:1em;">
-<div style="flex:0 0 49%; max-width:49%;">
-<div class="centered" style="">
-<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/natureofphysical00eddi_100.png" width="80%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
-</div>
-</div>
-<div style="flex:0 0 49%; max-width:49%;">
-<div class="centered" style="">
-<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/ChandraNobel.png" width="100%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
-</div>
-</div>
-</div>
-</div>
-</div>
-<aside class="notes">
-Chandrasekhar (1910-1995) derived the limit at which a star collapses in on itself. Eddington’s confidence in the 2nd law may have been what drove him to dismiss Chandrasekhar’s ideas, humiliating a young scientist who would later receive a Nobel prize for the work.
-</aside>
-</section>
-<section id="section-15" class="slide level2">
-<h2></h2>
-<div class="figure">
-<div id="deepest-humiliation-eddington-cropped-figure" class="figure-frame">
-<div class="centered" style="">
-<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/natureofphysical00eddi_100_cropped.png" width="60%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
-</div>
-</div>
-</div>
-<aside class="notes">
-Eddington makes his feelings about the primacy of the second law clear. This primacy is perhaps because the second law can be demonstrated mathematically, building on the work of Maxwell, Gibbs and Boltzmann. <span class="citation" data-cites="Eddington:nature29">Eddington (1929)</span>
-</aside>
 <!-- SNIPPET: _physics/includes/boltzmann-derivation.md -->
 <p>For a prescribed mean energy <span class="math inline">\(U\)</span>. Among all distributions with the right <span class="math inline">\(U\)</span>, pick the one with largest entropy.</p>
 <div>
@@ -756,8 +343,6 @@ Do not define thermodynamic length today. Name quasi-static <span class="math in
 <aside class="notes">
 Cartoon of quasi-static versus finite-time driving between two equilibrium states.
 </aside>
-<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/finite-time-sketch.svg" width="70%" style=" ">
-</object>
 <!-- /SNIPPET: _physics/includes/finite-time-dissipation-intro.md -->
 <div>
 <ul>
@@ -777,7 +362,9 @@ Cartoon of quasi-static versus finite-time driving between two equilibrium state
 <li class="fragment">What is Schottky’s anomaly?</li>
 </ul>
 </div>
-<p>###{After This Lecture}</p>
+</section>
+<section id="after-this-lecture" class="slide level2">
+<h2>After This Lecture</h2>
 <div>
 <ul>
 <li class="fragment">Next: Shannon <span class="math inline">\(H\)</span> and <span class="math inline">\(Z\)</span> as generating function</li>
@@ -788,7 +375,6 @@ Cartoon of quasi-static versus finite-time driving between two equilibrium state
 <section id="further-reading" class="slide level2 scrollable">
 <h2 class="scrollable">Further Reading</h2>
 <ul>
-<li><p>Chapter 1 of <span class="citation" data-cites="Lawrence-atomic24">Lawrence (2024)</span></p></li>
 <li><p>Why Stochastic Thermodynamics of Machine Learning? of <span class="citation" data-cites="Welling-generative26">Welling et al. (2026)</span></p></li>
 <li><p>Chapter 3 of <span class="citation" data-cites="Welling-generative26">Welling et al. (2026)</span></p></li>
 <li><p>Chapters 1–4 of <span class="citation" data-cites="Callen-thermostatistics85">Callen (1985)</span></p></li>
@@ -809,23 +395,8 @@ Cartoon of quasi-static versus finite-time driving between two equilibrium state
 <section id="references" class="slide level2 unnumbered scrollable">
 <h2 class="unnumbered scrollable">References</h2>
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
-<div id="ref-Boltzmann-warmetheorie77" class="csl-entry" role="doc-biblioentry">
-Boltzmann, L., n.d. Über die <span>B</span>eziehung zwischen dem zweiten <span>H</span>auptsatze der mechanischen <span>W</span>armetheorie und der <span>W</span>ahrscheinlichkeitsrechnung, respective den <span>S</span>ätzen über das wärmegleichgewicht. Sitzungberichte der Kaiserlichen Akademie der Wissenschaften. Mathematisch-Naturwissen Classe. Abt. II LXXVI, 373–435.
-</div>
 <div id="ref-Callen-thermostatistics85" class="csl-entry" role="doc-biblioentry">
 Callen, H.B., 1985. Thermodynamics and an introduction to thermostatistics, 2nd ed. Wiley, New York.
-</div>
-<div id="ref-Eddington:nature29" class="csl-entry" role="doc-biblioentry">
-Eddington, A.S., 1929. The nature of the physical world. Dent (London). <a href="https://doi.org/10.2307/2180099">https://doi.org/10.2307/2180099</a>
-</div>
-<div id="ref-Lawrence-atomic24" class="csl-entry" role="doc-biblioentry">
-Lawrence, N.D., 2024. The atomic human: Understanding ourselves in the age of AI. Allen Lane.
-</div>
-<div id="ref-Mikhailov:hydrodynamica05" class="csl-entry" role="doc-biblioentry">
-Mikhailov, G.K., n.d. Daniel bernoulli, hydrodynamica (1738).
-</div>
-<div id="ref-Kim-translation15" class="csl-entry" role="doc-biblioentry">
-Sharp, K., Matschinsky, F., 2015. Translation of <span>L</span>udwig <span>B</span>oltzmann’s paper <span>“on the relationship between the second fundamental theorem of the mechanical theory of heat and probability calculations regarding the conditions for thermal equilibrium.”</span> Entropy 17, 1971–2009. <a href="https://doi.org/10.3390/e17041971">https://doi.org/10.3390/e17041971</a>
 </div>
 <div id="ref-Welling-generative26" class="csl-entry" role="doc-biblioentry">
 Welling, M., Lu, S., Holdijk, L., 2026. Generative AI and stochastic thermodynamics: A tale of free energies. Cambridge University Press, Cambridge, U.K.

@@ -487,6 +487,17 @@ Embodiment factors are the ratio between our ability to compute and our ability 
 <aside class="notes">
 This may need to move to Lecture 2 depending on how much work we have introducing the pedagogy.
 </aside>
+<p>We are already counting in Shannon’s bits — embodiment is a communication bottleneck, not yet a theorem.</p>
+<div>
+<ul>
+<li class="fragment">Lecture 3: why <em>bits</em>, and <span class="math inline">\(H=-\sum_i p_i\log p_i\)</span> from axioms</li>
+<li class="fragment">Same functional form as Boltzmann <span class="math inline">\(S\)</span>; different operational reading</li>
+<li class="fragment">The intelligence question sharpens in lecture 4 (Landauer, Bauby)</li>
+</ul>
+</div>
+<aside class="notes">
+Portrait and table are enough today. Forward pointer only — do not derive <span class="math inline">\(H\)</span>.
+</aside>
 </section>
 <section id="section-1" class="slide level2">
 <h2></h2>
@@ -623,6 +634,195 @@ I like to refer to this notion as “Laplace’s Gremlin,” because the lack of
 Gremlins are seen as the cause of a number of challenges in this World War II poster.
 </aside>
 </section>
+<section id="entropy-and-the-boltzmann-distribution" class="slide level2">
+<h2>Entropy and the Boltzmann Distribution</h2>
+</section>
+<section id="hydrodynamica" class="slide level2">
+<h2>Hydrodynamica</h2>
+</section>
+<section id="section-9" class="slide level2">
+<h2></h2>
+<div class="figure">
+<div id="hydrodynamica-danielis-bernoulli-figure" class="figure-frame">
+<div class="centered" style="">
+<a href="https://play.google.com/books/reader?id=3yRVAAAAcAAJ&amp;pg=PP7"><img data-src="https://mlatcl.github.io/iei/slides/diagrams/books/3yRVAAAAcAAJ-PP7.png" /></a>
+</div>
+</div>
+</div>
+<aside class="notes">
+Daniel Bernoulli’s <em>Hydrodynamica</em> published in 1738. It was one of the first works to use the idea of conservation of energy. It used Newton’s laws to predict the behaviour of gases.
+</aside>
+</section>
+<section id="section-10" class="slide level2">
+<h2></h2>
+<div class="figure">
+<div id="bernoulli-kinetic-theory-chapter-figure" class="figure-frame">
+<div class="centered" style="">
+<a href="https://play.google.com/books/reader?id=3yRVAAAAcAAJ&amp;pg=PA200"><img data-src="https://mlatcl.github.io/iei/slides/diagrams/books/3yRVAAAAcAAJ-PA200.png" /></a>
+</div>
+</div>
+</div>
+<aside class="notes">
+Daniel Bernoulli’s chapter on the kinetic theory of gases, for a review on the context of this chapter see <span class="citation" data-cites="Mikhailov:hydrodynamica05">Mikhailov (n.d.)</span>. For 1738 this is extraordinary thinking. The notion of kinetic theory of gases wouldn’t become fully accepted in Physics until 1908 when a model of Einstein’s was verified by Jean Baptiste Perrin.
+</aside>
+</section>
+<section id="entropy-billiards" class="slide level2">
+<h2>Entropy Billiards</h2>
+<div class="figure">
+<div id="entropy-billiards-js-figure" class="figure-frame">
+<div style="display:flex;flex-wrap:wrap;gap:8px;align-items:flex-start">
+<div style="flex:1 1 400px;min-width:0">
+<canvas id="multiball-canvas" width="700" height="500" style="border:1px solid black;display:block;width:100%">
+</canvas>
+</div>
+<div style="flex:0 1 280px;min-width:0;display:flex;flex-direction:column;gap:6px">
+<div>
+Velocity-bin entropy:
+<output id="multiball-entropy">
+</output>
+</div>
+<div id="multiball-histogram-canvas" style="width:100%;height:250px">
+
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:4px">
+<button id="multiball-newball">
+New Ball
+</button>
+<button id="multiball-pause">
+Pause
+</button>
+<button id="multiball-skip">
+Skip 1000s
+</button>
+<button id="multiball-histogram">
+Histogram
+</button>
+</div>
+</div>
+</div>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<!--
+Loads the shared Ballworld runtime used by interactive physics demos
+(e.g. multiball, Maxwell, Szilard, kappenball). Scenario-specific
+behaviour is provided by follow-on scripts such as maxwell.js.
+-->
+<script src="https://inverseprobability.com/talks/scripts//ballworld/ballworld.js"></script>
+<script src="https://inverseprobability.com/talks/scripts//ballworld/multiball.js"></script>
+</div>
+</div>
+<aside class="notes">
+Bernoulli’s simple kinetic models of gases assume that the molecules of air operate like billiard balls. The displayed entropy is the Shannon entropy of the observed velocity histogram (a coarse-grained proxy, not full thermodynamic entropy).
+</aside>
+</section>
+<section id="section-11" class="slide level2">
+<h2></h2>
+<div class="figure">
+<div id="gaussian-histogram-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/gaussian-histogram.svg" width="80%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+James Clerk Maxwell 1831-1879 Derived distribution of velocities of particles in an ideal gas (elastic fluid).
+</aside>
+</section>
+<section id="section-12" class="slide level2">
+<h2></h2>
+<div class="figure">
+<div id="maxwell-boltzmann-gibbs-figure" class="figure-frame">
+<div class="lamd-columns" style="display:flex; width:100%; justify-content:center; align-items:center; column-gap:1em;">
+<div style="flex:0 0 30%; max-width:30%;">
+<div class="centered" style="">
+<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/james-clerk-maxwell.png" width="100%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
+</div>
+</div>
+<div style="flex:0 0 30%; max-width:30%;">
+<div class="centered centered" style="">
+<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/boltzmann2.jpg" width="100%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
+</div>
+</div>
+<div style="flex:0 0 30%; max-width:30%;">
+<div class="centered centered" style="">
+<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/j-w-gibbs.jpg" width="100%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
+</div>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes">
+James Clerk Maxwell (1831-1879), Ludwig Boltzmann (1844-1906) Josiah Willard Gibbs (1839-1903)
+</aside>
+</section>
+<section id="section-13" class="slide level2">
+<h2></h2>
+<div class="figure">
+<div id="boltzmann-warmetheorie-figure" class="figure-frame">
+<div class="centered" style="">
+<a href="https://play.google.com/books/reader?id=Vuk5AQAAMAAJ&amp;pg=PA373"><img data-src="https://mlatcl.github.io/iei/slides/diagrams/books/Vuk5AQAAMAAJ-PA373.png" /></a>
+</div>
+</div>
+</div>
+<aside class="notes">
+Boltzmann’s paper <span class="citation" data-cites="Boltzmann-warmetheorie77">Boltzmann (n.d.)</span> which introduced the relationship between entropy and probability. A translation with notes is available in <span class="citation" data-cites="Kim-translation15">Sharp and Matschinsky (2015)</span>.
+</aside>
+</section>
+<section id="section-14" class="slide level2">
+<h2></h2>
+<div class="figure">
+<div id="eddington-book-figure" class="figure-frame">
+<div class="lamd-columns" style="display:flex; width:100%; justify-content:center; align-items:center; column-gap:1em;">
+<div style="flex:0 0 49%; max-width:49%;">
+<div class="centered centered" style="">
+<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/arthur-stanley-eddington.jpg" width="100%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
+</div>
+</div>
+<div style="flex:0 0 49%; max-width:49%;">
+<div class="centered" style="">
+<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/natureofphysical00eddi_7.png" width="80%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
+</div>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes">
+Eddington’s book on the Nature of the Physical World <span class="citation" data-cites="Eddington:nature29">(Eddington, 1929)</span>
+</aside>
+</section>
+<section id="section-15" class="slide level2">
+<h2></h2>
+<div class="figure">
+<div id="physical-world-chandra-figure" class="figure-frame">
+<div class="lamd-columns" style="display:flex; width:100%; justify-content:center; align-items:center; column-gap:1em;">
+<div style="flex:0 0 49%; max-width:49%;">
+<div class="centered" style="">
+<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/natureofphysical00eddi_100.png" width="80%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
+</div>
+</div>
+<div style="flex:0 0 49%; max-width:49%;">
+<div class="centered" style="">
+<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/ChandraNobel.png" width="100%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
+</div>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes">
+Chandrasekhar (1910-1995) derived the limit at which a star collapses in on itself. Eddington’s confidence in the 2nd law may have been what drove him to dismiss Chandrasekhar’s ideas, humiliating a young scientist who would later receive a Nobel prize for the work.
+</aside>
+</section>
+<section id="section-16" class="slide level2">
+<h2></h2>
+<div class="figure">
+<div id="deepest-humiliation-eddington-cropped-figure" class="figure-frame">
+<div class="centered" style="">
+<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/natureofphysical00eddi_100_cropped.png" width="60%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
+</div>
+</div>
+</div>
+<aside class="notes">
+Eddington makes his feelings about the primacy of the second law clear. This primacy is perhaps because the second law can be demonstrated mathematically, building on the work of Maxwell, Gibbs and Boltzmann. <span class="citation" data-cites="Eddington:nature29">Eddington (1929)</span>
+</aside>
+</section>
 <section id="boltzmann-seed" class="slide level2">
 <h2>Boltzmann Seed</h2>
 <p>For fixed mean energy <span class="math inline">\(U\)</span>, the maximum-entropy occupation is the Boltzmann distribution.</p>
@@ -684,11 +884,23 @@ Optional live check. Deep dive and free-energy plots are lecture 2.
 <div id="ref-Bishop:book06" class="csl-entry" role="doc-biblioentry">
 Bishop, C.M., 2006. Pattern recognition and machine learning. springer.
 </div>
+<div id="ref-Boltzmann-warmetheorie77" class="csl-entry" role="doc-biblioentry">
+Boltzmann, L., n.d. Über die <span>B</span>eziehung zwischen dem zweiten <span>H</span>auptsatze der mechanischen <span>W</span>armetheorie und der <span>W</span>ahrscheinlichkeitsrechnung, respective den <span>S</span>ätzen über das wärmegleichgewicht. Sitzungberichte der Kaiserlichen Akademie der Wissenschaften. Mathematisch-Naturwissen Classe. Abt. II LXXVI, 373–435.
+</div>
+<div id="ref-Eddington:nature29" class="csl-entry" role="doc-biblioentry">
+Eddington, A.S., 1929. The nature of the physical world. Dent (London). <a href="https://doi.org/10.2307/2180099">https://doi.org/10.2307/2180099</a>
+</div>
 <div id="ref-Laplace-essai14" class="csl-entry" role="doc-biblioentry">
 Laplace, P.S., 1814. Essai philosophique sur les probabilités, 2nd ed. Courcier, Paris.
 </div>
 <div id="ref-Lawrence-atomic24" class="csl-entry" role="doc-biblioentry">
 Lawrence, N.D., 2024. The atomic human: Understanding ourselves in the age of AI. Allen Lane.
+</div>
+<div id="ref-Mikhailov:hydrodynamica05" class="csl-entry" role="doc-biblioentry">
+Mikhailov, G.K., n.d. Daniel bernoulli, hydrodynamica (1738).
+</div>
+<div id="ref-Kim-translation15" class="csl-entry" role="doc-biblioentry">
+Sharp, K., Matschinsky, F., 2015. Translation of <span>L</span>udwig <span>B</span>oltzmann’s paper <span>“on the relationship between the second fundamental theorem of the mechanical theory of heat and probability calculations regarding the conditions for thermal equilibrium.”</span> Entropy 17, 1971–2009. <a href="https://doi.org/10.3390/e17041971">https://doi.org/10.3390/e17041971</a>
 </div>
 </div>
 </section>
