@@ -1,4 +1,4 @@
-BASE=shannon-entropy
+BASE=maxwell-landauer
 LAMDDIR=/Users/neil/lawrennd/lamd/lamd
 MAKEFILESDIR=/Users/neil/lawrennd/lamd/lamd/makefiles
 INCLUDESDIR=/Users/neil/lawrennd/lamd/lamd/includes
