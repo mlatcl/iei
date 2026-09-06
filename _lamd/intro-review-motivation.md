@@ -61,6 +61,7 @@ reading:
 | 75–95 | Entropy review (elementary $H$); bits and nats |
 | 95–115 | Motivation: perpetual motion, bandwidth; Boltzmann seed |
 | 115–120 | Worksheet 1 brief; Quiz 1 preview |
+
 }
 
 \subsection{Course Mechanics}
