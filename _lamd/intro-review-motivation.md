@@ -54,8 +54,8 @@ reading:
 
 | Minutes | Block |
 |--------:|-------|
-| 0–15 | Course mechanics; questions list; the theme |
-| 15–35 | Socratic worksheets: curiosity, skepticism, submission rules |
+| 0–15 | Course mechanics; questions list; the motivation and theme |
+| 15–35 | 'Socratic' approach: curiosity, skepticism, submission rules |
 | 35–65 | Probability review: product/sum/Bayes; basic distributions |
 | 65–75 | Break |
 | 75–95 | Entropy review (elementary $H$); bits and nats |
