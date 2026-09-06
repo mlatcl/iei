@@ -75,9 +75,9 @@ reading:
 * Ten minutes
 }
 
-\include{_information/includes/entropy-nogo-probability-prescription.md}
 
-###{From the Seed to the Derivation}
+
+\subsection{From the Seed to the Derivation}
 
 \notes{Last week stated $p_i = e^{-\beta E_i}/Z$. Today derive it and account for free energy. Motivations (perpetual motion, bandwidth) remain the frame.}
 
@@ -118,37 +118,6 @@ reading:
 }
 
 <!-- /SNIPPET: _physics/includes/clausius-carnot-second-law.md -->
-
-\notes{That is entropy as a no-go for engines. Clausius names it and states the second law before we derive Boltzmann's prescription. A second motivation is embodiment. Human communication sits at about 2000 bits per minute; machines sit at billions. *The Atomic Human* [@Lawrence-atomic24] treats that gap as a bottleneck on intelligence: we are locked in relative to the machine not because thought is slow, but because externalising it is. That shapes what intelligence can be; it is not a thermodynamic no-go in the same sense as the second law.}
-
-\include{_books/includes/the-atomic-human.md}
-
-\include{_ai/includes/embodiment-factors-celsius.md}
-
-\notes{Shannon measured information in bits: one bit is the result of a fair coin toss. He estimated $\sim 12$ bits per English word on average [@Shannon-info48], which with typical speaking rates gives $\sim 10$--$60$ bits per second for human communication [@Reed-information98,@Lawrence-embodiment17,@Lawrence-atomic24]. Machines communicate orders of magnitude faster — the embodiment factor is the ratio between compute and that narrow channel.}
-
-\newslides{Shannon Next Lecture}
-
-\slides{We are already counting in Shannon's bits — embodiment is a communication bottleneck, not yet a theorem.}
-
-\slidesincremental{
-* Lecture 3: why *bits*, and $H=-\sum_i p_i\log p_i$ from axioms
-* Same functional form as Boltzmann $S$; different operational reading
-* The intelligence question sharpens in lecture 4 (Landauer, Bauby)
-}
-
-\speakernotes{Portrait and table are enough today. Forward pointer only — do not derive $H$.}
-
-\notes{Shannon gave the unit used for bandwidth and embodiment factors. The derivation of $H$ and the statement $S=kH$ are LO2 in lecture 3. The bandwidth gap is a bottleneck on sharing thought, not a second no-go paired with Boltzmann. Lecture 4 applies the same bit accounting to locked-in communication.}
-
-\include{_physics/includes/laplace-portrait.md}
-\include{_physics/includes/laplaces-determinism.md}
-
-\notes{Laplace's "intelligence sufficiently vast" is the superintelligence claim in 1814 language. The demon is a no-go: you do not have the model, the data, or the compute. Three pages later the gremlin is the prescription: probability is relative, in part to this ignorance, in part to our knowledge. That is the week's pair before any calculation.}
-
-\subsection{Entropy and the Boltzmann Distribution}
-
-\include{_physics/includes/entropy-intro.md}
 
 <!-- SNIPPET: _physics/includes/boltzmann-derivation.md -->
 
@@ -356,9 +325,6 @@ mlai.write_figure('finite-time-sketch.svg', directory='\writeDiagramsDir/ml')}
 
 \figure{\includediagram{\diagramsDir/ml/finite-time-sketch}{70%}}{Cartoon of quasi-static versus finite-time driving between two equilibrium states.}{finite-time-sketch}
 
-\slides{
-\includediagram{\diagramsDir/ml/finite-time-sketch}{70%}
-}
 
 <!-- /SNIPPET: _physics/includes/finite-time-dissipation-intro.md -->
 
@@ -380,7 +346,7 @@ mlai.write_figure('finite-time-sketch.svg', directory='\writeDiagramsDir/ml')}
 \notes{Interpret later: how entropy is understood today; equilibrium versus non-equilibrium; the purely entropic Schottky reading. Define-stage answer to "How was entropy discovered?": Carnot on engines; Clausius names entropy and states the second law (1865); Boltzmann and Gibbs give the statistical count; Shannon and Jaynes reuse $H$ with different operational readings.}
 
 
-###{After This Lecture}
+\subsection{After This Lecture}
 
 \notes{Next week: Shannon entropy and the partition function as a generating function. Optional LLM probe: is free energy a constraint or a recipe?}
 
