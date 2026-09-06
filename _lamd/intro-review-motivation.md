@@ -120,7 +120,7 @@ $$
 \slidesincremental{
 * Follows from the product rule and symmetry of the joint
 * Inverts the conditioning — updates a prior given a likelihood
-* (x)=\sum_y P(x\mid y)P(y)$ when $ is discrete
+* $P(x)=\sum_y P(x\mid y)P(y)$ when $y$ is discrete
 }
 
 \notes{Bayes is not a third axiom; it is the product rule rearranged. Quiz 1 will ask you to apply it on a small discrete example (barrels, coins, two hypotheses).}
