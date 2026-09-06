@@ -337,58 +337,38 @@ Binary entropy is maximal at <span class="math inline">\(p=\frac12\)</span> and 
 <div class="figure">
 <div id="dasher-visualisation-figure" class="figure-frame">
 <div style="width:100%;font-family:&#39;Courier New&#39;,monospace;font-size:0.85em">
-<div style="display:flex;justify-content:space-between;align-items:center;gap:8px;
-            padding:6px 14px;background:#131320;border-bottom:1px solid #2a2a3e">
+<div style="display:flex;justify-content:space-between;align-items:center;gap:8px;padding:6px 14px;background:#131320;border-bottom:1px solid #2a2a3e">
 <div style="display:flex;align-items:center;gap:12px;min-width:0;flex:1">
-<pre><code>&lt;span style=&quot;color:#4ecdc4;letter-spacing:3px;font-size:14px&quot;&gt;DASHER&lt;/span&gt;
-&lt;span style=&quot;color:#404068;font-style:italic;font-size:10px;
-             overflow:hidden;text-overflow:ellipsis;white-space:nowrap&quot;&gt;
-  screen height ∝ probability · boxes stream left across the crosshair
-&lt;/span&gt;</code></pre>
+<p><span style="color:#4ecdc4;letter-spacing:3px;font-size:14px">DASHER</span> <span style="color:#404068;font-style:italic;font-size:10px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">screen height ∝ probability · boxes stream left across the crosshair</span></p>
 </div>
 <div style="display:flex;flex-wrap:wrap;gap:6px;flex-shrink:0">
-<pre><code>&lt;button id=&quot;dasher-pause&quot;
-  style=&quot;background:#1a1a2e;border:1px solid #2a2a3e;color:#505080;
-         padding:3px 10px;cursor:pointer;font-family:inherit;font-size:11px;
-         border-radius:3px&quot;&gt;Go&lt;/button&gt;
-&lt;button id=&quot;dasher-copy&quot;
-  style=&quot;background:#1a1a2e;border:1px solid #2a2a3e;color:#505080;
-         padding:3px 10px;cursor:pointer;font-family:inherit;font-size:11px;
-         border-radius:3px&quot;&gt;Copy&lt;/button&gt;
-&lt;button id=&quot;dasher-reset&quot;
-  style=&quot;background:#1a1a2e;border:1px solid #2a2a3e;color:#505080;
-         padding:3px 10px;cursor:pointer;font-family:inherit;font-size:11px;
-         border-radius:3px&quot;&gt;Reset&lt;/button&gt;</code></pre>
+<button id="dasher-pause" style="background:#1a1a2e;border:1px solid #2a2a3e;color:#505080;padding:3px 10px;cursor:pointer;font-family:inherit;font-size:11px;border-radius:3px">
+Go
+</button>
+<button id="dasher-copy" style="background:#1a1a2e;border:1px solid #2a2a3e;color:#505080;padding:3px 10px;cursor:pointer;font-family:inherit;font-size:11px;border-radius:3px">
+Copy
+</button>
+<button id="dasher-reset" style="background:#1a1a2e;border:1px solid #2a2a3e;color:#505080;padding:3px 10px;cursor:pointer;font-family:inherit;font-size:11px;border-radius:3px">
+Reset
+</button>
 </div>
 </div>
-<div style="display:flex;align-items:center;gap:12px;padding:5px 14px;
-            background:#0f0f1e;border-bottom:1px solid #1e1e32;min-height:34px">
+<div style="display:flex;align-items:center;gap:12px;padding:5px 14px;background:#0f0f1e;border-bottom:1px solid #1e1e32;min-height:34px">
 <div style="font-size:9px;color:#404068;flex-shrink:0">
 TYPED:
 </div>
-<div id="dasher-text" style="font-size:16px;color:#4ecdc4;letter-spacing:2px;flex:1;
-           overflow:hidden;text-overflow:ellipsis;white-space:nowrap">
+<div id="dasher-text" style="font-size:16px;color:#4ecdc4;letter-spacing:2px;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">
 ▋
 </div>
 <div style="display:flex;flex-wrap:wrap;gap:6px;flex-shrink:0">
-<pre><code>&lt;span style=&quot;background:#131320;border:1px solid #2a2a3e;border-radius:3px;
-             padding:2px 7px;font-size:11px;color:#505080;white-space:nowrap&quot;&gt;
-  bits: &lt;span id=&quot;dasher-bits&quot; style=&quot;color:#ffd93d&quot;&gt;0.0&lt;/span&gt;&lt;/span&gt;
-&lt;span style=&quot;background:#131320;border:1px solid #2a2a3e;border-radius:3px;
-             padding:2px 7px;font-size:11px;color:#505080;white-space:nowrap&quot;&gt;
-  avg: &lt;span id=&quot;dasher-avgbits&quot; style=&quot;color:#ffd93d&quot;&gt;—&lt;/span&gt; b/ch&lt;/span&gt;
-&lt;span style=&quot;background:#131320;border:1px solid #2a2a3e;border-radius:3px;
-             padding:2px 7px;font-size:11px;color:#505080;white-space:nowrap&quot;&gt;
-  H(next): &lt;span id=&quot;dasher-entropy&quot; style=&quot;color:#ffd93d&quot;&gt;—&lt;/span&gt;&lt;/span&gt;</code></pre>
+<p><span style="background:#131320;border:1px solid #2a2a3e;border-radius:3px;padding:2px 7px;font-size:11px;color:#505080;white-space:nowrap">bits: <span id="dasher-bits" style="color:#ffd93d">0.0</span></span> <span style="background:#131320;border:1px solid #2a2a3e;border-radius:3px;padding:2px 7px;font-size:11px;color:#505080;white-space:nowrap">avg: <span id="dasher-avgbits" style="color:#ffd93d">—</span> b/ch</span> <span style="background:#131320;border:1px solid #2a2a3e;border-radius:3px;padding:2px 7px;font-size:11px;color:#505080;white-space:nowrap">H(next): <span id="dasher-entropy" style="color:#ffd93d">—</span></span></p>
 </div>
 </div>
-<div style="position:relative;width:min(100%,480px);height:480px;margin:0 auto;
-            cursor:crosshair;overflow:hidden">
+<div style="position:relative;width:min(100%,480px);height:480px;margin:0 auto;cursor:crosshair;overflow:hidden">
 <canvas id="dasher-canvas" width="480" height="480" data-dasher-lm="https://inverseprobability.com/talks/scripts//dasher/dasher-lm.json" style="display:block;width:100%;height:100%">
 </canvas>
 </div>
-<div style="padding:5px 14px;background:#0f0f1e;border-top:1px solid #1e1e32;
-            font-size:9px;color:#303055;text-align:center">
+<div style="padding:5px 14px;background:#0f0f1e;border-top:1px solid #1e1e32;font-size:9px;color:#303055;text-align:center">
 <p><strong style="color:#4ecdc460">Click</strong> or <strong style="color:#4ecdc460">Space</strong> to Go/Pause · <strong style="color:#4ecdc460">Copy</strong> extracts text · pointer right zooms · left zooms out · Backspace unwrites · Escape resets</p>
 </div>
 </div>
