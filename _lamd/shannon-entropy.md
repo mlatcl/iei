@@ -29,8 +29,8 @@ reading:
     estimated_hours: 2
   - title: "Information Theory, Inference, and Learning Algorithms"
     author: "MacKay"
-    chapter: "Chapters 1–4; 8–10"
-    estimated_hours: 3
+    chapter: "Chapters 1–4; 6 (arithmetic coding / Dasher); 8–10"
+    estimated_hours: 3.5
   - title: "Elements of Information Theory"
     author: "Cover and Thomas"
     chapter: "Chapters 2 and 7; Theorem 2.8.1 stated, not proved"
@@ -53,7 +53,7 @@ reading:
 
 \slidesincremental{
 * Shannon $H$; Boltzmann $S = kH$
-* Dasher: $H$ as bits, $p$ as the next letter
+* Arithmetic coding → Dasher: $H$ as bits, $p$ as the next letter
 * Partition function as a generating function
 * Scaffolding: $I(X;Y)$, capacity, DPI (statement)
 }
@@ -64,8 +64,8 @@ reading:
 | Minutes | Block |
 |--------:|-------|
 | 0–10 | Recap Boltzmann / free energy; preview Maxwell (next week) |
-| 10–45 | Shannon axioms; Wiener from Gibbs; equivalence to Boltzmann |
-| 45–55 | Dasher |
+| 10–40 | Shannon axioms; Wiener from Gibbs; equivalence to Boltzmann |
+| 40–55 | Arithmetic coding (MacKay Ch.~6) then Dasher |
 | 55–65 | Break |
 | 65–100 | Canonical ensemble; $Z$ as generating function; bath revisited |
 | 100–120 | Chain rule; define $I(X;Y)$; capacity (statement); DPI (statement) |
@@ -139,10 +139,12 @@ mlai.write_figure('binary-entropy.svg', directory='\writeDiagramsDir/ml')}
 <!-- /SNIPPET: _information/includes/shannon-entropy-derivation.md -->
 
 \addreading{@Shannon-mathematical48}{Sections 1--6}
-\addreading{@MacKay-information03}{Chapters 1--4}
+\addreading{@MacKay-information03}{Chapters 1--4; Chapter 6}
 \addreading{@Cover:elements91}{Chapter 2}
 
-\subsection{Dasher}
+\subsection{Arithmetic Coding and Dasher}
+
+\include{_information/includes/arithmetic-coding.md}
 
 \include{_information/includes/dasher.md}
 
