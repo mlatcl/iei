@@ -280,11 +280,14 @@ $$
 
 <!-- /SNIPPET: _physics/includes/clausius-carnot-second-law.md -->
 
+
 \speakernotes{Now shift to explaining the relationship between what we're teaching and how we're teaching. Our objective is to get information in you. Why do we have to do it in such a complex way. Need to lace this description of the atomic human with the pedagogy we're using.}
 
 \include{_books/includes/the-atomic-human.md}
 
 \include{_ai/includes/embodiment-factors-celsius.md}
+
+\notes{Shannon measured information in bits: one bit is the result of a fair coin toss. He estimated $\sim 12$ bits per English word on average [@Shannon-info48], which with typical speaking rates gives $\sim 10$--$60$ bits per second for human communication [@Reed-information98,@Lawrence-embodiment17,@Lawrence-atomic24]. Machines communicate orders of magnitude faster — the embodiment factor is the ratio between compute and that narrow channel.}
 
 \notes{Shannon measured information in bits. Human communication is slow relative to machines — the embodiment factor. Lecture 3 derives $H$; today we only need the bit as a unit of uncertainty and of bandwidth.}
 
@@ -292,9 +295,29 @@ $$
 
 \comment{I think this means worksheet 1 could also be about the general ideas presented here? Allowing them to bring skepticism. The core idea of bandwidth limitations and how it effects the architecture of an intelligence?}
 
+\newslides{Shannon Next Lecture}
+
+\slides{We are already counting in Shannon's bits — embodiment is a communication bottleneck, not yet a theorem.}
+
+\slidesincremental{
+* Lecture 3: why *bits*, and $H=-\sum_i p_i\log p_i$ from axioms
+* Same functional form as Boltzmann $S$; different operational reading
+* The intelligence question sharpens in lecture 4 (Landauer, Bauby)
+}
+
+\speakernotes{Portrait and table are enough today. Forward pointer only — do not derive $H$.}
+
+\notes{Shannon gave the unit used for bandwidth and embodiment factors. The derivation of $H$ and the statement $S=kH$ are LO2 in lecture 3. The bandwidth gap is a bottleneck on sharing thought, not a second no-go paired with Boltzmann. Lecture 4 applies the same bit accounting to locked-in communication.}
+
 \include{_physics/includes/laplace-portrait.md}
 \include{_physics/includes/laplaces-determinism.md}
 \include{_physics/includes/laplaces-gremlin.md}
+
+
+\subsection{Entropy and the Boltzmann Distribution}
+
+\include{_physics/includes/entropy-intro.md}
+
 
 \subsection{Boltzmann Seed}
 
