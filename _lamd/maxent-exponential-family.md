@@ -76,6 +76,12 @@ reading:
 
 \include{_physics/includes/lagrange-multipliers.md}
 
+<!-- SNIPPET: _physics/includes/laplace-insufficient-reason.md-->
+
+\subsection{Laplace and the Principle of Insufficient Reason}
+
+<!-- /SNIPPET: _physics/includes/laplace-insufficient-reason.md-->
+
 \subsection{Jaynes and Maximum Entropy}
 
 \figure{\includejpg{\diagramsDir/physics/e-t-jaynes}{40%}}{Ed Jaynes who developed the maximum entropy principle}{e-t-jaynes}
