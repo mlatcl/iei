@@ -54,6 +54,23 @@ reading:
 
 \notes{No class test today. Worksheet 2 is released; due 10 November (start of lecture 5).}
 
+\subsection{Define This Week}
+
+\slidesincremental{
+* What is Maxwell's demon?
+* Why cannot feedback upgrade a car engine like ATP synthase?
+* Information and intelligence? (first cut)
+* Information constraints on a human? (bandwidth)
+}
+
+\subsection{After This Lecture}
+
+\notes{Worksheet 2: Maxwell / Landauer, MaxEnt, exponential family. Due 3 November. Quiz 2 is 10 November and will use a *new* example.}
+
+\slidesincremental{
+* Worksheet 2 released; due 3 November
+}
+
 \subsection{This Session}
 
 \slidesincremental{
@@ -322,37 +339,7 @@ def landauer_cost(T_kelvin, n_bits=1):
 
 \subsection{Information and Intelligence: First Cut}
 
-\include{_ai/includes/embodiment-factors-walking-vs-light.md}
-
-\include{_books/includes/the-diving-bell-and-the-butterfly.md}
-\include{_ai/includes/shannon-bauby.md}
-
-\notes{Landauer: you cannot erase a bit for less than \(k_B T\ln 2\). Embodiment: you cannot communicate at machine bandwidth. *The Atomic Human* [@Lawrence-atomic24] takes the second as the defining constraint on human intelligence — we are locked in relative to the machine, and we overcome it by modelling other minds, not by opening a wider channel. Bauby is the extreme of that fence: Shannon lets us count how locked in he is. Probability's job, on the human side, is to say how that narrow budget is spent. The full intelligence question is week 8.}
-
-\addreading{@Lawrence-atomic24}{Chapter 1}
-
-\slidesincremental{
-* No-go: $k_B T\ln 2$ per bit erased
-* No-go: $\sim 100$ bits per second for a human
-* Prescription: the demon's policy; how we spend the human budget
-}
-
-\subsection{Define This Week}
-
-\slidesincremental{
-* What is Maxwell's demon?
-* Why cannot feedback upgrade a car engine like ATP synthase?
-* Information and intelligence? (first cut)
-* Information constraints on a human? (bandwidth)
-}
-
-\subsection{After This Lecture}
-
-\notes{Worksheet 2: Maxwell / Landauer, MaxEnt, exponential family. Due 3 November. Quiz 2 is 10 November and will use a *new* example.}
-
-\slidesincremental{
-* Worksheet 2 released; due 3 November
-}
+\notes{Landauer: you cannot erase a bit for less than $k_B T\ln 2$. Embodiment: you cannot communicate at machine bandwidth. *The Atomic Human* [@Lawrence-atomic24] takes the second as the defining constraint on human intelligence — we are locked in relative to the machine, and we overcome it by modelling other minds, not by opening a wider channel. Bauby is the extreme of that fence: Shannon lets us count how locked in he is. Probability's job, on the human side, is to say how that narrow budget is spent. The full intelligence question is week 8.}
 
 \reading
 
