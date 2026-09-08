@@ -325,11 +325,11 @@ Binary entropy is maximal at <span class="math inline">\(p=\frac12\)</span> and 
 <section id="dasher-arithmetic-coding-as-interface" class="slide level2">
 <h2>Dasher: Arithmetic Coding as Interface</h2>
 <ul>
-<li>Letters sized by P(char | context) — large target = common = cheap</li>
+<li>Letters sized by <span class="math inline">\(P(\texttt{char} | \texttt{context})\)</span>. A large target = common = cheap</li>
 <li>Move pointer <strong>right</strong> of centre: boxes enlarge and stream <strong>left</strong></li>
 <li>Move pointer <strong>left</strong> of centre to zoom out / unwrite</li>
 <li>Character written when its box crosses the centre crosshair</li>
-<li><em>Ease of selection ∝ probability ∝ 1 / information cost</em></li>
+<li><em>Ease of selection <span class="math inline">\(\propto\)</span> probability <span class="math inline">\(\propto\)</span> 1 / information cost</em></li>
 </ul>
 </section>
 <section id="section-1" class="slide level2">
@@ -357,7 +357,7 @@ Reset
 <div style="font-size:9px;color:#404068;flex-shrink:0">
 TYPED:
 </div>
-<div id="dasher-text" style="font-size:16px;color:#4ecdc4;letter-spacing:2px;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">
+<div id="dasher-text" style="font-size:16px;color:#4ecdc4;letter-spacing:2px;flex:1;min-width:0;overflow:hidden;white-space:nowrap;text-align:right">
 ▋
 </div>
 <div style="display:flex;flex-wrap:wrap;gap:6px;flex-shrink:0">
@@ -372,11 +372,11 @@ TYPED:
 <p><strong style="color:#4ecdc460">Click</strong> or <strong style="color:#4ecdc460">Space</strong> to Go/Pause · <strong style="color:#4ecdc460">Copy</strong> extracts text · pointer right zooms · left zooms out · Backspace unwrites · Escape resets</p>
 </div>
 </div>
-<script src="https://inverseprobability.com/talks/scripts//dasher/dasher.js?v=15"></script>
+<script src="https://inverseprobability.com/talks/scripts//dasher/dasher.js?v=22"></script>
 </div>
 </div>
 <aside class="notes">
-Dasher: continuous-zoom arithmetic coding interface. Move the pointer right of centre — boxes enlarge and stream left across the crosshair. Character height is proportional to P(char | context). Try “th”: after ‘t’ and ‘h,’ ‘e’ swells to dominate the display.
+Dasher: continuous-zoom arithmetic coding interface. Move the pointer right of centre — boxes enlarge and stream left across the crosshair. Character height is proportional to <span class="math inline">\(P(\texttt{char} | \texttt{context})\)</span>. Try “th”: after ‘t’ and ‘h,’ ‘e’ swells to dominate the display.
 </aside>
 </section>
 <section id="the-partition-function" class="slide level2">
