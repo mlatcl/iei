@@ -57,6 +57,12 @@ reading:
 | 85–120 | Crooks: length as Fisher–Rao length; $\langle W_{\mathrm{ex}}\rangle \ge \mathcal{L}^2/\tau$; release Worksheet 3 |
 }
 
+<!-- SNIPPET: _mathe/includes/what-is-a-riemannian-geometry.md -->
+
+\subsection{What is a Riemannian geometry?}
+
+<!-- /SNIPPET: _mathe/includes/what-is-a-riemannian-geometry.md -->
+
 \subsection{KL Divergence and Two Entropies}
 
 <!-- SNIPPET: _information/includes/kl-divergence-discrete-continuous.md -->
