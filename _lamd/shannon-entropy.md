@@ -215,7 +215,7 @@ def thermo_from_Z(beta, energies):
 
 \include{_information/includes/welling-entropy-partition.md}
 
-\notes{GAIST §1.2.3 uses $-\int p\log p$ for Gaussians — that is *differential* entropy. It can be negative and is not bounded like discrete Shannon $H\in[0,\log n]$. Week 5 introduces KL divergence, which is always $\ge 0$ discrete and continuous. That is why MaxEnt projections minimise $\mathrm{KL}(\cdot\|r)$, not raw $H$.}
+\notes{GAIST §1.2.3 uses $-\int p\log p$ for Gaussians — that is *differential* entropy. It can be negative and is not bounded like discrete Shannon $H\in[0,\log n]$. Below we introduce KL divergence, which is always $\ge 0$ discrete and continuous. That is why MaxEnt projections minimise $\mathrm{KL}(\cdot\|r)$, not raw $H$.}
 
 \addreading{@Callen-thermostatistics85}{Chapter 16}
 
@@ -248,15 +248,14 @@ def thermo_from_Z(beta, energies):
 
 \newslides{Differential Entropy Is a Different Object}
 
-\slides{Week 5's Gaussian uses $-\int p\log p$ — differential entropy.}
+\slides{Gaussian channel uses $-\int p\log p$ — differential entropy.}
 
 \slidesincremental{
-* Same integral symbol; different operational meaning
 * Can be **negative**; not bounded below
 * Not a code-length bound — compare distributions with **KL**
 }
 
-\notes{For $\mathcal{N}(0,\sigma^2)$, differential entropy is $\frac12\log(2\pi e\sigma^2)$ in nats. As $\sigma\to 0$ it diverges negatively. Discrete Shannon entropy stays in $[0,\log n]$. Thermodynamic $S=kH$ in week 1 used the discrete sum form on Boltzmann probabilities. Continuous MaxEnt still works because constraints fix scale; comparing to a reference uses KL, which remains non-negative.}
+\notes{For $\mathcal{N}(0,\sigma^2)$, differential entropy is $\frac{1}{2}\log(2\pi e\sigma^2)$ in nats. As $\sigma\to 0$ it diverges negatively. Discrete Shannon entropy stays in $[0,\log n]$. Thermodynamic $S=kH$ in week 1 used the discrete sum form on Boltzmann probabilities. Continuous MaxEnt still works because constraints fix scale; comparing to a reference uses KL, which remains non-negative.}
 
 \setupplotcode{import numpy as np
 import matplotlib.pyplot as plt
