@@ -69,6 +69,7 @@ reading:
 | 55–65 | Break |
 | 65–100 | Canonical ensemble; $Z$ as generating function; bath revisited |
 | 100–120 | KL-divergence; Chain rule; define $I(X;Y)$; capacity (statement); DPI (statement) |
+
 }
 
 \newslides{From Lecture 1}
