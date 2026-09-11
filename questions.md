@@ -97,6 +97,7 @@ Quiz 2 occupies the first ten minutes.
 - What is the maximum entropy principle?
 - What is the exponential family?
 - What is the Legendre transform? (Helmholtz was the first example; $H = A - \theta\cdot\eta$ is the second)
+- Why Helmholtz $F$ rather than Gibbs $G$? (which variables the bath fixes: we use fixed $T$, fixed state space; chemistry often uses fixed $T,P$)
 - What is the relationship between information and entropy?
 - How is entropy understood today? (intended answer: LO7)
 

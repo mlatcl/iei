@@ -47,7 +47,7 @@ reading:
     edition: 2
     required: false
     estimated_hours: 4
-    notes: "Chapters 1-4 for the postulational formulation (entropy as primitive); Chapters 5-6 for the maximum work theorem and Helmholtz free energy $F=U-TS$; Chapter 16 for the canonical ensemble. Carnot (1824) and Clausius (1850s, entropy 1865) in the historical thread before Boltzmann. Best undergraduate-level treatment for LO1 and LO3. Weeks 1–3."
+    notes: "Chapters 1-4 for the postulational formulation (entropy as primitive); Chapters 5-6 for the maximum work theorem and Helmholtz free energy $F=U-TS$ (Gibbs $G=F+PV$ is there too — named in week 5, not examined); Chapter 16 for the canonical ensemble. Carnot (1824) and Clausius (1850s, entropy 1865) in the historical thread before Boltzmann. Best undergraduate-level treatment for LO1 and LO3. Weeks 1–3."
 
   - title: "Quantum Computation and Quantum Information"
     authors: "Nielsen, M. A. & Chuang, I. L."
@@ -207,7 +207,7 @@ Chapters 1–4 for the Fisher metric, dually flat geometry, and exponential fami
 Chapter 1 for the embodiment factor: human communication at about 100 bits per second against machine gigabits. Week 1 motivation; week 4 next to Landauer; week 8 as a named no-go.
 
 **Callen (1985)** — *Thermodynamics and an Introduction to Thermostatistics* (2nd ed.)
-Chapters 1–4 for the postulational formulation (entropy as primitive). Chapters 5–6 for the maximum work theorem and Helmholtz free energy $F = U - TS$. Chapter 16 for the canonical ensemble and the partition function. Best undergraduate-level thermodynamics treatment for LO1 and LO3. Weeks 1–3.
+Chapters 1–4 for the postulational formulation (entropy as primitive). Chapters 5–6 for the maximum work theorem and Helmholtz free energy $F = U - TS$ (Gibbs $G = F + PV$ is named in week 5, not examined). Chapter 16 for the canonical ensemble and the partition function. Best undergraduate-level thermodynamics treatment for LO1 and LO3. Weeks 1–3.
 
 **Nielsen & Chuang (2000)** — *Quantum Computation and Quantum Information*
 Chapter 11 (quantum information theory) for von Neumann entropy. Week 8 (LO11).

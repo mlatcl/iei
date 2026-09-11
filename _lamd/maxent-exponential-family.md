@@ -167,9 +167,9 @@ mlai.write_figure('jaynes-die-maxent.svg', directory='\writeDiagramsDir/ml')}
 
 \include{_information/includes/legendre-transform.md}
 
-\speakernotes{Name the Legendre transform. Check Bernoulli: $A=\log(1+e^\theta)$ recovers binary entropy. Dual charts week 6; $m$-projection week 6.}
+\speakernotes{Name the Legendre transform. Check Bernoulli: $A=\log(1+e^\theta)$ recovers binary entropy. One slide on $F$ versus $G$: we stay with Helmholtz. Dual charts week 6; $m$-projection week 7.}
 
-\notes{$H=A-\theta\cdot\eta$ is the same subtraction as Helmholtz $F=U-TS$. The conjugate pair $(\theta,\eta)$ is why week 6 has two flat charts on the exponential family.}
+\notes{$H=A-\theta\cdot\eta$ is the same subtraction as Helmholtz $F=U-TS$. The conjugate pair $(\theta,\eta)$ is why week 6 has two flat charts on the exponential family. Gibbs $G=F+PV$ is named only: chemistry at fixed $T,P$; this module's baths are fixed-$T$ on a fixed state space.}
 
 \subsection{Three Perspectives}
 
