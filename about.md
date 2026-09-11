@@ -23,10 +23,10 @@ Develop the mathematical connections between thermodynamics, information theory,
 Entropy appears in three apparently separate traditions — thermodynamics (Boltzmann, Gibbs), information theory (Shannon), and Bayesian inference (Jaynes) — and turns out to be the same mathematical object viewed from different operational assumptions. The operational split is: **entropy forbids, probability prescribes.** The course covers:
 
 1. probability and entropy review; Socratic LLM method; that theme via perpetual motion and the human–machine bandwidth gap of *The Atomic Human*; then the Boltzmann distribution and free energy,
-2. Shannon entropy and its formal equivalence to thermodynamic entropy; the exponential family as the MaxEnt family,
+2. Shannon entropy and its formal equivalence to thermodynamic entropy; mutual information and the data-processing inequality (statement); MaxEnt and the exponential family,
 3. Maxwell's demon and Landauer's principle: the thermodynamic cost of decision-making,
-4. information geometry: the Fisher metric, Crooks' thermodynamic length, dually flat geometry, and natural gradient descent,
-5. multi-information, an entropy game, quantum information,
+4. information geometry: the Fisher metric, Crooks' thermodynamic length, dually flat geometry, MaxEnt as projection, and natural gradient descent,
+5. multi-information, $I+H=C$, DPI and the information bottleneck, von Neumann entropy,
 6. probability transport, Schrödinger bridges, and information-theoretic limits on intelligent agency.
 
 Four ten-minute in-class Moodle quizzes sit at the start of lectures 2, 5, 7 and 8.

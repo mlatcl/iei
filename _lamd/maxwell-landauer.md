@@ -290,8 +290,6 @@ mlai.write_figure('car-engine-info-scale.svg', directory='\writeDiagramsDir/ml')
 
 \include{_information-game/includes/landauer-shannon-connection.md}
 
-\include{_information-game/includes/landauer-from-inaccessible-game.md}
-
 <!-- SNIPPET: _information/includes/landauer-principle-worked.md -->
 
 \newslides{Landauer's Principle}

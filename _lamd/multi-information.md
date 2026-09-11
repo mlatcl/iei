@@ -7,11 +7,11 @@ venue: FW26, William Gates Building
 room: FW26
 transition: None
 abstract: >
-  Watanabe's multi-information, the conservation law $I+H=C$, the
-  data-processing inequality, and the information bottleneck as the
-  no-go/prescription pair on $I$. The classical limit $I=C$ then forces
-  a move to von Neumann entropy. First half of the final session;
-  limits on intelligence follow.
+  Watanabe's multi-information and the conservation law $I+H=C$; the
+  data-processing inequality and the information bottleneck as the
+  no-go/prescription pair on $I$; then the classical limit $I=C$ and
+  von Neumann entropy. Material may run long; limits on intelligence
+  absorb the overflow.
 author:
 - given: Neil D.
   family: Lawrence
@@ -53,7 +53,7 @@ reading:
     required: false
 ---
 
-\notes{Quiz 4 occupies the first ten minutes. Then multi-information, the data-processing inequality, the information bottleneck, and von Neumann entropy. Worksheet 4 is due at the start of this lecture. Limits on intelligence follow.}
+\notes{Quiz 4 occupies the first ten minutes. Then multi-information, $I+H=C$, the data-processing inequality, the information bottleneck, and von Neumann entropy. Worksheet 4 is due at the start of this lecture. Limits on intelligence follow and can absorb overflow.}
 
 \subsection{This Session}
 
@@ -65,17 +65,17 @@ reading:
 }
 
 \notes{
-**Time plan (60 minutes, first half of the final session)**
+**Time plan (do not cut DPI / IB / von Neumann to fit the hour)**
 
 | Minutes | Block |
 |--------:|-------|
 | 0–10 | Quiz 4 (Moodle) |
-| 10–28 | Same marginals, different joints; multi-information; $I+H=C$ |
-| 28–40 | Data-processing inequality (proof) |
-| 40–52 | Information bottleneck |
-| 52–60 | Classical limit $I=C\Rightarrow H=0$; von Neumann entropy |
+| 10–35 | Same marginals, different joints; multi-information; $I+H=C$ |
+| 35–55 | Data-processing inequality (proof) |
+| 55–80 | Information bottleneck |
+| 80–100 | Classical limit $I=C\Rightarrow H=0$; von Neumann entropy |
 
-The optional Jaynes-world bridge and the Schottky / Good Regulator preview are notes-only; lecture 8 finishes those readings. DPI and IB are taught here (LO10), not named as week-8 tools.
+If the slot is still listed as one hour, run long: the second half (limits) can start late or pick up unfinished interpret questions. Schottky / Good Regulator remain notes-only until the limits lecture. DPI and IB are taught here (LO10).
 }
 
 \subsection{Quiz 4}
@@ -93,10 +93,6 @@ The optional Jaynes-world bridge and the Schottky / Good Regulator preview are n
 
 \notes{Independent, correlated, and anti-correlated velocities can share the same one-dimensional Gaussians. The marginal entropies $h_x$ and $h_y$ do not see the tilt. The joint does. Multi-information is that leftover: $I=\sum h_i-H$.}
 
-\include{_physics/includes/i-plus-h-equals-c.md}
-
-\include{_information-game/includes/submodularity-multi-information.md}
-
 <!-- SNIPPET: _physics/includes/multi-information-worked.md -->
 
 \newslides{Multi-Information and $I+H=C$}
@@ -109,9 +105,9 @@ The optional Jaynes-world bridge and the Schottky / Good Regulator preview are n
 * $I$ = stored correlation; $H$ = free uncertainty
 }
 
-\speakernotes{LO10. Point back to velocity demos: same marginals, different joints. Worksheet 4 Part A.}
+\speakernotes{LO10. Point back to velocity demos: same marginals, different joints. Worksheet 4 Part A. Inaccessible-game introduction is light colour only — not a full axiomatic framework.}
 
-\notes{Multi-information $I=\sum_i h_i-H\ge 0$ generalises mutual information. With fixed marginal entropies $C=\sum_i h_i$, conservation $I+H=C$ is a no-go: you cannot have both high stored correlation and high free uncertainty without bound.}
+\notes{Multi-information $I=\sum_i h_i-H\ge 0$ generalises mutual information. With fixed marginal entropies $C=\sum_i h_i$, conservation $I+H=C$ is a no-go: you cannot have both high stored correlation and high free uncertainty without bound. The mechanics analogy is enough: $I$ like potential (stored correlation), $H$ like kinetic (free uncertainty). A brief inaccessible-game introduction may follow as colour; do not expand it into a separate outcome.}
 
 \setupplotcode{import numpy as np
 import matplotlib.pyplot as plt

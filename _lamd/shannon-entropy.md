@@ -12,7 +12,7 @@ abstract: >
   for mean energy, entropy, and free energy. The chain rule, mutual
   information, channel capacity, and the data-processing inequality are
   introduced as scaffolding: $I$ and DPI are stated today and proved
-  in week 7.
+  in week 8.
 author:
 - given: Neil D.
   family: Lawrence
@@ -242,7 +242,7 @@ def thermo_from_Z(beta, energies):
 * Extra surprise when $q$ stands in for $p$ — not a metric, but a directed cost
 }
 
-\speakernotes{LO8 setup. Board: $\mathrm{KL}(p\|q)\neq\mathrm{KL}(q\|p)$. Jaynes die week 4 minimised $\mathrm{KL}(p\|r)$ without naming it. Week 6: $m$-projection.}
+\speakernotes{LO8 setup. Board: $\mathrm{KL}(p\|q)\neq\mathrm{KL}(q\|p)$. Jaynes die week 5 minimised $\mathrm{KL}(p\|r)$ without naming it. Week 7: $m$-projection.}
 
 \notes{KL divergence measures information lost when $q$ is used instead of $p$. It is non-negative in both discrete and continuous settings (with common support). Unlike Shannon entropy, it is defined relative to a reference. MaxEnt and $m$-projections minimise $\mathrm{KL}(\cdot\|r)$; that is why week 4's die optimisation used $\sum_i p_i\log(p_i/r_i)$.}
 
@@ -301,9 +301,9 @@ mlai.write_figure('entropy-bounded-vs-differential.svg', directory='\writeDiagra
 * Data processing: if $X\to Y\to Z$ is Markov, $I(X;Z)\le I(X;Y)$
 }
 
-\speakernotes{Define $I$ from the chain rule. State DPI; do not prove. Proof and the information bottleneck are week 7 (LO10). Capacity remains this week's no-go/prescription pair.}
+\speakernotes{Define $I$ from the chain rule. State DPI; do not prove. Proof and the information bottleneck are week 8 (LO10). Capacity remains this week's no-go/prescription pair.}
 
-\notes{The chain rule $H(X,Y)=H(X)+H(Y|X)$ is the algebraic source of multi-information. Mutual information $I(X;Y)=H(X)-H(X|Y)$ is the pairwise case; we do not yet treat $n>2$. Channel capacity $C$ is a no-go on rate; the capacity-achieving input distribution is the prescription. The data-processing inequality is the no-go on $I$: processing cannot create information. Cover and Thomas Theorem 2.8.1 is the reading; the proof waits for week 7, when $I$ is first-class.}
+\notes{The chain rule $H(X,Y)=H(X)+H(Y|X)$ is the algebraic source of multi-information. Mutual information $I(X;Y)=H(X)-H(X|Y)$ is the pairwise case; we do not yet treat $n>2$. Channel capacity $C$ is a no-go on rate; the capacity-achieving input distribution is the prescription. The data-processing inequality is the no-go on $I$: processing cannot create information. Cover and Thomas Theorem 2.8.1 is the reading; the proof waits for week 8, when $I$ is first-class.}
 
 \setupplotcode{import numpy as np
 import matplotlib.pyplot as plt
@@ -335,7 +335,7 @@ mlai.write_figure('bsc-capacity.svg', directory='\writeDiagramsDir/ml')}
 \slidesincremental{
 * No-go: $R \le C$; processing cannot create information
 * Prescription: the $p(x)$ that achieves $C$
-* Week 7: prove DPI; information bottleneck as the prescription on $I$
+* Week 8: prove DPI; information bottleneck as the prescription on $I$
 }
 
 \subsection{Three Framings, First Pass}
@@ -359,7 +359,7 @@ mlai.write_figure('bsc-capacity.svg', directory='\writeDiagramsDir/ml')}
 * Mutual information? (definition)
 }
 
-\notes{Interpret later: how entropy is understood today (week 4, then week 7); chain rule as the source of multi-information (week 7). DPI is named today; define-stage proof is week 7.}
+\notes{Interpret later: how entropy is understood today (week 5, then week 8); chain rule as the source of multi-information (week 8). DPI is named today; define-stage proof is week 8.}
 
 \subsection{After This Lecture}
 

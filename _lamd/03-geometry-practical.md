@@ -1,14 +1,14 @@
 ---
 title: "Worksheet 3: Information Geometry and Thermodynamic Length"
 practical: 3
-week: 5
+week: 6
 layout: practical
 assignment: True
 ipynb: True
 reveal: False
 transition: None
-date: 2026-11-17
-released: 2026-11-10
+date: 2026-11-24
+released: 2026-11-17
 venue: FW26, William Gates Building
 abstract: >
   Compute the Fisher information matrix of the Gaussian family, compare

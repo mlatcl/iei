@@ -84,14 +84,14 @@ def partial_trace_B(rho):
 
 \writeassignment{Three geometries (200 words). Shannon abstracted a code as probability over symbols. Write a short argument for why *probability transport* -- moving a distribution from \(p\) to \(q\) -- is a natural abstraction of agency. Then distinguish, in your own words, three notions of an optimal trajectory that this module has named: Crooks / Fisher--Rao thermodynamic length, Wasserstein optimal transport, and the Schrödinger bridge. What would it mean to collapse them, and why must you not?}{25}{}
 
-\writeassignment{The perpetual motion analogy (300 words). Using at least two formal no-gos from the course (Landauer, \(\mathcal{L}^2/\tau\), \(I+H=C\), the data-processing inequality, human bandwidth, the inaccessible game), argue why unbounded intelligence -- a system that processes information without entropic cost -- has the same shape as perpetual motion. Say which of your constraints are no-gos and which of the three geometries (or the information bottleneck) are prescriptions. Where is the analogy tight? Where does it break down? If you used an LLM, include the key responses as an appendix, not counted in the word limit.}{25}{}
+\writeassignment{The perpetual motion analogy (300 words). Using at least two formal no-gos from the course (Landauer, \(\mathcal{L}^2/\tau\), \(I+H=C\), the data-processing inequality, human bandwidth), argue why unbounded intelligence -- a system that processes information without entropic cost -- has the same shape as perpetual motion. Say which of your constraints are no-gos and which of the three geometries (or the information bottleneck) are prescriptions. Where is the analogy tight? Where does it break down? If you used an LLM, include the key responses as an appendix, not counted in the word limit.}{25}{}
 
 \section{Marking}
 
 \notes{
 - 60--74: multi-information computed; Bell density matrix written out; perpetual-motion analogy addressed at a surface level.
 - 75--79: \(S(\rho)=0\) with \(S(\rho_A)>0\) is correctly linked to \(I=C\); the three geometries are distinguished, not collapsed.
-- 80--89: the perpetual-motion argument is formal (not just an analogy) and uses Landauer or \(\mathcal{L}^2/\tau\) or the inaccessible game tightly; Part A2 extended (three variables, or a continuous family).
+- 80--89: the perpetual-motion argument is formal (not just an analogy) and uses Landauer or \(\mathcal{L}^2/\tau\) or $I+H=C$ / DPI tightly; Part A2 extended (three variables, or a continuous family).
 - 90--100: original contribution -- a case where the analogy fails, and a proposal for what a stronger information-theoretic limit would require.
 }
 

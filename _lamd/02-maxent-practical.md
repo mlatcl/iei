@@ -1,14 +1,14 @@
 ---
 title: "Worksheet 2: Maxwell's Demon, MaxEnt, and the Exponential Family"
 practical: 2
-week: 3
+week: 4
 layout: practical
 assignment: True
 ipynb: True
 reveal: False
 transition: None
-date: 2026-11-03
-released: 2026-10-27
+date: 2026-11-10
+released: 2026-11-03
 venue: FW26, William Gates Building
 abstract: >
   Recover Jaynes' die, the canonical ensemble, and the Gaussian from

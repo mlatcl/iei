@@ -11,11 +11,11 @@ Published on 13 October. Meet the whole list in lecture 1. Do not expect to answ
 Each question has two stages.
 
 - **Define**: a competent textbook answer, in the week the object is introduced.
-- **Interpret**: this module's own answer. Later — often week 4, or weeks 7–8.
+- **Interpret**: this module's own answer. Later — often week 5, or week 8.
 
 Class tests examine the *applied* form of the define-stage questions, on a new example. They do not ask “What is X?”
 
-## Lecture 1 — 13 October — Motivation and Boltzmann
+## Lecture 1 — 13 October — Motivation and Review
 
 **Define this week**
 
@@ -23,7 +23,7 @@ Class tests examine the *applied* form of the define-stage questions, on a new e
 - Who were Carnot and Clausius, and what did each contribute?
 - What is the relationship between energy and entropy?
 - What is a thermodynamic bath?
-- What is Schottky's anomaly?
+- What is Schottky's anomaly? (first cut)
 - What are the information constraints on a human? (bandwidth, first cut)
 
 **The theme (return every week)**
@@ -38,7 +38,23 @@ Class tests examine the *applied* form of the define-stage questions, on a new e
 - What is the purely entropic interpretation of Schottky's anomaly?
 - What is the Legendre transform? (you have already written $F = U - TS$)
 
-## Lecture 2 — 20 October — Shannon Entropy
+## Lecture 2 — 20 October — Boltzmann and Free Energy
+
+Quiz 1 occupies the first ten minutes.
+
+**Define this week**
+
+- What is the Boltzmann distribution?
+- How do internal energy, entropy, and Helmholtz free energy enter $p_i$?
+- What is Schottky's anomaly?
+- What is a thermodynamic bath? (revisited)
+
+**Named, not yet answered**
+
+- How is entropy understood today?
+- Shannon entropy versus differential entropy? (full contrast: week 6)
+
+## Lecture 3 — 27 October — Shannon Entropy
 
 **Define this week**
 
@@ -50,14 +66,12 @@ Class tests examine the *applied* form of the define-stage questions, on a new e
 
 **Named, not yet answered**
 
-- What is the data processing inequality? (statement today; proof week 7)
-- What is the information bottleneck? (week 7)
+- What is the data processing inequality? (statement today; proof week 8)
+- What is the information bottleneck? (week 8)
 - How is entropy understood today? (Shannon alone is not the intended answer)
-- Shannon entropy versus differential entropy? (full contrast: week 5)
+- Shannon entropy versus differential entropy? (full contrast: week 6)
 
-## Lecture 3 — 27 October — Maxwell and Landauer
-
-Quizzes occupy the first ten minutes of lectures 2, 5, 7 and 8.
+## Lecture 4 — 3 November — Maxwell and Landauer
 
 **Define this week**
 
@@ -74,7 +88,9 @@ Quizzes occupy the first ten minutes of lectures 2, 5, 7 and 8.
 - Dissipation ledger (Ellis) versus information ledger (Szilard/Landauer/Bennett): same no-go, different bookkeeping — which argument matches the generality of the second law?
 - Does Landauer *derive* the erasure cost, or *assume* the second law to save it? (Contrast bad textbook circularity with Bennett (1982) on logical irreversibility of erasure.)
 
-## Lecture 4 — 3 November — MaxEnt and Synthesis
+## Lecture 5 — 10 November — MaxEnt and Synthesis
+
+Quiz 2 occupies the first ten minutes.
 
 **Define this week**
 
@@ -88,9 +104,7 @@ Quizzes occupy the first ten minutes of lectures 2, 5, 7 and 8.
 
 - What if MaxEnt is over a coupling, with two prescribed marginals rather than a list of moments? (Sinkhorn; week 8)
 
-## Lecture 5 — 10 November — Fisher Metric
-
-Quiz 2 occupies the first ten minutes.
+## Lecture 6 — 17 November — Fisher Metric
 
 **Define this week**
 
@@ -106,7 +120,9 @@ Quiz 2 occupies the first ten minutes.
 
 - How do optimal trajectories in thermodynamic length relate to optimal intelligence?
 
-## Lecture 6 — 17 November — Projection and Geodesics
+## Lecture 7 — 24 November — Projection and Geodesics
+
+Quiz 3 occupies the first ten minutes.
 
 **Define this week**
 
@@ -119,9 +135,9 @@ Quiz 2 occupies the first ten minutes.
 
 - What is an alternating $m$-projection onto two constraint sets? (Sinkhorn; week 8)
 
-## Lecture 7 — 24 November — Multi-Information
+## Lecture 8 — 1 December — Multi-Information and Limits on Intelligence
 
-Quiz 3 occupies the first ten minutes.
+Quiz 4 occupies the first ten minutes.
 
 **Define this week**
 
@@ -130,19 +146,6 @@ Quiz 3 occupies the first ten minutes.
 - What is the information bottleneck?
 - What is von Neumann entropy?
 - What is the matrix exponential family?
-
-**First attempt, finish in week 8**
-
-- What is the purely entropic interpretation of Schottky's anomaly?
-- What is the purely entropic interpretation of the Good Regulator Theorem?
-- How is entropy understood today? (revised after von Neumann)
-
-## Lecture 8 — 1 December — Limits on Intelligence
-
-Quiz 4 occupies the first ten minutes.
-
-**Define this week**
-
 - What is a coupling of two distributions?
 - What is entropy-regularized optimal transport, and why is its solution an exponential family?
 - What does Sinkhorn iterate, and which of the three geometries does it compute?
@@ -163,5 +166,6 @@ Quiz 4 occupies the first ten minutes.
 - What is a viable system?
 - What are the information constraints on a human?
 - What is the purely entropic interpretation of Schottky's anomaly?
+- How is entropy understood today? (last revision)
 
-The cybernetics cluster (requisite variety, Good Regulator, viable system) is used in lecture 8 as named evaluation tools for LO13. It is not a separate outcome. The data-processing inequality and the information bottleneck are taught in lecture 7 under LO10 and *used* here. Sinkhorn is named under LO12 as the discrete algorithm for the Schrödinger / entropic coupling, not as a fourth geometry.
+The cybernetics cluster (requisite variety, Good Regulator, viable system) is used in lecture 8 as named evaluation tools for LO13. It is not a separate outcome. The data-processing inequality and the information bottleneck are taught under LO10 in the first half of lecture 8 and *used* in the second half. A light inaccessible-game introduction may appear as colour, not as a separate outcome. Sinkhorn is named under LO12 as the discrete algorithm for the Schrödinger / entropic coupling, not as a fourth geometry.

@@ -145,7 +145,7 @@ mlai.write_figure('transport-plan-2x2.svg', directory='\writeDiagramsDir/ml')}
 
 <!-- /SNIPPET: _information-game/includes/agency-as-transport.md -->
 
-\notes{The entropic constraint in Sinkhorn distances has a direct connection to week 7: @Cuturi-sinkhorn13 shows that constraining $\mathrm{KL}(P \| rc^T) \le \alpha$ is equivalent to constraining the mutual information $I(X;Y) \le \alpha$ of the coupling. The week 7 identity $I + H = C$ relates mutual information to capacity; here we see mutual information serving as a budget on how deterministic the transport plan can be.}
+\notes{The entropic constraint in Sinkhorn distances has a direct connection to the first half of this session: @Cuturi-sinkhorn13 shows that constraining $\mathrm{KL}(P \| rc^T) \le \alpha$ is equivalent to constraining the mutual information $I(X;Y) \le \alpha$ of the coupling. The identity $I + H = C$ relates mutual information to capacity; here we see mutual information serving as a budget on how deterministic the transport plan can be.}
 
 \subsection{Three Geometries}
 
@@ -208,9 +208,9 @@ mlai.write_figure('transport-plan-2x2.svg', directory='\writeDiagramsDir/ml')}
 * Human bandwidth: $\sim 100$ bits/s — *The Atomic Human*
 }
 
-\speakernotes{LO13. Use week-7 tools: DPI and the information bottleneck. Requisite variety and the Good Regulator remain named colour. Close Week 1: entropy forbids; probability prescribes.}
+\speakernotes{LO13. Use LO10 tools from the first half: DPI and the information bottleneck. Requisite variety and the Good Regulator remain named colour. Close Week 1: entropy forbids; probability prescribes.}
 
-\notes{Data-processing inequality and the information bottleneck were taught in week 7 (LO10). Today they are evaluation tools, not new outcomes: a claim that an intelligent system will just process more is a DPI violation; a system that keeps only what is relevant for action is an IB statement. Requisite variety and the Good Regulator in entropic form remain named colour. Viable-system material is optional. Prescriptions operate inside fences set by physics and embodiment.}
+\notes{Data-processing inequality and the information bottleneck were taught under LO10 earlier in this session. Today they are evaluation tools, not new outcomes: a claim that an intelligent system will just process more is a DPI violation; a system that keeps only what is relevant for action is an IB statement. Requisite variety and the Good Regulator in entropic form remain named colour. Viable-system material is optional. Inaccessible-game material, if present, is colour only. Prescriptions operate inside fences set by physics and embodiment.}
 
 \setupcode{no_gos = ['Landauer', 'Crooks L^2/tau', 'I+H=C', 'human bandwidth']
 prescriptions = ['Boltzmann/MaxEnt p', 'Crooks geodesic', 'Wasserstein plan', 'Schrodinger bridge']
