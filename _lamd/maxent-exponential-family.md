@@ -125,60 +125,95 @@ This is his *principle of insufficient reason* (also called the principle of ind
 import matplotlib.pyplot as plt
 import mlai}
 
-\plotcode{# Successive sunrises only: after n rises, belief ∝ θ^n (modern Beta(n+1,1)).
-# Frames alternate prior/belief → likelihood of one more rise → updated posterior.
+\plotcode{# Always visualise: current belief (prior) × likelihood → posterior,
+# then a reset frame where the posterior becomes the new prior (colour change;
+# likelihood and old prior disappear) before the next update.
+# Jumps use likelihood ∝ θ^{Δn} for Δn further sunrises.
 theta = np.linspace(0.001, 0.999, 1000)
-steps = [1, 2, 3, 5, 10, 20]  # number of observed sunrises after each update
-ymax = (steps[-1] + 1) * 1.05
+milestones = [1, 2, 3, 20]  # cumulative sunrises after each update
+ymax = (milestones[-1] + 1) * 1.05
 diagrams = '\writeDiagramsDir/ml'
+prior_c = [1, 0, 0]
+lik_c = [0, 0, 1]
+post_c = [1, 0, 1]
 frame = 0
+
+def _belief(n):
+    return (n + 1) * theta**n
+
+def _lik_shape(delta):
+    # unnormalised θ^{Δn}; max-scaled for display (label keeps ∝)
+    kern = theta**delta
+    return kern / kern.max() * (ymax * 0.4)
+
+def _save(ax, texts):
+    global frame
+    for yfrac, txt, col in texts:
+        ax.text(0.05, ymax * yfrac, txt, fontsize=15, color=col)
+    frame += 1
+    mlai.write_figure(f'laplace-succession{frame:03d}.svg', directory=diagrams)
 
 def _axes():
     fig, ax = plt.subplots(figsize=(10, 5))
     ax.set_xlim(0, 1)
     ax.set_ylim(0, ymax)
     ax.set_xlabel(r'$\theta$')
-    ax.set_ylabel(r'$p(\theta\mid\mathrm{data})$')
+    ax.set_ylabel(r'density')
     return fig, ax
 
-def _belief(n):
-    # n observed sunrises → density (n+1) θ^n on [0,1]
-    return (n + 1) * theta**n
-
+# Frame 1: prior only
 fig, ax = _axes()
-ax.plot(theta, _belief(0), color=[1, 0, 0], linewidth=3)
-ax.text(0.05, ymax * 0.9, r'prior (insufficient reason)', fontsize=16, color=[1, 0, 0])
-ax.text(0.05, ymax * 0.8, r'$P(\mathrm{next\ rise})=\frac{1}{2}$', fontsize=16)
-frame += 1
-mlai.write_figure(f'laplace-succession{frame:03d}.svg', directory=diagrams)
+ax.plot(theta, _belief(0), color=prior_c, linewidth=3)
+_save(ax, [
+    (0.90, r'prior (insufficient reason)', prior_c),
+    (0.80, r'$P(\mathrm{next})=\frac{1}{2}$', 'k'),
+])
 
-for n in steps:
-    # Likelihood of one more sunrise: ∝ θ (always a success)
-    fig, ax = _axes()
-    if n == 1:
-        ax.plot(theta, _belief(0), color=[1, 0, 0], linewidth=2, alpha=0.35)
+n_prev = 0
+for n_next in milestones:
+    delta = n_next - n_prev
+    lik = _lik_shape(delta)
+    if delta == 1:
+        lik_label = r'likelihood: one more sunrise $\propto\theta$'
     else:
-        ax.plot(theta, _belief(n - 1), color=[1, 0, 1], linewidth=2, alpha=0.35)
-    ax.plot(theta, theta * (ymax * 0.35), color=[0, 0, 1], linewidth=3)  # shape ∝ θ
-    ax.text(0.05, ymax * 0.9, r'likelihood: one more sunrise $\propto\theta$', fontsize=16, color=[0, 0, 1])
-    ax.text(0.05, ymax * 0.8, r'(observation $%d$)' % n, fontsize=14)
-    frame += 1
-    mlai.write_figure(f'laplace-succession{frame:03d}.svg', directory=diagrams)
+        lik_label = r'likelihood: %d more sunrises $\propto\theta^{%d}$' % (delta, delta)
 
-    # Posterior after n sunrises
+    # prior + likelihood
     fig, ax = _axes()
-    ax.plot(theta, _belief(n), color=[1, 0, 1], linewidth=3)
-    ax.text(0.05, ymax * 0.9, r'after $%d$ sunrise(s)' % n, fontsize=16, color=[1, 0, 1])
-    ax.text(0.05, ymax * 0.8,
-            r'$P(\mathrm{next})=\frac{%d}{%d}$' % (n + 1, n + 2),
-            fontsize=16)
-    frame += 1
-    mlai.write_figure(f'laplace-succession{frame:03d}.svg', directory=diagrams)
+    ax.plot(theta, _belief(n_prev), color=prior_c, linewidth=3)
+    ax.plot(theta, lik, color=lik_c, linewidth=3)
+    _save(ax, [
+        (0.90, r'belief after $%d$ sunrise(s)' % n_prev, prior_c),
+        (0.78, lik_label, lik_c),
+    ])
+
+    # prior + likelihood + posterior
+    fig, ax = _axes()
+    ax.plot(theta, _belief(n_prev), color=prior_c, linewidth=2, alpha=0.5)
+    ax.plot(theta, lik, color=lik_c, linewidth=2, alpha=0.5)
+    ax.plot(theta, _belief(n_next), color=post_c, linewidth=3)
+    _save(ax, [
+        (0.90, r'posterior $\propto$ belief $\times$ likelihood', post_c),
+        (0.78, r'after $%d$ sunrise(s): $P(\mathrm{next})=\frac{%d}{%d}$'
+         % (n_next, n_next + 1, n_next + 2), 'k'),
+    ])
+
+    # reset: posterior becomes the new prior; likelihood and old prior gone
+    # (skip after the final milestone so we end on the peaked posterior)
+    if n_next != milestones[-1]:
+        fig, ax = _axes()
+        ax.plot(theta, _belief(n_next), color=prior_c, linewidth=3)
+        _save(ax, [
+            (0.90, r'posterior $\rightarrow$ new prior', prior_c),
+            (0.78, r'ready for the next update', 'k'),
+        ])
+
+    n_prev = n_next
 
 n_frames = frame}
 
 \slides{\define{width}{70%}
-\startanimation{laplace-succession}{1}{13}
+\startanimation{laplace-succession}{1}{12}
 \newframe{\includediagram{\diagramsDir/ml/laplace-succession001}{\width}}{laplace-succession}
 \newframe{\includediagram{\diagramsDir/ml/laplace-succession002}{\width}}{laplace-succession}
 \newframe{\includediagram{\diagramsDir/ml/laplace-succession003}{\width}}{laplace-succession}
@@ -191,10 +226,9 @@ n_frames = frame}
 \newframe{\includediagram{\diagramsDir/ml/laplace-succession010}{\width}}{laplace-succession}
 \newframe{\includediagram{\diagramsDir/ml/laplace-succession011}{\width}}{laplace-succession}
 \newframe{\includediagram{\diagramsDir/ml/laplace-succession012}{\width}}{laplace-succession}
-\newframe{\includediagram{\diagramsDir/ml/laplace-succession013}{\width}}{laplace-succession}
 \endanimation}
 
-\notes{\figure{\includediagram{\diagramsDir/ml/laplace-succession013}{70%}}{Successive sunrises only. Each observation multiplies the current belief by a likelihood $\propto\theta$; after $n$ rises the density is $(n+1)\theta^n$ and the predictive probability is $(n+1)/(n+2)$. The mass piles up toward $\theta=1$ as $n$ grows.}{laplace-succession-figure}}
+\notes{\figure{\includediagram{\diagramsDir/ml/laplace-succession012}{70%}}{Each update is belief $\times$ likelihood $\rightarrow$ posterior; a reset frame then promotes the posterior to the new prior (likelihood cleared). Early steps use one more sunrise ($\propto\theta$); the jump to $n=20$ uses the likelihood for $17$ further rises ($\propto\theta^{17}$).}{laplace-succession-figure}}
 
 \notes{Laplace applies insufficient reason not only to discrete outcomes, but to an unknown daily rate $\theta\in[0,1]$. Knowing nothing about $\theta$, he places a uniform prior $p(\theta)=1$ on the unit interval. Every recorded day is a *success*: the sun rose. After $n$ independent rises the likelihood is $\theta^n$, so
 \begin{align}
