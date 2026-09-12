@@ -290,20 +290,21 @@ Bridge from week 1 (gremlin / ignorance as probability) to MaxEnt. Keep this sho
 <div>
 <ul>
 <li class="fragment">Unknown daily rate <span class="math inline">\(\theta\in[0,1]\)</span>; insufficient reason <span class="math inline">\(\Rightarrow\)</span> uniform prior on <span class="math inline">\(\theta\)</span></li>
-<li class="fragment"><span class="math inline">\(s\)</span> successes in <span class="math inline">\(n\)</span> trials <span class="math inline">\(\Rightarrow\)</span> predictive <span class="math inline">\(P(\text{next})=\dfrac{s+1}{n+2}\)</span></li>
-<li class="fragment">Sunrise for <span class="math inline">\(n=1{,}826{,}213\)</span> days: <span class="math inline">\(\dfrac{n+1}{n+2}\)</span></li>
+<li class="fragment">Every day is a success: after <span class="math inline">\(n\)</span> rises, belief <span class="math inline">\(\propto\theta^{n}\)</span></li>
+<li class="fragment">Predictive: <span class="math inline">\(P(\text{rises tomorrow})=\dfrac{n+1}{n+2}\)</span></li>
+<li class="fragment">Sunrise for <span class="math inline">\(n=1{,}826{,}213\)</span> days: odds <span class="math inline">\(1{,}826{,}214\)</span> to one</li>
 <li class="fragment">Laplace’s caveat: astronomy makes the true odds <em>incomparably greater</em></li>
 </ul>
 </div>
 <aside class="notes">
-Board the short derivation. Emphasise: (i) the example is genuine; (ii) Laplace applies insufficient reason to <span class="math inline">\(\theta\)</span>, not to tomorrow’s binary outcome alone; (iii) he immediately rejects treating the numerical answer as the scientific probability of sunrise.
+Board the short derivation. Emphasise: (i) the example is genuine; (ii) Laplace applies insufficient reason to <span class="math inline">\(\theta\)</span>, not to tomorrow’s binary outcome alone; (iii) every observation is a success — the sun always rises in the data; (iv) he immediately rejects treating the numerical answer as the scientific probability of sunrise.
 </aside>
 <div id="animation-laplace-succession" class="lamd-animation" role="region" aria-label="" data-animation-group="laplace-succession">
 <noscript>
 <style>#animation-laplace-succession .animation-controls{display:none}#animation-laplace-succession .laplace-succession~.laplace-succession{display:none}</style>
 </noscript>
 <div class="animation-controls">
-<p><small></small> <input id="range-laplace-succession" type="range" min="1" max="3" value="1" aria-label="Frame slider for " aria-valuemin="1" aria-valuemax="3" aria-valuenow="1" onchange="typeof lamdSetDivs==='function'&&lamdSetDivs('laplace-succession')" oninput="typeof lamdSetDivs==='function'&&lamdSetDivs('laplace-succession')"> <button type="button" onclick="typeof lamdPlusDivs==='function'&&lamdPlusDivs(-1,'laplace-succession');" aria-label="Previous frame">❮</button> <button type="button" onclick="typeof lamdPlusDivs==='function'&&lamdPlusDivs(1,'laplace-succession');" aria-label="Next frame">❯</button></p>
+<p><small></small> <input id="range-laplace-succession" type="range" min="1" max="13" value="1" aria-label="Frame slider for " aria-valuemin="1" aria-valuemax="13" aria-valuenow="1" onchange="typeof lamdSetDivs==='function'&&lamdSetDivs('laplace-succession')" oninput="typeof lamdSetDivs==='function'&&lamdSetDivs('laplace-succession')"> <button type="button" onclick="typeof lamdPlusDivs==='function'&&lamdPlusDivs(-1,'laplace-succession');" aria-label="Previous frame">❮</button> <button type="button" onclick="typeof lamdPlusDivs==='function'&&lamdPlusDivs(1,'laplace-succession');" aria-label="Next frame">❯</button></p>
 </div>
 <script>
 document.addEventListener('DOMContentLoaded',function(){
@@ -332,7 +333,50 @@ if(f.length>0){f[0].style.display='block';}
 <object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/laplace-succession003.svg" width="70%" style=" ">
 </object>
 </div>
+<div class="laplace-succession" style="text-align:center;" role="img" aria-label="laplace-succession" data-animation-frame="laplace-succession">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/laplace-succession004.svg" width="70%" style=" ">
+</object>
 </div>
+<div class="laplace-succession" style="text-align:center;" role="img" aria-label="laplace-succession" data-animation-frame="laplace-succession">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/laplace-succession005.svg" width="70%" style=" ">
+</object>
+</div>
+<div class="laplace-succession" style="text-align:center;" role="img" aria-label="laplace-succession" data-animation-frame="laplace-succession">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/laplace-succession006.svg" width="70%" style=" ">
+</object>
+</div>
+<div class="laplace-succession" style="text-align:center;" role="img" aria-label="laplace-succession" data-animation-frame="laplace-succession">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/laplace-succession007.svg" width="70%" style=" ">
+</object>
+</div>
+<div class="laplace-succession" style="text-align:center;" role="img" aria-label="laplace-succession" data-animation-frame="laplace-succession">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/laplace-succession008.svg" width="70%" style=" ">
+</object>
+</div>
+<div class="laplace-succession" style="text-align:center;" role="img" aria-label="laplace-succession" data-animation-frame="laplace-succession">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/laplace-succession009.svg" width="70%" style=" ">
+</object>
+</div>
+<div class="laplace-succession" style="text-align:center;" role="img" aria-label="laplace-succession" data-animation-frame="laplace-succession">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/laplace-succession010.svg" width="70%" style=" ">
+</object>
+</div>
+<div class="laplace-succession" style="text-align:center;" role="img" aria-label="laplace-succession" data-animation-frame="laplace-succession">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/laplace-succession011.svg" width="70%" style=" ">
+</object>
+</div>
+<div class="laplace-succession" style="text-align:center;" role="img" aria-label="laplace-succession" data-animation-frame="laplace-succession">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/laplace-succession012.svg" width="70%" style=" ">
+</object>
+</div>
+<div class="laplace-succession" style="text-align:center;" role="img" aria-label="laplace-succession" data-animation-frame="laplace-succession">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/laplace-succession013.svg" width="70%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+Aside, if asked: Laplace did <em>not</em> use the Laplace approximation here — exact integral, modern Beta packaging.
+</aside>
 <div>
 <ul>
 <li class="fragment">Insufficient reason: uniform when we know only the outcomes (or only <span class="math inline">\(\theta\in[0,1]\)</span>)</li>
