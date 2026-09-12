@@ -137,7 +137,7 @@
 <section id="lagrange-multipliers" class="slide level2">
 <h2>Lagrange Multipliers</h2>
 <ul>
-<li>Constrained optimisation appears throughout inference and physics</li>
+<li>Constrained optimisation appears throughout physics, engineering and machine learning.</li>
 <li>Lagrange multipliers convert constraints into terms in an auxiliary function</li>
 <li>At the optimum, the objective gradient is normal to the constraint surface</li>
 </ul>
@@ -145,11 +145,89 @@
 <section id="one-equality-constraint" class="slide level2">
 <h2>One Equality Constraint</h2>
 <p><strong>Single constraint:</strong> <span class="math display">\[
-\mathscr{L}(\mathbf{x}, \lambda) = f(\mathbf{x}) + \lambda\bigl(g(\mathbf{x}) - c\bigr)
+\mathscr{L}(\mathbf{x}, \lambda) = f(\mathbf{x}) + \lambda\left(g(\mathbf{x}) - c\right)
 \]</span></p>
 <p><strong>Stationarity:</strong> <span class="math display">\[
 \nabla f + \lambda \nabla g = 0, \qquad g(\mathbf{x}) = c
 \]</span></p>
+</section>
+<section id="stationarity-parallel-gradients" class="slide level2">
+<h2>Stationarity: parallel gradients</h2>
+<div id="animation-lagrange-parallel-vectors" class="lamd-animation" role="region" aria-label="" data-animation-group="lagrange-parallel-vectors">
+<noscript>
+<style>#animation-lagrange-parallel-vectors .animation-controls{display:none}#animation-lagrange-parallel-vectors .lagrange-parallel-vectors~.lagrange-parallel-vectors{display:none}</style>
+</noscript>
+<div class="animation-controls">
+<p><small></small> <input id="range-lagrange-parallel-vectors" type="range" min="0" max="13" value="0" aria-label="Frame slider for " aria-valuemin="0" aria-valuemax="13" aria-valuenow="0" onchange="typeof lamdSetDivs==='function'&&lamdSetDivs('lagrange-parallel-vectors')" oninput="typeof lamdSetDivs==='function'&&lamdSetDivs('lagrange-parallel-vectors')"> <button type="button" onclick="typeof lamdPlusDivs==='function'&&lamdPlusDivs(-1,'lagrange-parallel-vectors');" aria-label="Previous frame">❮</button> <button type="button" onclick="typeof lamdPlusDivs==='function'&&lamdPlusDivs(1,'lagrange-parallel-vectors');" aria-label="Next frame">❯</button></p>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+try{
+if(typeof showDivs==='function'){showDivs(1,'lagrange-parallel-vectors');}
+else{
+console.warn('[lamd] figure-animate.js not loaded; animation "'+'lagrange-parallel-vectors'+'" degraded to static first frame.');
+var c=document.getElementById('animation-lagrange-parallel-vectors');
+if(c){var ctrl=c.querySelector('.animation-controls');if(ctrl){ctrl.style.display='none';}}
+var f=document.getElementsByClassName('lagrange-parallel-vectors');
+for(var i=1;i<f.length;i++){f[i].style.display='none';}
+if(f.length>0){f[0].style.display='block';}
+}
+}catch(e){console.warn('[lamd] Animation "'+'lagrange-parallel-vectors'+'" failed to initialize:',e);}
+});
+</script>
+<div class="lagrange-parallel-vectors" style="text-align:center;" role="img" aria-label="lagrange-parallel-vectors" data-animation-frame="lagrange-parallel-vectors">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/physics/lagrange-parallel-vectors000.svg" width="70%" style=" ">
+</object>
+</div>
+<div class="lagrange-parallel-vectors" style="text-align:center;" role="img" aria-label="lagrange-parallel-vectors" data-animation-frame="lagrange-parallel-vectors">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/physics/lagrange-parallel-vectors001.svg" width="70%" style=" ">
+</object>
+</div>
+<div class="lagrange-parallel-vectors" style="text-align:center;" role="img" aria-label="lagrange-parallel-vectors" data-animation-frame="lagrange-parallel-vectors">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/physics/lagrange-parallel-vectors002.svg" width="70%" style=" ">
+</object>
+</div>
+<div class="lagrange-parallel-vectors" style="text-align:center;" role="img" aria-label="lagrange-parallel-vectors" data-animation-frame="lagrange-parallel-vectors">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/physics/lagrange-parallel-vectors003.svg" width="70%" style=" ">
+</object>
+</div>
+<div class="lagrange-parallel-vectors" style="text-align:center;" role="img" aria-label="lagrange-parallel-vectors" data-animation-frame="lagrange-parallel-vectors">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/physics/lagrange-parallel-vectors004.svg" width="70%" style=" ">
+</object>
+</div>
+<div class="lagrange-parallel-vectors" style="text-align:center;" role="img" aria-label="lagrange-parallel-vectors" data-animation-frame="lagrange-parallel-vectors">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/physics/lagrange-parallel-vectors005.svg" width="70%" style=" ">
+</object>
+</div>
+<div class="lagrange-parallel-vectors" style="text-align:center;" role="img" aria-label="lagrange-parallel-vectors" data-animation-frame="lagrange-parallel-vectors">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/physics/lagrange-parallel-vectors006.svg" width="70%" style=" ">
+</object>
+</div>
+<div class="lagrange-parallel-vectors" style="text-align:center;" role="img" aria-label="lagrange-parallel-vectors" data-animation-frame="lagrange-parallel-vectors">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/physics/lagrange-parallel-vectors007.svg" width="70%" style=" ">
+</object>
+</div>
+<div class="lagrange-parallel-vectors" style="text-align:center;" role="img" aria-label="lagrange-parallel-vectors" data-animation-frame="lagrange-parallel-vectors">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/physics/lagrange-parallel-vectors008.svg" width="70%" style=" ">
+</object>
+</div>
+<div class="lagrange-parallel-vectors" style="text-align:center;" role="img" aria-label="lagrange-parallel-vectors" data-animation-frame="lagrange-parallel-vectors">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/physics/lagrange-parallel-vectors009.svg" width="70%" style=" ">
+</object>
+</div>
+<div class="lagrange-parallel-vectors" style="text-align:center;" role="img" aria-label="lagrange-parallel-vectors" data-animation-frame="lagrange-parallel-vectors">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/physics/lagrange-parallel-vectors010.svg" width="70%" style=" ">
+</object>
+</div>
+<div class="lagrange-parallel-vectors" style="text-align:center;" role="img" aria-label="lagrange-parallel-vectors" data-animation-frame="lagrange-parallel-vectors">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/physics/lagrange-parallel-vectors011.svg" width="70%" style=" ">
+</object>
+</div>
+<div class="lagrange-parallel-vectors" style="text-align:center;" role="img" aria-label="lagrange-parallel-vectors" data-animation-frame="lagrange-parallel-vectors">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/physics/lagrange-parallel-vectors012.svg" width="70%" style=" ">
+</object>
+</div>
+</div>
 </section>
 <section id="geometric-picture" class="slide level2">
 <h2>Geometric picture</h2>
