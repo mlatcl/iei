@@ -124,6 +124,7 @@
 <h2>This Session</h2>
 <div>
 <ul>
+<li class="fragment">Laplace: insufficient reason <span class="math inline">\(\to\)</span> rule of succession</li>
 <li class="fragment">MaxEnt with Lagrange multipliers</li>
 <li class="fragment">Exponential family as the MaxEnt family</li>
 <li class="fragment">Legendre: entropy as conjugate of <span class="math inline">\(A(\theta)\)</span></li>
@@ -258,6 +259,92 @@ if(f.length>0){f[0].style.display='block';}
 </section>
 <section id="laplace-and-the-principle-of-insufficient-reason" class="slide level2">
 <h2>Laplace and the Principle of Insufficient Reason</h2>
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
+<div class="figure">
+<div id="pierre-simon-laplace-image-figure" class="figure-frame">
+<div class="centered" style="">
+<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/ml/Pierre-Simon_Laplace.png" width="30%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
+</div>
+</div>
+</div>
+<aside class="notes">
+Pierre-Simon Laplace 1749-1827.
+</aside>
+<p>Week 1: Laplace suggested that we treat ignorance with probability. He applied this idea in his estimates of probabilities. He asked himself the question how should we assign <span class="math inline">\(p\)</span> when we know almost nothing?</p>
+<div>
+<ul>
+<li class="fragment"><span class="math inline">\(n\)</span> mutually exclusive, exhaustive outcomes</li>
+<li class="fragment">Nothing distinguishes one from another</li>
+<li class="fragment">Assign equal probability: <span class="math inline">\(p_i = 1/n\)</span></li>
+</ul>
+</div>
+<aside class="notes">
+Bridge from week 1 (gremlin / ignorance as probability) to MaxEnt. Keep this short: insufficient reason is the zero-constraint special case.
+</aside>
+<p>This is Laplace’s example from: <em>Philosophical Essay on Probabilities</em> <span class="citation" data-cites="Laplace-essai14">(Laplace, 1814)</span>.</p>
+<div class="centered" style="">
+<a href="https://play.google.com/books/reader?id=1YQPAAAAQAAJ&amp;pg=PA16"><img data-src="https://mlatcl.github.io/iei/slides/diagrams/books/1YQPAAAAQAAJ-PA16.png" /></a>
+</div>
+<div>
+<ul>
+<li class="fragment">Unknown daily rate <span class="math inline">\(\theta\in[0,1]\)</span>; insufficient reason <span class="math inline">\(\Rightarrow\)</span> uniform prior on <span class="math inline">\(\theta\)</span></li>
+<li class="fragment"><span class="math inline">\(s\)</span> successes in <span class="math inline">\(n\)</span> trials <span class="math inline">\(\Rightarrow\)</span> predictive <span class="math inline">\(P(\text{next})=\dfrac{s+1}{n+2}\)</span></li>
+<li class="fragment">Sunrise for <span class="math inline">\(n=1{,}826{,}213\)</span> days: <span class="math inline">\(\dfrac{n+1}{n+2}\)</span></li>
+<li class="fragment">Laplace’s caveat: astronomy makes the true odds <em>incomparably greater</em></li>
+</ul>
+</div>
+<aside class="notes">
+Board the short derivation. Emphasise: (i) the example is genuine; (ii) Laplace applies insufficient reason to <span class="math inline">\(\theta\)</span>, not to tomorrow’s binary outcome alone; (iii) he immediately rejects treating the numerical answer as the scientific probability of sunrise.
+</aside>
+<div id="animation-laplace-succession" class="lamd-animation" role="region" aria-label="" data-animation-group="laplace-succession">
+<noscript>
+<style>#animation-laplace-succession .animation-controls{display:none}#animation-laplace-succession .laplace-succession~.laplace-succession{display:none}</style>
+</noscript>
+<div class="animation-controls">
+<p><small></small> <input id="range-laplace-succession" type="range" min="1" max="3" value="1" aria-label="Frame slider for " aria-valuemin="1" aria-valuemax="3" aria-valuenow="1" onchange="typeof lamdSetDivs==='function'&&lamdSetDivs('laplace-succession')" oninput="typeof lamdSetDivs==='function'&&lamdSetDivs('laplace-succession')"> <button type="button" onclick="typeof lamdPlusDivs==='function'&&lamdPlusDivs(-1,'laplace-succession');" aria-label="Previous frame">❮</button> <button type="button" onclick="typeof lamdPlusDivs==='function'&&lamdPlusDivs(1,'laplace-succession');" aria-label="Next frame">❯</button></p>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+try{
+if(typeof showDivs==='function'){showDivs(1,'laplace-succession');}
+else{
+console.warn('[lamd] figure-animate.js not loaded; animation "'+'laplace-succession'+'" degraded to static first frame.');
+var c=document.getElementById('animation-laplace-succession');
+if(c){var ctrl=c.querySelector('.animation-controls');if(ctrl){ctrl.style.display='none';}}
+var f=document.getElementsByClassName('laplace-succession');
+for(var i=1;i<f.length;i++){f[i].style.display='none';}
+if(f.length>0){f[0].style.display='block';}
+}
+}catch(e){console.warn('[lamd] Animation "'+'laplace-succession'+'" failed to initialize:',e);}
+});
+</script>
+<div class="laplace-succession" style="text-align:center;" role="img" aria-label="laplace-succession" data-animation-frame="laplace-succession">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/laplace-succession001.svg" width="70%" style=" ">
+</object>
+</div>
+<div class="laplace-succession" style="text-align:center;" role="img" aria-label="laplace-succession" data-animation-frame="laplace-succession">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/laplace-succession002.svg" width="70%" style=" ">
+</object>
+</div>
+<div class="laplace-succession" style="text-align:center;" role="img" aria-label="laplace-succession" data-animation-frame="laplace-succession">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/laplace-succession003.svg" width="70%" style=" ">
+</object>
+</div>
+</div>
+<div>
+<ul>
+<li class="fragment">Insufficient reason: uniform when we know only the outcomes (or only <span class="math inline">\(\theta\in[0,1]\)</span>)</li>
+<li class="fragment">Rule of succession: same idea, after observing counts</li>
+<li class="fragment">Jaynes: maximise <span class="math inline">\(H(p)\)</span> subject to whatever we <em>do</em> know</li>
+<li class="fragment">No extra constraints <span class="math inline">\(\Rightarrow\)</span> MaxEnt recovers <span class="math inline">\(p_i = 1/n\)</span></li>
+<li class="fragment">Mean energy (or other moments) <span class="math inline">\(\Rightarrow\)</span> exponential family</li>
+</ul>
+</div>
+<aside class="notes">
+The punchline: MaxEnt is Laplace’s principle with constraints. Uniform / rule of succession are the empty-moment cases; Boltzmann and the Gaussian arrive when we add moment constraints.
+</aside>
 <!-- /SNIPPET: _physics/includes/laplace-insufficient-reason.md-->
 </section>
 <section id="jaynes-and-maximum-entropy" class="slide level2">
@@ -297,7 +384,7 @@ Ed Jaynes who developed the maximum entropy principle
 <section id="die-roll-simulation" class="slide level2">
 <h2>Die Roll Simulation</h2>
 </section>
-<section id="section" class="slide level2">
+<section id="section-1" class="slide level2">
 <h2></h2>
 <div class="figure">
 <div class="figure-frame" id="dieroll-simulation-figure">
@@ -707,6 +794,9 @@ Jaynes, E.T., 2003. Probability theory: The logic of science. Cambridge Universi
 </div>
 <div id="ref-Jaynes-information57" class="csl-entry" role="doc-biblioentry">
 Jaynes, E.T., 1957. Information theory and statistical mechanics. Physical Review 106, 620–630. <a href="https://doi.org/10.1103/PhysRev.106.620">https://doi.org/10.1103/PhysRev.106.620</a>
+</div>
+<div id="ref-Laplace-essai14" class="csl-entry" role="doc-biblioentry">
+Laplace, P.S., 1814. Essai philosophique sur les probabilités, 2nd ed. Courcier, Paris.
 </div>
 <div id="ref-MacKay-information03" class="csl-entry" role="doc-biblioentry">
 MacKay, D.J.C., 2003. Information theory, inference and learning algorithms. Cambridge University Press, Cambridge, U.K.
