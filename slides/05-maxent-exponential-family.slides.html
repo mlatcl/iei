@@ -176,6 +176,11 @@
 \]</span></p>
 <p><strong>Solution:</strong> <span class="math inline">\(x = y = \frac{1}{2}\)</span>, <span class="math inline">\(\lambda = -\frac{1}{2}\)</span></p>
 <p><em>Closest point on a line; same pattern as constrained energy or <span class="math inline">\(\|\mathbf{w}\|^2\)</span> with a linear constraint</em></p>
+<!-- SNIPPET: _physics/includes/laplace-insufficient-reason.md-->
+</section>
+<section id="laplace-and-the-principle-of-insufficient-reason" class="slide level2">
+<h2>Laplace and the Principle of Insufficient Reason</h2>
+<!-- /SNIPPET: _physics/includes/laplace-insufficient-reason.md-->
 </section>
 <section id="jaynes-and-maximum-entropy" class="slide level2">
 <h2>Jaynes and Maximum Entropy</h2>
@@ -272,7 +277,7 @@ Low-biased: mean 2
 </div>
 </div>
 </div>
-<script src="https://inverseprobability.com/talks/scripts//dieroll/dieroll.js"></script>
+<script src="../scripts//dieroll/dieroll.js"></script>
 </div>
 </div>
 <aside class="notes">
@@ -409,7 +414,7 @@ G_{ij} = \begin{cases}
 <p><strong>Next steps:</strong> * Natural parameters → coordinate system * Fisher information → information topography<br />
 * Entropy gradients → drive dynamics * <span class="math inline">\(\nabla H = -G(\boldsymbol{\theta})\boldsymbol{\theta}\)</span> → key to everything</p>
 <aside class="notes">
-LO6. Two-level system = Bernoulli with <span class="math inline">\(\theta=-\beta\varepsilon\)</span>. Flag matrix exponential family for week 7.
+LO6. Two-level system = Bernoulli with <span class="math inline">\(\theta=-\beta\varepsilon\)</span>. Flag matrix exponential family for week 8.
 </aside>
 </section>
 <section id="softmax-is-maxent-with-features" class="slide level2">
@@ -461,7 +466,7 @@ p(s)\propto\exp(h_1 s_1+h_2 s_2+J s_1 s_2)
 <h2>The Legendre Transform</h2>
 <div>
 <ul>
-<li class="fragment">Week 1: <span class="math inline">\(F = U - TS\)</span></li>
+<li class="fragment">Week 2: <span class="math inline">\(F = U - TS\)</span></li>
 <li class="fragment">Same subtraction, new name</li>
 <li class="fragment">Why the exponential family has two charts</li>
 </ul>
@@ -477,11 +482,24 @@ y = \phi&#39;(x),\qquad \phi^*(y) = xy - \phi(x)
 <h2>Helmholtz Was the First Example</h2>
 <div>
 <ul>
-<li class="fragment"><span class="math inline">\(U(S)\)</span>: energy as a function of entropy</li>
+<li class="fragment"><span class="math inline">\(U(S,V,N)\)</span>: energy as a function of entropy</li>
 <li class="fragment"><span class="math inline">\(T = \partial U/\partial S\)</span>: the slope</li>
-<li class="fragment"><span class="math inline">\(F(T) = U - TS\)</span>: same physics, bath coordinates</li>
+<li class="fragment"><span class="math inline">\(F(T,V,N) = U - TS\)</span>: same physics, bath coordinates</li>
 </ul>
 </div>
+</section>
+<section id="helmholtz-versus-gibbs" class="slide level2">
+<h2>Helmholtz Versus Gibbs</h2>
+<div>
+<ul>
+<li class="fragment">Potential <span class="math inline">\(\leftrightarrow\)</span> which variables the bath fixes</li>
+<li class="fragment"><span class="math inline">\(F(T,V,N)=U-TS\)</span>: fixed <span class="math inline">\(T\)</span>, fixed volume (our setting; <span class="math inline">\(Z\)</span>)</li>
+<li class="fragment"><span class="math inline">\(G(T,P,N)=F+PV=H-TS\)</span>: fixed <span class="math inline">\(T\)</span>, fixed pressure (chemistry; <span class="math inline">\(\mu\)</span>)</li>
+</ul>
+</div>
+<aside class="notes">
+One slide only. Chemists minimise <span class="math inline">\(G\)</span> at fixed <span class="math inline">\(T,P\)</span>; we minimise <span class="math inline">\(F\)</span> / maximise entropy at fixed <span class="math inline">\(T\)</span> and fixed state space. Same Legendre idea. No grand canonical, no mixing entropy unless a student asks.
+</aside>
 </section>
 <section id="entropy-as-conjugate-of-the-log-partition" class="slide level2">
 <h2>Entropy as Conjugate of the Log-Partition</h2>
@@ -501,12 +519,12 @@ H = A - \theta p = -p\log p -(1-p)\log(1-p)
 <ul>
 <li class="fragment"><span class="math inline">\(\boldsymbol{\theta}\)</span>: <span class="math inline">\(e\)</span>-coordinates (natural parameters)</li>
 <li class="fragment"><span class="math inline">\(\boldsymbol{\eta}\)</span>: <span class="math inline">\(m\)</span>-coordinates (moments)</li>
-<li class="fragment">Dual flatness: week 5</li>
-<li class="fragment"><span class="math inline">\(m\)</span>-projection: week 6</li>
+<li class="fragment">Dual flatness: week 6</li>
+<li class="fragment"><span class="math inline">\(m\)</span>-projection: week 7</li>
 </ul>
 </div>
 <aside class="notes">
-Name the Legendre transform. Check Bernoulli: <span class="math inline">\(A=\log(1+e^\theta)\)</span> recovers binary entropy. Dual charts week 6; <span class="math inline">\(m\)</span>-projection week 6.
+Name the Legendre transform. Check Bernoulli: <span class="math inline">\(A=\log(1+e^\theta)\)</span> recovers binary entropy. One slide on <span class="math inline">\(F\)</span> versus <span class="math inline">\(G\)</span>: we stay with Helmholtz. Dual charts week 6; <span class="math inline">\(m\)</span>-projection week 7.
 </aside>
 </section>
 <section id="three-perspectives" class="slide level2">
@@ -524,7 +542,7 @@ Name the Legendre transform. Check Bernoulli: <span class="math inline">\(A=\log
 </ul>
 </div>
 <aside class="notes">
-LO7 — intended answer to “how is entropy understood today?” until week 7. Carnot/Clausius is macroscopic; Szilard/Landauer links bits to joules; Shannon and Jaynes are information layers.
+LO7 — intended answer to “how is entropy understood today?” until week 8. Carnot/Clausius is macroscopic; Szilard/Landauer links bits to joules; Shannon and Jaynes are information layers.
 </aside>
 <!-- /SNIPPET: _information/includes/three-perspectives-entropy.md -->
 <div>

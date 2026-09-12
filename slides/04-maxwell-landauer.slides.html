@@ -218,8 +218,8 @@ Loads the shared Ballworld runtime used by interactive physics demos
 (e.g. multiball, Maxwell, Szilard, kappenball). Scenario-specific
 behaviour is provided by follow-on scripts such as maxwell.js.
 -->
-<script src="https://inverseprobability.com/talks/scripts//ballworld/ballworld.js"></script>
-<script src="https://inverseprobability.com/talks/scripts//ballworld/maxwell.js"></script>
+<script src="../scripts//ballworld/ballworld.js"></script>
+<script src="../scripts//ballworld/maxwell.js"></script>
 </div>
 </div>
 <aside class="notes">
@@ -270,7 +270,7 @@ New Ball
 Pause
 </button>
 </div>
-<script src="https://inverseprobability.com/talks/scripts//ballworld/szilard.js"></script>
+<script src="../scripts//ballworld/szilard.js"></script>
 </div>
 </div>
 </div>
@@ -403,46 +403,6 @@ Parrondo Fig. 1c–d: colloidal and single-electron Szilard engines in the lab. 
 </ul></li>
 <li>Temperature sets fundamental noise floor</li>
 </ul>
-</section>
-<section id="landauers-principle-from-the-inaccessible-game" class="slide level2">
-<h2>Landauer’s Principle from the Inaccessible Game</h2>
-</section>
-<section id="information-erasure-as-a-process" class="slide level2">
-<h2>Information Erasure as a Process</h2>
-<p><strong>Bit Erasure:</strong> * Variable <span class="math inline">\(x_i \in \{0,1\}\)</span> * Reset to standard state: <span class="math inline">\(x_i \rightarrow 0\)</span> * Ensemble perspective: initial state random * Marginal entropy decreases: <span class="math inline">\(\Delta h(X_i) = -\log 2\)</span></p>
-</section>
-<section id="conservation-requires-redistribution" class="slide level2">
-<h2>Conservation Requires Redistribution</h2>
-<p><strong>Conservation Constraint:</strong> <span class="math display">\[\sum_{j \neq i} \Delta h(X_j) = +\log 2\]</span></p>
-<p><strong>Antisymmetric Part <span class="math inline">\(A\)</span>:</strong> * Reversible shuffling only * Moves information to other variables * Not true erasure!</p>
-</section>
-<section id="true-erasure-requires-dissipation" class="slide level2">
-<h2>True Erasure Requires Dissipation</h2>
-<p><strong>True Erasure:</strong></p>
-<p>Must increase <span class="math inline">\(H\)</span> (2nd law) with <span class="math inline">\(\sum h_i = C\)</span></p>
-<p><span class="math display">\[\Rightarrow \Delta I = \Delta(\sum h_i) - \Delta H &lt; 0\]</span></p>
-<ul>
-<li>Breaks correlations</li>
-<li>Requires dissipative part <span class="math inline">\(S\)</span></li>
-<li>Cannot be purely reversible</li>
-</ul>
-</section>
-<section id="energy-cost-from-energy-entropy-equivalence" class="slide level2">
-<h2>Energy Cost from Energy-Entropy Equivalence</h2>
-<p><strong>Energy-Entropy Equivalence:</strong></p>
-<p>In thermodynamic limit: <span class="math inline">\(\beta \langle E \rangle \approx \sum_i h_i\)</span></p>
-<p><strong>Erasure Cost:</strong> <span class="math display">\[\Delta \langle E \rangle = -\frac{\log 2}{\beta} = -k_BT\log 2\]</span></p>
-<p>Energy must be removed from system</p>
-</section>
-<section id="dissipation-bound" class="slide level2">
-<h2>Dissipation Bound</h2>
-<p><strong>Landauer’s Principle Emerges From:</strong></p>
-<ol type="1">
-<li>Marginal entropy conservation</li>
-<li>GENERIC structure (<span class="math inline">\(S\)</span> vs <span class="math inline">\(A\)</span>)</li>
-<li>Energy-entropy equivalence</li>
-</ol>
-<p><span class="math display">\[\boxed{Q_{\text{dissipated}} \geq k_BT\log 2}\]</span></p>
 <!-- SNIPPET: _information/includes/landauer-principle-worked.md -->
 <p>The demon measures; Szilard’s engine stores one bit. Neither violates the second law until the record is erased.</p>
 <div>
