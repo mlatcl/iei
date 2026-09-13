@@ -15,21 +15,27 @@ title: Information, Entropy and Intelligence
 
 <h3>Lectures</h3>
 
-<p>Eight two-hour lectures. In-class Moodle quizzes occupy the first ten minutes of lectures 3, 5, 7 and 8. Notes, slides, and notebooks are on the <a href="{{ "/lectures/" | relative_url }}">lectures</a> page.</p>
+<p>Eight two-hour lectures. In-class Moodle quizzes occupy the first ten minutes of lectures 2, 5, 7 and 8. Notes, slides, and notebooks are on the <a href="{{ "/lectures/" | relative_url }}">lectures</a> page.</p>
 
 <table>
 <thead>
-<tr><th>Week</th><th>Date</th><th>Topic</th><th>In the slot</th></tr>
+<tr><th>Week</th><th>Date</th><th>Topic</th></tr>
 </thead>
 <tbody>
-<tr><td>1</td><td>13 Oct</td><td>Theme; Boltzmann; free energy</td><td>W1 released</td></tr>
-<tr><td>2</td><td>20 Oct</td><td>Shannon entropy; partition function</td><td>W1 due</td></tr>
-<tr><td>3</td><td>27 Oct</td><td>Maxwell's demon; Landauer; human bandwidth</td><td>Q1; W2 released</td></tr>
-<tr><td>4</td><td>3 Nov</td><td>MaxEnt; exponential family; three perspectives</td><td>W2 due</td></tr>
-<tr><td>5</td><td>10 Nov</td><td>Fisher metric; thermodynamic length</td><td>Q2; W3 released</td></tr>
-<tr><td>6</td><td>17 Nov</td><td>Projection; natural gradient; geodesics</td><td>W3 due</td></tr>
-<tr><td>7</td><td>24 Nov</td><td>Multi-information; von Neumann entropy</td><td>Q3; W4 released</td></tr>
-<tr><td>8</td><td>1 Dec</td><td>Probability transport; limits on intelligence</td><td>Q4; W4 due</td></tr>
+{% assign lectures_by_week = site.lectures | group_by: "week" %}
+{% for group in lectures_by_week %}
+  {% assign lecture = group.items | first %}
+<tr>
+  <td>{{ group.name }}</td>
+  <td>{{ lecture.date | date: "%-d %b" }}</td>
+  <td>
+    {% for item in group.items %}
+      {% unless forloop.first %} · {% endunless %}
+      <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+    {% endfor %}
+  </td>
+</tr>
+{% endfor %}
 </tbody>
 </table>
 
