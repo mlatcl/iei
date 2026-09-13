@@ -68,8 +68,9 @@ reading:
 | 0–10 | Quiz 2 (Moodle); collect Worksheet 2 |
 | 10–55 | Laplace $\to$ Jaynes; Lagrange; die and Gaussian |
 | 55–65 | Break |
-| 65–95 | Exponential family; two-level $=$ Bernoulli; softmax; two-spin Hamiltonian |
-| 95–110 | Legendre transform: $F=U-TS$ again; $H=A-\theta\cdot\eta$ |
+| 65–85 | MaxEnt proof $\to$ exponential family; $\theta=-\lambda$ |
+| 85–100 | Examples: Bernoulli, softmax, two-spin |
+| 100–110 | Legendre transform: $F=U-TS$ again; $H=A-\theta\cdot\eta$ |
 | 110–120 | LO7 synthesis; “how is entropy understood today?” |
 }
 
@@ -341,7 +342,6 @@ With only the normalisation constraint $\sum_i p_i=1$, MaxEnt recovers Laplace's
 
 \include{_physics/includes/maximum-entropy-motivation.md}
 \include{_physics/includes/dieroll.md}
-\include{_physics/includes/maximum-entropy-formalism.md}
 
 \addreading{@Jaynes-information57}{the whole paper}
 
@@ -399,24 +399,99 @@ mlai.write_figure('jaynes-die-maxent.svg', directory='\writeDiagramsDir/ml')}
 
 <!-- /SNIPPET: _physics/includes/maxent-canonical-gaussian.md -->
 
+\newslides{MaxEnt Under Constraints: the Proof}
+
+\slides{This is the week's main theorem: constrained MaxEnt $\Rightarrow$ exponential family.}
+
+\slidesincremental{
+* Discrete $x_i$; maximise $H(p)=-\sum_i p_i\log p_i$
+* Constraints: $\sum_i p_i=1$ and $\sum_i p_i f_k(x_i)=\langle f_k\rangle$ for $k=1,\ldots,m$
+* Lagrangian: $\mathscr{L}=\sum_i p_i\log p_i + \lambda_0\bigl(\sum_i p_i-1\bigr)+\sum_k \lambda_k\bigl(\sum_i p_i f_k(x_i)-\langle f_k\rangle\bigr)$
+* Stationarity: $\partial\mathscr{L}/\partial p_i=0$ $\Rightarrow$ $p_i\propto e^{-\sum_k \lambda_k f_k(x_i)}$
+}
+
+\speakernotes{Board the derivative. Sign: we maximise $H$ so the Lagrangian uses $+\log p_i$ terms; Jaynes' die and Boltzmann are special cases with one constraint $f_1(x)=x$ or $f_1(x)=E_i$.}
+
+\notes{Fix a finite outcome set $\{x_1,\ldots,x_n\}$ and unknown probabilities $p_i>0$. The maximum entropy principle asks for the $p_i$ that maximise Shannon entropy
+\begin{align}
+H(p) = -\sum_{i=1}^n p_i \log p_i
+\end{align}
+subject to normalisation and $m$ moment constraints
+\begin{align}
+\sum_{i=1}^n p_i = 1, \qquad
+\sum_{i=1}^n p_i f_k(x_i) = \langle f_k\rangle \quad (k=1,\ldots,m).
+\end{align}
+Introduce Lagrange multipliers $\lambda_0,\lambda_1,\ldots,\lambda_m$ and form
+\begin{align}
+\mathscr{L}(p,\lambda)
+  = \sum_i p_i \log p_i
+  + \lambda_0\Bigl(\sum_i p_i - 1\Bigr)
+  + \sum_{k=1}^m \lambda_k\Bigl(\sum_i p_i f_k(x_i) - \langle f_k\rangle\Bigr).
+\end{align}
+At an interior maximum, $\partial \mathscr{L}/\partial p_i = 0$ gives
+\begin{align}
+\log p_i + 1 + \lambda_0 + \sum_{k=1}^m \lambda_k f_k(x_i) = 0,
+\end{align}
+so
+\begin{align}
+p_i = \exp\Bigl(-1-\lambda_0\Bigr)\,
+      \exp\Bigl(-\sum_{k=1}^m \lambda_k f_k(x_i)\Bigr).
+\end{align}
+Absorbing $\exp(-1-\lambda_0)$ into the normalisation constant,
+\begin{align}
+p_i = \frac{\exp\bigl(-\sum_{k=1}^m \lambda_k f_k(x_i)\bigr)}
+            {Z(\lambda_1,\ldots,\lambda_m)},
+\qquad
+Z = \sum_{i=1}^n \exp\Bigl(-\sum_{k=1}^m \lambda_k f_k(x_i)\Bigr).
+\end{align}
+The multipliers are fixed by substituting this $p$ back into the constraints. The maximum entropy is
+\begin{align}
+H_{\max} = \log Z + \sum_{k=1}^m \lambda_k \langle f_k\rangle.
+\end{align}
+This is the same calculation as Jaynes' die (one linear constraint on the face value) and, with $f_1(x_i)=E_i$, the canonical ensemble.}
+
+\newslides{Exponential Family: Lagrange Multipliers Are Natural Parameters}
+
+\slidesincremental{
+* Write $T_k(x_i)=f_k(x_i)$: sufficient statistics fixed by the constraints
+* MaxEnt solution: $p_i=\dfrac{e^{-\sum_k \lambda_k T_k(x_i)}}{Z}$ on the discrete support
+* Exponential family: $p(x\mid\boldsymbol{\theta})\propto \exp\bigl(\boldsymbol{\theta}\!\cdot\! T(x)-A(\boldsymbol{\theta})\bigr)$
+* Identification: $\boldsymbol{\theta} = -\boldsymbol{\lambda}$ (natural parameters $=$ minus Lagrange multipliers)
+* $A(\boldsymbol{\theta})=\log Z(-\boldsymbol{\theta})$; $\langle T_k\rangle = \partial A/\partial\theta_k$
+}
+
+\speakernotes{LO6 punchline. Physics sign: Boltzmann uses $p_i\propto e^{-\beta E_i}$ so $\theta_1=-\beta$ when $T=E$. Bernoulli two-level: $\theta=-\beta\varepsilon$.}
+
+\notes{The constrained MaxEnt distribution is not merely *like* an exponential family — on a finite (or countable) state space it *is* one. Take sufficient statistics $T_k(x)=f_k(x)$. Then the MaxEnt assignment is
+\begin{align}
+p(x\mid\boldsymbol{\theta}) = \exp\bigl(\boldsymbol{\theta}\cdot T(x) - A(\boldsymbol{\theta})\bigr)\, h(x),
+\end{align}
+with $h(x)$ the counting measure on the allowed outcomes and
+\begin{align}
+A(\boldsymbol{\theta}) = \log \sum_x \exp\bigl(\boldsymbol{\theta}\cdot T(x)\bigr).
+\end{align}
+The Lagrange multipliers from the proof are the *negative* natural parameters:
+\begin{align}
+\theta_k = -\lambda_k.
+\end{align}
+We use the minus sign so that high-energy states are down-weighted when $\theta_1=-\beta<0$ in the canonical ensemble. The constraint values enter through the Legendre dual: $\eta_k = \langle T_k\rangle = \partial A/\partial \theta_k$, and the $\lambda_k$ (equivalently $\theta_k$) are chosen so these expectations match the data. Weeks 6–7 reuse this pair $(\boldsymbol{\theta},\boldsymbol{\eta})$ as dual coordinates on the same manifold.}
+
+\notes{Continuous $x$ is the same pattern with sums replaced by integrals; Gaussian MaxEnt (mean and variance fixed) is the flagship continuous example. Softmax and the two-spin Hamiltonian later in this lecture are the same theorem with richer $T(x)$.}
+
 \addreading{@MacKay-information03}{Chapter 22}
 \addreading{@Cover:elements91}{Chapter 12}
 
-\subsection{The Exponential Family}
+\include{_physics/includes/maximum-entropy-formalism.md}
 
 \include{_physics/includes/exponential-families.md}
 
-\include{_physics/includes/maximum-entropy-formalism.md}
-
 \speakernotes{LO6. Two-level system = Bernoulli with $\theta=-\beta\varepsilon$. Flag matrix exponential family for week 8.}
 
-\notes{$p(x\mid\theta)=\exp(\theta\cdot T(x)-A(\theta))$. Canonical, Gaussian, and Bernoulli belong because each is MaxEnt for its moments. Softmax is the same calculation with a feature map. The two-spin example is the first sufficient statistic that is a product.}
+\notes{The definition $p(x\mid\boldsymbol{\theta})=\exp(\boldsymbol{\theta}\cdot T(x)-A(\boldsymbol{\theta}))$ is the notation for what we have just derived. Canonical, Gaussian, and Bernoulli belong because each is MaxEnt for its moments. Softmax is the same calculation with a feature map. The two-spin example is the first sufficient statistic that is a product.}
 
 \include{_ml/includes/softmax-as-maxent.md}
 
 \include{_physics/includes/two-spin-maxent.md}
-
-\subsection{The Legendre Transform}
 
 \include{_information/includes/legendre-transform.md}
 
