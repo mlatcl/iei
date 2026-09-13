@@ -40,6 +40,8 @@ word_count: 500
 
 \notes{Submit `candidatenumber_worksheet4.ipynb` and `candidatenumber_worksheet4.md` on Moodle. LLMs are permitted. Use the Lecture 1 habit: curiosity first, then skeptical probes. Authenticity is checked by Quiz 4 at the start of lecture 8, on a *new* example (three independent coins; a GHZ state rather than a Bell state).}
 
+\include{_iei/includes/iei-notebook-setup.md}
+
 \setupcode{import numpy as np}
 
 \section{Part A -- Code}

@@ -40,6 +40,8 @@ word_count: 400
 
 \notes{Submit `candidatenumber_worksheet2.ipynb` and `candidatenumber_worksheet2.md` on Moodle. LLMs are permitted. Use the Lecture 1 habit: curiosity first, then skeptical probes (you need not submit a full ten-turn Socratic transcript). Authenticity is checked by Quiz 2 at the start of lecture 5 (10 November), on a *new* example.}
 
+\include{_iei/includes/iei-notebook-setup.md}
+
 \setupcode{import numpy as np
 import matplotlib.pyplot as plt
 from scipy import optimize

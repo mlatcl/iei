@@ -41,6 +41,8 @@ word_count: 400
 
 \notes{Lecture 5 defined Crooks' thermodynamic length as the Fisher--Rao length of a path of equilibrium states. You will compute that length for a straight-line path in \((\mu,\sigma^2)\). You do not yet need to say what this has to do with intelligence -- that is lecture 8.}
 
+\include{_iei/includes/iei-notebook-setup.md}
+
 \setupcode{import numpy as np
 import matplotlib.pyplot as plt}
 
