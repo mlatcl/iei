@@ -143,9 +143,9 @@
 <h2>This Session</h2>
 <div>
 <ul>
-<li class="fragment">Maxwell’s demon and Landauer</li>
+<li class="fragment">Maxwell’s demon; membrane detailed balance</li>
 <li class="fragment">Information engines; car vs ATP synthase</li>
-<li class="fragment">Information and intelligence: first cut</li>
+<li class="fragment">Landauer; information and intelligence: first cut</li>
 </ul>
 </div>
 </section>
@@ -224,6 +224,75 @@ behaviour is provided by follow-on scripts such as maxwell.js.
 </div>
 <aside class="notes">
 Maxwell’s Demon. The demon decides balls are either cold (blue) or hot (red) according to their velocity. Balls are allowed to pass the green membrane from right to left only if they are cold, and from left to right only if they are hot. The displayed entropy is the Shannon entropy of the velocity histogram (a coarse-grained proxy, not full thermodynamic entropy).
+</aside>
+</section>
+<section id="detailed-balance-across-the-membrane" class="slide level2">
+<h2>Detailed Balance Across the Membrane</h2>
+<p>The JavaScript demon is a <em>selective membrane</em>: one speed threshold <span class="math inline">\(v_\star\)</span>, opposite rules on each side.</p>
+<div>
+<ul>
+<li class="fragment">Left <span class="math inline">\(\to\)</span> right: pass only if <span class="math inline">\(v &gt; v_\star\)</span> (hot)</li>
+<li class="fragment">Right <span class="math inline">\(\to\)</span> left: pass only if <span class="math inline">\(v \le v_\star\)</span> (cold)</li>
+<li class="fragment">Elastic collisions remix velocities; the membrane only gates crossings</li>
+</ul>
+</div>
+<aside class="notes">
+Match the canvas: red = hot, blue = cold, green strip = membrane. Threshold in the sim is <span class="math inline">\(v_\star=3\)</span> with initial speed <span class="math inline">\(5\)</span>.
+</aside>
+<p>In a steady state the number of balls leaving left equals the number leaving right — detailed balance of membrane crossings.</p>
+<div>
+<ul>
+<li class="fragment">Assume each side thermalises to a 2D Maxwellian at its own <span class="math inline">\(T_L\)</span>, <span class="math inline">\(T_R\)</span></li>
+<li class="fragment">Particle flux <span class="math inline">\(L\to R\)</span>: only the hot tail, <span class="math inline">\(v&gt;v_\star\)</span></li>
+<li class="fragment">Particle flux <span class="math inline">\(R\to L\)</span>: only the cold body, <span class="math inline">\(v\le v_\star\)</span></li>
+<li class="fragment">Steady state: <span class="math inline">\(\Phi_L^{\mathrm{hot}}(n_L,T_L)=\Phi_R^{\mathrm{cold}}(n_R,T_R)\)</span></li>
+</ul>
+</div>
+<aside class="notes">
+Local equilibrium is an approximation: collisions fast compared with crossings. Energy flux need not balance under the same Maxwellians — flag that after the calculation.
+</aside>
+<div class="figure">
+<div id="maxwell-membrane-detailed-balance-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/physics/maxwell-membrane-detailed-balance.svg" width="85%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+Left: temperatures on each side of the selective membrane from particle-flux detailed balance at equal populations (simulation energy budget). Right: entropy of the two-Maxwellian state minus the single-temperature equilibrium. The red point is the simulation threshold <span class="math inline">\(v_\star=3\)</span>.
+</aside>
+<p>For the simulation budget, particle-flux balance at equal <span class="math inline">\(N\)</span> yields <span class="math inline">\(T_L\approx 1.9\)</span>, <span class="math inline">\(T_R\approx 23\)</span> (<span class="math inline">\(k_B=1\)</span>) — a large split.</p>
+<div>
+<ul>
+<li class="fragment">Unconstrained equilibrium: one <span class="math inline">\(T_0=\langle\mathrm{KE}\rangle\)</span>, entropy <span class="math inline">\(S_0\)</span></li>
+<li class="fragment">Membrane steady state: <span class="math inline">\(S_{\mathrm{ss}}&lt;S_0\)</span> (here <span class="math inline">\(\Delta S\approx -24\)</span> nats)</li>
+<li class="fragment">The gas alone looks like a second-law violation</li>
+</ul>
+</div>
+<aside class="notes">
+Live the numbers from the plotcode printout. Canvas entropy is a coarse velocity-bin proxy; this <span class="math inline">\(S\)</span> is the ideal-gas Shannon entropy of two Maxwellians.
+</aside>
+<p>Particle balance and energy balance cannot both hold for two Maxwellians — the true steady state depletes velocity tails.</p>
+<div>
+<ul>
+<li class="fragment">Hot crossings carry more energy per ball than cold crossings</li>
+<li class="fragment">Equal <em>number</em> fluxes still leave a net <em>energy</em> flux under Maxwellians</li>
+<li class="fragment">Collisions rebuild the tails; the membrane continually sculpts them</li>
+<li class="fragment">Local-<span class="math inline">\(T\)</span> picture still predicts the direction and an entropy deficit</li>
+</ul>
+</div>
+<aside class="notes">
+Do not oversell the numbers as exact NESS values. The point is the ledger: gas entropy down; cost elsewhere.
+</aside>
+<p>The membrane implements Maxwell’s sorting policy. The gas entropy falls; Clausius is not repealed.</p>
+<div>
+<ul>
+<li class="fragment">Prescription: the velocity gate (who may cross)</li>
+<li class="fragment">No-go: you cannot harvest that <span class="math inline">\(\Delta S\)</span> for free in a cycle</li>
+<li class="fragment">Next: Szilard makes the bit explicit; Landauer prices erasure</li>
+</ul>
+</div>
+<aside class="notes">
+Bridge forward. Ellis locates dissipation at measurement/gating; information ledger locates it at stored outcomes and erasure. Same Clausius, different bookkeeping.
 </aside>
 </section>
 <section id="a-different-perspective" class="slide level2">
@@ -413,7 +482,7 @@ Parrondo Fig. 1c–d: colloidal and single-electron Szilard engines in the lab. 
 </ul>
 </div>
 <aside class="notes">
-LO4. Policy does not repeal the no-go. Live: <code>landauer_cost(300)</code>. Worksheet 2 Part B: compute and explain; Ellis excerpt for the two-ledgers comparison. Trap-door position is already a physical memory degree of freedom — Landauer prices reset, not a separate notebook.
+LO4. Policy does not repeal the no-go. Live: <code>landauer_cost(300)</code>. Worksheet 2 Part B: compute and explain; Ellis excerpt for the two-ledgers comparison. Trap-door position is already a physical memory degree of freedom — Landauer prices reset, not a separate notebook. Flag only: finite-time corrections and Crooks (1999) wait for week 6.
 </aside>
 <div class="figure">
 <div id="landauer-cost-figure" class="figure-frame">

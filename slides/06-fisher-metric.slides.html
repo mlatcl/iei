@@ -127,6 +127,7 @@
 <li class="fragment">Fisher’s information <span class="math inline">\(\neq\)</span> Shannon’s <span class="math inline">\(H\)</span></li>
 <li class="fragment">Fréchet–Rao–Cramér: identifiability</li>
 <li class="fragment">Fisher metric; dual flatness</li>
+<li class="fragment">Fluctuation theorem <span class="math inline">\(\to\)</span> <span class="math inline">\(\langle W\rangle\ge\Delta F\)</span> <span class="math inline">\(\to\)</span> length bound</li>
 <li class="fragment">Thermodynamic length: define, do not interpret</li>
 </ul>
 </div>
@@ -239,6 +240,47 @@ LO8. Connect to week 5 Legendre pair. Worksheet 3: Gaussian Fisher matrix and gr
 Fisher components for <span class="math inline">\(\mathcal{N}(0,\sigma^2)\)</span> blow up as <span class="math inline">\(\sigma^2\to 0\)</span>.
 </aside>
 <!-- /SNIPPET: _information-game/includes/fisher-metric-worked.md -->
+</section>
+<section id="from-fluctuation-theorem-to-length" class="slide level2">
+<h2>From Fluctuation Theorem to Length</h2>
+<p>Before length: the exact nonequilibrium relation that the second law and the <span class="math inline">\(\mathcal{L}^2/\tau\)</span> bound sit inside.</p>
+<p><span class="math display">\[
+\frac{P(W)}{P_R(-W)} = e^{\beta(W-\Delta F)}
+\]</span></p>
+<div>
+<ul>
+<li class="fragment">Forward protocol: work distribution <span class="math inline">\(P(W)\)</span></li>
+<li class="fragment">Reverse protocol: <span class="math inline">\(P_R(-W)\)</span></li>
+<li class="fragment"><span class="math inline">\(\Delta F\)</span>: equilibrium free-energy difference between endpoints</li>
+</ul>
+</div>
+<aside class="notes">
+Scaffolding only. Do not derive the theorem from a master equation. State it, then extract second law and the near-equilibrium expansion that recovers thermodynamic length.
+</aside>
+<div>
+<ul>
+<li class="fragment">Integrate Crooks <span class="math inline">\(\Rightarrow\)</span> Jarzynski: <span class="math inline">\(\langle e^{-\beta W}\rangle = e^{-\beta\Delta F}\)</span></li>
+<li class="fragment">Jensen’s inequality: <span class="math inline">\(\langle W\rangle \ge \Delta F\)</span></li>
+<li class="fragment">Excess work <span class="math inline">\(W_{\mathrm{ex}} = W - \Delta F\)</span> is nonnegative on average</li>
+</ul>
+</div>
+<div>
+<ul>
+<li class="fragment">Far from equilibrium: Crooks/Jarzynski (exact, distributional)</li>
+<li class="fragment">Near equilibrium, slow driving: expand <span class="math inline">\(\langle W_{\mathrm{ex}}\rangle\)</span> in linear response</li>
+<li class="fragment">Leading cost is Fisher–Rao length of the protocol: <span class="math inline">\(\langle W_{\mathrm{ex}}\rangle \ge \mathcal{L}^2/\tau\)</span></li>
+</ul>
+</div>
+<div>
+<ul>
+<li class="fragment">Crooks (1999): <span class="math inline">\(P(W)/P_R(-W)=e^{\beta(W-\Delta F)}\)</span> — exact</li>
+<li class="fragment">Jarzynski: <span class="math inline">\(\langle e^{-\beta W}\rangle=e^{-\beta\Delta F}\)</span> <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(\langle W\rangle\ge\Delta F\)</span></li>
+<li class="fragment">Crooks (2007): near equilibrium, <span class="math inline">\(\langle W_{\mathrm{ex}}\rangle\ge\mathcal{L}^2/\tau\)</span> with Fisher–Rao <span class="math inline">\(\mathcal{L}\)</span></li>
+</ul>
+</div>
+<aside class="notes">
+GAIST Chapter 17 stops at Crooks (1999)/Jarzynski. We continue to the geometric packaging. Same author; different regimes; one narrative.
+</aside>
 <!-- SNIPPET: _information/includes/crooks-thermodynamic-length.md -->
 <p>For a slow protocol <span class="math inline">\(\lambda(t)\)</span> on the equilibrium manifold, define length with the Fisher metric.</p>
 <p><span class="math display">\[
@@ -252,7 +294,7 @@ Fisher components for <span class="math inline">\(\mathcal{N}(0,\sigma^2)\)</spa
 </ul>
 </div>
 <aside class="notes">
-Define length today; do not interpret for intelligence until lecture 8. Worksheet 3: straight-line path <span class="math inline">\((0,1)\to(2,4)\)</span>.
+Define length today; do not interpret for intelligence until lecture 8. Worksheet 3: straight-line path <span class="math inline">\((0,1)\to(2,4)\)</span>. The bound is the near-equilibrium expansion of the fluctuation theorem, not a separate axiom.
 </aside>
 <div class="figure">
 <div id="crooks-path-sketch-figure" class="figure-frame">
@@ -271,13 +313,6 @@ Straight-line path in <span class="math inline">\((\mu,\sigma^2)\)</span> whose 
 <li class="fragment">Intelligence question: week 8</li>
 </ul>
 </div>
-<div>
-<ul>
-<li class="fragment">GAIST Ch.~17: Crooks (1999), fluctuation theorem</li>
-<li class="fragment">This lecture: Crooks (2007), thermodynamic length</li>
-<li class="fragment">Do not interchange them</li>
-</ul>
-</div>
 </section>
 <section id="define-this-week" class="slide level2">
 <h2>Define This Week</h2>
@@ -287,6 +322,7 @@ Straight-line path in <span class="math inline">\((\mu,\sigma^2)\)</span> whose 
 <li class="fragment">Identifiability: Fréchet–Rao–Cramér / Cramér–Rao</li>
 <li class="fragment">Schottky peak as Fisher peak (named only)</li>
 <li class="fragment">Fisher metric as a Riemannian metric; dual charts</li>
+<li class="fragment">Crooks (1999) <span class="math inline">\(\to\)</span> Jarzynski <span class="math inline">\(\to\)</span> <span class="math inline">\(\langle W\rangle\ge\Delta F\)</span></li>
 <li class="fragment">What is thermodynamic length?</li>
 </ul>
 </div>
@@ -304,8 +340,10 @@ Straight-line path in <span class="math inline">\((\mu,\sigma^2)\)</span> whose 
 <h2 class="scrollable">Further Reading</h2>
 <ul>
 <li><p>Chapters 1–2 of <span class="citation" data-cites="Amari-information16">Amari (2016)</span></p></li>
+<li><p>fluctuation theorem (statement) of <span class="citation" data-cites="Crooks-fluctuation99">Crooks (1999)</span></p></li>
+<li><p>equality; second-law corollary of <span class="citation" data-cites="Jarzynski-nonequilibrium97">Jarzynski (1997)</span></p></li>
+<li><p>Chapter 17 (fluctuation theorem; stops before length) of <span class="citation" data-cites="Welling-generative26">Welling et al. (2026)</span></p></li>
 <li><p>the whole paper of <span class="citation" data-cites="Crooks-length07">Crooks (2007)</span></p></li>
-<li><p>Chapter 17 (fluctuation theorem, not thermodynamic length) of <span class="citation" data-cites="Welling-generative26">Welling et al. (2026)</span></p></li>
 </ul>
 </section>
 <section id="thanks" class="slide level2 scrollable">
@@ -327,6 +365,12 @@ Amari, S., 2016. Information geometry and its applications, Applied mathematical
 </div>
 <div id="ref-Crooks-length07" class="csl-entry" role="doc-biblioentry">
 Crooks, G.E., 2007. Measuring thermodynamic length. Phys. Rev. Lett. 99, 100602. <a href="https://doi.org/10.1103/PhysRevLett.99.100602">https://doi.org/10.1103/PhysRevLett.99.100602</a>
+</div>
+<div id="ref-Crooks-fluctuation99" class="csl-entry" role="doc-biblioentry">
+Crooks, G.E., 1999. Entropy production fluctuation theorem and the nonequilibrium work relation for free energy differences. Phys. Rev. E 60, 2721–2726. <a href="https://doi.org/10.1103/PhysRevE.60.2721">https://doi.org/10.1103/PhysRevE.60.2721</a>
+</div>
+<div id="ref-Jarzynski-nonequilibrium97" class="csl-entry" role="doc-biblioentry">
+Jarzynski, C., 1997. Nonequilibrium equality for free energy differences. Physical Review Letters 78, 2690–2693. <a href="https://doi.org/10.1103/PhysRevLett.78.2690">https://doi.org/10.1103/PhysRevLett.78.2690</a>
 </div>
 <div id="ref-Welling-generative26" class="csl-entry" role="doc-biblioentry">
 Welling, M., Lu, S., Holdijk, L., 2026. Generative AI and stochastic thermodynamics: A tale of free energies. Cambridge University Press, Cambridge, U.K.
