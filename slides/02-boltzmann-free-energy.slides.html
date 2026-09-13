@@ -125,7 +125,7 @@
 <div>
 <ul>
 <li class="fragment">Quiz 1 (ten minutes)</li>
-<li class="fragment">Boltzmann derivation; free energy <span class="math inline">\(F=U-TS\)</span></li>
+<li class="fragment">Gibbs–Boltzmann form; free energy <span class="math inline">\(F=U-TS\)</span></li>
 <li class="fragment">Bath, Schottky, finite-time dissipation named</li>
 </ul>
 </div>
@@ -140,8 +140,8 @@
 </ul>
 </div>
 </section>
-<section id="from-the-seed-to-the-derivation" class="slide level2">
-<h2>From the Seed to the Derivation</h2>
+<section id="from-the-seed-to-the-formula" class="slide level2">
+<h2>From the Seed to the Formula</h2>
 </section>
 <section id="perpetual-motion-and-superintelligence" class="slide level2">
 <h2>Perpetual Motion and Superintelligence</h2>
@@ -200,8 +200,8 @@ Carnot is the efficiency question; Clausius is the second law and the word entro
 <p>Clausius: the entropy of the universe tends to a maximum.</p>
 <div>
 <ul>
-<li class="fragment">No-go: you cannot run a cyclic engine that converts heat entirely into work</li>
-<li class="fragment">Same no-go as perpetual motion — Clausius makes the prohibition explicit</li>
+<li class="fragment">You cannot run a cyclic engine that converts heat entirely into work</li>
+<li class="fragment">Similar for perpetual motion — Clausius makes the prohibition explicit</li>
 <li class="fragment">Prescription comes later: Boltzmann weights, then Shannon/Jaynes (this term)</li>
 </ul>
 </div>
@@ -213,31 +213,47 @@ Carnot is the efficiency question; Clausius is the second law and the word entro
 </ul>
 </div>
 <!-- /SNIPPET: _physics/includes/clausius-carnot-second-law.md -->
-<!-- SNIPPET: _physics/includes/boltzmann-derivation.md -->
-<p>For a prescribed mean energy <span class="math inline">\(U\)</span>. Among all distributions with the right <span class="math inline">\(U\)</span>, pick the one with largest entropy.</p>
+</section>
+<section id="information-entropy-and-intelligence-course-notebook-setup" class="slide level2">
+<h2>Information, entropy and intelligence course notebook setup</h2>
+<!--setupplotcode{import seaborn as sns
+sns.set_style('darkgrid')
+sns.set_context('paper')
+sns.set_palette('colorblind')}-->
+</section>
+<section id="the-gibbsboltzmann-distribution" class="slide level2">
+<h2>The Gibbs–Boltzmann Distribution</h2>
+<p>Same formula, three names: Boltzmann weights, Gibbs distribution, canonical ensemble.</p>
 <div>
 <ul>
-<li class="fragment">Constraints: <span class="math inline">\(\sum_i p_i = 1\)</span> and <span class="math inline">\(\sum_i p_i E_i = U\)</span></li>
-<li class="fragment">MaxEnt: <span class="math inline">\(p_i \propto e^{-\beta E_i}\)</span> with coldness <span class="math inline">\(\beta = 1/kT\)</span></li>
-<li class="fragment">Normalise: <span class="math inline">\(Z(\beta)=\sum_i e^{-\beta E_i}\)</span>, so <span class="math inline">\(p_i = e^{-\beta E_i}/Z\)</span></li>
+<li class="fragment"><span class="math inline">\(p_i = e^{-\beta E_i}/Z\)</span>, <span class="math inline">\(\quad Z(\beta)=\sum_j e^{-\beta E_j}\)</span></li>
+<li class="fragment"><span class="math inline">\(\beta=1/k_B T\)</span>: coldness; <span class="math inline">\(T\)</span>: bath temperature</li>
+<li class="fragment"><span class="math inline">\(\log Z\)</span> is the cumulant generating function of the energy</li>
 </ul>
 </div>
 <aside class="notes">
-Derive on the board. Lagrange multipliers → Boltzmann. Coldness <span class="math inline">\(\beta\)</span> next; <span class="math inline">\(T\)</span> is the bath reading. Derive on the board. Two-state occupations for intuition; three-state free-energy plot below.
+LO1. Introduce and use, do not derive. Board the formula. Week 5: MaxEnt with fixed mean energy recovers the same <span class="math inline">\(p_i\)</span>.
 </aside>
 <div class="figure">
 <div id="two-state-boltzmann-figure" class="figure-frame">
-<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/two-state-boltzmann.svg" width="75%" style=" ">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/physics/two-state-boltzmann.svg" width="75%" style=" ">
 </object>
 </div>
 </div>
 <aside class="notes">
 Occupation of a two-state system as coldness increases. At low <span class="math inline">\(\beta\)</span> both states are populated; at high <span class="math inline">\(\beta\)</span> the ground state dominates.
 </aside>
+<p>The same energy-and-occupation grammar reappears in associative memory and early deep learning.</p>
+<div>
+<ul>
+<li class="fragment">Hopfield (1982): energy over binary configurations; recall as settling</li>
+<li class="fragment">Boltzmann machine (1985): make those weights <em>learnable</em></li>
+<li class="fragment">Week 4: one physical bit as an equal double well (Landauer)</li>
+</ul>
+</div>
 <aside class="notes">
-Run the notebook cell live.
+Colour only. Not a new outcome. Nobel 2024 (Hopfield and Hinton) names the line. Week 4 draws the one-bit well; week 5 returns with the two-spin Boltzmann machine.
 </aside>
-<!-- /SNIPPET: _physics/includes/boltzmann-derivation.md -->
 </section>
 <section id="coldness-and-temperature" class="slide level2">
 <h2>Coldness and Temperature</h2>
@@ -282,12 +298,9 @@ LO1. Read <span class="math inline">\(F=U-TS\)</span> as available energy. Name 
 <aside class="notes">
 <span class="math inline">\(U\)</span>, <span class="math inline">\(S\)</span>, and <span class="math inline">\(F\)</span> for the Worksheet 1 three-state system. Verify <span class="math inline">\(F=-\ln Z/\beta\)</span> numerically.
 </aside>
-<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/three-state-thermo.svg" width="75%" style=" ">
-</object>
 <!-- /SNIPPET: _physics/includes/free-energy-decomposition.md -->
 <div>
 <ul>
-<li class="fragment">No-go: you cannot occupy as you please</li>
 <li class="fragment">Prescription: <span class="math inline">\(p_i = e^{-\beta E_i}/Z\)</span></li>
 <li class="fragment">Accounting: <span class="math inline">\(F = U - TS\)</span></li>
 </ul>
@@ -357,6 +370,7 @@ Cartoon of quasi-static versus finite-time driving between two equilibrium state
 <div>
 <ul>
 <li class="fragment">How was entropy discovered?</li>
+<li class="fragment">What is the Gibbs–Boltzmann distribution?</li>
 <li class="fragment">Energy and entropy?</li>
 <li class="fragment">What is a thermodynamic bath?</li>
 <li class="fragment">What is Schottky’s anomaly?</li>
@@ -375,6 +389,8 @@ Cartoon of quasi-static versus finite-time driving between two equilibrium state
 <section id="further-reading" class="slide level2 scrollable">
 <h2 class="scrollable">Further Reading</h2>
 <ul>
+<li><p>Boltzmann machines (optional colour) of <span class="citation" data-cites="Ackley-boltzmann85">Ackley et al. (1985)</span></p></li>
+<li><p>Hopfield networks (optional colour) of <span class="citation" data-cites="Hopfield:neural82">Hopfield (1982)</span></p></li>
 <li><p>Why Stochastic Thermodynamics of Machine Learning? of <span class="citation" data-cites="Welling-generative26">Welling et al. (2026)</span></p></li>
 <li><p>Chapter 3 of <span class="citation" data-cites="Welling-generative26">Welling et al. (2026)</span></p></li>
 <li><p>Chapters 1–4 of <span class="citation" data-cites="Callen-thermostatistics85">Callen (1985)</span></p></li>
@@ -395,8 +411,14 @@ Cartoon of quasi-static versus finite-time driving between two equilibrium state
 <section id="references" class="slide level2 unnumbered scrollable">
 <h2 class="unnumbered scrollable">References</h2>
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-Ackley-boltzmann85" class="csl-entry" role="doc-biblioentry">
+Ackley, D., Hinton, G.E., Sejnowski, T.J., 1985. A learning algorithm for <span>B</span>oltzmann machines. Cognitive Science 9, 147–169.
+</div>
 <div id="ref-Callen-thermostatistics85" class="csl-entry" role="doc-biblioentry">
 Callen, H.B., 1985. Thermodynamics and an introduction to thermostatistics, 2nd ed. Wiley, New York.
+</div>
+<div id="ref-Hopfield:neural82" class="csl-entry" role="doc-biblioentry">
+Hopfield, J.J., 1982. Neural networks and physical systems with emergent collective computational abilities. Proceedings of the National Academy of Sciences 79, 2554–2558.
 </div>
 <div id="ref-Welling-generative26" class="csl-entry" role="doc-biblioentry">
 Welling, M., Lu, S., Holdijk, L., 2026. Generative AI and stochastic thermodynamics: A tale of free energies. Cambridge University Press, Cambridge, U.K.

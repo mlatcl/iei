@@ -149,6 +149,13 @@
 </ul>
 </div>
 </section>
+<section id="information-entropy-and-intelligence-course-notebook-setup" class="slide level2">
+<h2>Information, entropy and intelligence course notebook setup</h2>
+<!--setupplotcode{import seaborn as sns
+sns.set_style('darkgrid')
+sns.set_context('paper')
+sns.set_palette('colorblind')}-->
+</section>
 <section id="maxwells-demon" class="slide level2">
 <h2>Maxwell’s Demon</h2>
 <!-- SNIPPET: _physics/includes/clausius-second-law-thread.md -->
@@ -393,8 +400,8 @@ Parrondo et al. survey. Szilard saturates <span class="math inline">\(W = k_BT 
 <ul>
 <li class="fragment">First model of intelligence (information-engines talk): policy under a thermodynamic ledger</li>
 <li class="fragment">Feedback bound (Parrondo / Sagawa–Ueda): <span class="math inline">\(W \ge -k_B T\, I(X;M)\)</span> on average in a cycle</li>
-<li class="fragment">Memory is physical: metastable states, channel capacity <span class="math inline">\(\le n\)</span> bits for <span class="math inline">\(n\)</span> stored outcomes</li>
-<li class="fragment">Prescription: measurement policy; no-go: pay on reset (Landauer, next)</li>
+<li class="fragment">Memory is physical: metastable states; equal double well next</li>
+<li class="fragment">Prescription: measurement policy; no-go: pay on reset (Landauer)</li>
 </ul>
 </div>
 <aside class="notes">
@@ -448,6 +455,53 @@ Parrondo Fig. 1c–d: colloidal and single-electron Szilard engines in the lab. 
 </section>
 <section id="landauers-principle" class="slide level2">
 <h2>Landauer’s Principle</h2>
+</section>
+<section id="boltzmann-memory-equal-double-well" class="slide level2">
+<h2>Boltzmann Memory: Equal Double Well</h2>
+<p>Equal depth isolates information from energetics: <span class="math inline">\(E_L=E_R\)</span>, so <span class="math inline">\(p_L=p_R=\tfrac12\)</span> at equilibrium.</p>
+<div>
+<ul>
+<li class="fragment">Store: particle trapped in left or right basin (barrier <span class="math inline">\(\gg k_BT\)</span>)</li>
+<li class="fragment">Read: label the basins <span class="math inline">\(0\)</span> and <span class="math inline">\(1\)</span></li>
+<li class="fragment">Erase: merge to one well — Landauer pays <span class="math inline">\(\ge k_BT\ln 2\)</span> if the bit was unknown</li>
+</ul>
+</div>
+<aside class="notes">
+LO4. Board the three panels. Equal depth means no free-energy preference for <span class="math inline">\(0\)</span> versus <span class="math inline">\(1\)</span>. Week 2 named Gibbs–Boltzmann; this is that occupation as a physical bit. Not yet a Boltzmann <em>machine</em> — one unit, zero field.
+</aside>
+<div class="figure">
+<div id="boltzmann-memory-two-well-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/physics/boltzmann-memory-two-well.svg" width="90%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+Boltzmann memory: equal-depth double well. Store and read use two metastable basins; erase merges them. Equal depth keeps <span class="math inline">\(E_0=E_1\)</span>, so Landauer’s cost is informational rather than an energy bias between labels.
+</aside>
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/physics/boltzmann-memory-two-well.svg" width="80%" style=" ">
+</object>
+<p>Erasing an equiprobable bit compresses two basins into one: <span class="math inline">\(H\to 0\)</span> costs at least <span class="math inline">\(k_BT\ln 2\)</span>.</p>
+<div>
+<ul>
+<li class="fragment">Unknown bit: <span class="math inline">\(H(M)=\ln 2\)</span> nats before reset</li>
+<li class="fragment">Known bit already in the target well: erasure can be free</li>
+<li class="fragment">Equal wells: no <span class="math inline">\(\Delta F\)</span> between labels — pure information cost</li>
+</ul>
+</div>
+<aside class="notes">
+Connect to the Landauer slide that follows. Ellis / Bennett: the trap-door position <em>is</em> already this kind of physical degree of freedom.
+</aside>
+<p>A tape of equal-depth bits exchanges entropy, not energy, with the rest of the ledger.</p>
+<div>
+<ul>
+<li class="fragment">One equal double well <span class="math inline">\(=\)</span> one cell of an information reservoir</li>
+<li class="fragment">Many such cells <span class="math inline">\(=\)</span> a tape whose Shannon entropy is a thermodynamic resource or debt</li>
+<li class="fragment">Boltzmann machine <span class="math inline">\(=\)</span> a <em>network</em> of such bits with energy <span class="math inline">\(E(s)\)</span> — week 5</li>
+</ul>
+</div>
+<aside class="notes">
+Name ``information reservoir’’ once. Do not divert into Mandal–Jarzynski. Parrondo already frames physical memory; the reservoir language isolates the equal-depth idealisation. Optional depth: <span class="citation" data-cites="Barato-stochastic14">Barato and Seifert (2014)</span>.
+</aside>
 </section>
 <section id="is-landauers-limit-related-to-shannons-gaussian-channel-capacity" class="slide level2">
 <h2>Is Landauer’s Limit Related to Shannon’s Gaussian Channel Capacity?</h2>
@@ -503,6 +557,9 @@ Landauer’s minimum heat dissipation per erased bit as a function of bath tempe
 <ul>
 <li><p>Szilard engine and demon resolution (logical irreversibility of erasure) of <span class="citation" data-cites="Bennett-thermodynamics82">Bennett (1982)</span></p></li>
 <li><p>introduction and Szilárd engine section of <span class="citation" data-cites="Parrondo-thermodynamics15">Parrondo et al. (2015)</span></p></li>
+<li><p>physical memory; metastable states of <span class="citation" data-cites="Parrondo-thermodynamics15">Parrondo et al. (2015)</span></p></li>
+<li><p>erasure cost of <span class="citation" data-cites="Landauer-irreversibility61">Landauer (1961)</span></p></li>
+<li><p>information reservoirs (optional) of <span class="citation" data-cites="Barato-stochastic14">Barato and Seifert (2014)</span></p></li>
 <li><p>the whole paper of <span class="citation" data-cites="Landauer-irreversibility61">Landauer (1961)</span></p></li>
 <li><p>Section 3.3, pages 49–52 of <span class="citation" data-cites="Welling-generative26">Welling et al. (2026)</span></p></li>
 </ul>
@@ -521,6 +578,9 @@ Landauer’s minimum heat dissipation per erased bit as a function of bath tempe
 <section id="references" class="slide level2 unnumbered scrollable">
 <h2 class="unnumbered scrollable">References</h2>
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-Barato-stochastic14" class="csl-entry" role="doc-biblioentry">
+Barato, A.C., Seifert, U., 2014. Stochastic thermodynamics with information reservoirs. Physical Review E 90, 042150. <a href="https://doi.org/10.1103/PhysRevE.90.042150">https://doi.org/10.1103/PhysRevE.90.042150</a>
+</div>
 <div id="ref-Bennett-thermodynamics82" class="csl-entry" role="doc-biblioentry">
 Bennett, C.H., 1982. The thermodynamics of computation—–a review. International Journal of Theoretical Physics 21, 905–940.
 </div>

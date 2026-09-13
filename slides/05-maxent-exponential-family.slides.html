@@ -132,6 +132,13 @@
 </ul>
 </div>
 </section>
+<section id="information-entropy-and-intelligence-course-notebook-setup" class="slide level2">
+<h2>Information, entropy and intelligence course notebook setup</h2>
+<!--setupplotcode{import seaborn as sns
+sns.set_style('darkgrid')
+sns.set_context('paper')
+sns.set_palette('colorblind')}-->
+</section>
 <section id="maximum-entropy" class="slide level2">
 <h2>Maximum Entropy</h2>
 </section>
@@ -384,9 +391,6 @@ Board the one-line integral for <span class="math inline">\(H_n\)</span>. Emphas
 </aside>
 <object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/laplace-succession-entropy.svg" width="70%" style=" ">
 </object>
-<aside class="notes">
-Aside, if asked: Laplace did <em>not</em> use the Laplace approximation here — exact integral, modern Beta packaging.
-</aside>
 <div>
 <ul>
 <li class="fragment">Insufficient reason: uniform when we know only the outcomes (or only <span class="math inline">\(\theta\in[0,1]\)</span>)</li>
@@ -523,9 +527,30 @@ LO5. After die demo, recover canonical ensemble and Gaussian on the board. Works
 <aside class="notes">
 Jaynes’ die: MaxEnt subject to mean 4.5 versus the uniform distribution.
 </aside>
-<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/jaynes-die-maxent.svg" width="75%" style=" ">
-</object>
 <!-- /SNIPPET: _physics/includes/maxent-canonical-gaussian.md -->
+</section>
+<section id="derivation-of-the-boltzmann-distribution" class="slide level2">
+<h2>Derivation of the Boltzmann Distribution</h2>
+<p>For fixed mean energy <span class="math inline">\(U\)</span>, maximum entropy recovers Boltzmann weights. ::: incremental</p>
+<ul>
+<li>Constraints: <span class="math inline">\(\sum_i p_i = 1\)</span> and <span class="math inline">\(\sum_i p_i E_i = U\)</span></li>
+<li>MaxEnt: <span class="math inline">\(p_i \propto e^{-\beta E_i}\)</span> with coldness <span class="math inline">\(\beta = 1/k_B T\)</span></li>
+<li>Normalise: <span class="math inline">\(Z(\beta)=\sum_i e^{-\beta E_i}\)</span>, so <span class="math inline">\(p_i = e^{-\beta E_i}/Z\)</span></li>
+</ul>
+<p>:::</p>
+<!-- Board derivation: Lagrange multipliers → Boltzmann. Coldness $\beta$ is the multiplier on mean energy; $T$ is the bath reading. Two-state occupations for intuition. -->
+<aside class="notes">
+LO5. This is the derivation postponed from week 2. Board the Lagrange multipliers; do not treat the formula as new.
+</aside>
+<div class="figure">
+<div id="two-state-boltzmann-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/physics/two-state-boltzmann.svg" width="75%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+Occupation of a two-state system as coldness increases. At low <span class="math inline">\(\beta\)</span> both states are populated; at high <span class="math inline">\(\beta\)</span> the ground state dominates.
+</aside>
 <!-- SNIPPET: _physics/includes/maxent-to-exponential-family.md -->
 </section>
 <section id="maxent-under-constraints-the-proof" class="slide level2">
