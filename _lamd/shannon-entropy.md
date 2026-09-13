@@ -85,6 +85,8 @@ reading:
 
 \notes{Week 1 introduced Shannon's portrait and embodiment factors in bits per second. This lecture derives $H=-\sum_i p_i\log p_i$ and shows that Boltzmann entropy uses the same functional form. The human–machine bandwidth gap is a communication bottleneck; channel capacity is the analogous no-go on *codes*, not on embodiment.}
 
+\include{_iei/includes/iei-notebook-setup.md}
+
 \subsection{Shannon Entropy}
 
 \include{_policy/includes/shannon-information.md}
