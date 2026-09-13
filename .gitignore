@@ -35,6 +35,16 @@ scripts/quiz_banks/build_banks.py
 # Drawn Moodle sittings (export from quiz-banks tooling)
 assessments/generated/
 
+# LaMD intermediate build artefacts (maketalk) under _lamd/
+# Keep sources (*.md), _lamd.yml, compile.sh, lectures.csv tracked.
+_lamd/*.gpp.markdown
+_lamd/*.ipynb
+_lamd/*.ipynb.markdown
+_lamd/*.html
+_lamd/*.html.markdown
+_lamd/makefile
+_lamd/*.log
+
 # Ignore compiled site output
 _site/
 

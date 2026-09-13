@@ -65,7 +65,7 @@ reading:
 |--------:|-------|
 | 0–25 | Agency as transport; Wasserstein; Schrödinger bridge; Sinkhorn |
 | 25–50 | Crooks versus Wasserstein versus Schrödinger; $\mathcal{L}^2/\tau$ |
-| 50–60 | LO13 tools; close the Week 1 question |
+| 50–60 | Entropic Good Regulator (named colour); LO13 close |
 }
 
 \subsection{Agency as Transport}
@@ -191,6 +191,8 @@ mlai.write_figure('transport-plan-2x2.svg', directory='\writeDiagramsDir/ml')}
 
 \include{_information-game/includes/unified-intelligence-perspective.md}
 
+\include{_information/includes/entropic-good-regulator.md}
+
 \addreading{@Lawrence-atomic24}{Chapter 1}
 
 <!-- SNIPPET: _information/includes/limits-on-intelligence-synthesis.md -->
@@ -204,13 +206,13 @@ mlai.write_figure('transport-plan-2x2.svg', directory='\writeDiagramsDir/ml')}
 * Landauer: $k_B T\ln 2$ per bit erased
 * Crooks: $\langle W_{\mathrm{ex}}\rangle\ge\mathcal{L}^2/\tau$
 * Conservation: $I+H=C$ with fixed marginals
-* DPI: processing cannot create $I$; IB: spend $I$ on relevance
+* DPI $\to$ requisite variety $\to$ Good Regulator $\to$ IB
 * Human bandwidth: $\sim 100$ bits/s — *The Atomic Human*
 }
 
-\speakernotes{LO13. Use LO10 tools from the first half: DPI and the information bottleneck. Requisite variety and the Good Regulator remain named colour. Close Week 1: entropy forbids; probability prescribes.}
+\speakernotes{LO13. Use LO10 tools from the first half: DPI and the information bottleneck. Requisite variety and the Good Regulator are named colour with the Shannon readings just given. Close Week 1: entropy forbids; probability prescribes.}
 
-\notes{Data-processing inequality and the information bottleneck were taught under LO10 earlier in this session. Today they are evaluation tools, not new outcomes: a claim that an intelligent system will just process more is a DPI violation; a system that keeps only what is relevant for action is an IB statement. Requisite variety and the Good Regulator in entropic form remain named colour. Viable-system material is optional. Inaccessible-game material, if present, is colour only. Prescriptions operate inside fences set by physics and embodiment.}
+\notes{Data-processing inequality and the information bottleneck were taught under LO10 earlier in this session. Today they are evaluation tools, not new outcomes: a claim that an intelligent system will just process more is a DPI violation; a system that keeps only what is relevant for action is an IB statement. Requisite variety supplies the quantity bound $H(E)\ge H(D)-I(D;R)$; the Good Regulator supplies the structure $R=h(S)$. The purely entropic reading is minimise model information subject to sufficiently low outcome entropy --- a course-compatible reinterpretation of Conant and Ashby, not their theorem statement. Viable-system material is optional. Inaccessible-game material, if present, is colour only. Prescriptions operate inside fences set by physics and embodiment: the model is not informationally free once Landauer prices sensing, storage, processing, and erasure.}
 
 \setupcode{no_gos = ['Landauer', 'Crooks L^2/tau', 'I+H=C', 'human bandwidth']
 prescriptions = ['Boltzmann/MaxEnt p', 'Crooks geodesic', 'Wasserstein plan', 'Schrodinger bridge']
