@@ -121,8 +121,11 @@ reading:
 <!-- /SNIPPET: _physics/includes/clausius-carnot-second-law.md -->
 
 \include{_iei/includes/iei-notebook-setup.md}
-<!-- NOTE: This snippet coming too early derive as maximum entropy later, here jus introduce. -->
-\include{_physics/includes/boltzmann-derivation.md}
+<!-- SNIPPET: _physics/includes/gibbs-distribution.md -->
+
+\comment{Here we need to introduce the Gibbs/BOltzmann distribution. Just in its form and with its names. Mention also that the partition function is the log cumulant generating function.}
+
+<!-- /SNIPPET: _physics/includes/gibbs-distribution.md --> 
 
 \include{_physics/includes/coldness-and-temperature.md}
 
