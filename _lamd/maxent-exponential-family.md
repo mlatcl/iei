@@ -308,8 +308,6 @@ P(\text{rises tomorrow}\mid n\text{ rises})
 \end{align}
 This is *Laplace's rule of succession* (the same “$+1$, $+2$” that later appears as Laplace smoothing). In modern notation the posterior is $\mathrm{Beta}(n+1,1)$; after each new sunrise it becomes $\mathrm{Beta}(n+2,1)$, more sharply peaked at $\theta=1$, while the predictive odds move from $1{:}1$ toward certainty without ever quite reaching it.}
 
-\speakernotes{Aside, if asked: Laplace did *not* use the Laplace approximation here — exact integral, modern Beta packaging.}
-
 \notes{Laplace did not have the Beta distribution by name, and he did not need the Laplace approximation for this result. In the 1774 memoir on inverse probability he evaluates the normalising integrals exactly — what we now write as $\int_0^1 \theta^{n}\,\mathrm{d}\theta = 1/(n+1)$ — via what he called Euler's series. The Beta language is modern packaging of that calculation. The *Laplace approximation* (a local Gaussian expansion of an integrand about its mode) is a different tool, also named after him; it is not how the rule of succession was obtained.}
 
 \notes{In the Essay he takes the oldest historical epoch as five thousand years, or $n=1{,}826{,}213$ days of recorded sunrise, and concludes that — *on this information alone* — the odds on tomorrow's sunrise are $1{,}826{,}214$ to one. He then adds, in the next sentence, that for anyone who recognises the astronomical regularity of days and seasons the probability is *incomparably greater*. The sunrise calculation is a demonstration of the rule under deliberate ignorance of mechanism, not Laplace's estimate of whether the sun will rise.}
@@ -393,11 +391,10 @@ mlai.write_figure('jaynes-die-maxent.svg', directory='\writeDiagramsDir/ml')}
 
 \figure{\includediagram{\diagramsDir/ml/jaynes-die-maxent}{75%}}{Jaynes' die: MaxEnt subject to mean 4.5 versus the uniform distribution.}{jaynes-die-maxent}
 
-\slides{
-\includediagram{\diagramsDir/ml/jaynes-die-maxent}{75%}
-}
 
 <!-- /SNIPPET: _physics/includes/maxent-canonical-gaussian.md -->
+
+\include{_physics/includes/boltzmann-derivation.md}
 
 <!-- SNIPPET: _physics/includes/maxent-to-exponential-family.md -->
 
