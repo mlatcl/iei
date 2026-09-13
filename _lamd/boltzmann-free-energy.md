@@ -104,8 +104,8 @@ reading:
 \slides{Clausius: the entropy of the universe tends to a maximum.}
 
 \slidesincremental{
-* No-go: you cannot run a cyclic engine that converts heat entirely into work
-* Same no-go as perpetual motion — Clausius makes the prohibition explicit
+* You cannot run a cyclic engine that converts heat entirely into work
+* Simimlar for perpetual motion — Clausius makes the prohibition explicit
 * Prescription comes later: Boltzmann weights, then Shannon/Jaynes (this term)
 }
 
@@ -119,57 +119,9 @@ reading:
 
 <!-- /SNIPPET: _physics/includes/clausius-carnot-second-law.md -->
 
-<!-- SNIPPET: _physics/includes/boltzmann-derivation.md -->
-
-\newslides{The Boltzmann Prescription}
-
-\slides{For a prescribed mean energy $U$. Among all distributions with the right $U$, pick the one with largest entropy.}
-
-\slidesincremental{
-* Constraints: $\sum_i p_i = 1$ and $\sum_i p_i E_i = U$
-* MaxEnt: $p_i \propto e^{-\beta E_i}$ with coldness $\beta = 1/kT$
-* Normalise: $Z(\beta)=\sum_i e^{-\beta E_i}$, so $p_i = e^{-\beta E_i}/Z$
-}
-
-\speakernotes{Derive on the board. Lagrange multipliers → Boltzmann. Coldness $\beta$ next; $T$ is the bath reading. Derive on the board. Two-state occupations for intuition; three-state free-energy plot below.}
-
-\notes{Maximum entropy subject to normalisation and fixed mean energy gives $p_i = e^{-\beta E_i}/Z$.}
-
-\setupplotcode{import numpy as np
-import matplotlib.pyplot as plt
-import mlai}
-
-\plotcode{energies = np.array([0.0, 1.0])
-beta = np.linspace(0.1, 3.0, 200)
-Z = np.sum(np.exp(-beta[:, None] * energies), axis=1)
-p0 = np.exp(-beta * energies[0]) / Z
-p1 = np.exp(-beta * energies[1]) / Z
-fig, ax = plt.subplots(figsize=(7, 4))
-ax.plot(beta, p0, linewidth=2, label='$p_0$ (ground)')
-ax.plot(beta, p1, linewidth=2, label='$p_1$ (excited)')
-ax.set_xlabel(r'coldness $\beta$')
-ax.set_ylabel('occupation')
-ax.legend()
-ax.set_title('Two-state Boltzmann occupations')
-mlai.write_figure('two-state-boltzmann.svg', directory='\writeDiagramsDir/ml')}
-
-\figure{\includediagram{\diagramsDir/ml/two-state-boltzmann}{75%}}{Occupation of a two-state system as coldness increases. At low $\beta$ both states are populated; at high $\beta$ the ground state dominates.}{two-state-boltzmann}
-
-
-\setupcode{import numpy as np}
-
-\code{def boltzmann(energies, beta):
-    """Boltzmann probabilities $p_i \\propto e^{-\\beta E_i}$."""
-    log_w = -beta * np.asarray(energies, dtype=float)
-    log_w -= log_w.max()
-    w = np.exp(log_w)
-    return w / w.sum()
-
-# Live check: boltzmann([0, 1], 1.0) -> (0.731, 0.269)}
-
-\speakernotes{Run the notebook cell live.}
-
-<!-- /SNIPPET: _physics/includes/boltzmann-derivation.md -->
+\include{_iei/includes/iei-notebook-setup.md}
+<!-- NOTE: This snippet coming too early derive as maximum entropy later, here jus introduce. -->
+\include{_physics/includes/boltzmann-derivation.md}
 
 \include{_physics/includes/coldness-and-temperature.md}
 
