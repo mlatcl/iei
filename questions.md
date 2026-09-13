@@ -163,10 +163,13 @@ Quiz 4 occupies the first ten minutes.
 - How is entropy treated in early cybernetics?
 - What is the law of requisite variety?
 - What is the Good Regulator Theorem?
+- Why does concavity of Shannon entropy yield a deterministic $H(Z)$-optimal policy?
+- Why is $H(A\mid S)=0$ a deliberately weak definition of ``model''?
+- Why does minimising $H(Z)$ not by itself mean the outcome is desirable?
 - What is the purely entropic interpretation of the Good Regulator Theorem?
 - What is a viable system?
 - What are the information constraints on a human?
 - What is the purely entropic interpretation of Schottky's anomaly?
 - How is entropy understood today? (last revision)
 
-The cybernetics cluster (requisite variety, Good Regulator, viable system) is used in lecture 8 as named evaluation tools for LO13. It is not a separate outcome. Requisite variety appears in Shannon form as $H(E)\ge H(D)-I(D;R)$; the Good Regulator as the structured model $R=h(S)$; the purely entropic reading as minimise model information subject to sufficiently low outcome entropy (a course-compatible reinterpretation of Conant and Ashby, not their 1970 optimisation). The data-processing inequality and the information bottleneck are taught under LO10 in the first half of lecture 8 and *used* in the second half. A light inaccessible-game introduction may appear as colour, not as a separate outcome. Sinkhorn is named under LO12 as the discrete algorithm for the Schrödinger / entropic coupling, not as a fourth geometry.
+The cybernetics cluster (requisite variety, Good Regulator, viable system) is used in lecture 8 as named evaluation tools for LO13. It is not a separate outcome and not the course punchline (that remains: entropy forbids; probability prescribes). Requisite variety appears in Shannon form as $H(E)\ge H(D)-I(D;R)$. The Good Regulator Theorem proper is the existence of an $H(Z)$-optimal policy with $H(A\mid S)=0$, earned from concavity of entropy (and, for stochastic channels, extreme points of the policy polytope). Caveats to teach: a constant action also satisfies $H(A\mid S)=0$; low $H(Z)$ is predictability, not desirability. The IB-shaped reading $\min I(S;A)$ subject to $H(Z)\le\epsilon$ is a course gloss after the theorem, not Conant and Ashby's 1970 statement. The data-processing inequality and the information bottleneck are taught under LO10 in the first half of lecture 8 and *used* in the second half. A light inaccessible-game introduction may appear as colour, not as a separate outcome. Sinkhorn is named under LO12 as the discrete algorithm for the Schrödinger / entropic coupling, not as a fourth geometry.
