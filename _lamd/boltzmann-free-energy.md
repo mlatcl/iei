@@ -63,6 +63,7 @@ reading:
 | 55–65 | Break |
 | 65–95 | Free-energy decomposition $F=U-TS$ |
 | 95–120 | Bath; Schottky; finite-time naming |
+
 }
 
 \subsection{Quiz 1}
@@ -167,14 +168,10 @@ mlai.write_figure('three-state-thermo.svg', directory='\writeDiagramsDir/ml')}
 
 \figure{\includediagram{\diagramsDir/ml/three-state-thermo}{75%}}{$U$, $S$, and $F$ for the Worksheet 1 three-state system. Verify $F=-\ln Z/\beta$ numerically.}{three-state-thermo}
 
-\slides{
-\includediagram{\diagramsDir/ml/three-state-thermo}{75%}
-}
 
 <!-- /SNIPPET: _physics/includes/free-energy-decomposition.md -->
 
 \slidesincremental{
-* No-go: you cannot occupy as you please
 * Prescription: $p_i = e^{-\beta E_i}/Z$
 * Accounting: $F = U - TS$
 }
