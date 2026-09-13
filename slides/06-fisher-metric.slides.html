@@ -124,12 +124,42 @@
 <h2>This Session</h2>
 <div>
 <ul>
-<li class="fragment">Fisher metric; thermodynamic length</li>
-<li class="fragment">KL divergence; Shannon vs differential entropy</li>
-<li class="fragment">Fisher metric; dually flat geometry</li>
+<li class="fragment">Fisher’s information <span class="math inline">\(\neq\)</span> Shannon’s <span class="math inline">\(H\)</span></li>
+<li class="fragment">Fréchet–Rao–Cramér: identifiability</li>
+<li class="fragment">Fisher metric; dual flatness</li>
 <li class="fragment">Thermodynamic length: define, do not interpret</li>
 </ul>
 </div>
+</section>
+<section id="what-did-fisher-mean-by-information" class="slide level2">
+<h2>What Did Fisher Mean by Information?</h2>
+<p><strong>Fisher’s information <span class="math inline">\(\neq\)</span> Shannon’s entropy</strong> * Shannon <span class="math inline">\(H\)</span>: uncertainty in an outcome * Fisher <span class="math inline">\(I(\theta)\)</span>: sensitivity of <span class="math inline">\(\log p\)</span> to <span class="math inline">\(\theta\)</span> * Same word; different operational reading</p>
+</section>
+<section id="score-and-sensitivity" class="slide level2">
+<h2>Score and Sensitivity</h2>
+<p><span class="math display">\[
+I(\theta)=\mathbb{E}\!\left[(\partial_\theta\log p)^2\right]
+\]</span> * Large <span class="math inline">\(I\)</span>: data distinguish nearby <span class="math inline">\(\theta\)</span> well * Small <span class="math inline">\(I\)</span>: parameter almost invisible in samples</p>
+<aside class="notes">
+Hold Shannon vs Fisher for the whole module: <span class="math inline">\(H\)</span> is a state function of <span class="math inline">\(p\)</span>; <span class="math inline">\(I\)</span> is a property of a <em>family</em> <span class="math inline">\(p(\cdot\mid\theta)\)</span>.
+</aside>
+</section>
+<section id="identifiability-fréchet-rao-cramér" class="slide level2">
+<h2>Identifiability: Fréchet, Rao, Cramér</h2>
+<div>
+<ul>
+<li class="fragment">Same <span class="math inline">\(G\)</span>: Fisher (estimation) and Fréchet–Rao–Cramér (identifiability)</li>
+<li class="fragment"><span class="math inline">\(\mathrm{cov}(\hat\theta)\succeq G^{-1}\)</span>: high <span class="math inline">\(G\)</span> <span class="math inline">\(\Rightarrow\)</span> tight bound</li>
+<li class="fragment">Metric reading: <span class="math inline">\(G\)</span> measures how distinguishable nearby distributions are</li>
+</ul>
+</div>
+</section>
+<section id="named-link-schottky-peak" class="slide level2">
+<h2>Named Link: Schottky Peak</h2>
+<p><strong>Week 2, revisited (name only):</strong> * Two-state: <span class="math inline">\(G(\beta)\propto C\)</span> * Schottky peak <span class="math inline">\(=\)</span> Fisher peak * Entropic reading: week 8</p>
+<aside class="notes">
+Fence: name the identity; do not interpret Schottky or length for intelligence today.
+</aside>
 <!-- SNIPPET: _mathe/includes/what-is-a-riemannian-geometry.md -->
 </section>
 <section id="what-is-a-riemannian-geometry" class="slide level2">
@@ -142,9 +172,9 @@
 </section>
 <section id="fisher-information-as-geometry" class="slide level2">
 <h2>Fisher Information as Geometry</h2>
-<p><strong>From last section:</strong> <span class="math display">\[
+<p><strong>Same <span class="math inline">\(G\)</span>, three origins:</strong> <span class="math display">\[
 G(\boldsymbol{\theta}) = \nabla^2 \mathcal{A}(\boldsymbol{\theta}) = \mathrm{Cov}_{\boldsymbol{\theta}}[T(\mathbf{x})]
-\]</span> * Now: What does this <em>mean</em> geometrically?</p>
+\]</span> * Fisher / CR / Hessian — now as Riemannian metric</p>
 </section>
 <section id="the-statistical-manifold" class="slide level2">
 <h2>The Statistical Manifold</h2>
@@ -158,9 +188,9 @@ G(\boldsymbol{\theta}) = \nabla^2 \mathcal{A}(\boldsymbol{\theta}) = \mathrm{Cov
 </section>
 <section id="connection-to-statistical-estimation" class="slide level2">
 <h2>Connection to Statistical Estimation</h2>
-<p><em>Cramér-Rao Bound:</em> <span class="math display">\[
+<p><em>Cramér–Rao (restated geometrically):</em> <span class="math display">\[
 \text{cov}(\hat{\boldsymbol{\theta}}) \succeq G^{-1}(\boldsymbol{\theta})
-\]</span> * <span class="math inline">\(G^{-1}\)</span> = best possible estimator covariance * High <span class="math inline">\(G\)</span> → small <span class="math inline">\(G^{-1}\)</span> → tight estimation * Low <span class="math inline">\(G\)</span> → large <span class="math inline">\(G^{-1}\)</span> → loose estimation * Geometric picture: <span class="math inline">\(G^{-1}\)</span> is “error ellipsoid”</p>
+\]</span> * <span class="math inline">\(G^{-1}\)</span> = error ellipsoid * High <span class="math inline">\(G\)</span> → tight estimation; low <span class="math inline">\(G\)</span> → loose</p>
 </section>
 <section id="why-this-matters-for-dynamics" class="slide level2">
 <h2>Why This Matters for Dynamics</h2>
@@ -253,11 +283,11 @@ Straight-line path in <span class="math inline">\((\mu,\sigma^2)\)</span> whose 
 <h2>Define This Week</h2>
 <div>
 <ul>
+<li class="fragment">Fisher’s <span class="math inline">\(I(\theta)\)</span> versus Shannon’s <span class="math inline">\(H\)</span></li>
+<li class="fragment">Identifiability: Fréchet–Rao–Cramér / Cramér–Rao</li>
+<li class="fragment">Schottky peak as Fisher peak (named only)</li>
+<li class="fragment">Fisher metric as a Riemannian metric; dual charts</li>
 <li class="fragment">What is thermodynamic length?</li>
-<li class="fragment">What is KL divergence?</li>
-<li class="fragment">Shannon entropy versus differential entropy</li>
-<li class="fragment">Fisher metric as a Riemannian metric</li>
-<li class="fragment">Dual charts: last week’s Legendre pair</li>
 </ul>
 </div>
 </section>
