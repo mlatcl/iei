@@ -75,7 +75,7 @@ reading:
 | 55–80 | Information bottleneck |
 | 80–100 | Classical limit $I=C\Rightarrow H=0$; von Neumann entropy |
 
-If the slot is still listed as one hour, run long: the second half (limits) can start late or pick up unfinished interpret questions. Schottky / Good Regulator remain notes-only until the limits lecture: preview the Shannon split $H(E)\ge H(D)-I(D;R)$ versus $R=h(S)$ here, but leave the slides and the IB reinterpretation for the second half. DPI and IB are taught here (LO10).
+If the slot is still listed as one hour, run long: the second half (limits) can start late or pick up unfinished interpret questions. Schottky / Good Regulator remain notes-only until the limits lecture: preview the Shannon split $H(E)\ge H(D)-I(D;R)$ versus the existence claim $H(A\mid S)=0$, but leave the concavity proof, caveats, and IB gloss for the second half. DPI and IB are taught here (LO10).
 }
 
 \subsection{Quiz 4}
@@ -234,7 +234,7 @@ print('S(rho_A)=', von_neumann(partial_trace_A(rho)))}
 
 \subsection{Purely Entropic Readings: First Attempt}
 
-\notes{Schottky and the Good Regulator get a first answer today in notes, not on slides. The second half of this session completes both.}
+\notes{Schottky and the Good Regulator get a first answer today in notes, not on slides. The second half of this session completes both --- with a short proof for the Good Regulator, not only a slogan.}
 
 \notes{Schottky connects back to lecture 1's heat-capacity peak and to week 6's Fisher reading: the peak of thermal response is a peak of distinguishability. The purely entropic interpretation waits for the limits block.}
 
@@ -242,8 +242,7 @@ print('S(rho_A)=', von_neumann(partial_trace_A(rho)))}
 $$
 H(E)\ge H(D)-I(D;R).
 $$
-Useless controller states appear as small $I(D;R)$. The Good Regulator Theorem [@Conant-Ashby70] asks how that information must be structured: among optimal regulators there is a simplest deterministic map $R=h(S)$, a task-specific model of the distinctions in $S$ that matter for the outcome --- not a replica of the world. With DPI and the information bottleneck in hand, the course-compatible reading is already visible: minimise model information $I(S;R)$ subject to sufficiently low outcome entropy. The second half names that reading explicitly and ties it to Landauer.}
-
+Useless controller states appear as small $I(D;R)$. The Good Regulator Theorem [@Conant-Ashby70] is an existence claim about structure: among policies that minimise outcome entropy $H(Z)$ there is a simplest deterministic map $A=h(S)$, i.e.\ $H(A\mid S)=0$. The second half earns that claim from the concavity of Shannon entropy (and, for stochastic channels, extreme points of the policy polytope). Two caveats to keep in mind before any slogan: a constant action also has $H(A\mid S)=0$; low $H(Z)$ means predictable, not desirable. An information-bottleneck-shaped reading $\min I(S;A)$ subject to $H(Z)\le\epsilon$ may follow as a gloss after the theorem --- it is not the theorem itself, and it is not Conant and Ashby's equation.}
 \subsection{Define This Week}
 
 \slidesincremental{

@@ -54,8 +54,8 @@ reading:
 
 \slidesincremental{
 * Probability transport; three geometries
-* Superintelligence as perpetual motion, with bounds
-* Close the Week 1 question
+* Entropic Good Regulator: $H(A\mid S)=0$, with caveats
+* Superintelligence as perpetual motion; close Week 1
 }
 
 \notes{
@@ -63,9 +63,10 @@ reading:
 
 | Minutes | Block |
 |--------:|-------|
-| 0–25 | Agency as transport; Wasserstein; Schrödinger bridge; Sinkhorn |
-| 25–50 | Crooks versus Wasserstein versus Schrödinger; $\mathcal{L}^2/\tau$ |
-| 50–60 | Entropic Good Regulator (named colour); LO13 close |
+| 0–20 | Agency as transport; Wasserstein; Schrödinger bridge; Sinkhorn |
+| 20–40 | Crooks versus Wasserstein versus Schrödinger; $\mathcal{L}^2/\tau$ |
+| 40–52 | Entropic Good Regulator: concavity proof, $H(A\mid S)=0$, two caveats |
+| 52–60 | LO13 close: superintelligence as perpetual motion; Week 1 answer |
 }
 
 \subsection{Agency as Transport}
@@ -203,17 +204,14 @@ mlai.write_figure('transport-plan-2x2.svg', directory='\writeDiagramsDir/ml')}
 
 \slidesincremental{
 * Historical thread: Carnot $\to$ Clausius $\to$ Boltzmann $\to$ Shannon $\to$ Landauer $\to$ here
-* Landauer: $k_B T\ln 2$ per bit erased
-* Crooks: $\langle W_{\mathrm{ex}}\rangle\ge\mathcal{L}^2/\tau$
-* Conservation: $I+H=C$ with fixed marginals
-* DPI $\to$ requisite variety $\to$ Good Regulator $\to$ IB
+* Landauer; Crooks $\mathcal{L}^2/\tau$; $I+H=C$; DPI
+* GRT: exists optimal $\pi$ with $H(A\mid S)=0$ (earned, with caveats)
 * Human bandwidth: $\sim 100$ bits/s — *The Atomic Human*
 }
 
-\speakernotes{LO13. Use LO10 tools from the first half: DPI and the information bottleneck. Requisite variety and the Good Regulator are named colour with the Shannon readings just given. Close Week 1: entropy forbids; probability prescribes.}
+\speakernotes{LO13. Course punchline unchanged: entropy forbids; probability prescribes. GRT is an earned theorem inside that fence, not the fence. Weak model and $H(Z)\ne$ desirable are the two fences on the slogan.}
 
-\notes{Data-processing inequality and the information bottleneck were taught under LO10 earlier in this session. Today they are evaluation tools, not new outcomes: a claim that an intelligent system will just process more is a DPI violation; a system that keeps only what is relevant for action is an IB statement. Requisite variety supplies the quantity bound $H(E)\ge H(D)-I(D;R)$; the Good Regulator supplies the structure $R=h(S)$. The purely entropic reading is minimise model information subject to sufficiently low outcome entropy --- a course-compatible reinterpretation of Conant and Ashby, not their theorem statement. Viable-system material is optional. Inaccessible-game material, if present, is colour only. Prescriptions operate inside fences set by physics and embodiment: the model is not informationally free once Landauer prices sensing, storage, processing, and erasure.}
-
+\notes{Data-processing inequality and the information bottleneck were taught under LO10 earlier in this session. Today they are evaluation tools, not new outcomes: a claim that an intelligent system will just process more is a DPI violation; a system that keeps only what is relevant for action is an IB statement. Requisite variety supplies the quantity bound $H(E)\ge H(D)-I(D;R)$. The Good Regulator Theorem supplies an existence claim earned from concavity: among $H(Z)$-minimisers there is a deterministic policy with $H(A\mid S)=0$. Caveats: constant $A=a_0$ also has $H(A\mid S)=0$; low $H(Z)$ is predictability, not desirability. The IB-shaped reading $\min I(S;A)$ subject to $H(Z)\le\epsilon$ is a gloss after that theorem, not Conant and Ashby's statement and not the course punchline. Viable-system material is optional. Inaccessible-game material, if present, is colour only. Prescriptions operate inside fences set by physics and embodiment: whatever model is kept is not informationally free once Landauer prices sensing, storage, processing, and erasure.}
 \setupcode{no_gos = ['Landauer', 'Crooks L^2/tau', 'I+H=C', 'human bandwidth']
 prescriptions = ['Boltzmann/MaxEnt p', 'Crooks geodesic', 'Wasserstein plan', 'Schrodinger bridge']
 
@@ -224,10 +222,9 @@ prescriptions = ['Boltzmann/MaxEnt p', 'Crooks geodesic', 'Wasserstein plan', 'S
 \slidesincremental{
 * Optimal trajectories and optimal intelligence?
 * Transport plan as an act; which geometry is Sinkhorn?
-* Information and intelligence? (final)
-* Data processing and the bottleneck, as evaluation tools
-* Purely entropic Good Regulator and Schottky
-* How is entropy understood today? (last revision)
+* Why $H(A\mid S)=0$, and why that model is weak?
+* Why low $H(Z)$ is not the same as good?
+* Purely entropic Schottky; entropy today (last revision)
 }
 
 
