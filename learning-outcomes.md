@@ -76,7 +76,7 @@ outcomes:
     text: "Students will be able to evaluate claims about the capabilities of intelligent systems using Landauer's principle, the perpetual motion analogy, and information-theoretic constraints including I + H = C, the data-processing inequality, and human bandwidth."
     bloom_level: evaluate
     week: 8
-    notes: "Closes the loop opened in Week 1. Superintelligence ~ perpetual motion: both promise to repeal a no-go. Evaluate with Landauer, L²/τ, I+H=C, DPI, and the human bandwidth constraint from The Atomic Human. The information bottleneck is a prescription (LO10), not a further no-go. The three geometries are prescriptions, not further no-gos. Inaccessible-game material, if present, is colour only."
+    notes: "Closes the loop opened in Week 1. Superintelligence ~ perpetual motion: both promise to repeal a no-go. Evaluate with Landauer, L²/τ, I+H=C, DPI, and the human bandwidth constraint from The Atomic Human. The information bottleneck is a prescription (LO10), not a further no-go. Named colour (not separate outcomes): requisite variety as H(E)≥H(D)−I(D;R); Good Regulator as structured model R=h(S); purely entropic reading ≈ min I(S;R) s.t. H(Z)≤ε (course reinterpretation of Conant–Ashby, not their theorem statement). The three geometries are prescriptions, not further no-gos. Inaccessible-game material, if present, is colour only."
 ---
 
 # Learning Outcomes
