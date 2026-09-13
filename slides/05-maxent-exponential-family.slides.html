@@ -255,7 +255,7 @@ if(f.length>0){f[0].style.display='block';}
 \]</span></p>
 <p><strong>Solution:</strong> <span class="math inline">\(x = y = \frac{1}{2}\)</span>, <span class="math inline">\(\lambda = -\frac{1}{2}\)</span></p>
 <p><em>Closest point on a line; same pattern as constrained energy or <span class="math inline">\(\|\mathbf{w}\|^2\)</span> with a linear constraint</em></p>
-<!-- SNIPPET: _physics/includes/laplace-insufficient-reason.md-->
+<!-- SNIPPET: _physics/includes/laplace-insufficient-reason.md -->
 </section>
 <section id="laplace-and-the-principle-of-insufficient-reason" class="slide level2">
 <h2>Laplace and the Principle of Insufficient Reason</h2>
@@ -399,7 +399,7 @@ Aside, if asked: Laplace did <em>not</em> use the Laplace approximation here —
 <aside class="notes">
 The punchline: MaxEnt is Laplace’s principle with constraints. Uniform / rule of succession are the empty-moment cases; Boltzmann and the Gaussian arrive when we add moment constraints.
 </aside>
-<!-- /SNIPPET: _physics/includes/laplace-insufficient-reason.md-->
+<!-- /SNIPPET: _physics/includes/laplace-insufficient-reason.md -->
 </section>
 <section id="jaynes-and-maximum-entropy" class="slide level2">
 <h2>Jaynes and Maximum Entropy</h2>
@@ -502,16 +502,6 @@ Low-biased: mean 2
 <aside class="notes">
 Interactive die-roll simulation. Click the die or press Roll to sample from the configured distribution. The histogram shows empirical relative frequencies (coloured bars) overlaid on the theoretical probabilities (dashed outlines). Use the sliders to set arbitrary outcome weights, or click a preset to load the uniform distribution (mean 3.5), the Jaynes maximum-entropy distribution (mean 4.5), the simple 50/50 distribution (faces 4 and 5 equally, mean 4.5 with minimal entropy), or a low-biased distribution (mean 2).
 </aside>
-</section>
-<section id="the-general-maximum-entropy-formalism" class="slide level2">
-<h2>The General Maximum-Entropy Formalism</h2>
-<p><small> <span class="math display">\[
-p_i = \frac{\exp(-\lambda_1 f_1(x_i) - \ldots - \lambda_m f_m(x_i))}{Z(\lambda_1,\ldots,\lambda_m)}
-\]</span> <span class="math display">\[
-Z(\ldots) = \sum_{i=1}^n \exp(-\lambda_1 f_1(x_i) - \ldots - \lambda_m f_m(x_i))
-\]</span> <span class="math display">\[
-\langle f_k \rangle = -\frac{\partial}{\partial \lambda_k}\log Z(\lambda_1,\ldots,\lambda_m) \quad k=1,2,\ldots,m.
-\]</span></small></p>
 <!-- SNIPPET: _physics/includes/maxent-canonical-gaussian.md -->
 <p>Jaynes’ die (mean 4.5, not 3.5) is the running example. The same Lagrange move recovers physics and statistics.</p>
 <div>
@@ -536,6 +526,46 @@ Jaynes’ die: MaxEnt subject to mean 4.5 versus the uniform distribution.
 <object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/jaynes-die-maxent.svg" width="75%" style=" ">
 </object>
 <!-- /SNIPPET: _physics/includes/maxent-canonical-gaussian.md -->
+<!-- SNIPPET: _physics/includes/maxent-to-exponential-family.md -->
+</section>
+<section id="maxent-under-constraints-the-proof" class="slide level2">
+<h2>MaxEnt Under Constraints: the Proof</h2>
+<p>This is the week’s main theorem: constrained MaxEnt <span class="math inline">\(\Rightarrow\)</span> exponential family.</p>
+<div>
+<ul>
+<li class="fragment">Discrete <span class="math inline">\(x_i\)</span>; maximise <span class="math inline">\(H(p)=-\sum_i p_i\log p_i\)</span></li>
+<li class="fragment">Constraints: <span class="math inline">\(\sum_i p_i=1\)</span> and <span class="math inline">\(\sum_i p_i f_k(x_i)=\langle f_k\rangle\)</span> for <span class="math inline">\(k=1,\ldots,m\)</span></li>
+<li class="fragment">Lagrangian: <span class="math inline">\(\mathscr{L}=\sum_i p_i\log p_i + \lambda_0\bigl(\sum_i p_i-1\bigr)+\sum_k \lambda_k\bigl(\sum_i p_i f_k(x_i)-\langle f_k\rangle\bigr)\)</span></li>
+<li class="fragment">Stationarity: <span class="math inline">\(\partial\mathscr{L}/\partial p_i=0\)</span> <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(p_i\propto e^{-\sum_k \lambda_k f_k(x_i)}\)</span></li>
+</ul>
+</div>
+<aside class="notes">
+Board the derivative. Sign: we maximise <span class="math inline">\(H\)</span> so the Lagrangian uses <span class="math inline">\(+\log p_i\)</span> terms; Jaynes’ die and Boltzmann are special cases with one constraint <span class="math inline">\(f_1(x)=x\)</span> or <span class="math inline">\(f_1(x)=E_i\)</span>.
+</aside>
+<div>
+<ul>
+<li class="fragment">Write <span class="math inline">\(T_k(x_i)=f_k(x_i)\)</span>: sufficient statistics fixed by the constraints</li>
+<li class="fragment">MaxEnt solution: <span class="math inline">\(p_i=\dfrac{e^{-\sum_k \lambda_k T_k(x_i)}}{Z}\)</span> on the discrete support</li>
+<li class="fragment">Exponential family: <span class="math inline">\(p(x\mid\boldsymbol{\theta})\propto \exp\bigl(\boldsymbol{\theta}\!\cdot\! T(x)-A(\boldsymbol{\theta})\bigr)\)</span></li>
+<li class="fragment">Identification: <span class="math inline">\(\boldsymbol{\theta} = -\boldsymbol{\lambda}\)</span> (natural parameters <span class="math inline">\(=\)</span> minus Lagrange multipliers)</li>
+<li class="fragment"><span class="math inline">\(A(\boldsymbol{\theta})=\log Z(-\boldsymbol{\theta})\)</span>; <span class="math inline">\(\langle T_k\rangle = \partial A/\partial\theta_k\)</span></li>
+</ul>
+</div>
+<aside class="notes">
+LO6 punchline. Physics sign: Boltzmann uses <span class="math inline">\(p_i\propto e^{-\beta E_i}\)</span> so <span class="math inline">\(\theta_1=-\beta\)</span> when <span class="math inline">\(T=E\)</span>. Bernoulli two-level: <span class="math inline">\(\theta=-\beta\varepsilon\)</span>.
+</aside>
+<!-- /SNIPPET: _physics/includes/maxent-to-exponential-family.md -->
+</section>
+<section id="the-general-maximum-entropy-formalism" class="slide level2">
+<h2>The General Maximum-Entropy Formalism</h2>
+<p><small> <span class="math display">\[
+p_i = \frac{\exp(-\lambda_1 f_1(x_i) - \ldots - \lambda_m f_m(x_i))}{Z(\lambda_1,\ldots,\lambda_m)}
+\]</span> <span class="math display">\[
+Z(\ldots) = \sum_{i=1}^n \exp(-\lambda_1 f_1(x_i) - \ldots - \lambda_m f_m(x_i))
+\]</span> <span class="math display">\[
+\langle f_k \rangle = -\frac{\partial}{\partial \lambda_k}\log Z(\lambda_1,\ldots,\lambda_m) \quad k=1,2,\ldots,m.
+\]</span></small></p>
+<!-- SECTION The Exponential Family -->
 </section>
 <section id="the-exponential-family" class="slide level2">
 <h2>The Exponential Family</h2>
@@ -680,9 +710,6 @@ p(s)\propto\exp(h_1 s_1+h_2 s_2+J s_1 s_2)
 </section>
 <section id="the-legendre-transform" class="slide level2">
 <h2>The Legendre Transform</h2>
-</section>
-<section id="the-legendre-transform-1" class="slide level2">
-<h2>The Legendre Transform</h2>
 <div>
 <ul>
 <li class="fragment">Week 2: <span class="math inline">\(F = U - TS\)</span></li>
@@ -805,10 +832,10 @@ LO7 — intended answer to “how is entropy understood today?” until week 8. 
 <section id="further-reading" class="slide level2 scrollable">
 <h2 class="scrollable">Further Reading</h2>
 <ul>
-<li><p>Chapters 11–12 of <span class="citation" data-cites="Jaynes-probability03">Jaynes (2003)</span></p></li>
 <li><p>the whole paper of <span class="citation" data-cites="Jaynes-information57">Jaynes (1957)</span></p></li>
 <li><p>Chapter 22 of <span class="citation" data-cites="MacKay-information03">MacKay (2003)</span></p></li>
 <li><p>Chapter 12 of <span class="citation" data-cites="Cover:elements91">Cover and Thomas (1991)</span></p></li>
+<li><p>Chapters 11–12 of <span class="citation" data-cites="Jaynes-probability03">Jaynes (2003)</span></p></li>
 <li><p>Exercises 22.12–22.13 of <span class="citation" data-cites="MacKay-information03">MacKay (2003)</span></p></li>
 <li><p>the whole paper of <span class="citation" data-cites="Berger-maximum96">Berger et al. (1996)</span></p></li>
 <li><p>the original one-dimensional model of <span class="citation" data-cites="Ising-ferromagnetism25">Ising (1925)</span></p></li>
