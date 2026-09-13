@@ -78,7 +78,7 @@ reading:
 
 \include{_maths/includes/lagrange-multipliers.md}
 
-<!-- SNIPPET: _physics/includes/laplace-insufficient-reason.md-->
+<!-- SNIPPET: _physics/includes/laplace-insufficient-reason.md -->
 
 \subsection{Laplace and the Principle of Insufficient Reason}
 
@@ -334,7 +334,7 @@ With only the normalisation constraint $\sum_i p_i=1$, MaxEnt recovers Laplace's
 
 \notes{Critiques of bare indifference (Bertrand's paradox and related reparameterisation puzzles) motivate the need for an explicit state space and explicit constraints — which is exactly what the MaxEnt formalism supplies. We will not pursue those paradoxes here; the operational fix is to state what is held fixed before maximising $H$. Laplace's own sunrise caveat makes the same point in plain language: once you know the mechanism, you no longer pretend to know only the counts.}
 
-<!-- /SNIPPET: _physics/includes/laplace-insufficient-reason.md-->
+<!-- /SNIPPET: _physics/includes/laplace-insufficient-reason.md -->
 
 \subsection{Jaynes and Maximum Entropy}
 
@@ -399,7 +399,9 @@ mlai.write_figure('jaynes-die-maxent.svg', directory='\writeDiagramsDir/ml')}
 
 <!-- /SNIPPET: _physics/includes/maxent-canonical-gaussian.md -->
 
-\newslides{MaxEnt Under Constraints: the Proof}
+<!-- SNIPPET: _physics/includes/maxent-to-exponential-family.md -->
+
+\subsection{MaxEnt Under Constraints: the Proof}
 
 \slides{This is the week's main theorem: constrained MaxEnt $\Rightarrow$ exponential family.}
 
@@ -478,10 +480,14 @@ We use the minus sign so that high-energy states are down-weighted when $\theta_
 
 \notes{Continuous $x$ is the same pattern with sums replaced by integrals; Gaussian MaxEnt (mean and variance fixed) is the flagship continuous example. Softmax and the two-spin Hamiltonian later in this lecture are the same theorem with richer $T(x)$.}
 
+<!-- /SNIPPET: _physics/includes/maxent-to-exponential-family.md -->
+
 \addreading{@MacKay-information03}{Chapter 22}
 \addreading{@Cover:elements91}{Chapter 12}
 
 \include{_physics/includes/maximum-entropy-formalism.md}
+
+\section{The Exponential Family}
 
 \include{_physics/includes/exponential-families.md}
 
