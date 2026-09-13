@@ -125,8 +125,8 @@
 <div>
 <ul>
 <li class="fragment">Probability transport; three geometries</li>
-<li class="fragment">Superintelligence as perpetual motion, with bounds</li>
-<li class="fragment">Close the Week 1 question</li>
+<li class="fragment">Entropic Good Regulator: <span class="math inline">\(H(A\mid S)=0\)</span>, with caveats</li>
+<li class="fragment">Superintelligence as perpetual motion; close Week 1</li>
 </ul>
 </div>
 </section>
@@ -309,43 +309,75 @@ Three prescriptions — three answers to “what should I do?” Crooks, Landaue
 </ul>
 </div>
 <aside class="notes">
-Named colour for LO13, not a new outcome. Ashby’s requisite variety in Shannon form <span class="citation" data-cites="Ashby-introduction56">(Ashby, 1956)</span>. Perfect regulation <span class="math inline">\(H(E)=0\)</span> forces <span class="math inline">\(I(D;R)=H(D)\)</span>.
+Named tool for LO13, not a new outcome. Ashby’s requisite variety in Shannon form <span class="citation" data-cites="Ashby-introduction56">(Ashby, 1956)</span>. Quantity, not structure. Perfect regulation <span class="math inline">\(H(E)=0\)</span> forces <span class="math inline">\(I(D;R)=H(D)\)</span>.
 </aside>
+<p>One shot, not an MDP: choose a policy <span class="math inline">\(\pi(a\mid s)\)</span> to minimise outcome entropy.</p>
 <div>
 <ul>
-<li class="fragment">Requisite variety: how much regulatory information?</li>
-<li class="fragment">Good Regulator: how must that information be structured?</li>
-<li class="fragment">A good regulator is a sufficient model for action</li>
+<li class="fragment">State <span class="math inline">\(S\)</span>, action <span class="math inline">\(A\)</span>, outcome <span class="math inline">\(Z\sim p(z\mid s,a)\)</span></li>
+<li class="fragment">Objective: <span class="math inline">\(\min_\pi H(Z)\)</span></li>
+<li class="fragment">Model (weak): <span class="math inline">\(H(A\mid S)=0\)</span>, i.e. <span class="math inline">\(A=h(S)\)</span></li>
 </ul>
 </div>
 <aside class="notes">
-Do not conflate the two. Quantity versus structure. The mapping <span class="math inline">\(h:S\to R\)</span> is the structure answer.
+LO13. Board this setup. Not Bellman, not reward. Entropy of <span class="math inline">\(Z\)</span> is Conant and Ashby’s success criterion. Ten to twelve minutes for the proof block.
 </aside>
-<p>Minimise model information subject to sufficiently low outcome entropy — the course’s reading, not Conant and Ashby’s equation.</p>
+<p>Randomising between outcome-distinct actions cannot minimise <span class="math inline">\(H(Z)\)</span>.</p>
 <div>
 <ul>
-<li class="fragment">Control form: <span class="math inline">\(\min I(S;R)\)</span> subject to <span class="math inline">\(H(Z)\le\epsilon\)</span></li>
-<li class="fragment">Deterministic <span class="math inline">\(R=h(S)\)</span> gives <span class="math inline">\(I(S;R)=H(R)\)</span></li>
-<li class="fragment">Merge states that share an action; keep those that do not</li>
+<li class="fragment">At state <span class="math inline">\(s\)</span>, mix <span class="math inline">\(a_1,a_2\)</span> with <span class="math inline">\(\psi(s,a_1)=z_1\ne z_2=\psi(s,a_2)\)</span></li>
+<li class="fragment">Transfer mass <span class="math inline">\(\alpha\)</span>: <span class="math inline">\((u,v)\mapsto(u-\alpha,v+\alpha)\)</span></li>
+<li class="fragment"><span class="math inline">\(g&#39;&#39;(\alpha)&lt;0\)</span>: interior mixture is not a minimum</li>
 </ul>
 </div>
 <aside class="notes">
-IB was LO10. Here it names the cybernetic slogan in the module’s grammar. Do not attribute the IB optimisation to Conant and Ashby.
+Board <span class="math inline">\(g(\alpha)=-(u-\alpha)\log(u-\alpha)-(v+\alpha)\log(v+\alpha)\)</span>. Strict concavity is the engine. Deterministic <span class="math inline">\(\psi\)</span> for this lemma.
+</aside>
+<p>Among <span class="math inline">\(H(Z)\)</span>-minimisers there exists a deterministic policy: <span class="math inline">\(H(A\mid S)=0\)</span>.</p>
+<div>
+<ul>
+<li class="fragment">Pick one action per <span class="math inline">\(s\)</span> among those sharing <span class="math inline">\(z^\ast(s)\)</span></li>
+<li class="fragment"><span class="math inline">\(A=h(S)\)</span> leaves <span class="math inline">\(p(z)\)</span>, hence <span class="math inline">\(H(Z)\)</span>, unchanged</li>
+<li class="fragment">Stochastic channel: same existence via extreme points</li>
+</ul>
+</div>
+<aside class="notes">
+Theorem: exists optimal <span class="math inline">\(\pi\)</span> with <span class="math inline">\(H(A\mid S)=0\)</span>. Not every optimal policy is deterministic — only that a simplest one is. Course close remains: entropy forbids; probability prescribes.
+</aside>
+<p>The theorem is weaker than the popular slogan.</p>
+<div>
+<ul>
+<li class="fragment">Weak model: constant <span class="math inline">\(A=a_0\)</span> also has <span class="math inline">\(H(A\mid S)=0\)</span></li>
+<li class="fragment">Low <span class="math inline">\(H(Z)\)</span> means predictable, not desirable</li>
+<li class="fragment">Catastrophe with <span class="math inline">\(H(Z)=0\)</span> is ``optimal’’ under entropy alone</li>
+</ul>
+</div>
+<aside class="notes">
+Do not collapse <span class="math inline">\(H(A\mid S)=0\)</span> into ``<span class="math inline">\(A\)</span> contains a rich model of <span class="math inline">\(S\)</span>.’’ Faithful models need <span class="math inline">\(H(S\mid A)=0\)</span> as well. Desirability needs a goal set <span class="math inline">\(G\)</span>, not entropy alone.
+</aside>
+<p>IB gloss, not the theorem: keep only distinctions that matter for action.</p>
+<div>
+<ul>
+<li class="fragment"><span class="math inline">\(\min I(S;A)\)</span> subject to <span class="math inline">\(H(Z)\le\epsilon\)</span> — course reading</li>
+<li class="fragment">Deterministic <span class="math inline">\(A=h(S)\)</span> gives <span class="math inline">\(I(S;A)=H(A)\)</span></li>
+<li class="fragment">Do not attribute that optimisation to Conant and Ashby</li>
+</ul>
+</div>
+<aside class="notes">
+IB was LO10. This gloss sits after the earned theorem. Course punchline remains Week 1: entropy forbids; probability prescribes.
 </aside>
 <!-- SNIPPET: _information/includes/limits-on-intelligence-synthesis.md -->
 <p>Apply three no-gos and name which geometry you are using as the prescription.</p>
 <div>
 <ul>
 <li class="fragment">Historical thread: Carnot <span class="math inline">\(\to\)</span> Clausius <span class="math inline">\(\to\)</span> Boltzmann <span class="math inline">\(\to\)</span> Shannon <span class="math inline">\(\to\)</span> Landauer <span class="math inline">\(\to\)</span> here</li>
-<li class="fragment">Landauer: <span class="math inline">\(k_B T\ln 2\)</span> per bit erased</li>
-<li class="fragment">Crooks: <span class="math inline">\(\langle W_{\mathrm{ex}}\rangle\ge\mathcal{L}^2/\tau\)</span></li>
-<li class="fragment">Conservation: <span class="math inline">\(I+H=C\)</span> with fixed marginals</li>
-<li class="fragment">DPI <span class="math inline">\(\to\)</span> requisite variety <span class="math inline">\(\to\)</span> Good Regulator <span class="math inline">\(\to\)</span> IB</li>
+<li class="fragment">Landauer; Crooks <span class="math inline">\(\mathcal{L}^2/\tau\)</span>; <span class="math inline">\(I+H=C\)</span>; DPI</li>
+<li class="fragment">GRT: exists optimal <span class="math inline">\(\pi\)</span> with <span class="math inline">\(H(A\mid S)=0\)</span> (earned, with caveats)</li>
 <li class="fragment">Human bandwidth: <span class="math inline">\(\sim 100\)</span> bits/s — <em>The Atomic Human</em></li>
 </ul>
 </div>
 <aside class="notes">
-LO13. Use LO10 tools from the first half: DPI and the information bottleneck. Requisite variety and the Good Regulator are named colour with the Shannon readings just given. Close Week 1: entropy forbids; probability prescribes.
+LO13. Course punchline unchanged: entropy forbids; probability prescribes. GRT is an earned theorem inside that fence, not the fence. Weak model and <span class="math inline">\(H(Z)\ne\)</span> desirable are the two fences on the slogan.
 </aside>
 <p>{no_gos = [‘Landauer,’ ‘Crooks L^2/tau,’ ‘I+H=C,’ ‘human bandwidth’] prescriptions = [‘Boltzmann/MaxEnt p,’ ‘Crooks geodesic,’ ‘Wasserstein plan,’ ‘Schrodinger bridge’]</p>
 <!-- /SNIPPET: _information/includes/limits-on-intelligence-synthesis.md -->
@@ -356,10 +388,9 @@ LO13. Use LO10 tools from the first half: DPI and the information bottleneck. Re
 <ul>
 <li class="fragment">Optimal trajectories and optimal intelligence?</li>
 <li class="fragment">Transport plan as an act; which geometry is Sinkhorn?</li>
-<li class="fragment">Information and intelligence? (final)</li>
-<li class="fragment">Data processing and the bottleneck, as evaluation tools</li>
-<li class="fragment">Purely entropic Good Regulator and Schottky</li>
-<li class="fragment">How is entropy understood today? (last revision)</li>
+<li class="fragment">Why <span class="math inline">\(H(A\mid S)=0\)</span>, and why that model is weak?</li>
+<li class="fragment">Why low <span class="math inline">\(H(Z)\)</span> is not the same as good?</li>
+<li class="fragment">Purely entropic Schottky; entropy today (last revision)</li>
 </ul>
 </div>
 </section>

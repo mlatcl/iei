@@ -73,10 +73,10 @@ outcomes:
     notes: "Shannon: probability over symbols abstracts a code. Analogy: probability transport abstracts an agent (an act as a coupling). Three geometries of an optimal change of state, which must not be collapsed: (1) Fisher–Rao / Crooks thermodynamic length — near-eq, minimum dissipation, bound L²/τ; (2) Wasserstein — minimum ground-cost of moving mass; (3) Schrödinger bridge — maximum-entropy interpolation between p and q. Sinkhorn / IPF is the discrete algorithm for (3), entropy-regularized OT; it is not a fourth geometry, and Wasserstein only as ε→0. Students need the intuition, not the technical details, and must say which geometry they are using."
 
   - id: LO13
-    text: "Students will be able to evaluate claims about the capabilities of intelligent systems using Landauer's principle, the perpetual motion analogy, and information-theoretic constraints including I + H = C, the data-processing inequality, and human bandwidth."
+    text: "Students will be able to evaluate claims about the capabilities of intelligent systems using Landauer's principle, the perpetual motion analogy, and information-theoretic constraints including I + H = C, the data-processing inequality, and human bandwidth; and to sketch why an H(Z)-optimal regulator may be taken deterministic (H(A|S)=0), noting that this model condition is weak and that low H(Z) is predictability rather than desirability."
     bloom_level: evaluate
     week: 8
-    notes: "Closes the loop opened in Week 1. Superintelligence ~ perpetual motion: both promise to repeal a no-go. Evaluate with Landauer, L²/τ, I+H=C, DPI, and the human bandwidth constraint from The Atomic Human. The information bottleneck is a prescription (LO10), not a further no-go. Named colour (not separate outcomes): requisite variety as H(E)≥H(D)−I(D;R); Good Regulator as structured model R=h(S); purely entropic reading ≈ min I(S;R) s.t. H(Z)≤ε (course reinterpretation of Conant–Ashby, not their theorem statement). The three geometries are prescriptions, not further no-gos. Inaccessible-game material, if present, is colour only."
+    notes: "Closes the loop opened in Week 1. Superintelligence ~ perpetual motion: both promise to repeal a no-go. Evaluate with Landauer, L²/τ, I+H=C, DPI, and the human bandwidth constraint from The Atomic Human. The information bottleneck is a prescription (LO10), not a further no-go. Good Regulator (named tool, not a separate outcome and not the course punchline): among min-H(Z) policies there exists one with H(A|S)=0, earned from concavity of Shannon entropy (deterministic ψ: concentration lemma; stochastic channel: extreme points of the policy polytope). Caveats: constant A=a₀ also has H(A|S)=0; H(Z)=0 can be reliably bad. Requisite variety as H(E)≥H(D)−I(D;R). IB form min I(S;A) s.t. H(Z)≤ε is a course gloss after the theorem, not Conant–Ashby. The three geometries are prescriptions, not further no-gos. Inaccessible-game material, if present, is colour only."
 ---
 
 # Learning Outcomes
@@ -157,4 +157,4 @@ Eight Tuesdays, 13 October – 1 December 2026, 10:00–12:00, FW26, William Gat
 | LO10 | Multi-information; DPI; information bottleneck       | Analyse     | 8    |
 | LO11 | I = C forces quantum: von Neumann entropy             | Analyse     | 8    |
 | LO12 | Probability transport as abstraction of agency        | Evaluate    | 8    |
-| LO13 | Information-theoretic limits on intelligence          | Evaluate    | 8    |
+| LO13 | Limits on intelligence; entropic Good Regulator sketch | Evaluate    | 8    |
