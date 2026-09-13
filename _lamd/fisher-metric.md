@@ -7,10 +7,12 @@ venue: FW26, William Gates Building
 room: FW26
 transition: None
 abstract: >
-  The manifold of probability distributions with the Fisher information
-  matrix as its metric. Crooks' thermodynamic length is the Fisher–Rao
-  length of a path of equilibrium states. Students should be able to
-  *define* thermodynamic length today.
+  Fisher's notion of information (sensitivity of the score, not Shannon
+  uncertainty), the Fréchet–Rao–Cramér reading as identifiability, and
+  the Fisher matrix as a Riemannian metric. Crooks' thermodynamic length
+  is the Fisher–Rao length of a path of equilibrium states. Students
+  should be able to *define* thermodynamic length today; the Schottky
+  peak as a Fisher peak is named, not interpreted.
 author:
 - given: Neil D.
   family: Lawrence
@@ -32,14 +34,14 @@ reading:
     estimated_hours: 1
 ---
 
-\notes{No class test today. Fisher geometry and the definition of thermodynamic length. Worksheet 3 is released; due 24 November (start of lecture 7). Quiz 3 is then.}
+\notes{No class test today. Clarify what Fisher meant by information, then geometry and the definition of thermodynamic length. Worksheet 3 is released; due 24 November (start of lecture 7). Quiz 3 is then.}
 
 \subsection{This Session}
 
 \slidesincremental{
-* Fisher metric; thermodynamic length
-* KL divergence; Shannon vs differential entropy
-* Fisher metric; dually flat geometry
+* Fisher's information $\neq$ Shannon's $H$
+* Fréchet–Rao–Cramér: identifiability
+* Fisher metric; dual flatness
 * Thermodynamic length: define, do not interpret
 }
 
@@ -48,13 +50,71 @@ reading:
 
 | Minutes | Block |
 |--------:|-------|
-| 0–10 | Recap MaxEnt / exponential family; release Worksheet 3 |
-| 10–30 | KL divergence; Shannon vs differential entropy |
-| 30–55 | Statistical manifold; Fisher metric |
+| 0–15 | Recap MaxEnt / $G=\nabla^2 A$; Fisher's notion of information |
+| 15–30 | Fréchet–Rao–Cramér: identifiability; name Schottky as Fisher peak |
+| 30–55 | Riemannian geometry; KL; statistical manifold as metric |
 | 55–65 | Break |
 | 65–85 | Dual flatness; Pythagorean theorem for KL |
 | 85–120 | Crooks: length as Fisher–Rao length; $\langle W_{\mathrm{ex}}\rangle \ge \mathcal{L}^2/\tau$; release Worksheet 3 |
 }
+
+\subsection{What Did Fisher Mean by Information?}
+
+\notes{Week 5 left us with a Hessian: for an exponential family,
+$$
+G(\boldsymbol{\theta})=\nabla^2\mathcal{A}(\boldsymbol{\theta})=\mathrm{Cov}_{\boldsymbol{\theta}}[T(\mathbf{x})].
+$$
+Today we ask what that object *is*. Fisher (1925) called the expected squared score *information* about a parameter. For a scalar parameter $\theta$,
+$$
+I(\theta)=\mathbb{E}_\theta\!\left[\left(\frac{\partial}{\partial\theta}\log p(x\mid\theta)\right)^2\right].
+$$
+That is not Shannon entropy. Shannon's $H$ measures uncertainty in a random variable; Fisher's $I$ measures how much a sample tells you about $\theta$ --- the sensitivity of the log-likelihood to the parameter. Conflating the two words is the first mistake to block today.}
+
+\slides{
+**Fisher's information $\neq$ Shannon's entropy**
+* Shannon $H$: uncertainty in an outcome
+* Fisher $I(\theta)$: sensitivity of $\log p$ to $\theta$
+* Same word; different operational reading
+}
+
+\newslide{Score and Sensitivity}
+
+\slides{
+$$
+I(\theta)=\mathbb{E}\!\left[(\partial_\theta\log p)^2\right]
+$$
+* Large $I$: data distinguish nearby $\theta$ well
+* Small $I$: parameter almost invisible in samples
+}
+
+\speakernotes{Hold Shannon vs Fisher for the whole module: $H$ is a state function of $p$; $I$ is a property of a *family* $p(\cdot\mid\theta)$.}
+
+\subsection{Identifiability: Fréchet, Rao, Cramér}
+
+\notes{Independently of Fisher's estimation programme, Fréchet, Rao, and Cramér arrived at the same matrix as a bound on how well parameters can be identified. The Cramér--Rao inequality
+$$
+\mathrm{cov}(\hat{\boldsymbol{\theta}})\succeq G^{-1}(\boldsymbol{\theta})
+$$
+says: where Fisher information is large, unbiased estimators can be precise; where it vanishes, the parameter is not identifiable from data. The geometric reading follows: $G$ is a metric of *distinguishability* on the manifold of distributions.}
+
+\slidesincremental{
+* Same $G$: Fisher (estimation) and Fréchet–Rao–Cramér (identifiability)
+* $\mathrm{cov}(\hat\theta)\succeq G^{-1}$: high $G$ $\Rightarrow$ tight bound
+* Metric reading: $G$ measures how distinguishable nearby distributions are
+}
+
+\newslide{Named Link: Schottky Peak}
+
+\notes{For the canonical two-state system of week 2, the natural parameter is inverse temperature $\beta$. Then $G(\beta)$ is proportional to the heat capacity $C$. Schottky's anomaly --- the peak of $C$ when both states are populated --- is therefore a peak of Fisher information: maximal thermal response is maximal distinguishability of nearby $\beta$. Name that identity today. The purely entropic reading (what that peak means for information and intelligence) waits for week 8. Do not call $G$ ``the rate of entropy production''; that role belongs to path costs such as Crooks' $\langle W_{\mathrm{ex}}\rangle$, defined later this lecture.}
+
+\slides{
+**Week 2, revisited (name only):**
+* Two-state: $G(\beta)\propto C$
+* Schottky peak $=$ Fisher peak
+* Entropic reading: week 8
+}
+
+\speakernotes{Fence: name the identity; do not interpret Schottky or length for intelligence today.}
 
 <!-- SNIPPET: _mathe/includes/what-is-a-riemannian-geometry.md -->
 
@@ -74,18 +134,18 @@ reading:
 
 \subsection{Fisher Information as Geometry}
 
-\notes{In the previous section, we saw that for exponential families, the Fisher information matrix appears as the second derivative of the log partition function
+\notes{We already have three readings of the same matrix: Fisher's expected squared score, Fréchet–Rao–Cramér identifiability, and --- for exponential families --- the Hessian
 $$
 G(\boldsymbol{\theta}) = \nabla^2 \mathcal{A}(\boldsymbol{\theta}) = \mathrm{Cov}_{\boldsymbol{\theta}}[T(\mathbf{x})].
 $$
-We now develop the geometric interpretation: the Fisher information matrix defines a *metric* on the space of probability distributions.}
+We now develop the geometric interpretation: that matrix defines a *metric* on the space of probability distributions.}
 
 \slides{
-**From last section:**
+**Same $G$, three origins:**
 $$
 G(\boldsymbol{\theta}) = \nabla^2 \mathcal{A}(\boldsymbol{\theta}) = \mathrm{Cov}_{\boldsymbol{\theta}}[T(\mathbf{x})]
 $$
-* Now: What does this *mean* geometrically?
+* Fisher / CR / Hessian --- now as Riemannian metric
 }
 
 \subsubsection{The Statistical Manifold}
@@ -121,23 +181,19 @@ $$
 
 \subsubsection{Connection to Statistical Estimation}
 
-\notes{This geometric picture connects directly to Fisher's original motivation. The *Cramér-Rao bound* states that for any unbiased estimator $\hat{\boldsymbol{\theta}}$ of parameters $\boldsymbol{\theta}$,
+\notes{The geometric picture restates the Fréchet–Rao–Cramér bound from the open of the lecture. For any unbiased estimator $\hat{\boldsymbol{\theta}}$,
 $$
 \text{cov}(\hat{\boldsymbol{\theta}}) \succeq G^{-1}(\boldsymbol{\theta}),
 $$
-where $\succeq$ denotes that the left side minus the right side is positive semidefinite.
-
-Geometrically, this means: higher Fisher information (stronger metric) implies tighter bounds on estimation. The inverse $G^{-1}$ gives the *minimum possible* covariance of any unbiased estimator, it's the fundamental limit on how well we can estimate parameters from data.}
+where $\succeq$ denotes that the left side minus the right side is positive semidefinite. Higher Fisher information (stronger metric) means tighter estimation; $G^{-1}$ is the error ellipsoid.}
 
 \slides{
-*Cramér-Rao Bound:*
+*Cramér–Rao (restated geometrically):*
 $$
 \text{cov}(\hat{\boldsymbol{\theta}}) \succeq G^{-1}(\boldsymbol{\theta})
 $$
-* $G^{-1}$ = best possible estimator covariance
-* High $G$ → small $G^{-1}$ → tight estimation
-* Low $G$ → large $G^{-1}$ → loose estimation
-* Geometric picture: $G^{-1}$ is "error ellipsoid"
+* $G^{-1}$ = error ellipsoid
+* High $G$ → tight estimation; low $G$ → loose
 }
 
 \newslide{Why This Matters for Dynamics}
@@ -333,14 +389,14 @@ mlai.write_figure('crooks-path-sketch.svg', directory='\writeDiagramsDir/ml')}
 \subsection{Define This Week}
 
 \slidesincremental{
+* Fisher's $I(\theta)$ versus Shannon's $H$
+* Identifiability: Fréchet–Rao–Cramér / Cramér–Rao
+* Schottky peak as Fisher peak (named only)
+* Fisher metric as a Riemannian metric; dual charts
 * What is thermodynamic length?
-* What is KL divergence?
-* Shannon entropy versus differential entropy
-* Fisher metric as a Riemannian metric
-* Dual charts: last week's Legendre pair
 }
 
-\notes{Interpret later: optimal trajectories and intelligence (week 8); natural gradient as descent in the same metric (week 6).}
+\notes{Interpret later: Schottky's entropic reading; optimal trajectories and intelligence (week 8). Natural gradient as descent in the same metric is week 7.}
 
 \subsection{After This Lecture}
 
