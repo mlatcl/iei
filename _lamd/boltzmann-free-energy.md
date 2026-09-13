@@ -7,9 +7,11 @@ venue: FW26, William Gates Building
 room: FW26
 transition: None
 abstract: >
-  Derive the Boltzmann distribution and the free-energy decomposition
-  $F = U - TS$. Name the thermodynamic bath, Schottky's anomaly, and
-  finite-time dissipation. Worksheet 1 is due; Quiz 1 opens the session.
+  Introduce the Gibbs--Boltzmann distribution by name and formula, then
+  account for free energy $F = U - TS$. Name the thermodynamic bath,
+  Schottky's anomaly, and finite-time dissipation. The MaxEnt derivation
+  of the Boltzmann weights waits for week 5. Worksheet 1 is due; Quiz 1
+  opens the session.
 author:
 - given: Neil D.
   family: Lawrence
@@ -42,13 +44,13 @@ reading:
     required: false
 ---
 
-\notes{Worksheet 1 is due at the start of this session. Quiz 1 occupies the first ten minutes: probability, elementary entropy, and Week 1 seeds. Then 110 minutes on Boltzmann, free energy, bath, Schottky, and finite time.}
+\notes{Worksheet 1 is due at the start of this session. Quiz 1 occupies the first ten minutes: probability, elementary entropy, and Week 1 seeds. Then 110 minutes on the Gibbs--Boltzmann form, free energy, bath, Schottky, and finite time. Do not derive the occupation from MaxEnt today --- that is week 5.}
 
 \subsection{This Session}
 
 \slidesincremental{
 * Quiz 1 (ten minutes)
-* Boltzmann derivation; free energy $F=U-TS$
+* Gibbs--Boltzmann form; free energy $F=U-TS$
 * Bath, Schottky, finite-time dissipation named
 }
 
@@ -59,7 +61,7 @@ reading:
 |--------:|-------|
 | 0–10 | Quiz 1 (Moodle; probability / entropy foundations / Week 1 seeds) |
 | 10–20 | Collect Worksheet 1; recap seed $p_i \propto e^{-\beta E_i}$ |
-| 20–55 | Boltzmann derivation; coldness; occupations |
+| 20–55 | Gibbs--Boltzmann form and names; $\log Z$ as CGF; Hopfield / BM colour |
 | 55–65 | Break |
 | 65–95 | Free-energy decomposition $F=U-TS$ |
 | 95–120 | Bath; Schottky; finite-time naming |
@@ -78,9 +80,9 @@ reading:
 
 
 
-\subsection{From the Seed to the Derivation}
+\subsection{From the Seed to the Formula}
 
-\notes{Last week stated $p_i = e^{-\beta E_i}/Z$. Today derive it and account for free energy. Motivations (perpetual motion, bandwidth) remain the frame.}
+\notes{Last week stated $p_i = e^{-\beta E_i}/Z$. Today name that occupation, read $Z$ as a generating function, and account for free energy. The MaxEnt derivation waits for week 5. Motivations (perpetual motion, bandwidth) remain the frame.}
 
 \include{_information/includes/perpetual-motion-superintelligence-analogy.md}
 
@@ -106,11 +108,11 @@ reading:
 
 \slidesincremental{
 * You cannot run a cyclic engine that converts heat entirely into work
-* Simimlar for perpetual motion — Clausius makes the prohibition explicit
+* Similar for perpetual motion — Clausius makes the prohibition explicit
 * Prescription comes later: Boltzmann weights, then Shannon/Jaynes (this term)
 }
 
-\notes{Clausius did not give the Boltzmann distribution. He gave the macroscopic balance that any prescription must respect. When we derive $p_i \propto e^{-\beta E_i}/Z$ shortly, read it as the statistical answer to a constraint Clausius already framed: fixed mean energy, maximum entropy, no perpetual motion.}
+\notes{Clausius did not give the Boltzmann distribution. He gave the macroscopic balance that any prescription must respect. When we write $p_i \propto e^{-\beta E_i}/Z$ today and derive it from MaxEnt in week 5, read it as the statistical answer to a constraint Clausius already framed: fixed mean energy, maximum entropy, no perpetual motion.}
 
 \slidesincremental{
 * Macroscopic: Carnot $\to$ Clausius (second law, entropy named)
@@ -121,11 +123,8 @@ reading:
 <!-- /SNIPPET: _physics/includes/clausius-carnot-second-law.md -->
 
 \include{_iei/includes/iei-notebook-setup.md}
-<!-- SNIPPET: _physics/includes/gibbs-distribution.md -->
 
-\comment{Here we need to introduce the Gibbs/BOltzmann distribution. Just in its form and with its names. Mention also that the partition function is the log cumulant generating function.}
-
-<!-- /SNIPPET: _physics/includes/gibbs-distribution.md --> 
+\include{_physics/includes/gibbs-distribution.md}
 
 \include{_physics/includes/coldness-and-temperature.md}
 
@@ -290,6 +289,7 @@ mlai.write_figure('finite-time-sketch.svg', directory='\writeDiagramsDir/ml')}
 
 \slidesincremental{
 * How was entropy discovered?
+* What is the Gibbs--Boltzmann distribution?
 * Energy and entropy?
 * What is a thermodynamic bath?
 * What is Schottky's anomaly?

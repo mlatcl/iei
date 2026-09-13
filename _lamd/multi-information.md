@@ -82,6 +82,8 @@ If the slot is still listed as one hour, run long: the second half (limits) can 
 
 \notes{Ten MCQs from the multi-information / limits bank. Auto-graded.}
 
+\include{_iei/includes/iei-notebook-setup.md}
+
 \subsection{Multi-Information}
 
 \include{_ml/includes/velocity-independent-sample.md}

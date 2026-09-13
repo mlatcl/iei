@@ -74,6 +74,8 @@ reading:
 | 110–120 | LO7 synthesis; “how is entropy understood today?” |
 }
 
+\include{_iei/includes/iei-notebook-setup.md}
+
 \subsection{Maximum Entropy}
 
 \include{_maths/includes/lagrange-multipliers.md}

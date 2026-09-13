@@ -69,6 +69,8 @@ reading:
 | 52–60 | LO13 close: superintelligence as perpetual motion; Week 1 answer |
 }
 
+\include{_iei/includes/iei-notebook-setup.md}
+
 \subsection{Agency as Transport}
 
 <!-- SNIPPET: _information-game/includes/schrodingers-bridge-perspective.md -->

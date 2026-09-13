@@ -66,6 +66,8 @@ reading:
 | 100–120 | Thermodynamic length (Crooks 2007); $\langle W_{\mathrm{ex}}\rangle \ge \mathcal{L}^2/\tau$; release Worksheet 3 |
 }
 
+\include{_iei/includes/iei-notebook-setup.md}
+
 \subsection{What Did Fisher Mean by Information?}
 
 \notes{Week 5 left us with a Hessian: for an exponential family,

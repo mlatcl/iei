@@ -54,6 +54,8 @@ reading:
 | 100–120 | A geodesic on a two-parameter exponential family |
 }
 
+\include{_iei/includes/iei-notebook-setup.md}
+
 \subsection{MaxEnt as Projection}
 
 <!-- SNIPPET: _information/includes/maxent-m-projection.md -->

@@ -333,6 +333,8 @@ $$
 
 \speakernotes{Do not derive Lagrange multipliers today. State the formula so Worksheet 1 has a concrete claim to open and then press. Students should leave curious about why *this* exponential, what $\beta$ means, and whether entropy here is a constraint or a recipe.}
 
+\include{_iei/includes/iei-notebook-setup.md}
+
 \setupcode{import numpy as np}
 
 \code{def boltzmann(energies, beta):
