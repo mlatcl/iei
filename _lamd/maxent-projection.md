@@ -197,8 +197,7 @@ mlai.write_figure('natural-gradient-paths.svg', directory='\writeDiagramsDir/ml'
 
 \speakernotes{Sketch geodesic vs straight line. Worksheet 3 integrates the straight line; higher marks compare paths. Sinkhorn: week 8 only.}
 
-\notes{The geodesic is the prescription for minimum-dissipation protocols under Crooks' bound. Natural gradient is the local form of the same instruction. A straight line in $(\mu,\sigma^2)$ is not generally a geodesic, but it gives a first length estimate.}
-
+\notes{The geodesic is the prescription for minimum-dissipation protocols under Crooks' bound --- last week's near-equilibrium expansion of the fluctuation theorem, not an independent axiom. Natural gradient is the local form of the same instruction. A straight line in $(\mu,\sigma^2)$ is not generally a geodesic, but it gives a first length estimate.}
 \setupplotcode{import numpy as np
 import matplotlib.pyplot as plt
 import mlai}

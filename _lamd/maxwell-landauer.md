@@ -74,9 +74,9 @@ reading:
 \subsection{This Session}
 
 \slidesincremental{
-* Maxwell's demon and Landauer
+* Maxwell's demon; membrane detailed balance
 * Information engines; car vs ATP synthase
-* Information and intelligence: first cut
+* Landauer; information and intelligence: first cut
 }
 
 \notes{
@@ -85,11 +85,11 @@ reading:
 | Minutes | Block |
 |--------:|-------|
 | 0–10 | Recap Shannon / partition; release Worksheet 2 |
-| 10–55 | Maxwell's demon; where the apparent violation sits |
-| 55–65 | Break |
-| 65–98 | Szilard; Feynman; Parrondo; information engines; car engine vs ATP synthase |
-| 98–115 | Landauer; erasure as the thermodynamic cost |
-| 115–120 | Intelligence, first cut; human bandwidth; release Worksheet 2 |
+| 10–50 | Maxwell's demon; membrane detailed balance and $\Delta S$ |
+| 50–60 | Break |
+| 60–95 | Szilard; Feynman; Parrondo; information engines; car vs ATP synthase |
+| 95–112 | Landauer; erasure as the thermodynamic cost |
+| 112–120 | Intelligence, first cut; human bandwidth; Worksheet 2 |
 }
 
 \subsection{Maxwell's Demon}
@@ -115,7 +115,7 @@ reading:
 
 \include{_physics/includes/maxwells-demon.md}
 
-
+\include{_physics/includes/maxwell-demon-detailed-balance.md}
 
 \subsection{A Different Perspective}
 
@@ -302,9 +302,9 @@ mlai.write_figure('car-engine-info-scale.svg', directory='\writeDiagramsDir/ml')
 * Prescription: the demon's policy — which molecules to let through
 }
 
-\speakernotes{LO4. Policy does not repeal the no-go. Live: `landauer_cost(300)`. Worksheet 2 Part B: compute and explain; Ellis excerpt for the two-ledgers comparison. Trap-door position is already a physical memory degree of freedom — Landauer prices reset, not a separate notebook.}
+\speakernotes{LO4. Policy does not repeal the no-go. Live: `landauer_cost(300)`. Worksheet 2 Part B: compute and explain; Ellis excerpt for the two-ledgers comparison. Trap-door position is already a physical memory degree of freedom — Landauer prices reset, not a separate notebook. Flag only: finite-time corrections and Crooks (1999) wait for week 6.}
 
-\notes{Landauer (1961): erasing one bit in a bath at temperature $T$ dissipates at least $k_B T\ln 2$. Erasure of stored outcomes restores the second law. The demon's measurement policy is the prescription; it does not repeal the bound. Ellis agrees the demon fails but locates the cost at measurement and gating; @Bennett-thermodynamics82 completes the information ledger: erasure is logically irreversible, so phase-space compression costs at least $k_B T\ln 2$ per bit — derived, not assumed to save Clausius.}
+\notes{Landauer (1961): erasing one bit in a bath at temperature $T$ dissipates at least $k_B T\ln 2$. Erasure of stored outcomes restores the second law. The demon's measurement policy is the prescription; it does not repeal the bound. Ellis agrees the demon fails but locates the cost at measurement and gating; @Bennett-thermodynamics82 completes the information ledger: erasure is logically irreversible, so phase-space compression costs at least $k_B T\ln 2$ per bit --- derived, not assumed to save Clausius. Today's statement is the quasi-static bound (equality in the reversible limit). Finite-time erasure pays a dissipative penalty above $k_B T\ln 2$; the exact distributional tool is Crooks' fluctuation theorem, which we meet in week 6 as the bridge to thermodynamic length.}
 
 \setupplotcode{import numpy as np
 import matplotlib.pyplot as plt

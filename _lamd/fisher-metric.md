@@ -9,10 +9,12 @@ transition: None
 abstract: >
   Fisher's notion of information (sensitivity of the score, not Shannon
   uncertainty), the Fréchet–Rao–Cramér reading as identifiability, and
-  the Fisher matrix as a Riemannian metric. Crooks' thermodynamic length
-  is the Fisher–Rao length of a path of equilibrium states. Students
-  should be able to *define* thermodynamic length today; the Schottky
-  peak as a Fisher peak is named, not interpreted.
+  the Fisher matrix as a Riemannian metric. A short bridge from Crooks'
+  fluctuation theorem (1999) and Jarzynski to the near-equilibrium bound
+  ⟨W_ex⟩ ≥ ℒ²/τ; thermodynamic length (Crooks 2007) is then the
+  Fisher–Rao length of a path of equilibrium states. Students should be
+  able to *define* thermodynamic length today; the Schottky peak as a
+  Fisher peak is named, not interpreted.
 author:
 - given: Neil D.
   family: Lawrence
@@ -28,13 +30,17 @@ reading:
     author: "Amari"
     chapter: "Chapters 1–2"
     estimated_hours: 2
+  - title: "Entropy Production Fluctuation Theorem..."
+    author: "Crooks"
+    chapter: "1999; statement of the theorem"
+    estimated_hours: 0.5
   - title: "Measuring Thermodynamic Length"
     author: "Crooks"
-    chapter: "whole paper"
+    chapter: "whole paper (2007)"
     estimated_hours: 1
 ---
 
-\notes{No class test today. Clarify what Fisher meant by information, then geometry and the definition of thermodynamic length. Worksheet 3 is released; due 24 November (start of lecture 7). Quiz 3 is then.}
+\notes{No class test today. Clarify what Fisher meant by information, then geometry. Bridge from Crooks (1999)/Jarzynski to the near-equilibrium bound, then define thermodynamic length (Crooks 2007). Worksheet 3 is released; due 24 November (start of lecture 7). Quiz 3 is then.}
 
 \subsection{This Session}
 
@@ -42,6 +48,7 @@ reading:
 * Fisher's information $\neq$ Shannon's $H$
 * Fréchet–Rao–Cramér: identifiability
 * Fisher metric; dual flatness
+* Fluctuation theorem $\to$ $\langle W\rangle\ge\Delta F$ $\to$ length bound
 * Thermodynamic length: define, do not interpret
 }
 
@@ -55,7 +62,8 @@ reading:
 | 30–55 | Riemannian geometry; KL; statistical manifold as metric |
 | 55–65 | Break |
 | 65–85 | Dual flatness; Pythagorean theorem for KL |
-| 85–120 | Crooks: length as Fisher–Rao length; $\langle W_{\mathrm{ex}}\rangle \ge \mathcal{L}^2/\tau$; release Worksheet 3 |
+| 85–100 | Bridge: Crooks (1999) / Jarzynski $\to$ second law $\to$ near-eq expansion |
+| 100–120 | Thermodynamic length (Crooks 2007); $\langle W_{\mathrm{ex}}\rangle \ge \mathcal{L}^2/\tau$; release Worksheet 3 |
 }
 
 \subsection{What Did Fisher Mean by Information?}
@@ -324,10 +332,11 @@ mlai.write_figure('gaussian-fisher-eigen.svg', directory='\writeDiagramsDir/ml')
 
 <!-- /SNIPPET: _information-game/includes/fisher-metric-worked.md -->
 
+\include{_information/includes/welling-crooks-fluctuation.md}
 
 <!-- SNIPPET: _information/includes/crooks-thermodynamic-length.md -->
 
-\newslides{Thermodynamic Length (Crooks)}
+\newslides{Thermodynamic Length (Crooks 2007)}
 
 \slides{For a slow protocol $\lambda(t)$ on the equilibrium manifold, define length with the Fisher metric.}
 
@@ -341,9 +350,9 @@ $$
 * Intelligence question: week 8
 }
 
-\speakernotes{Define length today; do not interpret for intelligence until lecture 8. Worksheet 3: straight-line path $(0,1)\to(2,4)$.}
+\speakernotes{Define length today; do not interpret for intelligence until lecture 8. Worksheet 3: straight-line path $(0,1)\to(2,4)$. The bound is the near-equilibrium expansion of the fluctuation theorem, not a separate axiom.}
 
-\notes{Crooks (2007): for a slow protocol on the equilibrium manifold, thermodynamic length is Fisher–Rao length. In linear response, $\langle W_{\mathrm{ex}}\rangle\ge\mathcal{L}^2/\tau$. The metric is the prescription for measuring a change of state.}
+\notes{Crooks (2007) packages the near-equilibrium expansion as Fisher--Rao length on the equilibrium manifold [@Crooks-length07]. In linear response, $\langle W_{\mathrm{ex}}\rangle\ge\mathcal{L}^2/\tau$. The metric is the prescription for measuring a change of state; geodesics minimise the leading dissipative cost. The exact distributional statement underneath is Crooks (1999) / Jarzynski, above.}
 
 \setupplotcode{import numpy as np
 import matplotlib.pyplot as plt
@@ -384,8 +393,6 @@ mlai.write_figure('crooks-path-sketch.svg', directory='\writeDiagramsDir/ml')}
 * Intelligence question: week 8
 }
 
-\include{_information/includes/welling-crooks-fluctuation.md}
-
 \subsection{Define This Week}
 
 \slidesincremental{
@@ -393,6 +400,7 @@ mlai.write_figure('crooks-path-sketch.svg', directory='\writeDiagramsDir/ml')}
 * Identifiability: Fréchet–Rao–Cramér / Cramér–Rao
 * Schottky peak as Fisher peak (named only)
 * Fisher metric as a Riemannian metric; dual charts
+* Crooks (1999) $\to$ Jarzynski $\to$ $\langle W\rangle\ge\Delta F$
 * What is thermodynamic length?
 }
 
