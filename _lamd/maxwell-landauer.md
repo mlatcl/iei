@@ -88,9 +88,11 @@ reading:
 | 10–50 | Maxwell's demon; membrane detailed balance and $\Delta S$ |
 | 50–60 | Break |
 | 60–95 | Szilard; Feynman; Parrondo; information engines; car vs ATP synthase |
-| 95–112 | Landauer; erasure as the thermodynamic cost |
+| 95–112 | Boltzmann memory (equal wells); Landauer; erasure cost |
 | 112–120 | Intelligence, first cut; human bandwidth; Worksheet 2 |
 }
+
+\include{_iei/includes/iei-notebook-setup.md}
 
 \subsection{Maxwell's Demon}
 
@@ -202,7 +204,7 @@ reading:
 
 \speakernotes{Parrondo et al. survey. Szilard saturates $W = k_BT H(M)$ when $I(X;M)=H(M)$. Lab demos on colloids and single electrons.}
 
-\notes{Parrondo, Horowitz and Sagawa [@Parrondo-thermodynamics15] frame the thermodynamics of information as non-equilibrium thermodynamics for states updated by measurement. Shannon entropy of the microstate, multiplied by $k_B$, is the operative entropy for isothermal processes far from equilibrium. A measurement that correlates system $X$ with outcome $M$ raises non-equilibrium free energy by $k_B T I(X;M)$, so feedback can extract work bounded by that mutual information. In a cyclic Szilard engine with error-free measurement, $I(X;M)=H(M)=\ln 2$ and $W_{\mathrm{ext}}=k_BT\ln 2$ saturates the bound. The memory where $M$ is stored must be physical (Landauer: metastable wells, broken ergodicity). Over measure–feedback–reset, the mutual-information work is paid either during measurement or during erasure — the cost cannot disappear from the ledger. Stochastic thermodynamics and fluctuation theorems now reproduce Szilard and Landauer in the lab; we cite the review rather than reproducing the full formalism here.}
+\notes{Parrondo, Horowitz and Sagawa [@Parrondo-thermodynamics15] frame the thermodynamics of information as non-equilibrium thermodynamics for states updated by measurement. Shannon entropy of the microstate, multiplied by $k_B$, is the operative entropy for isothermal processes far from equilibrium. A measurement that correlates system $X$ with outcome $M$ raises non-equilibrium free energy by $k_B T I(X;M)$, so feedback can extract work bounded by that mutual information. In a cyclic Szilard engine with error-free measurement, $I(X;M)=H(M)=\ln 2$ and $W_{\mathrm{ext}}=k_BT\ln 2$ saturates the bound. The memory where $M$ is stored must be physical (Landauer: metastable wells, broken ergodicity) --- the equal-depth double well drawn in the next block is that claim made concrete, and one cell of an information reservoir. Over measure–feedback–reset, the mutual-information work is paid either during measurement or during erasure --- the cost cannot disappear from the ledger. Stochastic thermodynamics and fluctuation theorems now reproduce Szilard and Landauer in the lab; we cite the review rather than reproducing the full formalism here.}
 
 \addreading{@Parrondo-thermodynamics15}{introduction and Szilárd engine section}
 
@@ -219,8 +221,8 @@ reading:
 \slidesincremental{
 * First model of intelligence (information-engines talk): policy under a thermodynamic ledger
 * Feedback bound (Parrondo / Sagawa–Ueda): $W \ge -k_B T\, I(X;M)$ on average in a cycle
-* Memory is physical: metastable states, channel capacity $\le n$ bits for $n$ stored outcomes
-* Prescription: measurement policy; no-go: pay on reset (Landauer, next)
+* Memory is physical: metastable states; equal double well next
+* Prescription: measurement policy; no-go: pay on reset (Landauer)
 }
 
 \speakernotes{Name information engines before the scale argument. Students should not think Maxwell's demon scales to a car ECU without a bandwidth reckoning.}
@@ -287,6 +289,8 @@ mlai.write_figure('car-engine-info-scale.svg', directory='\writeDiagramsDir/ml')
 <!-- /SNIPPET: _physics/includes/car-engine-vs-atp-synthase-scale.md -->
 
 \subsection{Landauer's Principle}
+
+\include{_physics/includes/boltzmann-memory-two-well.md}
 
 \include{_information-game/includes/landauer-shannon-connection.md}
 
