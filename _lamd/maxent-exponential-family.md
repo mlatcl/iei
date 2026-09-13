@@ -230,6 +230,71 @@ n_frames = frame}
 
 \notes{\figure{\includediagram{\diagramsDir/ml/laplace-succession012}{70%}}{Each update is belief $\times$ likelihood $\rightarrow$ posterior; a reset frame then promotes the posterior to the new prior (likelihood cleared). Early steps use one more sunrise ($\propto\theta$); the jump to $n=20$ uses the likelihood for $17$ further rises ($\propto\theta^{17}$).}{laplace-succession-figure}}
 
+\newslides{Entropy Day by Day}
+
+\slides{Track differential entropy of the belief $p(\theta)$ as sunrises arrive.}
+
+\slidesincremental{
+* Prior: $p(\theta)=1$ on $[0,1]$ $\Rightarrow$ $H_0=0$
+* After $n$ rises: $p(\theta)=(n+1)\theta^{n}$
+* $H_n=\dfrac{n}{n+1}-\log(n+1)$ (nats)
+* Day $n$ information gain: $I_n=H_{n-1}-H_n=\log\!\left(1+\dfrac{1}{n}\right)-\dfrac{1}{n(n+1)}$
+}
+
+\speakernotes{Board the one-line integral for $H_n$. Emphasise: entropy of the *belief about* $\theta$ falls (becomes more negative); that fall is the information gained. Uniform$[0,1]$ has $H=0$ by convention of differential entropy — not ``zero uncertainty'' in the Shannon discrete sense.}
+
+\notes{The animation peels probability mass toward $\theta=1$. Quantify that with the differential entropy of the belief,
+\begin{align}
+H[p] = -\int_0^1 p(\theta)\log p(\theta)\,\mathrm{d}\theta.
+\end{align}
+Under insufficient reason the prior is uniform on $[0,1]$, so $p(\theta)=1$ and
+\begin{align}
+H_0 = -\int_0^1 1\cdot\log 1\,\mathrm{d}\theta = 0.
+\end{align}
+After $n$ sunrises the normalised belief is $p_n(\theta)=(n+1)\theta^{n}$. Substitute and use $\int_0^1\theta^{n}\,\mathrm{d}\theta=1/(n+1)$ together with $\int_0^1\theta^{n}\log\theta\,\mathrm{d}\theta=-1/(n+1)^2$:
+\begin{align}
+H_n
+  &= -\int_0^1 (n+1)\theta^{n}\bigl(\log(n+1)+n\log\theta\bigr)\,\mathrm{d}\theta
+   = \frac{n}{n+1}-\log(n+1).
+\end{align}
+Each sunrise *reduces* this entropy (the number becomes more negative as the density sharpens). The information gained on day $n$ is the drop
+\begin{align}
+I_n = H_{n-1}-H_n
+    = \log\!\left(1+\frac{1}{n}\right)-\frac{1}{n(n+1)}.
+\end{align}
+The first day buys $I_1=\log 2-\tfrac12\approx 0.193$ nats; the second buys slightly more ($I_2\approx 0.239$); thereafter $I_n$ falls, asymptotically like $1/(2n^2)$. After Laplace's $n\approx 1.8\times 10^6$ days, $H_n\approx 1-\log n$ is large and negative, and each further day adds almost no information about $\theta$.}
+
+\setupplotcode{import numpy as np
+import matplotlib.pyplot as plt
+import mlai}
+
+\plotcode{ns = np.arange(0, 21)
+H = ns / (ns + 1) - np.log(ns + 1)
+I = np.full_like(H, np.nan, dtype=float)
+I[1:] = np.log(1 + 1 / ns[1:]) - 1 / (ns[1:] * (ns[1:] + 1))
+
+fig, ax = plt.subplots(figsize=(8, 4.5))
+ax.plot(ns, H, 'o-', color=[1, 0, 1], linewidth=2, label=r'$H_n$')
+ax.plot(ns[1:], I[1:], 's-', color=[0, 0, 1], linewidth=2, label=r'$I_n=H_{n-1}-H_n$')
+ax.axhline(0, color='k', linewidth=0.8)
+ax.set_xlabel(r'number of sunrises $n$')
+ax.set_ylabel('nats')
+ax.legend(fontsize=14)
+ax.set_title(r'Belief entropy and information gained per sunrise')
+mlai.write_figure('laplace-succession-entropy.svg', directory='\writeDiagramsDir/ml')}
+
+\slides{
+\includediagram{\diagramsDir/ml/laplace-succession-entropy}{70%}
+}
+
+\notes{\figure{\includediagram{\diagramsDir/ml/laplace-succession-entropy}{70%}}{Differential entropy $H_n$ of $p(\theta)$ after $n$ sunrises, and the information $I_n$ gained on day $n$. The prior sits at $H_0=0$; each success drives $H_n$ downward.}{laplace-succession-entropy-figure}}
+
+\notes{A second, coarser reading is the binary entropy of tomorrow's predictive probability $p_n=(n+1)/(n+2)$:
+\begin{align}
+h(p_n)=-p_n\log p_n-(1-p_n)\log(1-p_n),
+\end{align}
+which starts at $h(1/2)=\log 2$ and falls toward $0$ as $p_n\to 1$. That tracks uncertainty about the *next day*, whereas $H_n$ tracks uncertainty about the latent rate $\theta$.}
+
 \notes{Laplace applies insufficient reason not only to discrete outcomes, but to an unknown daily rate $\theta\in[0,1]$. Knowing nothing about $\theta$, he places a uniform prior $p(\theta)=1$ on the unit interval. Every recorded day is a *success*: the sun rose. After $n$ independent rises the likelihood is $\theta^n$, so
 \begin{align}
 p(\theta\mid n\text{ rises}) \propto \theta^{n},
