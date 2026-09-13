@@ -1,4 +1,4 @@
-BASE=multi-information
+BASE=limits-on-intelligence
 LAMDDIR=/Users/neil/lawrennd/lamd/lamd
 MAKEFILESDIR=/Users/neil/lawrennd/lamd/lamd/makefiles
 INCLUDESDIR=/Users/neil/lawrennd/lamd/lamd/includes

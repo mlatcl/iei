@@ -297,6 +297,41 @@ Three prescriptions — three answers to “what should I do?” Crooks, Landaue
 <li>Cognitive architectures</li>
 </ul></li>
 </ul>
+</section>
+<section id="purely-entropic-good-regulator" class="slide level2">
+<h2>Purely Entropic Good Regulator</h2>
+<p>Residual outcome uncertainty is disturbance entropy minus information the regulator has about the disturbance.</p>
+<div>
+<ul>
+<li class="fragment">Disturbance <span class="math inline">\(D\)</span>, response <span class="math inline">\(R\)</span>, essential variable <span class="math inline">\(E\)</span></li>
+<li class="fragment"><span class="math inline">\(H(E)\ge H(D)-I(D;R)\)</span></li>
+<li class="fragment">Useless variety appears as small <span class="math inline">\(I(D;R)\)</span></li>
+</ul>
+</div>
+<aside class="notes">
+Named colour for LO13, not a new outcome. Ashby’s requisite variety in Shannon form <span class="citation" data-cites="Ashby-introduction56">(Ashby, 1956)</span>. Perfect regulation <span class="math inline">\(H(E)=0\)</span> forces <span class="math inline">\(I(D;R)=H(D)\)</span>.
+</aside>
+<div>
+<ul>
+<li class="fragment">Requisite variety: how much regulatory information?</li>
+<li class="fragment">Good Regulator: how must that information be structured?</li>
+<li class="fragment">A good regulator is a sufficient model for action</li>
+</ul>
+</div>
+<aside class="notes">
+Do not conflate the two. Quantity versus structure. The mapping <span class="math inline">\(h:S\to R\)</span> is the structure answer.
+</aside>
+<p>Minimise model information subject to sufficiently low outcome entropy — the course’s reading, not Conant and Ashby’s equation.</p>
+<div>
+<ul>
+<li class="fragment">Control form: <span class="math inline">\(\min I(S;R)\)</span> subject to <span class="math inline">\(H(Z)\le\epsilon\)</span></li>
+<li class="fragment">Deterministic <span class="math inline">\(R=h(S)\)</span> gives <span class="math inline">\(I(S;R)=H(R)\)</span></li>
+<li class="fragment">Merge states that share an action; keep those that do not</li>
+</ul>
+</div>
+<aside class="notes">
+IB was LO10. Here it names the cybernetic slogan in the module’s grammar. Do not attribute the IB optimisation to Conant and Ashby.
+</aside>
 <!-- SNIPPET: _information/includes/limits-on-intelligence-synthesis.md -->
 <p>Apply three no-gos and name which geometry you are using as the prescription.</p>
 <div>
@@ -305,12 +340,12 @@ Three prescriptions — three answers to “what should I do?” Crooks, Landaue
 <li class="fragment">Landauer: <span class="math inline">\(k_B T\ln 2\)</span> per bit erased</li>
 <li class="fragment">Crooks: <span class="math inline">\(\langle W_{\mathrm{ex}}\rangle\ge\mathcal{L}^2/\tau\)</span></li>
 <li class="fragment">Conservation: <span class="math inline">\(I+H=C\)</span> with fixed marginals</li>
-<li class="fragment">DPI: processing cannot create <span class="math inline">\(I\)</span>; IB: spend <span class="math inline">\(I\)</span> on relevance</li>
+<li class="fragment">DPI <span class="math inline">\(\to\)</span> requisite variety <span class="math inline">\(\to\)</span> Good Regulator <span class="math inline">\(\to\)</span> IB</li>
 <li class="fragment">Human bandwidth: <span class="math inline">\(\sim 100\)</span> bits/s — <em>The Atomic Human</em></li>
 </ul>
 </div>
 <aside class="notes">
-LO13. Use LO10 tools from the first half: DPI and the information bottleneck. Requisite variety and the Good Regulator remain named colour. Close Week 1: entropy forbids; probability prescribes.
+LO13. Use LO10 tools from the first half: DPI and the information bottleneck. Requisite variety and the Good Regulator are named colour with the Shannon readings just given. Close Week 1: entropy forbids; probability prescribes.
 </aside>
 <p>{no_gos = [‘Landauer,’ ‘Crooks L^2/tau,’ ‘I+H=C,’ ‘human bandwidth’] prescriptions = [‘Boltzmann/MaxEnt p,’ ‘Crooks geodesic,’ ‘Wasserstein plan,’ ‘Schrodinger bridge’]</p>
 <!-- /SNIPPET: _information/includes/limits-on-intelligence-synthesis.md -->
@@ -343,6 +378,8 @@ LO13. Use LO10 tools from the first half: DPI and the information bottleneck. Re
 <li><p>Chapter 14 and Sections 22.2–22.3 of <span class="citation" data-cites="Welling-generative26">Welling et al. (2026)</span></p></li>
 <li><p>the whole paper of <span class="citation" data-cites="Crooks-length07">Crooks (2007)</span></p></li>
 <li><p>§§3–4 (optional) of <span class="citation" data-cites="Cuturi-sinkhorn13">Cuturi (2013)</span></p></li>
+<li><p>the Good Regulator Theorem of <span class="citation" data-cites="Conant-Ashby70">Conant and Ashby (1970)</span></p></li>
+<li><p>requisite variety; Shannon form of <span class="citation" data-cites="Ashby-introduction56">Ashby (1956)</span></p></li>
 <li><p>Chapter 1 of <span class="citation" data-cites="Lawrence-atomic24">Lawrence (2024)</span></p></li>
 </ul>
 </section>
@@ -360,6 +397,12 @@ LO13. Use LO10 tools from the first half: DPI and the information bottleneck. Re
 <section id="references" class="slide level2 unnumbered scrollable">
 <h2 class="unnumbered scrollable">References</h2>
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-Ashby-introduction56" class="csl-entry" role="doc-biblioentry">
+Ashby, W.R., 1956. An introduction to cybernetics. Chapman &amp; Hall, London.
+</div>
+<div id="ref-Conant-Ashby70" class="csl-entry" role="doc-biblioentry">
+Conant, R.C., Ashby, W.R., 1970. Every good regulator of a system must be a model of that system. International Journal of Systems Science 1, 89–97.
+</div>
 <div id="ref-Crooks-length07" class="csl-entry" role="doc-biblioentry">
 Crooks, G.E., 2007. Measuring thermodynamic length. Phys. Rev. Lett. 99, 100602. <a href="https://doi.org/10.1103/PhysRevLett.99.100602">https://doi.org/10.1103/PhysRevLett.99.100602</a>
 </div>
