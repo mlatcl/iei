@@ -36,14 +36,15 @@
 
 .reveal .slides > section {
     text-align: left !important;
-    /* Content sits in the scaled slide; chrome belongs on .slide-background */
+    /* Brand chrome is on the full-page .slide-background layer */
     background: transparent;
 }
 
 /*
- * Reveal.js full-page backgrounds live on .slide-background — outside the
- * scaled slide content (see https://revealjs.com/backgrounds/).
- * That is the correct layer for viewport-stable brand chrome.
+ * Full-page colour + brand chrome live on .slide-background (outside the
+ * scaled slide; see https://revealjs.com/backgrounds/). That layer does not
+ * receive Reveal's scale transform, so sizes use --slide-scale (set from
+ * Reveal.getScale() in slides-header.html).
  */
 .reveal .slide-background {
     background-color: #ffffff !important;
@@ -52,11 +53,11 @@
         url('diagrams/logos/mlatcl-materials/mlatcl-mark-br.svg') !important;
     background-repeat: no-repeat, no-repeat !important;
     background-position:
-        left 1.5rem top 1.25rem,
-        right -2% bottom -4% !important;
+        left calc(1.5rem * var(--slide-scale, 1)) top calc(1.25rem * var(--slide-scale, 1)),
+        right calc(-2% * var(--slide-scale, 1)) bottom calc(-4% * var(--slide-scale, 1)) !important;
     background-size:
-        168px auto,
-        min(28vw, 280px) auto !important;
+        calc(168px * var(--slide-scale, 1)) auto,
+        calc(min(28vw, 280px) * var(--slide-scale, 1)) auto !important;
 }
 
 /* Reveal white theme sets ul/ol to inline-block, which centres them when
