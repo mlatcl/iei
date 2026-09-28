@@ -26,8 +26,8 @@
           margin-top: 0.2em;
       }
   </style>
-  <link rel="stylesheet" href="https://unpkg.com/reveal.js@3.9.2/css/theme/black.css" id="theme">
-  <link rel="stylesheet" href="https://inverseprobability.com/assets/css/talks.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@3.9.2/css/theme/white.css" id="theme">
+  <link rel="stylesheet" href="mlatcl.css"/>
   <!-- Printing and PDF exports -->
   <script>
     var link = document.createElement( 'link' );
@@ -79,28 +79,7 @@
     showDivs(slideIndex, group);
   }
   </script>
-   <!-- Initialize Mermaid after Reveal is loaded -->
-<script>
-  Reveal.addEventListener('ready', event => {
-    // Initialize mermaid
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: 'base',
-      // These are the same theme variables we used above
-      themeVariables: {
-          primaryColor: '#4a90e2',
-          primaryTextColor: '#fff',
-          primaryBorderColor: '#357abd',
-          lineColor: '#67b246',
-          fontSize: '30px',
-          fontFamily: 'arial',
-	  edgeLabelBackground: 'transparent',
-	  tertiaryColor: 'transparent'
-      }
-    });
-  });
-</script>
-   
+      
 </head>
 <body>
   <div class="reveal">
@@ -615,5 +594,27 @@ Welling, M., Lu, S., Holdijk, L., 2026. Generative AI and stochastic thermodynam
         ]
       });
     </script>
+  <!-- Mermaid: after Reveal.initialize (CIP-0012 template hygiene) -->
+  <script>
+    if (typeof Reveal !== 'undefined' && Reveal.addEventListener) {
+      Reveal.addEventListener('ready', function () {
+        if (typeof mermaid === 'undefined') return;
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: 'base',
+          themeVariables: {
+            primaryColor: '#4a90e2',
+            primaryTextColor: '#fff',
+            primaryBorderColor: '#357abd',
+            lineColor: '#67b246',
+            fontSize: '30px',
+            fontFamily: 'arial',
+            edgeLabelBackground: 'transparent',
+            tertiaryColor: 'transparent'
+          }
+        });
+      });
+    }
+  </script>
     </body>
 </html>
