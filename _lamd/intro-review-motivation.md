@@ -11,8 +11,9 @@ abstract: >
   probability; the course theme of probability driving possibilities and entropy
   driving impossibilities. Entropy reminder; energy as used in machine learning
   (quadratic loss, cross-entropy, Boltzmann-machine pairwise energy); perpetual
-  motion and human bandwidth. Boltzmann distribution seed for Worksheet 1 to
-  interrogate before lecture 2.
+  motion and human bandwidth. Boltzmann seed; culmination from loss landscapes as
+  potential energy through stochastic descent to the Hamiltonian and HMC (Neal).
+  Worksheet 1 released for interrogation before lecture 2.
 author:
 - given: Neil D.
   family: Lawrence
@@ -48,7 +49,7 @@ reading:
 \slidesincremental{
 * Room FW26; eight Tuesdays from today
 * How worksheets and LLMs work (you are Socrates)
-* Probability and entropy review; then motivation and a Boltzmann seed
+* Probability and entropy review; energy in ML; then potential → Hamiltonian / HMC
 }
 
 \newslide{Time Plan}
@@ -61,8 +62,9 @@ reading:
 | 35–65 | Probability review: product/sum/Bayes; basic distributions |
 | 65–75 | Break |
 | 75–95 | Entropy review (elementary $H$); bits and nats |
-| 95–115 | Energy in ML; motivation and bandwidth; Boltzmann seed |
-| 115–120 | Worksheet 1 brief; Quiz 1 preview |
+| 95–110 | Energy in ML; motivation and bandwidth; Boltzmann seed |
+| 110–118 | Culmination: potential → stochastic → kinetic? → Hamiltonian / HMC |
+| 118–120 | Worksheet 1 brief; Quiz 1 preview |
 
 
 \subsection{Course Mechanics}
@@ -215,6 +217,10 @@ reading:
 
 \speakernotes{Optional live check. Deep dive and free-energy plots are lecture 2.}
 
+\include{_ml/includes/from-loss-to-hamiltonian.md}
+
+\notes{Week 1 culmination: the energies named earlier are *potentials*. Descent is motion on $V$; practice is stochastic; kinetic energy completes the Hamiltonian; HMC (Neal) is the sampler that uses both. The neural-net HMC demo is a placeholder until mlai CIP-0008 lands.}
+
 \subsection{Define This Week}
 
 \slidesincremental{
@@ -222,7 +228,8 @@ reading:
 * Bernoulli, binomial, Poisson, multinomial, Gaussian
 * $H=-\sum_i p_i\log p_i$ (bits or nats)
 * Energy scores: quadratic, cross-entropy, BM pairwise
-* Seed: $p_i = e^{-\beta E_i}/Z$
+* Loss landscape as potential $V$; ask for kinetic $K$; Hamiltonian $H=K+V$
+* Seed: $p_i = e^{-\beta E_i}/Z$; HMC named (Neal)
 }
 
 \subsection{After This Lecture}
