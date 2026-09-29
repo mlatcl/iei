@@ -89,7 +89,7 @@ reading:
 
 
 \include{_iei/includes/iei-notebook-setup.md}
-
+\subsection{Motivation}
 \include{_information/includes/perpetual-motion-superintelligence-analogy.md}
 \include{_physics/includes/laplace-portrait.md}
 \include{_physics/includes/laplaces-determinism.md}
@@ -153,9 +153,7 @@ reading:
 \include{_information/includes/entropy-nogo-probability-prescription.md}
 
 
-\subsection{Motivation}
 
-\include{_ml/includes/energy-in-machine-learning.md}
 
 
 \speakernotes{Now shift to explaining the relationship between what we're teaching and how we're teaching. Our objective is to get information in you. Why do we have to do it in such a complex way. Need to lace this description of the atomic human with the pedagogy we're using. Carnot--Clausius history waits for lecture 2 with free energy.}
@@ -192,7 +190,7 @@ reading:
 
 \include{_physics/includes/entropy-intro.md}
 
-
+\include{_ml/includes/energy-in-machine-learning.md}
 \subsection{Boltzmann Seed}
 
 \newslides{A Prescription to Interrogate}
