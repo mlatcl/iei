@@ -1176,16 +1176,34 @@ Radford M. Neal (University of Toronto).
 <li class="fragment">PhD thesis: Bayesian neural nets; infinite width <span class="math inline">\(\to\)</span> GP <span class="citation" data-cites="Neal:bayesian94">(Neal, 1994)</span></li>
 </ul>
 </div>
-<p>Teaching demo (to land with CIP teachable HMC): fit a small net by HMC, not SGD.</p>
+<p>Teachable HMC: invent momentum, leapfrog on <span class="math inline">\(H\)</span>, Metropolis on <span class="math inline">\(\Delta H\)</span>.</p>
 <div>
 <ul>
-<li class="fragment">Target: posterior over weights, <span class="math inline">\(V(\mathbf{w})=-\log p(\mathbf{w}\mid\mathcal{D})\)</span></li>
-<li class="fragment">Leapfrog + Metropolis; trace <span class="math inline">\(H\)</span> and accept rate</li>
+<li class="fragment">Target: <span class="math inline">\(V(\mathbf{q})=-\log p(\mathbf{q}\mid\mathcal{D})\)</span> (loss as potential)</li>
+<li class="fragment"><code>HamiltonianMonteCarlo</code> in <code>mlai</code>; trace <span class="math inline">\(H\)</span> and accept rate</li>
 <li class="fragment">Contrast: SGD point estimate vs HMC posterior samples</li>
 </ul>
 </div>
+<div class="figure">
+<div id="hmc-quadratic-trajectories-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/hmc-quadratic-trajectories.svg" width="55%" style=" ">
+</object>
+</div>
+</div>
 <aside class="notes">
-Do not implement leapfrog live today. Name the missing kinetic energy, show Neal, leave the demo slot. The CIP tracks the reusable mlai component.
+Leapfrog trajectories and samples from teachable HMC on <span class="math inline">\(V(\mathbf{q})=\tfrac12\|\mathbf{q}\|^2\)</span>. Accept/reject keeps the chain on the Boltzmann target <span class="math inline">\(e^{-V}\)</span>.
+</aside>
+<div class="figure">
+<div id="hmc-logistic-traces-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/hmc-logistic-traces.svg" width="70%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+Hamiltonian and weight traces for logistic regression. <span class="math inline">\(V(\mathbf{w})=-\log p(\mathbf{w}\mid\mathcal{D})\)</span>; SGD gives one downhill point, HMC a cloud of posterior samples.
+</aside>
+<aside class="notes">
+Name kinetic energy and Neal; show the trajectory figure if builds are available. Emphasise V = -log posterior, not a new loss species.
 </aside>
 </section>
 <section id="define-this-week" class="slide level2">
@@ -1197,7 +1215,7 @@ Do not implement leapfrog live today. Name the missing kinetic energy, show Neal
 <li class="fragment"><span class="math inline">\(H=-\sum_i p_i\log p_i\)</span> (bits or nats)</li>
 <li class="fragment">Energy scores: quadratic, cross-entropy, BM pairwise</li>
 <li class="fragment">Loss landscape as potential <span class="math inline">\(V\)</span>; ask for kinetic <span class="math inline">\(K\)</span>; Hamiltonian <span class="math inline">\(H=K+V\)</span></li>
-<li class="fragment">Seed: <span class="math inline">\(p_i = e^{-\beta E_i}/Z\)</span>; HMC named (Neal)</li>
+<li class="fragment">Seed: <span class="math inline">\(p_i = e^{-\beta E_i}/Z\)</span>; HMC via <code>mlai</code> (Neal)</li>
 </ul>
 </div>
 </section>
@@ -1219,6 +1237,7 @@ Do not implement leapfrog live today. Name the missing kinetic energy, show Neal
 <li><p>Chapter 1 of <span class="citation" data-cites="Lawrence-atomic24">Lawrence (2024)</span></p></li>
 <li><p>Hybrid Monte Carlo for backpropagation networks of <span class="citation" data-cites="Neal:hmc92">Neal (1992)</span></p></li>
 <li><p>Bayesian Learning for Neural Networks (thesis) of <span class="citation" data-cites="Neal:bayesian94">Neal (1994)</span></p></li>
+<li><p>Section 11.4.2 (Hamiltonian Monte Carlo); cf. Section 3.2.1 of <span class="citation" data-cites="Welling-generative26">Welling et al. (2026)</span></p></li>
 </ul>
 </section>
 <section id="thanks" class="slide level2 scrollable">
@@ -1267,6 +1286,9 @@ Neal, R.M., 1992. <span>B</span>ayesian training of backpropagation networks by 
 </div>
 <div id="ref-Kim-translation15" class="csl-entry" role="doc-biblioentry">
 Sharp, K., Matschinsky, F., 2015. Translation of <span>L</span>udwig <span>B</span>oltzmann’s paper <span>“on the relationship between the second fundamental theorem of the mechanical theory of heat and probability calculations regarding the conditions for thermal equilibrium.”</span> Entropy 17, 1971–2009. <a href="https://doi.org/10.3390/e17041971">https://doi.org/10.3390/e17041971</a>
+</div>
+<div id="ref-Welling-generative26" class="csl-entry" role="doc-biblioentry">
+Welling, M., Lu, S., Holdijk, L., 2026. Generative AI and stochastic thermodynamics: A tale of free energies. Cambridge University Press, Cambridge, U.K.
 </div>
 </div>
 </section>
