@@ -85,89 +85,9 @@ reading:
 
 \include{_information/includes/entropy-nogo-probability-prescription.md}
 
-<!-- SNIPPET: _information/includes/probability-review-compact.md -->
+\include{_information/includes/probability-review-compact.md}
 
-\subsection{Probability Review}
-
-\newslides{Joint, Marginal, Conditional}
-
-\slidesincremental{
-* Joint $P(x,y)$: both
-* Marginal $P(x)$: regardless of $y$
-* Conditional $P(x\mid y)$: $x$ given $y$
-}
-
-\notes{Notation: we often write $P(x,y)$ for $P(X=x,Y=y)$. Unlike a generic bivariate function, $P(x,y)=P(y,x)$.}
-
-\newslides{Product Rule and Sum Rule}
-
-\slidesincremental{
-* Product: $P(x,y)=P(x\mid y)P(y)$
-* Sum: $P(y)=\sum_x P(x,y)$
-* Both are normalising bookkeeping, not modelling assumptions
-}
-
-\notes{The product rule relates joint and conditional. The sum rule recovers a marginal by summing out the variable you do not care about. Continuous analogues replace sums by integrals.}
-
-\newslides{Bayes' Rule}
-
-\slides{
-$$
-P(y\mid x)=\frac{P(x\mid y)P(y)}{P(x)}
-$$
-}
-
-\slidesincremental{
-* Follows from the product rule and symmetry of the joint
-* Inverts the conditioning — updates a prior given a likelihood
-* $P(x)=\sum_y P(x\mid y)P(y)$ when $y$ is discrete
-}
-
-\notes{Bayes is not a third axiom; it is the product rule rearranged. Quiz 1 will ask you to apply it on a small discrete example (barrels, coins, two hypotheses).}
-
-\addreading{@Bishop:book06}{Probability distributions: Section 1.2}
-
-<!-- /SNIPPET: _information/includes/probability-review-compact.md -->
-
-<!-- SNIPPET: _information/includes/common-distributions-review.md -->
-
-\subsection{Common Distributions}
-
-\newslides{Named Distributions You Need}
-
-\slides{Five families appear throughout the course. Know the support, the parameter, and one generative story for each.}
-
-\notes{These are prerequisites restated, not new theory. Quiz 1 will ask recognition and simple calculations. Later weeks recover several of them as maximum-entropy distributions.}
-
-\newslides{Bernoulli and Binomial}
-
-\slidesincremental{
-* Bernoulli($p$): single binary trial; $P(X=1)=p$
-* Binomial($n,p$): $n$ i.i.d. Bernoulli trials; count of successes
-* Mean $np$, variance $np(1-p)$
-}
-
-\notes{A fair coin is Bernoulli($1/2$). The two-state thermal system you meet next week is Bernoulli in disguise once energies are fixed.}
-
-\newslides{Poisson and Multinomial}
-
-\slidesincremental{
-* Poisson($\lambda$): counts in a fixed interval; mean $=$ variance $=\lambda$
-* Multinomial($n,\mathbf{p}$): $n$ trials into $K$ categories; generalises the binomial
-* Categories are exclusive; $\sum_k p_k = 1$
-}
-
-\newslides{Gaussian}
-
-\slidesincremental{
-* $\mathcal{N}(\mu,\sigma^2)$: continuous density on $\mathbb{R}$
-* Fixed by mean and variance; MaxEnt under those constraints (week 5)
-* Multivariate form: mean vector and covariance matrix
-}
-
-\notes{Differential entropy of a Gaussian grows with $\sigma$ and can be negative — that subtlety waits until week 6. Today: recognise the density and the two parameters.}
-
-<!-- /SNIPPET: _information/includes/common-distributions-review.md -->
+\include{_information/includes/common-distributions-review.md}
 
 \subsection{Doubt}
 
@@ -214,43 +134,7 @@ $$
 }
 
 
-<!-- SNIPPET: _information/includes/entropy-review.md -->
-
-\subsection{Entropy Review}
-
-\newslides{Uncertainty as a Number}
-
-\slides{Shannon entropy turns a distribution into a scalar measure of uncertainty.}
-
-\slidesincremental{
-* Discrete: $H(p) = -\sum_i p_i \log p_i$
-* Base 2: bits; natural log: nats
-* Fair coin: $H=1$ bit; certain outcome: $H=0$
-}
-
-\notes{This is a *review* of the definition, not the axiomatic derivation (that is week 3 / LO2). You need enough fluency to ask an LLM about entropy without confusing the symbol $H$ with heat, and to probe whether a claim is about uncertainty, coding length, or thermodynamic irreversibility.}
-
-\newslides{What $H$ Is Not (Yet)}
-
-\slidesincremental{
-* Not yet Clausius's thermodynamic entropy — same formula, different job
-* Not yet a channel-capacity theorem
-* Operational split for this course: entropy often *forbids*; probability *prescribes*
-}
-
-\notes{Thermodynamic entropy $S$ and Shannon $H$ will be connected formally in week 3 ($S = kH$ in equilibrium statistical mechanics). Today, treat $H$ as uncertainty of a discrete distribution. When an LLM says "entropy," ask: entropy of *what*, under *which* operational reading?}
-
-\newslides{Joint, Conditional, Chain Rule (Names Only)}
-
-\slidesincremental{
-* $H(X,Y)$ joint uncertainty
-* $H(X\mid Y)$ residual uncertainty after observing $Y$
-* Chain rule: $H(X,Y)=H(X)+H(Y\mid X)$
-}
-
-\speakernotes{Do not prove the chain rule today. Name it so Worksheet 1 probes can use the vocabulary.}
-
-<!-- /SNIPPET: _information/includes/entropy-review.md -->
+\include{_information/includes/entropy-review.md}
 
 \subsection{Motivation}
 
