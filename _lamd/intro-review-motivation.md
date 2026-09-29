@@ -87,9 +87,10 @@ reading:
 * Two of them only make sense after week 8
 }
 
-\include{_information/includes/entropy-nogo-probability-prescription.md}
 
 \include{_iei/includes/iei-notebook-setup.md}
+
+\include{_information/includes/perpetual-motion-superintelligence-analogy.md}
 
 \include{_ml/includes/probability-review-compact.md}
 
@@ -141,6 +142,7 @@ reading:
 * Quiz 1 (next week) checks foundations you should have met here and in W1
 }
 
+\include{_information/includes/entropy-nogo-probability-prescription.md}
 
 \include{_information/includes/entropy-review.md}
 
@@ -150,7 +152,6 @@ reading:
 
 \include{_ml/includes/energy-in-machine-learning.md}
 
-\include{_information/includes/perpetual-motion-superintelligence-analogy.md}
 
 \speakernotes{Now shift to explaining the relationship between what we're teaching and how we're teaching. Our objective is to get information in you. Why do we have to do it in such a complex way. Need to lace this description of the atomic human with the pedagogy we're using. Carnot--Clausius history waits for lecture 2 with free energy.}
 
