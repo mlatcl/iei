@@ -89,6 +89,8 @@ reading:
 
 \include{_information/includes/entropy-nogo-probability-prescription.md}
 
+\include{_iei/includes/iei-notebook-setup.md}
+
 \include{_ml/includes/probability-review-compact.md}
 
 \notes{Quiz 1 will ask a small discrete Bayes inversion (barrels, coins, two hypotheses) and recognition of the named distributions below.}
@@ -202,7 +204,6 @@ reading:
 
 \speakernotes{Do not derive Lagrange multipliers today. State the formula so Worksheet 1 has a concrete claim to open and then press. Students should leave curious about why *this* exponential, what $\beta$ means, and whether entropy here is a constraint or a recipe. Point back to cross-entropy / BM pairwise energy if they ask what $E$ is.}
 
-\include{_iei/includes/iei-notebook-setup.md}
 
 \setupcode{import numpy as np}
 
