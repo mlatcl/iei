@@ -219,7 +219,7 @@ reading:
 
 \include{_ml/includes/from-loss-to-hamiltonian.md}
 
-\notes{Week 1 culmination: the energies named earlier are *potentials*. Descent is motion on $V$; practice is stochastic; kinetic energy completes the Hamiltonian; HMC (Neal) is the sampler that uses both. The neural-net HMC demo is a placeholder until mlai CIP-0008 lands.}
+\notes{Week 1 culmination: the energies named earlier are *potentials*. Descent is motion on $V$; practice is stochastic; kinetic energy completes the Hamiltonian; HMC (Neal) is the sampler that uses both. The live demos use ``mlai.HamiltonianMonteCarlo``: leapfrog paths on a quadratic potential, then logistic regression with an SGD point estimate versus an HMC posterior cloud.}
 
 \subsection{Define This Week}
 
@@ -229,7 +229,7 @@ reading:
 * $H=-\sum_i p_i\log p_i$ (bits or nats)
 * Energy scores: quadratic, cross-entropy, BM pairwise
 * Loss landscape as potential $V$; ask for kinetic $K$; Hamiltonian $H=K+V$
-* Seed: $p_i = e^{-\beta E_i}/Z$; HMC named (Neal)
+* Seed: $p_i = e^{-\beta E_i}/Z$; HMC via ``mlai`` (Neal)
 }
 
 \subsection{After This Lecture}
