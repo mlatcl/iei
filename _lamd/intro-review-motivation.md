@@ -8,8 +8,10 @@ room: FW26
 transition: None
 abstract: >
   Course motivation, mechanics and the 'Socratic' worksheet method; a review of
-  probability; the course theme of probability driving possibilities and entropy driving impossibilities. Entropy reminder, examples of uses of entropy and information theory in perpetual motion, and human
-  bandwidth. Review of the Boltzmann distribution for Worksheet 1 to
+  probability; the course theme of probability driving possibilities and entropy
+  driving impossibilities. Entropy reminder; energy as used in machine learning
+  (quadratic loss, cross-entropy, Boltzmann-machine pairwise energy); perpetual
+  motion and human bandwidth. Boltzmann distribution seed for Worksheet 1 to
   interrogate before lecture 2.
 author:
 - given: Neil D.
@@ -59,7 +61,7 @@ reading:
 | 35–65 | Probability review: product/sum/Bayes; basic distributions |
 | 65–75 | Break |
 | 75–95 | Entropy review (elementary $H$); bits and nats |
-| 95–115 | Motivation: perpetual motion, bandwidth; Boltzmann seed |
+| 95–115 | Energy in ML; motivation and bandwidth; Boltzmann seed |
 | 115–120 | Worksheet 1 brief; Quiz 1 preview |
 
 
@@ -86,6 +88,8 @@ reading:
 \include{_information/includes/entropy-nogo-probability-prescription.md}
 
 \include{_information/includes/probability-review-compact.md}
+
+\notes{Quiz 1 will ask a small discrete Bayes inversion (barrels, coins, two hypotheses) and recognition of the named distributions below.}
 
 \include{_information/includes/common-distributions-review.md}
 
@@ -136,36 +140,15 @@ reading:
 
 \include{_information/includes/entropy-review.md}
 
+\speakernotes{Axiomatic derivation of $H$ and $S=kH$ are week 3 / LO2. Worksheet 1 probes can already use joint / conditional / chain-rule vocabulary.}
+
 \subsection{Motivation}
+
+\include{_ml/includes/energy-in-machine-learning.md}
 
 \include{_information/includes/perpetual-motion-superintelligence-analogy.md}
 
-<!-- SNIPPET: _physics/includes/clausius-carnot-second-law.md -->
-
-\subsection{Carnot and Clausius}
-
-\notes{The course follows a historical thread as well as a mathematical one. Sadi Carnot (1796–1832) asked, in 1824, what limits the efficiency of a heat engine. Rudolf Clausius (1822–1888) built on Carnot and Kelvin to state the second law of thermodynamics in several equivalent forms, and in 1865 he coined the name *entropy* for the state function that tracks irreversibility. Boltzmann and Gibbs, later in the same century, gave the microscopic count behind Clausius's macroscopic $S$. Shannon and Jaynes, in the twentieth century, reuse the same functional form with different operational readings.}
-
-\newslides{Before Boltzmann: Heat Engines}
-
-\slidesincremental{
-* Carnot (1824): no real engine beats a reversible cycle between two baths
-* Clausius (1850s): heat cannot flow from cold to hot without work
-* Clausius (1865): names *entropy* — the state's transformation content
-}
-
-\speakernotes{Seed only. Full free-energy accounting is lecture 2. Worksheet 1 asks students to explore Boltzmann before that lecture.}
-
-\slidesincremental{
-* Macroscopic: Carnot $\to$ Clausius (second law, entropy named)
-* Microscopic: Maxwell, Boltzmann, Gibbs (same $S$, counted states)
-* Information: Shannon, Jaynes (same $H$, different job)
-}
-
-<!-- /SNIPPET: _physics/includes/clausius-carnot-second-law.md -->
-
-
-\speakernotes{Now shift to explaining the relationship between what we're teaching and how we're teaching. Our objective is to get information in you. Why do we have to do it in such a complex way. Need to lace this description of the atomic human with the pedagogy we're using.}
+\speakernotes{Now shift to explaining the relationship between what we're teaching and how we're teaching. Our objective is to get information in you. Why do we have to do it in such a complex way. Need to lace this description of the atomic human with the pedagogy we're using. Carnot--Clausius history waits for lecture 2 with free energy.}
 
 \include{_books/includes/the-atomic-human.md}
 
@@ -207,15 +190,15 @@ reading:
 
 \newslides{A Prescription to Interrogate}
 
-\slides{For fixed mean energy $U$, the maximum-entropy occupation is the Boltzmann distribution.}
+\slides{For fixed mean energy $U$, the maximum-entropy occupation is the Boltzmann distribution --- same $E$ grammar as the ML energies above.}
 
 \slidesincremental{
 * $p_i \propto e^{-\beta E_i}$ with coldness $\beta = 1/kT$
 * Normaliser $Z=\sum_i e^{-\beta E_i}$, so $p_i = e^{-\beta E_i}/Z$
-* Week 2: derive, account with free energy $F=U-TS$, name the bath
+* Week 2: name Gibbs, account with free energy $F=U-TS$; Carnot--Clausius history
 }
 
-\speakernotes{Do not derive Lagrange multipliers today. State the formula so Worksheet 1 has a concrete claim to open and then press. Students should leave curious about why *this* exponential, what $\beta$ means, and whether entropy here is a constraint or a recipe.}
+\speakernotes{Do not derive Lagrange multipliers today. State the formula so Worksheet 1 has a concrete claim to open and then press. Students should leave curious about why *this* exponential, what $\beta$ means, and whether entropy here is a constraint or a recipe. Point back to cross-entropy / BM pairwise energy if they ask what $E$ is.}
 
 \include{_iei/includes/iei-notebook-setup.md}
 
@@ -238,6 +221,7 @@ reading:
 * Product rule, sum rule, Bayes
 * Bernoulli, binomial, Poisson, multinomial, Gaussian
 * $H=-\sum_i p_i\log p_i$ (bits or nats)
+* Energy scores: quadratic, cross-entropy, BM pairwise
 * Seed: $p_i = e^{-\beta E_i}/Z$
 }
 
