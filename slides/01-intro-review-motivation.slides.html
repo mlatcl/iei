@@ -224,6 +224,9 @@ sns.set_style('darkgrid')
 sns.set_context('paper')
 sns.set_palette('colorblind')}-->
 </section>
+<section id="motivation" class="slide level2">
+<h2>Motivation</h2>
+</section>
 <section id="perpetual-motion-and-superintelligence" class="slide level2">
 <h2>Perpetual Motion and Superintelligence</h2>
 <div>
@@ -741,53 +744,6 @@ Axiomatic derivation of <span class="math inline">\(H\)</span> and <span class="
 <li class="fragment">We will draw this idea out every week</li>
 </ul>
 </div>
-</section>
-<section id="motivation" class="slide level2">
-<h2>Motivation</h2>
-</section>
-<section id="energy-in-machine-learning" class="slide level2">
-<h2>Energy in Machine Learning</h2>
-<p>In ML, an <em>energy</em> is a scalar assigned to a configuration: lower means preferred.</p>
-<div>
-<ul>
-<li class="fragment">Losses are energies over parameters or predictions</li>
-<li class="fragment">Energy-based model: <span class="math inline">\(p(x)\propto e^{-E(x)}\)</span> — same grammar as Boltzmann</li>
-<li class="fragment">Minimising <span class="math inline">\(E\)</span> is the zero-temperature / MAP limit</li>
-</ul>
-</div>
-<p><span class="math display">\[
-E(\mathbf{w})=\sum_n\left(y_n-\mathbf{w}^\top\mathbf{x}_n\right)^2
-\]</span></p>
-<div>
-<ul>
-<li class="fragment">Least squares = energy of the residual</li>
-<li class="fragment">Gaussian negative log-likelihood (up to additives and scale)</li>
-<li class="fragment">Gauss already linked this quadratic energy to the normal density</li>
-</ul>
-</div>
-<p><span class="math display">\[
-E=-\sum_c y_c\log\hat{y}_c
-\]</span></p>
-<div>
-<ul>
-<li class="fragment">Cross-entropy / log-loss scores the predictive distribution</li>
-<li class="fragment">Softmax: <span class="math inline">\(\hat{y}_c\propto e^{-E_c}\)</span> — class scores as energies</li>
-<li class="fragment">Same arithmetic as <span class="math inline">\(\mathbb{E}[-\log p]\)</span> (Shannon entropy of a model)</li>
-</ul>
-</div>
-<p><span class="math display">\[
-E(\mathbf{s})=-\sum_i b_i s_i-\sum_{i&lt;j}W_{ij}s_i s_j
-\]</span></p>
-<div>
-<ul>
-<li class="fragment">Binary units <span class="math inline">\(s_i\in\{0,1\}\)</span> or <span class="math inline">\(\{\pm 1\}\)</span></li>
-<li class="fragment">Biases plus pairwise couplings — classic BM has no triple terms</li>
-<li class="fragment"><span class="math inline">\(p(\mathbf{s})\propto e^{-E(\mathbf{s})/T}\)</span>: a learnable Gibbs distribution</li>
-</ul>
-</div>
-<aside class="notes">
-Name only. No contrastive divergence. Hopfield is the fixed-weight cousin: recall as energy descent.
-</aside>
 <aside class="notes">
 Now shift to explaining the relationship between what we’re teaching and how we’re teaching. Our objective is to get information in you. Why do we have to do it in such a complex way. Need to lace this description of the atomic human with the pedagogy we’re using. Carnot–Clausius history waits for lecture 2 with free energy.
 </aside>
@@ -1086,6 +1042,50 @@ Chandrasekhar (1910-1995) derived the limit at which a star collapses in on itse
 Eddington makes his feelings about the primacy of the second law clear. This primacy is perhaps because the second law can be demonstrated mathematically, building on the work of Maxwell, Gibbs and Boltzmann. <span class="citation" data-cites="Eddington:nature29">Eddington (1929)</span>
 </aside>
 </section>
+<section id="energy-in-machine-learning" class="slide level2">
+<h2>Energy in Machine Learning</h2>
+<p>In ML, an <em>energy</em> is a scalar assigned to a configuration: lower means preferred.</p>
+<div>
+<ul>
+<li class="fragment">Losses are energies over parameters or predictions</li>
+<li class="fragment">Energy-based model: <span class="math inline">\(p(x)\propto e^{-E(x)}\)</span> — same grammar as Boltzmann</li>
+<li class="fragment">Minimising <span class="math inline">\(E\)</span> is the zero-temperature / MAP limit</li>
+</ul>
+</div>
+<p><span class="math display">\[
+E(\mathbf{w})=\sum_n\left(y_n-\mathbf{w}^\top\mathbf{x}_n\right)^2
+\]</span></p>
+<div>
+<ul>
+<li class="fragment">Least squares = energy of the residual</li>
+<li class="fragment">Gaussian negative log-likelihood (up to additives and scale)</li>
+<li class="fragment">Gauss already linked this quadratic energy to the normal density</li>
+</ul>
+</div>
+<p><span class="math display">\[
+E=-\sum_c y_c\log\hat{y}_c
+\]</span></p>
+<div>
+<ul>
+<li class="fragment">Cross-entropy / log-loss scores the predictive distribution</li>
+<li class="fragment">Softmax: <span class="math inline">\(\hat{y}_c\propto e^{-E_c}\)</span> — class scores as energies</li>
+<li class="fragment">Same arithmetic as <span class="math inline">\(\mathbb{E}[-\log p]\)</span> (Shannon entropy of a model)</li>
+</ul>
+</div>
+<p><span class="math display">\[
+E(\mathbf{s})=-\sum_i b_i s_i-\sum_{i&lt;j}W_{ij}s_i s_j
+\]</span></p>
+<div>
+<ul>
+<li class="fragment">Binary units <span class="math inline">\(s_i\in\{0,1\}\)</span> or <span class="math inline">\(\{\pm 1\}\)</span></li>
+<li class="fragment">Biases plus pairwise couplings — classic BM has no triple terms</li>
+<li class="fragment"><span class="math inline">\(p(\mathbf{s})\propto e^{-E(\mathbf{s})/T}\)</span>: a learnable Gibbs distribution</li>
+</ul>
+</div>
+<aside class="notes">
+Name only. No contrastive divergence. Hopfield is the fixed-weight cousin: recall as energy descent.
+</aside>
+</section>
 <section id="boltzmann-seed" class="slide level2">
 <h2>Boltzmann Seed</h2>
 <p>For fixed mean energy <span class="math inline">\(U\)</span>, the maximum-entropy occupation is the Boltzmann distribution — same <span class="math inline">\(E\)</span> grammar as the ML energies above.</p>
@@ -1246,9 +1246,9 @@ Name kinetic energy and Neal; show the trajectory figure if builds are available
 <h2 class="scrollable">Further Reading</h2>
 <ul>
 <li><p>Probability distributions: Section 1.2 of <span class="citation" data-cites="Bishop:book06">Bishop (2006)</span></p></li>
+<li><p>Chapter 1 of <span class="citation" data-cites="Lawrence-atomic24">Lawrence (2024)</span></p></li>
 <li><p>Boltzmann machines (optional colour) of <span class="citation" data-cites="Ackley-boltzmann85">Ackley et al. (1985)</span></p></li>
 <li><p>Hopfield networks (optional colour) of <span class="citation" data-cites="Hopfield:neural82">Hopfield (1982)</span></p></li>
-<li><p>Chapter 1 of <span class="citation" data-cites="Lawrence-atomic24">Lawrence (2024)</span></p></li>
 <li><p>Section 3.2.1 of <span class="citation" data-cites="Welling-generative26">Welling et al. (2026)</span></p></li>
 <li><p>Section 11.4.2 of <span class="citation" data-cites="Welling-generative26">Welling et al. (2026)</span></p></li>
 <li><p>Hybrid Monte Carlo for backpropagation networks of <span class="citation" data-cites="Neal:hmc92">Neal (1992)</span></p></li>
