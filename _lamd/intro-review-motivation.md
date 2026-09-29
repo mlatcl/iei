@@ -89,11 +89,11 @@ reading:
 
 \include{_information/includes/entropy-nogo-probability-prescription.md}
 
-\include{_information/includes/probability-review-compact.md}
+\include{_ml/includes/probability-review-compact.md}
 
 \notes{Quiz 1 will ask a small discrete Bayes inversion (barrels, coins, two hypotheses) and recognition of the named distributions below.}
 
-\include{_information/includes/common-distributions-review.md}
+\include{_ml/includes/common-distributions-review.md}
 
 \subsection{Doubt}
 
