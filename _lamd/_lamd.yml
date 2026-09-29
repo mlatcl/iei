@@ -40,7 +40,7 @@ macrosdir: $HOME/lawrennd/lamd/lamd/macros
 transition: None
 
 ghub:
-- organization: GITHUB_ORG
+- organization: mlatcl
   repository: iei
   branch: gh-pages
   directory: _lamd
