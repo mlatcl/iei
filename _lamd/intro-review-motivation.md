@@ -91,6 +91,9 @@ reading:
 \include{_iei/includes/iei-notebook-setup.md}
 
 \include{_information/includes/perpetual-motion-superintelligence-analogy.md}
+\include{_physics/includes/laplace-portrait.md}
+\include{_physics/includes/laplaces-determinism.md}
+\include{_physics/includes/laplaces-gremlin.md}
 
 \include{_ml/includes/probability-review-compact.md}
 
@@ -142,11 +145,13 @@ reading:
 * Quiz 1 (next week) checks foundations you should have met here and in W1
 }
 
-\include{_information/includes/entropy-nogo-probability-prescription.md}
 
 \include{_information/includes/entropy-review.md}
 
 \speakernotes{Axiomatic derivation of $H$ and $S=kH$ are week 3 / LO2. Worksheet 1 probes can already use joint / conditional / chain-rule vocabulary.}
+
+\include{_information/includes/entropy-nogo-probability-prescription.md}
+
 
 \subsection{Motivation}
 
@@ -181,9 +186,6 @@ reading:
 
 \notes{Shannon gave the unit used for bandwidth and embodiment factors. The derivation of $H$ and the statement $S=kH$ are LO2 in lecture 3. The bandwidth gap is a bottleneck on sharing thought, not a second no-go paired with Boltzmann. Lecture 4 applies the same bit accounting to locked-in communication.}
 
-\include{_physics/includes/laplace-portrait.md}
-\include{_physics/includes/laplaces-determinism.md}
-\include{_physics/includes/laplaces-gremlin.md}
 
 
 \subsection{Entropy and the Boltzmann Distribution}
