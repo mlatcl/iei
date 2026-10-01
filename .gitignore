@@ -19,6 +19,9 @@ __pycache__/
 *.pyo
 *.pyd
 
+# Ignore back ups
+*.bak
+
 # Ignore build artifacts
 *.o
 *.so

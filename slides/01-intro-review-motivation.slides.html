@@ -696,7 +696,7 @@ The Gaussian PDF with <span class="math inline">\({\mu}=1.7\)</span> and varianc
 <ul>
 <li>Expectation <span class="math inline">\(-\log(P(y))\)</span>: <span class="math inline">\(0.3\times 1.204 + 0.2\times 1.609 + 0.1\times 2.302 +0.4\times 0.916 = 1.280\)</span></li>
 </ul>
-<p>Shannon entropy turns a distribution into a scalar measure of uncertainty.</p>
+<p>Shannon entropy turns a distribution into a <em>scalar</em> measure of uncertainty.</p>
 <div>
 <ul>
 <li class="fragment">Discrete: <span class="math inline">\(H(p) = -\sum_i p_i \log p_i\)</span></li>
@@ -704,23 +704,31 @@ The Gaussian PDF with <span class="math inline">\({\mu}=1.7\)</span> and varianc
 <li class="fragment">Fair coin: <span class="math inline">\(H=1\)</span> bit; certain outcome: <span class="math inline">\(H=0\)</span></li>
 </ul>
 </div>
+</section>
+<section id="shannons-definition-is-not-yet" class="slide level2">
+<h2>Shannon’s definition is not yet …</h2>
 <div>
 <ul>
-<li class="fragment">Not yet Clausius’s thermodynamic entropy — same formula, different job</li>
-<li class="fragment">Not yet a channel-capacity theorem</li>
-<li class="fragment">Operational split: entropy often <em>forbids</em>; probability <em>prescribes</em></li>
+<li class="fragment">… Clausius’s thermodynamic entropy (same formula, different motivation)</li>
+<li class="fragment">… a channel-capacity theorem</li>
 </ul>
 </div>
+</section>
+<section id="entropy-physical-and-anthropomorphic" class="slide level2">
+<h2>Entropy: physical and anthropomorphic</h2>
+<div>
+
+</div>
+</section>
+<section id="joint-conditional-chain-rule-names-only" class="slide level2">
+<h2>Joint, Conditional, Chain Rule (Names Only)</h2>
 <div>
 <ul>
 <li class="fragment"><span class="math inline">\(H(X,Y)\)</span> joint uncertainty</li>
 <li class="fragment"><span class="math inline">\(H(X\mid Y)\)</span> residual uncertainty after observing <span class="math inline">\(Y\)</span></li>
-<li class="fragment">Chain rule: <span class="math inline">\(H(X,Y)=H(X)+H(Y\mid X)\)</span></li>
+<li class="fragment">Chain rule: <span class="math inline">\(H(X,Y)=H(X\mid Y) + H(Y)\)</span></li>
 </ul>
 </div>
-<aside class="notes">
-Do not prove the chain rule here. Name it so later discussion can use the vocabulary.
-</aside>
 <aside class="notes">
 Axiomatic derivation of <span class="math inline">\(H\)</span> and <span class="math inline">\(S=kH\)</span> are week 3 / LO2. Worksheet 1 probes can already use joint / conditional / chain-rule vocabulary.
 </aside>
@@ -1108,7 +1116,7 @@ Optional live check. Deep dive and free-energy plots are lecture 2.
 <p>Gradient descent: ‘walking downhill’</p>
 <div>
 <ul>
-<li class="fragment">Contours of <span class="math inline">\(E(\mathbf{w})\)</span> = elevation lines on a hill</li>
+<li class="fragment">Contours of <span class="math inline">\(E(\mathbf{ w})\)</span> = elevation lines on a hill</li>
 <li class="fragment">Steepest descent: step opposite <span class="math inline">\(\nabla E\)</span></li>
 <li class="fragment">Same <span class="math inline">\(E\)</span> as least squares / negative log-likelihood</li>
 </ul>
@@ -1125,7 +1133,7 @@ Contours of the least-squares energy <span class="math inline">\(E(m,c)=\sum_n(y
 <p>The loss is a <em>potential energy</em> <span class="math inline">\(V(\mathbf{q})\)</span> on parameter space.</p>
 <div>
 <ul>
-<li class="fragment">Configuration <span class="math inline">\(\mathbf{q}=\mathbf{w}\)</span>: where the system sits</li>
+<li class="fragment">Configuration <span class="math inline">\(\mathbf{q}=\mathbf{ w}\)</span>: where the system sits</li>
 <li class="fragment">Force <span class="math inline">\(\propto -\nabla V\)</span>: direction of steepest descent</li>
 <li class="fragment">Common analogy: ball in a bowl; GD is the overdamped limit</li>
 </ul>
@@ -1214,7 +1222,7 @@ Leapfrog trajectories and samples from teachable HMC on <span class="math inline
 </div>
 </div>
 <aside class="notes">
-Hamiltonian and weight traces for logistic regression. <span class="math inline">\(V(\mathbf{w})=-\log p(\mathbf{w}\mid\mathcal{D})\)</span>; SGD gives one downhill point, HMC a cloud of posterior samples.
+Hamiltonian and weight traces for logistic regression. <span class="math inline">\(V(\mathbf{ w})=-\log p(\mathbf{ w}\mid\mathcal{D})\)</span>; SGD gives one downhill point, HMC a cloud of posterior samples.
 </aside>
 <aside class="notes">
 Name kinetic energy and Neal; show the trajectory figure if builds are available. Emphasise V = -log posterior, not a new loss species.

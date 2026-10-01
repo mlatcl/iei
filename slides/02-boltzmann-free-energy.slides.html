@@ -161,47 +161,12 @@
 <section id="from-the-seed-to-the-formula" class="slide level2">
 <h2>From the Seed to the Formula</h2>
 </section>
-<section id="perpetual-motion-and-superintelligence" class="slide level2">
-<h2>Perpetual Motion and Superintelligence</h2>
-<div>
-<ul>
-<li class="fragment">1925: Motor vehicles (no perpetual motion)</li>
-<li class="fragment">2025: Promises of superintelligence singularity</li>
-<li class="fragment">Same fundamental impossibility?</li>
-</ul>
-</div>
-</section>
-<section id="why-perpetual-motion-failed" class="slide level2">
-<h2>Why Perpetual Motion Failed</h2>
-<div>
-<p><span class="math display">\[\frac{\text{d}H}{\text{d}t} \geq 0\]</span></p>
-<ul>
-<li class="fragment">Entropy always increases</li>
-<li class="fragment">No motion without entropy production</li>
-<li class="fragment">No work without energy input</li>
-</ul>
-</div>
-</section>
-<section id="an-equivalent-statement-for-intelligence" class="slide level2">
-<h2>An Equivalent Statement for Intelligence?</h2>
-<div>
-<p><strong>Maxwell’s Demon:</strong></p>
-<ul>
-<li class="fragment">“Intelligent” entity that violates 2nd law</li>
-<li class="fragment">Resolution: Landauer’s principle?</li>
-<li class="fragment">Information erasure requires energy</li>
-</ul>
-</div>
-</section>
-<section id="implication" class="slide level2">
-<h2>Implication</h2>
-<div>
-<ul>
-<li class="fragment">Intelligence has thermodynamic cost</li>
-<li class="fragment">Information processing has physical limits</li>
-</ul>
-</div>
-<!-- SNIPPET: _physics/includes/clausius-carnot-second-law.md -->
+<section id="information-energy-and-intelligence-course-notebook-setup" class="slide level2">
+<h2>Information, energy and intelligence course notebook setup</h2>
+<!--setupplotcode{import seaborn as sns
+sns.set_style('darkgrid')
+sns.set_context('paper')
+sns.set_palette('colorblind')}-->
 </section>
 <section id="carnot-and-clausius" class="slide level2">
 <h2>Carnot and Clausius</h2>
@@ -220,7 +185,7 @@ Carnot is the efficiency question; Clausius is the second law and the word entro
 <ul>
 <li class="fragment">You cannot run a cyclic engine that converts heat entirely into work</li>
 <li class="fragment">Similar for perpetual motion — Clausius makes the prohibition explicit</li>
-<li class="fragment">Prescription comes later: Boltzmann weights, then Shannon/Jaynes (this term)</li>
+<li class="fragment">Prescription follows separately: Boltzmann weights, then Shannon/Jaynes</li>
 </ul>
 </div>
 <div>
@@ -230,14 +195,6 @@ Carnot is the efficiency question; Clausius is the second law and the word entro
 <li class="fragment">Information: Shannon, Jaynes (same <span class="math inline">\(H\)</span>, different job)</li>
 </ul>
 </div>
-<!-- /SNIPPET: _physics/includes/clausius-carnot-second-law.md -->
-</section>
-<section id="information-entropy-and-intelligence-course-notebook-setup" class="slide level2">
-<h2>Information, entropy and intelligence course notebook setup</h2>
-<!--setupplotcode{import seaborn as sns
-sns.set_style('darkgrid')
-sns.set_context('paper')
-sns.set_palette('colorblind')}-->
 </section>
 <section id="the-gibbsboltzmann-distribution" class="slide level2">
 <h2>The Gibbs–Boltzmann Distribution</h2>
@@ -250,7 +207,7 @@ sns.set_palette('colorblind')}-->
 </ul>
 </div>
 <aside class="notes">
-LO1. Introduce and use, do not derive. Board the formula. Week 5: MaxEnt with fixed mean energy recovers the same <span class="math inline">\(p_i\)</span>.
+Introduce and use, do not derive. Board the formula. MaxEnt with fixed mean energy recovers the same <span class="math inline">\(p_i\)</span>.
 </aside>
 <div class="figure">
 <div id="two-state-boltzmann-figure" class="figure-frame">
@@ -264,13 +221,13 @@ Occupation of a two-state system as coldness increases. At low <span class="math
 <p>The same energy-and-occupation grammar reappears in associative memory and early deep learning.</p>
 <div>
 <ul>
-<li class="fragment">Hopfield (1982): energy over binary configurations; recall as settling</li>
-<li class="fragment">Boltzmann machine (1985): make those weights <em>learnable</em></li>
-<li class="fragment">Week 4: one physical bit as an equal double well (Landauer)</li>
+<li class="fragment">Hopfield (1982): fixed-weight energy; recall as settling</li>
+<li class="fragment">Boltzmann machine (1985): make those couplings <em>learnable</em></li>
+<li class="fragment">Pairwise energy: <span class="math inline">\(E(\mathbf{s})=-\sum_i b_i s_i-\sum_{i&lt;j}W_{ij}s_i s_j\)</span></li>
 </ul>
 </div>
 <aside class="notes">
-Colour only. Not a new outcome. Nobel 2024 (Hopfield and Hinton) names the line. Week 4 draws the one-bit well; week 5 returns with the two-spin Boltzmann machine.
+Colour only. Nobel 2024 (Hopfield and Hinton) names the line. Do not divert into training algorithms or Landauer here.
 </aside>
 </section>
 <section id="coldness-and-temperature" class="slide level2">
@@ -300,7 +257,7 @@ Colour only. Not a new outcome. Nobel 2024 (Hopfield and Hinton) names the line.
 <div>
 <ul>
 <li class="fragment">Mean energy: <span class="math inline">\(U = \langle E\rangle = \sum_i p_i E_i\)</span></li>
-<li class="fragment">Entropy: <span class="math inline">\(S = -k\sum_i p_i \log p_i\)</span></li>
+<li class="fragment">Entropy: <span class="math inline">\(S = -k_B\sum_i p_i \log p_i\)</span></li>
 <li class="fragment">Helmholtz free energy: <span class="math inline">\(F = U - TS = -kT\log Z\)</span></li>
 </ul>
 </div>
@@ -314,7 +271,7 @@ LO1. Read <span class="math inline">\(F=U-TS\)</span> as available energy. Name 
 </div>
 </div>
 <aside class="notes">
-<span class="math inline">\(U\)</span>, <span class="math inline">\(S\)</span>, and <span class="math inline">\(F\)</span> for the Worksheet 1 three-state system. Verify <span class="math inline">\(F=-\ln Z/\beta\)</span> numerically.
+<span class="math inline">\(U\)</span>, <span class="math inline">\(S\)</span>, and <span class="math inline">\(F\)</span> for the Worksheet 1 three-state system. Verify <span class="math inline">\(F=-\log Z/\beta\)</span> numerically.
 </aside>
 <!-- /SNIPPET: _physics/includes/free-energy-decomposition.md -->
 <div>
@@ -338,6 +295,9 @@ LO1. Read <span class="math inline">\(F=U-TS\)</span> as available energy. Name 
 <aside class="notes">
 Name the Schottky peak. Entropic reading waits for week 8.
 </aside>
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
 <div class="figure">
 <div id="schottky-two-state-figure" class="figure-frame">
 <object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/schottky-two-state.svg" width="85%" style=" ">
@@ -361,10 +321,16 @@ Mean energy and heat capacity of a two-state system. The Schottky peak appears w
 <section id="finite-time-costs-more-than-delta-f" class="slide level2">
 <h2>Finite Time Costs More Than <span class="math inline">\(\Delta F\)</span></h2>
 <!-- SNIPPET: _physics/includes/finite-time-dissipation-intro.md -->
+</section>
+<section id="quasi-static-versus-finite-time" class="slide level2">
+<h2>Quasi-Static versus Finite Time</h2>
 <p>Equilibrium thermodynamics gives a prescription for <em>reversible</em> work. Real protocols take time.</p>
 <aside class="notes">
 Do not define thermodynamic length today. Name quasi-static <span class="math inline">\(W=\Delta F\)</span> versus finite-time excess. Crooks in weeks 6–7; intelligence in week 8.
 </aside>
+</section>
+<section id="section-1" class="slide level2">
+<h2></h2>
 <div class="figure">
 <div id="finite-time-sketch-figure" class="figure-frame">
 <object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/finite-time-sketch.svg" width="70%" style=" ">
