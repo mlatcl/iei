@@ -7,11 +7,12 @@ venue: FW26, William Gates Building
 room: FW26
 transition: None
 abstract: >
-  Introduce the Gibbs--Boltzmann distribution by name and formula, then
-  account for free energy $F = U - TS$. Name the thermodynamic bath,
-  Schottky's anomaly, and finite-time dissipation. The MaxEnt derivation
-  of the Boltzmann weights waits for week 5. Worksheet 1 is due; Quiz 1
-  opens the session.
+  This week we'll map the statistical notions of entropy we reviewed
+  in Week 1 onto the physical notions of entropy through the 
+  Gibbs--Boltzmann distribution. We'll show how this equation can be 
+  decomposed to give the so-called free energy $F = U - TS$. We'll introduce
+  the notion of a *thermodynamic bath* and review Schottky's anomaly. Worksheet 1 is 
+  due and the session will start with Quiz 1.
 author:
 - given: Neil D.
   family: Lawrence
