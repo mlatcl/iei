@@ -82,18 +82,21 @@ reading:
 
 \subsection{From the Seed to the Formula}
 
-\notes{Last week stated $p_i = e^{-\beta E_i}/Z$. Today name that occupation, read $Z$ as a generating function, and account for free energy. The MaxEnt derivation waits for week 5. Motivations (perpetual motion, bandwidth) remain the frame.}
+\notes{Last week we introduced energy and entropy from a machine learning perspective. That allowed us to write down the Gibbs distribution,
+\[
+p_i = \frac{e^{-\beta E_i}}{Z} \quad Z = \sum_i e^{-\beta E_i}.
+\]
+Today we're going deeper into Boltzman's physical interpretation of this equation, and the decomposition that underpins the famous equation
+\[
+U = W + TS
+\]
+where $U=\expSamp{E}$ is total energy (or inner energy), $F$ is the free engineer, $T$ is temperature and $S$ is physical entropy, i.e. $k_B H = -k_B \sum_i p_i \log p_i$.}
 
-\include{_information/includes/perpetual-motion-superintelligence-analogy.md}
-
-\include{_physics/includes/clausius-carnot-second-law.md}
 
 \include{_iei/includes/iei-notebook-setup.md}
 
-\notes{Last week seeded $p_i\propto e^{-\beta E_i}$ and the ML pairwise energy. Today name Gibbs and fix the formula. MaxEnt derivation waits for week 5 (LO1: introduce and use, do not derive).}
-
+\include{_physics/includes/clausius-carnot-second-law.md}
 \include{_physics/includes/gibbs-distribution.md}
-
 \include{_physics/includes/coldness-and-temperature.md}
 
 \subsection{Free Energy Decomposition}
@@ -106,7 +109,7 @@ reading:
 
 \slidesincremental{
 * Mean energy: $U = \langle E\rangle = \sum_i p_i E_i$
-* Entropy: $S = -k\sum_i p_i \log p_i$
+* Entropy: $S = -k_B\sum_i p_i \log p_i$
 * Helmholtz free energy: $F = U - TS = -kT\log Z$
 }
 
@@ -136,7 +139,7 @@ ax.legend()
 ax.set_title('Three-state system: energies $E\in\{0,1,3\}$')
 mlai.write_figure('three-state-thermo.svg', directory='\writeDiagramsDir/ml')}
 
-\figure{\includediagram{\diagramsDir/ml/three-state-thermo}{75%}}{$U$, $S$, and $F$ for the Worksheet 1 three-state system. Verify $F=-\ln Z/\beta$ numerically.}{three-state-thermo}
+\figure{\includediagram{\diagramsDir/ml/three-state-thermo}{75%}}{$U$, $S$, and $F$ for the Worksheet 1 three-state system. Verify $F=-\log Z/\beta$ numerically.}{three-state-thermo}
 
 
 <!-- /SNIPPET: _physics/includes/free-energy-decomposition.md -->
@@ -192,6 +195,8 @@ axes[1].set_title('Schottky heat-capacity peak')
 plt.tight_layout()
 mlai.write_figure('schottky-two-state.svg', directory='\writeDiagramsDir/ml')}
 
+\newslide{}
+
 \figure{\includediagram{\diagramsDir/ml/schottky-two-state}{85%}}{Mean energy and heat capacity of a two-state system. The Schottky peak appears when $p_0\approx p_1\approx\frac12$.}{schottky-two-state}
 
 \slides{
@@ -210,7 +215,7 @@ mlai.write_figure('schottky-two-state.svg', directory='\writeDiagramsDir/ml')}
 
 <!-- SNIPPET: _physics/includes/finite-time-dissipation-intro.md -->
 
-\newslides{Quasi-Static versus Finite Time}
+\newslide{Quasi-Static versus Finite Time}
 
 \slides{Equilibrium thermodynamics gives a prescription for *reversible* work. Real protocols take time.}
 
@@ -241,6 +246,8 @@ ax.set_xlabel(r'$\beta$')
 ax.set_ylabel('$F$')
 ax.legend()
 mlai.write_figure('finite-time-sketch.svg', directory='\writeDiagramsDir/ml')}
+
+\newslide{}
 
 \figure{\includediagram{\diagramsDir/ml/finite-time-sketch}{70%}}{Cartoon of quasi-static versus finite-time driving between two equilibrium states.}{finite-time-sketch}
 
