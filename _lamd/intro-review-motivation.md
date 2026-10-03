@@ -140,11 +140,11 @@ So in other words we are asking you to take on the role of Socrates in these con
 
 \subsection{Dialectical Vertigo}
 
-\notes{In the book, The Grasshoppe @Suits-grasshopper78, the eponymous protaganist, Grasshopper, asks his student, Skepticus, to take on this role.}
+\notes{In the book, The Grasshopper [@Suits-grasshopper78], the eponymous protaganist, Grasshopper, asks his student, Skepticus, to take on this role.}
 
 > What you are describing, Skepticus, is a chronic but minor ailment of philosophers. It is called dialectical vertigo, and its cure is the immediate application of straightforward argumentation.
 >
-> The Grasshopper to Skepticus in @Suits-grasshopper78 pg 37
+> The Grasshopper to Skepticus in *The Grassohopper: Games, Life and Utopia* [@Suits-grasshopper78 pg 37]
 
 \slidesincremental{
 * Curiosity: open a question; let the model give a long answer (like Grasshopper)
