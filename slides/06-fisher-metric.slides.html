@@ -190,10 +190,69 @@ Fence: name the identity; do not interpret Schottky or length for intelligence t
 </section>
 <section id="what-is-a-riemannian-geometry" class="slide level2">
 <h2>What is a Riemannian geometry?</h2>
+</section>
+<section id="euclidean-vs-riemannian-distance" class="slide level2">
+<h2>Euclidean vs Riemannian Distance</h2>
+<p>In flat space the ruler is the same everywhere. On a curved surface it is not.</p>
+<div>
+<ul>
+<li class="fragment">Euclidean: <span class="math inline">\(\mathrm{d}s^2 = \mathrm{d}\mathbf{x}^\top \mathbf{I}\, \mathrm{d}\mathbf{x}\)</span> (constant metric)</li>
+<li class="fragment">Riemannian: <span class="math inline">\(\mathrm{d}s^2 = \mathrm{d}\mathbf{x}^\top g(\mathbf{x})\, \mathrm{d}\mathbf{x}\)</span> (position-dependent)</li>
+<li class="fragment">Geodesic: shortest path; curves in non-flat space</li>
+</ul>
+</div>
+<aside class="notes">
+Keep this concrete. Near the poles of a sphere, longitude lines are close together; near the equator they are far apart. The metric captures that varying “ruler.”
+</aside>
+<div class="figure">
+<div id="euclidean-vs-riemannian-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/euclidean-vs-riemannian.svg" width="80%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+Left: Euclidean metric — equal-radius circles mark unit steps at every point. Right: Riemannian metric — ellipses shrink vertically near large <span class="math inline">\(|y|\)</span> because vertical distances are stretched there by <span class="math inline">\(g_{22}=1+0.5y^2\)</span>.
+</aside>
+</section>
+<section id="geodesics-and-length" class="slide level2">
+<h2>Geodesics and Length</h2>
+<p><span class="math display">\[
+\ell(\gamma) = \int_0^1 \sqrt{\dot\gamma^\top g(\gamma)\,\dot\gamma}\;\mathrm{d}t
+\]</span> * Geodesic minimises <span class="math inline">\(\ell\)</span> * Flat space: straight lines; sphere: great circles * Statistical manifold: <span class="math inline">\(g = G\)</span> (Fisher) — connects distributions</p>
 <!-- /SNIPPET: _mathe/includes/what-is-a-riemannian-geometry.md -->
 </section>
 <section id="kl-divergence-and-two-entropies" class="slide level2">
 <h2>KL Divergence and Two Entropies</h2>
+</section>
+<section id="kl-divergence-forward-and-reverse" class="slide level2">
+<h2>KL Divergence: Forward and Reverse</h2>
+<p><span class="math inline">\(D_{\mathrm{KL}}\)</span> measures how different two distributions are — but it is asymmetric.</p>
+<div>
+<ul>
+<li class="fragment"><span class="math inline">\(D_{\mathrm{KL}}(p\|q) = \sum_x p(x)\log\frac{p(x)}{q(x)} \ge 0\)</span>, zero iff <span class="math inline">\(p=q\)</span></li>
+<li class="fragment">Forward (<span class="math inline">\(p\|q\)</span>): mass-covering — <span class="math inline">\(q\)</span> must not miss mass of <span class="math inline">\(p\)</span></li>
+<li class="fragment">Reverse (<span class="math inline">\(q\|p\)</span>): mode-seeking — <span class="math inline">\(q\)</span> concentrates on a mode of <span class="math inline">\(p\)</span></li>
+<li class="fragment">Second-order Taylor: <span class="math inline">\(D_{\mathrm{KL}}(p_{\boldsymbol{\theta}+\mathrm{d}\boldsymbol{\theta}}\|p_{\boldsymbol{\theta}}) = \tfrac{1}{2}\,\mathrm{d}\boldsymbol{\theta}^\top G(\boldsymbol{\theta})\,\mathrm{d}\boldsymbol{\theta} + O(\|\mathrm{d}\boldsymbol{\theta}\|^3)\)</span></li>
+</ul>
+</div>
+<aside class="notes">
+Forward KL covers all modes; reverse KL picks one. Both have the same second-order term: Fisher <span class="math inline">\(G\)</span>. That is why <span class="math inline">\(G\)</span> is the natural metric: it is the curvature of the divergence surface at coincidence.
+</aside>
+<div class="figure">
+<div id="forward-reverse-kl-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/forward-reverse-kl.svg" width="80%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+Forward KL (left) produces a broad Gaussian covering both modes; reverse KL (right) concentrates on one mode. Both have the same local curvature at <span class="math inline">\(p=q\)</span>: the Fisher metric.
+</aside>
+</section>
+<section id="kl-curvature-fisher-metric" class="slide level2">
+<h2>KL Curvature = Fisher Metric</h2>
+<p><span class="math display">\[
+D_{\mathrm{KL}}(p_{\boldsymbol{\theta}+\mathrm{d}\boldsymbol{\theta}}\|p_{\boldsymbol{\theta}}) = \tfrac{1}{2}\,\mathrm{d}\boldsymbol{\theta}^\top G(\boldsymbol{\theta})\,\mathrm{d}\boldsymbol{\theta} + O(\|\mathrm{d}\boldsymbol{\theta}\|^3)
+\]</span> * <span class="math inline">\(G\)</span> = curvature of KL at coincidence * Two KLs, one local metric * Pythagorean theorem holds on dually flat submanifolds</p>
 <!-- SNIPPET: _information-game/includes/fisher-information-geometry.md -->
 </section>
 <section id="fisher-information-as-geometry" class="slide level2">
@@ -244,6 +303,9 @@ G_{ij} = \delta_{ij}\pi_i - \pi_i\pi_j
 <p><strong>Information Geometry:</strong> * Fisher metric → Riemannian geometry * Exponential families → dually flat structure * Geodesics → shortest paths between distributions * Zero curvature → special “flat” structure * <em>Key for constrained dynamics later</em></p>
 <!-- /SNIPPET: _information-game/includes/fisher-information-geometry.md -->
 <!-- SNIPPET: _information-game/includes/fisher-metric-worked.md -->
+</section>
+<section id="the-fisher-metric" class="slide level2">
+<h2>The Fisher Metric</h2>
 <p>A statistical manifold: each point is a distribution <span class="math inline">\(p(x\mid\theta)\)</span>.</p>
 <div>
 <ul>
@@ -307,6 +369,9 @@ Scaffolding only. Do not derive the theorem from a master equation. State it, th
 GAIST Chapter 17 stops at Crooks (1999)/Jarzynski. We continue to the geometric packaging. Same author; different regimes; one narrative.
 </aside>
 <!-- SNIPPET: _information/includes/crooks-thermodynamic-length.md -->
+</section>
+<section id="thermodynamic-length-crooks-2007" class="slide level2">
+<h2>Thermodynamic Length (Crooks 2007)</h2>
 <p>For a slow protocol <span class="math inline">\(\lambda(t)\)</span> on the equilibrium manifold, define length with the Fisher metric.</p>
 <p><span class="math display">\[
 \mathcal{L} = \int_0^\tau \sqrt{\dot\lambda^\top \mathcal{I}(\lambda)\,\dot\lambda}\,dt

@@ -130,14 +130,162 @@ says: where Fisher information is large, unbiased estimators can be precise; whe
 
 \subsection{What is a Riemannian geometry?}
 
-\comment{Start with distances in a Euclidean geometry, and then extend to a Riemannian distance.}
+\newslide{Euclidean vs Riemannian Distance}
+
+\slides{In flat space the ruler is the same everywhere. On a curved surface it is not.}
+
+\slidesincremental{
+* Euclidean: $\mathrm{d}s^2 = \mathrm{d}\mathbf{x}^\top \mathbf{I}\, \mathrm{d}\mathbf{x}$ (constant metric)
+* Riemannian: $\mathrm{d}s^2 = \mathrm{d}\mathbf{x}^\top g(\mathbf{x})\, \mathrm{d}\mathbf{x}$ (position-dependent)
+* Geodesic: shortest path; curves in non-flat space
+}
+
+\speakernotes{Keep this concrete. Near the poles of a sphere, longitude lines are close together; near the equator they are far apart. The metric captures that varying "ruler".}
+
+\notes{In Euclidean space $\mathbb{R}^n$, the distance between two nearby points $\mathbf{x}$ and $\mathbf{x}+\mathrm{d}\mathbf{x}$ is given by the familiar Pythagorean rule,
+$$
+\mathrm{d}s^2 = \mathrm{d}x_1^2 + \cdots + \mathrm{d}x_n^2 = \mathrm{d}\mathbf{x}^\top \mathbf{I}\, \mathrm{d}\mathbf{x}.
+$$
+The identity matrix plays the role of the *metric*: it is the same everywhere, so the ruler does not change as you move through the space.
+
+A *Riemannian manifold* replaces the constant identity with a smooth, position-dependent, symmetric positive-definite matrix $g(\mathbf{x})$, called the *metric tensor*:
+$$
+\mathrm{d}s^2 = \mathrm{d}\mathbf{x}^\top g(\mathbf{x})\, \mathrm{d}\mathbf{x} = \sum_{i,j} g_{ij}(\mathbf{x})\, \mathrm{d}x_i\, \mathrm{d}x_j.
+$$
+Now the ruler changes from place to place. A step of size $\epsilon$ in the direction $\mathbf{v}$ at point $\mathbf{x}$ has length $\epsilon\sqrt{\mathbf{v}^\top g(\mathbf{x})\mathbf{v}}$, which depends on where you are. The *geodesic* between two points is the path of minimal accumulated length $\int \mathrm{d}s$; in flat Euclidean space this is a straight line, on a sphere it is a great circle.}
+
+\setupplotcode{import numpy as np
+import matplotlib.pyplot as plt
+import mlai}
+
+\plotcode{theta = np.linspace(0, 2*np.pi, 60)
+xs = np.linspace(-2.5, 2.5, 7)
+ys = np.linspace(-2.5, 2.5, 7)
+
+fig, axes = plt.subplots(1, 2, figsize=(10, 4))
+
+# Left: Euclidean — equal circles everywhere
+for xi in xs:
+    for yi in ys:
+        axes[0].plot(xi + 0.28*np.cos(theta), yi + 0.28*np.sin(theta),
+                     'C0', lw=0.8, alpha=0.6)
+axes[0].set_xlim(-3.3, 3.3); axes[0].set_ylim(-3.3, 3.3)
+axes[0].set_aspect('equal')
+axes[0].set_title('Euclidean: $g = I$ (equal circles)')
+axes[0].set_xlabel('$x_1$'); axes[0].set_ylabel('$x_2$')
+
+# Right: Riemannian — metric g = diag(1, 1 + 0.5 y^2)
+for xi in xs:
+    for yi in ys:
+        rx = 0.28
+        ry = 0.28 / np.sqrt(1.0 + 0.5*yi**2)
+        axes[1].plot(xi + rx*np.cos(theta), yi + ry*np.sin(theta),
+                     'C1', lw=0.8, alpha=0.6)
+axes[1].set_xlim(-3.3, 3.3); axes[1].set_ylim(-3.3, 3.3)
+axes[1].set_aspect('equal')
+axes[1].set_title('Riemannian: $g_{22}=1+0.5y^2$ (ellipses)')
+axes[1].set_xlabel('$x_1$'); axes[1].set_ylabel('$x_2$')
+
+plt.tight_layout()
+mlai.write_figure('euclidean-vs-riemannian.svg', directory='\writeDiagramsDir/ml')}
+
+\figure{\includediagram{\diagramsDir/ml/euclidean-vs-riemannian}{80%}}{Left: Euclidean metric — equal-radius circles mark unit steps at every point. Right: Riemannian metric — ellipses shrink vertically near large $|y|$ because vertical distances are stretched there by $g_{22}=1+0.5y^2$.}{euclidean-vs-riemannian}
+
+\newslide{Geodesics and Length}
+
+\notes{The *length* of any path $\gamma:[0,1]\to\mathcal{M}$ on a Riemannian manifold is
+$$
+\ell(\gamma) = \int_0^1 \sqrt{\dot{\gamma}(t)^\top g(\gamma(t))\, \dot{\gamma}(t)}\, \mathrm{d}t.
+$$
+The geodesic minimises this integral. When we later write thermodynamic length as an integral of $\sqrt{\dot{\lambda}^\top \mathcal{I}(\lambda)\dot{\lambda}}$, we are computing exactly this — but the manifold is the space of probability distributions and the metric is the Fisher information.}
+
+\slides{
+$$
+\ell(\gamma) = \int_0^1 \sqrt{\dot\gamma^\top g(\gamma)\,\dot\gamma}\;\mathrm{d}t
+$$
+* Geodesic minimises $\ell$
+* Flat space: straight lines; sphere: great circles
+* Statistical manifold: $g = G$ (Fisher) — connects distributions
+}
 
 <!-- /SNIPPET: _mathe/includes/what-is-a-riemannian-geometry.md -->
 
 \subsection{KL Divergence and Two Entropies}
 
+\newslide{KL Divergence: Forward and Reverse}
 
+\slides{$D_{\mathrm{KL}}$ measures how different two distributions are — but it is asymmetric.}
 
+\slidesincremental{
+* $D_{\mathrm{KL}}(p\|q) = \sum_x p(x)\log\frac{p(x)}{q(x)} \ge 0$, zero iff $p=q$
+* Forward ($p\|q$): mass-covering — $q$ must not miss mass of $p$
+* Reverse ($q\|p$): mode-seeking — $q$ concentrates on a mode of $p$
+* Second-order Taylor: $D_{\mathrm{KL}}(p_{\boldsymbol{\theta}+\mathrm{d}\boldsymbol{\theta}}\|p_{\boldsymbol{\theta}}) = \tfrac{1}{2}\,\mathrm{d}\boldsymbol{\theta}^\top G(\boldsymbol{\theta})\,\mathrm{d}\boldsymbol{\theta} + O(\|\mathrm{d}\boldsymbol{\theta}\|^3)$
+}
+
+\speakernotes{Forward KL covers all modes; reverse KL picks one. Both have the same second-order term: Fisher $G$. That is why $G$ is the natural metric: it is the curvature of the divergence surface at coincidence.}
+
+\notes{Kullback--Leibler divergence measures how much distribution $p$ differs from reference $q$:
+$$
+D_{\mathrm{KL}}(p\|q) = \sum_x p(x)\log\frac{p(x)}{q(x)} = \mathbb{E}_p\!\left[\log\frac{p(X)}{q(X)}\right] \ge 0,
+$$
+with equality iff $p=q$ (Gibbs' inequality). It is not symmetric: $D_{\mathrm{KL}}(p\|q)\ne D_{\mathrm{KL}}(q\|p)$ in general.
+
+*Forward KL* ($p\|q$) penalises regions where $p$ has mass but $q$ does not. Fitting a model $q$ by minimising $D_{\mathrm{KL}}(p\|q)$ with respect to $q$ forces $q$ to spread and cover all modes of $p$ — the mass-covering or "zero-forcing" behaviour familiar from variational inference.
+
+*Reverse KL* ($q\|p$) penalises regions where $q$ has mass but $p$ does not. Minimising with respect to $q$ makes $q$ concentrate on one mode of $p$ — the mode-seeking or "zero-avoiding" behaviour.
+
+The Fisher metric emerges as the Hessian of KL at zero separation. Expanding $\log p_{\boldsymbol{\theta}+\mathrm{d}\boldsymbol{\theta}}$ to second order and using the fact that the score has zero mean, the first-order term vanishes:
+$$
+D_{\mathrm{KL}}(p_{\boldsymbol{\theta}+\mathrm{d}\boldsymbol{\theta}}\|p_{\boldsymbol{\theta}}) = \tfrac{1}{2}\,\mathrm{d}\boldsymbol{\theta}^\top G(\boldsymbol{\theta})\,\mathrm{d}\boldsymbol{\theta} + O(\|\mathrm{d}\boldsymbol{\theta}\|^3).
+$$
+Fisher information is the *curvature* of KL divergence at coincidence. The same Hessian arises from both the forward and reverse divergence; they only differ at higher orders.}
+
+\setupplotcode{import numpy as np
+import matplotlib.pyplot as plt
+import mlai
+from scipy.stats import norm as sp_norm}
+
+\plotcode{x = np.linspace(-5, 5, 1000)
+# True bimodal p
+p = 0.5*sp_norm.pdf(x, -1.8, 0.65) + 0.5*sp_norm.pdf(x, 1.8, 0.65)
+p = p / np.trapz(p, x)
+
+# Forward KL minimiser: Gaussian matched to mean and variance of p
+mu_p = np.trapz(x*p, x)
+var_p = np.trapz((x - mu_p)**2 * p, x)
+q_fwd = sp_norm.pdf(x, mu_p, np.sqrt(var_p))
+
+# Reverse KL minimiser: concentrate on one mode
+q_rev = sp_norm.pdf(x, -1.8, 0.65)
+
+fig, axes = plt.subplots(1, 2, figsize=(10, 4))
+
+axes[0].fill_between(x, p, alpha=0.25, color='C0', label='$p(x)$')
+axes[0].plot(x, q_fwd, 'C1', lw=2, label=r'$q$ min $D_\mathrm{KL}(p\|q)$')
+axes[0].set_title('Forward KL: mass-covering')
+axes[0].legend(fontsize=9); axes[0].set_xlabel('$x$')
+
+axes[1].fill_between(x, p, alpha=0.25, color='C0', label='$p(x)$')
+axes[1].plot(x, q_rev, 'C2', lw=2, label=r'$q$ min $D_\mathrm{KL}(q\|p)$')
+axes[1].set_title('Reverse KL: mode-seeking')
+axes[1].legend(fontsize=9); axes[1].set_xlabel('$x$')
+
+plt.tight_layout()
+mlai.write_figure('forward-reverse-kl.svg', directory='\writeDiagramsDir/ml')}
+
+\figure{\includediagram{\diagramsDir/ml/forward-reverse-kl}{80%}}{Forward KL (left) produces a broad Gaussian covering both modes; reverse KL (right) concentrates on one mode. Both have the same local curvature at $p=q$: the Fisher metric.}{forward-reverse-kl}
+
+\newslide{KL Curvature = Fisher Metric}
+
+\slides{
+$$
+D_{\mathrm{KL}}(p_{\boldsymbol{\theta}+\mathrm{d}\boldsymbol{\theta}}\|p_{\boldsymbol{\theta}}) = \tfrac{1}{2}\,\mathrm{d}\boldsymbol{\theta}^\top G(\boldsymbol{\theta})\,\mathrm{d}\boldsymbol{\theta} + O(\|\mathrm{d}\boldsymbol{\theta}\|^3)
+$$
+* $G$ = curvature of KL at coincidence
+* Two KLs, one local metric
+* Pythagorean theorem holds on dually flat submanifolds
+}
 <!-- SNIPPET: _information-game/includes/fisher-information-geometry.md -->
 
 
@@ -299,7 +447,7 @@ These geometric properties will be essential when we study constrained informati
 
 <!-- SNIPPET: _information-game/includes/fisher-metric-worked.md -->
 
-\newslides{The Fisher Metric}
+\newslide{The Fisher Metric}
 
 \slides{A statistical manifold: each point is a distribution $p(x\mid\theta)$.}
 
@@ -338,7 +486,7 @@ mlai.write_figure('gaussian-fisher-eigen.svg', directory='\writeDiagramsDir/ml')
 
 <!-- SNIPPET: _information/includes/crooks-thermodynamic-length.md -->
 
-\newslides{Thermodynamic Length (Crooks 2007)}
+\newslide{Thermodynamic Length (Crooks 2007)}
 
 \slides{For a slow protocol $\lambda(t)$ on the equilibrium manifold, define length with the Fisher metric.}
 
