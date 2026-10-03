@@ -7,13 +7,17 @@ venue: FW26, William Gates Building
 room: FW26
 transition: None
 abstract: >
-  Course motivation, mechanics and the 'Socratic' worksheet method; a review of
-  probability; the course theme of probability driving possibilities and entropy
-  driving impossibilities. Entropy reminder; energy as used in machine learning
-  (quadratic loss, cross-entropy, Boltzmann-machine pairwise energy); perpetual
-  motion and human bandwidth. Boltzmann seed; culmination from loss landscapes as
-  potential energy through stochastic descent to the Hamiltonian and HMC (Neal).
-  Worksheet 1 released for interrogation before lecture 2.
+  In this lecture we motivate the course and describe the mechanics of delivery. 
+  That will involve a review of Laplace's demon and Laplace's gremlin. The aim is
+  to centre the notion of uncertainty in the material. We'll also how we would like
+  to see you deploy that in your course worksheets, where marks will be given for 
+  answers that demonstrate the type of skepticism we see in the Socratic method. 
+  We will give a brief review of probability and then introduce entropy. We will 
+  relate energy to probability through the way the term energy is used in machine
+  learning, which is typically in the form of a "thermodynamic" or "Gibbs" energy
+  rather than a mechanical Hamiltonian. The difference between these will also be 
+  explained. We will release  Worksheet 1 that will need to be submitted before 
+  lecture starts in Week 2. 
 author:
 - given: Neil D.
   family: Lawrence
@@ -103,7 +107,14 @@ reading:
 
 \subsection{Doubt}
 
+\slidesincremental{<!-- Slide bullets that summarise the notes below -->}
 
+\notes{What Laplace's gremlin implies in practice is that we can never be certain about outcome, so doubt is an inevitable consequence of
+our lack of knowledge. It is what drives us to develop quantitative notions for uncertainty. We have already introduced probability, but the
+main focus of the course will be *entropy*. The concept that unifies information and entropy, and therefore we argue (perhaps) intelligence.}
+
+\notes{We will look to apply these ideas to how we approach our learning as well as what we learn. Bringing doubt into your own reasoning is a
+way in which you can develop your understanding. Learning to express that doubt through challenging a statement. The model we will use finds its origins in Socrates.}
 
 \subsection{Worksheets and LLMs: Can you be Socrates?}
 
