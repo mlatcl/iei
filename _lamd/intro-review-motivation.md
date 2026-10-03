@@ -120,6 +120,14 @@ reading:
 \notes{For Socrates these are curated dialogues (written by Plato, e.g. @Fowler-euthyphro14). So its normally the case that his challenges hit home. In your case, that won't normally be the case. And we don't expect you to curate your dialogue. What we'd like instead is a period of inquiry that is then summarised by a single dialogue that is played out with one LLM in a short session of 10 prompts and responses.}
 
 
+\subsection{Dialectical Vertigo}
+
+
+> What you are describing, Skepticus, is a chronic but minor ailment of philosophers. It is called dialectical vertigo, and its cure is the immediate application of straightforward argumentation.
+>
+> The Grasshopper to Skepticus in @Suits-grasshopper70
+
+
 \slidesincremental{
 * Curiosity: open a question; let the model give a long answer
 * Skepticism: take a claim and press it — "if that were true, then ..."
