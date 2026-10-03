@@ -118,7 +118,7 @@ way in which you can develop your understanding. Learning to express that doubt 
 
 \subsection{Worksheets and LLMs: Can you be Socrates?}
 
-\newslides{Curiosity, Then Skepticism}
+\newslide{Curiosity, Then Skepticism}
 
 \notes{The general approach we'd like to take to this course is that of a "community of inquiry" (see Chapter 4, @Lipman-thinking12). The unusual modern twist on this notion is that the LLMs themselves become part of that community.}
 
@@ -146,6 +146,8 @@ So in other words we are asking you to take on the role of Socrates in these con
 >
 > The Grasshopper to Skepticus in *The Grassohopper: Games, Life and Utopia* [@Suits-grasshopper78 pg 37]
 
+\newslide{Interacting with LLMs}
+
 \slidesincremental{
 * Curiosity: open a question; let the model give a long answer (like Grasshopper)
 * Skepticism: take a claim and press it — "if that were true, then ..." (like Skepticus)
@@ -153,7 +155,7 @@ So in other words we are asking you to take on the role of Socrates in these con
 }
 
 
-\newslides{Worksheet Habit}
+\newslide{Worksheet Habit}
 
 \slidesincremental{
 * Explore with as many models as you like
@@ -195,7 +197,7 @@ So in other words we are asking you to take on the role of Socrates in these con
 
 \comment{I think this means worksheet 1 could also be about the general ideas presented here? Allowing them to bring skepticism. The core idea of bandwidth limitations and how it effects the architecture of an intelligence?}
 
-\newslides{Shannon Next Lecture}
+\newslide{Shannon Next Lecture}
 
 \slides{We are already counting in Shannon's bits — embodiment is a communication bottleneck, not yet a theorem.}
 
@@ -218,7 +220,7 @@ So in other words we are asking you to take on the role of Socrates in these con
 \include{_ml/includes/energy-in-machine-learning.md}
 \subsection{Boltzmann Seed}
 
-\newslides{A Prescription to Interrogate}
+\newslide{A Prescription to Interrogate}
 
 \slides{For fixed mean energy $U$, the maximum-entropy occupation is the Boltzmann distribution --- same $E$ grammar as the ML energies above.}
 
