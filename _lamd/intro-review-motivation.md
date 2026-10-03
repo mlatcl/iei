@@ -124,28 +124,34 @@ way in which you can develop your understanding. Learning to express that doubt 
 
 \notes{Each of us will have different perspectives on what an LLM does and does not provide. You are welcome to bring those perspectives into your work. In particular, for each worksheet, you will be asked to reflect on the LLM responses and the process. Part of that reflection should be specific to the exercise and what you learnt about the subject. But I would like part of that reflection to be general about your understanding of the LLM and what it does and doesn't provide. For worksheets 2, 3, and 4 a portion of that reflection will be on how you feel your understanding of LLMs as a tool of inquiry has evolved (if it evolved!).} 
 
-\notes{The premise on which the assessment model is based is twofold (1) a form of questioning enquiry generally called "the Socratic method" is an informative way of exploring a topic. (2) Current generation of LLMs is weak at sustained Socratic dialogue. They tend to answer expansively. (3) The "Socratic method" can be deployed by reversing the role of Socrates and the student, so you will need to take on the role of Socrates.}
+\notes{The assessment model is based on is 
+1. a form of questioning enquiry generally called "the Socratic method" is an informative way of exploring a topic
+2. an impression that the current generation of LL models is weak when asked to sustain Socratic dialogue. Answers tend to be expansive and when read carefully can lead to 'diaclectic vertigo'
+3. The new idea we're testing "Socratic method" can be deployed by reversing the role of Socrates and the student.
+
+So in other words we are asking you to take on the role of Socrates in these conversations.
+}
 
 \notes{The general background is an idea that in order to develop your understanding of a subject through interaction with an LLM you need two components to your enquiry: *curiousity* and *skepticism*. The curiousity allows you to generate the prompt and the LLM to regurgitate some of its knowled (or perform searches that it summarises). But the skepticism engages with that summary through challenging the conclusions that the LLM has. In the Socratic *elenchus* that challenge is through pointing out a logical inconsistency that arises  (@Vlastos-socratic93), perhaps through a side implication. For our purpose that challenge may not take exactly that form. But it should push back on the narrative the LLM provides. Generating such push back also requires you to engage with the material the LLM has provided.}
 
 \notes{For Socrates these are curated dialogues (written by Plato, e.g. @Fowler-euthyphro14). So its normally the case that his challenges hit home. In your case, that won't normally be the case. And we don't expect you to curate your dialogue. What we'd like instead is a period of inquiry that is then summarised by a single dialogue that is played out with one LLM in a short session of 10 prompts and responses.}
 
+\notes{Classical Socratic practice (*elenchus*) tests consistency by questioning, not by lecturing. Contemporary seminar pedagogy keeps the same habit: the questioner holds the inquiry. Current LLMs default to exposition and agreement; they rarely sustain adversarial follow-ups without being steered. Assigning the student the Socrates role forces engagement with the subject matter rather than passive acceptance of a fluent summary.}
 
 \subsection{Dialectical Vertigo}
 
+\notes{In the book, The Grasshoppe @Suits-grasshopper70, the eponymous protaganist, Grasshopper, asks his student, Skepticus, to take on this role.}
 
 > What you are describing, Skepticus, is a chronic but minor ailment of philosophers. It is called dialectical vertigo, and its cure is the immediate application of straightforward argumentation.
 >
-> The Grasshopper to Skepticus in @Suits-grasshopper70
-
+> The Grasshopper to Skepticus in @Suits-grasshopper70 pg 37
 
 \slidesincremental{
-* Curiosity: open a question; let the model give a long answer
-* Skepticism: take a claim and press it — "if that were true, then ..."
-* Active thought is the point; the transcript is evidence of the probe
+* Curiosity: open a question; let the model give a long answer (like Grasshopper)
+* Skepticism: take a claim and press it — "if that were true, then ..." (like Skepticus)
+* Active thought is the point; the submitted transcript will be evidence of the probe
 }
 
-\notes{Classical Socratic practice (*elenchus*) tests consistency by questioning, not by lecturing. Contemporary seminar pedagogy keeps the same habit: the questioner holds the inquiry. Current LLMs default to exposition and agreement; they rarely sustain adversarial follow-ups without being steered. Assigning the student the Socrates role forces engagement with the subject matter rather than passive acceptance of a fluent summary.}
 
 \newslides{Worksheet Habit}
 
