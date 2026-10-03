@@ -150,8 +150,8 @@
 </ul>
 </div>
 </section>
-<section id="information-entropy-and-intelligence-course-notebook-setup" class="slide level2">
-<h2>Information, entropy and intelligence course notebook setup</h2>
+<section id="information-energy-and-intelligence-course-notebook-setup" class="slide level2">
+<h2>Information, energy and intelligence course notebook setup</h2>
 <!--setupplotcode{import seaborn as sns
 sns.set_style('darkgrid')
 sns.set_context('paper')
@@ -280,10 +280,9 @@ if(f.length>0){f[0].style.display='block';}
 \]</span></p>
 <p><strong>Solution:</strong> <span class="math inline">\(x = y = \frac{1}{2}\)</span>, <span class="math inline">\(\lambda = -\frac{1}{2}\)</span></p>
 <p><em>Closest point on a line; same pattern as constrained energy or <span class="math inline">\(\|\mathbf{w}\|^2\)</span> with a linear constraint</em></p>
-<!-- SNIPPET: _physics/includes/laplace-insufficient-reason.md -->
 </section>
-<section id="laplace-and-the-principle-of-insufficient-reason" class="slide level2">
-<h2>Laplace and the Principle of Insufficient Reason</h2>
+<section id="principle-of-insufficient-reason" class="slide level2">
+<h2>Principle of Insufficient Reason</h2>
 </section>
 <section id="section" class="slide level2">
 <h2></h2>
@@ -297,21 +296,26 @@ if(f.length>0){f[0].style.display='block';}
 <aside class="notes">
 Pierre-Simon Laplace 1749-1827.
 </aside>
-<p>Week 1: Laplace suggested that we treat ignorance with probability. He applied this idea in his estimates of probabilities. He asked himself the question how should we assign <span class="math inline">\(p\)</span> when we know almost nothing?</p>
+</section>
+<section id="principle-of-insufficient-reason-1" class="slide level2">
+<h2>Principle of Insufficient Reason</h2>
 <div>
 <ul>
+<li class="fragment">How to assign probability?</li>
 <li class="fragment"><span class="math inline">\(n\)</span> mutually exclusive, exhaustive outcomes</li>
 <li class="fragment">Nothing distinguishes one from another</li>
 <li class="fragment">Assign equal probability: <span class="math inline">\(p_i = 1/n\)</span></li>
 </ul>
 </div>
-<aside class="notes">
-Bridge from week 1 (gremlin / ignorance as probability) to MaxEnt. Keep this short: insufficient reason is the zero-constraint special case.
-</aside>
-<p>This is Laplace’s example from: <em>Philosophical Essay on Probabilities</em> <span class="citation" data-cites="Laplace-essai14">(Laplace, 1814)</span>.</p>
+</section>
+<section id="example-will-the-sun-rise-tomorrow" class="slide level2">
+<h2>Example: Will the sun rise tomorrow?</h2>
 <div class="centered" style="">
 <a href="https://play.google.com/books/reader?id=1YQPAAAAQAAJ&amp;pg=PA16"><img data-src="https://mlatcl.github.io/iei/slides/diagrams/books/1YQPAAAAQAAJ-PA16.png" /></a>
 </div>
+</section>
+<section id="section-1" class="slide level2">
+<h2></h2>
 <div>
 <ul>
 <li class="fragment">Unknown daily rate <span class="math inline">\(\theta\in[0,1]\)</span>; insufficient reason <span class="math inline">\(\Rightarrow\)</span> uniform prior on <span class="math inline">\(\theta\)</span></li>
@@ -395,6 +399,21 @@ if(f.length>0){f[0].style.display='block';}
 </object>
 </div>
 </div>
+</section>
+<section id="section-2" class="slide level2">
+<h2></h2>
+<div class="figure">
+<div id="laplace-succession-figure-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/laplace-succession012.svg" width="70%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+Each update is belief <span class="math inline">\(\times\)</span> likelihood <span class="math inline">\(\rightarrow\)</span> posterior; a reset frame then promotes the posterior to the new prior (likelihood cleared). Early steps use one more sunrise (<span class="math inline">\(\propto\theta\)</span>); the jump to <span class="math inline">\(n=20\)</span> uses the likelihood for <span class="math inline">\(17\)</span> further rises (<span class="math inline">\(\propto\theta^{17}\)</span>).
+</aside>
+</section>
+<section id="entropy-day-by-day" class="slide level2">
+<h2>Entropy Day by Day</h2>
 <p>Track differential entropy of the belief <span class="math inline">\(p(\theta)\)</span> as sunrises arrive.</p>
 <div>
 <ul>
@@ -407,8 +426,14 @@ if(f.length>0){f[0].style.display='block';}
 <aside class="notes">
 Board the one-line integral for <span class="math inline">\(H_n\)</span>. Emphasise: entropy of the <em>belief about</em> <span class="math inline">\(\theta\)</span> falls (becomes more negative); that fall is the information gained. Uniform<span class="math inline">\([0,1]\)</span> has <span class="math inline">\(H=0\)</span> by convention of differential entropy — not ``zero uncertainty’’ in the Shannon discrete sense.
 </aside>
+</section>
+<section id="section-3" class="slide level2">
+<h2></h2>
 <object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/laplace-succession-entropy.svg" width="70%" style=" ">
 </object>
+</section>
+<section id="from-insufficient-reason-to-maxent" class="slide level2">
+<h2>From Insufficient Reason to MaxEnt</h2>
 <div>
 <ul>
 <li class="fragment">Insufficient reason: uniform when we know only the outcomes (or only <span class="math inline">\(\theta\in[0,1]\)</span>)</li>
@@ -421,7 +446,6 @@ Board the one-line integral for <span class="math inline">\(H_n\)</span>. Emphas
 <aside class="notes">
 The punchline: MaxEnt is Laplace’s principle with constraints. Uniform / rule of succession are the empty-moment cases; Boltzmann and the Gaussian arrive when we add moment constraints.
 </aside>
-<!-- /SNIPPET: _physics/includes/laplace-insufficient-reason.md -->
 </section>
 <section id="jaynes-and-maximum-entropy" class="slide level2">
 <h2>Jaynes and Maximum Entropy</h2>
@@ -460,7 +484,7 @@ Ed Jaynes who developed the maximum entropy principle
 <section id="die-roll-simulation" class="slide level2">
 <h2>Die Roll Simulation</h2>
 </section>
-<section id="section-1" class="slide level2">
+<section id="section-4" class="slide level2">
 <h2></h2>
 <div class="figure">
 <div class="figure-frame" id="dieroll-simulation-figure">
@@ -918,9 +942,6 @@ Jaynes, E.T., 2003. Probability theory: The logic of science. Cambridge Universi
 </div>
 <div id="ref-Jaynes-information57" class="csl-entry" role="doc-biblioentry">
 Jaynes, E.T., 1957. Information theory and statistical mechanics. Physical Review 106, 620–630. <a href="https://doi.org/10.1103/PhysRev.106.620">https://doi.org/10.1103/PhysRev.106.620</a>
-</div>
-<div id="ref-Laplace-essai14" class="csl-entry" role="doc-biblioentry">
-Laplace, P.S., 1814. Essai philosophique sur les probabilités, 2nd ed. Courcier, Paris.
 </div>
 <div id="ref-MacKay-information03" class="csl-entry" role="doc-biblioentry">
 MacKay, D.J.C., 2003. Information theory, inference and learning algorithms. Cambridge University Press, Cambridge, U.K.
