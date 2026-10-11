@@ -81,17 +81,17 @@ reading:
 
 
 
-\subsection{From the Seed to the Formula}
+\subsection{ML to Thermodynamics}
 
-\notes{Last week we introduced energy and entropy from a machine learning perspective. That allowed us to write down the Gibbs distribution,
-\[
+\notes{Last week we how energy has been used in machine learning and how entropy is applied to probability distributions. By looking at a stationary distribution with a given energy we could write down the *Gibbs distribution*,
+$$
 p_i = \frac{e^{-\beta E_i}}{Z} \quad Z = \sum_i e^{-\beta E_i}.
-\]
-Today we're going deeper into Boltzman's physical interpretation of this equation, and the decomposition that underpins the famous equation
-\[
+$$
+Boltzmann came at energy and entropy from the perspective of thermodynamics, Clausius and Carnot, but today we will show the relationship between this stationary (and equilibrium) distribution and the macroscopic formulae of Mayer, Kelvin, Joule, Helmholtz, Clausius and Carnot. Today we're going deeper into Boltzman's (and Maxwell, Gibbs and Einstein) microscopic or *ensemble* interpretation of this equation, and a derivation that that underpins the famous equation
+$$
 U = W + TS
-\]
-where $U=\expSamp{E}$ is total energy (or inner energy), $F$ is the free engineer, $T$ is temperature and $S$ is physical entropy, i.e. $k_B H = -k_B \sum_i p_i \log p_i$.}
+$$
+where $U=\expSamp{E}$ is total energy (or inner energy), $F$ is the free engergy, $T$ is temperature and $S$ is physical entropy. Here what we mean by physical entropy, is the translation of dimensionless energy, $H$, into physical units of Joules per degree through Boltzmann's constant, $k_B$, i.e. $k_B H = -k_B \sum_i p_i \log p_i$.}
 
 
 \include{_iei/includes/iei-notebook-setup.md}
