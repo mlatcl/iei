@@ -9,6 +9,8 @@ coverage/
 *.swp
 *.swo
 *~
+\#*\#
+.\#*
 
 # Ignore VSCode workspace settings
 *.code-workspace
