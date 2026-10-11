@@ -93,7 +93,6 @@ reading:
 
 
 \include{_iei/includes/iei-notebook-setup.md}
-\subsection{Motivation}
 \include{_information/includes/perpetual-motion-superintelligence-analogy.md}
 \include{_physics/includes/laplace-portrait.md}
 \include{_physics/includes/laplaces-determinism.md}
