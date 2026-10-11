@@ -10,7 +10,7 @@ header-includes:
   - \newcommand{\fieldbox}[1]{\fbox{\parbox[t][3.2em][t]{\dimexpr0.48\textwidth-2\fboxsep-2\fboxrule\relax}{\textbf{#1}\\[1.4ex]\rule{0.9\linewidth}{0.5pt}}}}
 ---
 
-Print this form, write **by hand**, then scan or photograph clearly and upload as a **separate PDF**.
+Print this form, write **by hand**, then either scan or photograph clearly and upload as a **separate PDF**, or hand in a paper copy at the start of lecture 2.
 Do **not** type the reflection. Do **not** write your name or CRSid.
 
 \vspace{1.2ex}
@@ -19,17 +19,18 @@ Do **not** type the reflection. Do **not** write your name or CRSid.
 
 \vspace{1.2ex}
 
-**Prompt** (about 300 words; use the lined pages):
+**Prompt** (up to about 300 words; use the lined pages):
 
-- What did the dialogue teach you about why Shannon called information *entropy*,
-  and about the Tolman / Wiener / Gibbs trail versus the von Neumann anecdote?
-- Where was the model strong? Where was it thin, circular, or inconsistent?
-- Did it treat entropy as a *no-go* (what you cannot do) or as a *recipe*
-  (what you should do) --- and which half did it miss?
+- What did the exchange teach you about the history of the word *entropy*?
+- What did you learn about the model's way of presenting information?
+- How does this relate to the course material as you understand it?
+- Was this approach useful in developing your understanding of the topic,
+  or were there other techniques you used?
 
 ```{=latex}
-{\footnotesize Upload as \texttt{candidatenumber\_worksheet1\_reflection.pdf}.
-Dialogue file is separate: \texttt{candidatenumber\_worksheet1\_dialogue.md}.}
+{\footnotesize Upload as \texttt{CANDIDATENUMBER\_worksheet1\_reflection.pdf}
+(or hand in a paper copy). Dialogue file is separate:
+\texttt{CANDIDATENUMBER\_worksheet1\_dialogue.md}.}
 ```
 
 \vspace{0.8ex}
