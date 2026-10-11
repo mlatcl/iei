@@ -57,7 +57,12 @@ Gemfile.lock
 
 # Ignore by default all hidden files except .gitignore
 .*
-!.gitignore 
+!.gitignore
+
+# Local instructor admin (class list, enrolment email, ACS reminders).
+# Covered by .* above; listed explicitly so the convention is obvious.
+# .admin/
+
 
 # VibeSafe System Files (Auto-added during installation)
 # These are VibeSafe infrastructure - not your project content

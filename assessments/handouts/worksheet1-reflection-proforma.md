@@ -1,0 +1,56 @@
+---
+title: "L172 Worksheet 1 --- Handwritten reflection"
+subtitle: "Information, Entropy and Intelligence"
+geometry: margin=20mm
+fontsize: 11pt
+pagestyle: empty
+header-includes:
+  - \usepackage{pgffor}
+  - \newcommand{\ruledlines}[1]{\foreach \n in {1,...,#1}{\noindent\rule{\textwidth}{0.4pt}\\[5.2mm]}}
+  - \newcommand{\fieldbox}[1]{\fbox{\parbox[t][3.2em][t]{\dimexpr0.48\textwidth-2\fboxsep-2\fboxrule\relax}{\textbf{#1}\\[1.4ex]\rule{0.9\linewidth}{0.5pt}}}}
+---
+
+Print this form, write **by hand**, then scan or photograph clearly and upload as a **separate PDF**.
+Do **not** type the reflection. Do **not** write your name or CRSid.
+
+\vspace{1.2ex}
+
+\noindent\fieldbox{Candidate number}\hfill\fieldbox{Date}
+
+\vspace{1.2ex}
+
+**Prompt** (about 300 words; use the lined pages):
+
+- What did the dialogue teach you about why Shannon called information *entropy*,
+  and about the Tolman / Wiener / Gibbs trail versus the von Neumann anecdote?
+- Where was the model strong? Where was it thin, circular, or inconsistent?
+- Did it treat entropy as a *no-go* (what you cannot do) or as a *recipe*
+  (what you should do) --- and which half did it miss?
+
+```{=latex}
+{\footnotesize Upload as \texttt{candidatenumber\_worksheet1\_reflection.pdf}.
+Dialogue file is separate: \texttt{candidatenumber\_worksheet1\_dialogue.md}.}
+```
+
+\vspace{0.8ex}
+
+\noindent\rule{\textwidth}{0.6pt}
+
+\vspace{0.6ex}
+
+\ruledlines{16}
+
+\newpage
+
+```{=latex}
+{\footnotesize L172 Worksheet 1 reflection --- candidate number:
+\rule{45mm}{0.5pt}\hfill page 2 of 2}
+```
+
+\vspace{0.8ex}
+
+\noindent\rule{\textwidth}{0.6pt}
+
+\vspace{0.6ex}
+
+\ruledlines{26}

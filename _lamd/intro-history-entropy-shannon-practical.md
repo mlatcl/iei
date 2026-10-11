@@ -55,7 +55,7 @@ Use the templates in `assessments/handouts/`. Do **not** put your name or CRSid 
 \notes{
 1. **Curiosity** then **skepticism** — see the mandated opening pair below.
 2. Submit **exactly ten** prompt/answer turns. Turns 1--2 are fixed in topic; turns 3--10 are yours.
-3. You may try several LLMs. Submit **one** conversation only. Record the model in the YAML header.
+3. **Planning is open; submission is one chat.** You may use any materials and any LLMs you like while planning or drafting. What you submit is only the **final** exchange: ten turns from **one continuous conversation** with a single model (do not stitch turns from different chats or sessions). In the YAML header, record that model's name and version (or exact model id). You need not list practice runs or other tools.
 }
 
 \section{Subject: Why Did Shannon Call It Entropy?}
@@ -86,7 +86,7 @@ Lecture 2 will account for free energy $F=U-TS$; lecture 3 will derive Shannon's
 \section{What to Submit}
 
 \notes{
-* **Dialogue** (markdown template): YAML frontmatter + exactly ten Prompt/Answer pairs (exchanges 1--2 on the mandated topic).
+* **Dialogue** (markdown template): YAML frontmatter (including LLM name and version) + exactly ten Prompt/Answer pairs from one continuous conversation (exchanges 1--2 on the mandated topic).
 * **Reflection** (handwritten): print the proforma, write about 300 words by hand, scan to PDF. What did the exchange teach you about the history of the word and about the model's habits? Where was it strong or thin? No-go versus recipe?
 }
 
