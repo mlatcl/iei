@@ -55,12 +55,6 @@ _lamd/*.log
 _lamd/talk-people.gpp
 _lamd/*-e
 
-# LaMD / maketalk generated outputs (rebuild with maketalk / ./compile.sh)
-_notes/
-_practicals/
-_lectures/
-_notebooks/
-
 # Ignore compiled site output
 _site/
 
