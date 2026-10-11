@@ -14,7 +14,7 @@ This module uses 8 assessment components totalling 100%.
 | ID | Title | Type | Mode | Weight | Due Week | Delivery |
 |---|---|---|---|---|---|---|
 | Q1 | In-Class Quiz 1: Probability and Entropy Foundations | in-class-quiz | summative | 10% | 2 | in-class |
-| W1 | Worksheet 1: Socratic Dialogue on Boltzmann and Entropy | mini-project | summative | 15% | 2 | take-home |
+| W1 | Worksheet 1: Socratic Dialogue on the History of Entropy | mini-project | summative | 15% | 2 | take-home |
 | Q2 | In-Class Quiz 2: MaxEnt, Exponential Family, Landauer | in-class-quiz | summative | 10% | 5 | in-class |
 | W2 | Worksheet 2: Maxwell's Demon, MaxEnt, and the Exponential Family | mini-project | summative | 15% | 5 | take-home |
 | Q3 | In-Class Quiz 3: Fisher Metric, Natural Gradient, Dually Flat Geometry | in-class-quiz | summative | 10% | 7 | in-class |
@@ -30,11 +30,11 @@ This module uses 8 assessment components totalling 100%.
 **Estimated workload**: 0.2h
 **AI robustness**: Invigilated in-class test on Moodle. Random draw from a large bank reduces repeatability. No external resources.
 
-### W1: Worksheet 1: Socratic Dialogue on Boltzmann and Entropy
+### W1: Worksheet 1: Socratic Dialogue on the History of Entropy
 
 **Type**: mini-project | **Weight**: 15% | **Due week**: 2 | **Delivery**: take-home
 **Estimated workload**: 3.0h
-**AI robustness**: Students must pose curiosity and skepticism prompts as Socrates; authenticity is verified by the paired in-class Quiz 1 (Week 2), which tests probability/entropy foundations and Week 1 seeds under invigilated conditions.
+**AI robustness**: Students must pose curiosity and skepticism prompts as Socrates in exactly ten turns from one continuous conversation with a single LLM (model name and version declared); planning may use any tools, but only the final exchange is submitted. The reflection is handwritten on a scanned proforma. Authenticity is further verified by the paired in-class Quiz 1 (Week 2).
 
 ### Q2: In-Class Quiz 2: MaxEnt, Exponential Family, Landauer
 

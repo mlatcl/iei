@@ -41,6 +41,10 @@ Equip students to reason rigorously about entropy across thermodynamics, informa
 
 Four take-home worksheets (15% each, 60% total). Worksheet 1 is a Socratic LLM dialogue plus reflection; later worksheets combine a short Python notebook with written reflection. Four short in-class Moodle quizzes (10% each, 40% total).
 
+## Getting help
+
+Ask module questions on [GitHub Discussions](https://github.com/mlatcl/iei/discussions). Start from the pinned [Course Q&A — start here](https://github.com/mlatcl/iei/discussions/1) post, then open a new Q&A discussion for each question. Keep personal or confidential matters (extensions, marks, candidate numbers) off Discussions — use email or the course office instead.
+
 ## Recommended Reading
 
 Shannon (1948), *Bell System Technical Journal*; Jaynes (1957), *Physical Review*; Landauer (1961), *IBM Journal*; Amari & Nagaoka (2000), *Methods of Information Geometry* (Chapters 1–3); Crooks (2007), *Physical Review Letters*. Cover & Thomas (2006) and MacKay (2003) as background. Welling, Lu and Holdijk (2026), *Generative AI and Stochastic Thermodynamics* (GAIST), is a supplementary monograph: Chapter 3 for free energy, Chapter 5 for the ELBO, Chapters 14 and 22 for the Wasserstein and Schrödinger-bridge geometries. It is not a substitute for Crooks (2007) or Amari.
