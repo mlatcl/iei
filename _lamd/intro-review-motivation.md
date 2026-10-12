@@ -73,12 +73,13 @@ reading:
 
 \subsection{Course Mechanics}
 
-\notes{Eight lectures, Tuesdays, this room. Four in-class Moodle quizzes, ten minutes, at the start of lectures 2, 5, 7 and 8. Students need a device. No notes, no network, no LLMs during the quiz. Four take-home worksheets. Worksheet 1 is a Socratic LLM dialogue plus reflection; later worksheets mix code and shorter LLM probes using the same curiosity–skepticism habit. Worksheets are released in lectures 1, 4, 6 and 7 and due at the start of lectures 2, 5, 7 and 8 respectively.}
+\notes{Eight lectures, Tuesdays, this room. Four in-class Moodle quizzes, ten minutes, at the start of lectures 2, 5, 7 and 8. Students need a device. No notes, no network, no LLMs during the quiz. Four take-home worksheets. Worksheet 1 is a Socratic LLM dialogue plus reflection; later worksheets mix code and shorter LLM probes using the same curiosity–skepticism habit. Worksheets are released in lectures 1, 4, 6 and 7 and due at the start of lectures 2, 5, 7 and 8 respectively. For module questions — clarifications, logistics, conceptual confusion — use [GitHub Discussions](https://github.com/mlatcl/iei/discussions); start from the pinned [Course Q&A — start here](https://github.com/mlatcl/iei/discussions/1) post and open a new Q&A thread per question. Personal or confidential matters stay on email or the course office.}
 
 \slidesincremental{
 * Four Moodle quizzes (start of lectures 2, 5, 7, 8)
 * Four worksheets (W1: Socratic dialogue; later: notebook + reflection)
-* Marking is anonymous: candidate number, never name or CRSid on the file
+* Content anonymous (candidate number); Moodle filenames use CRSid
+* Questions: GitHub Discussions (new Q&A thread each time)
 }
 
 \subsection{Questions We Will Return To}
@@ -158,16 +159,16 @@ So in other words we are asking you to take on the role of Socrates in these con
 
 \slidesincremental{
 * Explore with as many models as you like
-* Submit **one** conversation of about ten prompt/answer turns
+* Submit **one** conversation of exactly ten prompt/answer turns
 * Early turns: open and curious; later turns: skeptical probes
-* Then a short reflection on what you learned
+* Then a short **handwritten** reflection (print the proforma; scan to PDF)
 }
 
-\notes{Worksheets are marked with 5 points for curiosity, 5 for skepticism, and 5 points for the reflection (15% of the module). You will be provided with a markdown template for your answers. The YAML frontmatter records candidate number, model, and interface. Do not put your name or CRSid anywhere on the submission (Cambridge coursework is marked anonymously wherever possible) use your candidate number (Moodle blind grading number or the assignment number issued by the course office).}
+\notes{Worksheets are marked with 5 points for curiosity, 5 for skepticism, and 5 points for the reflection (15% of the module). Worksheet 1 uses a markdown dialogue template (YAML records candidate number, model, and interface) and a separate handwritten reflection proforma. Moodle upload names follow the departmental pattern `L172_<CRSid>_worksheet1_dialogue.md` and `L172_<CRSid>_worksheet1_reflection.pdf`. Do not put your name or CRSid *inside* the files or on the proforma — use your candidate number only (Moodle blind grading number or the assignment number issued by the course office).}
 
 \slidesincremental{
-* Template: assessments/handouts/ (dialogue + reflection)
-* Filename: `candidatenumber_worksheet1_dialogue.md` (and reflection)
+* Templates: assessments/handouts/ (dialogue.md + reflection proforma)
+* `L172_<CRSid>_worksheet1_dialogue.md` and `…_reflection.pdf` (scan)
 * Quiz 1 (next week) checks foundations you should have met here and in W1
 }
 
@@ -262,10 +263,10 @@ So in other words we are asking you to take on the role of Socrates in these con
 
 \subsection{After This Lecture}
 
-\notes{Worksheet 1: Socratic dialogue on Boltzmann / entropy / free energy *before* lecture 2. About ten turns; curiosity then skepticism; reflection. Use the template. Due 20 October, start of lecture 2. Quiz 1 in the first ten minutes of lecture 2 covers today's probability and entropy review plus the seeds you should have pressed in the worksheet.}
+\notes{Worksheet 1: Socratic dialogue on the *history of the name* entropy --- why Shannon used the word; von Neumann anecdote versus Shannon's Tolman footnote and the Wiener--Gibbs trail. Exactly ten turns (mandated opening pair, then free probes); handwritten reflection on the scanned proforma (separate upload). Use the handouts. Due 20 October, start of lecture 2. Quiz 1 in the first ten minutes of lecture 2 covers today's probability and entropy review plus ideas you should have pressed in the worksheet.}
 
 \slidesincremental{
-* Worksheet 1 released; due 20 October (Socratic dialogue)
+* Worksheet 1 released; due 20 October (Shannon naming dialogue + handwritten reflection)
 * Quiz 1 next week: probability, entropy, Week 1 seeds
 }
 

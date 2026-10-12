@@ -93,6 +93,11 @@ mkdir -p _lectures _notebooks _practicals _projects slides/diagrams
 ### Site shows 404
 Check that `baseurl` in `_config.yml` matches your repository name.
 
+## Local admin (not in git)
+
+Class list, enrolment notes, and ACS marking/feedback reminders live in
+`.admin/` (gitignored). Do not commit student names or CRSids.
+
 ## Next Steps
 
 1. Review `README.md` for detailed documentation

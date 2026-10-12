@@ -9,6 +9,8 @@ coverage/
 *.swp
 *.swo
 *~
+\#*\#
+.\#*
 
 # Ignore VSCode workspace settings
 *.code-workspace
@@ -39,14 +41,19 @@ scripts/quiz_banks/build_banks.py
 assessments/generated/
 
 # LaMD intermediate build artefacts (maketalk) under _lamd/
-# Keep sources (*.md), _lamd.yml, compile.sh, lectures.csv tracked.
+# Keep sources (*.md), _lamd.yml, compile.sh, lectures.csv, worksheets.csv tracked.
 _lamd/*.gpp.markdown
 _lamd/*.ipynb
 _lamd/*.ipynb.markdown
 _lamd/*.html
 _lamd/*.html.markdown
+_lamd/*.notes.*
+_lamd/*.posts.*
+_lamd/*.slides.*
 _lamd/makefile
 _lamd/*.log
+_lamd/talk-people.gpp
+_lamd/*-e
 
 # Ignore compiled site output
 _site/
@@ -57,7 +64,12 @@ Gemfile.lock
 
 # Ignore by default all hidden files except .gitignore
 .*
-!.gitignore 
+!.gitignore
+
+# Local instructor admin (class list, enrolment email, ACS reminders).
+# Covered by .* above; listed explicitly so the convention is obvious.
+# .admin/
+
 
 # VibeSafe System Files (Auto-added during installation)
 # These are VibeSafe infrastructure - not your project content

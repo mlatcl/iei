@@ -5,22 +5,36 @@ This directory contains the source files for your course lectures and practicals
 ## Structure
 
 - `_lamd.yml` - Configuration file for LaMD processing
+- `lectures.csv` - Lecture stubs compiled by `./compile.sh`
+- `worksheets.csv` - Worksheet (`*-practical.md`) stubs compiled by `./compile.sh`
 - `*.md` - Lecture source files in LaMD format
 - `*-practical.md` - Worksheets (compile with `maketalk`; layout: practical)
 
 ## Usage
 
-To compile a lecture, use the `maketalk` command:
+Compile everything listed in the CSVs:
 
 ```bash
 cd _lamd
-maketalk sample-lecture.md
+./compile.sh
 ```
 
-This will generate:
+Or compile one lecture / worksheet:
+
+```bash
+cd _lamd
+maketalk intro-review-motivation.md
+maketalk intro-history-entropy-shannon-practical.md
+```
+
+Lectures generate:
 - HTML lecture page in `../_lectures/`
 - Reveal.js slides in `../slides/`
 - Jupyter notebook in `../_notebooks/`
+
+Worksheets generate HTML under `../_practicals/` (and notebooks when enabled).
+Printable assessment handouts listed in `../assessments/handouts/handouts.csv`
+are built with pandoc (`.tex` / `.pdf`) as a second step in `./compile.sh`.
 
 ## File Naming Convention
 
@@ -33,12 +47,12 @@ There is one session per week, so do not set a `session` field.
 
 Practicals and worksheets should include `-practical` in the name so they are not treated as lectures:
 
-- `01-thermodynamics-practical.md` — Worksheet 1
+- `intro-history-entropy-shannon-practical.md` — Worksheet 1
 - `02-maxent-practical.md` — Worksheet 2
 - `03-geometry-practical.md` — Worksheet 3
 - `04-intelligence-practical.md` — Worksheet 4
 
-Compile a worksheet with `maketalk 01-thermodynamics-practical.md` from this directory. Output goes to `../_practicals/` and `../_notebooks/`.
+Compile a worksheet with `maketalk intro-history-entropy-shannon-practical.md` from this directory. Output goes to `../_practicals/` and `../_notebooks/`.
 
 ## LaMD Commands
 
