@@ -48,7 +48,8 @@
 \setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 \pagestyle{empty}
 \usepackage{pgffor}
-\newcommand{\ruledlines}[1]{\foreach \n in {1,...,#1}{\noindent\rule{\textwidth}{0.4pt}\\[5.2mm]}}
+\AtBeginDocument{\pagestyle{empty}\thispagestyle{empty}}
+\newcommand{\ruledlines}[1]{\par\smallskip\begingroup\offinterlineskip\foreach \n in {1,...,#1}{\vskip 7mm\hrule height 0.4pt}\endgroup\par}
 \newcommand{\fieldbox}[1]{\fbox{\parbox[t][3.2em][t]{\dimexpr0.48\textwidth-2\fboxsep-2\fboxrule\relax}{\textbf{#1}\\[1.4ex]\rule{0.9\linewidth}{0.5pt}}}}
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
@@ -70,12 +71,11 @@
 
 Print this form, write \textbf{by hand}, then either scan or photograph
 clearly and upload as a \textbf{separate PDF}, or hand in a paper copy
-at the start of lecture 2. Do \textbf{not} type the reflection. Do
-\textbf{not} write your name or CRSid.
+at the start of lecture 2. Do \textbf{not} type the reflection.
 
 \vspace{1.2ex}
 
-\noindent\fbox{\parbox[t][3.2em][t]{\dimexpr 0.48\textwidth-2\fboxsep-2\fboxrule\relax}{\textbf{Candidate number}\\[1.4ex]\rule{0.9\linewidth}{0.5pt}}}\hfill\fbox{\parbox[t][3.2em][t]{\dimexpr 0.48\textwidth-2\fboxsep-2\fboxrule\relax}{\textbf{Date}\\[1.4ex]\rule{0.9\linewidth}{0.5pt}}}
+\noindent\fbox{\parbox[t][3.2em][t]{\dimexpr 0.48\textwidth-2\fboxsep-2\fboxrule\relax}{\textbf{CRSid}\\[1.4ex]\rule{0.9\linewidth}{0.5pt}}}\hfill\fbox{\parbox[t][3.2em][t]{\dimexpr 0.48\textwidth-2\fboxsep-2\fboxrule\relax}{\textbf{Date}\\[1.4ex]\rule{0.9\linewidth}{0.5pt}}}
 
 \vspace{1.2ex}
 
@@ -105,13 +105,11 @@ at the start of lecture 2. Do \textbf{not} type the reflection. Do
 
 \rule{\textwidth}{0.6pt}
 
-\vspace{0.6ex}
-
-\foreach \n in {1,...,16}{\noindent\rule{\textwidth}{0.4pt}\\[5.2mm]}
+\par\smallskip\begingroup\offinterlineskip\foreach \n in {1,...,12}{\vskip 7mm\hrule height 0.4pt}\endgroup\par
 
 \newpage
 
-{\footnotesize L172 Worksheet 1 reflection --- candidate number:
+{\footnotesize L172 Worksheet 1 reflection --- CRSid:
 \rule{45mm}{0.5pt}\hfill page 2 of 2}
 
 \vspace{0.8ex}
@@ -120,8 +118,6 @@ at the start of lecture 2. Do \textbf{not} type the reflection. Do
 
 \rule{\textwidth}{0.6pt}
 
-\vspace{0.6ex}
-
-\foreach \n in {1,...,26}{\noindent\rule{\textwidth}{0.4pt}\\[5.2mm]}
+\par\smallskip\begingroup\offinterlineskip\foreach \n in {1,...,28}{\vskip 7mm\hrule height 0.4pt}\endgroup\par
 
 \end{document}

@@ -78,7 +78,7 @@ reading:
 \slidesincremental{
 * Four Moodle quizzes (start of lectures 2, 5, 7, 8)
 * Four worksheets (W1: Socratic dialogue; later: notebook + reflection)
-* Content anonymous (candidate number); Moodle filenames use CRSid
+* Identify with CRSid (filename and form fields; not full name)
 * Questions: GitHub Discussions (new Q&A thread each time)
 }
 
@@ -164,7 +164,7 @@ So in other words we are asking you to take on the role of Socrates in these con
 * Then a short **handwritten** reflection (print the proforma; scan to PDF)
 }
 
-\notes{Worksheets are marked with 5 points for curiosity, 5 for skepticism, and 5 points for the reflection (15% of the module). Worksheet 1 uses a markdown dialogue template (YAML records candidate number, model, and interface) and a separate handwritten reflection proforma. Moodle upload names follow the departmental pattern `L172_<CRSid>_worksheet1_dialogue.md` and `L172_<CRSid>_worksheet1_reflection.pdf`. Do not put your name or CRSid *inside* the files or on the proforma — use your candidate number only (Moodle blind grading number or the assignment number issued by the course office).}
+\notes{Worksheets are marked with 5 points for curiosity, 5 for skepticism, and 5 points for the reflection (15% of the module). Worksheet 1 uses a markdown dialogue template (YAML records CRSid, model, and interface) and a separate handwritten reflection proforma. Moodle upload names follow the departmental pattern `L172_<CRSid>_worksheet1_dialogue.md` and `L172_<CRSid>_worksheet1_reflection.pdf`. Use your CRSid in the YAML and on the proforma; do not write your full name.}
 
 \slidesincremental{
 * Templates: assessments/handouts/ (dialogue.md + reflection proforma)
