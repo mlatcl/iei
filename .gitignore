@@ -62,9 +62,11 @@ _site/
 .bundle/
 Gemfile.lock
 
-# Ignore by default all hidden files except .gitignore
+# Ignore by default all hidden files except .gitignore and CI workflows
 .*
 !.gitignore
+!.github/
+!.github/**
 
 # Local instructor admin (class list, enrolment email, ACS reminders).
 # Covered by .* above; listed explicitly so the convention is obvious.
