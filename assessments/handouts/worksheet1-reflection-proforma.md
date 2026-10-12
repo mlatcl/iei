@@ -6,7 +6,8 @@ fontsize: 11pt
 pagestyle: empty
 header-includes:
   - \usepackage{pgffor}
-  - \newcommand{\ruledlines}[1]{\foreach \n in {1,...,#1}{\noindent\rule{\textwidth}{0.4pt}\\[5.2mm]}}
+  - \AtBeginDocument{\pagestyle{empty}\thispagestyle{empty}}
+  - \newcommand{\ruledlines}[1]{\par\smallskip\begingroup\offinterlineskip\foreach \n in {1,...,#1}{\vskip 7mm\hrule height 0.4pt}\endgroup\par}
   - \newcommand{\fieldbox}[1]{\fbox{\parbox[t][3.2em][t]{\dimexpr0.48\textwidth-2\fboxsep-2\fboxrule\relax}{\textbf{#1}\\[1.4ex]\rule{0.9\linewidth}{0.5pt}}}}
 ---
 
@@ -37,9 +38,7 @@ Do **not** type the reflection. Do **not** write your name or CRSid.
 
 \noindent\rule{\textwidth}{0.6pt}
 
-\vspace{0.6ex}
-
-\ruledlines{16}
+\ruledlines{12}
 
 \newpage
 
@@ -52,6 +51,4 @@ Do **not** type the reflection. Do **not** write your name or CRSid.
 
 \noindent\rule{\textwidth}{0.6pt}
 
-\vspace{0.6ex}
-
-\ruledlines{26}
+\ruledlines{28}
