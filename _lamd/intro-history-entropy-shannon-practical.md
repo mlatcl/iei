@@ -90,7 +90,7 @@ Once you get the hang of it, take the conversation in your own directions.}
 \section{What to Submit}
 
 \notes{
-* **Dialogue** (markdown/frontmatter template): YAML frontmatter (including LLM name and version) + exactly ten exchanges from one continuous conversation (exchanges 1-2 on the mandated topic). Under each `## Exchange N`, use `### User` for your question and `### LLM` for the model's reply. Frontmatter is a format developed initially for the [Jekyll static website generator](https://en.wikipedia.org/wiki/Jekyll_(software)).
+* **Dialogue** (markdown/frontmatter template): YAML frontmatter (including LLM name and version) + exactly ten exchanges from one continuous conversation (exchanges 1-2 on the mandated topic). Here by exchange we mean one prompt from the user (you) and one response from the LLM. Under each `## Exchange N`, use `### User` for your question and `### LLM` for the model's reply. Frontmatter is a format developed initially for the [Jekyll static website generator](https://en.wikipedia.org/wiki/Jekyll_(software)).
 
 * **Reflection** (handwritten): print the proforma, write up to 300 words by hand as a reflection. Either submit as a scanned PDF, or hand in a copy at the start of the lecture. What did the exchange teach you about the history of the word? What did you learn about the model's way of presenting information? How does this relate to the course material as you understand it? Is the approach useful in developing your understanding of the topic? Or were there other techniques you used?
 }
