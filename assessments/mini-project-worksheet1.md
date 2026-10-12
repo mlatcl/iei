@@ -28,7 +28,7 @@ Student-facing brief (LaMD): [`_lamd/intro-history-entropy-shannon-practical.md`
 
 Handouts:
 
-- [`handouts/worksheet1-dialogue-template.md`](handouts/worksheet1-dialogue-template.md) — typed dialogue (exactly 10 exchanges)
+- [`handouts/worksheet1-dialogue-template.md`](handouts/worksheet1-dialogue-template.md) — typed dialogue (exactly 10 exchanges; `### User` / `### LLM` under each)
 - [`handouts/worksheet1-reflection-proforma.md`](handouts/worksheet1-reflection-proforma.md) — pandoc source for the printable handwritten form
 - [`handouts/worksheet1-reflection-template.md`](handouts/worksheet1-reflection-template.md) — student instructions for the scan
 
@@ -40,10 +40,10 @@ Released 13 October (lecture 1). Due Tuesday 20 October 2026, 10:00 (start of le
 
 **Tools:** Students may use any materials or LLMs while planning. The submitted dialogue must be one continuous conversation with a single model; YAML records that model's name and version only.
 
-Submit as **two separate** Moodle uploads (anonymous; candidate number only):
+Submit as **two separate** Moodle uploads. Filenames use CRSid; file contents use candidate number only:
 
-- `candidatenumber_worksheet1_dialogue.md` — exactly ten prompt/answer turns
-- `candidatenumber_worksheet1_reflection.pdf` — scan of the handwritten proforma
+- `L172_<CRSid>_worksheet1_dialogue.md` — exactly ten exchanges (`### User` then `### LLM`)
+- `L172_<CRSid>_worksheet1_reflection.pdf` — scan of the handwritten proforma
 
 Build the proforma PDF with:
 

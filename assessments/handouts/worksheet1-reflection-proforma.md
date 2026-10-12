@@ -28,9 +28,9 @@ Do **not** type the reflection. Do **not** write your name or CRSid.
   or were there other techniques you used?
 
 ```{=latex}
-{\footnotesize Upload as \texttt{CANDIDATENUMBER\_worksheet1\_reflection.pdf}
+{\footnotesize Upload as \texttt{L172\_<CRSid>\_worksheet1\_reflection.pdf}
 (or hand in a paper copy). Dialogue file is separate:
-\texttt{CANDIDATENUMBER\_worksheet1\_dialogue.md}.}
+\texttt{L172\_<CRSid>\_worksheet1\_dialogue.md}.}
 ```
 
 \vspace{0.8ex}

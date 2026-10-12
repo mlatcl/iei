@@ -39,12 +39,12 @@ word_count: 300
 
 \notes{Released after lecture 1 (13 October). Due by 10:00 at the start of lecture 2 (20 October). Estimated three hours. This worksheet is 15% of the module mark (5 curiosity + 5 skepticism + 5 reflection).}
 
-\notes{Submit on Moodle as **two separate uploads**, anonymously:
+\notes{Submit on Moodle as **two separate uploads**. Moodle filenames use your CRSid (departmental convention); the file *contents* stay anonymous (candidate number only):
 
-1. Dialogue (typed markdown): `CANDIDATENUMBER_worksheet1_dialogue.md`
-2. Reflection (scan of handwritten proforma): `CANDIDATENUMBER_worksheet1_reflection.pdf`
+1. Dialogue (typed markdown): `L172_<CRSid>_worksheet1_dialogue.md`
+2. Reflection (scan of handwritten proforma): `L172_<CRSid>_worksheet1_reflection.pdf`
 
-Use the templates in `assessments/handouts/`. Do *not* put your name or CRSid on the files, in the YAML, or on the proforma.}
+Use the templates in `assessments/handouts/`. Do *not* put your name or CRSid in the YAML, on the proforma, or anywhere inside the files — candidate number only.}
 
 \notes{*Note:* Quiz 1 at the start of lecture 2 will check your understanding of the probability and entropy review from lecture 1 as well as the ideas this worksheet asks you to press. You are *not* expected to derive Shannon's $H$ or free energy yet. You *are* expected to open a historical question sharply and notice when the model seems to offer folklore and how that relates to primary sources.}
 
@@ -90,7 +90,7 @@ Once you get the hang of it, take the conversation in your own directions.}
 \section{What to Submit}
 
 \notes{
-* **Dialogue** (markdown/frontmatter template): YAML frontmatter (including LLM name and version) + exactly ten Prompt/Answer pairs from one continuous conversation (exchanges 1-2 on the mandated topic). Frontmatter is a format developed initially for the [Jekyll static website generator](https://en.wikipedia.org/wiki/Jekyll_(software)).
+* **Dialogue** (markdown/frontmatter template): YAML frontmatter (including LLM name and version) + exactly ten exchanges from one continuous conversation (exchanges 1-2 on the mandated topic). Under each `## Exchange N`, use `### User` for your question and `### LLM` for the model's reply. Frontmatter is a format developed initially for the [Jekyll static website generator](https://en.wikipedia.org/wiki/Jekyll_(software)).
 
 * **Reflection** (handwritten): print the proforma, write up to 300 words by hand as a reflection. Either submit as a scanned PDF, or hand in a copy at the start of the lecture. What did the exchange teach you about the history of the word? What did you learn about the model's way of presenting information? How does this relate to the course material as you understand it? Is the approach useful in developing your understanding of the topic? Or were there other techniques you used?
 }
@@ -105,4 +105,4 @@ Once you get the hang of it, take the conversation in your own directions.}
 
 \section{Submission}
 
-\notes{Upload both files to Moodle by 10:00 on Tuesday 20 October (start of lecture 2). Filenames use your **candidate number** only. The dialogue and the scanned reflection are separate submission items.}
+\notes{Upload both files to Moodle by 10:00 on Tuesday 20 October (start of lecture 2). Filenames follow `L172_<CRSid>_worksheet1_…` (dialogue `.md`, reflection `.pdf`). Inside each file, use your **candidate number** only. The dialogue and the scanned reflection are separate submission items.}

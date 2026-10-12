@@ -1,128 +1,173 @@
 ---
+# =============================================================================
+# L172 Worksheet 1 — dialogue submission template
+# =============================================================================
+# Rename this file to:  L172_<CRSid>_worksheet1_dialogue.md
+#   (CRSid appears in the Moodle *filename* only.)
+#
+# Do NOT put your name or CRSid anywhere below. Marking is anonymous.
+# Fill every field. Delete the explanatory comments if you like; keep the keys.
+# =============================================================================
+
+# Leave as W1 (this worksheet).
 worksheet: W1
+
+# Short title; you may leave this as-is.
 title: "Worksheet 1: Socratic dialogue"
+
+# Your candidate number only (Moodle blind-grading / course-office number).
+# Example: candidate_number: "1234A"
+# Never put your CRSid or real name here.
 candidate_number: "REPLACE_WITH_CANDIDATE_NUMBER"
-llm_provider: "e.g. OpenAI / Anthropic / Google / local"
-llm_model: "e.g. gpt-5 / claude-sonnet-4 / gemini-2.5-pro (name + version or model id)"
-llm_interface: "e.g. ChatGPT web / API / Claude.ai"
+
+# Who makes the model you used for the *submitted* conversation.
+# Examples: OpenAI / Anthropic / Google / Mistral / local
+llm_provider: "REPLACE_WITH_PROVIDER"
+
+# Exact model name and version (or model id) for that same conversation.
+# Examples: "gpt-5-2025-08-07" / "claude-sonnet-4-20250514" / "gemini-2.5-pro"
+# Must match the single model used for all ten turns below.
+llm_model: "REPLACE_WITH_MODEL_NAME_AND_VERSION"
+
+# How you talked to it (web UI, API, notebook, etc.).
+# Examples: "ChatGPT web" / "Claude.ai" / "API" / "Cursor chat"
+llm_interface: "REPLACE_WITH_INTERFACE"
+
+# Date of the submitted conversation (ISO): YYYY-MM-DD
 date: "YYYY-MM-DD"
+
+# Must be 10. Do not add or remove exchanges.
 n_exchanges: 10
 ---
 
-# Worksheet 1: Socratic dialogue
+# Worksheet 1: dialogue
 
-**Instructions (delete this block before submission, or leave if you prefer)**
+## How to fill this file
 
-- You are Socrates. The LLM is the interlocutor, not the questioner.
-- **Exchange 1 (curiosity):** Why did Shannon call information *entropy*?
-- **Exchange 2 (skepticism):** Press von Neumann folklore against Shannon's
-  Tolman footnote and the Wiener–Gibbs trail (see the worksheet brief).
-- **Exchanges 3–10:** Your thread — Wiener, Gibbs, Boltzmann $H$, naming as
-  metaphor vs identity, no-go vs recipe, optional link to $p_i=e^{-\beta E_i}/Z$.
-- Submit **exactly ten** prompt/answer pairs from **one continuous conversation**
-  with a single model. Do not stitch turns from different chats or sessions.
-- Planning may use any materials or LLMs; the file you upload is only the final
-  exchange. Record in the YAML the name and version (or exact model id) of the
-  LLM used for that final conversation only.
-- Do **not** put your name or CRSid anywhere in this file. Use your candidate number only (Moodle blind grading number or the assignment number from the course office).
-- Submit as `candidatenumber_worksheet1_dialogue.md`.
-- Submit the reflection **separately** as a scan of the handwritten proforma: `candidatenumber_worksheet1_reflection.pdf`.
+You are **Skepticus** (the skeptical questioner). The LLM is the interlocutor — it answers; it does not set the agenda.
+
+Submit **exactly ten** exchanges from **one continuous conversation** with **one** model. Do not stitch turns from different chats or switch models mid-file. Planning may use any tools; this file is only the final exchange.
+
+### Body format (use this for every exchange)
+
+Each exchange has two labelled blocks:
+
+1. **`### User`** — your question or probe (the prompt you typed).
+2. **`### LLM`** — the model's reply, pasted in full (or a faithful cut if the UI truncates; do not paraphrase).
+
+Keep the exchange headings (`## Exchange 1` … `## Exchange 10`). Put the text under `### User` / `### LLM` as ordinary markdown paragraphs (or a fenced code block if you prefer a literal paste). Do not nest other `##` headings inside an exchange.
+
+Suggested opening (see the worksheet brief for detail):
+
+- **Exchange 1 (curiosity):** why Shannon called his measure *entropy*.
+- **Exchange 2 (skepticism):** press anecdote against Shannon's Tolman footnote and the Wiener–Gibbs trail.
+- **Exchanges 3–10:** your thread.
+
+---
 
 ## Exchange 1
 
-**Prompt:**
+### User
+
+<!-- Paste your first prompt here (curiosity: why Shannon used "entropy"). -->
 
 
 
-**Answer:**
+### LLM
+
+<!-- Paste the model's reply here in full. -->
 
 
 
 ## Exchange 2
 
-**Prompt:**
+### User
+
+<!-- Paste your second prompt here (skepticism: Tolman / Wiener / Gibbs). -->
 
 
 
-**Answer:**
+### LLM
+
+<!-- Paste the model's reply here in full. -->
 
 
 
 ## Exchange 3
 
-**Prompt:**
+### User
 
 
 
-**Answer:**
+### LLM
 
 
 
 ## Exchange 4
 
-**Prompt:**
+### User
 
 
 
-**Answer:**
+### LLM
 
 
 
 ## Exchange 5
 
-**Prompt:**
+### User
 
 
 
-**Answer:**
+### LLM
 
 
 
 ## Exchange 6
 
-**Prompt:**
+### User
 
 
 
-**Answer:**
+### LLM
 
 
 
 ## Exchange 7
 
-**Prompt:**
+### User
 
 
 
-**Answer:**
+### LLM
 
 
 
 ## Exchange 8
 
-**Prompt:**
+### User
 
 
 
-**Answer:**
+### LLM
 
 
 
 ## Exchange 9
 
-**Prompt:**
+### User
 
 
 
-**Answer:**
+### LLM
 
 
 
 ## Exchange 10
 
-**Prompt:**
+### User
 
 
 
-**Answer:**
+### LLM
 
