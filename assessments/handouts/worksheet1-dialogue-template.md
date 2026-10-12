@@ -15,7 +15,7 @@ worksheet: W1
 # Short title; you may leave this as-is.
 title: "Worksheet 1: Socratic dialogue"
 
-# Your candidate number only (Moodle blind-grading / course-office number).
+# If available your candidate number only (Moodle blind-grading / course-office number).
 # Example: candidate_number: "1234A"
 # Never put your CRSid or real name here.
 candidate_number: "REPLACE_WITH_CANDIDATE_NUMBER"
