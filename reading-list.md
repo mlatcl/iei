@@ -94,7 +94,7 @@ reading:
     url: "https://doi.org/10.1038/nphys3230"
     required: false
     estimated_hours: 1
-    notes: "Modern review: Szilárd engine, feedback second law $W \ge -k_B T I(X;M)$, memories, Landauer, experiments. Week 4 (LO4)."
+    notes: 'Modern review: Szilárd engine, feedback second law $W \ge -k_B T I(X;M)$, memories, Landauer, experiments. Week 4 (LO4).'
 
   - title: "Maxwell's Demon? (Maxwell Day 2024)"
     authors: "Ellis, J."

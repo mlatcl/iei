@@ -33,8 +33,9 @@ llm_model: "REPLACE_WITH_MODEL_NAME_AND_VERSION"
 # Examples: "ChatGPT web" / "Claude.ai" / "API" / "Cursor chat"
 llm_interface: "REPLACE_WITH_INTERFACE"
 
-# Date of the submitted conversation (ISO): YYYY-MM-DD
-date: "YYYY-MM-DD"
+# Date of the submitted conversation (ISO), e.g. 2026-10-15
+# (Named conversation_date — not date — so site builds ignore this placeholder.)
+conversation_date: "REPLACE_WITH_YYYY-MM-DD"
 
 # Must be 10. Do not add or remove exchanges.
 n_exchanges: 10
