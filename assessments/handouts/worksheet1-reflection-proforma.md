@@ -12,11 +12,11 @@ header-includes:
 ---
 
 Print this form, write **by hand**, then either scan or photograph clearly and upload as a **separate PDF**, or hand in a paper copy at the start of lecture 2.
-Do **not** type the reflection. Do **not** write your name or CRSid.
+Do **not** type the reflection.
 
 \vspace{1.2ex}
 
-\noindent\fieldbox{Candidate number}\hfill\fieldbox{Date}
+\noindent\fieldbox{CRSid}\hfill\fieldbox{Date}
 
 \vspace{1.2ex}
 
@@ -43,7 +43,7 @@ Do **not** type the reflection. Do **not** write your name or CRSid.
 \newpage
 
 ```{=latex}
-{\footnotesize L172 Worksheet 1 reflection --- candidate number:
+{\footnotesize L172 Worksheet 1 reflection --- CRSid:
 \rule{45mm}{0.5pt}\hfill page 2 of 2}
 ```
 

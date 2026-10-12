@@ -17,8 +17,8 @@ The reflection is **handwritten**, not typed. Do not submit a markdown reflectio
 
 Source of truth: [`worksheet1-reflection-proforma.md`](worksheet1-reflection-proforma.md).
 
-Do **not** put your name or CRSid on the form — candidate number only.
-Moodle filenames use your CRSid (`L172_<CRSid>_worksheet1_…`).
+Write your **CRSid** on the form (not your full name).
+Moodle filenames also use your CRSid (`L172_<CRSid>_worksheet1_…`).
 
 The dialogue remains a digital markdown file (`L172_<CRSid>_worksheet1_dialogue.md`)
 using [`worksheet1-dialogue-template.md`](worksheet1-dialogue-template.md).

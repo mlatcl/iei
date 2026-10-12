@@ -39,12 +39,12 @@ word_count: 300
 
 \notes{Released after lecture 1 (13 October). Due by 10:00 at the start of lecture 2 (20 October). Estimated three hours. This worksheet is 15% of the module mark (5 curiosity + 5 skepticism + 5 reflection).}
 
-\notes{Submit on Moodle as **two separate uploads**. Moodle filenames use your CRSid (departmental convention); the file *contents* stay anonymous (candidate number only):
+\notes{Submit on Moodle as **two separate uploads**. Use your CRSid in the filenames and on the forms:
 
 1. Dialogue (typed markdown): `L172_<CRSid>_worksheet1_dialogue.md` — start from the [dialogue template](https://github.com/mlatcl/iei/blob/gh-pages/assessments/handouts/worksheet1-dialogue-template.md) ([raw download](https://raw.githubusercontent.com/mlatcl/iei/gh-pages/assessments/handouts/worksheet1-dialogue-template.md)).
 2. Reflection (scan of handwritten proforma): `L172_<CRSid>_worksheet1_reflection.pdf` — print the [handwritten reflection proforma (PDF)](https://mlatcl.github.io/iei/assessments/handouts/worksheet1-reflection-proforma.pdf).
 
-Do *not* put your name or CRSid in the YAML, on the proforma, or anywhere inside the files — candidate number only.}
+Put your CRSid in the dialogue YAML and on the reflection proforma. Do *not* write your full name.}
 
 \notes{*Note:* Quiz 1 at the start of lecture 2 will check your understanding of the probability and entropy review from lecture 1 as well as the ideas this worksheet asks you to press. You are *not* expected to derive Shannon's $H$ or free energy yet. You *are* expected to open a historical question sharply and notice when the model seems to offer folklore and how that relates to primary sources.}
 
@@ -105,4 +105,4 @@ Once you get the hang of it, take the conversation in your own directions.}
 
 \section{Submission}
 
-\notes{Upload both files to Moodle by 10:00 on Tuesday 20 October (start of lecture 2). Filenames follow `L172_<CRSid>_worksheet1_…` (dialogue `.md`, reflection `.pdf`). Inside each file, use your **candidate number** only. The dialogue and the scanned reflection are separate submission items.}
+\notes{Upload both files to Moodle by 10:00 on Tuesday 20 October (start of lecture 2). Filenames follow `L172_<CRSid>_worksheet1_…` (dialogue `.md`, reflection `.pdf`). Use your **CRSid** in the YAML and on the proforma (not your full name). The dialogue and the scanned reflection are separate submission items.}

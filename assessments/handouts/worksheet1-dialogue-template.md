@@ -3,9 +3,7 @@
 # L172 Worksheet 1 — dialogue submission template
 # =============================================================================
 # Rename this file to:  L172_<CRSid>_worksheet1_dialogue.md
-#   (CRSid appears in the Moodle *filename* only.)
 #
-# Do NOT put your name or CRSid anywhere below. Marking is anonymous.
 # Fill every field. Delete the explanatory comments if you like; keep the keys.
 # =============================================================================
 
@@ -15,10 +13,9 @@ worksheet: W1
 # Short title; you may leave this as-is.
 title: "Worksheet 1: Socratic dialogue"
 
-# If available your candidate number only (Moodle blind-grading / course-office number).
-# Example: candidate_number: "1234A"
-# Never put your CRSid or real name here.
-candidate_number: "REPLACE_WITH_CANDIDATE_NUMBER"
+# Your Cambridge CRSid (e.g. abc123). Same identifier as in the filename.
+# Example: crsid: "abc123"
+crsid: "REPLACE_WITH_CRSID"
 
 # Who makes the model you used for the *submitted* conversation.
 # Examples: OpenAI / Anthropic / Google / Mistral / local

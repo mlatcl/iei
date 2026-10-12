@@ -40,7 +40,7 @@ Released 13 October (lecture 1). Due Tuesday 20 October 2026, 10:00 (start of le
 
 **Tools:** Students may use any materials or LLMs while planning. The submitted dialogue must be one continuous conversation with a single model; YAML records that model's name and version only.
 
-Submit as **two separate** Moodle uploads. Filenames use CRSid; file contents use candidate number only:
+Submit as **two separate** Moodle uploads. Filenames and form fields use CRSid (not full name):
 
 - `L172_<CRSid>_worksheet1_dialogue.md` — exactly ten exchanges (`### User` then `### LLM`)
 - `L172_<CRSid>_worksheet1_reflection.pdf` — scan of the handwritten proforma
