@@ -82,6 +82,16 @@ facebook_svg: ./assets/images/social-fb.svg
 instagram_svg: ./assets/images/social-in.svg
 image_root: ./assets/images/
 
+# Handout markdown/tex is for students to download from the repo (or via
+# GitHub raw links). It must not be processed as Jekyll pages: templates
+# contain placeholder YAML, and the pandoc proforma source has LaTeX
+# backslashes that break the YAML parser. Keep the PDF as a static file.
+defaults:
+  - scope:
+      path: "assessments"
+    values:
+      published: false
+
 # Exclude from processing
 exclude:
   - Gemfile
@@ -106,4 +116,8 @@ exclude:
   - docs/
   - scripts/
   - test/
+  - assessments/handouts/worksheet1-dialogue-template.md
+  - assessments/handouts/worksheet1-reflection-template.md
+  - assessments/handouts/worksheet1-reflection-proforma.md
+  - assessments/handouts/worksheet1-reflection-proforma.tex
 
