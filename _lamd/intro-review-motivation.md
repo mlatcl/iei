@@ -77,7 +77,7 @@ reading:
 \notes{Eight lectures, Tuesdays, this room. Four in-class Moodle quizzes, ten minutes, at the start of lectures 2, 5, 7 and 8. Students need a device. No notes, no network, no LLMs during the quiz. Four take-home worksheets. Worksheet 1 is a Socratic LLM dialogue plus reflection; later worksheets mix code and shorter LLM probes using the same curiosity–skepticism habit. Worksheets are released in lectures 1, 4, 6 and 7 and due at the start of lectures 2, 5, 7 and 8 respectively. For module questions — clarifications, logistics, conceptual confusion — use [GitHub Discussions](https://github.com/mlatcl/iei/discussions); start from the pinned [Course Q&A — start here](https://github.com/mlatcl/iei/discussions/1) post and open a new Q&A thread per question. Personal or confidential matters stay on email or the course office.}
 
 \slidesincremental{
-* Four Moodle quizzes (start of lectures 2, 5, 7, 8)
+* Four quizzes (start of lectures 2, 4, 6, 8)
 * Four worksheets (W1: Socratic dialogue; later: notebook + reflection)
 * Identify with CRSid (filename and form fields; not full name)
 * Questions: GitHub Discussions (new Q&A thread each time)
