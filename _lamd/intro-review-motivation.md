@@ -108,9 +108,13 @@ reading:
 
 \include{_ml/includes/common-distributions-review.md}
 
-\subsection{Doubt}
+###{Doubt}
 
-\slidesincremental{<!-- Slide bullets that summarise the notes below -->}
+\slidesincremental{
+* Certainty is impossible (Laplace's gremlin) --- doubt is inevitable
+* Probability quantifies uncertainty; this course centres on *entropy*
+* Bring doubt into your own reasoning: challenge statements (Socratic habit)
+}
 
 \notes{What Laplace's gremlin implies in practice is that we can never be certain about outcome, so doubt is an inevitable consequence of
 our lack of knowledge. It is what drives us to develop quantitative notions for uncertainty. We have already introduced probability. Next we
