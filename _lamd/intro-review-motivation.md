@@ -7,17 +7,17 @@ venue: FW26, William Gates Building
 room: FW26
 transition: None
 abstract: >
-  In this lecture we motivate the course and describe the mechanics of delivery. 
+  In this lecture we motivate the course and describe the mechanics of delivery.
   That will involve a review of Laplace's demon and Laplace's gremlin. The aim is
   to centre the notion of uncertainty in the material. We'll also how we would like
-  to see you deploy that in your course worksheets, where marks will be given for 
-  answers that demonstrate the type of skepticism we see in the Socratic method. 
+  to see you deploy that in your course worksheets, where marks will be given for
+  answers that demonstrate the type of skepticism we see in the Socratic method.
   We will give a brief review of probability, then relate energy to probability
   through the way the term energy is used in machine learning (typically a
-  "thermodynamic" or "Gibbs" energy), introduce the Boltzmann seed, and then
-  introduce entropy. Mechanical Hamiltonians and HMC wait for Week 2. We will
-  release Worksheet 1 that will need to be submitted before lecture starts in
-  Week 2. 
+  "thermodynamic" or "Gibbs" energy), and introduce the Boltzmann seed. We stop
+  at Daniel Bernoulli as the bridge into kinetic theory; Hydrodynamica, entropy
+  as information, and embodiment continue at the start of Week 2. We will release
+  Worksheet 1 that will need to be submitted before lecture starts in Week 2. 
 author:
 - given: Neil D.
   family: Lawrence
@@ -46,18 +46,18 @@ reading:
     required: false
 ---
 
-\notes{First meeting. FW26. Two hours from 10:00; no class test. Worksheet 1 (Socratic dialogue) is released and due by 10:00 at the start of lecture 2 (20 October). Quiz 1 is also at the start of lecture 2: probability, elementary entropy, and the Week 1 seeds.}
+\notes{First meeting. FW26. Two hours from 10:00; no class test. Worksheet 1 (Socratic dialogue) is released and due by 10:00 at the start of lecture 2 (20 October). Quiz 1 is also at the start of lecture 2: probability foundations and the Week 1 energy / Boltzmann seeds. Hydrodynamica, entropy review, and embodiment open lecture 2 after the quiz.}
 
 \subsection{This Session}
 
 \slidesincremental{
 * Room FW26; eight Tuesdays from today
-* Motivation → probability → doubt / Socrates → energy → entropy
-* Worksheet 1 released today
+* Motivation → probability → doubt / Socrates → energy → Daniel Bernoulli
+* Worksheet 1 released today; entropy continues next week
 }
 
 \newslide{Time Plan}
-\notes{**Time plan (120 minutes).** Order matches the lecture source below.}
+\notes{**Time plan (120 minutes).** Order matches the lecture source below. As delivered we stop at Daniel Bernoulli; Week 2 opens with Hydrodynamica and the entropy bridge.}
 
 | Minutes | Block |
 |--------:|-------|
@@ -66,10 +66,9 @@ reading:
 | 22–42 | Probability review: product/sum/Bayes; named distributions |
 | 42–55 | Doubt; Socratic worksheets and LLM habit |
 | 55–65 | Break |
-| 65–85 | Energy: ML energies; Boltzmann seed $p_i \propto e^{-\beta E_i}$ |
-| 85–108 | Entropy: information game, MacKay weighing, $H$, entropy of named distributions |
-| 108–116 | Embodiment / bits as bandwidth (Atomic Human bridge) |
-| 116–120 | Worksheet 1 brief; Quiz 1 preview |
+| 65–100 | Energy: ML energies; Boltzmann seed $p_i \propto e^{-\beta E_i}$ |
+| 100–110 | Daniel Bernoulli (portrait); bridge to kinetic theory |
+| 110–120 | Worksheet 1 brief; Quiz 1 preview |
 
 
 \subsection{Course Mechanics}
@@ -210,41 +209,19 @@ So in other words we are asking you to take on the role of Socrates in these con
 
 \speakernotes{Optional live check. Deep dive, free-energy plots, and HMC are lecture 2.}
 
-\include{_physics/includes/entropy-intro.md}
+\include{_physics/includes/daniel-bernoulli-portrait.md}
 
-\include{_information/includes/entropy-review.md}
+\newslide{Next Week: Hydrodynamica}
 
-\speakernotes{Axiomatic derivation of $H$ and $S=kH$ are week 3 / LO2. Worksheet 1 probes can already use joint / conditional / chain-rule vocabulary.}
-
-\include{_information/includes/entropy-nogo-probability-prescription.md}
-
-\speakernotes{Now shift to explaining the relationship between what we're teaching and how we're teaching. Our objective is to get information in you. Why do we have to do it in such a complex way. Need to lace this description of the atomic human with the pedagogy we're using. Carnot--Clausius history waits for lecture 2 with free energy.}
-
-\include{_books/includes/the-atomic-human.md}
-
-\include{_ai/includes/embodiment-factors-celsius.md}
-
-\notes{Shannon measured information in bits: one bit is the result of a fair coin toss. He estimated $\sim 12$ bits per English word on average [@Shannon-info48], which with typical speaking rates gives $\sim 10$--$60$ bits per second for human communication [@Reed-information98,@Lawrence-embodiment17,@Lawrence-atomic24]. Machines communicate orders of magnitude faster — the embodiment factor is the ratio between compute and that narrow channel.}
-
-\notes{Shannon measured information in bits. Human communication is slow relative to machines — the embodiment factor. Lecture 3 derives $H$; today we only need the bit as a unit of uncertainty and of bandwidth.}
-
-\speakernotes{This may need to move to Lecture 2 depending on how much work we have introducing the pedagogy.}
-
-\comment{I think this means worksheet 1 could also be about the general ideas presented here? Allowing them to bring skepticism. The core idea of bandwidth limitations and how it effects the architecture of an intelligence?}
-
-\newslide{Shannon Next Lecture}
-
-\slides{We are already counting in Shannon's bits — embodiment is a communication bottleneck, not yet a theorem.}
+\slides{We stop at Daniel Bernoulli. Week 2 opens with *Hydrodynamica* and the entropy bridge.}
 
 \slidesincremental{
-* Lecture 3: why *bits*, and $H=-\sum_i p_i\log p_i$ from axioms
-* Same functional form as Boltzmann $S$; different operational reading
-* The intelligence question sharpens in lecture 4 (Landauer, Bauby)
+* Hydrodynamica and kinetic theory of gases
+* Entropy as information; no-go versus prescription
+* Embodiment / bits as bandwidth; then Gibbs--Boltzmann and free energy
 }
 
-\speakernotes{Portrait and table are enough today. Forward pointer only — do not derive $H$.}
-
-\notes{Shannon gave the unit used for bandwidth and embodiment factors. The derivation of $H$ and the statement $S=kH$ are LO2 in lecture 3. The bandwidth gap is a bottleneck on sharing thought, not a second no-go paired with Boltzmann. Lecture 4 applies the same bit accounting to locked-in communication.}
+\speakernotes{Cliffhanger only. Do not open the Hydrodynamica plates or the billiards demo today.}
 
 \subsection{Define This Week}
 
@@ -253,16 +230,16 @@ So in other words we are asking you to take on the role of Socrates in these con
 * Bernoulli, binomial, Poisson, multinomial, Gaussian
 * Energy scores: quadratic, cross-entropy, BM pairwise
 * Seed: $p_i = e^{-\beta E_i}/Z$
-* $H=-\sum_i p_i\log p_i$ (bits or nats)
 }
 
 \subsection{After This Lecture}
 
-\notes{Worksheet 1: Socratic dialogue on the *history of the name* entropy --- why Shannon used the word; von Neumann anecdote versus Shannon's Tolman footnote and the Wiener--Gibbs trail. Exactly ten turns (mandated opening pair, then free probes); handwritten reflection on the scanned proforma (separate upload). Use the handouts. Due 20 October, start of lecture 2. Quiz 1 in the first ten minutes of lecture 2 covers today's probability and entropy review plus ideas you should have pressed in the worksheet.}
+\notes{Worksheet 1: Socratic dialogue on the *history of the name* entropy --- why Shannon used the word; von Neumann anecdote versus Shannon's Tolman footnote and the Wiener--Gibbs trail. Exactly ten turns (mandated opening pair, then free probes); handwritten reflection on the scanned proforma (separate upload). Use the handouts. Due 20 October, start of lecture 2. Quiz 1 in the first ten minutes of lecture 2 covers today's probability review and energy / Boltzmann seeds; Hydrodynamica and the entropy bridge follow the quiz.}
 
 \slidesincremental{
 * Worksheet 1 released; due 20 October (Shannon naming dialogue + handwritten reflection)
-* Quiz 1 next week: probability, entropy, Week 1 seeds
+* Quiz 1 next week: probability and Week 1 energy seeds
+* Then: Hydrodynamica → entropy → free energy
 }
 
 \reading

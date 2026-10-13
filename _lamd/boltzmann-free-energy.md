@@ -7,14 +7,13 @@ venue: FW26, William Gates Building
 room: FW26
 transition: None
 abstract: >
-  This week we'll map the statistical notions of entropy we reviewed
-  in Week 1 onto the physical notions of entropy through the 
-  Gibbs--Boltzmann distribution. We'll show how this equation can be 
-  decomposed to give the so-called free energy $F = U - TS$. We'll introduce
-  the notion of a *thermodynamic bath* and review Schottky's anomaly. We will
-  also complete the energy story from Week 1: loss landscapes as potentials,
-  kinetic energy, and Hamiltonian Monte Carlo. Worksheet 1 is due and the
-  session will start with Quiz 1.
+  Worksheet 1 is due and the session starts with Quiz 1 (probability and Week 1
+  energy seeds). We then continue from Daniel Bernoulli: *Hydrodynamica*, the
+  entropy bridge (information game, no-go versus prescription, embodiment), and
+  map that onto the Gibbs--Boltzmann distribution and free energy $F = U - TS$.
+  We introduce the thermodynamic bath and Schottky's anomaly, and complete the
+  energy story from Week 1: loss landscapes as potentials, kinetic energy, and
+  Hamiltonian Monte Carlo.
 author:
 - given: Neil D.
   family: Lawrence
@@ -27,7 +26,7 @@ in_class_test:
   id: Q1
   duration_minutes: 10
   timing: start
-  covers: [probability foundations, entropy review, Week 1 seeds, LO1]
+  covers: [probability foundations, Week 1 energy seeds, LO1]
 worksheet_due: W1
 reading:
   - title: "The Atomic Human"
@@ -47,12 +46,13 @@ reading:
     required: false
 ---
 
-\notes{Worksheet 1 is due at the start of this session. Quiz 1 occupies the first ten minutes: probability, elementary entropy, and Week 1 seeds. Then 110 minutes on the Gibbs--Boltzmann form, free energy, HMC (loss as potential), bath, Schottky, and finite time. Do not derive the occupation from MaxEnt today --- that is week 5.}
+\notes{Worksheet 1 is due at the start of this session. Quiz 1 occupies the first ten minutes: probability foundations and Week 1 energy / Boltzmann seeds. After the quiz we pick up from Daniel Bernoulli: Hydrodynamica and the entropy bridge that did not fit in Week 1, then Gibbs--Boltzmann, free energy, HMC, bath, Schottky, and finite time. Do not derive the occupation from MaxEnt today --- that is week 5.}
 
 \subsection{This Session}
 
 \slidesincremental{
 * Quiz 1 (ten minutes)
+* Hydrodynamica → entropy bridge → embodiment (Week 1 carry-over)
 * Gibbs--Boltzmann form; free energy $F=U-TS$
 * Potential → kinetic → HMC (Week 1 energy payoff)
 * Bath, Schottky, finite-time dissipation named
@@ -63,19 +63,20 @@ reading:
 
 | Minutes | Block |
 |--------:|-------|
-| 0–10 | Quiz 1 (Moodle; probability / entropy foundations / Week 1 seeds) |
-| 10–20 | Collect Worksheet 1; recap seed $p_i \propto e^{-\beta E_i}$ |
-| 20–50 | Gibbs--Boltzmann form and names; $\log Z$ as CGF; Hopfield / BM colour |
+| 0–10 | Quiz 1 (Moodle; probability / Week 1 energy seeds) |
+| 10–15 | Collect Worksheet 1; recap seed $p_i \propto e^{-\beta E_i}$ |
+| 15–40 | Hydrodynamica; billiards / Maxwell--Boltzmann--Gibbs; entropy review and no-go |
+| 40–50 | Embodiment / bits as bandwidth (Atomic Human bridge) |
 | 50–60 | Break |
-| 60–85 | Free-energy decomposition $F=U-TS$ |
-| 85–105 | Loss as potential $V$; kinetic $K$; Hamiltonian / HMC (Neal demos) |
-| 105–120 | Bath; Schottky; finite-time naming |
+| 60–80 | Gibbs--Boltzmann form; free-energy decomposition $F=U-TS$ |
+| 80–100 | Loss as potential $V$; kinetic $K$; Hamiltonian / HMC (Neal demos) |
+| 100–120 | Bath; Schottky; finite-time naming |
 
 }
 
 \subsection{Quiz 1}
 
-\notes{Invigilated Moodle, own device, no notes, no network, no LLMs. Ten questions on last week's probability and entropy review and the Boltzmann / entropy seeds pressed in Worksheet 1.}
+\notes{Invigilated Moodle, own device, no notes, no network, no LLMs. Ten questions on last week's probability review and the energy / Boltzmann seeds pressed in Worksheet 1. Hydrodynamica and the entropy bridge follow the quiz.}
 
 \slidesincremental{
 * Device required; Moodle open
@@ -83,7 +84,39 @@ reading:
 * Ten minutes
 }
 
+\subsection{From Daniel Bernoulli: Week 1 Carry-Over}
 
+\notes{Week 1 stopped at Daniel Bernoulli's portrait. We open the *Hydrodynamica* plates, walk the kinetic-theory / entropy story, then the information-game review and embodiment bridge, before returning to the Gibbs--Boltzmann accounting that this lecture was always going to centre.}
+
+\include{_physics/includes/entropy-intro.md}
+
+\include{_information/includes/entropy-review.md}
+
+\speakernotes{Axiomatic derivation of $H$ and $S=kH$ are week 3 / LO2. Worksheet 1 probes can already use joint / conditional / chain-rule vocabulary.}
+
+\include{_information/includes/entropy-nogo-probability-prescription.md}
+
+\speakernotes{Lace Atomic Human / embodiment with the pedagogy: we are trying to get information into students through a narrow channel. Carnot--Clausius history continues below with free energy.}
+
+\include{_books/includes/the-atomic-human.md}
+
+\include{_ai/includes/embodiment-factors-celsius.md}
+
+\notes{Shannon measured information in bits: one bit is the result of a fair coin toss. He estimated $\sim 12$ bits per English word on average [@Shannon-info48], which with typical speaking rates gives $\sim 10$--$60$ bits per second for human communication [@Reed-information98,@Lawrence-embodiment17,@Lawrence-atomic24]. Machines communicate orders of magnitude faster — the embodiment factor is the ratio between compute and that narrow channel.}
+
+\notes{Shannon measured information in bits. Human communication is slow relative to machines — the embodiment factor. Lecture 3 derives $H$; today we need the bit as a unit of uncertainty and of bandwidth before we return to free energy.}
+
+\newslide{Shannon Still Ahead}
+
+\slides{We are already counting in Shannon's bits — embodiment is a communication bottleneck, not yet a theorem.}
+
+\slidesincremental{
+* Lecture 3: why *bits*, and $H=-\sum_i p_i\log p_i$ from axioms
+* Same functional form as Boltzmann $S$; different operational reading
+* The intelligence question sharpens in lecture 4 (Landauer, Bauby)
+}
+
+\speakernotes{Forward pointer only — do not derive $H$ today.}
 
 \subsection{ML to Thermodynamics}
 
@@ -272,7 +305,9 @@ mlai.write_figure('finite-time-sketch.svg', directory='\writeDiagramsDir/ml')}
 \subsection{Define This Week}
 
 \slidesincremental{
-* How was entropy discovered?
+* How was entropy discovered? (Hydrodynamica → Maxwell / Boltzmann / Gibbs)
+* $H=-\sum_i p_i\log p_i$; no-go versus prescription
+* What are the information constraints on a human? (bandwidth, first cut)
 * What is the Gibbs--Boltzmann distribution?
 * Energy and entropy? Free energy $F=U-TS$
 * Loss as potential $V$; Hamiltonian $H=K+V$; HMC via ``mlai`` (Neal)
