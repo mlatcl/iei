@@ -184,6 +184,7 @@ review:
         - Draft
         - Ready
         - Delivered
+        - Post-lecture fixed
   - type: SaveButton
 
 filters:
@@ -197,6 +198,7 @@ filters:
       - Draft
       - Ready
       - Delivered
+      - Post-lecture fixed
   - field: kind
     type: categorical
     label: Kind
@@ -255,3 +257,7 @@ viewer:
       session blurb. Default date window: today−30d through +180d. Clear
       restores defaults. Filter **Kind** to `lecture` or `practical` to hide
       README / samples.
+
+      **Status** ladder: *Draft* → *Ready* → *Delivered* → *Post-lecture fixed*.
+      Use *Post-lecture fixed* after you have corrected errors spotted in the
+      room and moved material that was not covered into the next lecture.
