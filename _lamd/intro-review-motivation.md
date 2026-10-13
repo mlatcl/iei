@@ -52,22 +52,24 @@ reading:
 
 \slidesincremental{
 * Room FW26; eight Tuesdays from today
-* How worksheets and LLMs work (you are Socrates)
-* Probability and entropy review; energy in ML; then potential → Hamiltonian / HMC
+* Motivation → probability → doubt / Socrates → entropy → energy → HMC
+* Worksheet 1 released today
 }
 
 \newslide{Time Plan}
-\notes{**Time plan (120 minutes)**}
+\notes{**Time plan (120 minutes).** Order matches the lecture source below.}
 
 | Minutes | Block |
 |--------:|-------|
-| 0–15 | Course mechanics; questions list; the motivation and theme |
-| 15–35 | 'Socratic' approach: curiosity, skepticism, submission rules |
-| 35–65 | Probability review: product/sum/Bayes; basic distributions |
-| 65–75 | Break |
-| 75–95 | Entropy review: game, weighing, $H$, entropy of named distributions |
-| 95–110 | Energy in ML (from earlier $p$); bandwidth; Boltzmann seed |
-| 110–118 | Culmination: potential → stochastic → kinetic? → Hamiltonian / HMC |
+| 0–10 | Course mechanics; questions list |
+| 10–22 | Motivation: theme; Laplace's demon and gremlin |
+| 22–42 | Probability review: product/sum/Bayes; named distributions |
+| 42–55 | Doubt; Socratic worksheets and LLM habit |
+| 55–65 | Break |
+| 65–90 | Entropy: information game, MacKay weighing, $H$, entropy of named distributions |
+| 90–98 | Embodiment / bits as bandwidth (Atomic Human bridge) |
+| 98–110 | Energy from known $p$; ML energies; Boltzmann seed |
+| 110–118 | *(optional)* Potential → kinetic → Hamiltonian / HMC (leapfrog proposes; endpoints sample) |
 | 118–120 | Worksheet 1 brief; Quiz 1 preview |
 
 
@@ -84,7 +86,9 @@ reading:
 
 \subsection{Questions We Will Return To}
 
-\notes{The questions page is published today. Students should meet the whole list. They should not expect to answer most of it. Two stages: *define* (textbook answer, usually this week or the week the object is introduced) and *interpret* (the course's own reading, often week 5 or week 8).}
+\notes{The [questions page](https://mlatcl.github.io/iei/questions/) is published today. Students should meet the whole list. They should not expect to answer most of it. Two stages: *define* (textbook answer, usually this week or the week the object is introduced) and *interpret* (the course's own reading, often week 5 or week 8).}
+
+\slides{List: [mlatcl.github.io/iei/questions/](https://mlatcl.github.io/iei/questions/)}
 
 \slidesincremental{
 * Meet the questions today

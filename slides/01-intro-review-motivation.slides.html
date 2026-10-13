@@ -28,6 +28,8 @@
   </style>
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@3.9.2/css/theme/white.css" id="theme">
   <link rel="stylesheet" href="mlatcl.css"/>
+  <link rel="stylesheet" href="/Users/neil/lawrennd/lamd/lamd/includes/slide-fonts.css"/>
+  <link rel="stylesheet" href="/Users/neil/lawrennd/lamd/lamd/includes/slide-fontsize-md.css"/>
   <!-- Printing and PDF exports -->
   <script>
     var link = document.createElement( 'link' );
@@ -143,8 +145,8 @@
 <div>
 <ul>
 <li class="fragment">Room FW26; eight Tuesdays from today</li>
-<li class="fragment">How worksheets and LLMs work (you are Socrates)</li>
-<li class="fragment">Probability and entropy review; energy in ML; then potential → Hamiltonian / HMC</li>
+<li class="fragment">Motivation → probability → doubt / Socrates → entropy → energy → HMC</li>
+<li class="fragment">Worksheet 1 released today</li>
 </ul>
 </div>
 </section>
@@ -163,32 +165,40 @@
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;">0–15</td>
-<td>Course mechanics; questions list; the motivation and theme</td>
+<td style="text-align: right;">0–10</td>
+<td>Course mechanics; questions list</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">15–35</td>
-<td>‘Socratic’ approach: curiosity, skepticism, submission rules</td>
+<td style="text-align: right;">10–22</td>
+<td>Motivation: theme; Laplace’s demon and gremlin</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">35–65</td>
-<td>Probability review: product/sum/Bayes; basic distributions</td>
+<td style="text-align: right;">22–42</td>
+<td>Probability review: product/sum/Bayes; named distributions</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">65–75</td>
+<td style="text-align: right;">42–55</td>
+<td>Doubt; Socratic worksheets and LLM habit</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">55–65</td>
 <td>Break</td>
 </tr>
+<tr class="even">
+<td style="text-align: right;">65–90</td>
+<td>Entropy: information game, MacKay weighing, <span class="math inline">\(H\)</span>, entropy of named distributions</td>
+</tr>
 <tr class="odd">
-<td style="text-align: right;">75–95</td>
-<td>Entropy review: game, weighing, <span class="math inline">\(H\)</span>, entropy of named distributions</td>
+<td style="text-align: right;">90–98</td>
+<td>Embodiment / bits as bandwidth (Atomic Human bridge)</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">95–110</td>
-<td>Energy in ML (from earlier <span class="math inline">\(p\)</span>); bandwidth; Boltzmann seed</td>
+<td style="text-align: right;">98–110</td>
+<td>Energy from known <span class="math inline">\(p\)</span>; ML energies; Boltzmann seed</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right;">110–118</td>
-<td>Culmination: potential → stochastic → kinetic? → Hamiltonian / HMC</td>
+<td><em>(optional)</em> Potential → kinetic → Hamiltonian / HMC (leapfrog proposes; endpoints sample)</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">118–120</td>
@@ -210,6 +220,7 @@
 </section>
 <section id="questions-we-will-return-to" class="slide level2">
 <h2>Questions We Will Return To</h2>
+<p>List: <a href="https://mlatcl.github.io/iei/questions/">mlatcl.github.io/iei/questions/</a></p>
 <div>
 <ul>
 <li class="fragment">Meet the questions today</li>
@@ -984,7 +995,7 @@ The four-outcome distribution from the expectation example, now in bits. Right-h
 </div>
 </div>
 <aside class="notes">
-Univariate Gaussian (height example). Middle: <span class="math inline">\(-\log_2 p(y)\)</span> dips below zero where the density exceeds <span class="math inline">\(1\)</span>. Right: the integrand whose integral is differential entropy <span class="math inline">\(h\)</span>.
+Univariate Gaussian (height example). Middle: <span class="math inline">\(-\log_2 p(y)\)</span>; dips below zero where the density exceeds <span class="math inline">\(1\)</span>. Right: the integrand whose integral is differential entropy <span class="math inline">\(h\)</span>.
 </aside>
 <div>
 <ul>
@@ -1351,7 +1362,7 @@ Eddington makes his feelings about the primacy of the second law clear. This pri
 </section>
 <section id="energy-as-a-score" class="slide level2">
 <h2>Energy as a Score</h2>
-<p>In ML, an <em>energy</em> is a scalar assigned to a configuration: lower means preferred.</p>
+<p>In ML, an <em>energy</em> is (often) a scalar assigned to a configuration: lower means preferred.</p>
 <div>
 <ul>
 <li class="fragment">Losses are energies over parameters or predictions</li>
@@ -1407,11 +1418,76 @@ Point at the same table from the entropy expectation slide. Do not recompute; on
 <section id="bernoulli-fair-coin" class="slide level2">
 <h2>Bernoulli / Fair Coin</h2>
 <p>A coin with <span class="math inline">\(P(H)=p\)</span>, <span class="math inline">\(P(T)=1-p\)</span> is a two-state energy model.</p>
+</section>
+<section id="bernoulli-distribution-and-energy" class="slide level2">
+<h2>Bernoulli: Distribution and Energy</h2>
+</section>
+<section id="bernoulli-p-and-e" class="slide level2">
+<h2>Bernoulli: <span class="math inline">\(P\)</span> and <span class="math inline">\(E\)</span></h2>
+<div class="figure">
+<div id="bernoulli-energy-panels-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/bernoulli-energy-panels.svg" width="85%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+Bernoulli(<span class="math inline">\(p=0.3\)</span>). Left: the distribution. Right: energy <span class="math inline">\(E=-\log P\)</span> in nats. The favoured outcome sits lower in energy.
+</aside>
+</section>
+<section id="bernoulli-overlay" class="slide level2">
+<h2>Bernoulli: Overlay</h2>
+<div class="figure">
+<div id="bernoulli-energy-overlay-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/bernoulli-energy-overlay.svg" width="60%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+Same Bernoulli: probability (bars, left axis) and energy (markers, right axis). Where <span class="math inline">\(P\)</span> is high, <span class="math inline">\(E\)</span> is low.
+</aside>
 <div>
 <ul>
-<li class="fragment"><span class="math inline">\(E_H = -\log p\)</span>,<span class="math inline">\(E_T = -\log(1-p)\)</span></li>
-<li class="fragment">Fair coin <span class="math inline">\(p=\tfrac12\)</span>: <span class="math inline">\(E_H=E_T=\log 2\)</span> — degenerate energies</li>
-<li class="fragment">Biased coin: the favoured face sits lower in energy</li>
+<li class="fragment"><span class="math inline">\(E_0=-\log(1-p)\)</span>,<span class="math inline">\(E_1=-\log p\)</span></li>
+<li class="fragment">Fair coin: degenerate energies <span class="math inline">\(E_0=E_1=\log 2\)</span></li>
+<li class="fragment">Biased coin: the favoured face is the deeper well</li>
+</ul>
+</div>
+</section>
+<section id="poisson-count-energy" class="slide level2">
+<h2>Poisson: Count Energy</h2>
+<p>A Poisson(<span class="math inline">\(\lambda\)</span>) is the same map <span class="math inline">\(E=-\log P\)</span> on the non-negative integers.</p>
+</section>
+<section id="poisson-distribution-and-energy" class="slide level2">
+<h2>Poisson: Distribution and Energy</h2>
+</section>
+<section id="poisson-p-and-e" class="slide level2">
+<h2>Poisson: <span class="math inline">\(P\)</span> and <span class="math inline">\(E\)</span></h2>
+<div class="figure">
+<div id="poisson-energy-panels-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/poisson-energy-panels.svg" width="85%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+Poisson(<span class="math inline">\(\lambda=4\)</span>). Left: the count distribution. Right: energy <span class="math inline">\(E=-\log P\)</span>. The mode is the energy minimum.
+</aside>
+</section>
+<section id="poisson-overlay" class="slide level2">
+<h2>Poisson: Overlay</h2>
+<div class="figure">
+<div id="poisson-energy-overlay-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/poisson-energy-overlay.svg" width="60%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+Same Poisson: probability (bars) against energy (markers). Tails are high-energy, low-probability states.
+</aside>
+<div>
+<ul>
+<li class="fragment"><span class="math inline">\(E(k)=-\log P(k)=\lambda-k\log\lambda+\log(k!)\)</span> (up to the usual reading of Stirling)</li>
+<li class="fragment">Mode of <span class="math inline">\(P\)</span> <span class="math inline">\(=\)</span> minimizer of <span class="math inline">\(E\)</span></li>
+<li class="fragment">Same <span class="math inline">\(p\propto e^{-E}\)</span> grammar as the Bernoulli two-state model</li>
 </ul>
 </div>
 </section>
@@ -1423,15 +1499,42 @@ p(y)\propto \exp\!\left(-\frac{(y-\mu)^2}{2\sigma^2}\right)
 \quad\Longleftrightarrow\quad
 E(y)=\frac{(y-\mu)^2}{2\sigma^2}
 \]</span></p>
+</section>
+<section id="gaussian-distribution-and-energy" class="slide level2">
+<h2>Gaussian: Distribution and Energy</h2>
+</section>
+<section id="gaussian-p-and-e" class="slide level2">
+<h2>Gaussian: <span class="math inline">\(p\)</span> and <span class="math inline">\(E\)</span></h2>
+<div class="figure">
+<div id="gaussian-energy-panels-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/gaussian-energy-panels.svg" width="85%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+Height Gaussian. Left: density. Right: energy <span class="math inline">\(E=-\log p\)</span> — a parabola about <span class="math inline">\(\mu=1.7\)</span> (additive constant from the normaliser does not change the shape).
+</aside>
+</section>
+<section id="gaussian-overlay" class="slide level2">
+<h2>Gaussian: Overlay</h2>
+<div class="figure">
+<div id="gaussian-energy-overlay-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/gaussian-energy-overlay.svg" width="60%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+Same Gaussian: density (left axis) and energy (right axis). The mode of <span class="math inline">\(p\)</span> is the bottom of the energy well.
+</aside>
 <div>
 <ul>
-<li class="fragment">Height example: <span class="math inline">\(\mu=1.7\)</span>, <span class="math inline">\(\sigma^2=0.0225\)</span> — <span class="math inline">\(E\)</span> is a parabola about <span class="math inline">\(1.7\)</span></li>
+<li class="fragment"><span class="math inline">\(E(y)=\frac{(y-\mu)^2}{2\sigma^2}\)</span> up to an additive constant absorbed in <span class="math inline">\(Z\)</span></li>
 <li class="fragment">Least-squares regression uses the same quadratic energy on residuals</li>
 <li class="fragment">Normaliser <span class="math inline">\((2\pi\sigma^2)^{-1/2}\)</span> is the partition function for this <span class="math inline">\(E\)</span></li>
 </ul>
 </div>
 <aside class="notes">
-One board sketch of the parabola <span class="math inline">\(E(y)\)</span> under the height Gaussian is enough. Then jump to the least-squares slide with recognition rather than a new idea.
+One look at the parabola under the height Gaussian is enough. Then jump to the least-squares slide with recognition rather than a new idea.
 </aside>
 </section>
 <section id="quadratic-energy-regression" class="slide level2">
