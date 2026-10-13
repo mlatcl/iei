@@ -19,11 +19,7 @@ Class tests examine the *applied* form of the define-stage questions, on a new e
 
 **Define this week**
 
-- How was entropy discovered?
-- Who were Carnot and Clausius, and what did each contribute?
-- What is the relationship between energy and entropy?
-- What is a thermodynamic bath?
-- What is Schottky's anomaly? (first cut)
+- What is the relationship between energy and entropy? (Boltzmann seed / ML energies)
 - What are the information constraints on a human? (bandwidth, first cut)
 
 **The theme (return every week)**
@@ -33,10 +29,14 @@ Class tests examine the *applied* form of the define-stage questions, on a new e
 
 **Named, not yet answered**
 
+- How was entropy discovered?
+- Who were Carnot and Clausius, and what did each contribute?
 - How is entropy understood today?
 - What is the difference between equilibrium and non-equilibrium thermodynamics?
+- What is a thermodynamic bath?
+- What is Schottky's anomaly?
 - What is the purely entropic interpretation of Schottky's anomaly?
-- What is the Legendre transform? (you have already written $F = U - TS$)
+- What is the Legendre transform?
 
 ## Lecture 2 — 20 October — Boltzmann and Free Energy
 
@@ -44,14 +44,17 @@ Quiz 1 occupies the first ten minutes.
 
 **Define this week**
 
+- How was entropy discovered?
+- Who were Carnot and Clausius, and what did each contribute?
 - What is the Gibbs--Boltzmann distribution (canonical ensemble)?
 - How do internal energy, entropy, and Helmholtz free energy enter $p_i$?
+- What is a thermodynamic bath?
 - What is Schottky's anomaly?
-- What is a thermodynamic bath? (revisited)
 
 **Named, not yet answered**
 
 - How is entropy understood today?
+- What is the Legendre transform? (you have written $F = U - TS$)
 - Shannon entropy versus differential entropy? (full contrast: week 6)
 
 ## Lecture 3 — 27 October — Shannon Entropy
