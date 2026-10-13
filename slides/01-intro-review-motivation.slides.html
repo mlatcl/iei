@@ -180,11 +180,11 @@
 </tr>
 <tr class="odd">
 <td style="text-align: right;">75–95</td>
-<td>Entropy review: information game, MacKay weighing, elementary <span class="math inline">\(H\)</span></td>
+<td>Entropy review: game, weighing, <span class="math inline">\(H\)</span>, entropy of named distributions</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">95–110</td>
-<td>Energy in ML; motivation and bandwidth; Boltzmann seed</td>
+<td>Energy in ML (from earlier <span class="math inline">\(p\)</span>); bandwidth; Boltzmann seed</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right;">110–118</td>
@@ -646,6 +646,15 @@ Run this live if time allows: pick a small list (sixteen animals, eight Cambridg
 <section id="twelve-balls-one-odd" class="slide level2">
 <h2>Twelve Balls, One Odd</h2>
 <p>MacKay’s weighing problem <span class="citation" data-cites="MacKay-information03">(MacKay, 2003, p. Ex.~4.1)</span>: twelve balls; exactly one is odd; it may be heavier <em>or</em> lighter.</p>
+<div class="figure">
+<div id="mackay-balance-balls-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/information/mackay-balance-balls.svg" width="80%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+A two-pan balance and twelve identical balls. Each use of the balance returns one of three readings: left heavy, balance, or right heavy.
+</aside>
 <div>
 <ul>
 <li class="fragment">Instrument: a two-pan balance</li>
@@ -824,6 +833,166 @@ Stop here. Invite them to try Exercise 4.1 before reading MacKay’s solution fi
 <li class="fragment">Fair coin: <span class="math inline">\(H=1\)</span> bit; certain outcome: <span class="math inline">\(H=0\)</span></li>
 </ul>
 </div>
+</section>
+<section id="entropy-of-common-distributions" class="slide level2">
+<h2>Entropy of Common Distributions</h2>
+</section>
+<section id="entropy-distribution-by-distribution" class="slide level2">
+<h2>Entropy, Distribution by Distribution</h2>
+<p>For each named family from the probability review: plot <span class="math inline">\(P\)</span>, plot <span class="math inline">\(-\log_2 P\)</span>, and form the summands <span class="math inline">\(-P\log_2 P\)</span>.</p>
+<div>
+<ul>
+<li class="fragment">Left: the distribution itself</li>
+<li class="fragment">Middle: surprisal <span class="math inline">\(-\log_2 P\)</span> (not called energy here)</li>
+<li class="fragment">Right: <span class="math inline">\(-P\log_2 P\)</span> — these are what sum (or integrate) to <span class="math inline">\(H\)</span></li>
+</ul>
+</div>
+<aside class="notes">
+One visual grammar for every family. Keep the middle panel as <code>surprisal'' /</code><span class="math inline">\(-\log P\)</span>’‘; reserve ``energy’’ for the ML / Boltzmann block.
+</aside>
+</section>
+<section id="bernoulli-and-binomial-1" class="slide level2">
+<h2>Bernoulli and Binomial</h2>
+<div>
+<ul>
+<li class="fragment">Bernoulli(<span class="math inline">\(p\)</span>): binary entropy <span class="math inline">\(-p\log_2 p-(1-p)\log_2(1-p)\)</span></li>
+<li class="fragment">Binomial(<span class="math inline">\(n,p\)</span>): no elementary closed form; same three-panel sum</li>
+<li class="fragment">Fair coin: <span class="math inline">\(H=1\)</span> bit</li>
+</ul>
+</div>
+</section>
+<section id="bernoulli-entropy" class="slide level2">
+<h2>Bernoulli Entropy</h2>
+</section>
+<section id="bernoulli-entropy-1" class="slide level2">
+<h2>Bernoulli Entropy</h2>
+<div class="figure">
+<div id="bernoulli-entropy-panels-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/information/bernoulli-entropy-panels.svg" width="85%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+Bernoulli(<span class="math inline">\(p=0.3\)</span>). Left: the distribution. Middle: surprisal <span class="math inline">\(-\log_2 P(x)\)</span>. Right: the summands <span class="math inline">\(-P(x)\log_2 P(x)\)</span>; their total is the entropy <span class="math inline">\(H\)</span>.
+</aside>
+<div>
+<ul>
+<li class="fragment">Fair coin <span class="math inline">\(p=\tfrac12\)</span>: <span class="math inline">\(H=1\)</span> bit — maximal for a binary variable</li>
+<li class="fragment">As <span class="math inline">\(p\to 0\)</span> or <span class="math inline">\(1\)</span>: <span class="math inline">\(H\to 0\)</span> — the outcome is nearly certain</li>
+<li class="fragment">Closed form: <span class="math inline">\(H=-p\log_2 p-(1-p)\log_2(1-p)\)</span></li>
+</ul>
+</div>
+</section>
+<section id="binomial-entropy" class="slide level2">
+<h2>Binomial Entropy</h2>
+</section>
+<section id="binomial-entropy-1" class="slide level2">
+<h2>Binomial Entropy</h2>
+<div class="figure">
+<div id="binomial-entropy-panels-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/information/binomial-entropy-panels.svg" width="85%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+Binomial(<span class="math inline">\(n=12\)</span>, <span class="math inline">\(p=0.4\)</span>). The right-hand panel sums to <span class="math inline">\(H\)</span>; tails contribute little because <span class="math inline">\(P(k)\)</span> is small even when surprisal is large.
+</aside>
+<div>
+<ul>
+<li class="fragment">Same visual grammar as Bernoulli: <span class="math inline">\(P\)</span>, <span class="math inline">\(-\log_2 P\)</span>, <span class="math inline">\(-P\log_2 P\)</span></li>
+<li class="fragment">Surprisal is largest in the tails; weight <span class="math inline">\(P(k)\)</span> suppresses them in <span class="math inline">\(H\)</span></li>
+<li class="fragment">Large-<span class="math inline">\(n\)</span> approximation: <span class="math inline">\(H\approx\tfrac12\log_2(2\pi e\, np(1-p))\)</span> bits</li>
+</ul>
+</div>
+</section>
+<section id="poisson-and-multinomial-1" class="slide level2">
+<h2>Poisson and Multinomial</h2>
+<div>
+<ul>
+<li class="fragment">Poisson(<span class="math inline">\(\lambda\)</span>): numerical sum over <span class="math inline">\(k\)</span>; <span class="math inline">\(\approx\tfrac12\log_2(2\pi e\lambda)\)</span> for large <span class="math inline">\(\lambda\)</span></li>
+<li class="fragment">Categorical / one multinomial trial: <span class="math inline">\(H=-\sum_k p_k\log_2 p_k\)</span></li>
+<li class="fragment">Uniform on <span class="math inline">\(K\)</span> symbols: <span class="math inline">\(H=\log_2 K\)</span></li>
+</ul>
+</div>
+</section>
+<section id="poisson-entropy" class="slide level2">
+<h2>Poisson Entropy</h2>
+</section>
+<section id="poisson-entropy-1" class="slide level2">
+<h2>Poisson Entropy</h2>
+<div class="figure">
+<div id="poisson-entropy-panels-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/information/poisson-entropy-panels.svg" width="85%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+Poisson(<span class="math inline">\(\lambda=4\)</span>). Mid: surprisal rises in the tails. Right: the probability weight cuts those tails back, so <span class="math inline">\(H\)</span> is dominated by the bulk.
+</aside>
+<div>
+<ul>
+<li class="fragment">Count distributions: same three-panel reading as Bernoulli / binomial</li>
+<li class="fragment">Large-<span class="math inline">\(\lambda\)</span> approximation: <span class="math inline">\(H\approx\tfrac12\log_2(2\pi e\lambda)\)</span> bits</li>
+<li class="fragment">Entropy grows only logarithmically with the rate</li>
+</ul>
+</div>
+</section>
+<section id="multinomial-categorical-entropy" class="slide level2">
+<h2>Multinomial / Categorical Entropy</h2>
+</section>
+<section id="categorical-entropy" class="slide level2">
+<h2>Categorical Entropy</h2>
+<div class="figure">
+<div id="multinomial-entropy-panels-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/information/multinomial-entropy-panels.svg" width="85%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+The four-outcome distribution from the expectation example, now in bits. Right-hand summands total <span class="math inline">\(H\)</span>; category <span class="math inline">\(y=3\)</span> is rarest (highest surprisal) but contributes modestly because <span class="math inline">\(P(3)\)</span> is small.
+</aside>
+<div>
+<ul>
+<li class="fragment">One multinomial trial <span class="math inline">\(=\)</span> categorical: <span class="math inline">\(H=-\sum_k p_k\log_2 p_k\)</span></li>
+<li class="fragment">Uniform on <span class="math inline">\(K\)</span> symbols: <span class="math inline">\(H=\log_2 K\)</span> — maximal</li>
+<li class="fragment"><span class="math inline">\(n\)</span> i.i.d. trials: entropies add; the count vector is more subtle</li>
+</ul>
+</div>
+</section>
+<section id="gaussian-1" class="slide level2">
+<h2>Gaussian</h2>
+<div>
+<ul>
+<li class="fragment">Differential entropy <span class="math inline">\(h=-\int p\log_2 p\,\mathrm{d}y\)</span></li>
+<li class="fragment">Univariate Gaussian: <span class="math inline">\(h=\tfrac12\log_2(2\pi e\sigma^2)\)</span> bits</li>
+<li class="fragment">Can be negative; not the same object as discrete <span class="math inline">\(H\)</span></li>
+</ul>
+</div>
+</section>
+<section id="gaussian-differential-entropy" class="slide level2">
+<h2>Gaussian Differential Entropy</h2>
+</section>
+<section id="gaussian-differential-entropy-1" class="slide level2">
+<h2>Gaussian Differential Entropy</h2>
+<div class="figure">
+<div id="gaussian-entropy-panels-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/information/gaussian-entropy-panels.svg" width="85%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+Univariate Gaussian (height example). Middle: <span class="math inline">\(-\log_2 p(y)\)</span> dips below zero where the density exceeds <span class="math inline">\(1\)</span>. Right: the integrand whose integral is differential entropy <span class="math inline">\(h\)</span>.
+</aside>
+<div>
+<ul>
+<li class="fragment">Closed form: <span class="math inline">\(h=\tfrac12\log_2(2\pi e\sigma^2)\)</span> bits</li>
+<li class="fragment">Grows with <span class="math inline">\(\sigma\)</span>; independent of <span class="math inline">\(\mu\)</span></li>
+<li class="fragment">Differential entropy <span class="math inline">\(\neq\)</span> discrete Shannon <span class="math inline">\(H\)</span> — can be negative</li>
+</ul>
+</div>
+<aside class="notes">
+Flag the continuous caveat once. Do not dwell; the three-panel analogy is the point. Discrete <span class="math inline">\(H\ge 0\)</span>; differential <span class="math inline">\(h\)</span> is a relative measure.
+</aside>
 </section>
 <section id="shannons-definition-is-not-yet" class="slide level2">
 <h2>Shannon’s definition is not yet …</h2>
@@ -1184,6 +1353,80 @@ Eddington makes his feelings about the primacy of the second law clear. This pri
 <li class="fragment">Minimising <span class="math inline">\(E\)</span> is the zero-temperature / MAP limit</li>
 </ul>
 </div>
+</section>
+<section id="energies-from-distributions-you-already-know" class="slide level2">
+<h2>Energies from Distributions You Already Know</h2>
+</section>
+<section id="from-p-to-e-the-four-outcomes" class="slide level2">
+<h2>From <span class="math inline">\(p\)</span> to <span class="math inline">\(E\)</span>: the Four Outcomes</h2>
+<p>Earlier we tabulated <span class="math inline">\(-\log P(y)\)</span> for a four-outcome distribution. Those values <em>are</em> energies.</p>
+<table>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(y\)</span></th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(P(y)\)</span></td>
+<td>0.3</td>
+<td>0.2</td>
+<td>0.1</td>
+<td>0.4</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(E(y)=-\log P(y)\)</span></td>
+<td>1.204</td>
+<td>1.609</td>
+<td>2.302</td>
+<td>0.916</td>
+</tr>
+</tbody>
+</table>
+<div>
+<ul>
+<li class="fragment">Most probable outcome <span class="math inline">\(y=4\)</span> has the <em>lowest</em> energy</li>
+<li class="fragment">Rarest <span class="math inline">\(y=3\)</span> has the <em>highest</em> energy</li>
+<li class="fragment">Shannon entropy was <span class="math inline">\(\mathbb{E}[E(y)] = 1.280\)</span> nats — average energy under <span class="math inline">\(p\)</span></li>
+</ul>
+</div>
+<aside class="notes">
+Point at the same table from the entropy expectation slide. Do not recompute; only rename <span class="math inline">\(-\log p\)</span> as <span class="math inline">\(E\)</span>.
+</aside>
+</section>
+<section id="bernoulli-fair-coin" class="slide level2">
+<h2>Bernoulli / Fair Coin</h2>
+<p>A coin with <span class="math inline">\(P(H)=p\)</span>, <span class="math inline">\(P(T)=1-p\)</span> is a two-state energy model.</p>
+<div>
+<ul>
+<li class="fragment"><span class="math inline">\(E_H = -\log p\)</span>,<span class="math inline">\(E_T = -\log(1-p)\)</span></li>
+<li class="fragment">Fair coin <span class="math inline">\(p=\tfrac12\)</span>: <span class="math inline">\(E_H=E_T=\log 2\)</span> — degenerate energies</li>
+<li class="fragment">Biased coin: the favoured face sits lower in energy</li>
+</ul>
+</div>
+</section>
+<section id="gaussian-quadratic-energy" class="slide level2">
+<h2>Gaussian: Quadratic Energy</h2>
+<p>The univariate Gaussian we wrote earlier is already an energy-based model.</p>
+<p><span class="math display">\[
+p(y)\propto \exp\!\left(-\frac{(y-\mu)^2}{2\sigma^2}\right)
+\quad\Longleftrightarrow\quad
+E(y)=\frac{(y-\mu)^2}{2\sigma^2}
+\]</span></p>
+<div>
+<ul>
+<li class="fragment">Height example: <span class="math inline">\(\mu=1.7\)</span>, <span class="math inline">\(\sigma^2=0.0225\)</span> — <span class="math inline">\(E\)</span> is a parabola about <span class="math inline">\(1.7\)</span></li>
+<li class="fragment">Least-squares regression uses the same quadratic energy on residuals</li>
+<li class="fragment">Normaliser <span class="math inline">\((2\pi\sigma^2)^{-1/2}\)</span> is the partition function for this <span class="math inline">\(E\)</span></li>
+</ul>
+</div>
+<aside class="notes">
+One board sketch of the parabola <span class="math inline">\(E(y)\)</span> under the height Gaussian is enough. Then jump to the least-squares slide with recognition rather than a new idea.
+</aside>
 <p><span class="math display">\[
 E(\mathbf{w})=\sum_n\left(y_n-\mathbf{w}^\top\mathbf{x}_n\right)^2
 \]</span></p>
@@ -1294,11 +1537,33 @@ H(\mathbf{q},\mathbf{p}) = T(\mathbf{p}) + V(\mathbf{q})
 <p>HMC: invent momentum, simulate Hamiltonian dynamics, accept/reject.</p>
 <div>
 <ul>
-<li class="fragment">Draw <span class="math inline">\(\mathbf{p}\sim\mathcal{N}(0,M)\)</span>; simulate leapfrog steps on <span class="math inline">\(H\)</span></li>
-<li class="fragment">Propose <span class="math inline">\((\mathbf{q}&#39;,\mathbf{p}&#39;)\)</span>; Metropolis test on <span class="math inline">\(H\)</span></li>
+<li class="fragment">Draw <span class="math inline">\(\mathbf{p}\sim\mathcal{N}(0,M)\)</span>; integrate Hamilton’s equations for a short fictitious time</li>
+<li class="fragment">Propose the <em>endpoint</em> <span class="math inline">\((\mathbf{q}&#39;,\mathbf{p}&#39;)\)</span>; Metropolis test on <span class="math inline">\(H\)</span></li>
 <li class="fragment">Marginal samples of <span class="math inline">\(\mathbf{q}\)</span> target <span class="math inline">\(p(\mathbf{q})\propto e^{-V(\mathbf{q})}\)</span></li>
 </ul>
 </div>
+<p>Hamilton’s equations are continuous. A computer must take discrete steps.</p>
+<div>
+<ul>
+<li class="fragment">Naive Euler breaks time-reversibility and volume preservation — Metropolis rejects almost everything</li>
+<li class="fragment">Leapfrog (velocity Verlet): staggered updates of <span class="math inline">\(\mathbf{p}\)</span> and <span class="math inline">\(\mathbf{q}\)</span></li>
+<li class="fragment">Symplectic and reversible; <span class="math inline">\(H\)</span> drifts only slowly, so accept rates stay high</li>
+</ul>
+</div>
+<aside class="notes">
+One blackboard sketch of leapfrog staggering is enough. Do not derive the symplectic condition; name reversibility + volume preservation as the reason Euler fails.
+</aside>
+<p>The leapfrog <em>path</em> is not a sequence of posterior samples.</p>
+<div>
+<ul>
+<li class="fragment"><span class="math inline">\(L\)</span> leapfrog steps build one proposal from <span class="math inline">\((\mathbf{q},\mathbf{p})\)</span> to <span class="math inline">\((\mathbf{q}&#39;,\mathbf{p}&#39;)\)</span></li>
+<li class="fragment">Intermediate points on the path are integrator waypoints — discard them</li>
+<li class="fragment">Only the accepted endpoint (after Metropolis) enters the Markov chain</li>
+</ul>
+</div>
+<aside class="notes">
+Point at the quadratic figure: curves = proposals; markers = accepted samples only. Say it twice if needed.
+</aside>
 <div class="figure">
 <div id="radford-neal-figure" class="figure-frame">
 <div class="centered centered" style="">
@@ -1337,7 +1602,7 @@ Radford M. Neal (University of Toronto).
 </div>
 </div>
 <aside class="notes">
-Leapfrog trajectories and samples from teachable HMC on <span class="math inline">\(V(\mathbf{q})=\tfrac12\|\mathbf{q}\|^2\)</span>. Accept/reject keeps the chain on the Boltzmann target <span class="math inline">\(e^{-V}\)</span>.
+Leapfrog <em>trajectories</em> (curves) are proposals, not samples. Markers are accepted endpoints only. Target <span class="math inline">\(V(\mathbf{q})=\tfrac12\|\mathbf{q}\|^2\)</span>; Metropolis on <span class="math inline">\(\Delta H\)</span> keeps the chain on <span class="math inline">\(e^{-V}\)</span>.
 </aside>
 </section>
 <section id="section-18" class="slide level2">
@@ -1352,7 +1617,7 @@ Leapfrog trajectories and samples from teachable HMC on <span class="math inline
 Hamiltonian and weight traces for logistic regression. <span class="math inline">\(V(\mathbf{ w})=-\log p(\mathbf{ w}\mid\mathcal{D})\)</span>; SGD gives one downhill point, HMC a cloud of posterior samples.
 </aside>
 <aside class="notes">
-Name kinetic energy and Neal; show the trajectory figure if builds are available. Emphasise V = -log posterior, not a new loss species.
+Name kinetic energy and Neal; show the trajectory figure if builds are available. Emphasise V = -log posterior, not a new loss species. Re-state: path = proposal; samples = accepted endpoints.
 </aside>
 </section>
 <section id="define-this-week" class="slide level2">
