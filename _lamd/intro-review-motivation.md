@@ -110,7 +110,11 @@ reading:
 
 \subsection{Doubt}
 
-\slidesincremental{<!-- Slide bullets that summarise the notes below -->}
+\slidesincremental{
+* Certainty is impossible (Laplace's gremlin) --- doubt is inevitable
+* Probability quantifies uncertainty; this course centres on *entropy*
+* Bring doubt into your own reasoning: challenge statements (Socratic habit)
+}
 
 \notes{What Laplace's gremlin implies in practice is that we can never be certain about outcome, so doubt is an inevitable consequence of
 our lack of knowledge. It is what drives us to develop quantitative notions for uncertainty. We have already introduced probability. Next we
@@ -130,7 +134,7 @@ way in which you can develop your understanding. Learning to express that doubt 
 
 \notes{The assessment model is based on is 
 1. a form of questioning enquiry generally called "the Socratic method" is an informative way of exploring a topic
-2. an impression that the current generation of LL models is weak when asked to sustain Socratic dialogue. Answers tend to be expansive and when read carefully can lead to 'diaclectic vertigo'
+2. an impression that the current generation of LL models is weak when asked to sustain Socratic dialogue. Answers tend to be expansive and when read carefully can lead to 'dialectical vertigo'
 3. The new idea we're testing "Socratic method" can be deployed by reversing the role of Socrates and the student.
 
 So in other words we are asking you to take on the role of Socrates in these conversations.
@@ -144,11 +148,11 @@ So in other words we are asking you to take on the role of Socrates in these con
 
 \subsection{Dialectical Vertigo}
 
-\notes{In the book, The Grasshopper [@Suits-grasshopper78], the eponymous protaganist, Grasshopper, asks his student, Skepticus, to take on this role.}
+\notes{In the book, The Grasshopper [@Suits-grasshopper78], the eponymous protagonist, Grasshopper, asks his student, Skepticus, to take on this role.}
 
 > What you are describing, Skepticus, is a chronic but minor ailment of philosophers. It is called dialectical vertigo, and its cure is the immediate application of straightforward argumentation.
 >
-> The Grasshopper to Skepticus in *The Grassohopper: Games, Life and Utopia* [@Suits-grasshopper78 pg 37]
+> The Grasshopper to Skepticus in *The Grasshopper: Games, Life and Utopia* [@Suits-grasshopper78 pg 37]
 
 \newslide{Interacting with LLMs}
 
