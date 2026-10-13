@@ -20,7 +20,6 @@ Class tests examine the *applied* form of the define-stage questions, on a new e
 **Define this week**
 
 - What is the relationship between energy and entropy? (Boltzmann seed / ML energies)
-- What are the information constraints on a human? (bandwidth, first cut)
 
 **The theme (return every week)**
 
@@ -31,6 +30,7 @@ Class tests examine the *applied* form of the define-stage questions, on a new e
 
 - How was entropy discovered?
 - Who were Carnot and Clausius, and what did each contribute?
+- What are the information constraints on a human? (bandwidth)
 - How is entropy understood today?
 - What is the difference between equilibrium and non-equilibrium thermodynamics?
 - What is a thermodynamic bath?
@@ -40,12 +40,13 @@ Class tests examine the *applied* form of the define-stage questions, on a new e
 
 ## Lecture 2 — 20 October — Boltzmann and Free Energy
 
-Quiz 1 occupies the first ten minutes.
+Quiz 1 occupies the first ten minutes (probability and Week 1 energy seeds). Then Hydrodynamica and the Week 1 entropy carry-over.
 
 **Define this week**
 
 - How was entropy discovered?
 - Who were Carnot and Clausius, and what did each contribute?
+- What are the information constraints on a human? (bandwidth, first cut)
 - What is the Gibbs--Boltzmann distribution (canonical ensemble)?
 - How do internal energy, entropy, and Helmholtz free energy enter $p_i$?
 - What is a thermodynamic bath?
