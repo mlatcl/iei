@@ -400,6 +400,9 @@ Gremlins are seen as the cause of a number of challenges in this World War II po
 </section>
 <section id="probability-review" class="slide level2">
 <h2>Probability Review</h2>
+</section>
+<section id="joint-marginal-conditional" class="slide level2">
+<h2>Joint, Marginal, Conditional</h2>
 <div>
 <ul>
 <li class="fragment">Joint <span class="math inline">\(P(x,y)\)</span>: both</li>
@@ -1345,6 +1348,9 @@ Eddington makes his feelings about the primacy of the second law clear. This pri
 </section>
 <section id="energy-in-machine-learning" class="slide level2">
 <h2>Energy in Machine Learning</h2>
+</section>
+<section id="energy-as-a-score" class="slide level2">
+<h2>Energy as a Score</h2>
 <p>In ML, an <em>energy</em> is a scalar assigned to a configuration: lower means preferred.</p>
 <div>
 <ul>
@@ -1427,6 +1433,9 @@ E(y)=\frac{(y-\mu)^2}{2\sigma^2}
 <aside class="notes">
 One board sketch of the parabola <span class="math inline">\(E(y)\)</span> under the height Gaussian is enough. Then jump to the least-squares slide with recognition rather than a new idea.
 </aside>
+</section>
+<section id="quadratic-energy-regression" class="slide level2">
+<h2>Quadratic Energy (Regression)</h2>
 <p><span class="math display">\[
 E(\mathbf{w})=\sum_n\left(y_n-\mathbf{w}^\top\mathbf{x}_n\right)^2
 \]</span></p>
@@ -1437,6 +1446,9 @@ E(\mathbf{w})=\sum_n\left(y_n-\mathbf{w}^\top\mathbf{x}_n\right)^2
 <li class="fragment">Gauss already linked this quadratic energy to the normal density</li>
 </ul>
 </div>
+</section>
+<section id="cross-entropy-energy-classification" class="slide level2">
+<h2>Cross-Entropy Energy (Classification)</h2>
 <p><span class="math display">\[
 E=-\sum_c y_c\log\hat{y}_c
 \]</span></p>
@@ -1447,6 +1459,9 @@ E=-\sum_c y_c\log\hat{y}_c
 <li class="fragment">Same arithmetic as <span class="math inline">\(\mathbb{E}[-\log p]\)</span> (Shannon entropy of a model)</li>
 </ul>
 </div>
+</section>
+<section id="boltzmann-machine-pairwise-energy" class="slide level2">
+<h2>Boltzmann Machine: Pairwise Energy</h2>
 <p><span class="math display">\[
 E(\mathbf{s})=-\sum_i b_i s_i-\sum_{i&lt;j}W_{ij}s_i s_j
 \]</span></p>
@@ -1483,6 +1498,9 @@ Optional live check. Deep dive and free-energy plots are lecture 2.
 </section>
 <section id="from-loss-landscapes-to-hamiltonians" class="slide level2">
 <h2>From Loss Landscapes to Hamiltonians</h2>
+</section>
+<section id="walking-down-an-energy" class="slide level2">
+<h2>Walking Down an Energy</h2>
 <p>Gradient descent: ‘walking downhill’</p>
 <div>
 <ul>
@@ -1500,6 +1518,9 @@ Optional live check. Deep dive and free-energy plots are lecture 2.
 <aside class="notes">
 Contours of the least-squares energy <span class="math inline">\(E(m,c)=\sum_n(y_n-mx_n-c)^2\)</span>. Steepest descent walks toward the bowl.
 </aside>
+</section>
+<section id="potential-energy" class="slide level2">
+<h2>Potential Energy</h2>
 <p>The loss is a <em>potential energy</em> <span class="math inline">\(V(\mathbf{q})\)</span> on parameter space.</p>
 <div>
 <ul>
@@ -1508,6 +1529,9 @@ Contours of the least-squares energy <span class="math inline">\(E(m,c)=\sum_n(y
 <li class="fragment">Common analogy: ball in a bowl; GD is the overdamped limit</li>
 </ul>
 </div>
+</section>
+<section id="in-practice-stochastic" class="slide level2">
+<h2>In Practice: Stochastic</h2>
 <p>SGD estimates <span class="math inline">\(\nabla V\)</span> from a random mini-batch</p>
 <div>
 <ul>
@@ -1516,6 +1540,9 @@ Contours of the least-squares energy <span class="math inline">\(E(m,c)=\sum_n(y
 <li class="fragment">Noise can help escape shallow traps (less relevant for convex bowls)</li>
 </ul>
 </div>
+</section>
+<section id="where-is-the-kinetic-energy" class="slide level2">
+<h2>Where Is the Kinetic Energy?</h2>
 <p>Where is the kinetic energy?</p>
 <div>
 <ul>
@@ -1524,6 +1551,9 @@ Contours of the least-squares energy <span class="math inline">\(E(m,c)=\sum_n(y
 <li class="fragment">Physics: kinetic energy <span class="math inline">\(T(\mathbf{p})\)</span> lives on <em>momentum</em> <span class="math inline">\(\mathbf{p}\)</span></li>
 </ul>
 </div>
+</section>
+<section id="the-hamiltonian" class="slide level2">
+<h2>The Hamiltonian</h2>
 <p><span class="math display">\[
 H(\mathbf{q},\mathbf{p}) = T(\mathbf{p}) + V(\mathbf{q})
 \]</span></p>
@@ -1534,6 +1564,9 @@ H(\mathbf{q},\mathbf{p}) = T(\mathbf{p}) + V(\mathbf{q})
 <li class="fragment"><span class="math inline">\(H\)</span> conserved along the flow (ideal, frictionless case)</li>
 </ul>
 </div>
+</section>
+<section id="hamiltonian-monte-carlo" class="slide level2">
+<h2>Hamiltonian Monte Carlo</h2>
 <p>HMC: invent momentum, simulate Hamiltonian dynamics, accept/reject.</p>
 <div>
 <ul>
@@ -1542,6 +1575,9 @@ H(\mathbf{q},\mathbf{p}) = T(\mathbf{p}) + V(\mathbf{q})
 <li class="fragment">Marginal samples of <span class="math inline">\(\mathbf{q}\)</span> target <span class="math inline">\(p(\mathbf{q})\propto e^{-V(\mathbf{q})}\)</span></li>
 </ul>
 </div>
+</section>
+<section id="why-leapfrog" class="slide level2">
+<h2>Why Leapfrog?</h2>
 <p>Hamilton’s equations are continuous. A computer must take discrete steps.</p>
 <div>
 <ul>
@@ -1553,6 +1589,9 @@ H(\mathbf{q},\mathbf{p}) = T(\mathbf{p}) + V(\mathbf{q})
 <aside class="notes">
 One blackboard sketch of leapfrog staggering is enough. Do not derive the symplectic condition; name reversibility + volume preservation as the reason Euler fails.
 </aside>
+</section>
+<section id="trajectories-propose-endpoints-sample" class="slide level2">
+<h2>Trajectories Propose; Endpoints Sample</h2>
 <p>The leapfrog <em>path</em> is not a sequence of posterior samples.</p>
 <div>
 <ul>
@@ -1564,6 +1603,9 @@ One blackboard sketch of leapfrog staggering is enough. Do not derive the symple
 <aside class="notes">
 Point at the quadratic figure: curves = proposals; markers = accepted samples only. Say it twice if needed.
 </aside>
+</section>
+<section id="radford-neal" class="slide level2">
+<h2>Radford Neal</h2>
 <div class="figure">
 <div id="radford-neal-figure" class="figure-frame">
 <div class="centered centered" style="">
@@ -1574,6 +1616,9 @@ Point at the quadratic figure: curves = proposals; markers = accepted samples on
 <aside class="notes">
 Radford M. Neal (University of Toronto).
 </aside>
+</section>
+<section id="radford-neal-1" class="slide level2">
+<h2>Radford Neal</h2>
 <p>Radford Neal brought Hamiltonian Monte Carlo into Bayesian neural nets.</p>
 <div>
 <ul>
