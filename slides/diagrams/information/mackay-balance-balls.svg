@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" width="900" height="420">
+  <!--
+    Same vocabulary as bayes-two-barrels.svg:
+      pan fill #EDD9A3, stroke #8B6520 width 3
+      Georgia labels #2A2A2A / #444 / italic #666
+      flat circles, no gradients or shadows
+    Layout:
+      balance centred at x=450
+      twelve identical balls in a 2x6 grid below
+      three outcome labels under the beam tips / fulcrum
+  -->
+
+  <!-- =========================================================
+       BALANCE
+  ========================================================= -->
+
+  <!-- base -->
+  <rect x="390" y="198" width="120" height="10" rx="2"
+        fill="#8B6520" stroke="none"/>
+  <!-- fulcrum post -->
+  <rect x="442" y="118" width="16" height="80"
+        fill="#8B6520" stroke="none"/>
+  <!-- fulcrum tip -->
+  <polygon points="450,108 438,128 462,128"
+           fill="#8B6520" stroke="none"/>
+
+  <!-- beam (balanced, horizontal) -->
+  <rect x="180" y="100" width="540" height="10" rx="2"
+        fill="#8B6520" stroke="none"/>
+
+  <!-- left hanger -->
+  <line x1="230" y1="110" x2="230" y2="145"
+        stroke="#8B6520" stroke-width="3"/>
+  <!-- right hanger -->
+  <line x1="670" y1="110" x2="670" y2="145"
+        stroke="#8B6520" stroke-width="3"/>
+
+  <!-- left pan (shallow U, same cup language as barrels) -->
+  <path d="M 160,148 L 160,188 C 185,205 275,205 300,188 L 300,148 Z"
+        fill="#EDD9A3" stroke="none"/>
+  <path d="M 160,148 L 160,188 C 185,205 275,205 300,188 L 300,148"
+        fill="none" stroke="#8B6520" stroke-width="3" stroke-linejoin="round"/>
+
+  <!-- right pan -->
+  <path d="M 600,148 L 600,188 C 625,205 715,205 740,188 L 740,148 Z"
+        fill="#EDD9A3" stroke="none"/>
+  <path d="M 600,148 L 600,188 C 625,205 715,205 740,188 L 740,148"
+        fill="none" stroke="#8B6520" stroke-width="3" stroke-linejoin="round"/>
+
+  <!-- three outcomes -->
+  <text x="230" y="58"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="15" font-weight="bold"
+        text-anchor="middle" fill="#2A2A2A">left heavy</text>
+  <polygon points="230,68 222,82 238,82" fill="#666" stroke="none"/>
+
+  <text x="450" y="58"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="15" font-weight="bold"
+        text-anchor="middle" fill="#2A2A2A">balance</text>
+  <polygon points="450,68 442,82 458,82" fill="#666" stroke="none"/>
+
+  <text x="670" y="58"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="15" font-weight="bold"
+        text-anchor="middle" fill="#2A2A2A">right heavy</text>
+  <polygon points="670,68 662,82 678,82" fill="#666" stroke="none"/>
+
+  <!-- =========================================================
+       TWELVE IDENTICAL BALLS  (2 rows x 6)
+       centres: x = 300 + 60*i, y = 268 and 328
+  ========================================================= -->
+
+  <!-- row 0 -->
+  <circle cx="300" cy="268" r="18" fill="#C8C4BC" stroke="#6A6560" stroke-width="2"/>
+  <circle cx="360" cy="268" r="18" fill="#C8C4BC" stroke="#6A6560" stroke-width="2"/>
+  <circle cx="420" cy="268" r="18" fill="#C8C4BC" stroke="#6A6560" stroke-width="2"/>
+  <circle cx="480" cy="268" r="18" fill="#C8C4BC" stroke="#6A6560" stroke-width="2"/>
+  <circle cx="540" cy="268" r="18" fill="#C8C4BC" stroke="#6A6560" stroke-width="2"/>
+  <circle cx="600" cy="268" r="18" fill="#C8C4BC" stroke="#6A6560" stroke-width="2"/>
+
+  <!-- row 1 -->
+  <circle cx="300" cy="328" r="18" fill="#C8C4BC" stroke="#6A6560" stroke-width="2"/>
+  <circle cx="360" cy="328" r="18" fill="#C8C4BC" stroke="#6A6560" stroke-width="2"/>
+  <circle cx="420" cy="328" r="18" fill="#C8C4BC" stroke="#6A6560" stroke-width="2"/>
+  <circle cx="480" cy="328" r="18" fill="#C8C4BC" stroke="#6A6560" stroke-width="2"/>
+  <circle cx="540" cy="328" r="18" fill="#C8C4BC" stroke="#6A6560" stroke-width="2"/>
+  <circle cx="600" cy="328" r="18" fill="#C8C4BC" stroke="#6A6560" stroke-width="2"/>
+
+  <!-- labels -->
+  <text x="450" y="372"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="18" font-weight="bold"
+        text-anchor="middle" fill="#2A2A2A">12 balls - one odd (heavier or lighter)</text>
+
+  <text x="450" y="400"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="15" font-style="italic"
+        text-anchor="middle" fill="#666">Each weighing has three outcomes.</text>
+
+</svg>
