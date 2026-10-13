@@ -1,0 +1,257 @@
+# IEI course overview (referia CIP-0010 tall-first / inline_list).
+# Lists lecture and worksheet (practical) sources under _lamd/, with GitHub
+# edit links. Course identity from _config.yml / _lamd/_lamd.yml:
+#   github_username: mlatcl
+#   ghub.repository: iei
+#   ghub.branch: gh-pages
+#
+# Serve from this directory, e.g.:
+#   referia serve --root ~/mlatcl/iei
+
+referia_config_version: 2
+title: "IEI — lectures & worksheets"
+description: >
+  Overview of Information, Entropy and Intelligence (L172) LaMD sources
+  in _lamd/. Default view: sessions from today−30d through +180d, by date.
+date: 2026-10-13
+author: Neil D. Lawrence
+
+display:
+  layout: inline_list
+  detail_field: abstract
+  filter_defaults:
+    complete: any
+    date:
+      after: today-30d
+      before: today+180d
+    _sort: week:asc
+    _group: directory
+
+# Site / LaMD identity from Jekyll + LaMD configs (nested YAML → flat columns).
+# _config.yml ghub is a mapping; _lamd/_lamd.yml ghub is a one-item list.
+# Each yaml projects an `index` column so hstack can join (same pattern as theses).
+constants:
+  type: hstack
+  index: index
+  select: github
+  specifications:
+    - type: yaml
+      filename: _config.yml
+      index: index
+      fields:
+        - field: index
+          liquid: "github"
+        - github_username
+        - field: github_repository
+          path: ghub.repository
+        - field: course_title
+          liquid: "{{ title }}"
+        - field: course_description
+          liquid: "{{ description }}"
+        - field: site_url
+          liquid: "{{ url }}{{ baseurl }}"
+        - field: site_baseurl
+          liquid: "{{ baseurl }}"
+    - type: yaml
+      filename: _lamd.yml
+      directory: _lamd
+      index: index
+      fields:
+        - field: index
+          liquid: "github"
+        - field: github_branch
+          liquid: "{{ ghub[0].branch }}"
+        - field: github_organization
+          liquid: "{{ ghub[0].organization }}"
+        - field: lamd_directory
+          liquid: "{{ ghub[0].directory }}"
+        - field: lectures_dir
+          liquid: "{{ postsdir }}"
+        - field: practicals_dir
+          liquid: "{{ practicalsdir }}"
+        - field: slides_dir
+          liquid: "{{ slidesdir }}"
+        - field: default_layout
+          liquid: "{{ layout }}"
+        - field: course_venue
+          liquid: "{{ venue }}"
+    - type: local
+      index: index
+      data:
+        - index: github
+          course_code: L172
+
+# --- tall discovery: LaMD sources (lectures + practicals) -----------------
+input:
+  type: markdown_directory
+  index: sessionPath
+  source:
+    - directory: _lamd
+      glob: "*.md"
+  fields:
+    - title
+    - date
+    - week
+    - venue
+    - room
+    - abstract
+    - layout
+    - type
+    - practical
+    - outcomes
+    - duration_hours
+    - assessment_id
+    - weight
+    - due_week
+    - worksheet_due
+    - worksheet_released
+  store_fields:
+    directory: sourceDirectory
+    filename: sourceFilename
+    root: sourceRoot
+  compute:
+    - field: sessionPath
+      function: render_liquid
+      args:
+        template: "{{ sourceDirectory }}/{{ sourceFilename }}"
+      row_args:
+        sourceDirectory: sourceDirectory
+        sourceFilename: sourceFilename
+    - field: collection
+      function: render_liquid
+      args:
+        template: "{{ sourceDirectory | split: '/' | last }}"
+      row_args:
+        sourceDirectory: sourceDirectory
+    # Kind for filtering: prefer explicit layout, else type, else filename hint.
+    - field: kind
+      function: render_liquid
+      args:
+        template: >-
+          {% if layout %}{{ layout }}{% elsif type %}{{ type }}{% elsif sourceFilename contains "practical" %}practical{% else %}other{% endif %}
+      row_args:
+        layout: layout
+        type: type
+        sourceFilename: sourceFilename
+    # inline_list title links via `url`. github_* are constants columns, but
+    # input compute still needs them as args (not available as row_args during
+    # finalize_data — lynguine backlog note on nested YAML constants).
+    - field: url
+      function: render_liquid
+      args:
+        template: >-
+          https://github.com/{{ github_username }}/{{ github_repository }}/edit/{{ github_branch }}/{{ collection }}/{{ sourceFilename }}
+        github_username: mlatcl
+        github_repository: iei
+        github_branch: gh-pages
+      row_args:
+        collection: collection
+        sourceFilename: sourceFilename
+    - field: description
+      function: render_liquid
+      args:
+        template: >-
+          {% if week %}Week {{ week }}{% endif %}{% if kind %} · {{ kind }}{% endif %}{% if venue %} · {{ venue }}{% endif %}{% if assessment_id %} · {{ assessment_id }}{% endif %}
+      row_args:
+        week: week
+        kind: kind
+        venue: venue
+        assessment_id: assessment_id
+    - field: today
+      function: today
+
+output:
+  type: yaml
+  index: sessionPath
+  filename: iei-lectures.yml
+  directory: ./_data
+  columns:
+    - complete
+    - status
+
+review:
+  - type: Checkbox
+    field: complete
+    default: false
+    args:
+      description: Done
+  - type: Select
+    field: status
+    args:
+      description: Status
+      options:
+        - ""
+        - Draft
+        - Ready
+        - Delivered
+  - type: SaveButton
+
+filters:
+  - field: complete
+    type: boolean
+    label: Done
+  - field: status
+    type: categorical
+    label: Status
+    values:
+      - Draft
+      - Ready
+      - Delivered
+  - field: kind
+    type: categorical
+    label: Kind
+    values:
+      - lecture
+      - practical
+      - other
+  - field: title
+    type: contains
+    label: Title
+  - field: venue
+    type: contains
+    label: Venue
+  - field: date
+    type: date_range
+    label: Date
+  - field: week
+    type: categorical
+    label: Week
+    values:
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+      - "6"
+      - "7"
+      - "8"
+
+sort:
+  - field: week
+    order: asc
+  - field: date
+    order: asc
+
+viewer:
+  - liquid: |
+      ## {{ course_title }}
+
+      **{{ course_code }}** ·
+      [Course site]({{ site_url }}) ·
+      sources
+      [`{{ github_organization }}/{{ github_repository }}`](https://github.com/{{ github_organization }}/{{ github_repository }})
+      on `{{ github_branch }}` (`{{ lamd_directory }}/`)
+
+      {{ course_description }}
+
+      Built outputs: lectures → `{{ lectures_dir }}`, practicals →
+      `{{ practicals_dir }}`, slides → `{{ slides_dir }}` (default LaMD
+      layout `{{ default_layout }}`).
+
+      ---
+
+      Tick **Done** / set **Status** as you prepare each session. Titles open
+      the GitHub edit page for the `_lamd` source. Expand **Abstract** for the
+      session blurb. Default date window: today−30d through +180d. Clear
+      restores defaults. Filter **Kind** to `lecture` or `practical` to hide
+      README / samples.

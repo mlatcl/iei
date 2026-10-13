@@ -1,0 +1,49 @@
+- sessionPath: _lamd/02-maxent-practical.md
+  status: Draft
+  status_modified: '2026-10-13 08:44:40.292529'
+  status_created: '2026-10-13 08:44:40.292529'
+- sessionPath: _lamd/03-geometry-practical.md
+  status: Draft
+  status_modified: '2026-10-13 08:44:45.593726'
+  status_created: '2026-10-13 08:44:45.593726'
+- sessionPath: _lamd/04-intelligence-practical.md
+  status: Draft
+  status_modified: '2026-10-13 08:44:49.732374'
+  status_created: '2026-10-13 08:44:49.732374'
+- sessionPath: _lamd/README.md
+- sessionPath: _lamd/boltzmann-free-energy.md
+  status: Draft
+  status_modified: '2026-10-13 08:44:01.284173'
+  status_created: '2026-10-13 08:44:01.284173'
+- sessionPath: _lamd/fisher-metric.md
+  status: Draft
+  status_modified: '2026-10-13 08:44:47.528821'
+  status_created: '2026-10-13 08:44:47.528821'
+- sessionPath: _lamd/intro-history-entropy-shannon-practical.md
+  status: Ready
+  status_modified: '2026-10-13 08:44:58.127088'
+  status_created: '2026-10-13 08:44:58.127088'
+- sessionPath: _lamd/intro-review-motivation.md
+- sessionPath: _lamd/limits-on-intelligence.md
+  status: Draft
+  status_modified: '2026-10-13 08:44:53.944982'
+  status_created: '2026-10-13 08:44:53.944982'
+- sessionPath: _lamd/maxent-exponential-family.md
+- sessionPath: _lamd/maxent-projection.md
+  status: Draft
+  status_modified: '2026-10-13 08:44:51.858816'
+  status_created: '2026-10-13 08:44:51.858816'
+- sessionPath: _lamd/maxwell-landauer.md
+  status: Draft
+  status_modified: '2026-10-13 08:44:42.839111'
+  status_created: '2026-10-13 08:44:42.839111'
+- sessionPath: _lamd/multi-information.md
+  status: Draft
+  status_modified: '2026-10-13 08:44:55.931683'
+  status_created: '2026-10-13 08:44:55.931683'
+- sessionPath: _lamd/sample-lecture.md
+- sessionPath: _lamd/sample-practical.md
+- sessionPath: _lamd/shannon-entropy.md
+  status: Draft
+  status_modified: '2026-10-13 08:44:03.167220'
+  status_created: '2026-10-13 08:44:03.167220'

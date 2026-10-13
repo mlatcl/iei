@@ -12,12 +12,12 @@ abstract: >
   to centre the notion of uncertainty in the material. We'll also how we would like
   to see you deploy that in your course worksheets, where marks will be given for 
   answers that demonstrate the type of skepticism we see in the Socratic method. 
-  We will give a brief review of probability and then introduce entropy. We will 
-  relate energy to probability through the way the term energy is used in machine
-  learning, which is typically in the form of a "thermodynamic" or "Gibbs" energy
-  rather than a mechanical Hamiltonian. The difference between these will also be 
-  explained. We will release  Worksheet 1 that will need to be submitted before 
-  lecture starts in Week 2. 
+  We will give a brief review of probability, then relate energy to probability
+  through the way the term energy is used in machine learning (typically a
+  "thermodynamic" or "Gibbs" energy), introduce the Boltzmann seed, and then
+  introduce entropy. Mechanical Hamiltonians and HMC wait for Week 2. We will
+  release Worksheet 1 that will need to be submitted before lecture starts in
+  Week 2. 
 author:
 - given: Neil D.
   family: Lawrence
@@ -52,23 +52,24 @@ reading:
 
 \slidesincremental{
 * Room FW26; eight Tuesdays from today
-* How worksheets and LLMs work (you are Socrates)
-* Probability and entropy review; energy in ML; then potential → Hamiltonian / HMC
+* Motivation → probability → doubt / Socrates → energy → entropy
+* Worksheet 1 released today
 }
 
 \newslide{Time Plan}
-\notes{**Time plan (120 minutes)**}
+\notes{**Time plan (120 minutes).** Order matches the lecture source below.}
 
 | Minutes | Block |
 |--------:|-------|
-| 0–15 | Course mechanics; questions list; the motivation and theme |
-| 15–35 | 'Socratic' approach: curiosity, skepticism, submission rules |
-| 35–65 | Probability review: product/sum/Bayes; basic distributions |
-| 65–75 | Break |
-| 75–95 | Entropy review (elementary $H$); bits and nats |
-| 95–110 | Energy in ML; motivation and bandwidth; Boltzmann seed |
-| 110–118 | Culmination: potential → stochastic → kinetic? → Hamiltonian / HMC |
-| 118–120 | Worksheet 1 brief; Quiz 1 preview |
+| 0–10 | Course mechanics; questions list |
+| 10–22 | Motivation: theme; Laplace's demon and gremlin |
+| 22–42 | Probability review: product/sum/Bayes; named distributions |
+| 42–55 | Doubt; Socratic worksheets and LLM habit |
+| 55–65 | Break |
+| 65–85 | Energy: ML energies; Boltzmann seed $p_i \propto e^{-\beta E_i}$ |
+| 85–108 | Entropy: information game, MacKay weighing, $H$, entropy of named distributions |
+| 108–116 | Embodiment / bits as bandwidth (Atomic Human bridge) |
+| 116–120 | Worksheet 1 brief; Quiz 1 preview |
 
 
 \subsection{Course Mechanics}
@@ -84,7 +85,9 @@ reading:
 
 \subsection{Questions We Will Return To}
 
-\notes{The questions page is published today. Students should meet the whole list. They should not expect to answer most of it. Two stages: *define* (textbook answer, usually this week or the week the object is introduced) and *interpret* (the course's own reading, often week 5 or week 8).}
+\notes{The [questions page](https://mlatcl.github.io/iei/questions/) is published today. Students should meet the whole list. They should not expect to answer most of it. Two stages: *define* (textbook answer, usually this week or the week the object is introduced) and *interpret* (the course's own reading, often week 5 or week 8).}
+
+\slides{List: [mlatcl.github.io/iei/questions/](https://mlatcl.github.io/iei/questions/)}
 
 \slidesincremental{
 * Meet the questions today
@@ -110,8 +113,9 @@ reading:
 \slidesincremental{<!-- Slide bullets that summarise the notes below -->}
 
 \notes{What Laplace's gremlin implies in practice is that we can never be certain about outcome, so doubt is an inevitable consequence of
-our lack of knowledge. It is what drives us to develop quantitative notions for uncertainty. We have already introduced probability, but the
-main focus of the course will be *entropy*. The concept that unifies information and entropy, and therefore we argue (perhaps) intelligence.}
+our lack of knowledge. It is what drives us to develop quantitative notions for uncertainty. We have already introduced probability. Next we
+meet *energy* as used in machine learning, then *entropy* --- the concept that unifies information and uncertainty, and therefore we argue
+(perhaps) intelligence.}
 
 \notes{We will look to apply these ideas to how we approach our learning as well as what we learn. Bringing doubt into your own reasoning is a
 way in which you can develop your understanding. Learning to express that doubt through challenging a statement. The model we will use finds its origins in Socrates.}
@@ -173,15 +177,42 @@ So in other words we are asking you to take on the role of Socrates in these con
 }
 
 
+\include{_ml/includes/energy-in-machine-learning.md}
+
+\subsection{Boltzmann Seed}
+
+\newslide{A Prescription to Interrogate}
+
+\slides{For fixed mean energy $U$, the maximum-entropy occupation is the Boltzmann distribution --- same $E$ grammar as the ML energies above.}
+
+\slidesincremental{
+* $p_i \propto e^{-\beta E_i}$ with coldness $\beta = 1/kT$
+* Normaliser $Z=\sum_i e^{-\beta E_i}$, so $p_i = e^{-\beta E_i}/Z$
+* Week 2: name Gibbs, account with free energy $F=U-TS$; Carnot--Clausius history; potential $\to$ kinetic $\to$ HMC
+}
+
+\speakernotes{Do not derive Lagrange multipliers today. State the formula so Worksheet 1 has a concrete claim to open and then press. Students should leave curious about why *this* exponential, what $\beta$ means, and whether entropy here is a constraint or a recipe. Point back to cross-entropy / BM pairwise energy if they ask what $E$ is. Hamiltonian / HMC demos wait for lecture 2.}
+
+\setupcode{import numpy as np}
+
+\code{def boltzmann(energies, beta):
+    """Boltzmann probabilities $p_i \\propto e^{-\\beta E_i}$."""
+    log_w = -beta * np.asarray(energies, dtype=float)
+    log_w -= log_w.max()
+    w = np.exp(log_w)
+    return w / w.sum()
+
+# Live check: boltzmann([0, 1], 1.0) -> about (0.731, 0.269)}
+
+\speakernotes{Optional live check. Deep dive, free-energy plots, and HMC are lecture 2.}
+
+\include{_physics/includes/entropy-intro.md}
+
 \include{_information/includes/entropy-review.md}
 
 \speakernotes{Axiomatic derivation of $H$ and $S=kH$ are week 3 / LO2. Worksheet 1 probes can already use joint / conditional / chain-rule vocabulary.}
 
 \include{_information/includes/entropy-nogo-probability-prescription.md}
-
-
-
-
 
 \speakernotes{Now shift to explaining the relationship between what we're teaching and how we're teaching. Our objective is to get information in you. Why do we have to do it in such a complex way. Need to lace this description of the atomic human with the pedagogy we're using. Carnot--Clausius history waits for lecture 2 with free energy.}
 
@@ -211,54 +242,14 @@ So in other words we are asking you to take on the role of Socrates in these con
 
 \notes{Shannon gave the unit used for bandwidth and embodiment factors. The derivation of $H$ and the statement $S=kH$ are LO2 in lecture 3. The bandwidth gap is a bottleneck on sharing thought, not a second no-go paired with Boltzmann. Lecture 4 applies the same bit accounting to locked-in communication.}
 
-
-
-\subsection{Entropy and the Boltzmann Distribution}
-
-\include{_physics/includes/entropy-intro.md}
-
-\include{_ml/includes/energy-in-machine-learning.md}
-\subsection{Boltzmann Seed}
-
-\newslide{A Prescription to Interrogate}
-
-\slides{For fixed mean energy $U$, the maximum-entropy occupation is the Boltzmann distribution --- same $E$ grammar as the ML energies above.}
-
-\slidesincremental{
-* $p_i \propto e^{-\beta E_i}$ with coldness $\beta = 1/kT$
-* Normaliser $Z=\sum_i e^{-\beta E_i}$, so $p_i = e^{-\beta E_i}/Z$
-* Week 2: name Gibbs, account with free energy $F=U-TS$; Carnot--Clausius history
-}
-
-\speakernotes{Do not derive Lagrange multipliers today. State the formula so Worksheet 1 has a concrete claim to open and then press. Students should leave curious about why *this* exponential, what $\beta$ means, and whether entropy here is a constraint or a recipe. Point back to cross-entropy / BM pairwise energy if they ask what $E$ is.}
-
-
-\setupcode{import numpy as np}
-
-\code{def boltzmann(energies, beta):
-    """Boltzmann probabilities $p_i \\propto e^{-\\beta E_i}$."""
-    log_w = -beta * np.asarray(energies, dtype=float)
-    log_w -= log_w.max()
-    w = np.exp(log_w)
-    return w / w.sum()
-
-# Live check: boltzmann([0, 1], 1.0) -> about (0.731, 0.269)}
-
-\speakernotes{Optional live check. Deep dive and free-energy plots are lecture 2.}
-
-\include{_ml/includes/from-loss-to-hamiltonian.md}
-
-\notes{Week 1 culmination: the energies named earlier are *potentials*. Descent is motion on $V$; practice is stochastic; kinetic energy completes the Hamiltonian; HMC (Neal) is the sampler that uses both. The live demos use ``mlai.HamiltonianMonteCarlo``: leapfrog paths on a quadratic potential, then logistic regression with an SGD point estimate versus an HMC posterior cloud.}
-
 \subsection{Define This Week}
 
 \slidesincremental{
 * Product rule, sum rule, Bayes
 * Bernoulli, binomial, Poisson, multinomial, Gaussian
-* $H=-\sum_i p_i\log p_i$ (bits or nats)
 * Energy scores: quadratic, cross-entropy, BM pairwise
-* Loss landscape as potential $V$; ask for kinetic $K$; Hamiltonian $H=K+V$
-* Seed: $p_i = e^{-\beta E_i}/Z$; HMC via ``mlai`` (Neal)
+* Seed: $p_i = e^{-\beta E_i}/Z$
+* $H=-\sum_i p_i\log p_i$ (bits or nats)
 }
 
 \subsection{After This Lecture}

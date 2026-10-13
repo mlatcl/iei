@@ -28,6 +28,8 @@
   </style>
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@3.9.2/css/theme/white.css" id="theme">
   <link rel="stylesheet" href="mlatcl.css"/>
+  <link rel="stylesheet" href="/Users/neil/lawrennd/lamd/lamd/includes/slide-fonts.css"/>
+  <link rel="stylesheet" href="/Users/neil/lawrennd/lamd/lamd/includes/slide-fontsize-sm.css"/>
   <!-- Printing and PDF exports -->
   <script>
     var link = document.createElement( 'link' );
@@ -143,8 +145,8 @@
 <div>
 <ul>
 <li class="fragment">Room FW26; eight Tuesdays from today</li>
-<li class="fragment">How worksheets and LLMs work (you are Socrates)</li>
-<li class="fragment">Probability and entropy review; energy in ML; then potential → Hamiltonian / HMC</li>
+<li class="fragment">Motivation → probability → doubt / Socrates → energy → entropy</li>
+<li class="fragment">Worksheet 1 released today</li>
 </ul>
 </div>
 </section>
@@ -163,35 +165,39 @@
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;">0–15</td>
-<td>Course mechanics; questions list; the motivation and theme</td>
+<td style="text-align: right;">0–10</td>
+<td>Course mechanics; questions list</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">15–35</td>
-<td>‘Socratic’ approach: curiosity, skepticism, submission rules</td>
+<td style="text-align: right;">10–22</td>
+<td>Motivation: theme; Laplace’s demon and gremlin</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">35–65</td>
-<td>Probability review: product/sum/Bayes; basic distributions</td>
+<td style="text-align: right;">22–42</td>
+<td>Probability review: product/sum/Bayes; named distributions</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">65–75</td>
+<td style="text-align: right;">42–55</td>
+<td>Doubt; Socratic worksheets and LLM habit</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">55–65</td>
 <td>Break</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">75–95</td>
-<td>Entropy review (elementary <span class="math inline">\(H\)</span>); bits and nats</td>
-</tr>
 <tr class="even">
-<td style="text-align: right;">95–110</td>
-<td>Energy in ML; motivation and bandwidth; Boltzmann seed</td>
+<td style="text-align: right;">65–85</td>
+<td>Energy: ML energies; Boltzmann seed <span class="math inline">\(p_i \propto e^{-\beta E_i}\)</span></td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">110–118</td>
-<td>Culmination: potential → stochastic → kinetic? → Hamiltonian / HMC</td>
+<td style="text-align: right;">85–108</td>
+<td>Entropy: information game, MacKay weighing, <span class="math inline">\(H\)</span>, entropy of named distributions</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">118–120</td>
+<td style="text-align: right;">108–116</td>
+<td>Embodiment / bits as bandwidth (Atomic Human bridge)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">116–120</td>
 <td>Worksheet 1 brief; Quiz 1 preview</td>
 </tr>
 </tbody>
@@ -210,6 +216,7 @@
 </section>
 <section id="questions-we-will-return-to" class="slide level2">
 <h2>Questions We Will Return To</h2>
+<p>List: <a href="https://mlatcl.github.io/iei/questions/">mlatcl.github.io/iei/questions/</a></p>
 <div>
 <ul>
 <li class="fragment">Meet the questions today</li>
@@ -400,6 +407,9 @@ Gremlins are seen as the cause of a number of challenges in this World War II po
 </section>
 <section id="probability-review" class="slide level2">
 <h2>Probability Review</h2>
+</section>
+<section id="joint-marginal-conditional" class="slide level2">
+<h2>Joint, Marginal, Conditional</h2>
 <div>
 <ul>
 <li class="fragment">Joint <span class="math inline">\(P(x,y)\)</span>: both</li>
@@ -608,8 +618,527 @@ The Gaussian PDF with <span class="math inline">\({\mu}=1.7\)</span> and varianc
 </ul>
 </div>
 </section>
+<section id="energy-in-machine-learning" class="slide level2">
+<h2>Energy in Machine Learning</h2>
+</section>
+<section id="energy-as-a-score" class="slide level2">
+<h2>Energy as a Score</h2>
+<p>In ML, an <em>energy</em> is (often) a scalar assigned to a configuration: lower means preferred.</p>
+<div>
+<ul>
+<li class="fragment">Losses are energies over parameters or predictions</li>
+<li class="fragment">Energy-based model: <span class="math inline">\(p(x)\propto e^{-E(x)}\)</span> — same grammar as Boltzmann</li>
+<li class="fragment">Minimising <span class="math inline">\(E\)</span> is the zero-temperature / MAP limit</li>
+</ul>
+</div>
+</section>
+<section id="energies-from-distributions-you-already-know" class="slide level2">
+<h2>Energies from Distributions You Already Know</h2>
+</section>
+<section id="from-p-to-e-the-four-outcomes" class="slide level2">
+<h2>From <span class="math inline">\(p\)</span> to <span class="math inline">\(E\)</span>: the Four Outcomes</h2>
+<p>Earlier we tabulated <span class="math inline">\(-\log P(y)\)</span> for a four-outcome distribution. Those values <em>are</em> energies.</p>
+<table>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(y\)</span></th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(P(y)\)</span></td>
+<td>0.3</td>
+<td>0.2</td>
+<td>0.1</td>
+<td>0.4</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(E(y)=-\log P(y)\)</span></td>
+<td>1.204</td>
+<td>1.609</td>
+<td>2.302</td>
+<td>0.916</td>
+</tr>
+</tbody>
+</table>
+<div>
+<ul>
+<li class="fragment">Most probable outcome <span class="math inline">\(y=4\)</span> has the <em>lowest</em> energy</li>
+<li class="fragment">Rarest <span class="math inline">\(y=3\)</span> has the <em>highest</em> energy</li>
+<li class="fragment">Shannon entropy was <span class="math inline">\(\mathbb{E}[E(y)] = 1.280\)</span> nats — average energy under <span class="math inline">\(p\)</span></li>
+</ul>
+</div>
+<aside class="notes">
+Point at the same table from the entropy expectation slide. Do not recompute; only rename <span class="math inline">\(-\log p\)</span> as <span class="math inline">\(E\)</span>.
+</aside>
+</section>
+<section id="bernoulli-fair-coin" class="slide level2">
+<h2>Bernoulli / Fair Coin</h2>
+<p>A coin with <span class="math inline">\(P(H)=p\)</span>, <span class="math inline">\(P(T)=1-p\)</span> is a two-state energy model.</p>
+</section>
+<section id="bernoulli-distribution-and-energy" class="slide level2">
+<h2>Bernoulli: Distribution and Energy</h2>
+</section>
+<section id="bernoulli-p-and-e" class="slide level2">
+<h2>Bernoulli: <span class="math inline">\(P\)</span> and <span class="math inline">\(E\)</span></h2>
+<div class="figure">
+<div id="bernoulli-energy-panels-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/bernoulli-energy-panels.svg" width="85%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+Bernoulli(<span class="math inline">\(p=0.3\)</span>). Left: the distribution. Right: energy <span class="math inline">\(E=-\log P\)</span> in nats. The favoured outcome sits lower in energy.
+</aside>
+</section>
+<section id="bernoulli-overlay" class="slide level2">
+<h2>Bernoulli: Overlay</h2>
+<div class="figure">
+<div id="bernoulli-energy-overlay-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/bernoulli-energy-overlay.svg" width="60%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+Same Bernoulli: probability (bars, left axis) and energy (markers, right axis). Where <span class="math inline">\(P\)</span> is high, <span class="math inline">\(E\)</span> is low.
+</aside>
+<div>
+<ul>
+<li class="fragment"><span class="math inline">\(E_0=-\log(1-p)\)</span>,<span class="math inline">\(E_1=-\log p\)</span></li>
+<li class="fragment">Fair coin: degenerate energies <span class="math inline">\(E_0=E_1=\log 2\)</span></li>
+<li class="fragment">Biased coin: the favoured face is the deeper well</li>
+</ul>
+</div>
+</section>
+<section id="poisson-count-energy" class="slide level2">
+<h2>Poisson: Count Energy</h2>
+<p>A Poisson(<span class="math inline">\(\lambda\)</span>) is the same map <span class="math inline">\(E=-\log P\)</span> on the non-negative integers.</p>
+</section>
+<section id="poisson-distribution-and-energy" class="slide level2">
+<h2>Poisson: Distribution and Energy</h2>
+</section>
+<section id="poisson-p-and-e" class="slide level2">
+<h2>Poisson: <span class="math inline">\(P\)</span> and <span class="math inline">\(E\)</span></h2>
+<div class="figure">
+<div id="poisson-energy-panels-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/poisson-energy-panels.svg" width="85%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+Poisson(<span class="math inline">\(\lambda=4\)</span>). Left: the count distribution. Right: energy <span class="math inline">\(E=-\log P\)</span>. The mode is the energy minimum.
+</aside>
+</section>
+<section id="poisson-overlay" class="slide level2">
+<h2>Poisson: Overlay</h2>
+<div class="figure">
+<div id="poisson-energy-overlay-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/poisson-energy-overlay.svg" width="60%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+Same Poisson: probability (bars) against energy (markers). Tails are high-energy, low-probability states.
+</aside>
+<div>
+<ul>
+<li class="fragment"><span class="math inline">\(E(k)=-\log P(k)=\lambda-k\log\lambda+\log(k!)\)</span> (up to the usual reading of Stirling)</li>
+<li class="fragment">Mode of <span class="math inline">\(P\)</span> <span class="math inline">\(=\)</span> minimizer of <span class="math inline">\(E\)</span></li>
+<li class="fragment">Same <span class="math inline">\(p\propto e^{-E}\)</span> grammar as the Bernoulli two-state model</li>
+</ul>
+</div>
+</section>
+<section id="gaussian-quadratic-energy" class="slide level2">
+<h2>Gaussian: Quadratic Energy</h2>
+<p>The univariate Gaussian we wrote earlier is already an energy-based model.</p>
+<p><span class="math display">\[
+p(y)\propto \exp\!\left(-\frac{(y-\mu)^2}{2\sigma^2}\right)
+\quad\Longleftrightarrow\quad
+E(y)=\frac{(y-\mu)^2}{2\sigma^2}
+\]</span></p>
+</section>
+<section id="gaussian-distribution-and-energy" class="slide level2">
+<h2>Gaussian: Distribution and Energy</h2>
+</section>
+<section id="gaussian-p-and-e" class="slide level2">
+<h2>Gaussian: <span class="math inline">\(p\)</span> and <span class="math inline">\(E\)</span></h2>
+<div class="figure">
+<div id="gaussian-energy-panels-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/gaussian-energy-panels.svg" width="85%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+Height Gaussian. Left: density. Right: energy <span class="math inline">\(E=-\log p\)</span> — a parabola about <span class="math inline">\(\mu=1.7\)</span> (additive constant from the normaliser does not change the shape).
+</aside>
+</section>
+<section id="gaussian-overlay" class="slide level2">
+<h2>Gaussian: Overlay</h2>
+<div class="figure">
+<div id="gaussian-energy-overlay-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/gaussian-energy-overlay.svg" width="60%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+Same Gaussian: density (left axis) and energy (right axis). The mode of <span class="math inline">\(p\)</span> is the bottom of the energy well.
+</aside>
+<div>
+<ul>
+<li class="fragment"><span class="math inline">\(E(y)=\frac{(y-\mu)^2}{2\sigma^2}\)</span> up to an additive constant absorbed in <span class="math inline">\(Z\)</span></li>
+<li class="fragment">Least-squares regression uses the same quadratic energy on residuals</li>
+<li class="fragment">Normaliser <span class="math inline">\((2\pi\sigma^2)^{-1/2}\)</span> is the partition function for this <span class="math inline">\(E\)</span></li>
+</ul>
+</div>
+<aside class="notes">
+One look at the parabola under the height Gaussian is enough. Then jump to the least-squares slide with recognition rather than a new idea.
+</aside>
+</section>
+<section id="quadratic-energy-regression" class="slide level2">
+<h2>Quadratic Energy (Regression)</h2>
+<p><span class="math display">\[
+E(\mathbf{w})=\sum_n\left(y_n-\mathbf{w}^\top\mathbf{x}_n\right)^2
+\]</span></p>
+<div>
+<ul>
+<li class="fragment">Least squares = energy of the residual</li>
+<li class="fragment">Gaussian negative log-likelihood (up to additives and scale)</li>
+<li class="fragment">Gauss already linked this quadratic energy to the normal density</li>
+</ul>
+</div>
+</section>
+<section id="cross-entropy-energy-classification" class="slide level2">
+<h2>Cross-Entropy Energy (Classification)</h2>
+<p><span class="math display">\[
+E=-\sum_c y_c\log\hat{y}_c
+\]</span></p>
+<div>
+<ul>
+<li class="fragment">Cross-entropy / log-loss scores the predictive distribution</li>
+<li class="fragment">Softmax: <span class="math inline">\(\hat{y}_c\propto e^{-E_c}\)</span> — class scores as energies</li>
+<li class="fragment">Same arithmetic as <span class="math inline">\(\mathbb{E}[-\log p]\)</span> (Shannon entropy of a model)</li>
+</ul>
+</div>
+</section>
+<section id="boltzmann-machine-pairwise-energy" class="slide level2">
+<h2>Boltzmann Machine: Pairwise Energy</h2>
+<p><span class="math display">\[
+E(\mathbf{s})=-\sum_i b_i s_i-\sum_{i&lt;j}W_{ij}s_i s_j
+\]</span></p>
+<div>
+<ul>
+<li class="fragment">Binary units <span class="math inline">\(s_i\in\{0,1\}\)</span> or <span class="math inline">\(\{\pm 1\}\)</span></li>
+<li class="fragment">Biases plus pairwise couplings — classic BM has no triple terms</li>
+<li class="fragment"><span class="math inline">\(p(\mathbf{s})\propto e^{-E(\mathbf{s})/T}\)</span>: a learnable Gibbs distribution</li>
+</ul>
+</div>
+<aside class="notes">
+Name only. No contrastive divergence. Hopfield is the fixed-weight cousin: recall as energy descent.
+</aside>
+</section>
+<section id="boltzmann-seed" class="slide level2">
+<h2>Boltzmann Seed</h2>
+</section>
+<section id="a-prescription-to-interrogate" class="slide level2">
+<h2>A Prescription to Interrogate</h2>
+<p>For fixed mean energy <span class="math inline">\(U\)</span>, the maximum-entropy occupation is the Boltzmann distribution — same <span class="math inline">\(E\)</span> grammar as the ML energies above.</p>
+<div>
+<ul>
+<li class="fragment"><span class="math inline">\(p_i \propto e^{-\beta E_i}\)</span> with coldness <span class="math inline">\(\beta = 1/kT\)</span></li>
+<li class="fragment">Normaliser <span class="math inline">\(Z=\sum_i e^{-\beta E_i}\)</span>, so <span class="math inline">\(p_i = e^{-\beta E_i}/Z\)</span></li>
+<li class="fragment">Week 2: name Gibbs, account with free energy <span class="math inline">\(F=U-TS\)</span>; Carnot–Clausius history; potential <span class="math inline">\(\to\)</span> kinetic <span class="math inline">\(\to\)</span> HMC</li>
+</ul>
+</div>
+<aside class="notes">
+Do not derive Lagrange multipliers today. State the formula so Worksheet 1 has a concrete claim to open and then press. Students should leave curious about why <em>this</em> exponential, what <span class="math inline">\(\beta\)</span> means, and whether entropy here is a constraint or a recipe. Point back to cross-entropy / BM pairwise energy if they ask what <span class="math inline">\(E\)</span> is. Hamiltonian / HMC demos wait for lecture 2.
+</aside>
+<aside class="notes">
+Optional live check. Deep dive, free-energy plots, and HMC are lecture 2.
+</aside>
+</section>
+<section id="hydrodynamica" class="slide level2">
+<h2>Hydrodynamica</h2>
+</section>
+<section id="section-8" class="slide level2">
+<h2></h2>
+<div class="figure">
+<div id="hydrodynamica-danielis-bernoulli-figure" class="figure-frame">
+<div class="centered" style="">
+<a href="https://play.google.com/books/reader?id=3yRVAAAAcAAJ&amp;pg=PP7"><img data-src="https://mlatcl.github.io/iei/slides/diagrams/books/3yRVAAAAcAAJ-PP7.png" /></a>
+</div>
+</div>
+</div>
+<aside class="notes">
+Daniel Bernoulli’s <em>Hydrodynamica</em> published in 1738. It was one of the first works to use the idea of conservation of energy. It used Newton’s laws to predict the behaviour of gases.
+</aside>
+</section>
+<section id="section-9" class="slide level2">
+<h2></h2>
+<div class="figure">
+<div id="bernoulli-kinetic-theory-chapter-figure" class="figure-frame">
+<div class="centered" style="">
+<a href="https://play.google.com/books/reader?id=3yRVAAAAcAAJ&amp;pg=PA200"><img data-src="https://mlatcl.github.io/iei/slides/diagrams/books/3yRVAAAAcAAJ-PA200.png" /></a>
+</div>
+</div>
+</div>
+<aside class="notes">
+Daniel Bernoulli’s chapter on the kinetic theory of gases, for a review on the context of this chapter see <span class="citation" data-cites="Mikhailov:hydrodynamica05">Mikhailov (n.d.)</span>. For 1738 this is extraordinary thinking. The notion of kinetic theory of gases wouldn’t become fully accepted in Physics until 1908 when a model of Einstein’s was verified by Jean Baptiste Perrin.
+</aside>
+</section>
+<section id="entropy-billiards" class="slide level2">
+<h2>Entropy Billiards</h2>
+<div class="figure">
+<div id="entropy-billiards-js-figure" class="figure-frame">
+<div style="display:flex;flex-wrap:wrap;gap:8px;align-items:flex-start">
+<div style="flex:1 1 400px;min-width:0">
+<canvas id="multiball-canvas" width="700" height="500" style="border:1px solid black;display:block;width:100%">
+</canvas>
+</div>
+<div style="flex:0 1 280px;min-width:0;display:flex;flex-direction:column;gap:6px">
+<div>
+Velocity-bin entropy:
+<output id="multiball-entropy">
+</output>
+</div>
+<div id="multiball-histogram-canvas" style="width:100%;height:250px">
+
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:4px">
+<button id="multiball-newball">
+New Ball
+</button>
+<button id="multiball-pause">
+Pause
+</button>
+<button id="multiball-skip">
+Skip 1000s
+</button>
+<button id="multiball-histogram">
+Histogram
+</button>
+</div>
+</div>
+</div>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<!--
+Loads the shared Ballworld runtime used by interactive physics demos
+(e.g. multiball, Maxwell, Szilard, kappenball). Scenario-specific
+behaviour is provided by follow-on scripts such as maxwell.js.
+-->
+<script src="../scripts//ballworld/ballworld.js"></script>
+<script src="../scripts//ballworld/multiball.js"></script>
+</div>
+</div>
+<aside class="notes">
+Bernoulli’s simple kinetic models of gases assume that the molecules of air operate like billiard balls. The displayed entropy is the Shannon entropy of the observed velocity histogram (a coarse-grained proxy, not full thermodynamic entropy).
+</aside>
+</section>
+<section id="section-10" class="slide level2">
+<h2></h2>
+<div class="figure">
+<div id="gaussian-histogram-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/gaussian-histogram.svg" width="80%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+James Clerk Maxwell 1831-1879 Derived distribution of velocities of particles in an ideal gas (elastic fluid).
+</aside>
+</section>
+<section id="section-11" class="slide level2">
+<h2></h2>
+<div class="figure">
+<div id="maxwell-boltzmann-gibbs-figure" class="figure-frame">
+<div class="lamd-columns" style="display:flex; width:100%; justify-content:center; align-items:center; column-gap:1em;">
+<div style="flex:0 0 30%; max-width:30%;">
+<div class="centered" style="">
+<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/james-clerk-maxwell.png" width="100%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
+</div>
+</div>
+<div style="flex:0 0 30%; max-width:30%;">
+<div class="centered centered" style="">
+<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/boltzmann2.jpg" width="100%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
+</div>
+</div>
+<div style="flex:0 0 30%; max-width:30%;">
+<div class="centered centered" style="">
+<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/j-w-gibbs.jpg" width="100%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
+</div>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes">
+James Clerk Maxwell (1831-1879), Ludwig Boltzmann (1844-1906) Josiah Willard Gibbs (1839-1903)
+</aside>
+</section>
+<section id="section-12" class="slide level2">
+<h2></h2>
+<div class="figure">
+<div id="boltzmann-warmetheorie-figure" class="figure-frame">
+<div class="centered" style="">
+<a href="https://play.google.com/books/reader?id=Vuk5AQAAMAAJ&amp;pg=PA373"><img data-src="https://mlatcl.github.io/iei/slides/diagrams/books/Vuk5AQAAMAAJ-PA373.png" /></a>
+</div>
+</div>
+</div>
+<aside class="notes">
+Boltzmann’s paper <span class="citation" data-cites="Boltzmann-warmetheorie77">Boltzmann (n.d.)</span> which introduced the relationship between entropy and probability. A translation with notes is available in <span class="citation" data-cites="Kim-translation15">Sharp and Matschinsky (2015)</span>.
+</aside>
+</section>
+<section id="section-13" class="slide level2">
+<h2></h2>
+<div class="figure">
+<div id="eddington-book-figure" class="figure-frame">
+<div class="lamd-columns" style="display:flex; width:100%; justify-content:center; align-items:center; column-gap:1em;">
+<div style="flex:0 0 49%; max-width:49%;">
+<div class="centered centered" style="">
+<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/arthur-stanley-eddington.jpg" width="100%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
+</div>
+</div>
+<div style="flex:0 0 49%; max-width:49%;">
+<div class="centered" style="">
+<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/natureofphysical00eddi_7.png" width="80%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
+</div>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes">
+Eddington’s book on the Nature of the Physical World <span class="citation" data-cites="Eddington:nature29">(Eddington, 1929)</span>
+</aside>
+</section>
+<section id="section-14" class="slide level2">
+<h2></h2>
+<div class="figure">
+<div id="physical-world-chandra-figure" class="figure-frame">
+<div class="lamd-columns" style="display:flex; width:100%; justify-content:center; align-items:center; column-gap:1em;">
+<div style="flex:0 0 49%; max-width:49%;">
+<div class="centered" style="">
+<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/natureofphysical00eddi_100.png" width="80%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
+</div>
+</div>
+<div style="flex:0 0 49%; max-width:49%;">
+<div class="centered" style="">
+<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/ChandraNobel.png" width="100%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
+</div>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes">
+Chandrasekhar (1910-1995) derived the limit at which a star collapses in on itself. Eddington’s confidence in the 2nd law may have been what drove him to dismiss Chandrasekhar’s ideas, humiliating a young scientist who would later receive a Nobel prize for the work.
+</aside>
+</section>
+<section id="section-15" class="slide level2">
+<h2></h2>
+<div class="figure">
+<div id="deepest-humiliation-eddington-cropped-figure" class="figure-frame">
+<div class="centered" style="">
+<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/natureofphysical00eddi_100_cropped.png" width="60%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
+</div>
+</div>
+</div>
+<aside class="notes">
+Eddington makes his feelings about the primacy of the second law clear. This primacy is perhaps because the second law can be demonstrated mathematically, building on the work of Maxwell, Gibbs and Boltzmann. <span class="citation" data-cites="Eddington:nature29">Eddington (1929)</span>
+</aside>
+</section>
 <section id="entropy-review" class="slide level2">
 <h2>Entropy Review</h2>
+</section>
+<section id="the-information-game" class="slide level2">
+<h2>The Information Game</h2>
+</section>
+<section id="the-information-game-1" class="slide level2">
+<h2>The Information Game</h2>
+<p>One player has chosen an object from a known finite list. The other may ask only <em>yes/no</em> questions.</p>
+<div>
+<ul>
+<li class="fragment">Goal: name the object</li>
+<li class="fragment">Cost: number of questions (worst case, or on average)</li>
+<li class="fragment">Optimal play halves the remaining possibilities each time</li>
+</ul>
+</div>
+<aside class="notes">
+Run this live if time allows: pick a small list (sixteen animals, eight Cambridge colleges). Students should feel that a balanced question buys one bit. Do not yet write <span class="math inline">\(-\sum p\log p\)</span>; the counting argument is enough.
+</aside>
+</section>
+<section id="bits-as-balanced-questions" class="slide level2">
+<h2>Bits as Balanced Questions</h2>
+<p>A fair yes/no answer distinguishes two equally likely cases — one <em>bit</em>.</p>
+<div>
+<ul>
+<li class="fragment"><span class="math inline">\(N\)</span> equally likely objects <span class="math inline">\(\Rightarrow\)</span> need <span class="math inline">\(\log_2 N\)</span> bits</li>
+<li class="fragment">Twenty questions reach about a million hypotheses (<span class="math inline">\(2^{20}\)</span>)</li>
+<li class="fragment">Unequal priors: best questions still split probability as evenly as possible</li>
+</ul>
+</div>
+<p>The same idea with a three-outcome instrument comes next — MacKay’s balance.</p>
+</section>
+<section id="mackays-balance-and-balls" class="slide level2">
+<h2>MacKay’s Balance and Balls</h2>
+</section>
+<section id="twelve-balls-one-odd" class="slide level2">
+<h2>Twelve Balls, One Odd</h2>
+<p>MacKay’s weighing problem <span class="citation" data-cites="MacKay-information03">(MacKay, 2003, p. Ex.~4.1)</span>: twelve balls; exactly one is odd; it may be heavier <em>or</em> lighter.</p>
+<div class="figure">
+<div id="mackay-balance-balls-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/information/mackay-balance-balls.svg" width="80%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+A two-pan balance and twelve identical balls. Each use of the balance returns one of three readings: left heavy, balance, or right heavy.
+</aside>
+<div>
+<ul>
+<li class="fragment">Instrument: a two-pan balance</li>
+<li class="fragment">Each use: left heavy, right heavy, or balance — <em>three</em> outcomes</li>
+<li class="fragment">Task: identify the odd ball <em>and</em> whether it is heavy or light</li>
+</ul>
+</div>
+<aside class="notes">
+State the puzzle. Do not walk through which balls go on which pan. The lecture point is the information budget, not the adaptive strategy tree.
+</aside>
+</section>
+<section id="information-at-the-start" class="slide level2">
+<h2>Information at the Start</h2>
+<p>Before any weighing, how many hypotheses?</p>
+<div>
+<ul>
+<li class="fragment">12 choices for which ball is odd</li>
+<li class="fragment"><span class="math inline">\(\times\)</span> 2 directions (heavy or light)</li>
+<li class="fragment"><span class="math inline">\(= 24\)</span> equally likely states of the world</li>
+</ul>
+</div>
+</section>
+<section id="information-from-the-balance" class="slide level2">
+<h2>Information from the Balance</h2>
+<p>Each weighing has three possible readings.</p>
+<div>
+<ul>
+<li class="fragment">Ideal (equiprobable) outcomes: <span class="math inline">\(\log_2 3 \approx 1.58\)</span> bits per use</li>
+<li class="fragment">Two weighings: at most <span class="math inline">\(3^2 = 9\)</span> leaves — too few for <span class="math inline">\(24\)</span> hypotheses</li>
+<li class="fragment">Three weighings: at most <span class="math inline">\(3^3 = 27\)</span> leaves — enough, since <span class="math inline">\(27 \ge 24\)</span></li>
+</ul>
+</div>
+</section>
+<section id="doable-in-three-strategy-deferred" class="slide level2">
+<h2>Doable in Three — Strategy Deferred</h2>
+<p>The counting argument shows three weighings <em>must</em> be enough in principle.</p>
+<div>
+<ul>
+<li class="fragment">We do <em>not</em> give the sequence of groupings today</li>
+<li class="fragment">Optimal play keeps the three readings as near equiprobable as possible</li>
+<li class="fragment">Same moral as twenty questions: ask questions that split the prior evenly</li>
+</ul>
+</div>
+<aside class="notes">
+Stop here. Invite them to try Exercise 4.1 before reading MacKay’s solution figure. Optional aside: a first weighing of 1–6 vs 7–12 can never balance under the problem statement, so it yields only one bit and is already suboptimal.
+</aside>
 </section>
 <section id="computing-expectations-example" class="slide level2">
 <h2>Computing Expectations Example</h2>
@@ -731,7 +1260,10 @@ The Gaussian PDF with <span class="math inline">\({\mu}=1.7\)</span> and varianc
 <ul>
 <li>Expectation <span class="math inline">\(-\log(P(y))\)</span>: <span class="math inline">\(0.3\times 1.204 + 0.2\times 1.609 + 0.1\times 2.302 +0.4\times 0.916 = 1.280\)</span></li>
 </ul>
-<p>Shannon entropy turns a distribution into a <em>scalar</em> measure of uncertainty.</p>
+</section>
+<section id="uncertainty-as-a-number" class="slide level2">
+<h2>Uncertainty as a Number</h2>
+<p>Shannon entropy turns a distribution into a <em>scalar</em> measure of uncertainty — the average number of fair yes/no questions under optimal play.</p>
 <div>
 <ul>
 <li class="fragment">Discrete: <span class="math inline">\(H(p) = -\sum_i p_i \log p_i\)</span></li>
@@ -739,6 +1271,166 @@ The Gaussian PDF with <span class="math inline">\({\mu}=1.7\)</span> and varianc
 <li class="fragment">Fair coin: <span class="math inline">\(H=1\)</span> bit; certain outcome: <span class="math inline">\(H=0\)</span></li>
 </ul>
 </div>
+</section>
+<section id="entropy-of-common-distributions" class="slide level2">
+<h2>Entropy of Common Distributions</h2>
+</section>
+<section id="entropy-distribution-by-distribution" class="slide level2">
+<h2>Entropy, Distribution by Distribution</h2>
+<p>For each named family from the probability review: plot <span class="math inline">\(P\)</span>, plot <span class="math inline">\(-\log_2 P\)</span>, and form the summands <span class="math inline">\(-P\log_2 P\)</span>.</p>
+<div>
+<ul>
+<li class="fragment">Left: the distribution itself — same families as the energy overlays</li>
+<li class="fragment">Middle: surprisal <span class="math inline">\(-\log_2 P\)</span> — the energy <span class="math inline">\(E=-\log P\)</span> in <em>bits</em> (<span class="math inline">\(E_{\mathrm{bits}}=E_{\mathrm{nats}}/\log 2\)</span>)</li>
+<li class="fragment">Right: <span class="math inline">\(-P\log_2 P\)</span> — average energy under <span class="math inline">\(P\)</span>, i.e. Shannon entropy <span class="math inline">\(H\)</span></li>
+</ul>
+</div>
+<aside class="notes">
+Callback to the energy overlays. Do not re-derive <span class="math inline">\(E=-\log P\)</span>; only change units and take the expectation.
+</aside>
+</section>
+<section id="bernoulli-and-binomial-1" class="slide level2">
+<h2>Bernoulli and Binomial</h2>
+<div>
+<ul>
+<li class="fragment">Bernoulli(<span class="math inline">\(p\)</span>): binary entropy <span class="math inline">\(-p\log_2 p-(1-p)\log_2(1-p)\)</span></li>
+<li class="fragment">Binomial(<span class="math inline">\(n,p\)</span>): no elementary closed form; same three-panel sum</li>
+<li class="fragment">Fair coin: <span class="math inline">\(H=1\)</span> bit</li>
+</ul>
+</div>
+</section>
+<section id="bernoulli-entropy" class="slide level2">
+<h2>Bernoulli Entropy</h2>
+</section>
+<section id="bernoulli-entropy-1" class="slide level2">
+<h2>Bernoulli Entropy</h2>
+<div class="figure">
+<div id="bernoulli-entropy-panels-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/information/bernoulli-entropy-panels.svg" width="85%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+Bernoulli(<span class="math inline">\(p=0.3\)</span>). Left: the distribution. Middle: surprisal <span class="math inline">\(-\log_2 P(x)\)</span> — energy in bits. Right: the summands <span class="math inline">\(-P(x)\log_2 P(x)\)</span>; their total is the entropy <span class="math inline">\(H\)</span>.
+</aside>
+<div>
+<ul>
+<li class="fragment">Same coin as the energy overlay: <span class="math inline">\(E=-\log P\)</span> (nats) <span class="math inline">\(\Leftrightarrow\)</span> surprisal in bits</li>
+<li class="fragment">Entropy <span class="math inline">\(H=\mathbb{E}[E]\)</span> in bits — fair coin <span class="math inline">\(p=\tfrac12\)</span> gives <span class="math inline">\(H=1\)</span> bit (maximal)</li>
+<li class="fragment">As <span class="math inline">\(p\to 0\)</span> or <span class="math inline">\(1\)</span>: <span class="math inline">\(H\to 0\)</span> — the deep well makes the outcome nearly certain</li>
+</ul>
+</div>
+</section>
+<section id="binomial-entropy" class="slide level2">
+<h2>Binomial Entropy</h2>
+</section>
+<section id="binomial-entropy-1" class="slide level2">
+<h2>Binomial Entropy</h2>
+<div class="figure">
+<div id="binomial-entropy-panels-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/information/binomial-entropy-panels.svg" width="85%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+Binomial(<span class="math inline">\(n=12\)</span>, <span class="math inline">\(p=0.4\)</span>). The right-hand panel sums to <span class="math inline">\(H\)</span>; tails contribute little because <span class="math inline">\(P(k)\)</span> is small even when surprisal is large.
+</aside>
+<div>
+<ul>
+<li class="fragment">Same visual grammar as Bernoulli: <span class="math inline">\(P\)</span>, <span class="math inline">\(-\log_2 P\)</span>, <span class="math inline">\(-P\log_2 P\)</span></li>
+<li class="fragment">Surprisal is largest in the tails; weight <span class="math inline">\(P(k)\)</span> suppresses them in <span class="math inline">\(H\)</span></li>
+<li class="fragment">Large-<span class="math inline">\(n\)</span> approximation: <span class="math inline">\(H\approx\tfrac12\log_2(2\pi e\, np(1-p))\)</span> bits</li>
+</ul>
+</div>
+</section>
+<section id="poisson-and-multinomial-1" class="slide level2">
+<h2>Poisson and Multinomial</h2>
+<div>
+<ul>
+<li class="fragment">Poisson(<span class="math inline">\(\lambda\)</span>): numerical sum over <span class="math inline">\(k\)</span>; <span class="math inline">\(\approx\tfrac12\log_2(2\pi e\lambda)\)</span> for large <span class="math inline">\(\lambda\)</span></li>
+<li class="fragment">Categorical / one multinomial trial: <span class="math inline">\(H=-\sum_k p_k\log_2 p_k\)</span></li>
+<li class="fragment">Uniform on <span class="math inline">\(K\)</span> symbols: <span class="math inline">\(H=\log_2 K\)</span></li>
+</ul>
+</div>
+</section>
+<section id="poisson-entropy" class="slide level2">
+<h2>Poisson Entropy</h2>
+</section>
+<section id="poisson-entropy-1" class="slide level2">
+<h2>Poisson Entropy</h2>
+<div class="figure">
+<div id="poisson-entropy-panels-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/information/poisson-entropy-panels.svg" width="85%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+Poisson(<span class="math inline">\(\lambda=4\)</span>). Mid: surprisal rises in the tails (energy in bits). Right: the probability weight cuts those tails back, so <span class="math inline">\(H\)</span> is dominated by the bulk.
+</aside>
+<div>
+<ul>
+<li class="fragment">Same <span class="math inline">\(\lambda=4\)</span> as the energy overlay: middle panel is <span class="math inline">\(E\)</span> in bits</li>
+<li class="fragment">Right panel: <span class="math inline">\(H=\mathbb{E}[E]\)</span> — high-energy tails are down-weighted by <span class="math inline">\(P(k)\)</span></li>
+<li class="fragment">Large-<span class="math inline">\(\lambda\)</span> approximation: <span class="math inline">\(H\approx\tfrac12\log_2(2\pi e\lambda)\)</span> bits</li>
+</ul>
+</div>
+</section>
+<section id="multinomial-categorical-entropy" class="slide level2">
+<h2>Multinomial / Categorical Entropy</h2>
+</section>
+<section id="categorical-entropy" class="slide level2">
+<h2>Categorical Entropy</h2>
+<div class="figure">
+<div id="multinomial-entropy-panels-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/information/multinomial-entropy-panels.svg" width="85%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+The four-outcome distribution from the expectation example, now in bits. Right-hand summands total <span class="math inline">\(H\)</span>; category <span class="math inline">\(y=3\)</span> is rarest (highest surprisal) but contributes modestly because <span class="math inline">\(P(3)\)</span> is small.
+</aside>
+<div>
+<ul>
+<li class="fragment">One multinomial trial <span class="math inline">\(=\)</span> categorical: <span class="math inline">\(H=-\sum_k p_k\log_2 p_k\)</span></li>
+<li class="fragment">Uniform on <span class="math inline">\(K\)</span> symbols: <span class="math inline">\(H=\log_2 K\)</span> — maximal</li>
+<li class="fragment"><span class="math inline">\(n\)</span> i.i.d. trials: entropies add; the count vector is more subtle</li>
+</ul>
+</div>
+</section>
+<section id="gaussian-1" class="slide level2">
+<h2>Gaussian</h2>
+<div>
+<ul>
+<li class="fragment">Differential entropy <span class="math inline">\(h=-\int p\log_2 p\,\mathrm{d}y\)</span></li>
+<li class="fragment">Univariate Gaussian: <span class="math inline">\(h=\tfrac12\log_2(2\pi e\sigma^2)\)</span> bits</li>
+<li class="fragment">Can be negative; not the same object as discrete <span class="math inline">\(H\)</span></li>
+</ul>
+</div>
+</section>
+<section id="gaussian-differential-entropy" class="slide level2">
+<h2>Gaussian Differential Entropy</h2>
+</section>
+<section id="gaussian-differential-entropy-1" class="slide level2">
+<h2>Gaussian Differential Entropy</h2>
+<div class="figure">
+<div id="gaussian-entropy-panels-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/information/gaussian-entropy-panels.svg" width="85%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+Univariate Gaussian (height example). Middle: <span class="math inline">\(-\log_2 p(y)\)</span> — quadratic energy in bits; dips below zero where the density exceeds <span class="math inline">\(1\)</span>. Right: the integrand whose integral is differential entropy <span class="math inline">\(h\)</span>.
+</aside>
+<div>
+<ul>
+<li class="fragment">Same height Gaussian as the energy overlay: middle panel is the parabola in bits</li>
+<li class="fragment">Differential entropy <span class="math inline">\(h=\mathbb{E}[E]\)</span> (bits) — closed form <span class="math inline">\(\tfrac12\log_2(2\pi e\sigma^2)\)</span></li>
+<li class="fragment">Can be negative; not the same object as discrete Shannon <span class="math inline">\(H\)</span></li>
+</ul>
+</div>
+<aside class="notes">
+Callback to the quadratic well. Flag the continuous caveat once: discrete <span class="math inline">\(H\ge 0\)</span>; differential <span class="math inline">\(h\)</span> is a relative measure.
+</aside>
 </section>
 <section id="shannons-definition-is-not-yet" class="slide level2">
 <h2>Shannon’s definition is not yet …</h2>
@@ -775,26 +1467,24 @@ Axiomatic derivation of <span class="math inline">\(H\)</span> and <span class="
 <h2>Entropy and Probability</h2>
 <div>
 <ul>
-<li class="fragment">Entropy: no-go theorems</li>
-<li class="fragment">Probability: what we should do</li>
-<li class="fragment">Same <span class="math inline">\(H\)</span>, two jobs</li>
+<li class="fragment">Probability: what things do (stochastically)</li>
+<li class="fragment">Entropy: what things don’t do? No-go?</li>
 </ul>
 </div>
 </section>
-<section id="two-jobs" class="slide level2">
-<h2>Two Jobs</h2>
+<section id="prohibition" class="slide level2">
+<h2>Prohibition</h2>
 <div>
 <ul>
-<li class="fragment">No-go: what is forbidden</li>
-<li class="fragment">Prescription: the <span class="math inline">\(p\)</span> you should adopt</li>
-<li class="fragment">We will draw this idea out every week</li>
+<li class="fragment">Second law doesn’t tell you how to build an engine</li>
+<li class="fragment">Shannon’s capacity theorem doesn’t give you a code</li>
 </ul>
 </div>
 <aside class="notes">
 Now shift to explaining the relationship between what we’re teaching and how we’re teaching. Our objective is to get information in you. Why do we have to do it in such a complex way. Need to lace this description of the atomic human with the pedagogy we’re using. Carnot–Clausius history waits for lecture 2 with free energy.
 </aside>
 </section>
-<section id="section-8" class="slide level2">
+<section id="section-16" class="slide level2">
 <h2></h2>
 <div class="figure">
 <div id="the-atomic-human-figure" class="figure-frame">
@@ -902,386 +1592,15 @@ This may need to move to Lecture 2 depending on how much work we have introducin
 Portrait and table are enough today. Forward pointer only — do not derive <span class="math inline">\(H\)</span>.
 </aside>
 </section>
-<section id="entropy-and-the-boltzmann-distribution" class="slide level2">
-<h2>Entropy and the Boltzmann Distribution</h2>
-</section>
-<section id="hydrodynamica" class="slide level2">
-<h2>Hydrodynamica</h2>
-</section>
-<section id="section-9" class="slide level2">
-<h2></h2>
-<div class="figure">
-<div id="hydrodynamica-danielis-bernoulli-figure" class="figure-frame">
-<div class="centered" style="">
-<a href="https://play.google.com/books/reader?id=3yRVAAAAcAAJ&amp;pg=PP7"><img data-src="https://mlatcl.github.io/iei/slides/diagrams/books/3yRVAAAAcAAJ-PP7.png" /></a>
-</div>
-</div>
-</div>
-<aside class="notes">
-Daniel Bernoulli’s <em>Hydrodynamica</em> published in 1738. It was one of the first works to use the idea of conservation of energy. It used Newton’s laws to predict the behaviour of gases.
-</aside>
-</section>
-<section id="section-10" class="slide level2">
-<h2></h2>
-<div class="figure">
-<div id="bernoulli-kinetic-theory-chapter-figure" class="figure-frame">
-<div class="centered" style="">
-<a href="https://play.google.com/books/reader?id=3yRVAAAAcAAJ&amp;pg=PA200"><img data-src="https://mlatcl.github.io/iei/slides/diagrams/books/3yRVAAAAcAAJ-PA200.png" /></a>
-</div>
-</div>
-</div>
-<aside class="notes">
-Daniel Bernoulli’s chapter on the kinetic theory of gases, for a review on the context of this chapter see <span class="citation" data-cites="Mikhailov:hydrodynamica05">Mikhailov (n.d.)</span>. For 1738 this is extraordinary thinking. The notion of kinetic theory of gases wouldn’t become fully accepted in Physics until 1908 when a model of Einstein’s was verified by Jean Baptiste Perrin.
-</aside>
-</section>
-<section id="entropy-billiards" class="slide level2">
-<h2>Entropy Billiards</h2>
-<div class="figure">
-<div id="entropy-billiards-js-figure" class="figure-frame">
-<div style="display:flex;flex-wrap:wrap;gap:8px;align-items:flex-start">
-<div style="flex:1 1 400px;min-width:0">
-<canvas id="multiball-canvas" width="700" height="500" style="border:1px solid black;display:block;width:100%">
-</canvas>
-</div>
-<div style="flex:0 1 280px;min-width:0;display:flex;flex-direction:column;gap:6px">
-<div>
-Velocity-bin entropy:
-<output id="multiball-entropy">
-</output>
-</div>
-<div id="multiball-histogram-canvas" style="width:100%;height:250px">
-
-</div>
-<div style="display:flex;flex-wrap:wrap;gap:4px">
-<button id="multiball-newball">
-New Ball
-</button>
-<button id="multiball-pause">
-Pause
-</button>
-<button id="multiball-skip">
-Skip 1000s
-</button>
-<button id="multiball-histogram">
-Histogram
-</button>
-</div>
-</div>
-</div>
-<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-<!--
-Loads the shared Ballworld runtime used by interactive physics demos
-(e.g. multiball, Maxwell, Szilard, kappenball). Scenario-specific
-behaviour is provided by follow-on scripts such as maxwell.js.
--->
-<script src="../scripts//ballworld/ballworld.js"></script>
-<script src="../scripts//ballworld/multiball.js"></script>
-</div>
-</div>
-<aside class="notes">
-Bernoulli’s simple kinetic models of gases assume that the molecules of air operate like billiard balls. The displayed entropy is the Shannon entropy of the observed velocity histogram (a coarse-grained proxy, not full thermodynamic entropy).
-</aside>
-</section>
-<section id="section-11" class="slide level2">
-<h2></h2>
-<div class="figure">
-<div id="gaussian-histogram-figure" class="figure-frame">
-<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/gaussian-histogram.svg" width="80%" style=" ">
-</object>
-</div>
-</div>
-<aside class="notes">
-James Clerk Maxwell 1831-1879 Derived distribution of velocities of particles in an ideal gas (elastic fluid).
-</aside>
-</section>
-<section id="section-12" class="slide level2">
-<h2></h2>
-<div class="figure">
-<div id="maxwell-boltzmann-gibbs-figure" class="figure-frame">
-<div class="lamd-columns" style="display:flex; width:100%; justify-content:center; align-items:center; column-gap:1em;">
-<div style="flex:0 0 30%; max-width:30%;">
-<div class="centered" style="">
-<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/james-clerk-maxwell.png" width="100%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
-</div>
-</div>
-<div style="flex:0 0 30%; max-width:30%;">
-<div class="centered centered" style="">
-<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/boltzmann2.jpg" width="100%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
-</div>
-</div>
-<div style="flex:0 0 30%; max-width:30%;">
-<div class="centered centered" style="">
-<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/j-w-gibbs.jpg" width="100%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
-</div>
-</div>
-</div>
-</div>
-</div>
-<aside class="notes">
-James Clerk Maxwell (1831-1879), Ludwig Boltzmann (1844-1906) Josiah Willard Gibbs (1839-1903)
-</aside>
-</section>
-<section id="section-13" class="slide level2">
-<h2></h2>
-<div class="figure">
-<div id="boltzmann-warmetheorie-figure" class="figure-frame">
-<div class="centered" style="">
-<a href="https://play.google.com/books/reader?id=Vuk5AQAAMAAJ&amp;pg=PA373"><img data-src="https://mlatcl.github.io/iei/slides/diagrams/books/Vuk5AQAAMAAJ-PA373.png" /></a>
-</div>
-</div>
-</div>
-<aside class="notes">
-Boltzmann’s paper <span class="citation" data-cites="Boltzmann-warmetheorie77">Boltzmann (n.d.)</span> which introduced the relationship between entropy and probability. A translation with notes is available in <span class="citation" data-cites="Kim-translation15">Sharp and Matschinsky (2015)</span>.
-</aside>
-</section>
-<section id="section-14" class="slide level2">
-<h2></h2>
-<div class="figure">
-<div id="eddington-book-figure" class="figure-frame">
-<div class="lamd-columns" style="display:flex; width:100%; justify-content:center; align-items:center; column-gap:1em;">
-<div style="flex:0 0 49%; max-width:49%;">
-<div class="centered centered" style="">
-<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/arthur-stanley-eddington.jpg" width="100%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
-</div>
-</div>
-<div style="flex:0 0 49%; max-width:49%;">
-<div class="centered" style="">
-<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/natureofphysical00eddi_7.png" width="80%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
-</div>
-</div>
-</div>
-</div>
-</div>
-<aside class="notes">
-Eddington’s book on the Nature of the Physical World <span class="citation" data-cites="Eddington:nature29">(Eddington, 1929)</span>
-</aside>
-</section>
-<section id="section-15" class="slide level2">
-<h2></h2>
-<div class="figure">
-<div id="physical-world-chandra-figure" class="figure-frame">
-<div class="lamd-columns" style="display:flex; width:100%; justify-content:center; align-items:center; column-gap:1em;">
-<div style="flex:0 0 49%; max-width:49%;">
-<div class="centered" style="">
-<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/natureofphysical00eddi_100.png" width="80%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
-</div>
-</div>
-<div style="flex:0 0 49%; max-width:49%;">
-<div class="centered" style="">
-<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/ChandraNobel.png" width="100%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
-</div>
-</div>
-</div>
-</div>
-</div>
-<aside class="notes">
-Chandrasekhar (1910-1995) derived the limit at which a star collapses in on itself. Eddington’s confidence in the 2nd law may have been what drove him to dismiss Chandrasekhar’s ideas, humiliating a young scientist who would later receive a Nobel prize for the work.
-</aside>
-</section>
-<section id="section-16" class="slide level2">
-<h2></h2>
-<div class="figure">
-<div id="deepest-humiliation-eddington-cropped-figure" class="figure-frame">
-<div class="centered" style="">
-<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/natureofphysical00eddi_100_cropped.png" width="60%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
-</div>
-</div>
-</div>
-<aside class="notes">
-Eddington makes his feelings about the primacy of the second law clear. This primacy is perhaps because the second law can be demonstrated mathematically, building on the work of Maxwell, Gibbs and Boltzmann. <span class="citation" data-cites="Eddington:nature29">Eddington (1929)</span>
-</aside>
-</section>
-<section id="energy-in-machine-learning" class="slide level2">
-<h2>Energy in Machine Learning</h2>
-<p>In ML, an <em>energy</em> is a scalar assigned to a configuration: lower means preferred.</p>
-<div>
-<ul>
-<li class="fragment">Losses are energies over parameters or predictions</li>
-<li class="fragment">Energy-based model: <span class="math inline">\(p(x)\propto e^{-E(x)}\)</span> — same grammar as Boltzmann</li>
-<li class="fragment">Minimising <span class="math inline">\(E\)</span> is the zero-temperature / MAP limit</li>
-</ul>
-</div>
-<p><span class="math display">\[
-E(\mathbf{w})=\sum_n\left(y_n-\mathbf{w}^\top\mathbf{x}_n\right)^2
-\]</span></p>
-<div>
-<ul>
-<li class="fragment">Least squares = energy of the residual</li>
-<li class="fragment">Gaussian negative log-likelihood (up to additives and scale)</li>
-<li class="fragment">Gauss already linked this quadratic energy to the normal density</li>
-</ul>
-</div>
-<p><span class="math display">\[
-E=-\sum_c y_c\log\hat{y}_c
-\]</span></p>
-<div>
-<ul>
-<li class="fragment">Cross-entropy / log-loss scores the predictive distribution</li>
-<li class="fragment">Softmax: <span class="math inline">\(\hat{y}_c\propto e^{-E_c}\)</span> — class scores as energies</li>
-<li class="fragment">Same arithmetic as <span class="math inline">\(\mathbb{E}[-\log p]\)</span> (Shannon entropy of a model)</li>
-</ul>
-</div>
-<p><span class="math display">\[
-E(\mathbf{s})=-\sum_i b_i s_i-\sum_{i&lt;j}W_{ij}s_i s_j
-\]</span></p>
-<div>
-<ul>
-<li class="fragment">Binary units <span class="math inline">\(s_i\in\{0,1\}\)</span> or <span class="math inline">\(\{\pm 1\}\)</span></li>
-<li class="fragment">Biases plus pairwise couplings — classic BM has no triple terms</li>
-<li class="fragment"><span class="math inline">\(p(\mathbf{s})\propto e^{-E(\mathbf{s})/T}\)</span>: a learnable Gibbs distribution</li>
-</ul>
-</div>
-<aside class="notes">
-Name only. No contrastive divergence. Hopfield is the fixed-weight cousin: recall as energy descent.
-</aside>
-</section>
-<section id="boltzmann-seed" class="slide level2">
-<h2>Boltzmann Seed</h2>
-</section>
-<section id="a-prescription-to-interrogate" class="slide level2">
-<h2>A Prescription to Interrogate</h2>
-<p>For fixed mean energy <span class="math inline">\(U\)</span>, the maximum-entropy occupation is the Boltzmann distribution — same <span class="math inline">\(E\)</span> grammar as the ML energies above.</p>
-<div>
-<ul>
-<li class="fragment"><span class="math inline">\(p_i \propto e^{-\beta E_i}\)</span> with coldness <span class="math inline">\(\beta = 1/kT\)</span></li>
-<li class="fragment">Normaliser <span class="math inline">\(Z=\sum_i e^{-\beta E_i}\)</span>, so <span class="math inline">\(p_i = e^{-\beta E_i}/Z\)</span></li>
-<li class="fragment">Week 2: name Gibbs, account with free energy <span class="math inline">\(F=U-TS\)</span>; Carnot–Clausius history</li>
-</ul>
-</div>
-<aside class="notes">
-Do not derive Lagrange multipliers today. State the formula so Worksheet 1 has a concrete claim to open and then press. Students should leave curious about why <em>this</em> exponential, what <span class="math inline">\(\beta\)</span> means, and whether entropy here is a constraint or a recipe. Point back to cross-entropy / BM pairwise energy if they ask what <span class="math inline">\(E\)</span> is.
-</aside>
-<aside class="notes">
-Optional live check. Deep dive and free-energy plots are lecture 2.
-</aside>
-</section>
-<section id="from-loss-landscapes-to-hamiltonians" class="slide level2">
-<h2>From Loss Landscapes to Hamiltonians</h2>
-<p>Gradient descent: ‘walking downhill’</p>
-<div>
-<ul>
-<li class="fragment">Contours of <span class="math inline">\(E(\mathbf{ w})\)</span> = elevation lines on a hill</li>
-<li class="fragment">Steepest descent: step opposite <span class="math inline">\(\nabla E\)</span></li>
-<li class="fragment">Same <span class="math inline">\(E\)</span> as least squares / negative log-likelihood</li>
-</ul>
-</div>
-<div class="figure">
-<div id="loss-energy-contour-figure" class="figure-frame">
-<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/loss-energy-contour.svg" width="55%" style=" ">
-</object>
-</div>
-</div>
-<aside class="notes">
-Contours of the least-squares energy <span class="math inline">\(E(m,c)=\sum_n(y_n-mx_n-c)^2\)</span>. Steepest descent walks toward the bowl.
-</aside>
-<p>The loss is a <em>potential energy</em> <span class="math inline">\(V(\mathbf{q})\)</span> on parameter space.</p>
-<div>
-<ul>
-<li class="fragment">Configuration <span class="math inline">\(\mathbf{q}=\mathbf{ w}\)</span>: where the system sits</li>
-<li class="fragment">Force <span class="math inline">\(\propto -\nabla V\)</span>: direction of steepest descent</li>
-<li class="fragment">Common analogy: ball in a bowl; GD is the overdamped limit</li>
-</ul>
-</div>
-<p>SGD estimates <span class="math inline">\(\nabla V\)</span> from a random mini-batch</p>
-<div>
-<ul>
-<li class="fragment">Full-batch <span class="math inline">\(\nabla V\)</span>: exact force, expensive</li>
-<li class="fragment">SGD: noisy force; cheap; enables online updates</li>
-<li class="fragment">Noise can help escape shallow traps (less relevant for convex bowls)</li>
-</ul>
-</div>
-<p>Where is the kinetic energy?</p>
-<div>
-<ul>
-<li class="fragment">GD / SGD: overdamped—friction, no momentum inventory</li>
-<li class="fragment">Momentum methods (heavy ball, Adam): heuristic inertia</li>
-<li class="fragment">Physics: kinetic energy <span class="math inline">\(T(\mathbf{p})\)</span> lives on <em>momentum</em> <span class="math inline">\(\mathbf{p}\)</span></li>
-</ul>
-</div>
-<p><span class="math display">\[
-H(\mathbf{q},\mathbf{p}) = T(\mathbf{p}) + V(\mathbf{q})
-\]</span></p>
-<div>
-<ul>
-<li class="fragment">Total energy = kinetic + potential</li>
-<li class="fragment">Hamilton: <span class="math inline">\(\dot{\mathbf{q}}=\partial H/\partial\mathbf{p}\)</span>, <span class="math inline">\(\dot{\mathbf{p}}=-\partial H/\partial\mathbf{q}\)</span></li>
-<li class="fragment"><span class="math inline">\(H\)</span> conserved along the flow (ideal, frictionless case)</li>
-</ul>
-</div>
-<p>HMC: invent momentum, simulate Hamiltonian dynamics, accept/reject.</p>
-<div>
-<ul>
-<li class="fragment">Draw <span class="math inline">\(\mathbf{p}\sim\mathcal{N}(0,M)\)</span>; simulate leapfrog steps on <span class="math inline">\(H\)</span></li>
-<li class="fragment">Propose <span class="math inline">\((\mathbf{q}&#39;,\mathbf{p}&#39;)\)</span>; Metropolis test on <span class="math inline">\(H\)</span></li>
-<li class="fragment">Marginal samples of <span class="math inline">\(\mathbf{q}\)</span> target <span class="math inline">\(p(\mathbf{q})\propto e^{-V(\mathbf{q})}\)</span></li>
-</ul>
-</div>
-<div class="figure">
-<div id="radford-neal-figure" class="figure-frame">
-<div class="centered centered" style="">
-<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/people/radford-neal.jpg" width="35%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
-</div>
-</div>
-</div>
-<aside class="notes">
-Radford M. Neal (University of Toronto).
-</aside>
-<p>Radford Neal brought Hamiltonian Monte Carlo into Bayesian neural nets.</p>
-<div>
-<ul>
-<li class="fragment">Toronto; Bayesian learning and MCMC</li>
-<li class="fragment">Hybrid Monte Carlo for backpropagation networks <span class="citation" data-cites="Neal:hmc92">(Neal, 1992)</span></li>
-<li class="fragment">PhD thesis: Bayesian neural nets; infinite width <span class="math inline">\(\to\)</span> GP <span class="citation" data-cites="Neal:bayesian94">(Neal, 1994)</span></li>
-</ul>
-</div>
-</section>
-<section id="hamiltonian-monte-carlo-example" class="slide level2">
-<h2>Hamiltonian Monte Carlo Example</h2>
-<div>
-<ul>
-<li class="fragment">Target: <span class="math inline">\(V(\mathbf{q})=-\log p(\mathbf{q}\mid\mathcal{D})\)</span> (loss as potential)</li>
-<li class="fragment"><code>HamiltonianMonteCarlo</code> in <code>mlai</code>; trace <span class="math inline">\(H\)</span> and accept rate</li>
-<li class="fragment">Contrast: SGD point estimate vs HMC posterior samples</li>
-</ul>
-</div>
-</section>
-<section id="section-17" class="slide level2">
-<h2></h2>
-<div class="figure">
-<div id="hmc-quadratic-trajectories-figure" class="figure-frame">
-<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/hmc-quadratic-trajectories.svg" width="55%" style=" ">
-</object>
-</div>
-</div>
-<aside class="notes">
-Leapfrog trajectories and samples from teachable HMC on <span class="math inline">\(V(\mathbf{q})=\tfrac12\|\mathbf{q}\|^2\)</span>. Accept/reject keeps the chain on the Boltzmann target <span class="math inline">\(e^{-V}\)</span>.
-</aside>
-</section>
-<section id="section-18" class="slide level2">
-<h2></h2>
-<div class="figure">
-<div id="hmc-logistic-traces-figure" class="figure-frame">
-<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/hmc-logistic-traces.svg" width="70%" style=" ">
-</object>
-</div>
-</div>
-<aside class="notes">
-Hamiltonian and weight traces for logistic regression. <span class="math inline">\(V(\mathbf{ w})=-\log p(\mathbf{ w}\mid\mathcal{D})\)</span>; SGD gives one downhill point, HMC a cloud of posterior samples.
-</aside>
-<aside class="notes">
-Name kinetic energy and Neal; show the trajectory figure if builds are available. Emphasise V = -log posterior, not a new loss species.
-</aside>
-</section>
 <section id="define-this-week" class="slide level2">
 <h2>Define This Week</h2>
 <div>
 <ul>
 <li class="fragment">Product rule, sum rule, Bayes</li>
 <li class="fragment">Bernoulli, binomial, Poisson, multinomial, Gaussian</li>
-<li class="fragment"><span class="math inline">\(H=-\sum_i p_i\log p_i\)</span> (bits or nats)</li>
 <li class="fragment">Energy scores: quadratic, cross-entropy, BM pairwise</li>
-<li class="fragment">Loss landscape as potential <span class="math inline">\(V\)</span>; ask for kinetic <span class="math inline">\(K\)</span>; Hamiltonian <span class="math inline">\(H=K+V\)</span></li>
-<li class="fragment">Seed: <span class="math inline">\(p_i = e^{-\beta E_i}/Z\)</span>; HMC via <code>mlai</code> (Neal)</li>
+<li class="fragment">Seed: <span class="math inline">\(p_i = e^{-\beta E_i}/Z\)</span></li>
+<li class="fragment"><span class="math inline">\(H=-\sum_i p_i\log p_i\)</span> (bits or nats)</li>
 </ul>
 </div>
 </section>
@@ -1298,13 +1617,10 @@ Name kinetic energy and Neal; show the trajectory figure if builds are available
 <h2 class="scrollable">Further Reading</h2>
 <ul>
 <li><p>Probability distributions: Section 1.2 of <span class="citation" data-cites="Bishop:book06">Bishop (2006)</span></p></li>
-<li><p>Chapter 1 of <span class="citation" data-cites="Lawrence-atomic24">Lawrence (2024)</span></p></li>
 <li><p>Boltzmann machines (optional colour) of <span class="citation" data-cites="Ackley-boltzmann85">Ackley et al. (1985)</span></p></li>
 <li><p>Hopfield networks (optional colour) of <span class="citation" data-cites="Hopfield:neural82">Hopfield (1982)</span></p></li>
-<li><p>Section 3.2.1 of <span class="citation" data-cites="Welling-generative26">Welling et al. (2026)</span></p></li>
-<li><p>Section 11.4.2 of <span class="citation" data-cites="Welling-generative26">Welling et al. (2026)</span></p></li>
-<li><p>Hybrid Monte Carlo for backpropagation networks of <span class="citation" data-cites="Neal:hmc92">Neal (1992)</span></p></li>
-<li><p>Bayesian Learning for Neural Networks (thesis) of <span class="citation" data-cites="Neal:bayesian94">Neal (1994)</span></p></li>
+<li><p>Exercise 4.1 and the discussion on pp.~69–70 of MacKay-information03</p></li>
+<li><p>Chapter 1 of <span class="citation" data-cites="Lawrence-atomic24">Lawrence (2024)</span></p></li>
 </ul>
 </section>
 <section id="thanks" class="slide level2 scrollable">
@@ -1342,23 +1658,17 @@ Laplace, P.S., 1814. Essai philosophique sur les probabilités, 2nd ed. Courcier
 <div id="ref-Lawrence-atomic24" class="csl-entry" role="doc-biblioentry">
 Lawrence, N.D., 2024. The atomic human: Understanding ourselves in the age of AI. Allen Lane.
 </div>
+<div id="ref-MacKay-information03" class="csl-entry" role="doc-biblioentry">
+MacKay, D.J.C., 2003. Information theory, inference and learning algorithms. Cambridge University Press, Cambridge, U.K.
+</div>
 <div id="ref-Mikhailov:hydrodynamica05" class="csl-entry" role="doc-biblioentry">
 Mikhailov, G.K., n.d. Daniel bernoulli, hydrodynamica (1738).
-</div>
-<div id="ref-Neal:bayesian94" class="csl-entry" role="doc-biblioentry">
-Neal, R.M., 1994. Bayesian learning for neural networks (PhD thesis). Dept. of Computer Science, University of Toronto.
-</div>
-<div id="ref-Neal:hmc92" class="csl-entry" role="doc-biblioentry">
-Neal, R.M., 1992. <span>B</span>ayesian training of backpropagation networks by the hybrid <span>M</span>onte <span>C</span>arlo method (No. CRG-TR-92-1). Department of Computer Science, University of Toronto, Canada.
 </div>
 <div id="ref-Kim-translation15" class="csl-entry" role="doc-biblioentry">
 Sharp, K., Matschinsky, F., 2015. Translation of <span>L</span>udwig <span>B</span>oltzmann’s paper <span>“on the relationship between the second fundamental theorem of the mechanical theory of heat and probability calculations regarding the conditions for thermal equilibrium.”</span> Entropy 17, 1971–2009. <a href="https://doi.org/10.3390/e17041971">https://doi.org/10.3390/e17041971</a>
 </div>
 <div id="ref-Suits-grasshopper78" class="csl-entry" role="doc-biblioentry">
 Suits, B., 1978. The grasshopper: Games, life and utopia. University of Toronto Press, Toronto.
-</div>
-<div id="ref-Welling-generative26" class="csl-entry" role="doc-biblioentry">
-Welling, M., Lu, S., Holdijk, L., 2026. Generative AI and stochastic thermodynamics: A tale of free energies. Cambridge University Press, Cambridge, U.K.
 </div>
 </div>
 </section>
