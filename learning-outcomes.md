@@ -132,8 +132,8 @@ Eight Tuesdays, 13 October – 1 December 2026, 10:00–12:00, FW26, William Gat
 
 | Week | Date | Topic | Outcomes | In slot |
 |------|------|-------|----------|---------|
-| 1 | 13 Oct | Theme; perpetual motion; *Atomic Human* bandwidth; probability/entropy review; Boltzmann seed | LO1 (seed) | W1 released |
-| 2 | 20 Oct | Gibbs--Boltzmann form; free energy $F=U-TS$; Schottky | LO1 | Q1 (10 min); W1 due |
+| 1 | 13 Oct | Theme; perpetual motion; *Atomic Human* bandwidth; probability review; energy / Boltzmann seed; entropy review | LO1 (seed) | W1 released |
+| 2 | 20 Oct | Gibbs--Boltzmann form; free energy $F=U-TS$; HMC; Schottky | LO1 | Q1 (10 min); W1 due |
 | 3 | 27 Oct | Shannon entropy; partition function; chain rule; $I$ and DPI (statement) | LO2, LO3 | |
 | 4 | 3 Nov | Maxwell's demon; Landauer; intelligence (first cut) | LO4 | W2 released |
 | 5 | 10 Nov | MaxEnt; exponential family; three-perspective synthesis | LO5, LO6, LO7 | Q2 (10 min); W2 due |
