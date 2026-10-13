@@ -11,8 +11,10 @@ abstract: >
   in Week 1 onto the physical notions of entropy through the 
   Gibbs--Boltzmann distribution. We'll show how this equation can be 
   decomposed to give the so-called free energy $F = U - TS$. We'll introduce
-  the notion of a *thermodynamic bath* and review Schottky's anomaly. Worksheet 1 is 
-  due and the session will start with Quiz 1.
+  the notion of a *thermodynamic bath* and review Schottky's anomaly. We will
+  also complete the energy story from Week 1: loss landscapes as potentials,
+  kinetic energy, and Hamiltonian Monte Carlo. Worksheet 1 is due and the
+  session will start with Quiz 1.
 author:
 - given: Neil D.
   family: Lawrence
@@ -45,13 +47,14 @@ reading:
     required: false
 ---
 
-\notes{Worksheet 1 is due at the start of this session. Quiz 1 occupies the first ten minutes: probability, elementary entropy, and Week 1 seeds. Then 110 minutes on the Gibbs--Boltzmann form, free energy, bath, Schottky, and finite time. Do not derive the occupation from MaxEnt today --- that is week 5.}
+\notes{Worksheet 1 is due at the start of this session. Quiz 1 occupies the first ten minutes: probability, elementary entropy, and Week 1 seeds. Then 110 minutes on the Gibbs--Boltzmann form, free energy, HMC (loss as potential), bath, Schottky, and finite time. Do not derive the occupation from MaxEnt today --- that is week 5.}
 
 \subsection{This Session}
 
 \slidesincremental{
 * Quiz 1 (ten minutes)
 * Gibbs--Boltzmann form; free energy $F=U-TS$
+* Potential → kinetic → HMC (Week 1 energy payoff)
 * Bath, Schottky, finite-time dissipation named
 }
 
@@ -62,10 +65,11 @@ reading:
 |--------:|-------|
 | 0–10 | Quiz 1 (Moodle; probability / entropy foundations / Week 1 seeds) |
 | 10–20 | Collect Worksheet 1; recap seed $p_i \propto e^{-\beta E_i}$ |
-| 20–55 | Gibbs--Boltzmann form and names; $\log Z$ as CGF; Hopfield / BM colour |
-| 55–65 | Break |
-| 65–95 | Free-energy decomposition $F=U-TS$ |
-| 95–120 | Bath; Schottky; finite-time naming |
+| 20–50 | Gibbs--Boltzmann form and names; $\log Z$ as CGF; Hopfield / BM colour |
+| 50–60 | Break |
+| 60–85 | Free-energy decomposition $F=U-TS$ |
+| 85–105 | Loss as potential $V$; kinetic $K$; Hamiltonian / HMC (Neal demos) |
+| 105–120 | Bath; Schottky; finite-time naming |
 
 }
 
@@ -149,6 +153,10 @@ mlai.write_figure('three-state-thermo.svg', directory='\writeDiagramsDir/ml')}
 * Prescription: $p_i = e^{-\beta E_i}/Z$
 * Accounting: $F = U - TS$
 }
+
+\include{_ml/includes/from-loss-to-hamiltonian.md}
+
+\notes{Week 1 left the ML energies as *scores* and the Boltzmann seed as a static occupation. Today those scores are potentials $V$: descent is motion on $V$; practice is stochastic; kinetic energy completes the Hamiltonian; HMC (Neal) is the sampler that uses both. The live demos use ``mlai.HamiltonianMonteCarlo``: leapfrog paths on a quadratic potential, then logistic regression with an SGD point estimate versus an HMC posterior cloud.}
 
 \include{_books/includes/welling-lu-holdijk.md}
 \include{_information/includes/welling-boltzmann-free-energy.md}
@@ -266,7 +274,8 @@ mlai.write_figure('finite-time-sketch.svg', directory='\writeDiagramsDir/ml')}
 \slidesincremental{
 * How was entropy discovered?
 * What is the Gibbs--Boltzmann distribution?
-* Energy and entropy?
+* Energy and entropy? Free energy $F=U-TS$
+* Loss as potential $V$; Hamiltonian $H=K+V$; HMC via ``mlai`` (Neal)
 * What is a thermodynamic bath?
 * What is Schottky's anomaly?
 }

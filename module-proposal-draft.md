@@ -75,8 +75,8 @@ The closing abstraction echoes Shannon's founding move: just as Shannon abstract
 
 | Week | Topic | Teaching approach |
 |------|-------|-------------------|
-| 1 | **Theme; perpetual motion; *Atomic Human* bandwidth; probability/entropy review; Boltzmann seed** — Entropy forbids / probability prescribes. Motivating question. | Lecture + motivating examples; Worksheet 1 released |
-| 2 | **Boltzmann; free energy F = U − TS; Schottky** — Partition function Z; internal energy U; entropy S; Helmholtz free energy. | Lecture; in-class Quiz 1; Worksheet 1 due |
+| 1 | **Theme; perpetual motion; *Atomic Human* bandwidth; probability review; energy / Boltzmann seed; entropy review** — Entropy forbids / probability prescribes. Motivating question. | Lecture + motivating examples; Worksheet 1 released |
+| 2 | **Boltzmann; free energy F = U − TS; HMC; Schottky** — Partition function Z; internal energy U; entropy S; Helmholtz free energy; loss as potential → Hamiltonian Monte Carlo. | Lecture; in-class Quiz 1; Worksheet 1 due |
 | 3 | **Shannon entropy; partition function; chain rule; mutual information; DPI (statement)** — H = −Σ pᵢ log pᵢ; Boltzmann S = kH. Channel capacity as scaffolding. DPI named; proof and information bottleneck wait for week 8. | Lecture + derivation |
 | 4 | **Maxwell's demon; Landauer; intelligence (first cut)** — Landauer (1961): erasing one bit costs k_B T ln 2. Feedback work bounded by information. | Lecture + thought-experiment; Worksheet 2 released |
 | 5 | **MaxEnt; exponential family; three-perspective synthesis** — Jaynes with Lagrange multipliers; exponential family; Shannon / Boltzmann / Bayes comparison. | Lecture; in-class Quiz 2; Worksheet 2 due |
