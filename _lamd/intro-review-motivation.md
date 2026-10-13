@@ -65,7 +65,7 @@ reading:
 | 15–35 | 'Socratic' approach: curiosity, skepticism, submission rules |
 | 35–65 | Probability review: product/sum/Bayes; basic distributions |
 | 65–75 | Break |
-| 75–95 | Entropy review (elementary $H$); bits and nats |
+| 75–95 | Entropy review: information game, MacKay weighing, elementary $H$ |
 | 95–110 | Energy in ML; motivation and bandwidth; Boltzmann seed |
 | 110–118 | Culmination: potential → stochastic → kinetic? → Hamiltonian / HMC |
 | 118–120 | Worksheet 1 brief; Quiz 1 preview |

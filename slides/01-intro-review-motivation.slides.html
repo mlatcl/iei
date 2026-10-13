@@ -180,7 +180,7 @@
 </tr>
 <tr class="odd">
 <td style="text-align: right;">75–95</td>
-<td>Entropy review (elementary <span class="math inline">\(H\)</span>); bits and nats</td>
+<td>Entropy review: information game, MacKay weighing, elementary <span class="math inline">\(H\)</span></td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">95–110</td>
@@ -611,6 +611,88 @@ The Gaussian PDF with <span class="math inline">\({\mu}=1.7\)</span> and varianc
 <section id="entropy-review" class="slide level2">
 <h2>Entropy Review</h2>
 </section>
+<section id="the-information-game" class="slide level2">
+<h2>The Information Game</h2>
+</section>
+<section id="the-information-game-1" class="slide level2">
+<h2>The Information Game</h2>
+<p>One player has chosen an object from a known finite list. The other may ask only <em>yes/no</em> questions.</p>
+<div>
+<ul>
+<li class="fragment">Goal: name the object</li>
+<li class="fragment">Cost: number of questions (worst case, or on average)</li>
+<li class="fragment">Optimal play halves the remaining possibilities each time</li>
+</ul>
+</div>
+<aside class="notes">
+Run this live if time allows: pick a small list (sixteen animals, eight Cambridge colleges). Students should feel that a balanced question buys one bit. Do not yet write <span class="math inline">\(-\sum p\log p\)</span>; the counting argument is enough.
+</aside>
+</section>
+<section id="bits-as-balanced-questions" class="slide level2">
+<h2>Bits as Balanced Questions</h2>
+<p>A fair yes/no answer distinguishes two equally likely cases — one <em>bit</em>.</p>
+<div>
+<ul>
+<li class="fragment"><span class="math inline">\(N\)</span> equally likely objects <span class="math inline">\(\Rightarrow\)</span> need <span class="math inline">\(\log_2 N\)</span> bits</li>
+<li class="fragment">Twenty questions reach about a million hypotheses (<span class="math inline">\(2^{20}\)</span>)</li>
+<li class="fragment">Unequal priors: best questions still split probability as evenly as possible</li>
+</ul>
+</div>
+<p>The same idea with a three-outcome instrument comes next — MacKay’s balance.</p>
+</section>
+<section id="mackays-balance-and-balls" class="slide level2">
+<h2>MacKay’s Balance and Balls</h2>
+</section>
+<section id="twelve-balls-one-odd" class="slide level2">
+<h2>Twelve Balls, One Odd</h2>
+<p>MacKay’s weighing problem <span class="citation" data-cites="MacKay-information03">(MacKay, 2003, p. Ex.~4.1)</span>: twelve balls; exactly one is odd; it may be heavier <em>or</em> lighter.</p>
+<div>
+<ul>
+<li class="fragment">Instrument: a two-pan balance</li>
+<li class="fragment">Each use: left heavy, right heavy, or balance — <em>three</em> outcomes</li>
+<li class="fragment">Task: identify the odd ball <em>and</em> whether it is heavy or light</li>
+</ul>
+</div>
+<aside class="notes">
+State the puzzle. Do not walk through which balls go on which pan. The lecture point is the information budget, not the adaptive strategy tree.
+</aside>
+</section>
+<section id="information-at-the-start" class="slide level2">
+<h2>Information at the Start</h2>
+<p>Before any weighing, how many hypotheses?</p>
+<div>
+<ul>
+<li class="fragment">12 choices for which ball is odd</li>
+<li class="fragment"><span class="math inline">\(\times\)</span> 2 directions (heavy or light)</li>
+<li class="fragment"><span class="math inline">\(= 24\)</span> equally likely states of the world</li>
+</ul>
+</div>
+</section>
+<section id="information-from-the-balance" class="slide level2">
+<h2>Information from the Balance</h2>
+<p>Each weighing has three possible readings.</p>
+<div>
+<ul>
+<li class="fragment">Ideal (equiprobable) outcomes: <span class="math inline">\(\log_2 3 \approx 1.58\)</span> bits per use</li>
+<li class="fragment">Two weighings: at most <span class="math inline">\(3^2 = 9\)</span> leaves — too few for <span class="math inline">\(24\)</span> hypotheses</li>
+<li class="fragment">Three weighings: at most <span class="math inline">\(3^3 = 27\)</span> leaves — enough, since <span class="math inline">\(27 \ge 24\)</span></li>
+</ul>
+</div>
+</section>
+<section id="doable-in-three-strategy-deferred" class="slide level2">
+<h2>Doable in Three — Strategy Deferred</h2>
+<p>The counting argument shows three weighings <em>must</em> be enough in principle.</p>
+<div>
+<ul>
+<li class="fragment">We do <em>not</em> give the sequence of groupings today</li>
+<li class="fragment">Optimal play keeps the three readings as near equiprobable as possible</li>
+<li class="fragment">Same moral as twenty questions: ask questions that split the prior evenly</li>
+</ul>
+</div>
+<aside class="notes">
+Stop here. Invite them to try Exercise 4.1 before reading MacKay’s solution figure. Optional aside: a first weighing of 1–6 vs 7–12 can never balance under the problem statement, so it yields only one bit and is already suboptimal.
+</aside>
+</section>
 <section id="computing-expectations-example" class="slide level2">
 <h2>Computing Expectations Example</h2>
 <ul>
@@ -731,7 +813,10 @@ The Gaussian PDF with <span class="math inline">\({\mu}=1.7\)</span> and varianc
 <ul>
 <li>Expectation <span class="math inline">\(-\log(P(y))\)</span>: <span class="math inline">\(0.3\times 1.204 + 0.2\times 1.609 + 0.1\times 2.302 +0.4\times 0.916 = 1.280\)</span></li>
 </ul>
-<p>Shannon entropy turns a distribution into a <em>scalar</em> measure of uncertainty.</p>
+</section>
+<section id="uncertainty-as-a-number" class="slide level2">
+<h2>Uncertainty as a Number</h2>
+<p>Shannon entropy turns a distribution into a <em>scalar</em> measure of uncertainty — the average number of fair yes/no questions under optimal play.</p>
 <div>
 <ul>
 <li class="fragment">Discrete: <span class="math inline">\(H(p) = -\sum_i p_i \log p_i\)</span></li>
@@ -775,19 +860,17 @@ Axiomatic derivation of <span class="math inline">\(H\)</span> and <span class="
 <h2>Entropy and Probability</h2>
 <div>
 <ul>
-<li class="fragment">Entropy: no-go theorems</li>
-<li class="fragment">Probability: what we should do</li>
-<li class="fragment">Same <span class="math inline">\(H\)</span>, two jobs</li>
+<li class="fragment">Probability: what things do (stochastically)</li>
+<li class="fragment">Entropy: what things don’t do? No-go?</li>
 </ul>
 </div>
 </section>
-<section id="two-jobs" class="slide level2">
-<h2>Two Jobs</h2>
+<section id="prohibition" class="slide level2">
+<h2>Prohibition</h2>
 <div>
 <ul>
-<li class="fragment">No-go: what is forbidden</li>
-<li class="fragment">Prescription: the <span class="math inline">\(p\)</span> you should adopt</li>
-<li class="fragment">We will draw this idea out every week</li>
+<li class="fragment">Second law doesn’t tell you how to build an engine</li>
+<li class="fragment">Shannon’s capacity theorem doesn’t give you a code</li>
 </ul>
 </div>
 <aside class="notes">
@@ -1298,6 +1381,7 @@ Name kinetic energy and Neal; show the trajectory figure if builds are available
 <h2 class="scrollable">Further Reading</h2>
 <ul>
 <li><p>Probability distributions: Section 1.2 of <span class="citation" data-cites="Bishop:book06">Bishop (2006)</span></p></li>
+<li><p>Exercise 4.1 and the discussion on pp.~69–70 of MacKay-information03</p></li>
 <li><p>Chapter 1 of <span class="citation" data-cites="Lawrence-atomic24">Lawrence (2024)</span></p></li>
 <li><p>Boltzmann machines (optional colour) of <span class="citation" data-cites="Ackley-boltzmann85">Ackley et al. (1985)</span></p></li>
 <li><p>Hopfield networks (optional colour) of <span class="citation" data-cites="Hopfield:neural82">Hopfield (1982)</span></p></li>
@@ -1341,6 +1425,9 @@ Laplace, P.S., 1814. Essai philosophique sur les probabilités, 2nd ed. Courcier
 </div>
 <div id="ref-Lawrence-atomic24" class="csl-entry" role="doc-biblioentry">
 Lawrence, N.D., 2024. The atomic human: Understanding ourselves in the age of AI. Allen Lane.
+</div>
+<div id="ref-MacKay-information03" class="csl-entry" role="doc-biblioentry">
+MacKay, D.J.C., 2003. Information theory, inference and learning algorithms. Cambridge University Press, Cambridge, U.K.
 </div>
 <div id="ref-Mikhailov:hydrodynamica05" class="csl-entry" role="doc-biblioentry">
 Mikhailov, G.K., n.d. Daniel bernoulli, hydrodynamica (1738).
