@@ -111,13 +111,13 @@ reading:
 
 \include{_information/includes/welling-entropy-partition.md}
 
-\notes{GAIST §1.2.3 uses $-\int p\log p$ for Gaussians — that is *differential* entropy. It can be negative and is not bounded like discrete Shannon $H\in[0,\log n]$. Below we introduce KL divergence, which is always $\ge 0$ discrete and continuous. That is why MaxEnt projections minimise $\text{KL}(\cdot\|r)$, not raw $H$.}
+\notes{GAIST §1.2.3 uses $-\int p\log p$ for Gaussians — that is *differential* entropy. It can be negative and is not bounded like discrete Shannon $H\in[0,\log n]$. Below we introduce KL divergence $D_{\mathrm{KL}}$, which is always $\ge 0$ discrete and continuous. That is why MaxEnt projections minimise $D_{\mathrm{KL}}(\cdot\|r)$, not raw $H$.}
 
 \addreading{@Callen-thermostatistics85}{Chapter 16}
 
 \include{_information/includes/kl-divergence-discrete-continuous.md}
 
-\notes{Week 2 left a forward pointer: Maxwell--Boltzmann components are Gaussian; speed is not. That Jacobian is the worked example for why differential entropy depends on coordinates and why relative entropy does not.}
+\notes{Week 2 left a forward pointer: Maxwell--Boltzmann components are Gaussian; speed is not. That Jacobian is the worked example for why differential entropy depends on coordinates and why $D_{\mathrm{KL}}$ does not.}
 
 \include{_physics/includes/maxwell-boltzmann-components-vs-speed.md}
 \include{_information/includes/differential-entropy-change-of-variables.md}
