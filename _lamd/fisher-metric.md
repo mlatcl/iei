@@ -215,30 +215,30 @@ $$
 
 \newslide{KL Divergence: Forward and Reverse}
 
-\slides{$\text{KL}$ measures how different two distributions are — but it is asymmetric.}
+\slides{KL divergence measures how different two distributions are — but it is asymmetric.}
 
 \slidesincremental{
-* $\text{KL}(p\|q) = \sum_x p(x)\log\frac{p(x)}{q(x)} \ge 0$, zero iff $p=q$
+* $\KL{p}{q} = \sum_x p(x)\log\frac{p(x)}{q(x)} \ge 0$, zero iff $p=q$
 * Forward ($p\|q$): mass-covering — $q$ must not miss mass of $p$
 * Reverse ($q\|p$): mode-seeking — $q$ concentrates on a mode of $p$
-* Second-order Taylor: $\text{KL}(p_{\boldsymbol{\theta}+\mathrm{d}\boldsymbol{\theta}}\|p_{\boldsymbol{\theta}}) = \tfrac{1}{2}\,\mathrm{d}\boldsymbol{\theta}^\top G(\boldsymbol{\theta})\,\mathrm{d}\boldsymbol{\theta} + O(\|\mathrm{d}\boldsymbol{\theta}\|^3)$
+* Second-order Taylor: $\KL{p_{\boldsymbol{\theta}+\mathrm{d}\boldsymbol{\theta}}}{p_{\boldsymbol{\theta}}} = \tfrac{1}{2}\,\mathrm{d}\boldsymbol{\theta}^\top G(\boldsymbol{\theta})\,\mathrm{d}\boldsymbol{\theta} + O(\|\mathrm{d}\boldsymbol{\theta}\|^3)$
 }
 
 \speakernotes{Forward KL covers all modes; reverse KL picks one. Both have the same second-order term: Fisher $G$. That is why $G$ is the natural metric: it is the curvature of the divergence surface at coincidence.}
 
 \notes{Kullback--Leibler divergence measures how much distribution $p$ differs from reference $q$:
 $$
-\text{KL}(p\|q) = \sum_x p(x)\log\frac{p(x)}{q(x)} = \mathbb{E}_p\!\left[\log\frac{p(X)}{q(X)}\right] \ge 0,
+\KL{p}{q} = \sum_x p(x)\log\frac{p(x)}{q(x)} = \mathbb{E}_p\!\left[\log\frac{p(X)}{q(X)}\right] \ge 0,
 $$
-with equality iff $p=q$ (Gibbs' inequality). It is not symmetric: $\text{KL}(p\|q)\ne \text{KL}(q\|p)$ in general.
+with equality iff $p=q$ (Gibbs' inequality). It is not symmetric: $\KL{p}{q}\ne \KL{q}{p}$ in general.
 
-*Forward KL* ($p\|q$) penalises regions where $p$ has mass but $q$ does not. Fitting a model $q$ by minimising $\text{KL}(p\|q)$ with respect to $q$ forces $q$ to spread and cover all modes of $p$ — the mass-covering or "zero-forcing" behaviour familiar from variational inference.
+*Forward KL* ($p\|q$) penalises regions where $p$ has mass but $q$ does not. Fitting a model $q$ by minimising $\KL{p}{q}$ with respect to $q$ forces $q$ to spread and cover all modes of $p$ — the mass-covering or "zero-forcing" behaviour familiar from variational inference.
 
 *Reverse KL* ($q\|p$) penalises regions where $q$ has mass but $p$ does not. Minimising with respect to $q$ makes $q$ concentrate on one mode of $p$ — the mode-seeking or "zero-avoiding" behaviour.
 
 The Fisher metric emerges as the Hessian of KL at zero separation. Expanding $\log p_{\boldsymbol{\theta}+\mathrm{d}\boldsymbol{\theta}}$ to second order and using the fact that the score has zero mean, the first-order term vanishes:
 $$
-\text{KL}(p_{\boldsymbol{\theta}+\mathrm{d}\boldsymbol{\theta}}\|p_{\boldsymbol{\theta}}) = \tfrac{1}{2}\,\mathrm{d}\boldsymbol{\theta}^\top G(\boldsymbol{\theta})\,\mathrm{d}\boldsymbol{\theta} + O(\|\mathrm{d}\boldsymbol{\theta}\|^3).
+\KL{p_{\boldsymbol{\theta}+\mathrm{d}\boldsymbol{\theta}}}{p_{\boldsymbol{\theta}}} = \tfrac{1}{2}\,\mathrm{d}\boldsymbol{\theta}^\top G(\boldsymbol{\theta})\,\mathrm{d}\boldsymbol{\theta} + O(\|\mathrm{d}\boldsymbol{\theta}\|^3).
 $$
 Fisher information is the *curvature* of KL divergence at coincidence. The same Hessian arises from both the forward and reverse divergence; they only differ at higher orders.}
 
@@ -281,7 +281,7 @@ mlai.write_figure('forward-reverse-kl.svg', directory='\writeDiagramsDir/ml')}
 
 \slides{
 $$
-\text{KL}(p_{\boldsymbol{\theta}+\mathrm{d}\boldsymbol{\theta}}\|p_{\boldsymbol{\theta}}) = \tfrac{1}{2}\,\mathrm{d}\boldsymbol{\theta}^\top G(\boldsymbol{\theta})\,\mathrm{d}\boldsymbol{\theta} + O(\|\mathrm{d}\boldsymbol{\theta}\|^3)
+\KL{p_{\boldsymbol{\theta}+\mathrm{d}\boldsymbol{\theta}}}{p_{\boldsymbol{\theta}}} = \tfrac{1}{2}\,\mathrm{d}\boldsymbol{\theta}^\top G(\boldsymbol{\theta})\,\mathrm{d}\boldsymbol{\theta} + O(\|\mathrm{d}\boldsymbol{\theta}\|^3)
 $$
 * $G$ = curvature of KL at coincidence
 * Two KLs, one local metric
