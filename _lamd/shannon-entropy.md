@@ -164,6 +164,104 @@ reading:
 
 \notes{Interpret later: how entropy is understood today (week 5, then week 8); chain rule as the source of multi-information (week 8). DPI is named today; define-stage proof is week 8. Equilibrium versus non-equilibrium (first cut) is the local-equilibrium grouping slide: within-group settled, $w$ free to move.}
 
+\subsection{Thermodynamic Bath and Schottky's Anomaly}
+
+<!-- SNIPPET: _physics/includes/thermodynamic-bath-schottky.md -->
+
+\newslides{The Bath and Schottky's Anomaly}
+
+\slides{A thermodynamic bath is the large system that justifies the canonical ensemble: it fixes $T$ and exchanges energy with a small system.}
+
+\slidesincremental{
+* Two-state system: $E\in\{0,\varepsilon\}$
+* Heat capacity: $C = \partial U/\partial T$ peaks at intermediate $T$
+* Schottky's anomaly: both states populated; maximal thermal response
+}
+
+\speakernotes{Name the Schottky peak. Entropic reading waits for week 8.}
+
+\notes{A thermodynamic bath fixes $T$ and exchanges energy with a small system, justifying the canonical ensemble. Heat capacity $C=\partial U/\partial T$ peaks when both states are equally populated — Schottky's anomaly.}
+
+\setupplotcode{import numpy as np
+import matplotlib.pyplot as plt
+import mlai}
+
+\plotcode{epsilon = 1.0
+beta = np.linspace(0.05, 5.0, 400)
+p1 = 1.0 / (1.0 + np.exp(beta * epsilon))
+U = p1 * epsilon
+C = (epsilon ** 2) * p1 * (1 - p1) * beta ** 2
+T = 1.0 / beta
+fig, axes = plt.subplots(1, 2, figsize=(10, 4))
+axes[0].plot(T, U, 'C0', linewidth=2)
+axes[0].set_xlabel('$T$ ($k=1$)')
+axes[0].set_ylabel('$U$')
+axes[0].set_title('Mean energy')
+axes[1].plot(T, C, 'C1', linewidth=2)
+axes[1].set_xlabel('$T$')
+axes[1].set_ylabel('$C$')
+axes[1].set_title('Schottky heat-capacity peak')
+plt.tight_layout()
+mlai.write_figure('schottky-two-state.svg', directory='\writeDiagramsDir/ml')}
+
+\newslide{}
+
+\figure{\includediagram{\diagramsDir/ml/schottky-two-state}{85%}}{Mean energy and heat capacity of a two-state system. The Schottky peak appears when $p_0\approx p_1\approx\frac12$.}{schottky-two-state}
+
+\slides{
+\includediagram{\diagramsDir/ml/schottky-two-state}{85%}
+}
+
+<!-- /SNIPPET: _physics/includes/thermodynamic-bath-schottky.md -->
+
+\slidesincremental{
+* Bath: why the canonical ensemble exists
+* Two-state system: Schottky peak in heat capacity
+* Entropic reading of Schottky: not today
+}
+
+\subsection{Finite Time Costs More Than $\Delta F$}
+
+<!-- SNIPPET: _physics/includes/finite-time-dissipation-intro.md -->
+
+\newslide{Quasi-Static versus Finite Time}
+
+\slides{Equilibrium thermodynamics gives a prescription for *reversible* work. Real protocols take time.}
+
+\speakernotes{Do not define thermodynamic length today. Name quasi-static $W=\Delta F$ versus finite-time excess. Tie to the die: today $w$ was fixed; finite time moves $w(t)$ while hoping groups stay near $\pi_i$. Crooks in weeks 6–7; intelligence in week 8.}
+
+\notes{Quasi-static processes achieve reversible work $W=\Delta F$. Finite-time driving dissipates additional energy beyond the equilibrium bound. In the grouping language of the die: equilibrium paths keep within-group distributions at their conditional stationary laws and only the coarse weights (or bath parameter $\beta$) change; rushing that change is what costs extra.}
+
+\setupplotcode{import numpy as np
+import matplotlib.pyplot as plt
+import mlai}
+
+\plotcode{def two_state_F(beta, eps=1.0):
+    Z = 1.0 + np.exp(-beta * eps)
+    return -np.log(Z) / beta
+
+beta0, beta1 = 0.5, 2.0
+path = np.linspace(beta0, beta1, 80)
+F_path = two_state_F(path)
+fig, ax = plt.subplots(figsize=(7, 4))
+ax.plot(path, F_path, 'k-', linewidth=2, label='$F(\\beta)$')
+ax.annotate('', xy=(beta1, two_state_F(beta1)), xytext=(beta0, two_state_F(beta0)),
+            arrowprops=dict(arrowstyle='->', color='green', lw=2))
+ax.text(1.0, -0.55, 'quasi-static: $W=\\Delta F$', color='green')
+ax.annotate('', xy=(beta1, two_state_F(beta1) + 0.15), xytext=(beta0, two_state_F(beta0) + 0.15),
+            arrowprops=dict(arrowstyle='->', color='red', lw=2))
+ax.text(1.0, -0.35, 'finite time: $W > \\Delta F$', color='red')
+ax.set_xlabel(r'$\beta$')
+ax.set_ylabel('$F$')
+ax.legend()
+mlai.write_figure('finite-time-sketch.svg', directory='\writeDiagramsDir/ml')}
+
+\newslide{}
+
+\figure{\includediagram{\diagramsDir/ml/finite-time-sketch}{70%}}{Cartoon of quasi-static versus finite-time driving between two equilibrium states.}{finite-time-sketch}
+
+
+
 \subsection{After This Lecture}
 
 \notes{Worksheet 2 (due start of lecture 4) presses whether Shannon $H$ and Boltzmann $S$ are the same object or a metaphor. Next week: Maxwell's demon and Landauer.}
