@@ -122,6 +122,19 @@ reading:
 * The intelligence question sharpens in lecture 4 (Landauer, Bauby)
 }
 
+\include{_information/includes/information-game-guessing.md}
+
+\include{_information/includes/mackay-weighing-problem.md}
+
+\include{_information/includes/die-coarse-graining.md}
+
+\include{_information/includes/entropy-grouping-composition.md}
+
+\include{_information/includes/coarse-graining-intelligence.md}
+
+\include{_information/includes/grouping-static-vs-ensemble.md}
+
+
 \speakernotes{Forward pointer only — do not derive $H$ today.}
 
 \subsection{ML to Thermodynamics}
