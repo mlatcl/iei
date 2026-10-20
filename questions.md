@@ -40,25 +40,29 @@ Class tests examine the *applied* form of the define-stage questions, on a new e
 
 ## Lecture 2 — 20 October — Boltzmann and Free Energy
 
-Quiz 1 occupies the first ten minutes (probability and Week 1 energy seeds). Then Hydrodynamica and the Week 1 entropy carry-over.
+Quiz 1 occupies the first ten minutes (probability and Week 1 energy seeds). Then Laplace / Bernoulli / ensemble, Hydrodynamica and the entropy bridge, embodiment, the information game / MacKay / die coarse-graining, then Gibbs--Boltzmann, free energy, and HMC. Bath and Schottky move to Week 3.
 
 **Define this week**
 
 - How was entropy discovered?
 - Who were Carnot and Clausius, and what did each contribute?
 - What are the information constraints on a human? (bandwidth, first cut)
+- Die coarse-graining / grouping: $H=H(w)+\sum_i w_i H(p_i)$
 - What is the Gibbs--Boltzmann distribution (canonical ensemble)?
 - How do internal energy, entropy, and Helmholtz free energy enter $p_i$?
-- What is a thermodynamic bath?
-- What is Schottky's anomaly?
+- Loss as potential $V$; Hamiltonian $H=K+V$; HMC (named)
 
 **Named, not yet answered**
 
 - How is entropy understood today?
 - What is the Legendre transform? (you have written $F = U - TS$)
+- What is a thermodynamic bath? (Week 3)
+- What is Schottky's anomaly? (Week 3)
 - Shannon entropy versus differential entropy? (full contrast: week 6)
 
 ## Lecture 3 — 27 October — Shannon Entropy
+
+Shannon $H$, Dasher, $Z$, KL / differential entropy, then bath / Schottky / finite time (shifted from Week 2).
 
 **Define this week**
 
@@ -67,6 +71,9 @@ Quiz 1 occupies the first ten minutes (probability and Week 1 energy seeds). The
 - What is mutual information? (definition from the chain rule)
 - What is Shannon's channel capacity theorem? (statement)
 - What is the difference between equilibrium and non-equilibrium thermodynamics? (first cut)
+- What is a thermodynamic bath?
+- What is Schottky's anomaly?
+- Quasi-static $W=\Delta F$ versus finite-time excess (named)
 
 **Named, not yet answered**
 
@@ -74,6 +81,7 @@ Quiz 1 occupies the first ten minutes (probability and Week 1 energy seeds). The
 - What is the information bottleneck? (week 8)
 - How is entropy understood today? (Shannon alone is not the intended answer)
 - Shannon entropy versus differential entropy? (full contrast: week 6)
+- Purely entropic Schottky reading (Week 8); thermodynamic length (Week 6)
 
 ## Lecture 4 — 3 November — Maxwell and Landauer
 

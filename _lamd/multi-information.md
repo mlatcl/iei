@@ -248,7 +248,7 @@ print('S(rho_A)=', von_neumann(partial_trace_A(rho)))}
 
 \notes{Schottky and the Good Regulator get a first answer today in notes, not on slides. The second half of this session completes both --- with a short proof for the Good Regulator, not only a slogan.}
 
-\notes{Schottky connects back to lecture 1's heat-capacity peak and to week 6's Fisher reading: the peak of thermal response is a peak of distinguishability. The purely entropic interpretation waits for the limits block.}
+\notes{Schottky connects back to week 3's heat-capacity peak and to week 6's Fisher reading: the peak of thermal response is a peak of distinguishability. The purely entropic interpretation waits for the limits block.}
 
 \notes{Do not conflate Ashby's law of requisite variety with the Good Regulator Theorem. Requisite variety asks how much regulatory information is required. In Shannon form, with disturbance $D$, response $R$, and essential variable $E$,
 $$

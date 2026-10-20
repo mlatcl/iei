@@ -10,11 +10,12 @@ abstract: >
   Worksheet 1 is due and the session starts with Quiz 1 (probability and Week 1
   energy seeds). We reopen Laplace's ``molecule of air'' as an anachronism,
   state Bernoulli's kinetic assumptions, and introduce the statistical ensemble
-  as coarse-graining. Then *Hydrodynamica*, the entropy bridge (information
-  game, no-go versus prescription, embodiment), and the Gibbs--Boltzmann
-  distribution with free energy $F = U - TS$. We introduce the thermodynamic
-  bath and Schottky's anomaly, and complete the Week 1 energy story: loss
-  landscapes as potentials, kinetic energy, and Hamiltonian Monte Carlo.
+  as coarse-graining. Then *Hydrodynamica* and the entropy bridge, embodiment
+  as bandwidth, and the information game / MacKay / die coarse-graining (with
+  the grouping identity). We return to the Gibbs--Boltzmann distribution and
+  free energy $F = U - TS$, and complete the Week 1 energy story: loss as
+  potential, kinetic energy, and Hamiltonian Monte Carlo. Bath, Schottky, and
+  finite-time dissipation wait for Week 3.
 author:
 - given: Neil D.
   family: Lawrence
@@ -48,17 +49,17 @@ reading:
     required: false
 ---
 
-\notes{Worksheet 1 is due at the start of this session. Quiz 1 occupies the first ten minutes: probability foundations and Week 1 energy / Boltzmann seeds. After the quiz we reopen Laplace's ``molecule of air'' as an anachronism, move through Bernoulli's kinetic assumptions and the ensemble as coarse-graining, then the entropy bridge, Gibbs--Boltzmann, free energy, HMC, bath, Schottky, and finite time. Do not derive the occupation from MaxEnt today --- that is week 5.}
+\notes{Worksheet 1 is due at the start of this session. Quiz 1 occupies the first ten minutes: probability foundations and Week 1 energy / Boltzmann seeds. After the quiz we reopen Laplace's ``molecule of air'' as an anachronism, move through Bernoulli's kinetic assumptions and the ensemble as coarse-graining, then *Hydrodynamica* and the entropy bridge, embodiment as bandwidth, and only then the information game / MacKay / die coarse-graining. Gibbs--Boltzmann, free energy, and HMC close the session. Bath, Schottky, and finite time are Week 3. Do not derive the occupation from MaxEnt today --- that is week 5.}
 
 \subsection{This Session}
 
 \slidesincremental{
 * Quiz 1 (ten minutes)
 * Laplace's molecule → Bernoulli assumptions → ensemble as coarse-graining
-* Hydrodynamica / billiards → info game / MacKay / die coarse-graining → embodiment
+* Hydrodynamica / entropy bridge → embodiment (Atomic Human)
+* Info game / MacKay / die coarse-graining and grouping
 * Gibbs--Boltzmann form; free energy $F=U-TS$
 * Potential → kinetic → HMC (Week 1 energy payoff)
-* Bath, Schottky, finite-time dissipation named
 }
 
 \notes{
@@ -68,13 +69,13 @@ reading:
 |--------:|-------|
 | 0–10 | Quiz 1 (Moodle; probability / Week 1 energy seeds) |
 | 10–15 | Collect Worksheet 1; release Worksheet 2; recap seed $p_i \propto e^{-\beta E_i}$ |
-| 15–25 | Laplace molecule anachronism; Bernoulli assumptions; ensemble / coarse-graining |
-| 25–50 | Hydrodynamica / billiards / M--B--G; info game; MacKay; die coarse-graining; chain rule |
-| 50–60 | Embodiment / bits as bandwidth (Atomic Human bridge) |
+| 15–30 | Laplace molecule anachronism; Bernoulli assumptions; ensemble / coarse-graining |
+| 30–50 | Hydrodynamica / billiards / M--B--G; entropy bridge (no-go vs prescription) |
+| 50–60 | Embodiment / bits as bandwidth (Atomic Human) |
 | 60–70 | Break |
-| 70–90 | Gibbs--Boltzmann form; free-energy decomposition $F=U-TS$ |
-| 90–110 | Loss as potential $V$; kinetic $K$; Hamiltonian / HMC (Neal demos) |
-| 110–120 | Bath; Schottky; finite-time naming |
+| 70–85 | Info game; MacKay weighing; die coarse-graining; grouping composition |
+| 85–100 | Gibbs--Boltzmann form; free-energy decomposition $F=U-TS$ |
+| 100–120 | Loss as potential $V$; kinetic $K$; Hamiltonian / HMC (Neal demos) |
 
 }
 
@@ -216,133 +217,27 @@ mlai.write_figure('three-state-thermo.svg', directory='\writeDiagramsDir/ml')}
 \addreading{@Callen-thermostatistics85}{Chapters 1--4}
 \addreading{@Callen-thermostatistics85}{Chapters 5--6}
 
-\subsection{Thermodynamic Bath and Schottky's Anomaly}
-
-<!-- SNIPPET: _physics/includes/thermodynamic-bath-schottky.md -->
-
-\newslides{The Bath and Schottky's Anomaly}
-
-\slides{A thermodynamic bath is the large system that justifies the canonical ensemble: it fixes $T$ and exchanges energy with a small system.}
-
-\slidesincremental{
-* Two-state system: $E\in\{0,\varepsilon\}$
-* Heat capacity: $C = \partial U/\partial T$ peaks at intermediate $T$
-* Schottky's anomaly: both states populated; maximal thermal response
-}
-
-\speakernotes{Name the Schottky peak. Entropic reading waits for week 8.}
-
-\notes{A thermodynamic bath fixes $T$ and exchanges energy with a small system, justifying the canonical ensemble. Heat capacity $C=\partial U/\partial T$ peaks when both states are equally populated — Schottky's anomaly.}
-
-\setupplotcode{import numpy as np
-import matplotlib.pyplot as plt
-import mlai}
-
-\plotcode{epsilon = 1.0
-beta = np.linspace(0.05, 5.0, 400)
-p1 = 1.0 / (1.0 + np.exp(beta * epsilon))
-U = p1 * epsilon
-C = (epsilon ** 2) * p1 * (1 - p1) * beta ** 2
-T = 1.0 / beta
-fig, axes = plt.subplots(1, 2, figsize=(10, 4))
-axes[0].plot(T, U, 'C0', linewidth=2)
-axes[0].set_xlabel('$T$ ($k=1$)')
-axes[0].set_ylabel('$U$')
-axes[0].set_title('Mean energy')
-axes[1].plot(T, C, 'C1', linewidth=2)
-axes[1].set_xlabel('$T$')
-axes[1].set_ylabel('$C$')
-axes[1].set_title('Schottky heat-capacity peak')
-plt.tight_layout()
-mlai.write_figure('schottky-two-state.svg', directory='\writeDiagramsDir/ml')}
-
-\newslide{}
-
-\figure{\includediagram{\diagramsDir/ml/schottky-two-state}{85%}}{Mean energy and heat capacity of a two-state system. The Schottky peak appears when $p_0\approx p_1\approx\frac12$.}{schottky-two-state}
-
-\slides{
-\includediagram{\diagramsDir/ml/schottky-two-state}{85%}
-}
-
-<!-- /SNIPPET: _physics/includes/thermodynamic-bath-schottky.md -->
-
-\slidesincremental{
-* Bath: why the canonical ensemble exists
-* Two-state system: Schottky peak in heat capacity
-* Entropic reading of Schottky: not today
-}
-
-\subsection{Finite Time Costs More Than $\Delta F$}
-
-<!-- SNIPPET: _physics/includes/finite-time-dissipation-intro.md -->
-
-\newslide{Quasi-Static versus Finite Time}
-
-\slides{Equilibrium thermodynamics gives a prescription for *reversible* work. Real protocols take time.}
-
-\speakernotes{Do not define thermodynamic length today. Name quasi-static $W=\Delta F$ versus finite-time excess. Tie to the die: today $w$ was fixed; finite time moves $w(t)$ while hoping groups stay near $\pi_i$. Crooks in weeks 6–7; intelligence in week 8.}
-
-\notes{Quasi-static processes achieve reversible work $W=\Delta F$. Finite-time driving dissipates additional energy beyond the equilibrium bound. In the grouping language of the die: equilibrium paths keep within-group distributions at their conditional stationary laws and only the coarse weights (or bath parameter $\beta$) change; rushing that change is what costs extra.}
-
-\setupplotcode{import numpy as np
-import matplotlib.pyplot as plt
-import mlai}
-
-\plotcode{def two_state_F(beta, eps=1.0):
-    Z = 1.0 + np.exp(-beta * eps)
-    return -np.log(Z) / beta
-
-beta0, beta1 = 0.5, 2.0
-path = np.linspace(beta0, beta1, 80)
-F_path = two_state_F(path)
-fig, ax = plt.subplots(figsize=(7, 4))
-ax.plot(path, F_path, 'k-', linewidth=2, label='$F(\\beta)$')
-ax.annotate('', xy=(beta1, two_state_F(beta1)), xytext=(beta0, two_state_F(beta0)),
-            arrowprops=dict(arrowstyle='->', color='green', lw=2))
-ax.text(1.0, -0.55, 'quasi-static: $W=\\Delta F$', color='green')
-ax.annotate('', xy=(beta1, two_state_F(beta1) + 0.15), xytext=(beta0, two_state_F(beta0) + 0.15),
-            arrowprops=dict(arrowstyle='->', color='red', lw=2))
-ax.text(1.0, -0.35, 'finite time: $W > \\Delta F$', color='red')
-ax.set_xlabel(r'$\beta$')
-ax.set_ylabel('$F$')
-ax.legend()
-mlai.write_figure('finite-time-sketch.svg', directory='\writeDiagramsDir/ml')}
-
-\newslide{}
-
-\figure{\includediagram{\diagramsDir/ml/finite-time-sketch}{70%}}{Cartoon of quasi-static versus finite-time driving between two equilibrium states.}{finite-time-sketch}
-
-
-<!-- /SNIPPET: _physics/includes/finite-time-dissipation-intro.md -->
-
-\slidesincremental{
-* Quasi-static: $W = \Delta F$
-* Finite time: extra dissipation
-* Length comes in week 6
-}
-
 \subsection{Define This Week}
 
 \slidesincremental{
 * How was entropy discovered? (Hydrodynamica → Maxwell / Boltzmann / Gibbs)
 * $H=-\sum_i p_i\log p_i$; no-go versus prescription
 * What are the information constraints on a human? (bandwidth, first cut)
+* Die coarse-graining / grouping: $H=H(w)+\sum_i w_i H(p_i)$
 * What is the Gibbs--Boltzmann distribution?
 * Energy and entropy? Free energy $F=U-TS$
 * Loss as potential $V$; Hamiltonian $H=K+V$; HMC via ``mlai`` (Neal)
-* What is a thermodynamic bath?
-* What is Schottky's anomaly?
 }
 
-\notes{Interpret later: how entropy is understood today; equilibrium versus non-equilibrium; the purely entropic Schottky reading. Define-stage answer to "How was entropy discovered?": Carnot on engines; Clausius names entropy and states the second law (1865); Boltzmann and Gibbs give the statistical count; Shannon and Jaynes reuse $H$ with different operational readings.}
+\notes{Interpret later: how entropy is understood today; equilibrium versus non-equilibrium; bath and Schottky (Week 3); the purely entropic Schottky reading (Week 8). Define-stage answer to "How was entropy discovered?": Carnot on engines; Clausius names entropy and states the second law (1865); Boltzmann and Gibbs give the statistical count; Shannon and Jaynes reuse $H$ with different operational readings.}
 
 
 \subsection{After This Lecture}
 
-\notes{Next week: Shannon entropy and the partition function as a generating function. Optional LLM probe: is free energy a constraint or a recipe?}
+\notes{Next week: Shannon entropy, $Z$ as a generating function, then bath / Schottky / finite-time naming. Optional LLM probe: is free energy a constraint or a recipe?}
 
 \slidesincremental{
-* Next: Shannon $H$ and $Z$ as generating function
+* Next: Shannon $H$; $Z$; bath and Schottky
 * LLM probe: is free energy a bound or a recipe?
 }
 

@@ -7,12 +7,13 @@ venue: FW26, William Gates Building
 room: FW26
 transition: None
 abstract: >
-  In this lecture we cover Shannon entropy as a measure of uncertainty, and 
-  its mathematical relationship
-  to thermodynamic entropy. We show that the partition function as a generating function. We introduce mutual
-  information, $I$, channel capacity, and the data-processing inequality (DPI) are
-  introduced as results. $I$ and DPI are proved
-  in week 8.
+  Shannon entropy as a measure of uncertainty and its formal link to
+  thermodynamic entropy; arithmetic coding and Dasher; the partition function
+  as a generating function; then KL divergence and differential entropy under
+  change of variables. Mutual information, channel capacity, and the
+  data-processing inequality are stated (proved in week 8). The session closes
+  with the thermodynamic bath, Schottky's anomaly, and finite-time dissipation
+  --- material shifted forward from Week 2.
 author:
 - given: Neil D.
   family: Lawrence
@@ -47,15 +48,16 @@ reading:
     required: false
 ---
 
-\notes{No class test today. Boltzmann and free energy were last week. Today: Shannon $H$ and the partition function as a generating function.}
+\notes{No class test today. Boltzmann, free energy, and die coarse-graining were last week. Today: Shannon $H$, $Z$ as a generating function, KL / differential entropy, then bath / Schottky / finite time (shifted from Week 2).}
 
 \subsection{This Session}
 
 \slidesincremental{
 * Shannon $H$; Boltzmann $S = kH$
 * Arithmetic coding → Dasher: $H$ as bits, $p$ as the next letter
-* Partition function as a generating function
-* Scaffolding: $I(X;Y)$, capacity, DPI (statement)
+* Partition function as a generating function; local equilibrium
+* $\KL{\cdot}{\cdot}$; Maxwell component vs speed; $I$, capacity, DPI (statements)
+* Bath; Schottky peak; finite-time dissipation named
 }
 
 \notes{
@@ -63,12 +65,13 @@ reading:
 
 | Minutes | Block |
 |--------:|-------|
-| 0–10 | Recap Boltzmann / free energy; preview Maxwell (next week) |
-| 10–40 | Shannon axioms; Wiener from Gibbs; equivalence to Boltzmann |
-| 40–55 | Arithmetic coding (MacKay Ch.~6) then Dasher |
-| 55–65 | Break |
-| 65–100 | Canonical ensemble; $Z$ as generating function; bath revisited |
-| 100–120 | KL; Maxwell component vs speed; $h$ under change of variables; binning; $D$ invariant; then $I$, capacity, DPI (statements) |
+| 0–10 | Recap Week 2 (Gibbs / $F$ / die grouping); preview Maxwell (next week) |
+| 10–35 | Shannon axioms; Wiener from Gibbs; equivalence to Boltzmann |
+| 35–50 | Arithmetic coding (MacKay Ch.~6) then Dasher |
+| 50–60 | Break |
+| 60–85 | $Z$ as generating function; KL; Maxwell component vs speed; $h$ / binning / reparametrisation; local equilibrium |
+| 85–100 | $I$, capacity, DPI (statements); three framings |
+| 100–120 | Bath; Schottky; finite-time naming |
 
 }
 
@@ -145,24 +148,13 @@ reading:
 
 \slidesincremental{
 * Same $H$; three operational assumptions
-* Week 3: one bit $\leftrightarrow$ $k_B T \ln 2$ joules (Szilard, Landauer)
-* Synthesis is week 4
+* Week 4: one bit $\leftrightarrow$ $k_B T \ln 2$ joules (Szilard, Landauer)
+* Full LO7 synthesis is also week 4
 }
 
-\speakernotes{Name the three framings today. Week 3 makes the bit operational in a piston stroke. Full LO7 synthesis is week 4.}
+\speakernotes{Name the three framings today. Next week makes the bit operational in a piston stroke. Full LO7 synthesis is week 4.}
 
 \notes{Information, thermodynamic, and Bayesian readings of the same $H$ differ in what the probability is over and who is inferring. The intended comparison is LO7 in week 4.}
-
-\subsection{Define This Week}
-
-\slidesincremental{
-* Why is entropy a sensible measure of information?
-* Equilibrium versus non-equilibrium? (first cut)
-* Channel capacity? (statement)
-* Mutual information? (definition)
-}
-
-\notes{Interpret later: how entropy is understood today (week 5, then week 8); chain rule as the source of multi-information (week 8). DPI is named today; define-stage proof is week 8. Equilibrium versus non-equilibrium (first cut) is the local-equilibrium grouping slide: within-group settled, $w$ free to move.}
 
 \subsection{Thermodynamic Bath and Schottky's Anomaly}
 
@@ -260,7 +252,19 @@ mlai.write_figure('finite-time-sketch.svg', directory='\writeDiagramsDir/ml')}
 
 \figure{\includediagram{\diagramsDir/ml/finite-time-sketch}{70%}}{Cartoon of quasi-static versus finite-time driving between two equilibrium states.}{finite-time-sketch}
 
+\subsection{Define This Week}
 
+\slidesincremental{
+* Why is entropy a sensible measure of information?
+* Equilibrium versus non-equilibrium? (first cut)
+* Channel capacity? (statement)
+* Mutual information? (definition)
+* What is a thermodynamic bath?
+* What is Schottky's anomaly?
+* Quasi-static $W=\Delta F$ versus finite-time excess (named)
+}
+
+\notes{Interpret later: how entropy is understood today (week 5, then week 8); chain rule as the source of multi-information (week 8). DPI is named today; define-stage proof is week 8. Equilibrium versus non-equilibrium (first cut) is the local-equilibrium grouping slide: within-group settled, $w$ free to move. Purely entropic Schottky reading waits for week 8; thermodynamic length for week 6.}
 
 \subsection{After This Lecture}
 
