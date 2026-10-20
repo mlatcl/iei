@@ -55,7 +55,7 @@ reading:
 \slidesincremental{
 * Quiz 1 (ten minutes)
 * Laplace's molecule → Bernoulli assumptions → ensemble as coarse-graining
-* Hydrodynamica / billiards → entropy bridge → embodiment
+* Hydrodynamica / billiards → info game / MacKay / die coarse-graining → embodiment
 * Gibbs--Boltzmann form; free energy $F=U-TS$
 * Potential → kinetic → HMC (Week 1 energy payoff)
 * Bath, Schottky, finite-time dissipation named
@@ -68,13 +68,13 @@ reading:
 |--------:|-------|
 | 0–10 | Quiz 1 (Moodle; probability / Week 1 energy seeds) |
 | 10–15 | Collect Worksheet 1; release Worksheet 2; recap seed $p_i \propto e^{-\beta E_i}$ |
-| 15–30 | Laplace molecule anachronism; Bernoulli assumptions; ensemble / coarse-graining |
-| 30–45 | Hydrodynamica plates; billiards; Maxwell--Boltzmann--Gibbs; entropy review and no-go |
-| 45–55 | Embodiment / bits as bandwidth (Atomic Human bridge) |
-| 55–65 | Break |
-| 65–85 | Gibbs--Boltzmann form; free-energy decomposition $F=U-TS$ |
-| 85–105 | Loss as potential $V$; kinetic $K$; Hamiltonian / HMC (Neal demos) |
-| 105–120 | Bath; Schottky; finite-time naming |
+| 15–25 | Laplace molecule anachronism; Bernoulli assumptions; ensemble / coarse-graining |
+| 25–50 | Hydrodynamica / billiards / M--B--G; info game; MacKay; die coarse-graining; chain rule |
+| 50–60 | Embodiment / bits as bandwidth (Atomic Human bridge) |
+| 60–70 | Break |
+| 70–90 | Gibbs--Boltzmann form; free-energy decomposition $F=U-TS$ |
+| 90–110 | Loss as potential $V$; kinetic $K$; Hamiltonian / HMC (Neal demos) |
+| 110–120 | Bath; Schottky; finite-time naming |
 
 }
 
@@ -96,7 +96,7 @@ reading:
 
 \include{_information/includes/entropy-review.md}
 
-\speakernotes{Axiomatic derivation of $H$ and $S=kH$ are week 3 / LO2. Worksheet 1 probes can already use joint / conditional / chain-rule vocabulary.}
+\speakernotes{Axiomatic derivation of $H$ and $S=kH$ are week 3 / LO2. The die makes the chain rule concrete today; Worksheet 1 probes can already use joint / conditional / chain-rule vocabulary.}
 
 \include{_information/includes/entropy-nogo-probability-prescription.md}
 
