@@ -59,7 +59,6 @@ reading:
 * Hydrodynamica / entropy bridge → embodiment (Atomic Human)
 * Info game / MacKay / die coarse-graining and grouping
 * Gibbs--Boltzmann form; free energy $F=U-TS$
-* Potential → kinetic → HMC (Week 1 energy payoff)
 }
 
 \notes{
