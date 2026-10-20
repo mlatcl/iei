@@ -9,7 +9,9 @@ author:
 
 layout: lecture
 venue: ""
-talkcss: https://inverseprobability.com/assets/css/talks.css
+talktheme: white
+talkcss: mlatcl.css
+talkfontsize: xs
 bibdir: $HOME/lawrennd/bibliography/
 people: ../_people/people.yml
 postsdir: ../_lectures/
@@ -39,7 +41,7 @@ macrosdir: $HOME/lawrennd/lamd/lamd/macros
 transition: None
 
 ghub:
-- organization: GITHUB_ORG
+- organization: mlatcl
   repository: iei
   branch: gh-pages
   directory: _lamd
