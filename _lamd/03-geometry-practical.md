@@ -7,8 +7,8 @@ assignment: True
 ipynb: True
 reveal: False
 transition: None
-date: 2026-11-24
-released: 2026-11-17
+date: 2026-11-17
+released: 2026-11-03
 venue: FW26, William Gates Building
 abstract: >
   Compute the Fisher information matrix of the Gaussian family, compare
@@ -33,11 +33,11 @@ word_count: 400
 
 \section{Worksheet 3}
 
-\notes{Released after lecture 6 (17 November). Due by 10:00 at the start of lecture 7 (24 November). Estimated three hours. This worksheet is 15% of the module mark.
+\notes{Released after lecture 4 (3 November). Due by 10:00 at the start of lecture 6 (17 November). Estimated three hours. This worksheet is 15% of the module mark.
 
-**Builds on the lecture.** The Fisher matrix and natural-gradient trajectories repeat the lecture 5–6 demos (`gaussian-fisher-eigen`, `natural-gradient-paths`, `crooks-path-sketch`). Part A3 integrates Fisher–Rao length along the same straight-line path $(0,1)\to(2,4)$ sketched in lecture 5.}
+**Builds on lectures 4–5.** The Fisher matrix and natural-gradient trajectories press the MaxEnt / Landauer material into geometry (`gaussian-fisher-eigen`, `natural-gradient-paths`, `crooks-path-sketch`). Part A3 integrates Fisher–Rao length along the straight-line path $(0,1)\to(2,4)$.}
 
-\notes{Submit `candidatenumber_worksheet3.ipynb` and `candidatenumber_worksheet3.md` on Moodle. LLMs are permitted. Use the Lecture 1 habit: curiosity first, then skeptical probes. Authenticity is checked by Quiz 3 at the start of lecture 7 (24 November), on a *new* parameterised family.}
+\notes{Submit `candidatenumber_worksheet3.ipynb` and `candidatenumber_worksheet3.md` on Moodle. LLMs are permitted. Use the Lecture 1 habit: curiosity first, then skeptical probes. Authenticity is checked by the paired in-class quiz on a *new* parameterised family.}
 
 \notes{Lecture 5 defined Crooks' thermodynamic length as the Fisher--Rao length of a path of equilibrium states. You will compute that length for a straight-line path in \((\mu,\sigma^2)\). You do not yet need to say what this has to do with intelligence -- that is lecture 8.}
 

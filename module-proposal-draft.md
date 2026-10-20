@@ -76,12 +76,12 @@ The closing abstraction echoes Shannon's founding move: just as Shannon abstract
 | Week | Topic | Teaching approach |
 |------|-------|-------------------|
 | 1 | **Theme; perpetual motion; *Atomic Human* bandwidth; probability review; energy / Boltzmann seed; entropy review** — Entropy forbids / probability prescribes. Motivating question. | Lecture + motivating examples; Worksheet 1 released |
-| 2 | **Boltzmann; free energy F = U − TS; HMC; Schottky** — Partition function Z; internal energy U; entropy S; Helmholtz free energy; loss as potential → Hamiltonian Monte Carlo. | Lecture; in-class Quiz 1; Worksheet 1 due |
+| 2 | **Boltzmann; free energy F = U − TS; HMC; Schottky** — Partition function Z; internal energy U; entropy S; Helmholtz free energy; loss as potential → Hamiltonian Monte Carlo. | Lecture; in-class Quiz 1; Worksheet 1 due; Worksheet 2 released |
 | 3 | **Shannon entropy; partition function; chain rule; mutual information; DPI (statement)** — H = −Σ pᵢ log pᵢ; Boltzmann S = kH. Channel capacity as scaffolding. DPI named; proof and information bottleneck wait for week 8. | Lecture + derivation |
-| 4 | **Maxwell's demon; Landauer; intelligence (first cut)** — Landauer (1961): erasing one bit costs k_B T ln 2. Feedback work bounded by information. | Lecture + thought-experiment; Worksheet 2 released |
-| 5 | **MaxEnt; exponential family; three-perspective synthesis** — Jaynes with Lagrange multipliers; exponential family; Shannon / Boltzmann / Bayes comparison. | Lecture; in-class Quiz 2; Worksheet 2 due |
-| 6 | **Fisher metric; thermodynamic length (Crooks)** — Manifold of distributions; Fisher information; e/m dual flats; Pythagorean theorem for KL. Length defined; intelligence interpretation in week 8. | Lecture + worked examples; Worksheet 3 released |
-| 7 | **MaxEnt as projection; natural gradient; geodesics** — m-projection; natural gradient F⁻¹∇L; geodesics as minimum-dissipation protocols. | Lecture + coding; in-class Quiz 3; Worksheet 3 due; Worksheet 4 released |
+| 4 | **Maxwell's demon; Landauer; intelligence (first cut)** — Landauer (1961): erasing one bit costs k_B T ln 2. Feedback work bounded by information. | Lecture + thought-experiment; Worksheet 2 due; Worksheet 3 released |
+| 5 | **MaxEnt; exponential family; three-perspective synthesis** — Jaynes with Lagrange multipliers; exponential family; Shannon / Boltzmann / Bayes comparison. | Lecture; in-class Quiz 2 |
+| 6 | **Fisher metric; thermodynamic length (Crooks)** — Manifold of distributions; Fisher information; e/m dual flats; Pythagorean theorem for KL. Length defined; intelligence interpretation in week 8. | Lecture + worked examples; Worksheet 3 due; Worksheet 4 released |
+| 7 | **MaxEnt as projection; natural gradient; geodesics** — m-projection; natural gradient F⁻¹∇L; geodesics as minimum-dissipation protocols. | Lecture + coding; in-class Quiz 3 |
 | 8 | **Multi-information; DPI; IB; von Neumann; three geometries; limits on intelligence** — I + H = C; DPI proof; information bottleneck; classical I = C → quantum; OT / Schrödinger / Sinkhorn; evaluate superintelligence claims. | Split two-hour slot; in-class Quiz 4; Worksheet 4 due |
 
 **14. List the objectives or learning goals**
@@ -129,10 +129,10 @@ Each worksheet consists of a short Python notebook and a written reflection (300
 
 | Worksheet | Due | Topics | LOs | Weight |
 |-----------|-----|--------|-----|--------|
-| Worksheet 1: Socratic dialogue on Boltzmann and entropy | Start of Week 2 (20 Oct) | Boltzmann / theme seeds; Socrates habit | LO1, LO2 | 15% |
-| Worksheet 2: Maxwell's demon, MaxEnt, and the exponential family | Start of Week 5 (10 Nov) | Landauer; MaxEnt; exponential family; three perspectives | LO3–LO7 | 15% |
-| Worksheet 3: Information geometry and thermodynamic length | Start of Week 7 (24 Nov) | Fisher matrix; natural vs vanilla gradient; length | LO8, LO9 | 15% |
-| Worksheet 4: Multi-information, von Neumann entropy, and limits on intelligence | Start of Week 8 (1 Dec) | Multi-information; DPI/IB; von Neumann; transport; limits | LO10–LO13 | 15% |
+| Worksheet 1: Socratic LLM dialogue on the history of entropy | Start of Week 2 (20 Oct) | Shannon naming; Socrates habit | LO1, LO2 | 15% |
+| Worksheet 2: Socratic dialogue — Shannon $H$ vs Boltzmann $S$ | Start of Week 4 (3 Nov) | Identity vs metaphor; LO2–LO3 | LO2, LO3 | 15% |
+| Worksheet 3: LLM worksheet on weeks 4–5 material | Start of Week 6 (17 Nov) | Demon / Landauer / MaxEnt; curiosity–skepticism | LO4–LO7 | 15% |
+| Worksheet 4: LLM worksheet on weeks 6–7 material | Start of Week 8 (1 Dec) | Geometry / multi-information bridge; curiosity–skepticism | LO8–LO13 | 15% |
 
 *In-class Moodle quizzes (40% total, 10% each)*
 

@@ -8,7 +8,7 @@ word_count: 500
 due_week: 8
 due_date: 2026-12-01
 due_time: "10:00"
-released: 2026-11-24
+released: 2026-11-17
 source: _lamd/04-intelligence-practical.md
 outcomes: [LO10, LO11, LO12, LO13]
 feedback:
@@ -26,7 +26,7 @@ authentication:
 
 Student-facing brief (LaMD, compiles to a notebook): [`_lamd/04-intelligence-practical.md`](../_lamd/04-intelligence-practical.md).
 
-Released 24 November (lecture 7). Due Tuesday 1 December 2026, 10:00 (start of lecture 8), *before* Quiz 4.
+Released 17 November (lecture 6). Due Tuesday 1 December 2026, 10:00 (start of lecture 8), *before* Quiz 4.
 
 The reflection now asks students to distinguish Crooks / Fisher–Rao, Wasserstein, and the Schrödinger bridge, and to use \(\mathcal{L}^2/\tau\) alongside Landauer and \(I+H=C\). The data-processing inequality and the information bottleneck (taught under LO10) may sharpen the no-go / prescription split.
 

@@ -48,7 +48,8 @@ There is one session per week, so do not set a `session` field.
 Practicals and worksheets should include `-practical` in the name so they are not treated as lectures:
 
 - `intro-history-entropy-shannon-practical.md` — Worksheet 1
-- `02-maxent-practical.md` — Worksheet 2
+- `shannon-boltzmann-practical.md` — Worksheet 2 (Socratic: H vs S)
+- `02-maxent-practical.md.deferred` — former MaxEnt notebook brief (parked for later redesign)
 - `03-geometry-practical.md` — Worksheet 3
 - `04-intelligence-practical.md` — Worksheet 4
 

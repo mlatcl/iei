@@ -24,7 +24,8 @@ outcomes: [LO8]
 duration_hours: 2
 type: lecture
 in_class_test: null
-worksheet_released: W3
+worksheet_due: W3
+worksheet_released: W4
 reading:
   - title: "Information Geometry and Its Applications"
     author: "Amari"
@@ -40,7 +41,7 @@ reading:
     estimated_hours: 1
 ---
 
-\notes{No class test today. Clarify what Fisher meant by information, then geometry. Bridge from Crooks (1999)/Jarzynski to the near-equilibrium bound, then define thermodynamic length (Crooks 2007). Worksheet 3 is released; due 24 November (start of lecture 7). Quiz 3 is then.}
+\notes{No class test today. Clarify what Fisher meant by information, then geometry. Bridge from Crooks (1999)/Jarzynski to the near-equilibrium bound, then define thermodynamic length (Crooks 2007). Worksheet 3 is due at the start of this session. Worksheet 4 is released; due 1 December (start of lecture 8).}
 
 \subsection{This Session}
 
@@ -63,7 +64,7 @@ reading:
 | 55–65 | Break |
 | 65–85 | Dual flatness; Pythagorean theorem for KL |
 | 85–100 | Bridge: Crooks (1999) / Jarzynski $\to$ second law $\to$ near-eq expansion |
-| 100–120 | Thermodynamic length (Crooks 2007); $\langle W_{\mathrm{ex}}\rangle \ge \mathcal{L}^2/\tau$; release Worksheet 3 |
+| 100–120 | Thermodynamic length (Crooks 2007); $\langle W_{\mathrm{ex}}\rangle \ge \mathcal{L}^2/\tau$; collect Worksheet 3; release Worksheet 4 |
 }
 
 \include{_iei/includes/iei-notebook-setup.md}
@@ -558,10 +559,10 @@ mlai.write_figure('crooks-path-sketch.svg', directory='\writeDiagramsDir/ml')}
 
 \subsection{After This Lecture}
 
-\notes{Worksheet 3: Fisher matrix for a Gaussian; vanilla versus natural gradient; Crooks length of the straight-line path from $(0,1)$ to $(2,4)$. Due 24 November. Quiz 3 is 24 November at the start of lecture 7.}
+\notes{Worksheet 3 was due at the start of this lecture: Fisher matrix for a Gaussian; vanilla versus natural gradient; Crooks length of the straight-line path from $(0,1)$ to $(2,4)$. Worksheet 4 is released today; due 1 December. Quiz 3 is 24 November at the start of lecture 7.}
 
 \slidesincremental{
-* Worksheet 3 released; due 24 November
+* Worksheet 3 due today; Worksheet 4 released (due 1 December)
 * LLM exercise: thermodynamic length, two sides
 }
 

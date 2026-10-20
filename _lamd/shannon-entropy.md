@@ -154,11 +154,11 @@ reading:
 
 \subsection{After This Lecture}
 
-\notes{Next week: Maxwell's demon and Landauer. LLM exercise: ask whether Shannon entropy is a bound or a recipe.}
+\notes{Worksheet 2 (due start of lecture 4) presses whether Shannon $H$ and Boltzmann $S$ are the same object or a metaphor. Next week: Maxwell's demon and Landauer.}
 
 \slidesincremental{
 * Next: Maxwell and Landauer (3 November)
-* LLM: is Shannon entropy a bound or a recipe?
+* Worksheet 2: $H$ vs $S$ — identity or metaphor?
 }
 
 \reading

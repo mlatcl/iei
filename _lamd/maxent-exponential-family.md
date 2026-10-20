@@ -23,7 +23,6 @@ in_class_test:
   id: Q2
   duration_minutes: 10
   timing: start
-worksheet_due: W2
 reading:
   - title: "Information Theory and Statistical Mechanics"
     author: "Jaynes"
@@ -48,7 +47,7 @@ reading:
     required: false
 ---
 
-\notes{Worksheet 2 is due at the start of this session. Quiz 2 occupies the first ten minutes (MaxEnt, exponential family, Landauer).}
+\notes{Quiz 2 occupies the first ten minutes (MaxEnt, exponential family, Landauer). Worksheet 2 was due last week (start of lecture 4).}
 
 \subsection{This Session}
 
@@ -65,7 +64,7 @@ reading:
 
 | Minutes | Block |
 |--------:|-------|
-| 0–10 | Quiz 2 (Moodle); collect Worksheet 2 |
+| 0–10 | Quiz 2 (Moodle) |
 | 10–55 | Laplace $\to$ Jaynes; Lagrange; die and Gaussian |
 | 55–65 | Break |
 | 65–85 | MaxEnt proof $\to$ exponential family; $\theta=-\lambda$ |

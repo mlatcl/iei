@@ -28,6 +28,7 @@ in_class_test:
   timing: start
   covers: [probability foundations, Week 1 energy seeds, LO1]
 worksheet_due: W1
+worksheet_released: W2
 reading:
   - title: "The Atomic Human"
     author: "Lawrence"
@@ -64,7 +65,7 @@ reading:
 | Minutes | Block |
 |--------:|-------|
 | 0–10 | Quiz 1 (Moodle; probability / Week 1 energy seeds) |
-| 10–15 | Collect Worksheet 1; recap seed $p_i \propto e^{-\beta E_i}$ |
+| 10–15 | Collect Worksheet 1; release Worksheet 2; recap seed $p_i \propto e^{-\beta E_i}$ |
 | 15–40 | Hydrodynamica; billiards / Maxwell--Boltzmann--Gibbs; entropy review and no-go |
 | 40–50 | Embodiment / bits as bandwidth (Atomic Human bridge) |
 | 50–60 | Break |

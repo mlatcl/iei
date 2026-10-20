@@ -31,7 +31,7 @@ Entropy appears in three apparently separate traditions — thermodynamics (Bolt
 
 Four ten-minute in-class Moodle quizzes sit at the start of lectures 2, 5, 7 and 8.
 
-Worksheets use LLMs under a Socratic protocol introduced in lecture 1: students act as Socrates (curiosity, then skepticism). Worksheet 1 is a ten-turn dialogue; later worksheets mix code with shorter LLM probes. Moodle filenames use `L172_<CRSid>_worksheet…`; file contents are anonymous (candidate number, not CRSid or name).
+Worksheets use LLMs under a Socratic protocol introduced in lecture 1: students act as Socrates (curiosity, then skepticism). Each worksheet is an LLM-centred exercise plus reflection, due at the start of weeks 2, 4, 6 and 8. Moodle filenames use `L172_<CRSid>_worksheet…`; file contents are anonymous (candidate number, not CRSid or name).
 
 ## Objectives
 
@@ -39,7 +39,7 @@ Equip students to reason rigorously about entropy across thermodynamics, informa
 
 ## Assessment
 
-Four take-home worksheets (15% each, 60% total). Worksheet 1 is a Socratic LLM dialogue plus reflection; later worksheets combine a short Python notebook with written reflection. Four short in-class Moodle quizzes (10% each, 40% total).
+Four take-home worksheets (15% each, 60% total), each LLM-centred under the lecture 1 curiosity–skepticism habit, due weeks 2, 4, 6 and 8. Four short in-class Moodle quizzes (10% each, 40% total).
 
 ## Getting help
 

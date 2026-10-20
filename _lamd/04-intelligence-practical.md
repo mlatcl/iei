@@ -1,14 +1,14 @@
 ---
 title: "Worksheet 4: Multi-Information, von Neumann Entropy, and Limits on Intelligence"
 practical: 4
-week: 7
+week: 8
 layout: practical
 assignment: True
 ipynb: True
 reveal: False
 transition: None
 date: 2026-12-01
-released: 2026-11-24
+released: 2026-11-17
 venue: FW26, William Gates Building
 abstract: >
   Compute multi-information and verify \(I+H=C\), then treat the Bell
@@ -34,9 +34,9 @@ word_count: 500
 
 \section{Worksheet 4}
 
-\notes{Released after lecture 7 (24 November). Due by 10:00 at the start of lecture 8 (1 December), *before* Quiz 4. Estimated three hours. This is the capstone worksheet, 15% of the module mark.
+\notes{Released after lecture 6 (17 November). Due by 10:00 at the start of lecture 8 (1 December), *before* Quiz 4. Estimated three hours. This is the capstone worksheet, 15% of the module mark.
 
-**Builds on the lecture.** Part A1–A2 use the $I+H=C$ family from lecture 7 (`multi-information-rho` figure). Part A3 repeats the Bell-state code from the lecture notebook. Part B mirrors lecture 8's three-geometries slide and perpetual-motion synthesis, and may use the data-processing inequality and the information bottleneck taught under LO10.
+**Builds on lectures 6–7.** Part A1–A2 use the $I+H=C$ family (`multi-information-rho` figure). Part A3 treats the Bell state. Part B contrasts three geometries and the perpetual-motion synthesis, and may use the data-processing inequality and the information bottleneck taught under LO10.
 
 \notes{Submit `candidatenumber_worksheet4.ipynb` and `candidatenumber_worksheet4.md` on Moodle. LLMs are permitted. Use the Lecture 1 habit: curiosity first, then skeptical probes. Authenticity is checked by Quiz 4 at the start of lecture 8, on a *new* example (three independent coins; a GHZ state rather than a Bell state).}
 

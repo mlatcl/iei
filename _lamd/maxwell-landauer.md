@@ -19,7 +19,8 @@ outcomes: [LO4]
 duration_hours: 2
 type: lecture
 in_class_test: null
-worksheet_released: W2
+worksheet_due: W2
+worksheet_released: W3
 reading:
   - title: "Irreversibility and Heat Generation in the Computing Process"
     author: "Landauer"
@@ -52,7 +53,7 @@ reading:
     required: false
 ---
 
-\notes{No class test today. Worksheet 2 is released; due 10 November (start of lecture 5).}
+\notes{No class test today. Worksheet 2 is due at the start of this session. Worksheet 3 is released; due 17 November (start of lecture 6).}
 
 \subsection{Define This Week}
 
@@ -65,10 +66,10 @@ reading:
 
 \subsection{After This Lecture}
 
-\notes{Worksheet 2: Maxwell / Landauer, MaxEnt, exponential family. Due 3 November. Quiz 2 is 10 November and will use a *new* example.}
+\notes{Worksheet 2 was due at the start of this lecture. Worksheet 3 is released today; due 17 November (start of lecture 6). Quiz 2 is 10 November and will use a *new* example.}
 
 \slidesincremental{
-* Worksheet 2 released; due 3 November
+* Worksheet 2 due today; Worksheet 3 released (due 17 November)
 }
 
 \subsection{This Session}
@@ -84,12 +85,12 @@ reading:
 
 | Minutes | Block |
 |--------:|-------|
-| 0–10 | Recap Shannon / partition; release Worksheet 2 |
+| 0–10 | Collect Worksheet 2; release Worksheet 3; recap Shannon / partition |
 | 10–50 | Maxwell's demon; membrane detailed balance and $\Delta S$ |
 | 50–60 | Break |
 | 60–95 | Szilard; Feynman; Parrondo; information engines; car vs ATP synthase |
 | 95–112 | Boltzmann memory (equal wells); Landauer; erasure cost |
-| 112–120 | Intelligence, first cut; human bandwidth; Worksheet 2 |
+| 112–120 | Intelligence, first cut; human bandwidth |
 }
 
 \include{_iei/includes/iei-notebook-setup.md}
@@ -128,7 +129,7 @@ reading:
 * **Information ledger:** Szilard $\to$ stored outcome $\to$ Landauer erasure $\to$ Parrondo bound
 * Bennett (1982): erasure cost from phase-space compression — not circular [@Bennett-thermodynamics82]
 * Both restore Clausius; they disagree on the *bookkeeping* variable
-* Worksheet 2 asks: which account matches the generality of the second law?
+* Later worksheet: which account matches the generality of the second law?
 }
 
 
@@ -138,7 +139,7 @@ reading:
 
 \speakernotes{Ellis rejects information-as-fuel and circular Landauer pedagogy. Bennett derives erasure from phase-space compression — substrate-independent. Curated excerpt on Moodle/repo; full talk optional.}
 
-\notes{John Ellis, Maxwell Day 2024 (Cambridge). Dissipation-first: measurement scatters; the trap door is a switch in a metastable well — its position is already a physical memory degree of freedom, not a separate notebook. Information-first: the Feynman/Szilard/Landauer/Parrondo chain in this lecture. The generality question — mechanism-independent law versus mechanism-specific rebuttals — is Worksheet 2 Part B (i)(ii). Bad textbook Landauer says erasure must cost entropy because otherwise the second law fails; @Bennett-thermodynamics82 derives the demon resolution from logical irreversibility of erasure (phase-space compression) — the non-circular version students should cite against Ellis.}
+\notes{John Ellis, Maxwell Day 2024 (Cambridge). Dissipation-first: measurement scatters; the trap door is a switch in a metastable well — its position is already a physical memory degree of freedom, not a separate notebook. Information-first: the Feynman/Szilard/Landauer/Parrondo chain in this lecture. The generality question — mechanism-independent law versus mechanism-specific rebuttals — is a natural later-worksheet thread (not Worksheet 2; that pressed $H$ vs $S$). Bad textbook Landauer says erasure must cost entropy because otherwise the second law fails; @Bennett-thermodynamics82 derives the demon resolution from logical irreversibility of erasure (phase-space compression) — the non-circular version students should cite against Ellis.}
 
 \addreading{@Bennett-thermodynamics82}{Szilard engine and demon resolution (logical irreversibility of erasure)}
 
@@ -306,7 +307,7 @@ mlai.write_figure('car-engine-info-scale.svg', directory='\writeDiagramsDir/ml')
 * Prescription: the demon's policy — which molecules to let through
 }
 
-\speakernotes{LO4. Policy does not repeal the no-go. Live: `landauer_cost(300)`. Worksheet 2 Part B: compute and explain; Ellis excerpt for the two-ledgers comparison. Trap-door position is already a physical memory degree of freedom — Landauer prices reset, not a separate notebook. Flag only: finite-time corrections and Crooks (1999) wait for week 6.}
+\speakernotes{LO4. Policy does not repeal the no-go. Live: `landauer_cost(300)`. Ellis excerpt for the two-ledgers comparison (later worksheet material). Trap-door position is already a physical memory degree of freedom — Landauer prices reset, not a separate notebook. Flag only: finite-time corrections and Crooks (1999) wait for week 6.}
 
 \notes{Landauer (1961): erasing one bit in a bath at temperature $T$ dissipates at least $k_B T\ln 2$. Erasure of stored outcomes restores the second law. The demon's measurement policy is the prescription; it does not repeal the bound. Ellis agrees the demon fails but locates the cost at measurement and gating; @Bennett-thermodynamics82 completes the information ledger: erasure is logically irreversible, so phase-space compression costs at least $k_B T\ln 2$ per bit --- derived, not assumed to save Clausius. Today's statement is the quasi-static bound (equality in the reversible limit). Finite-time erasure pays a dissipative penalty above $k_B T\ln 2$; the exact distributional tool is Crooks' fluctuation theorem, which we meet in week 6 as the bridge to thermodynamic length.}
 

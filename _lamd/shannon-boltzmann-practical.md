@@ -1,5 +1,5 @@
 ---
-title: "Worksheet 2: LLM Dialogue on Shannon $H$ and Boltzmann $S$"
+title: "Worksheet 2: LLM Dialogue on Shannon H and Boltzmann S"
 practical: 2
 layout: practical
 assignment: True
@@ -19,6 +19,7 @@ abstract: >
   Are Shannon's $H$ and Boltzmann's $S$ the same mathematical object, or a
   metaphor? Act as Skepticus to an LLM: open with curiosity about the claimed
   equivalence, then press what must be true for identity of form versus analogy.
+
   Submit one ten-turn transcript and a handwritten reflection.
 author:
 - given: Neil D.

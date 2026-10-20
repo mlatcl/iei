@@ -23,8 +23,6 @@ in_class_test:
   id: Q3
   duration_minutes: 10
   timing: start
-worksheet_due: W3
-worksheet_released: W4
 reading:
   - title: "Information Geometry and Its Applications"
     author: "Amari"
@@ -32,7 +30,7 @@ reading:
     estimated_hours: 2
 ---
 
-\notes{Worksheet 3 is due at the start of this session. Quiz 3 occupies the first ten minutes (Fisher metric, natural gradient, dual flatness). Worksheet 4 is released; due 1 December.}
+\notes{Quiz 3 occupies the first ten minutes (Fisher metric, natural gradient, dual flatness). Worksheet 3 was due last week (start of lecture 6); Worksheet 4 is already out (due 1 December).}
 
 \subsection{This Session}
 
@@ -47,7 +45,7 @@ reading:
 
 | Minutes | Block |
 |--------:|-------|
-| 0–10 | Collect Worksheet 3; preview Quiz 3 |
+| 0–10 | Quiz 3 (Moodle) |
 | 10–55 | MaxEnt as projection; dual coordinates |
 | 55–65 | Break |
 | 65–100 | Natural gradient; one worked comparison |
