@@ -116,10 +116,10 @@ says: where Fisher information is large, unbiased estimators can be precise; whe
 
 \newslide{Named Link: Schottky Peak}
 
-\notes{For the canonical two-state system of week 2, the natural parameter is inverse temperature $\beta$. Then $G(\beta)$ is proportional to the heat capacity $C$. Schottky's anomaly --- the peak of $C$ when both states are populated --- is therefore a peak of Fisher information: maximal thermal response is maximal distinguishability of nearby $\beta$. Name that identity today. The purely entropic reading (what that peak means for information and intelligence) waits for week 8. Do not call $G$ ``the rate of entropy production''; that role belongs to path costs such as Crooks' $\langle W_{\mathrm{ex}}\rangle$, defined later this lecture.}
+\notes{For the canonical two-state system of week 3, the natural parameter is inverse temperature $\beta$. Then $G(\beta)$ is proportional to the heat capacity $C$. Schottky's anomaly --- the peak of $C$ when both states are populated --- is therefore a peak of Fisher information: maximal thermal response is maximal distinguishability of nearby $\beta$. Name that identity today. The purely entropic reading (what that peak means for information and intelligence) waits for week 8. Do not call $G$ ``the rate of entropy production''; that role belongs to path costs such as Crooks' $\langle W_{\mathrm{ex}}\rangle$, defined later this lecture.}
 
 \slides{
-**Week 2, revisited (name only):**
+**Week 3, revisited (name only):**
 * Two-state: $G(\beta)\propto C$
 * Schottky peak $=$ Fisher peak
 * Entropic reading: week 8
