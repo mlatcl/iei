@@ -88,6 +88,8 @@ reading:
 * Ten minutes
 }
 
+\classtimer{10:00}
+
 \subsection{From Daniel Bernoulli: Week 1 Carry-Over}
 
 \notes{Week 1 stopped at Daniel Bernoulli's portrait, having already quoted Laplace on the curve of a molecule of air. We open by pressing how anachronistic that sounds once atoms are in dispute in Boltzmann's century, then Bernoulli's assumptions, then the ensemble as the coarse-grained answer to Laplace's gremlin. *Hydrodynamica*, billiards, and the entropy bridge follow inside the same include, before we return to Gibbs--Boltzmann accounting.}

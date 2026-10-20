@@ -80,7 +80,15 @@ If the slot is still listed as one hour, run long: the second half (limits) can 
 
 \subsection{Quiz 4}
 
-\notes{Ten MCQs from the multi-information / limits bank. Auto-graded.}
+\notes{Ten MCQs from the multi-information / limits bank. Auto-graded. Invigilated Moodle, own device, no notes, no network, no LLMs.}
+
+\slidesincremental{
+* Device required; Moodle open
+* No notes, no network, no LLMs
+* Ten minutes
+}
+
+\classtimer{10:00}
 
 \include{_iei/includes/iei-notebook-setup.md}
 
