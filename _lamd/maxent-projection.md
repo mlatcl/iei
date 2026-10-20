@@ -35,6 +35,7 @@ reading:
 \subsection{This Session}
 
 \slidesincremental{
+* Quiz 3 (ten minutes)
 * MaxEnt as m-projection
 * Natural gradient: $F^{-1}\nabla L$
 * Geodesics = minimum-dissipation protocols
@@ -51,6 +52,18 @@ reading:
 | 65–100 | Natural gradient; one worked comparison |
 | 100–120 | A geodesic on a two-parameter exponential family |
 }
+
+\subsection{Quiz 3}
+
+\notes{Invigilated Moodle, own device, no notes, no network, no LLMs. Ten questions on the Fisher metric, natural gradient, and dual flatness — on a new parameterised family, not Worksheet 3's Gaussian.}
+
+\slidesincremental{
+* Device required; Moodle open
+* No notes, no network, no LLMs
+* Ten minutes
+}
+
+\classtimer{10:00}
 
 \include{_iei/includes/iei-notebook-setup.md}
 

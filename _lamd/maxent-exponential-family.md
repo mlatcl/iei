@@ -52,6 +52,7 @@ reading:
 \subsection{This Session}
 
 \slidesincremental{
+* Quiz 2 (ten minutes)
 * Laplace: insufficient reason $\to$ rule of succession
 * MaxEnt with Lagrange multipliers
 * Exponential family as the MaxEnt family
@@ -72,6 +73,18 @@ reading:
 | 100–110 | Legendre transform: $F=U-TS$ again; $H=A-\theta\cdot\eta$ |
 | 110–120 | LO7 synthesis; “how is entropy understood today?” |
 }
+
+\subsection{Quiz 2}
+
+\notes{Invigilated Moodle, own device, no notes, no network, no LLMs. Ten questions on MaxEnt, the exponential family, and Landauer — on a four-sided spinner and a Bernoulli, not the Worksheet 2 examples.}
+
+\slidesincremental{
+* Device required; Moodle open
+* No notes, no network, no LLMs
+* Ten minutes
+}
+
+\classtimer{10:00}
 
 \include{_iei/includes/iei-notebook-setup.md}
 
