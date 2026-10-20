@@ -223,6 +223,8 @@ We use the minus sign so that high-energy states are down-weighted when $\theta_
 
 \notes{Continuous $x$ is the same pattern with sums replaced by integrals; Gaussian MaxEnt (mean and variance fixed) is the flagship continuous example. Softmax and the two-spin Hamiltonian later in this lecture are the same theorem with richer $T(x)$.}
 
+\speakernotes{MaxEnt fixes a stationary $\pi$ under constraints --- not a trajectory. Week 2--3 grouping: dynamics would move $w(t)$ or drive $p_i$ off $\pi_i$; that is Crooks / DPI later, not today's Lagrange multipliers.}
+
 <!-- /SNIPPET: _physics/includes/maxent-to-exponential-family.md -->
 
 \include{_physics/includes/maxent-reference-measure-density-of-states.md}

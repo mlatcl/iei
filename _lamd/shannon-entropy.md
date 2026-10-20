@@ -124,6 +124,10 @@ reading:
 \include{_information/includes/differential-entropy-binning.md}
 \include{_information/includes/relative-entropy-reparametrisation.md}
 
+\include{_physics/includes/local-equilibrium-grouping.md}
+
+\speakernotes{Define-list item ``equilibrium versus non-equilibrium'': local equilibrium is $p_i\approx\pi_i$ with $w(t)$ free; non-eq is residual within-group divergence or driven $w$.}
+
 \include{_information/includes/channel-capacity-chain-rule.md}
 
 \newslide{}
@@ -158,7 +162,7 @@ reading:
 * Mutual information? (definition)
 }
 
-\notes{Interpret later: how entropy is understood today (week 5, then week 8); chain rule as the source of multi-information (week 8). DPI is named today; define-stage proof is week 8.}
+\notes{Interpret later: how entropy is understood today (week 5, then week 8); chain rule as the source of multi-information (week 8). DPI is named today; define-stage proof is week 8. Equilibrium versus non-equilibrium (first cut) is the local-equilibrium grouping slide: within-group settled, $w$ free to move.}
 
 \subsection{After This Lecture}
 

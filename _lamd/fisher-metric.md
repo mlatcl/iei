@@ -505,6 +505,8 @@ $$
 
 \notes{Crooks (2007) packages the near-equilibrium expansion as Fisher--Rao length on the equilibrium manifold [@Crooks-length07]. In linear response, $\langle W_{\mathrm{ex}}\rangle\ge\mathcal{L}^2/\tau$. The metric is the prescription for measuring a change of state; geodesics minimise the leading dissipative cost. The exact distributional statement underneath is Crooks (1999) / Jarzynski, above.}
 
+\include{_physics/includes/crooks-grouping-timescale.md}
+
 \setupplotcode{import numpy as np
 import matplotlib.pyplot as plt
 import mlai}

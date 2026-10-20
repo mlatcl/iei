@@ -152,6 +152,8 @@ mlai.write_figure('multi-information-rho.svg', directory='\writeDiagramsDir/ml')
 
 \include{_information/includes/data-processing-inequality.md}
 
+\include{_information/includes/relative-entropy-decay-grouping.md}
+
 \include{_information/includes/information-bottleneck.md}
 
 <!-- SNIPPET: _information/includes/information-bottleneck-curve.md -->

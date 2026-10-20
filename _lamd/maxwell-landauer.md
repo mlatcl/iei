@@ -120,6 +120,8 @@ reading:
 
 \include{_physics/includes/maxwell-demon-detailed-balance.md}
 
+\include{_physics/includes/demon-groups-hot-cold.md}
+
 \subsection{A Different Perspective}
 
 \slides{John Ellis (Maxwell Day 2024): the demon fails because measurement and a located trap door already dissipate.}
@@ -292,6 +294,8 @@ mlai.write_figure('car-engine-info-scale.svg', directory='\writeDiagramsDir/ml')
 \subsection{Landauer's Principle}
 
 \include{_physics/includes/boltzmann-memory-two-well.md}
+
+\include{_physics/includes/landauer-broken-ergodicity-weights.md}
 
 \include{_information-game/includes/landauer-shannon-connection.md}
 

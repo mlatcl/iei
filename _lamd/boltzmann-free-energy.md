@@ -265,9 +265,9 @@ mlai.write_figure('schottky-two-state.svg', directory='\writeDiagramsDir/ml')}
 
 \slides{Equilibrium thermodynamics gives a prescription for *reversible* work. Real protocols take time.}
 
-\speakernotes{Do not define thermodynamic length today. Name quasi-static $W=\Delta F$ versus finite-time excess. Crooks in weeks 6–7; intelligence in week 8.}
+\speakernotes{Do not define thermodynamic length today. Name quasi-static $W=\Delta F$ versus finite-time excess. Tie to the die: today $w$ was fixed; finite time moves $w(t)$ while hoping groups stay near $\pi_i$. Crooks in weeks 6–7; intelligence in week 8.}
 
-\notes{Quasi-static processes achieve reversible work $W=\Delta F$. Finite-time driving dissipates additional energy beyond the equilibrium bound.}
+\notes{Quasi-static processes achieve reversible work $W=\Delta F$. Finite-time driving dissipates additional energy beyond the equilibrium bound. In the grouping language of the die: equilibrium paths keep within-group distributions at their conditional stationary laws and only the coarse weights (or bath parameter $\beta$) change; rushing that change is what costs extra.}
 
 \setupplotcode{import numpy as np
 import matplotlib.pyplot as plt
