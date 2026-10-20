@@ -8,12 +8,13 @@ room: FW26
 transition: None
 abstract: >
   Worksheet 1 is due and the session starts with Quiz 1 (probability and Week 1
-  energy seeds). We then continue from Daniel Bernoulli: *Hydrodynamica*, the
-  entropy bridge (information game, no-go versus prescription, embodiment), and
-  map that onto the Gibbs--Boltzmann distribution and free energy $F = U - TS$.
-  We introduce the thermodynamic bath and Schottky's anomaly, and complete the
-  energy story from Week 1: loss landscapes as potentials, kinetic energy, and
-  Hamiltonian Monte Carlo.
+  energy seeds). We reopen Laplace's ``molecule of air'' as an anachronism,
+  state Bernoulli's kinetic assumptions, and introduce the statistical ensemble
+  as coarse-graining. Then *Hydrodynamica*, the entropy bridge (information
+  game, no-go versus prescription, embodiment), and the Gibbs--Boltzmann
+  distribution with free energy $F = U - TS$. We introduce the thermodynamic
+  bath and Schottky's anomaly, and complete the Week 1 energy story: loss
+  landscapes as potentials, kinetic energy, and Hamiltonian Monte Carlo.
 author:
 - given: Neil D.
   family: Lawrence
@@ -47,13 +48,14 @@ reading:
     required: false
 ---
 
-\notes{Worksheet 1 is due at the start of this session. Quiz 1 occupies the first ten minutes: probability foundations and Week 1 energy / Boltzmann seeds. After the quiz we pick up from Daniel Bernoulli: Hydrodynamica and the entropy bridge that did not fit in Week 1, then Gibbs--Boltzmann, free energy, HMC, bath, Schottky, and finite time. Do not derive the occupation from MaxEnt today --- that is week 5.}
+\notes{Worksheet 1 is due at the start of this session. Quiz 1 occupies the first ten minutes: probability foundations and Week 1 energy / Boltzmann seeds. After the quiz we reopen Laplace's ``molecule of air'' as an anachronism, move through Bernoulli's kinetic assumptions and the ensemble as coarse-graining, then the entropy bridge, Gibbs--Boltzmann, free energy, HMC, bath, Schottky, and finite time. Do not derive the occupation from MaxEnt today --- that is week 5.}
 
 \subsection{This Session}
 
 \slidesincremental{
 * Quiz 1 (ten minutes)
-* Hydrodynamica → entropy bridge → embodiment (Week 1 carry-over)
+* Laplace's molecule → Bernoulli assumptions → ensemble as coarse-graining
+* Hydrodynamica / billiards → entropy bridge → embodiment
 * Gibbs--Boltzmann form; free energy $F=U-TS$
 * Potential → kinetic → HMC (Week 1 energy payoff)
 * Bath, Schottky, finite-time dissipation named
@@ -66,12 +68,13 @@ reading:
 |--------:|-------|
 | 0–10 | Quiz 1 (Moodle; probability / Week 1 energy seeds) |
 | 10–15 | Collect Worksheet 1; release Worksheet 2; recap seed $p_i \propto e^{-\beta E_i}$ |
-| 15–40 | Hydrodynamica; billiards / Maxwell--Boltzmann--Gibbs; entropy review and no-go |
-| 40–50 | Embodiment / bits as bandwidth (Atomic Human bridge) |
-| 50–60 | Break |
-| 60–80 | Gibbs--Boltzmann form; free-energy decomposition $F=U-TS$ |
-| 80–100 | Loss as potential $V$; kinetic $K$; Hamiltonian / HMC (Neal demos) |
-| 100–120 | Bath; Schottky; finite-time naming |
+| 15–30 | Laplace molecule anachronism; Bernoulli assumptions; ensemble / coarse-graining |
+| 30–45 | Hydrodynamica plates; billiards; Maxwell--Boltzmann--Gibbs; entropy review and no-go |
+| 45–55 | Embodiment / bits as bandwidth (Atomic Human bridge) |
+| 55–65 | Break |
+| 65–85 | Gibbs--Boltzmann form; free-energy decomposition $F=U-TS$ |
+| 85–105 | Loss as potential $V$; kinetic $K$; Hamiltonian / HMC (Neal demos) |
+| 105–120 | Bath; Schottky; finite-time naming |
 
 }
 
@@ -87,7 +90,7 @@ reading:
 
 \subsection{From Daniel Bernoulli: Week 1 Carry-Over}
 
-\notes{Week 1 stopped at Daniel Bernoulli's portrait. We open the *Hydrodynamica* plates, walk the kinetic-theory / entropy story, then the information-game review and embodiment bridge, before returning to the Gibbs--Boltzmann accounting that this lecture was always going to centre.}
+\notes{Week 1 stopped at Daniel Bernoulli's portrait, having already quoted Laplace on the curve of a molecule of air. We open by pressing how anachronistic that sounds once atoms are in dispute in Boltzmann's century, then Bernoulli's assumptions, then the ensemble as the coarse-grained answer to Laplace's gremlin. *Hydrodynamica*, billiards, and the entropy bridge follow inside the same include, before we return to Gibbs--Boltzmann accounting.}
 
 \include{_physics/includes/entropy-intro.md}
 

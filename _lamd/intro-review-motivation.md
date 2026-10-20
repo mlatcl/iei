@@ -213,12 +213,12 @@ So in other words we are asking you to take on the role of Socrates in these con
 
 \newslide{Next Week: Hydrodynamica}
 
-\slides{We stop at Daniel Bernoulli. Week 2 opens with *Hydrodynamica* and the entropy bridge.}
+\slides{We stop at Daniel Bernoulli. Week 2 reopens Laplace's molecule, then *Hydrodynamica*.}
 
 \slidesincremental{
-* Hydrodynamica and kinetic theory of gases
-* Entropy as information; no-go versus prescription
-* Embodiment / bits as bandwidth; then Gibbs--Boltzmann and free energy
+* Why Laplace talks of molecules before atoms are settled
+* Bernoulli's assumptions; ensemble as coarse-graining
+* Entropy bridge; embodiment; Gibbs--Boltzmann and free energy
 }
 
 \speakernotes{Cliffhanger only. Do not open the Hydrodynamica plates or the billiards demo today.}
@@ -234,7 +234,7 @@ So in other words we are asking you to take on the role of Socrates in these con
 
 \subsection{After This Lecture}
 
-\notes{Worksheet 1: Socratic dialogue on the *history of the name* entropy --- why Shannon used the word; von Neumann anecdote versus Shannon's Tolman footnote and the Wiener--Gibbs trail. Exactly ten turns (mandated opening pair, then free probes); handwritten reflection on the scanned proforma (separate upload). Use the handouts. Due 20 October, start of lecture 2. Quiz 1 in the first ten minutes of lecture 2 covers today's probability review and energy / Boltzmann seeds; Hydrodynamica and the entropy bridge follow the quiz.}
+\notes{Worksheet 1: Socratic dialogue on the *history of the name* entropy --- why Shannon used the word; von Neumann anecdote versus Shannon's Tolman footnote and the Wiener--Gibbs trail. Exactly ten turns (mandated opening pair, then free probes); handwritten reflection on the scanned proforma (separate upload). Use the handouts. Due 20 October, start of lecture 2. Quiz 1 in the first ten minutes of lecture 2 covers today's probability review and energy / Boltzmann seeds; lecture 2 then presses Laplace's molecule as anachronism, Bernoulli's assumptions, and the ensemble as coarse-graining before Hydrodynamica and the entropy bridge.}
 
 \slidesincremental{
 * Worksheet 1 released; due 20 October (Shannon naming dialogue + handwritten reflection)
