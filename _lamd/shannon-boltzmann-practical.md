@@ -73,6 +73,7 @@ Put your CRSid in the dialogue YAML and on the reflection proforma. Do *not* wri
 \notes{*Follow ups.* Some ideas for follow up. What has to be true for *identity of mathematical form*? What fails if the alphabet is continuous (differential entropy)? What is the probability *over* in each tradition, i.e. microstates of a physical system, symbols of a code, or beliefs of an agent? If the model invokes the partition function $Z$ or free energy $F=U-TS$, ask whether those steps assume equilibrium, and whether Shannon's channel setting assumes the same. What is the meaning of equilibrium for Shannon? How does dynamics appear in the two cases. What is Boltzmann's $H$.}
 
 \notes{* Discrete $H\in[0,\log n]$ versus differential entropy (can be negative): does the equivalence survive the continuous limit, or only KL-style relative entropy?
+* Lectures 1--2 called Maxwell--Boltzmann ``Gaussian.'' For which variable is that true (component $v_x$ versus speed $v$)? Does the $H$ versus $S$ story survive a change from $v_x$ to $v$, or only relative entropy against a reference measure?
 * Partition function as generating function: if $U=-\partial\log Z/\partial\beta$, is that a thermodynamic fact, an information-theoretic fact, or a shared calculus?
 * Free energy $F=U-TS$: is the subtraction *the same move* as writing available information after an entropic no-go — or a physics-only bookkeeping device?
 * Course theme: for each reading (identity / analogy / metaphor), what does entropy *forbid*, and what does $p$ *prescribe*?
