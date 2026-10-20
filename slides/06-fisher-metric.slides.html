@@ -125,11 +125,9 @@
 
 <section id="title-slide">
   <h1 class="title">Fisher Metric and Thermodynamic Length</h1>
-  <p class="author" style="text-align:center"><a href="http://inverseprobability.com">Neil
-D. Lawrence</a></p>
+  <p class="author" style="text-align:center"><a href="http://inverseprobability.com">Neil D. Lawrence</a></p>
   <p class="date" style="text-align:center"><time>2026-11-17</time></p>
-  <p class="venue" style="text-align:center">FW26, William Gates
-Building</p>
+  <p class="venue" style="text-align:center">FW26, William Gates Building</p>
 </section>
 
 <section class="slide level2">
@@ -147,15 +145,10 @@ Building</p>
 <h2>This Session</h2>
 <div>
 <ul>
-<li class="fragment">Fisher’s information <span
-class="math inline">\(\neq\)</span> Shannon’s <span
-class="math inline">\(H\)</span></li>
+<li class="fragment">Fisher’s information <span class="math inline">\(\neq\)</span> Shannon’s <span class="math inline">\(H\)</span></li>
 <li class="fragment">Fréchet–Rao–Cramér: identifiability</li>
 <li class="fragment">Fisher metric; dual flatness</li>
-<li class="fragment">Fluctuation theorem <span
-class="math inline">\(\to\)</span> <span class="math inline">\(\langle
-W\rangle\ge\Delta F\)</span> <span class="math inline">\(\to\)</span>
-length bound</li>
+<li class="fragment">Fluctuation theorem <span class="math inline">\(\to\)</span> <span class="math inline">\(\langle W\rangle\ge\Delta F\)</span> <span class="math inline">\(\to\)</span> length bound</li>
 <li class="fragment">Thermodynamic length: define, do not interpret</li>
 </ul>
 </div>
@@ -166,55 +159,32 @@ sns.set_palette('colorblind')}-->
 </section>
 <section id="what-did-fisher-mean-by-information" class="slide level2">
 <h2>What Did Fisher Mean by Information?</h2>
-<p><strong>Fisher’s information <span
-class="math inline">\(\neq\)</span> Shannon’s entropy</strong> * Shannon
-<span class="math inline">\(H\)</span>: uncertainty in an outcome *
-Fisher <span class="math inline">\(I(\theta)\)</span>: sensitivity of
-<span class="math inline">\(\log p\)</span> to <span
-class="math inline">\(\theta\)</span> * Same word; different operational
-reading</p>
+<p><strong>Fisher’s information <span class="math inline">\(\neq\)</span> Shannon’s entropy</strong> * Shannon <span class="math inline">\(H\)</span>: uncertainty in an outcome * Fisher <span class="math inline">\(I(\theta)\)</span>: sensitivity of <span class="math inline">\(\log p\)</span> to <span class="math inline">\(\theta\)</span> * Same word; different operational reading</p>
 </section>
 <section id="score-and-sensitivity" class="slide level2">
 <h2>Score and Sensitivity</h2>
 <p><span class="math display">\[
 I(\theta)=\mathbb{E}\!\left[(\partial_\theta\log p)^2\right]
-\]</span> * Large <span class="math inline">\(I\)</span>: data
-distinguish nearby <span class="math inline">\(\theta\)</span> well *
-Small <span class="math inline">\(I\)</span>: parameter almost invisible
-in samples</p>
+\]</span> * Large <span class="math inline">\(I\)</span>: data distinguish nearby <span class="math inline">\(\theta\)</span> well * Small <span class="math inline">\(I\)</span>: parameter almost invisible in samples</p>
 <aside class="notes">
-Hold Shannon vs Fisher for the whole module: <span
-class="math inline">\(H\)</span> is a state function of <span
-class="math inline">\(p\)</span>; <span class="math inline">\(I\)</span>
-is a property of a <em>family</em> <span
-class="math inline">\(p(\cdot\mid\theta)\)</span>.
+Hold Shannon vs Fisher for the whole module: <span class="math inline">\(H\)</span> is a state function of <span class="math inline">\(p\)</span>; <span class="math inline">\(I\)</span> is a property of a <em>family</em> <span class="math inline">\(p(\cdot\mid\theta)\)</span>.
 </aside>
 </section>
 <section id="identifiability-fréchet-rao-cramér" class="slide level2">
 <h2>Identifiability: Fréchet, Rao, Cramér</h2>
 <div>
 <ul>
-<li class="fragment">Same <span class="math inline">\(G\)</span>: Fisher
-(estimation) and Fréchet–Rao–Cramér (identifiability)</li>
-<li class="fragment"><span
-class="math inline">\(\mathrm{cov}(\hat\theta)\succeq G^{-1}\)</span>:
-high <span class="math inline">\(G\)</span> <span
-class="math inline">\(\Rightarrow\)</span> tight bound</li>
-<li class="fragment">Metric reading: <span
-class="math inline">\(G\)</span> measures how distinguishable nearby
-distributions are</li>
+<li class="fragment">Same <span class="math inline">\(G\)</span>: Fisher (estimation) and Fréchet–Rao–Cramér (identifiability)</li>
+<li class="fragment"><span class="math inline">\(\mathrm{cov}(\hat\theta)\succeq G^{-1}\)</span>: high <span class="math inline">\(G\)</span> <span class="math inline">\(\Rightarrow\)</span> tight bound</li>
+<li class="fragment">Metric reading: <span class="math inline">\(G\)</span> measures how distinguishable nearby distributions are</li>
 </ul>
 </div>
 </section>
 <section id="named-link-schottky-peak" class="slide level2">
 <h2>Named Link: Schottky Peak</h2>
-<p><strong>Week 2, revisited (name only):</strong> * Two-state: <span
-class="math inline">\(G(\beta)\propto C\)</span> * Schottky peak <span
-class="math inline">\(=\)</span> Fisher peak * Entropic reading: week
-8</p>
+<p><strong>Week 3, revisited (name only):</strong> * Two-state: <span class="math inline">\(G(\beta)\propto C\)</span> * Schottky peak <span class="math inline">\(=\)</span> Fisher peak * Entropic reading: week 8</p>
 <aside class="notes">
-Fence: name the identity; do not interpret Schottky or length for
-intelligence today.
+Fence: name the identity; do not interpret Schottky or length for intelligence today.
 </aside>
 <!-- SNIPPET: _mathe/includes/what-is-a-riemannian-geometry.md -->
 </section>
@@ -223,24 +193,16 @@ intelligence today.
 </section>
 <section id="euclidean-vs-riemannian-distance" class="slide level2">
 <h2>Euclidean vs Riemannian Distance</h2>
-<p>In flat space the ruler is the same everywhere. On a curved surface
-it is not.</p>
+<p>In flat space the ruler is the same everywhere. On a curved surface it is not.</p>
 <div>
 <ul>
-<li class="fragment">Euclidean: <span
-class="math inline">\(\mathrm{d}s^2 = \mathrm{d}\mathbf{x}^\top
-\mathbf{I}\, \mathrm{d}\mathbf{x}\)</span> (constant metric)</li>
-<li class="fragment">Riemannian: <span
-class="math inline">\(\mathrm{d}s^2 = \mathrm{d}\mathbf{x}^\top
-g(\mathbf{x})\, \mathrm{d}\mathbf{x}\)</span> (position-dependent)</li>
-<li class="fragment">Geodesic: shortest path; curves in non-flat
-space</li>
+<li class="fragment">Euclidean: <span class="math inline">\(\mathrm{d}s^2 = \mathrm{d}\mathbf{x}^\top \mathbf{I}\, \mathrm{d}\mathbf{x}\)</span> (constant metric)</li>
+<li class="fragment">Riemannian: <span class="math inline">\(\mathrm{d}s^2 = \mathrm{d}\mathbf{x}^\top g(\mathbf{x})\, \mathrm{d}\mathbf{x}\)</span> (position-dependent)</li>
+<li class="fragment">Geodesic: shortest path; curves in non-flat space</li>
 </ul>
 </div>
 <aside class="notes">
-Keep this concrete. Near the poles of a sphere, longitude lines are
-close together; near the equator they are far apart. The metric captures
-that varying “ruler”.
+Keep this concrete. Near the poles of a sphere, longitude lines are close together; near the equator they are far apart. The metric captures that varying “ruler.”
 </aside>
 <div class="figure">
 <div id="euclidean-vs-riemannian-figure" class="figure-frame">
@@ -249,21 +211,14 @@ that varying “ruler”.
 </div>
 </div>
 <aside class="notes">
-Left: Euclidean metric — equal-radius circles mark unit steps at every
-point. Right: Riemannian metric — ellipses shrink vertically near large
-<span class="math inline">\(|y|\)</span> because vertical distances are
-stretched there by <span class="math inline">\(g_{22}=1+0.5y^2\)</span>.
+Left: Euclidean metric — equal-radius circles mark unit steps at every point. Right: Riemannian metric — ellipses shrink vertically near large <span class="math inline">\(|y|\)</span> because vertical distances are stretched there by <span class="math inline">\(g_{22}=1+0.5y^2\)</span>.
 </aside>
 </section>
 <section id="geodesics-and-length" class="slide level2">
 <h2>Geodesics and Length</h2>
 <p><span class="math display">\[
-\ell(\gamma) = \int_0^1 \sqrt{\dot\gamma^\top
-g(\gamma)\,\dot\gamma}\;\mathrm{d}t
-\]</span> * Geodesic minimises <span class="math inline">\(\ell\)</span>
-* Flat space: straight lines; sphere: great circles * Statistical
-manifold: <span class="math inline">\(g = G\)</span> (Fisher) — connects
-distributions</p>
+\ell(\gamma) = \int_0^1 \sqrt{\dot\gamma^\top g(\gamma)\,\dot\gamma}\;\mathrm{d}t
+\]</span> * Geodesic minimises <span class="math inline">\(\ell\)</span> * Flat space: straight lines; sphere: great circles * Statistical manifold: <span class="math inline">\(g = G\)</span> (Fisher) — connects distributions</p>
 <!-- /SNIPPET: _mathe/includes/what-is-a-riemannian-geometry.md -->
 </section>
 <section id="kl-divergence-and-two-entropies" class="slide level2">
@@ -271,34 +226,17 @@ distributions</p>
 </section>
 <section id="kl-divergence-forward-and-reverse" class="slide level2">
 <h2>KL Divergence: Forward and Reverse</h2>
-<p>KL divergence measures how different two distributions are — but it
-is asymmetric.</p>
+<p>KL divergence measures how different two distributions are — but it is asymmetric.</p>
 <div>
 <ul>
-<li class="fragment"><span class="math inline">\(\text{KL}\left(
-p\,\|\,q \right) = \sum_x p(x)\log\frac{p(x)}{q(x)} \ge 0\)</span>, zero
-iff <span class="math inline">\(p=q\)</span></li>
-<li class="fragment">Forward (<span
-class="math inline">\(p\|q\)</span>): mass-covering — <span
-class="math inline">\(q\)</span> must not miss mass of <span
-class="math inline">\(p\)</span></li>
-<li class="fragment">Reverse (<span
-class="math inline">\(q\|p\)</span>): mode-seeking — <span
-class="math inline">\(q\)</span> concentrates on a mode of <span
-class="math inline">\(p\)</span></li>
-<li class="fragment">Second-order Taylor: <span
-class="math inline">\(\text{KL}\left(
-p_{\boldsymbol{\theta}+\mathrm{d}\boldsymbol{\theta}}\,\|\,p_{\boldsymbol{\theta}}
-\right) = \tfrac{1}{2}\,\mathrm{d}\boldsymbol{\theta}^\top
-G(\boldsymbol{\theta})\,\mathrm{d}\boldsymbol{\theta} +
-O(\|\mathrm{d}\boldsymbol{\theta}\|^3)\)</span></li>
+<li class="fragment"><span class="math inline">\(\text{KL}\left( p\,\|\,q \right) = \sum_x p(x)\log\frac{p(x)}{q(x)} \ge 0\)</span>, zero iff <span class="math inline">\(p=q\)</span></li>
+<li class="fragment">Forward (<span class="math inline">\(p\|q\)</span>): mass-covering — <span class="math inline">\(q\)</span> must not miss mass of <span class="math inline">\(p\)</span></li>
+<li class="fragment">Reverse (<span class="math inline">\(q\|p\)</span>): mode-seeking — <span class="math inline">\(q\)</span> concentrates on a mode of <span class="math inline">\(p\)</span></li>
+<li class="fragment">Second-order Taylor: <span class="math inline">\(\text{KL}\left( p_{\boldsymbol{\theta}+\mathrm{d}\boldsymbol{\theta}}\,\|\,p_{\boldsymbol{\theta}} \right) = \tfrac{1}{2}\,\mathrm{d}\boldsymbol{\theta}^\top G(\boldsymbol{\theta})\,\mathrm{d}\boldsymbol{\theta} + O(\|\mathrm{d}\boldsymbol{\theta}\|^3)\)</span></li>
 </ul>
 </div>
 <aside class="notes">
-Forward KL covers all modes; reverse KL picks one. Both have the same
-second-order term: Fisher <span class="math inline">\(G\)</span>. That
-is why <span class="math inline">\(G\)</span> is the natural metric: it
-is the curvature of the divergence surface at coincidence.
+Forward KL covers all modes; reverse KL picks one. Both have the same second-order term: Fisher <span class="math inline">\(G\)</span>. That is why <span class="math inline">\(G\)</span> is the natural metric: it is the curvature of the divergence surface at coincidence.
 </aside>
 <div class="figure">
 <div id="forward-reverse-kl-figure" class="figure-frame">
@@ -307,69 +245,43 @@ is the curvature of the divergence surface at coincidence.
 </div>
 </div>
 <aside class="notes">
-Forward KL (left) produces a broad Gaussian covering both modes; reverse
-KL (right) concentrates on one mode. Both have the same local curvature
-at <span class="math inline">\(p=q\)</span>: the Fisher metric.
+Forward KL (left) produces a broad Gaussian covering both modes; reverse KL (right) concentrates on one mode. Both have the same local curvature at <span class="math inline">\(p=q\)</span>: the Fisher metric.
 </aside>
 </section>
 <section id="kl-curvature-fisher-metric" class="slide level2">
 <h2>KL Curvature = Fisher Metric</h2>
 <p><span class="math display">\[
-\text{KL}\left(
-p_{\boldsymbol{\theta}+\mathrm{d}\boldsymbol{\theta}}\,\|\,p_{\boldsymbol{\theta}}
-\right) = \tfrac{1}{2}\,\mathrm{d}\boldsymbol{\theta}^\top
-G(\boldsymbol{\theta})\,\mathrm{d}\boldsymbol{\theta} +
-O(\|\mathrm{d}\boldsymbol{\theta}\|^3)
-\]</span> * <span class="math inline">\(G\)</span> = curvature of KL at
-coincidence * Two KLs, one local metric * Pythagorean theorem holds on
-dually flat submanifolds</p>
+\text{KL}\left( p_{\boldsymbol{\theta}+\mathrm{d}\boldsymbol{\theta}}\,\|\,p_{\boldsymbol{\theta}} \right) = \tfrac{1}{2}\,\mathrm{d}\boldsymbol{\theta}^\top G(\boldsymbol{\theta})\,\mathrm{d}\boldsymbol{\theta} + O(\|\mathrm{d}\boldsymbol{\theta}\|^3)
+\]</span> * <span class="math inline">\(G\)</span> = curvature of KL at coincidence * Two KLs, one local metric * Pythagorean theorem holds on dually flat submanifolds</p>
 <!-- SNIPPET: _information-game/includes/fisher-information-geometry.md -->
 </section>
 <section id="fisher-information-as-geometry" class="slide level2">
 <h2>Fisher Information as Geometry</h2>
-<p><strong>Same <span class="math inline">\(G\)</span>, three
-origins:</strong> <span class="math display">\[
-G(\boldsymbol{\theta}) = \nabla^2 \mathcal{A}(\boldsymbol{\theta}) =
-\mathrm{Cov}_{\boldsymbol{\theta}}[T(\mathbf{x})]
+<p><strong>Same <span class="math inline">\(G\)</span>, three origins:</strong> <span class="math display">\[
+G(\boldsymbol{\theta}) = \nabla^2 \mathcal{A}(\boldsymbol{\theta}) = \mathrm{Cov}_{\boldsymbol{\theta}}[T(\mathbf{x})]
 \]</span> * Fisher / CR / Hessian — now as Riemannian metric</p>
 </section>
 <section id="the-statistical-manifold" class="slide level2">
 <h2>The Statistical Manifold</h2>
-<p><strong>Statistical Manifold:</strong> * Each point <span
-class="math inline">\(\boldsymbol{\theta}\)</span> = a probability
-distribution * Space of all distributions = curved manifold * Fisher
-information = metric (ruler) on this space * Measures “closeness”
-between distributions</p>
+<p><strong>Statistical Manifold:</strong> * Each point <span class="math inline">\(\boldsymbol{\theta}\)</span> = a probability distribution * Space of all distributions = curved manifold * Fisher information = metric (ruler) on this space * Measures “closeness” between distributions</p>
 </section>
 <section id="information-distance" class="slide level2">
 <h2>Information Distance</h2>
 <p><span class="math display">\[
-\text{d}s^2 = \text{d}\boldsymbol{\theta}^\top G(\boldsymbol{\theta})
-\text{d}\boldsymbol{\theta}
-\]</span> * Measures information distance between distributions * Larger
-<span class="math inline">\(G\)</span> = distributions more
-distinguishable * Smaller <span class="math inline">\(G\)</span> =
-distributions harder to tell apart</p>
+\text{d}s^2 = \text{d}\boldsymbol{\theta}^\top G(\boldsymbol{\theta}) \text{d}\boldsymbol{\theta}
+\]</span> * Measures information distance between distributions * Larger <span class="math inline">\(G\)</span> = distributions more distinguishable * Smaller <span class="math inline">\(G\)</span> = distributions harder to tell apart</p>
 </section>
 <section id="connection-to-statistical-estimation" class="slide level2">
 <h2>Connection to Statistical Estimation</h2>
-<p><em>Cramér–Rao (restated geometrically):</em> <span
-class="math display">\[
-\text{cov}(\hat{\boldsymbol{\theta}}) \succeq
-G^{-1}(\boldsymbol{\theta})
-\]</span> * <span class="math inline">\(G^{-1}\)</span> = error
-ellipsoid * High <span class="math inline">\(G\)</span> → tight
-estimation; low <span class="math inline">\(G\)</span> → loose</p>
+<p><em>Cramér–Rao (restated geometrically):</em> <span class="math display">\[
+\text{cov}(\hat{\boldsymbol{\theta}}) \succeq G^{-1}(\boldsymbol{\theta})
+\]</span> * <span class="math inline">\(G^{-1}\)</span> = error ellipsoid * High <span class="math inline">\(G\)</span> → tight estimation; low <span class="math inline">\(G\)</span> → loose</p>
 </section>
 <section id="why-this-matters-for-dynamics" class="slide level2">
 <h2>Why This Matters for Dynamics</h2>
-<p><strong>Two Roles of Fisher Information:</strong> 1. Metric → defines
-distances between distributions 2. In gradient → <span
-class="math inline">\(\nabla H =
--G(\boldsymbol{\theta})\boldsymbol{\theta}\)</span></p>
+<p><strong>Two Roles of Fisher Information:</strong> 1. Metric → defines distances between distributions 2. In gradient → <span class="math inline">\(\nabla H = -G(\boldsymbol{\theta})\boldsymbol{\theta}\)</span></p>
 <p><span class="math display">\[
-\dot{\boldsymbol{\theta}} = \nabla H =
--G(\boldsymbol{\theta})\boldsymbol{\theta}
+\dot{\boldsymbol{\theta}} = \nabla H = -G(\boldsymbol{\theta})\boldsymbol{\theta}
 \]</span></p>
 </section>
 <section id="examples-revisited" class="slide level2">
@@ -377,47 +289,33 @@ class="math inline">\(\nabla H =
 </section>
 <section id="gaussian-geometry-of-covariance" class="slide level2">
 <h2>Gaussian: Geometry of Covariance</h2>
-<p><strong>Gaussian:</strong> <span
-class="math inline">\(G(\boldsymbol{\theta}) = \Sigma\)</span> *
-Information metric = covariance * <span class="math inline">\(G^{-1} =
-\Sigma^{-1}\)</span> = precision<br />
-* Information ellipsoid = probability ellipsoid * Special to Gaussians
-in natural parameters</p>
+<p><strong>Gaussian:</strong> <span class="math inline">\(G(\boldsymbol{\theta}) = \Sigma\)</span> * Information metric = covariance * <span class="math inline">\(G^{-1} = \Sigma^{-1}\)</span> = precision<br />
+* Information ellipsoid = probability ellipsoid * Special to Gaussians in natural parameters</p>
 </section>
 <section id="categorical-simplex-geometry" class="slide level2">
 <h2>Categorical: Simplex Geometry</h2>
 <p><strong>Categorical:</strong> <span class="math display">\[
 G_{ij} = \delta_{ij}\pi_i - \pi_i\pi_j
-\]</span> * Defines probability simplex geometry * Center of simplex:
-balanced information * Corners: concentrated information * Metric
-captures curvature</p>
+\]</span> * Defines probability simplex geometry * Center of simplex: balanced information * Corners: concentrated information * Metric captures curvature</p>
 </section>
 <section id="information-geometry-the-big-picture" class="slide level2">
 <h2>Information Geometry: The Big Picture</h2>
-<p><strong>Information Geometry:</strong> * Fisher metric → Riemannian
-geometry * Exponential families → dually flat structure * Geodesics →
-shortest paths between distributions * Zero curvature → special “flat”
-structure * <em>Key for constrained dynamics later</em></p>
+<p><strong>Information Geometry:</strong> * Fisher metric → Riemannian geometry * Exponential families → dually flat structure * Geodesics → shortest paths between distributions * Zero curvature → special “flat” structure * <em>Key for constrained dynamics later</em></p>
 <!-- /SNIPPET: _information-game/includes/fisher-information-geometry.md -->
 <!-- SNIPPET: _information-game/includes/fisher-metric-worked.md -->
 </section>
 <section id="the-fisher-metric" class="slide level2">
 <h2>The Fisher Metric</h2>
-<p>A statistical manifold: each point is a distribution <span
-class="math inline">\(p(x\mid\theta)\)</span>.</p>
+<p>A statistical manifold: each point is a distribution <span class="math inline">\(p(x\mid\theta)\)</span>.</p>
 <div>
 <ul>
-<li class="fragment">Fisher matrix: <span class="math inline">\(g_{ij} =
-\mathbb{E}[\partial_i\log p\,\partial_j\log p]\)</span></li>
-<li class="fragment">Exponential families: e-flat (<span
-class="math inline">\(\theta\)</span>) and m-flat (<span
-class="math inline">\(\eta\)</span>) charts</li>
+<li class="fragment">Fisher matrix: <span class="math inline">\(g_{ij} = \mathbb{E}[\partial_i\log p\,\partial_j\log p]\)</span></li>
+<li class="fragment">Exponential families: e-flat (<span class="math inline">\(\theta\)</span>) and m-flat (<span class="math inline">\(\eta\)</span>) charts</li>
 <li class="fragment">Pythagorean theorem for KL on dual flats</li>
 </ul>
 </div>
 <aside class="notes">
-LO8. Connect to week 5 Legendre pair. Worksheet 3: Gaussian Fisher
-matrix and gradient comparison.
+LO8. Connect to week 5 Legendre pair. Worksheet 3: Gaussian Fisher matrix and gradient comparison.
 </aside>
 <div class="figure">
 <div id="gaussian-fisher-eigen-figure" class="figure-frame">
@@ -426,9 +324,7 @@ matrix and gradient comparison.
 </div>
 </div>
 <aside class="notes">
-Fisher components for <span
-class="math inline">\(\mathcal{N}(0,\sigma^2)\)</span> blow up as <span
-class="math inline">\(\sigma^2\to 0\)</span>.
+Fisher components for <span class="math inline">\(\mathcal{N}(0,\sigma^2)\)</span> blow up as <span class="math inline">\(\sigma^2\to 0\)</span>.
 </aside>
 <!-- /SNIPPET: _information-game/includes/fisher-metric-worked.md -->
 </section>
@@ -437,41 +333,28 @@ class="math inline">\(\sigma^2\to 0\)</span>.
 </section>
 <section id="crooks-1999-fluctuation-theorem" class="slide level2">
 <h2>Crooks (1999): Fluctuation Theorem</h2>
-<p>Before length: the exact nonequilibrium relation that the second law
-and the <span class="math inline">\(\mathcal{L}^2/\tau\)</span> bound
-sit inside.</p>
+<p>Before length: the exact nonequilibrium relation that the second law and the <span class="math inline">\(\mathcal{L}^2/\tau\)</span> bound sit inside.</p>
 <p><span class="math display">\[
 \frac{P(W)}{P_R(-W)} = e^{\beta(W-\Delta F)}
 \]</span></p>
 <div>
 <ul>
-<li class="fragment">Forward protocol: work distribution <span
-class="math inline">\(P(W)\)</span></li>
-<li class="fragment">Reverse protocol: <span
-class="math inline">\(P_R(-W)\)</span></li>
-<li class="fragment"><span class="math inline">\(\Delta F\)</span>:
-equilibrium free-energy difference between endpoints</li>
+<li class="fragment">Forward protocol: work distribution <span class="math inline">\(P(W)\)</span></li>
+<li class="fragment">Reverse protocol: <span class="math inline">\(P_R(-W)\)</span></li>
+<li class="fragment"><span class="math inline">\(\Delta F\)</span>: equilibrium free-energy difference between endpoints</li>
 </ul>
 </div>
 <aside class="notes">
-Scaffolding only. Do not derive the theorem from a master equation.
-State it, then extract second law and the near-equilibrium expansion
-that recovers thermodynamic length.
+Scaffolding only. Do not derive the theorem from a master equation. State it, then extract second law and the near-equilibrium expansion that recovers thermodynamic length.
 </aside>
 </section>
 <section id="jarzynski-and-the-second-law" class="slide level2">
 <h2>Jarzynski and the Second Law</h2>
 <div>
 <ul>
-<li class="fragment">Integrate Crooks <span
-class="math inline">\(\Rightarrow\)</span> Jarzynski: <span
-class="math inline">\(\langle e^{-\beta W}\rangle = e^{-\beta\Delta
-F}\)</span></li>
-<li class="fragment">Jensen’s inequality: <span
-class="math inline">\(\langle W\rangle \ge \Delta F\)</span></li>
-<li class="fragment">Excess work <span
-class="math inline">\(W_{\mathrm{ex}} = W - \Delta F\)</span> is
-nonnegative on average</li>
+<li class="fragment">Integrate Crooks <span class="math inline">\(\Rightarrow\)</span> Jarzynski: <span class="math inline">\(\langle e^{-\beta W}\rangle = e^{-\beta\Delta F}\)</span></li>
+<li class="fragment">Jensen’s inequality: <span class="math inline">\(\langle W\rangle \ge \Delta F\)</span></li>
+<li class="fragment">Excess work <span class="math inline">\(W_{\mathrm{ex}} = W - \Delta F\)</span> is nonnegative on average</li>
 </ul>
 </div>
 </section>
@@ -479,14 +362,9 @@ nonnegative on average</li>
 <h2>Near Equilibrium: Length Appears</h2>
 <div>
 <ul>
-<li class="fragment">Far from equilibrium: Crooks/Jarzynski (exact,
-distributional)</li>
-<li class="fragment">Near equilibrium, slow driving: expand <span
-class="math inline">\(\langle W_{\mathrm{ex}}\rangle\)</span> in linear
-response</li>
-<li class="fragment">Leading cost is Fisher–Rao length of the protocol:
-<span class="math inline">\(\langle W_{\mathrm{ex}}\rangle \ge
-\mathcal{L}^2/\tau\)</span></li>
+<li class="fragment">Far from equilibrium: Crooks/Jarzynski (exact, distributional)</li>
+<li class="fragment">Near equilibrium, slow driving: expand <span class="math inline">\(\langle W_{\mathrm{ex}}\rangle\)</span> in linear response</li>
+<li class="fragment">Leading cost is Fisher–Rao length of the protocol: <span class="math inline">\(\langle W_{\mathrm{ex}}\rangle \ge \mathcal{L}^2/\tau\)</span></li>
 </ul>
 </div>
 </section>
@@ -494,73 +372,45 @@ response</li>
 <h2>Two Papers, One Story</h2>
 <div>
 <ul>
-<li class="fragment">Crooks (1999): <span
-class="math inline">\(P(W)/P_R(-W)=e^{\beta(W-\Delta F)}\)</span> —
-exact</li>
-<li class="fragment">Jarzynski: <span class="math inline">\(\langle
-e^{-\beta W}\rangle=e^{-\beta\Delta F}\)</span> <span
-class="math inline">\(\Rightarrow\)</span> <span
-class="math inline">\(\langle W\rangle\ge\Delta F\)</span></li>
-<li class="fragment">Crooks (2007): near equilibrium, <span
-class="math inline">\(\langle
-W_{\mathrm{ex}}\rangle\ge\mathcal{L}^2/\tau\)</span> with Fisher–Rao
-<span class="math inline">\(\mathcal{L}\)</span></li>
+<li class="fragment">Crooks (1999): <span class="math inline">\(P(W)/P_R(-W)=e^{\beta(W-\Delta F)}\)</span> — exact</li>
+<li class="fragment">Jarzynski: <span class="math inline">\(\langle e^{-\beta W}\rangle=e^{-\beta\Delta F}\)</span> <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(\langle W\rangle\ge\Delta F\)</span></li>
+<li class="fragment">Crooks (2007): near equilibrium, <span class="math inline">\(\langle W_{\mathrm{ex}}\rangle\ge\mathcal{L}^2/\tau\)</span> with Fisher–Rao <span class="math inline">\(\mathcal{L}\)</span></li>
 </ul>
 </div>
 <aside class="notes">
-GAIST Chapter 17 stops at Crooks (1999)/Jarzynski. We continue to the
-geometric packaging. Same author; different regimes; one narrative.
+GAIST Chapter 17 stops at Crooks (1999)/Jarzynski. We continue to the geometric packaging. Same author; different regimes; one narrative.
 </aside>
 <!-- SNIPPET: _information/includes/crooks-thermodynamic-length.md -->
 </section>
 <section id="thermodynamic-length-crooks-2007" class="slide level2">
 <h2>Thermodynamic Length (Crooks 2007)</h2>
-<p>For a slow protocol <span class="math inline">\(\lambda(t)\)</span>
-on the equilibrium manifold, define length with the Fisher metric.</p>
+<p>For a slow protocol <span class="math inline">\(\lambda(t)\)</span> on the equilibrium manifold, define length with the Fisher metric.</p>
 <p><span class="math display">\[
-\mathcal{L} = \int_0^\tau \sqrt{\dot\lambda^\top
-\mathcal{I}(\lambda)\,\dot\lambda}\,dt
+\mathcal{L} = \int_0^\tau \sqrt{\dot\lambda^\top \mathcal{I}(\lambda)\,\dot\lambda}\,dt
 \]</span></p>
 <div>
 <ul>
-<li class="fragment">No-go: <span class="math inline">\(\langle
-W_{\mathrm{ex}}\rangle \ge \mathcal{L}^2/\tau\)</span> in linear
-response</li>
-<li class="fragment">Prescription: measure change of state with the
-Fisher metric</li>
+<li class="fragment">No-go: <span class="math inline">\(\langle W_{\mathrm{ex}}\rangle \ge \mathcal{L}^2/\tau\)</span> in linear response</li>
+<li class="fragment">Prescription: measure change of state with the Fisher metric</li>
 <li class="fragment">Intelligence question: week 8</li>
 </ul>
 </div>
 <aside class="notes">
-Define length today; do not interpret for intelligence until lecture 8.
-Worksheet 3: straight-line path <span
-class="math inline">\((0,1)\to(2,4)\)</span>. The bound is the
-near-equilibrium expansion of the fluctuation theorem, not a separate
-axiom.
+Define length today; do not interpret for intelligence until lecture 8. Worksheet 3: straight-line path <span class="math inline">\((0,1)\to(2,4)\)</span>. The bound is the near-equilibrium expansion of the fluctuation theorem, not a separate axiom.
 </aside>
 </section>
-<section id="crooks-length-and-timescale-separation"
-class="slide level2">
+<section id="crooks-length-and-timescale-separation" class="slide level2">
 <h2>Crooks Length and Timescale Separation</h2>
-<p>Thermodynamic length assumes the within-group term has already
-settled.</p>
+<p>Thermodynamic length assumes the within-group term has already settled.</p>
 <div>
 <ul>
-<li class="fragment">Path <span
-class="math inline">\(\lambda(t)\)</span> on the manifold: each point is
-a <span class="math inline">\(\pi_{\lambda}\)</span></li>
-<li class="fragment">That is local equilibrium along the drive: <span
-class="math inline">\(p_i\approx\pi_i(\lambda)\)</span>, <span
-class="math inline">\(w\)</span> (or <span
-class="math inline">\(\theta\)</span>) moves</li>
-<li class="fragment">Excess work prices changing <span
-class="math inline">\(H(w)\)</span> / natural parameters too fast</li>
+<li class="fragment">Path <span class="math inline">\(\lambda(t)\)</span> on the  manifold: each point is a <span class="math inline">\(\pi_{\lambda}\)</span></li>
+<li class="fragment">That is local equilibrium along the drive: <span class="math inline">\(p_i\approx\pi_i(\lambda)\)</span>, <span class="math inline">\(w\)</span> (or <span class="math inline">\(\theta\)</span>) moves</li>
+<li class="fragment">Excess work prices changing <span class="math inline">\(H(w)\)</span> / natural parameters too fast</li>
 </ul>
 </div>
 <aside class="notes">
-Callback to week 2–3 grouping. Crooks bound is the cost of moving coarse
-coordinates while micro-conditionals track their instantaneous
-equilibrium.
+Callback to week 2–3 grouping. Crooks bound is the cost of moving coarse coordinates while micro-conditionals track their instantaneous equilibrium.
 </aside>
 <div class="figure">
 <div id="crooks-path-sketch-figure" class="figure-frame">
@@ -569,17 +419,13 @@ equilibrium.
 </div>
 </div>
 <aside class="notes">
-Straight-line path in <span
-class="math inline">\((\mu,\sigma^2)\)</span> whose Fisher–Rao length
-Worksheet 3 computes.
+Straight-line path in <span class="math inline">\((\mu,\sigma^2)\)</span> whose Fisher–Rao length Worksheet 3 computes.
 </aside>
 <!-- /SNIPPET: _information/includes/crooks-thermodynamic-length.md -->
 <div>
 <ul>
-<li class="fragment">No-go: <span class="math inline">\(\langle
-W_{\mathrm{ex}}\rangle \ge \mathcal{L}^2/\tau\)</span></li>
-<li class="fragment">Prescription: length is measured with the Fisher
-metric</li>
+<li class="fragment">No-go: <span class="math inline">\(\langle W_{\mathrm{ex}}\rangle \ge \mathcal{L}^2/\tau\)</span></li>
+<li class="fragment">Prescription: length is measured with the Fisher metric</li>
 <li class="fragment">Intelligence question: week 8</li>
 </ul>
 </div>
@@ -588,18 +434,11 @@ metric</li>
 <h2>Define This Week</h2>
 <div>
 <ul>
-<li class="fragment">Fisher’s <span
-class="math inline">\(I(\theta)\)</span> versus Shannon’s <span
-class="math inline">\(H\)</span></li>
-<li class="fragment">Identifiability: Fréchet–Rao–Cramér /
-Cramér–Rao</li>
+<li class="fragment">Fisher’s <span class="math inline">\(I(\theta)\)</span> versus Shannon’s <span class="math inline">\(H\)</span></li>
+<li class="fragment">Identifiability: Fréchet–Rao–Cramér / Cramér–Rao</li>
 <li class="fragment">Schottky peak as Fisher peak (named only)</li>
-<li class="fragment">Fisher metric as a Riemannian metric; dual
-charts</li>
-<li class="fragment">Crooks (1999) <span
-class="math inline">\(\to\)</span> Jarzynski <span
-class="math inline">\(\to\)</span> <span class="math inline">\(\langle
-W\rangle\ge\Delta F\)</span></li>
+<li class="fragment">Fisher metric as a Riemannian metric; dual charts</li>
+<li class="fragment">Crooks (1999) <span class="math inline">\(\to\)</span> Jarzynski <span class="math inline">\(\to\)</span> <span class="math inline">\(\langle W\rangle\ge\Delta F\)</span></li>
 <li class="fragment">What is thermodynamic length?</li>
 </ul>
 </div>
@@ -608,8 +447,7 @@ W\rangle\ge\Delta F\)</span></li>
 <h2>After This Lecture</h2>
 <div>
 <ul>
-<li class="fragment">Worksheet 3 due today; Worksheet 4 released (due 1
-December)</li>
+<li class="fragment">Worksheet 3 due today; Worksheet 4 released (due 1 December)</li>
 <li class="fragment">LLM exercise: thermodynamic length, two sides</li>
 </ul>
 </div>
@@ -617,66 +455,41 @@ December)</li>
 <section id="further-reading" class="slide level2 scrollable">
 <h2 class="scrollable">Further Reading</h2>
 <ul>
-<li><p>Chapters 1–2 of <span class="citation"
-data-cites="Amari-information16">Amari (2016)</span></p></li>
-<li><p>fluctuation theorem (statement) of <span class="citation"
-data-cites="Crooks-fluctuation99">Crooks (1999)</span></p></li>
-<li><p>equality; second-law corollary of <span class="citation"
-data-cites="Jarzynski-nonequilibrium97">Jarzynski (1997)</span></p></li>
-<li><p>Chapter 17 (fluctuation theorem; stops before length) of <span
-class="citation" data-cites="Welling-generative26">Welling et al.
-(2026)</span></p></li>
-<li><p>the whole paper of <span class="citation"
-data-cites="Crooks-length07">Crooks (2007)</span></p></li>
+<li><p>Chapters 1–2 of <span class="citation" data-cites="Amari-information16">Amari (2016)</span></p></li>
+<li><p>fluctuation theorem (statement) of <span class="citation" data-cites="Crooks-fluctuation99">Crooks (1999)</span></p></li>
+<li><p>equality; second-law corollary of <span class="citation" data-cites="Jarzynski-nonequilibrium97">Jarzynski (1997)</span></p></li>
+<li><p>Chapter 17 (fluctuation theorem; stops before length) of <span class="citation" data-cites="Welling-generative26">Welling et al. (2026)</span></p></li>
+<li><p>the whole paper of <span class="citation" data-cites="Crooks-length07">Crooks (2007)</span></p></li>
 </ul>
 </section>
 <section id="thanks" class="slide level2 scrollable">
 <h2 class="scrollable">Thanks!</h2>
 <ul>
 <li>company: <a href="https://trent.ai">Trent AI</a></li>
-<li>book: <a
-href="https://www.penguin.co.uk/books/455130/the-atomic-human-by-lawrence-neil-d/9780241625248">The
-Atomic Human</a></li>
+<li>book: <a href="https://www.penguin.co.uk/books/455130/the-atomic-human-by-lawrence-neil-d/9780241625248">The Atomic Human</a></li>
 <li>twitter: <a href="https://twitter.com/lawrennd">@lawrennd</a></li>
 <li><a href="https://the-atomic-human.ai">The Atomic Human</a></li>
-<li>newspaper: <a
-href="http://www.theguardian.com/profile/neil-lawrence">Guardian Profile
-Page</a></li>
-<li>blog: <a
-href="http://inverseprobability.com/blog.html">http://inverseprobability.com</a></li>
+<li>newspaper: <a href="http://www.theguardian.com/profile/neil-lawrence">Guardian Profile Page</a></li>
+<li>blog: <a href="http://inverseprobability.com/blog.html">http://inverseprobability.com</a></li>
 </ul>
 </section>
 <section id="references" class="slide level2 unnumbered scrollable">
 <h2 class="unnumbered scrollable">References</h2>
-<div id="refs" class="references csl-bib-body hanging-indent"
-role="list">
-<div id="ref-Amari-information16" class="csl-entry" role="listitem">
-Amari, S., 2016. Information geometry and its applications, Applied
-mathematical sciences. Springer, Tokyo. <a
-href="https://doi.org/10.1007/978-4-431-55978-8">https://doi.org/10.1007/978-4-431-55978-8</a>
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-Amari-information16" class="csl-entry" role="doc-biblioentry">
+Amari, S., 2016. Information geometry and its applications, Applied mathematical sciences. Springer, Tokyo. <a href="https://doi.org/10.1007/978-4-431-55978-8">https://doi.org/10.1007/978-4-431-55978-8</a>
 </div>
-<div id="ref-Crooks-length07" class="csl-entry" role="listitem">
-Crooks, G.E., 2007. Measuring thermodynamic length. Phys. Rev. Lett. 99,
-100602. <a
-href="https://doi.org/10.1103/PhysRevLett.99.100602">https://doi.org/10.1103/PhysRevLett.99.100602</a>
+<div id="ref-Crooks-length07" class="csl-entry" role="doc-biblioentry">
+Crooks, G.E., 2007. Measuring thermodynamic length. Phys. Rev. Lett. 99, 100602. <a href="https://doi.org/10.1103/PhysRevLett.99.100602">https://doi.org/10.1103/PhysRevLett.99.100602</a>
 </div>
-<div id="ref-Crooks-fluctuation99" class="csl-entry" role="listitem">
-Crooks, G.E., 1999. Entropy production fluctuation theorem and the
-nonequilibrium work relation for free energy differences. Phys. Rev. E
-60, 2721–2726. <a
-href="https://doi.org/10.1103/PhysRevE.60.2721">https://doi.org/10.1103/PhysRevE.60.2721</a>
+<div id="ref-Crooks-fluctuation99" class="csl-entry" role="doc-biblioentry">
+Crooks, G.E., 1999. Entropy production fluctuation theorem and the nonequilibrium work relation for free energy differences. Phys. Rev. E 60, 2721–2726. <a href="https://doi.org/10.1103/PhysRevE.60.2721">https://doi.org/10.1103/PhysRevE.60.2721</a>
 </div>
-<div id="ref-Jarzynski-nonequilibrium97" class="csl-entry"
-role="listitem">
-Jarzynski, C., 1997. Nonequilibrium equality for free energy
-differences. Physical Review Letters 78, 2690–2693. <a
-href="https://doi.org/10.1103/PhysRevLett.78.2690">https://doi.org/10.1103/PhysRevLett.78.2690</a>
+<div id="ref-Jarzynski-nonequilibrium97" class="csl-entry" role="doc-biblioentry">
+Jarzynski, C., 1997. Nonequilibrium equality for free energy differences. Physical Review Letters 78, 2690–2693. <a href="https://doi.org/10.1103/PhysRevLett.78.2690">https://doi.org/10.1103/PhysRevLett.78.2690</a>
 </div>
-<div id="ref-Welling-generative26" class="csl-entry" role="listitem">
-Welling, M., Lu, S., Holdijk, L., 2026. <a
-href="https://www.cambridge.org/core/books/generative-ai-and-stochastic-thermodynamics/A462AB4186719C2D4EBCC1F58A5D5764">Generative
-AI and stochastic thermodynamics: A tale of free energies</a>. Cambridge
-University Press, Cambridge, U.K.
+<div id="ref-Welling-generative26" class="csl-entry" role="doc-biblioentry">
+Welling, M., Lu, S., Holdijk, L., 2026. Generative AI and stochastic thermodynamics: A tale of free energies. Cambridge University Press, Cambridge, U.K.
 </div>
 </div>
 </section>
@@ -691,39 +504,10 @@ University Press, Cambridge, U.K.
       // Full list of configuration options available at:
       // https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
-        // Display controls in the bottom right corner
-        controls: true,
-        // Display a presentation progress bar
-        progress: true,
         // Push each slide change to the browser history
         history: true,
-        // Enable keyboard shortcuts for navigation
-        keyboard: true,
-        // Enable the slide overview mode
-        overview: true,
-        // Vertical centering of slides
-        center: true,
-        // Enables touch navigation on devices with touch input
-        touch: true,
-        // Turns fragments on and off globally
-        fragments: true,
-        // Flags if we should show a help overlay when the questionmark
-        // key is pressed
-        help: true,
-        // Number of milliseconds between automatically proceeding to the
-        // next slide, disabled when set to 0, this value can be overwritten
-        // by using a data-autoslide attribute on your slides
-        autoSlide: 0,
-        // Stop auto-sliding after user input
-        autoSlideStoppable: true,
         // Transition style
         transition: 'None', // none/fade/slide/convex/concave/zoom
-        // Transition speed
-        transitionSpeed: 'default', // default/fast/slow
-        // Transition style for full page slide backgrounds
-        backgroundTransition: 'fade', // none/fade/slide/convex/concave/zoom
-        // Number of slides away from the current that are visible
-        viewDistance: 3,
         math: {
           mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js',
           config: 'TeX-AMS_HTML-full',
