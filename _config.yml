@@ -114,7 +114,11 @@ exclude:
   - ai-requirements/
   - tenets/
   - docs/
-  - scripts/
+  # Keep instructor tooling out of Pages; publish slide runtimes
+  # (scripts/timer, scripts/ballworld, …) that slides load via scriptsdir.
+  - scripts/vibecourse/
+  - scripts/quiz_banks/
+  - scripts/whats_next.py
   - test/
   - assessments/handouts/worksheet1-dialogue-template.md
   - assessments/handouts/worksheet1-reflection-template.md
