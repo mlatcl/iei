@@ -191,7 +191,7 @@ So in other words we are asking you to take on the role of Socrates in these con
 \slidesincremental{
 * $p_i \propto e^{-\beta E_i}$ with coldness $\beta = 1/kT$
 * Normaliser $Z=\sum_i e^{-\beta E_i}$, so $p_i = e^{-\beta E_i}/Z$
-* Week 2: name Gibbs, account with free energy $F=U-TS$; Carnot--Clausius history; potential $\to$ kinetic $\to$ HMC
+* Week 2: Hydrodynamica / entropy bridge / embodiment; Week 3 clears Gibbs / $F$ / HMC then Shannon
 }
 
 \speakernotes{Do not derive Lagrange multipliers today. State the formula so Worksheet 1 has a concrete claim to open and then press. Students should leave curious about why *this* exponential, what $\beta$ means, and whether entropy here is a constraint or a recipe. Point back to cross-entropy / BM pairwise energy if they ask what $E$ is. Hamiltonian / HMC demos wait for lecture 2.}
@@ -218,7 +218,7 @@ So in other words we are asking you to take on the role of Socrates in these con
 \slidesincremental{
 * Why Laplace talks of molecules before atoms are settled
 * Bernoulli's assumptions; ensemble as coarse-graining
-* Entropy bridge; embodiment; Gibbs--Boltzmann and free energy
+* Entropy bridge; embodiment (Gibbs / $F$ / HMC spill to Week 3)
 }
 
 \speakernotes{Cliffhanger only. Do not open the Hydrodynamica plates or the billiards demo today.}
@@ -239,7 +239,7 @@ So in other words we are asking you to take on the role of Socrates in these con
 \slidesincremental{
 * Worksheet 1 released; due 20 October (Shannon naming dialogue + handwritten reflection)
 * Quiz 1 next week: probability and Week 1 energy seeds
-* Then: Hydrodynamica → entropy → free energy
+* Then: Hydrodynamica → entropy bridge → embodiment
 }
 
 \reading

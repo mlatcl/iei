@@ -40,36 +40,37 @@ Class tests examine the *applied* form of the define-stage questions, on a new e
 
 ## Lecture 2 — 20 October — Boltzmann and Free Energy
 
-Quiz 1 occupies the first ten minutes (probability and Week 1 energy seeds). Then Laplace / Bernoulli / ensemble, Hydrodynamica and the entropy bridge, embodiment, the information game / MacKay / die coarse-graining, then Gibbs--Boltzmann, free energy, and HMC. Bath and Schottky move to Week 3.
+Quiz 1 occupies the first ten minutes (probability and Week 1 energy seeds). Then Laplace / Bernoulli / ensemble, Hydrodynamica and the entropy bridge (distributions; continuous / relative entropy named), and embodiment (*Atomic Human*). As delivered we stop there --- overrun. Die / MacKay / Gibbs / $F$ / HMC open Week 3.
 
 **Define this week**
 
 - How was entropy discovered?
 - Who were Carnot and Clausius, and what did each contribute?
 - What are the information constraints on a human? (bandwidth, first cut)
-- Die coarse-graining / grouping: $H=H(w)+\sum_i w_i H(p_i)$
-- What is the Gibbs--Boltzmann distribution (canonical ensemble)?
-- How do internal energy, entropy, and Helmholtz free energy enter $p_i$?
-- Loss as potential $V$; Hamiltonian $H=K+V$; HMC (named)
+- Continuous entropy versus relative entropy / KL (named; formalised Week 3)
 
 **Named, not yet answered**
 
 - How is entropy understood today?
-- What is the Legendre transform? (you have written $F = U - TS$)
-- What is a thermodynamic bath? (Week 3)
-- What is Schottky's anomaly? (Week 3)
+- Die coarse-graining / grouping (Week 3)
+- What is the Gibbs--Boltzmann distribution? Free energy $F=U-TS$? (Week 3)
+- Loss as potential $V$; HMC (Week 3)
+- What is the Legendre transform?
+- What is a thermodynamic bath? Schottky's anomaly? (Week 3)
 - Shannon entropy versus differential entropy? (full contrast: week 6)
 
 ## Lecture 3 — 27 October — Shannon Entropy
 
-Shannon $H$, Dasher, $Z$, KL / differential entropy, then bath / Schottky / finite time (shifted from Week 2).
+Week 2 carry-over first (die / MacKay / Gibbs / $F$ / HMC), then Shannon $H$, Dasher, $Z$, KL / differential entropy, then bath / Schottky / finite time.
 
 **Define this week**
 
+- Die coarse-graining / grouping: $H=H(w)+\sum_i w_i H(p_i)$
+- What is the Gibbs--Boltzmann distribution (canonical ensemble)?
+- How do internal energy, entropy, and Helmholtz free energy enter $p_i$?
+- Loss as potential $V$; Hamiltonian $H=K+V$; HMC (named)
 - Why is entropy a sensible measure of information?
 - What is the chain rule of entropy?
-- What is mutual information? (definition from the chain rule)
-- What is Shannon's channel capacity theorem? (statement)
 - What is the difference between equilibrium and non-equilibrium thermodynamics? (first cut)
 - What is a thermodynamic bath?
 - What is Schottky's anomaly?
@@ -77,9 +78,10 @@ Shannon $H$, Dasher, $Z$, KL / differential entropy, then bath / Schottky / fini
 
 **Named, not yet answered**
 
-- What is the data processing inequality? (statement today; proof week 8)
+- What is mutual information? / channel capacity? / DPI? (name if time; proof week 8)
 - What is the information bottleneck? (week 8)
 - How is entropy understood today? (Shannon alone is not the intended answer)
+- What is the Legendre transform? (you have written $F = U - TS$)
 - Shannon entropy versus differential entropy? (full contrast: week 6)
 - Purely entropic Schottky reading (Week 8); thermodynamic length (Week 6)
 

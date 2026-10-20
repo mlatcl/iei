@@ -175,7 +175,7 @@ reading:
 
 \speakernotes{Operational bridge before Landauer. Write $H(M)=\ln 2$ next to $k_BT\ln 2$. Students should see one number in two readings.}
 
-\notes{Szilard (1929): partition, measure which side, expand from $V_0/2$ to $V_0$ against a thermal bath. For one molecule the work is $k_BT\ln 2$. If the outcome is equiprobable, $H(M)=\ln 2$ nats and $W_{\mathrm{ext}} = k_B T H(M)$. This is the first link in the chain from Shannon bits (week 2) to Landauer's joules (next section).}
+\notes{Szilard (1929): partition, measure which side, expand from $V_0/2$ to $V_0$ against a thermal bath. For one molecule the work is $k_BT\ln 2$. If the outcome is equiprobable, $H(M)=\ln 2$ nats and $W_{\mathrm{ext}} = k_B T H(M)$. This is the first link in the chain from Shannon bits (weeks 2--3) to Landauer's joules (next section).}
 
 \newslides{Feynman's Piston Chain}
 

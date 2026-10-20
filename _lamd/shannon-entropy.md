@@ -7,19 +7,17 @@ venue: FW26, William Gates Building
 room: FW26
 transition: None
 abstract: >
-  Shannon entropy as a measure of uncertainty and its formal link to
-  thermodynamic entropy; arithmetic coding and Dasher; the partition function
-  as a generating function; then KL divergence and differential entropy under
-  change of variables. Mutual information, channel capacity, and the
-  data-processing inequality are stated (proved in week 8). The session closes
-  with the thermodynamic bath, Schottky's anomaly, and finite-time dissipation
-  --- material shifted forward from Week 2.
+  Week 2 stopped at embodiment as delivered: we open with that unfinished queue
+  (information game / MacKay / die coarse-graining; Gibbs--Boltzmann; free energy
+  $F=U-TS$; HMC), then Shannon entropy, arithmetic coding and Dasher, the
+  partition function as a generating function, KL / differential entropy, and
+  finally bath / Schottky / finite-time dissipation.
 author:
 - given: Neil D.
   family: Lawrence
   institution: University of Cambridge
   url: http://inverseprobability.com
-outcomes: [LO2, LO3]
+outcomes: [LO1, LO2, LO3]
 duration_hours: 2
 type: lecture
 in_class_test: null
@@ -38,8 +36,8 @@ reading:
     estimated_hours: 2
   - title: "Thermodynamics and an Introduction to Thermostatistics"
     author: "Callen"
-    chapter: "Chapter 16"
-    estimated_hours: 1
+    chapter: "Chapters 1–4, 5–6 (free energy); Chapter 16 (Schottky)"
+    estimated_hours: 2
     required: false
   - title: "Generative AI and Stochastic Thermodynamics"
     author: "Welling, Lu and Holdijk"
@@ -48,49 +46,156 @@ reading:
     required: false
 ---
 
-\notes{No class test today. Boltzmann, free energy, and die coarse-graining were last week. Today: Shannon $H$, $Z$ as a generating function, KL / differential entropy, then bath / Schottky / finite time (shifted from Week 2).}
+\notes{No class test today. Week 2 stopped at embodiment: open with die / MacKay / Gibbs / $F$ / HMC, then Shannon $H$, $Z$, KL / differential entropy, then bath / Schottky / finite time. Honest note: this is a packed session --- prioritise carry-over and Shannon axioms if time runs short.}
 
 \subsection{This Session}
 
 \slidesincremental{
+* Finish Week 2: die / MacKay → Gibbs / $F$ → HMC
 * Shannon $H$; Boltzmann $S = kH$
-* Arithmetic coding → Dasher: $H$ as bits, $p$ as the next letter
-* Partition function as a generating function; local equilibrium
-* $\KL{\cdot}{\cdot}$; Maxwell component vs speed; $I$, capacity, DPI (statements)
-* Bath; Schottky peak; finite-time dissipation named
+* Arithmetic coding → Dasher; $Z$; $\KL{\cdot}{\cdot}$
+* Bath; Schottky; finite-time dissipation named
 }
 
 \notes{
-**Time plan (120 minutes)**
+**Time plan (120 minutes; crowded)**
 
 | Minutes | Block |
 |--------:|-------|
-| 0–10 | Recap Week 2 (Gibbs / $F$ / die grouping); preview Maxwell (next week) |
-| 10–35 | Shannon axioms; Wiener from Gibbs; equivalence to Boltzmann |
-| 35–50 | Arithmetic coding (MacKay Ch.~6) then Dasher |
-| 50–60 | Break |
-| 60–85 | $Z$ as generating function; KL; Maxwell component vs speed; $h$ / binning / reparametrisation; local equilibrium |
-| 85–100 | $I$, capacity, DPI (statements); three framings |
-| 100–120 | Bath; Schottky; finite-time naming |
+| 0–25 | Week 2 carry-over: info game / MacKay / die grouping |
+| 25–45 | Gibbs--Boltzmann; $F=U-TS$; HMC (compressed if needed) |
+| 45–55 | Break |
+| 55–80 | Shannon axioms; $S=kH$; arithmetic coding / Dasher |
+| 80–100 | $Z$; KL; differential entropy / Maxwell Jacobian; local equilibrium |
+| 100–120 | Bath; Schottky; finite-time naming (statements; $I$/capacity if time) |
 
 }
 
-\newslides{From Lecture 1}
+\subsection{Week 2 Carry-Over}
 
-\slides{Lecture 1–2 counted human communication in Shannon's bits — a bottleneck on how fast thought can leave the body.}
+\notes{As delivered, Week 2 stopped at embodiment. Open with the unfinished queue: information game / MacKay / die coarse-graining and grouping, then Gibbs--Boltzmann, free energy $F=U-TS$, and HMC. Shannon axioms follow.}
+
+\newslide{Finish Week 2 First}
+
+\slides{Week 2 stopped at *Atomic Human* / embodiment. Today we clear that queue before Shannon.}
 
 \slidesincremental{
-* Today: derive $H$ and connect $S = kH$
+* Info game / MacKay / die coarse-graining
+* Gibbs--Boltzmann; $F=U-TS$; HMC
+* Then: Shannon $H$, $Z$, Schottky
+}
+
+\include{_information/includes/information-game-guessing.md}
+
+\include{_information/includes/mackay-weighing-problem.md}
+
+\include{_information/includes/die-coarse-graining.md}
+
+\include{_information/includes/entropy-grouping-composition.md}
+
+\include{_information/includes/coarse-graining-intelligence.md}
+
+\include{_information/includes/grouping-static-vs-ensemble.md}
+
+
+\speakernotes{Grouping prepares the chain rule. Axiomatic $H$ follows after Gibbs / $F$ / HMC.}
+
+\subsection{ML to Thermodynamics}
+
+\notes{Week 1 seeded the occupation $p_i \propto e^{-\beta E_i}$; Week 2 stopped at embodiment. We pick up Gibbs and free energy here before Shannon. From a stationary distribution with given energy we write the *Gibbs distribution*,
+$$
+p_i = \frac{e^{-\beta E_i}}{Z} \quad Z = \sum_i e^{-\beta E_i}.
+$$
+Boltzmann came at energy and entropy from the perspective of thermodynamics, Clausius and Carnot, but today we will show the relationship between this stationary (and equilibrium) distribution and the macroscopic formulae of Mayer, Kelvin, Joule, Helmholtz, Clausius and Carnot. We go deeper into Boltzmann's (and Maxwell, Gibbs and Einstein) microscopic or *ensemble* interpretation of this equation, and a derivation that that underpins the famous equation
+$$
+U = W + TS
+$$
+where $U=\expSamp{E}$ is total energy (or inner energy), $F$ is the free engergy, $T$ is temperature and $S$ is physical entropy. Here what we mean by physical entropy, is the translation of dimensionless energy, $H$, into physical units of Joules per degree through Boltzmann's constant, $k_B$, i.e. $k_B H = -k_B \sum_i p_i \log p_i$.}
+
+
+\include{_iei/includes/iei-notebook-setup.md}
+
+\include{_physics/includes/clausius-carnot-second-law.md}
+\include{_physics/includes/gibbs-distribution.md}
+\include{_physics/includes/coldness-and-temperature.md}
+
+\subsection{Free Energy Decomposition}
+
+<!-- SNIPPET: _physics/includes/free-energy-decomposition.md -->
+
+\newslides{Free Energy Accounting}
+
+\slides{Once $p_i = e^{-\beta E_i}/Z$ is fixed, thermodynamics is bookkeeping.}
+
+\slidesincremental{
+* Mean energy: $U = \langle E\rangle = \sum_i p_i E_i$
+* Entropy: $S = -k_B\sum_i p_i \log p_i$
+* Helmholtz free energy: $F = U - TS = -kT\log Z$
+}
+
+\speakernotes{LO1. Read $F=U-TS$ as available energy. Name the subtraction; Legendre transform waits for week 5.}
+
+\notes{Helmholtz free energy $F=U-TS=-kT\log Z$ accounts for what remains after the entropy takes its cut: $U$ is total energy, $TS$ is unavailable, $F$ is what the bath still allows you to do.}
+
+\setupplotcode{import numpy as np
+import matplotlib.pyplot as plt
+import mlai}
+
+\plotcode{energies = np.array([0.0, 1.0, 3.0])
+beta = np.linspace(0.05, 2.5, 200)
+Z = np.sum(np.exp(-beta[:, None] * energies), axis=1)
+p = np.exp(-beta[:, None] * energies) / Z[:, None]
+U = (p * energies).sum(axis=1)
+S = -np.sum(p * np.log(p + 1e-300), axis=1)
+F = U - S / beta
+F_check = -np.log(Z) / beta
+fig, ax = plt.subplots(figsize=(7, 4))
+ax.plot(beta, U, label='$U(\\beta)$')
+ax.plot(beta, S, label='$S(\\beta)$ (nats)')
+ax.plot(beta, F, label='$F(\\beta)$')
+ax.plot(beta, F_check, 'k--', alpha=0.5, label='$-\\ln Z/\\beta$')
+ax.set_xlabel(r'$\beta$')
+ax.legend()
+ax.set_title('Three-state system: energies $E\in\{0,1,3\}$')
+mlai.write_figure('three-state-thermo.svg', directory='\writeDiagramsDir/ml')}
+
+\figure{\includediagram{\diagramsDir/ml/three-state-thermo}{75%}}{$U$, $S$, and $F$ for the Worksheet 1 three-state system. Verify $F=-\log Z/\beta$ numerically.}{three-state-thermo}
+
+
+<!-- /SNIPPET: _physics/includes/free-energy-decomposition.md -->
+
+\slidesincremental{
+* Prescription: $p_i = e^{-\beta E_i}/Z$
+* Accounting: $F = U - TS$
+}
+
+\include{_ml/includes/from-loss-to-hamiltonian.md}
+
+\notes{Week 1 left the ML energies as *scores* and the Boltzmann seed as a static occupation. Those scores become potentials $V$: descent is motion on $V$; practice is stochastic; kinetic energy completes the Hamiltonian; HMC (Neal) is the sampler that uses both. The live demos use ``mlai.HamiltonianMonteCarlo``: leapfrog paths on a quadratic potential, then logistic regression with an SGD point estimate versus an HMC posterior cloud.}
+
+\include{_books/includes/welling-lu-holdijk.md}
+\include{_information/includes/welling-boltzmann-free-energy.md}
+
+\addreading{@Callen-thermostatistics85}{Chapters 1--4}
+\addreading{@Callen-thermostatistics85}{Chapters 5--6}
+
+\newslides{From Embodiment to Shannon}
+
+\slides{Week 2 counted human communication in Shannon's bits — a bottleneck on how fast thought can leave the body.}
+
+\slidesincremental{
+* Now: derive $H$ and connect $S = kH$
 * The bottleneck remains; we gain the measure behind the bit
 }
 
 \speakernotes{Callback before axioms. Bandwidth is not a thermodynamic no-go — it constrains intelligence. $H$ is the formal account of uncertainty in $p$.}
 
-\notes{Week 1 introduced Shannon's portrait and embodiment factors in bits per second. This lecture derives $H=-\sum_i p_i\log p_i$ and shows that Boltzmann entropy uses the same functional form. The human–machine bandwidth gap is a communication bottleneck; channel capacity is the analogous no-go on *codes*, not on embodiment.}
+\notes{Week 1--2 introduced Shannon's portrait and embodiment factors in bits per second. This half of the lecture derives $H=-\sum_i p_i\log p_i$ and shows that Boltzmann entropy uses the same functional form. The human–machine bandwidth gap is a communication bottleneck; channel capacity is the analogous no-go on *codes*, not on embodiment.}
 
 \include{_iei/includes/iei-notebook-setup.md}
 
 \subsection{Shannon Entropy}
+
 
 \include{_policy/includes/shannon-information.md}
 
@@ -255,16 +360,16 @@ mlai.write_figure('finite-time-sketch.svg', directory='\writeDiagramsDir/ml')}
 \subsection{Define This Week}
 
 \slidesincremental{
+* Die coarse-graining / grouping: $H=H(w)+\sum_i w_i H(p_i)$
+* What is the Gibbs--Boltzmann distribution? Free energy $F=U-TS$
+* Loss as potential $V$; Hamiltonian $H=K+V$; HMC (named)
 * Why is entropy a sensible measure of information?
 * Equilibrium versus non-equilibrium? (first cut)
-* Channel capacity? (statement)
-* Mutual information? (definition)
-* What is a thermodynamic bath?
-* What is Schottky's anomaly?
+* What is a thermodynamic bath? Schottky's anomaly?
 * Quasi-static $W=\Delta F$ versus finite-time excess (named)
 }
 
-\notes{Interpret later: how entropy is understood today (week 5, then week 8); chain rule as the source of multi-information (week 8). DPI is named today; define-stage proof is week 8. Equilibrium versus non-equilibrium (first cut) is the local-equilibrium grouping slide: within-group settled, $w$ free to move. Purely entropic Schottky reading waits for week 8; thermodynamic length for week 6.}
+\notes{Interpret later: how entropy is understood today (week 5, then week 8); chain rule as the source of multi-information (week 8). DPI / capacity / mutual information: name if time; define-stage proof of DPI is week 8. Equilibrium versus non-equilibrium (first cut) is the local-equilibrium grouping slide. Purely entropic Schottky reading waits for week 8; thermodynamic length for week 6. Legendre transform on $F$ waits for week 5.}
 
 \subsection{After This Lecture}
 
