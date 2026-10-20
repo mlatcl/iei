@@ -68,7 +68,7 @@ reading:
 | 40–55 | Arithmetic coding (MacKay Ch.~6) then Dasher |
 | 55–65 | Break |
 | 65–100 | Canonical ensemble; $Z$ as generating function; bath revisited |
-| 100–120 | KL-divergence; Chain rule; define $I(X;Y)$; capacity (statement); DPI (statement) |
+| 100–120 | KL; Maxwell component vs speed; $h$ under change of variables; binning; $D$ invariant; then $I$, capacity, DPI (statements) |
 
 }
 
@@ -116,6 +116,14 @@ reading:
 \addreading{@Callen-thermostatistics85}{Chapter 16}
 
 \include{_information/includes/kl-divergence-discrete-continuous.md}
+
+\notes{Week 2 left a forward pointer: Maxwell--Boltzmann components are Gaussian; speed is not. That Jacobian is the worked example for why differential entropy depends on coordinates and why relative entropy does not.}
+
+\include{_physics/includes/maxwell-boltzmann-components-vs-speed.md}
+\include{_information/includes/differential-entropy-change-of-variables.md}
+\include{_information/includes/differential-entropy-binning.md}
+\include{_information/includes/relative-entropy-reparametrisation.md}
+
 \include{_information/includes/channel-capacity-chain-rule.md}
 
 \newslide{}

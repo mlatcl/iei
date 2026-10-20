@@ -225,6 +225,10 @@ We use the minus sign so that high-energy states are down-weighted when $\theta_
 
 <!-- /SNIPPET: _physics/includes/maxent-to-exponential-family.md -->
 
+\include{_physics/includes/maxent-reference-measure-density-of-states.md}
+
+\speakernotes{Week 3 punchline returned: MaxEnt is $-D(f\|m)$ with $m$ declared. Ideal-gas $v^2$ is the density of states, not a rival to the Gaussian component law.}
+
 \addreading{@MacKay-information03}{Chapter 22}
 \addreading{@Cover:elements91}{Chapter 12}
 
