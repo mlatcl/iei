@@ -1,0 +1,140 @@
+# L172 marking hub (referia CIP-0010 / inline_list).
+# Discovered from the course root overview as a top entry. Lists class list
+# and worksheet/quiz marking tasks under this directory. Future week 4/6/8
+# quizzes appear automatically when their `_referia.yml` is added.
+#
+# Serve from course root (preferred) or here:
+#   referia serve --root ~/mlatcl/iei
+#   referia serve --root ~/mlatcl/iei/_marking
+
+referia_config_version: 2
+title: "L172 — marking"
+description: >
+  Class list and marking tasks for Information, Entropy and Intelligence.
+  Open a row to mark that assessment. New quiz/worksheet configs under
+  `_marking/` appear here automatically.
+date: 2026-10-01
+week: 0
+kind: marking
+list_order: 0
+current: true
+author: Neil D. Lawrence
+
+display:
+  layout: inline_list
+  detail_field: description
+  filter_defaults:
+    complete: any
+    _sort: list_order:asc
+    _group: task
+
+input:
+  type: yaml_directory
+  index: configPath
+  source:
+    - directory: .
+      glob: "**/_referia.yml"
+      recursive: true
+      include_start_directory: false
+  fields:
+    - title
+    - description
+    - date
+    - week
+    - kind
+    - task
+    - list_order
+    - referia_config_version
+    - current
+  store_fields:
+    directory: sourceDirectory
+    filename: sourceFile
+    root: sourceRoot
+  compute:
+    - field: configPath
+      function: render_liquid
+      args:
+        template: >-
+          {% if sourceDirectory == "." %}{{ sourceFile }}{% else %}{{ sourceDirectory }}/{{ sourceFile }}{% endif %}
+      row_args:
+        sourceDirectory: sourceDirectory
+        sourceFile: sourceFile
+    # Root-relative to the course serve root (`referia serve --root …/iei`).
+    # Do not liquid-recompute int fields (week, list_order) — liquid returns
+    # strings and pandas refuses to write them into int64 columns.
+    - field: config_url
+      function: render_liquid
+      args:
+        template: >-
+          {% if sourceDirectory == "." %}/_marking/{% else %}/_marking/{{ sourceDirectory }}/{% endif %}
+      row_args:
+        sourceDirectory: sourceDirectory
+    - field: today
+      function: today
+
+output:
+  type: yaml
+  index: configPath
+  filename: marking-hub.yml
+  directory: ./info
+  columns:
+    - complete
+
+review:
+  - type: Checkbox
+    field: complete
+    default: false
+    args:
+      description: Done
+  - type: SaveButton
+
+filters:
+  - field: complete
+    type: boolean
+    label: Done
+  - field: task
+    type: categorical
+    label: Task
+    values:
+      - class-list
+      - worksheet
+      - quiz
+      - summary
+      - other
+  - field: title
+    type: contains
+    label: Title
+  - field: date
+    type: date_range
+    label: Date
+  - field: week
+    type: categorical
+    label: Week
+    values:
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+      - "6"
+      - "7"
+      - "8"
+
+sort:
+  - field: list_order
+    order: asc
+  - field: week
+    order: asc
+  - field: date
+    order: asc
+
+viewer:
+  - liquid: |
+      ## Marking hub
+
+      Class list first, then worksheets and in-class quizzes by week. Open a
+      title to enter that review. When Week 4 / 6 / 8 quiz configs land under
+      `_marking/`, they show up here without changing this file.
+
+      Serve from the course root so links resolve:
+      `referia serve --root ~/mlatcl/iei` → open **L172 — marking**.

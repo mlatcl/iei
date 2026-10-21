@@ -1,0 +1,280 @@
+# Quiz 1 marking (paper multi-choice, week 2 lecture, 2026-10-20).
+#
+# Inherits the cohort from ../students. Enter 0/1 per item from the
+# paper scripts. Per-question answers load from answer_key.yml (gitignored
+# under _marking/**) and interleave with each mark slider on the review pane.
+# Script scans: submissions/L172_<crsid>_week2_quiz.pdf
+# Burst from assessments/2026-10-20_L172-information-entropy-and-intelligence-week-2-quiz.pdf
+# (2 pages each, students.csv order, skipping jrw208 who has no script).
+#
+# Serve from this directory:
+#   referia serve --root ~/mlatcl/iei/_marking/quiz1
+
+referia_config_version: 2
+strict_columns: false
+title: "L172 — Quiz 1 marking"
+date: 2026-10-20
+week: 2
+task: quiz
+list_order: 20
+kind: marking
+current: true
+author: Neil D. Lawrence
+description: >
+  Mark Quiz 1 (paper, 10 marks). Matching, T/F, fill-blank, and
+  multi-select items from week1-quiz-draft. No partial credit on selection.
+active: True
+due: 2026-10-20 12:00
+browser: Google Chrome.app
+
+inherit:
+  writable: False
+  directory: ../students
+  ignore:
+    - sortby
+    - review
+    - output
+    - scored
+    - title
+    - description
+    - due
+    - current
+    - timestamp_field
+    - created_field
+    - localpdf
+    - combinator
+    - display
+    - filters
+    - sort
+    - constants
+  append:
+    - mapping
+    - viewer
+
+# Instructor-only answer key (not checked in — see root .gitignore _marking/**).
+# Per-question fields (q1…q10) so review can interleave answer + mark.
+constants:
+  type: yaml
+  directory: .
+  filename: answer_key.yml
+  index: key
+
+sortby:
+  field: familyName
+  ascending: True
+
+timestamp_field: "Quiz 1 Timestamp"
+created_field: "Quiz 1 Created"
+
+mapping:
+  q1Score: Q1 Score
+  q2Score: Q2 Score
+  q3Score: Q3 Score
+  q4Score: Q4 Score
+  q5Score: Q5 Score
+  q6Score: Q6 Score
+  q7Score: Q7 Score
+  q8Score: Q8 Score
+  q9Score: Q9 Score
+  q10Score: Q10 Score
+  totalScore: Total Score
+  overallComment: Overall Comment
+
+output:
+  index: crsid
+  type: csv
+  directory: info
+  filename: quiz1_scores.csv
+  header: 0
+  columns:
+    - Q1 Score
+    - Q2 Score
+    - Q3 Score
+    - Q4 Score
+    - Q5 Score
+    - Q6 Score
+    - Q7 Score
+    - Q8 Score
+    - Q9 Score
+    - Q10 Score
+    - Total Score
+    - Overall Comment
+    - Quiz 1 Timestamp
+    - Quiz 1 Created
+  mapping:
+    q1Score: Q1 Score
+    q2Score: Q2 Score
+    q3Score: Q3 Score
+    q4Score: Q4 Score
+    q5Score: Q5 Score
+    q6Score: Q6 Score
+    q7Score: Q7 Score
+    q8Score: Q8 Score
+    q9Score: Q9 Score
+    q10Score: Q10 Score
+    totalScore: Total Score
+    overallComment: Overall Comment
+
+scored:
+  field: "Total Score"
+
+combinator:
+  - field: Total Score
+    liquid: |
+      {% assign a1 = q1Score | default: 0 %}
+      {% assign a2 = q2Score | default: 0 %}
+      {% assign a3 = q3Score | default: 0 %}
+      {% assign a4 = q4Score | default: 0 %}
+      {% assign a5 = q5Score | default: 0 %}
+      {% assign a6 = q6Score | default: 0 %}
+      {% assign a7 = q7Score | default: 0 %}
+      {% assign a8 = q8Score | default: 0 %}
+      {% assign a9 = q9Score | default: 0 %}
+      {% assign a10 = q10Score | default: 0 %}
+      {{ a1 | plus: a2 | plus: a3 | plus: a4 | plus: a5 | plus: a6 | plus: a7 | plus: a8 | plus: a9 | plus: a10 }}
+
+localpdf:
+  - directory: submissions
+    name: script
+    liquid: "L172_{{crsid}}_week2_quiz.pdf"
+  - directory: files
+    name: paper
+    liquid: "L172_week2_quiz.pdf"
+
+viewer:
+  - liquid: |
+      ## Quiz 1 (paper) — 2026-10-20
+
+      Assessment: [`assessments/in-class-quiz1.md`](../../assessments/in-class-quiz1.md).
+      Paper: `files/L172_week2_quiz.pdf`. **10 marks**, 1 each; no partial credit
+      on multi-select. Answers sit above each mark on the **review** pane
+      (from `answer_key.yml`).
+
+  - liquid: |
+      ### {{given}} {{family}} (`{{crsid}}`)
+
+      - Degree: {{degree}}{% if candidate %} · Candidate: {{candidate}}{% endif %}
+      - Script scan: `L172_{{crsid}}_week2_quiz.pdf` (under `submissions/`)
+      - Running total: **{{totalScore}}** / 10
+
+review:
+  - type: Markdown
+    liquid: |
+      {{ preamble }}
+  - type: Markdown
+    liquid: |
+      {{ q1 }}
+  - type: IntSlider
+    field: Q1 Score
+    args:
+      min: 0
+      max: 1
+      step: 1
+      value: 0
+      description: "Q1 Matching"
+  - type: Markdown
+    liquid: |
+      {{ q2 }}
+  - type: IntSlider
+    field: Q2 Score
+    args:
+      min: 0
+      max: 1
+      step: 1
+      value: 0
+      description: "Q2 T/F"
+  - type: Markdown
+    liquid: |
+      {{ q3 }}
+  - type: IntSlider
+    field: Q3 Score
+    args:
+      min: 0
+      max: 1
+      step: 1
+      value: 0
+      description: "Q3 Blank"
+  - type: Markdown
+    liquid: |
+      {{ q4 }}
+  - type: IntSlider
+    field: Q4 Score
+    args:
+      min: 0
+      max: 1
+      step: 1
+      value: 0
+      description: "Q4 Framing"
+  - type: Markdown
+    liquid: |
+      {{ q5 }}
+  - type: IntSlider
+    field: Q5 Score
+    args:
+      min: 0
+      max: 1
+      step: 1
+      value: 0
+      description: "Q5 Z"
+  - type: Markdown
+    liquid: |
+      {{ q6 }}
+  - type: IntSlider
+    field: Q6 Score
+    args:
+      min: 0
+      max: 1
+      step: 1
+      value: 0
+      description: "Q6 Energy"
+  - type: Markdown
+    liquid: |
+      {{ q7 }}
+  - type: IntSlider
+    field: Q7 Score
+    args:
+      min: 0
+      max: 1
+      step: 1
+      value: 0
+      description: "Q7 Bayes"
+  - type: Markdown
+    liquid: |
+      {{ q8 }}
+  - type: IntSlider
+    field: Q8 Score
+    args:
+      min: 0
+      max: 1
+      step: 1
+      value: 0
+      description: "Q8 Demon/gremlin"
+  - type: Markdown
+    liquid: |
+      {{ q9 }}
+  - type: IntSlider
+    field: Q9 Score
+    args:
+      min: 0
+      max: 1
+      step: 1
+      value: 0
+      description: "Q9 Prob rules"
+  - type: Markdown
+    liquid: |
+      {{ q10 }}
+  - type: IntSlider
+    field: Q10 Score
+    args:
+      min: 0
+      max: 1
+      step: 1
+      value: 0
+      description: "Q10 Boltzmann"
+  - type: CriterionComment
+    prefix: Overall
+    liquid: |
+      #### Overall
+
+      Optional note (illegible script, absent, auditor, etc.).
+  - type: SaveButton

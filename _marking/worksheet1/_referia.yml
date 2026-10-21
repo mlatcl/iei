@@ -1,0 +1,202 @@
+# Worksheet 1 marking — Socratic dialogue (markdown) + handwritten reflection (PDF).
+#
+# Inherits the cohort from ../students. Dialogues are joined from
+# submissions/*_dialogue.md (frontmatter + body). Reflection scans are
+# L172_<crsid>_worksheet1_reflection.pdf under submissions/. Hand-ins
+# burst from assessments/2026-10-20_l172_handwritten-reflections.pdf
+# (ljt63, cl2103, dd710 replacement, bb755, sem239, chc79; 2 pages each).
+#
+# Serve from this directory:
+#   referia serve --root ~/mlatcl/iei/_marking/worksheet1
+
+referia_config_version: 2
+strict_columns: false
+title: "L172 — Worksheet 1 marking"
+date: 2026-10-20
+week: 1
+task: worksheet
+list_order: 10
+kind: marking
+current: true
+author: Neil D. Lawrence
+description: >
+  Mark Worksheet 1: Socratic dialogue on the history of entropy (curiosity,
+  skepticism) plus handwritten reflection scan. 15 marks total (5+5+5).
+active: True
+due: 2026-10-20 10:00
+browser: Google Chrome.app
+inherit:
+  writable: False
+  directory: ../students
+  ignore:
+    - sortby
+    - review
+    - output
+    - scored
+    - title
+    - description
+    - due
+    - current
+    - timestamp_field
+    - created_field
+    - localpdf
+    - display
+    - filters
+    - sort
+  append:
+    - mapping
+    - viewer
+
+sortby:
+  field: familyName
+  ascending: True
+
+timestamp_field: "Worksheet 1 Timestamp"
+created_field: "Worksheet 1 Created"
+
+mapping:
+  curiosityComment: Curiosity Comment
+  curiosityScore: Curiosity Score
+  skepticismComment: Skepticism Comment
+  skepticismScore: Skepticism Score
+  reflectionComment: Reflection Comment
+  reflectionScore: Reflection Score
+  overallComment: Overall Comment
+  llmProvider: llm_provider
+  llmModel: llm_model
+  llmInterface: llm_interface
+  conversationDate: conversation_date
+  nExchanges: n_exchanges
+  dialogueContent: content
+
+# Join submitted dialogues (inner: only students with a dialogue file).
+# Reflection PDFs are resolved by path, not joined, so missing scans still show.
+additional:
+  index: crsid
+  type: markdown_directory
+  source:
+    - directory: submissions
+      glob: "*_dialogue.md"
+  fields:
+    - crsid
+    - worksheet
+    - title
+    - llm_provider
+    - llm_model
+    - llm_interface
+    - conversation_date
+    - n_exchanges
+    - content
+  store_fields:
+    directory: dialogueDirectory
+    filename: dialogueFilename
+    root: dialogueRoot
+
+output:
+  index: crsid
+  type: csv
+  directory: info
+  filename: worksheet1_scores.csv
+  header: 0
+  columns:
+    - Curiosity Comment
+    - Curiosity Score
+    - Skepticism Comment
+    - Skepticism Score
+    - Reflection Comment
+    - Reflection Score
+    - Overall Comment
+    - Worksheet 1 Timestamp
+    - Worksheet 1 Created
+  mapping:
+    curiosityComment: Curiosity Comment
+    curiosityScore: Curiosity Score
+    skepticismComment: Skepticism Comment
+    skepticismScore: Skepticism Score
+    reflectionComment: Reflection Comment
+    reflectionScore: Reflection Score
+    overallComment: Overall Comment
+
+scored:
+  field: "Overall Comment"
+
+localpdf:
+  - directory: submissions
+    name: reflection
+    liquid: "L172_{{crsid}}_worksheet1_reflection.pdf"
+
+viewer:
+  - liquid: |
+      ## Worksheet 1 — Socratic dialogue on entropy
+
+      Assessment: [`assessments/mini-project-worksheet1.md`](../../assessments/mini-project-worksheet1.md).
+      Brief: curiosity (ex. 1+), skepticism vs Tolman / Wiener / Gibbs (ex. 2+),
+      handwritten reflection. **15 marks** (5 + 5 + 5).
+
+      - **60–74%**: ten turns; mandated pair attempted; thin skepticism; reflection restates.
+      - **75–79%**: clear arc naming → Tolman/Wiener; reflection names a concrete gap.
+      - **80–89%**: later probes expose a non-obvious inconsistency; reflection links to theme.
+      - **90–100%**: dialogue + reflection show synthesis beyond the model’s answers.
+
+  - liquid: |
+      ### {{given}} {{family}} (`{{crsid}}`)
+
+      - Degree: {{degree}}{% if candidate %} · Candidate: {{candidate}}{% endif %}
+      - Model: {{llm_provider}} / **{{llm_model}}** ({{llm_interface}})
+      - Conversation date: {{conversation_date}}
+      - Exchanges declared: {{n_exchanges}}
+      - Dialogue file: `{{dialogueFilename}}`
+      - Reflection PDF: `L172_{{crsid}}_worksheet1_reflection.pdf`
+
+  - liquid: |
+      {% if content %}
+      {{content}}
+      {% else %}
+      *No dialogue markdown joined for this student.*
+      {% endif %}
+    collapse:
+      headings: [LLM]
+      default: closed
+
+review:
+  - type: CriterionCommentScore
+    prefix: Curiosity
+    criterion: |
+      #### Curiosity (5)
+
+      Exchange 1 and later open questions invite substantive explanation;
+      not trivia or yes/no.
+    value: 3
+    min: 0
+    max: 5
+    step: 1
+  - type: CriterionCommentScore
+    prefix: Skepticism
+    criterion: |
+      #### Skepticism (5)
+
+      Exchange 2 presses anecdote against Tolman / Wiener / Gibbs; later
+      turns chase consequences or missing assumptions.
+    value: 3
+    min: 0
+    max: 5
+    step: 1
+  - type: CriterionCommentScore
+    prefix: Reflection
+    criterion: |
+      #### Reflection (5)
+
+      Handwritten scan only. Clear learning about the naming history and the
+      model’s limits; no-go vs recipe framing where relevant. Typed
+      reflections are not accepted.
+    value: 3
+    min: 0
+    max: 5
+    step: 1
+  - type: CriterionComment
+    prefix: Overall
+    liquid: |
+      #### Overall
+
+      Optional synthesis note (grade-band reading of the whole).
+  - type: SaveButton
