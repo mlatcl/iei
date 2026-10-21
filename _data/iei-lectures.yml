@@ -11,7 +11,7 @@
   status_modified: '2026-10-13 08:44:49.732374'
   status_created: '2026-10-13 08:44:49.732374'
 - sessionPath: _lamd/README.md
-- sessionPath: _lamd/boltzmann-free-energy.md
+- sessionPath: _lamd/ensemble-entropy-embodiment.md
   status: Draft
   status_modified: '2026-10-13 08:44:01.284173'
   status_created: '2026-10-13 08:44:01.284173'
@@ -44,7 +44,7 @@
   status_created: '2026-10-13 08:44:55.931683'
 - sessionPath: _lamd/sample-lecture.md
 - sessionPath: _lamd/sample-practical.md
-- sessionPath: _lamd/shannon-entropy.md
+- sessionPath: _lamd/free-energy-shannon-entropy.md
   status: Draft
   status_modified: '2026-10-13 08:44:03.167220'
   status_created: '2026-10-13 08:44:03.167220'
