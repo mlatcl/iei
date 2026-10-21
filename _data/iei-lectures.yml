@@ -48,3 +48,7 @@
   status: Draft
   status_modified: '2026-10-13 08:44:03.167220'
   status_created: '2026-10-13 08:44:03.167220'
+- sessionPath: _marking/_referia.yml
+  status: Delivered
+  status_modified: '2026-10-21 07:44:36.297226'
+  status_created: '2026-10-21 07:44:36.297226'

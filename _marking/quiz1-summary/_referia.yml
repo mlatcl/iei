@@ -1,0 +1,286 @@
+# Quiz 1 score summary — read-only gradebook over the marked cohort.
+#
+# Joins ../students with ../quiz1/info/quiz1_scores.csv (left). One-screen
+# inline_list plus a viewer table of totals / mean. Does not write marks —
+# edit scores in the quiz1 marking config.
+#
+# Serve from this directory or the course root:
+#   referia serve --root ~/mlatcl/iei/_marking/quiz1-summary
+#   referia serve --root ~/mlatcl/iei  → open via L172 — marking
+
+referia_config_version: 2
+strict_columns: false
+title: "L172 — Quiz 1 scores"
+date: 2026-10-20
+week: 2
+task: summary
+list_order: 21
+kind: marking
+current: true
+author: Neil D. Lawrence
+description: >
+  Cohort summary of Quiz 1 paper marks (10). Totals from
+  quiz1/info/quiz1_scores.csv joined to the class list. Read-only —
+  change marks in the quiz marking config. Feedback email lists
+  topic areas for missed items; it does not include marks.
+browser: Google Chrome.app
+
+display:
+  layout: inline_list
+  detail_field: description
+  filter_defaults:
+    _sort: family:asc
+    _group: directory
+
+# Explicit hstack so unmarked students stay visible (left join on scores).
+input:
+  type: hstack
+  index: crsid
+  specifications:
+    - type: csv
+      index: crsid
+      filename: students.csv
+      directory: ../students
+      header: 0
+    - type: csv
+      index: crsid
+      filename: quiz1_scores.csv
+      directory: ../quiz1/info
+      header: 0
+      how: left
+  compute:
+    - field: Name
+      function: render_liquid
+      args:
+        template: >-
+          {% capture index %}{% if familyName %}{{ familyName }} {% endif %}{% if givenName %}{{ givenName }}{% endif %}{% endcapture %}{{ index | strip | replace: ' ', '_' | replace: '.', '' }}
+      row_args:
+        givenName: given
+        familyName: family
+    # Prefer Total Score; if blank (combinator missed a save), sum Q1–Q10.
+    # Guard NaN from left-join misses (Liquid treats NaN as non-blank).
+    - field: totalDisplay
+      function: render_liquid
+      args:
+        template: >-
+          {% assign s = totalScore | append: "" | strip %}{% if s != blank and s != "nan" and s != "NaN" and s != "None" %}{{ s }}{% else %}{% assign t = 0 %}{% assign n = 0 %}{% assign a = q1Score | append: "" | strip %}{% if a != blank and a != "nan" and a != "NaN" %}{% assign t = t | plus: a %}{% assign n = n | plus: 1 %}{% endif %}{% assign a = q2Score | append: "" | strip %}{% if a != blank and a != "nan" and a != "NaN" %}{% assign t = t | plus: a %}{% assign n = n | plus: 1 %}{% endif %}{% assign a = q3Score | append: "" | strip %}{% if a != blank and a != "nan" and a != "NaN" %}{% assign t = t | plus: a %}{% assign n = n | plus: 1 %}{% endif %}{% assign a = q4Score | append: "" | strip %}{% if a != blank and a != "nan" and a != "NaN" %}{% assign t = t | plus: a %}{% assign n = n | plus: 1 %}{% endif %}{% assign a = q5Score | append: "" | strip %}{% if a != blank and a != "nan" and a != "NaN" %}{% assign t = t | plus: a %}{% assign n = n | plus: 1 %}{% endif %}{% assign a = q6Score | append: "" | strip %}{% if a != blank and a != "nan" and a != "NaN" %}{% assign t = t | plus: a %}{% assign n = n | plus: 1 %}{% endif %}{% assign a = q7Score | append: "" | strip %}{% if a != blank and a != "nan" and a != "NaN" %}{% assign t = t | plus: a %}{% assign n = n | plus: 1 %}{% endif %}{% assign a = q8Score | append: "" | strip %}{% if a != blank and a != "nan" and a != "NaN" %}{% assign t = t | plus: a %}{% assign n = n | plus: 1 %}{% endif %}{% assign a = q9Score | append: "" | strip %}{% if a != blank and a != "nan" and a != "NaN" %}{% assign t = t | plus: a %}{% assign n = n | plus: 1 %}{% endif %}{% assign a = q10Score | append: "" | strip %}{% if a != blank and a != "nan" and a != "NaN" %}{% assign t = t | plus: a %}{% assign n = n | plus: 1 %}{% endif %}{% if n > 0 %}{{ t }}{% endif %}{% endif %}
+      row_args:
+        totalScore: Total Score
+        q1Score: Q1 Score
+        q2Score: Q2 Score
+        q3Score: Q3 Score
+        q4Score: Q4 Score
+        q5Score: Q5 Score
+        q6Score: Q6 Score
+        q7Score: Q7 Score
+        q8Score: Q8 Score
+        q9Score: Q9 Score
+        q10Score: Q10 Score
+    - field: markedFlag
+      function: render_liquid
+      args:
+        template: >-
+          {% assign s = totalDisplay | append: "" | strip %}{% if s != blank %}yes{% else %}no{% endif %}
+      row_args:
+        totalDisplay: totalDisplay
+    # One topic area per missed item (score not 1 / 1.0). No marks in the text.
+    - field: needWork
+      function: render_liquid
+      args:
+        template: |
+          {% if markedFlag == "yes" %}{% assign a = q1Score | append: "" | strip %}{% if a != "1" and a != "1.0" %}* Named distributions (Poisson, Bernoulli, Gaussian, binomial)
+          {% endif %}{% assign a = q2Score | append: "" | strip %}{% if a != "1" and a != "1.0" %}* The multinomial as a generalisation of the binomial
+          {% endif %}{% assign a = q3Score | append: "" | strip %}{% if a != "1" and a != "1.0" %}* The curiosity-then-skepticism sequence
+          {% endif %}{% assign a = q4Score | append: "" | strip %}{% if a != "1" and a != "1.0" %}* Entropy as a limit versus probability as a prescription
+          {% endif %}{% assign a = q5Score | append: "" | strip %}{% if a != "1" and a != "1.0" %}* The partition function Z for a two-state system
+          {% endif %}{% assign a = q6Score | append: "" | strip %}{% if a != "1" and a != "1.0" %}* Energy as a machine-learning score
+          {% endif %}{% assign a = q7Score | append: "" | strip %}{% if a != "1" and a != "1.0" %}* What a Bayesian posterior needs (likelihoods and priors)
+          {% endif %}{% assign a = q8Score | append: "" | strip %}{% if a != "1" and a != "1.0" %}* Maxwell's demon, the gremlin, and incomplete knowledge
+          {% endif %}{% assign a = q9Score | append: "" | strip %}{% if a != "1" and a != "1.0" %}* The sum and product rules of probability
+          {% endif %}{% assign a = q10Score | append: "" | strip %}{% if a != "1" and a != "1.0" %}* Boltzmann weights and the partition function
+          {% endif %}{% endif %}
+      row_args:
+        markedFlag: markedFlag
+        q1Score: Q1 Score
+        q2Score: Q2 Score
+        q3Score: Q3 Score
+        q4Score: Q4 Score
+        q5Score: Q5 Score
+        q6Score: Q6 Score
+        q7Score: Q7 Score
+        q8Score: Q8 Score
+        q9Score: Q9 Score
+        q10Score: Q10 Score
+    - field: feedbackBody
+      function: render_liquid
+      args:
+        template: |
+          {% if markedFlag == "yes" %}I've looked at Quiz 1.
+
+          {% assign gaps = needWork | strip %}{% if gaps != blank %}Topics to revisit:
+
+          {{ needWork | strip }}
+          {% else %}You answered the quiz items correctly — no particular areas to flag from this paper.
+          {% endif %}{% endif %}
+      row_args:
+        markedFlag: markedFlag
+        needWork: needWork
+    - field: title
+      function: render_liquid
+      args:
+        template: >-
+          {{ family }}, {{ given }} ({{ crsid }})
+      row_args:
+        family: family
+        given: given
+        crsid: crsid
+    - field: description
+      function: render_liquid
+      args:
+        template: >-
+          {% assign s = totalDisplay | append: "" | strip %}{% if s != blank %}{{ s }} / 10{% else %}— unmarked{% endif %}{% if degree %} · {{ degree }}{% endif %}
+      row_args:
+        totalDisplay: totalDisplay
+        degree: degree
+  mapping:
+    givenName: given
+    familyName: family
+    Degree: degree
+    Email: email
+    Candidate: candidate
+    q1Score: Q1 Score
+    q2Score: Q2 Score
+    q3Score: Q3 Score
+    q4Score: Q4 Score
+    q5Score: Q5 Score
+    q6Score: Q6 Score
+    q7Score: Q7 Score
+    q8Score: Q8 Score
+    q9Score: Q9 Score
+    q10Score: Q10 Score
+    totalScore: Total Score
+    overallComment: Overall Comment
+
+# No write-back of marks — optional hub-style flags only.
+output:
+  type: yaml
+  index: crsid
+  filename: quiz1-summary.yml
+  directory: ./info
+  columns:
+    - noted
+    - emailSent
+
+sortby:
+  field: family
+  ascending: True
+
+viewer:
+  - liquid: |
+      ## Quiz 1 — score summary
+
+      Marks from [`quiz1/info/quiz1_scores.csv`](../quiz1/info/quiz1_scores.csv).
+      Edit individual papers in **L172 — Quiz 1 marking**.
+
+      {% assign sum = 0 %}{% assign n = 0 %}{% assign unmarked = 0 %}
+      {% for row in rows %}
+      {% assign s = row.totalDisplay | append: "" | strip %}
+      {% if s != blank and s != "nan" and s != "NaN" %}
+      {% assign sum = sum | plus: s %}
+      {% assign n = n | plus: 1 %}
+      {% else %}
+      {% assign unmarked = unmarked | plus: 1 %}
+      {% endif %}
+      {% endfor %}
+      {% if n > 0 %}
+      **Marked:** {{ n }} · **Mean:** {{ sum | times: 1.0 | divided_by: n | round: 2 }} / 10 · **Unmarked:** {{ unmarked }}
+      {% else %}
+      No marked scripts in the current filter.
+      {% endif %}
+
+  - liquid: |
+      ### Cohort
+
+      {% for row in rows %}
+      {% assign s = row.totalDisplay | append: "" | strip %}
+      - **{{ row.family }}, {{ row.given }}** (`{{ row.crsid }}`) — {% if s != blank and s != "nan" and s != "NaN" %}**{{ s }}** / 10{% else %}*unmarked*{% endif %}{% if row.degree %} · {{ row.degree }}{% endif %}
+      {% endfor %}
+
+  - liquid: |
+      ### {{ given }} {{ family }} (`{{ crsid }}`)
+
+      {% assign s = totalDisplay | append: "" | strip %}
+      - Total: {% if s != blank and s != "nan" and s != "NaN" %}**{{ s }}** / 10{% else %}*unmarked*{% endif %}
+      - Items: Q1 {% assign x = q1Score | append: "" %}{% if x != blank and x != "nan" and x != "NaN" %}{{ x }}{% else %}—{% endif %} · Q2 {% assign x = q2Score | append: "" %}{% if x != blank and x != "nan" and x != "NaN" %}{{ x }}{% else %}—{% endif %} · Q3 {% assign x = q3Score | append: "" %}{% if x != blank and x != "nan" and x != "NaN" %}{{ x }}{% else %}—{% endif %} · Q4 {% assign x = q4Score | append: "" %}{% if x != blank and x != "nan" and x != "NaN" %}{{ x }}{% else %}—{% endif %} · Q5 {% assign x = q5Score | append: "" %}{% if x != blank and x != "nan" and x != "NaN" %}{{ x }}{% else %}—{% endif %} · Q6 {% assign x = q6Score | append: "" %}{% if x != blank and x != "nan" and x != "NaN" %}{{ x }}{% else %}—{% endif %} · Q7 {% assign x = q7Score | append: "" %}{% if x != blank and x != "nan" and x != "NaN" %}{{ x }}{% else %}—{% endif %} · Q8 {% assign x = q8Score | append: "" %}{% if x != blank and x != "nan" and x != "NaN" %}{{ x }}{% else %}—{% endif %} · Q9 {% assign x = q9Score | append: "" %}{% if x != blank and x != "nan" and x != "NaN" %}{{ x }}{% else %}—{% endif %} · Q10 {% assign x = q10Score | append: "" %}{% if x != blank and x != "nan" and x != "NaN" %}{{ x }}{% else %}—{% endif %}
+      {% assign note = overallComment | append: "" | strip %}{% if note != blank and note != "nan" and note != "NaN" %}- Note: {{ note }}{% endif %}
+
+      {% assign fb = feedbackBody | strip %}
+      {% if fb != blank %}
+      #### Feedback email (no marks)
+
+      {{ feedbackBody }}
+      {% endif %}
+
+review:
+  - type: Checkbox
+    field: noted
+    default: false
+    args:
+      description: Noted
+  - type: Checkbox
+    field: emailSent
+    default: false
+    args:
+      description: Feedback email sent
+  - type: SaveButton
+
+documents:
+  - type: email
+    name: "Email feedback"
+    visible_if:
+      field: markedFlag
+      equals: "yes"
+    to:
+      liquid: "{{ email }}"
+    title:
+      liquid: "L172 Quiz 1 — feedback"
+    header:
+      liquid: |
+        Hi {{ given }},
+    body:
+      liquid: |
+        {{ feedbackBody }}
+    footer:
+      display: |
+        Best wishes,
+        Neil
+
+filters:
+  - field: markedFlag
+    type: categorical
+    label: Marked
+    values:
+      - "yes"
+      - "no"
+  - field: emailSent
+    type: boolean
+    label: Feedback email sent
+  - field: degree
+    type: categorical
+    label: Degree
+    values:
+      - MPhil
+      - Part III
+      - Auditor
+  - field: title
+    type: contains
+    label: Name
+  - field: crsid
+    type: contains
+    label: CRSid
+
+sort:
+  - field: family
+    order: asc
+  - field: given
+    order: asc

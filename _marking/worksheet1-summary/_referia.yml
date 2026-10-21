@@ -1,0 +1,268 @@
+# Worksheet 1 score summary — read-only gradebook over the marked cohort.
+#
+# Joins ../students with ../worksheet1/info/worksheet1_scores.csv (left).
+# One-screen inline_list plus a viewer table of totals / mean. Does not
+# write marks — edit scores in the worksheet1 marking config.
+#
+# Serve from this directory or the course root:
+#   referia serve --root ~/mlatcl/iei/_marking/worksheet1-summary
+#   referia serve --root ~/mlatcl/iei  → open via L172 — marking
+
+referia_config_version: 2
+strict_columns: false
+title: "L172 — Worksheet 1 scores"
+date: 2026-10-20
+week: 1
+task: summary
+list_order: 11
+kind: marking
+current: true
+author: Neil D. Lawrence
+description: >
+  Cohort summary of Worksheet 1 marks (15: curiosity 5, skepticism 5,
+  reflection 5). Totals from worksheet1/info/worksheet1_scores.csv joined
+  to the class list. Read-only — change marks in the worksheet marking
+  config. Feedback email includes worksheet comments only; it does not
+  include marks.
+browser: Google Chrome.app
+
+display:
+  layout: inline_list
+  detail_field: description
+  filter_defaults:
+    _sort: family:asc
+    _group: directory
+
+# Explicit hstack so unmarked students stay visible (left join on scores).
+input:
+  type: hstack
+  index: crsid
+  specifications:
+    - type: csv
+      index: crsid
+      filename: students.csv
+      directory: ../students
+      header: 0
+    - type: csv
+      index: crsid
+      filename: worksheet1_scores.csv
+      directory: ../worksheet1/info
+      header: 0
+      how: left
+  compute:
+    - field: Name
+      function: render_liquid
+      args:
+        template: >-
+          {% capture index %}{% if familyName %}{{ familyName }} {% endif %}{% if givenName %}{{ givenName }}{% endif %}{% endcapture %}{{ index | strip | replace: ' ', '_' | replace: '.', '' }}
+      row_args:
+        givenName: given
+        familyName: family
+    # Sum C+S+R when at least one component is present. Guard NaN from
+    # left-join misses (Liquid treats NaN as non-blank).
+    - field: totalDisplay
+      function: render_liquid
+      args:
+        template: >-
+          {% assign t = 0 %}{% assign n = 0 %}{% assign a = curiosityScore | append: "" | strip %}{% if a != blank and a != "nan" and a != "NaN" %}{% assign t = t | plus: a %}{% assign n = n | plus: 1 %}{% endif %}{% assign a = skepticismScore | append: "" | strip %}{% if a != blank and a != "nan" and a != "NaN" %}{% assign t = t | plus: a %}{% assign n = n | plus: 1 %}{% endif %}{% assign a = reflectionScore | append: "" | strip %}{% if a != blank and a != "nan" and a != "NaN" %}{% assign t = t | plus: a %}{% assign n = n | plus: 1 %}{% endif %}{% if n > 0 %}{{ t }}{% endif %}
+      row_args:
+        curiosityScore: Curiosity Score
+        skepticismScore: Skepticism Score
+        reflectionScore: Reflection Score
+    - field: markedFlag
+      function: render_liquid
+      args:
+        template: >-
+          {% assign s = totalDisplay | append: "" | strip %}{% if s != blank %}yes{% else %}no{% endif %}
+      row_args:
+        totalDisplay: totalDisplay
+    # Comment-only email body. Skip empty / NaN left-join cells. No marks.
+    - field: feedbackBody
+      function: render_liquid
+      args:
+        template: |
+          {% if markedFlag == "yes" %}I've looked at Worksheet 1.
+
+          {% assign any = 0 %}{% assign c = curiosityComment | append: "" | strip %}{% if c != blank and c != "nan" and c != "NaN" and c != "None" %}{% assign any = 1 %}
+          ### Curiosity
+
+          {{ curiosityComment }}
+
+          {% endif %}{% assign c = skepticismComment | append: "" | strip %}{% if c != blank and c != "nan" and c != "NaN" and c != "None" %}{% assign any = 1 %}
+          ### Skepticism
+
+          {{ skepticismComment }}
+
+          {% endif %}{% assign c = reflectionComment | append: "" | strip %}{% if c != blank and c != "nan" and c != "NaN" and c != "None" %}{% assign any = 1 %}
+          ### Reflection
+
+          {{ reflectionComment }}
+
+          {% endif %}{% assign c = overallComment | append: "" | strip %}{% if c != blank and c != "nan" and c != "NaN" and c != "None" %}{% assign any = 1 %}
+          ### Overall
+
+          {{ overallComment }}
+
+          {% endif %}{% if any == 0 %}I have no extra comments to add this time.
+          {% endif %}{% endif %}
+      row_args:
+        markedFlag: markedFlag
+        curiosityComment: Curiosity Comment
+        skepticismComment: Skepticism Comment
+        reflectionComment: Reflection Comment
+        overallComment: Overall Comment
+    - field: title
+      function: render_liquid
+      args:
+        template: >-
+          {{ family }}, {{ given }} ({{ crsid }})
+      row_args:
+        family: family
+        given: given
+        crsid: crsid
+    - field: description
+      function: render_liquid
+      args:
+        template: >-
+          {% assign s = totalDisplay | append: "" | strip %}{% if s != blank %}{{ s }} / 15{% else %}— unmarked{% endif %}{% if degree %} · {{ degree }}{% endif %}
+      row_args:
+        totalDisplay: totalDisplay
+        degree: degree
+  mapping:
+    givenName: given
+    familyName: family
+    Degree: degree
+    Email: email
+    Candidate: candidate
+    curiosityScore: Curiosity Score
+    skepticismScore: Skepticism Score
+    reflectionScore: Reflection Score
+    curiosityComment: Curiosity Comment
+    skepticismComment: Skepticism Comment
+    reflectionComment: Reflection Comment
+    overallComment: Overall Comment
+
+# No write-back of marks — optional hub-style flags only.
+output:
+  type: yaml
+  index: crsid
+  filename: worksheet1-summary.yml
+  directory: ./info
+  columns:
+    - noted
+    - emailSent
+
+sortby:
+  field: family
+  ascending: True
+
+viewer:
+  - liquid: |
+      ## Worksheet 1 — score summary
+
+      Marks from [`worksheet1/info/worksheet1_scores.csv`](../worksheet1/info/worksheet1_scores.csv).
+      Edit individual scripts in **L172 — Worksheet 1 marking**.
+      **15 marks** (curiosity 5 + skepticism 5 + reflection 5).
+
+      {% assign sum = 0 %}{% assign n = 0 %}{% assign unmarked = 0 %}
+      {% for row in rows %}
+      {% assign s = row.totalDisplay | append: "" | strip %}
+      {% if s != blank and s != "nan" and s != "NaN" %}
+      {% assign sum = sum | plus: s %}
+      {% assign n = n | plus: 1 %}
+      {% else %}
+      {% assign unmarked = unmarked | plus: 1 %}
+      {% endif %}
+      {% endfor %}
+      {% if n > 0 %}
+      **Marked:** {{ n }} · **Mean:** {{ sum | times: 1.0 | divided_by: n | round: 2 }} / 15 · **Unmarked:** {{ unmarked }}
+      {% else %}
+      No marked scripts in the current filter.
+      {% endif %}
+
+  - liquid: |
+      ### Cohort
+
+      {% for row in rows %}
+      {% assign s = row.totalDisplay | append: "" | strip %}
+      - **{{ row.family }}, {{ row.given }}** (`{{ row.crsid }}`) — {% if s != blank and s != "nan" and s != "NaN" %}**{{ s }}** / 15{% else %}*unmarked*{% endif %}{% if row.degree %} · {{ row.degree }}{% endif %}
+      {% endfor %}
+
+  - liquid: |
+      ### {{ given }} {{ family }} (`{{ crsid }}`)
+
+      {% assign s = totalDisplay | append: "" | strip %}
+      - Total: {% if s != blank and s != "nan" and s != "NaN" %}**{{ s }}** / 15{% else %}*unmarked*{% endif %}
+      - Curiosity {% assign x = curiosityScore | append: "" %}{% if x != blank and x != "nan" and x != "NaN" %}{{ x }}{% else %}—{% endif %} / 5 · Skepticism {% assign x = skepticismScore | append: "" %}{% if x != blank and x != "nan" and x != "NaN" %}{{ x }}{% else %}—{% endif %} / 5 · Reflection {% assign x = reflectionScore | append: "" %}{% if x != blank and x != "nan" and x != "NaN" %}{{ x }}{% else %}—{% endif %} / 5
+      {% assign note = overallComment | append: "" | strip %}{% if note != blank and note != "nan" and note != "NaN" %}- Note: {{ note }}{% endif %}
+
+      {% assign fb = feedbackBody | strip %}
+      {% if fb != blank %}
+      #### Feedback email (no marks)
+
+      {{ feedbackBody }}
+      {% endif %}
+
+review:
+  - type: Checkbox
+    field: noted
+    default: false
+    args:
+      description: Noted
+  - type: Checkbox
+    field: emailSent
+    default: false
+    args:
+      description: Feedback email sent
+  - type: SaveButton
+
+documents:
+  - type: email
+    name: "Email feedback"
+    visible_if:
+      field: markedFlag
+      equals: "yes"
+    to:
+      liquid: "{{ email }}"
+    title:
+      liquid: "L172 Worksheet 1 — feedback"
+    header:
+      liquid: |
+        Hi {{ given }},
+    body:
+      liquid: |
+        {{ feedbackBody }}
+    footer:
+      display: |
+        Best wishes,
+        Neil
+
+filters:
+  - field: markedFlag
+    type: categorical
+    label: Marked
+    values:
+      - "yes"
+      - "no"
+  - field: emailSent
+    type: boolean
+    label: Feedback email sent
+  - field: degree
+    type: categorical
+    label: Degree
+    values:
+      - MPhil
+      - Part III
+      - Auditor
+  - field: title
+    type: contains
+    label: Name
+  - field: crsid
+    type: contains
+    label: CRSid
+
+sort:
+  - field: family
+    order: asc
+  - field: given
+    order: asc

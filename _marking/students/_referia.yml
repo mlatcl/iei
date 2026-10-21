@@ -1,0 +1,142 @@
+# L172 class list — shared by worksheet/quiz marking via inherit.
+# Source of truth for enrolment names / CRSids. Keep in sync with .admin/students.csv.
+#
+# One-screen directory-style list (inline_list): every student visible; edit
+# fields in place and Save. Worksheets ignore display/review from this file.
+#
+# Serve from course root or here:
+#   referia serve --root ~/mlatcl/iei
+#   referia serve --root ~/mlatcl/iei/_marking/students
+
+referia_config_version: 2
+strict_columns: false
+title: "L172 — class list"
+date: 2026-10-01
+week: 0
+task: class-list
+list_order: 0
+kind: marking
+current: false
+author: Neil D. Lawrence
+description: >
+  Enrolled students and auditors on Information, Entropy and Intelligence
+  (L172). Worksheet and quiz marking configs inherit this list.
+browser: Google Chrome.app
+
+display:
+  layout: inline_list
+  detail_field: email
+  filter_defaults:
+    _sort: family:asc
+    _group: directory
+
+sortby:
+  field: family
+  ascending: True
+
+input:
+  index: crsid
+  type: csv
+  filename: students.csv
+  # Relative to each config's directory. From students/ and from
+  # worksheet1/ this resolves to _marking/students/ (an inherit-allowed root).
+  directory: ../students
+  header: 0
+  compute:
+    - field: Name
+      function: render_liquid
+      args:
+        template: >-
+          {% capture index %}{% if familyName %}{{ familyName }} {% endif %}{% if givenName %}{{ givenName }}{% endif %}{% endcapture %}{{ index | strip | replace: ' ', '_' | replace: '.', '' }}
+      row_args:
+        givenName: given
+        familyName: family
+    # List row label (inline_list uses title / Title / else index).
+    - field: title
+      function: render_liquid
+      args:
+        template: >-
+          {{ family }}, {{ given }} ({{ crsid }})
+      row_args:
+        family: family
+        given: given
+        crsid: crsid
+    - field: description
+      function: render_liquid
+      args:
+        template: >-
+          {{ degree }}{% if candidate %} · {{ candidate }}{% endif %}
+      row_args:
+        degree: degree
+        candidate: candidate
+  mapping:
+    givenName: given
+    familyName: family
+    Degree: degree
+    Email: email
+    Candidate: candidate
+
+output:
+  index: crsid
+  type: csv
+  directory: .
+  filename: students.csv
+  header: 0
+  columns:
+    - given
+    - family
+    - degree
+    - email
+    - candidate
+
+viewer:
+  - liquid: |
+      ## L172 cohort
+
+      Everyone on one screen. Edit name / degree / email / candidate in the
+      row, then **Save**. Auditors use dummy candidates (`AUD###`).
+      Worksheets and quizzes inherit this list.
+
+review:
+  - type: Text
+    field: given
+    args:
+      description: Given
+  - type: Text
+    field: family
+    args:
+      description: Family
+  - type: Text
+    field: degree
+    args:
+      description: Degree
+  - type: Text
+    field: email
+    args:
+      description: Email
+  - type: Text
+    field: candidate
+    args:
+      description: Candidate
+  - type: SaveButton
+
+filters:
+  - field: degree
+    type: categorical
+    label: Degree
+    values:
+      - MPhil
+      - Part III
+      - Auditor
+  - field: title
+    type: contains
+    label: Name
+  - field: crsid
+    type: contains
+    label: CRSid
+
+sort:
+  - field: family
+    order: asc
+  - field: given
+    order: asc

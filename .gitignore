@@ -72,6 +72,17 @@ Gemfile.lock
 # Covered by .* above; listed explicitly so the convention is obvious.
 # .admin/
 
+# Combined ScanSnap of in-class scripts / reflections (handwritten names).
+# Per-student copies live under _marking/*/submissions/ (ignored below).
+assessments/*-quiz.pdf
+
+# Local marking: student submissions, scores, and class list (PII).
+# Keep _marking/**/_referia.yml tracked; ignore everything else under _marking/.
+_marking/**
+!_marking/**/
+!_marking/**/_referia.yml
+
+
 
 # VibeSafe System Files (Auto-added during installation)
 # These are VibeSafe infrastructure - not your project content
