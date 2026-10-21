@@ -40,8 +40,9 @@ are built with pandoc (`.tex` / `.pdf`) as a second step in `./compile.sh`.
 
 Lectures use a descriptive slug. The week number is in frontmatter; `maketalk` prefixes outputs with it. Do not put `01-` in the source filename.
 
-- `motivation-boltzmann.md` — `week: 1` in frontmatter
-- `shannon-entropy.md` — `week: 2`
+- `intro-review-motivation.md` — `week: 1`
+- `ensemble-entropy-embodiment.md` — `week: 2`
+- `free-energy-shannon-entropy.md` — `week: 3`
 
 There is one session per week, so do not set a `session` field.
 
