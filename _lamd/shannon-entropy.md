@@ -1,5 +1,5 @@
 ---
-title: "Shannon Entropy and the Partition Function"
+title: "Free Energy and Shannon Entropy"
 week: 3
 layout: lecture
 date: 2026-10-27

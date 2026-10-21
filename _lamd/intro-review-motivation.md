@@ -194,7 +194,7 @@ So in other words we are asking you to take on the role of Socrates in these con
 * Week 2: Hydrodynamica / entropy bridge / embodiment; Week 3 clears Gibbs / $F$ / HMC then Shannon
 }
 
-\speakernotes{Do not derive Lagrange multipliers today. State the formula so Worksheet 1 has a concrete claim to open and then press. Students should leave curious about why *this* exponential, what $\beta$ means, and whether entropy here is a constraint or a recipe. Point back to cross-entropy / BM pairwise energy if they ask what $E$ is. Hamiltonian / HMC demos wait for lecture 2.}
+\speakernotes{Do not derive Lagrange multipliers today. State the formula so Worksheet 1 has a concrete claim to open and then press. Students should leave curious about why *this* exponential, what $\beta$ means, and whether entropy here is a constraint or a recipe. Point back to cross-entropy / BM pairwise energy if they ask what $E$ is. Hamiltonian / HMC demos wait for lecture 3.}
 
 \setupcode{import numpy as np}
 
@@ -207,7 +207,7 @@ So in other words we are asking you to take on the role of Socrates in these con
 
 # Live check: boltzmann([0, 1], 1.0) -> about (0.731, 0.269)}
 
-\speakernotes{Optional live check. Deep dive, free-energy plots, and HMC are lecture 2.}
+\speakernotes{Optional live check. Deep dive, free-energy plots, and HMC are lecture 3.}
 
 \include{_physics/includes/daniel-bernoulli-portrait.md}
 

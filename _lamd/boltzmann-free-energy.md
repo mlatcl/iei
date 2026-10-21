@@ -1,5 +1,5 @@
 ---
-title: "Boltzmann, Free Energy, and Entropy"
+title: "Ensemble, Entropy, and Embodiment"
 week: 2
 layout: lecture
 date: 2026-10-20
@@ -38,7 +38,7 @@ reading:
     required: false
   - title: "Thermodynamics and an Introduction to Thermostatistics"
     author: "Callen"
-    chapter: "Chapters 1–4 (postulates); 5–6 (maximum work, Helmholtz)"
+    chapter: "Chapters 1–4 (postulates; Helmholtz waits for Week 3)"
     estimated_hours: 2
     required: false
   - title: "Generative AI and Stochastic Thermodynamics"

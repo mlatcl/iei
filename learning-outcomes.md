@@ -3,8 +3,8 @@ outcomes:
   - id: LO1
     text: "Students will be able to decompose the Boltzmann distribution into contributions from internal energy, entropy, and Helmholtz free energy, and interpret each term's physical and informational meaning."
     bloom_level: analyse
-    week: 2
-    notes: "p_i ∝ exp(-E_i/kT); Z; F = -kT log Z = U - TS. Available (free) energy is what remains after the entropic no-go. Seeded in week 1; named and accounted in week 2 (Gibbs/Boltzmann form, log Z as CGF; Hopfield / Boltzmann-machine colour only). MaxEnt derivation of the weights waits for week 5 (LO5). Theme: entropy forbids; probability prescribes. Historical thread: Carnot (1824, engines) → Clausius (1850s–1865, second law; entropy named) → Boltzmann/Gibbs (statistical count) → Shannon/Jaynes (information). Motivations: perpetual motion, and the human–machine bandwidth gap from The Atomic Human (Lawrence, 2024)."
+    week: 3
+    notes: "p_i ∝ exp(-E_i/kT); Z; F = -kT log Z = U - TS. Available (free) energy is what remains after the entropic no-go. Seeded in week 1; Hydrodynamica / entropy / embodiment in week 2 as delivered; named and accounted in week 3 (Gibbs/Boltzmann form, log Z as CGF; Hopfield / Boltzmann-machine colour only). MaxEnt derivation of the weights waits for week 5 (LO5). Theme: entropy forbids; probability prescribes. Historical thread: Carnot (1824, engines) → Clausius (1850s–1865, second law; entropy named) → Boltzmann/Gibbs (statistical count) → Shannon/Jaynes (information). Motivations: perpetual motion, and the human–machine bandwidth gap from The Atomic Human (Lawrence, 2024)."
 
   - id: LO2
     text: "Students will be able to derive Shannon entropy as a measure of uncertainty and prove its formal equivalence to thermodynamic (Gibbs) entropy in equilibrium statistical mechanics."
@@ -28,7 +28,7 @@ outcomes:
     text: "Students will be able to apply Jaynes' maximum entropy principle, using Lagrange multipliers, to derive the least-committal probability distribution consistent with a set of moment constraints."
     bloom_level: apply
     week: 5
-    notes: "Jaynes (1957). Die example (mean 4.5). Recovers canonical ensemble from mean-energy constraint — this is the MaxEnt derivation of the Gibbs–Boltzmann weights named in week 2. Recovers Gaussian from mean and variance constraints."
+    notes: "Jaynes (1957). Die example (mean 4.5). Recovers canonical ensemble from mean-energy constraint — this is the MaxEnt derivation of the Gibbs–Boltzmann weights named in week 3. Recovers Gaussian from mean and variance constraints."
 
   - id: LO6
     text: "Students will be able to identify the exponential family as the MaxEnt family and explain why the canonical ensemble, Gaussian, and Bernoulli distributions all belong to it."

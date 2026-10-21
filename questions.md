@@ -38,7 +38,7 @@ Class tests examine the *applied* form of the define-stage questions, on a new e
 - What is the purely entropic interpretation of Schottky's anomaly?
 - What is the Legendre transform?
 
-## Lecture 2 — 20 October — Boltzmann and Free Energy
+## Lecture 2 — 20 October — Ensemble, Entropy, and Embodiment
 
 Quiz 1 occupies the first ten minutes (probability and Week 1 energy seeds). Then Laplace / Bernoulli / ensemble, Hydrodynamica and the entropy bridge (distributions; continuous / relative entropy named), and embodiment (*Atomic Human*). As delivered we stop there --- overrun. Die / MacKay / Gibbs / $F$ / HMC open Week 3.
 
@@ -59,7 +59,7 @@ Quiz 1 occupies the first ten minutes (probability and Week 1 energy seeds). The
 - What is a thermodynamic bath? Schottky's anomaly? (Week 3)
 - Shannon entropy versus differential entropy? (full contrast: week 6)
 
-## Lecture 3 — 27 October — Shannon Entropy
+## Lecture 3 — 27 October — Free Energy and Shannon Entropy
 
 Week 2 carry-over first (die / MacKay / Gibbs / $F$ / HMC), then Shannon $H$, Dasher, $Z$, KL / differential entropy, then bath / Schottky / finite time.
 
