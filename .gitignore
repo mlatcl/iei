@@ -74,7 +74,7 @@ Gemfile.lock
 
 # Combined ScanSnap of in-class scripts / reflections (handwritten names).
 # Per-student copies live under _marking/*/submissions/ (ignored below).
-assessments/2026-10-20_L172-information-entropy-and-intelligence-week-2-quiz.pdf
+assessments/*-quiz.pdf
 assessments/2026-10-20_l172_handwritten-reflections.pdf
 
 # Local marking: student submissions, scores, and class list (PII).
