@@ -75,7 +75,6 @@ Gemfile.lock
 # Combined ScanSnap of in-class scripts / reflections (handwritten names).
 # Per-student copies live under _marking/*/submissions/ (ignored below).
 assessments/*-quiz.pdf
-assessments/2026-10-20_l172_handwritten-reflections.pdf
 
 # Local marking: student submissions, scores, and class list (PII).
 # Keep _marking/**/_referia.yml tracked; ignore everything else under _marking/.
