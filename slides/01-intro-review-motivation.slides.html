@@ -149,8 +149,10 @@ Building</p>
 <div>
 <ul>
 <li class="fragment">Room FW26; eight Tuesdays from today</li>
-<li class="fragment">Motivation → probability → doubt / Socrates →
-energy → Daniel Bernoulli</li>
+<li class="fragment">Motivation, including Maxwell / Landauer as a Week
+4 preview</li>
+<li class="fragment">Probability → doubt / Socrates → energy seed →
+Daniel Bernoulli</li>
 <li class="fragment">Worksheet 1 released today; entropy continues next
 week</li>
 </ul>
@@ -159,10 +161,6 @@ week</li>
 <section id="time-plan" class="slide level2">
 <h2>Time Plan</h2>
 <table>
-<colgroup>
-<col style="width: 56%" />
-<col style="width: 43%" />
-</colgroup>
 <thead>
 <tr class="header">
 <th style="text-align: right;">Minutes</th>
@@ -171,37 +169,41 @@ week</li>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;">0–10</td>
-<td>Course mechanics; questions list</td>
+<td style="text-align: right;">0–15</td>
+<td>Course mechanics; questions list; course site</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">10–22</td>
-<td>Motivation: theme; Laplace’s demon and gremlin</td>
+<td style="text-align: right;">15–25</td>
+<td>Perpetual motion and superintelligence</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">22–42</td>
-<td>Probability review: product/sum/Bayes; named distributions</td>
+<td style="text-align: right;">25–50</td>
+<td>Preview: Maxwell’s demon, Landauer, no-go versus mechanism</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">42–55</td>
-<td>Doubt; Socratic worksheets and LLM habit</td>
+<td style="text-align: right;">50–60</td>
+<td>Laplace’s demon and gremlin; Jaynes as a pointer</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">55–65</td>
+<td style="text-align: right;">60–70</td>
 <td>Break</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">65–100</td>
-<td>Energy: ML energies; Boltzmann seed <span class="math inline">\(p_i
-\propto e^{-\beta E_i}\)</span></td>
+<td style="text-align: right;">70–90</td>
+<td>Probability review: product/sum/Bayes; named distributions</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">100–110</td>
-<td>Daniel Bernoulli (portrait); bridge to kinetic theory</td>
+<td style="text-align: right;">90–105</td>
+<td>Textbooks aside; Socratic worksheets and LLM habit</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">110–120</td>
-<td>Worksheet 1 brief; Quiz 1 preview</td>
+<td style="text-align: right;">105–115</td>
+<td>Energy seed; Boltzmann <span class="math inline">\(p_i \propto
+e^{-\beta E_i}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">115–120</td>
+<td>Daniel Bernoulli pointer; Worksheet 1 / Quiz 1</td>
 </tr>
 </tbody>
 </table>
@@ -235,6 +237,34 @@ href="https://mlatcl.github.io/iei/questions/">mlatcl.github.io/iei/questions/</
 sns.set_style('darkgrid')
 sns.set_context('paper')
 sns.set_palette('colorblind')}-->
+</section>
+<section id="the-atomic-human" class="slide level2">
+<h2>The Atomic Human</h2>
+<div class="figure">
+<div id="week1-atomic-human-cover-figure" class="figure-frame">
+<div class="centered" style="">
+<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/books/the-atomic-human.jpg" width="40%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
+</div>
+</div>
+</div>
+<aside class="notes">
+<a href="https://the-atomic-human.ai">The Atomic Human</a> <span
+class="citation" data-cites="Lawrence-atomic24">(Lawrence, 2024)</span>.
+Not the course text.
+</aside>
+<div>
+<ul>
+<li class="fragment">A trade book on intelligence, embodiment, and doubt
+— not a textbook</li>
+<li class="fragment">The polemic lives there; this course tries to put
+mathematics under it</li>
+<li class="fragment">Week 2 returns to embodiment as bandwidth</li>
+</ul>
+</div>
+<aside class="notes">
+Show the cover. Do not open the emulate / do-not-replicate argument
+today. That is Week 2.
+</aside>
 </section>
 <section id="perpetual-motion-and-superintelligence"
 class="slide level2">
@@ -280,6 +310,84 @@ class="slide level2">
 <li class="fragment">Information processing has physical limits</li>
 </ul>
 </div>
+</section>
+<section id="preview-maxwells-demon" class="slide level2">
+<h2>Preview: Maxwell’s Demon</h2>
+<div class="figure">
+<div id="week1-maxwell-portrait-figure" class="figure-frame">
+<div class="centered" style="">
+<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/james-clerk-maxwell.png" width="35%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
+</div>
+</div>
+</div>
+<aside class="notes">
+James Clerk Maxwell (1831–1879). The demon is an 1860s thought
+experiment, not a machine we will build today.
+</aside>
+<p>A sorting mind in a gas. Fast molecules one way, slow the other.
+Temperature splits. Entropy of the gas appears to fall.</p>
+<div>
+<ul>
+<li class="fragment">Partition; frictionless trap door; an “intelligent”
+entity that measures</li>
+<li class="fragment">Temperature here is the variance of molecular
+velocity</li>
+<li class="fragment">Apparent violation of the second law — that is why
+the puzzle lasts</li>
+<li class="fragment">Preview of Week 4; we do not resolve the ledger
+today</li>
+</ul>
+</div>
+<aside class="notes">
+Preview of Week 4. Diagram and story only. No live canvas, no detailed
+balance, no Szilard piston, no Ellis clip.
+</aside>
+</section>
+<section id="preview-landauers-principle" class="slide level2">
+<h2>Preview: Landauer’s Principle</h2>
+<p>Erasing a bit has a thermodynamic price. Computation, in the
+reversible ideal, is claimed not to.</p>
+<div>
+<ul>
+<li class="fragment">Erase one bit: at least <span
+class="math inline">\(k_B T\ln 2\)</span> of heat <span class="citation"
+data-cites="Landauer-irreversibility61">(Landauer, 1961)</span></li>
+<li class="fragment"><span class="math inline">\(k_B \sim
+10^{-23}\,\mathrm{J\,K}^{-1}\)</span>; at room temperature this is
+tiny</li>
+<li class="fragment">Classical computers dissipate far above the bound;
+we are not at Landauer yet</li>
+<li class="fragment">Why erasure answers the demon — memory, or an
+infinite tape — is Week 4</li>
+</ul>
+</div>
+<aside class="notes">
+If asked how Landauer answers the demon: memory must grow or be erased;
+infinite tape will not fit in the box. Do not derive <span
+class="math inline">\(k_B T\ln 2\)</span>. Do not open Szilard.
+</aside>
+</section>
+<section id="preview-no-go-versus-mechanism" class="slide level2">
+<h2>Preview: No-Go versus Mechanism</h2>
+<p>Entropy tells you what will not happen. It does not hand you a
+machine.</p>
+<div>
+<ul>
+<li class="fragment">Shannon: a distribution, then a prohibition — no
+algorithm named</li>
+<li class="fragment">Physics talks: heat baths, pistons, frictionless
+doors</li>
+<li class="fragment">Second law: entropy is produced <em>somewhere</em>;
+not when the Earth hits the Sun</li>
+<li class="fragment">Week 2 develops this as entropy versus
+probability</li>
+</ul>
+</div>
+<aside class="notes">
+Do not include the MacKay / Rogers-and-Mayhew autobiography today. That
+sits in the Week 2 entropy-nogo snippet. This is the hook from the
+first-hour questions.
+</aside>
 </section>
 <section id="section" class="slide level2">
 <h2></h2>
@@ -426,6 +534,38 @@ class="figure-frame">
 <aside class="notes">
 Gremlins are seen as the cause of a number of challenges in this World
 War II poster.
+</aside>
+</section>
+<section id="preview-from-insufficient-reason-to-maxent"
+class="slide level2">
+<h2>Preview: From Insufficient Reason to MaxEnt</h2>
+<div class="figure">
+<div id="week1-jaynes-figure" class="figure-frame">
+<div class="centered" style="">
+<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/e-t-jaynes.jpg" width="30%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
+</div>
+</div>
+</div>
+<aside class="notes">
+E. T. Jaynes. Maximum entropy is the modern writing of Laplace’s
+principle of insufficient reason.
+</aside>
+<div>
+<ul>
+<li class="fragment">Laplace assigns probability to ignorance; he does
+not yet write entropy</li>
+<li class="fragment">Insufficient reason: if nothing distinguishes the
+outcomes, set them equal</li>
+<li class="fragment">Jaynes: that assignment is maximum entropy <span
+class="citation" data-cites="Jaynes-probability03">(Jaynes,
+2003)</span></li>
+<li class="fragment">Week 5 is the derivation; today it is a
+pointer</li>
+</ul>
+</div>
+<aside class="notes">
+Do not include the sunrise problem or the full insufficient-reason
+snippet. That is Week 5.
 </aside>
 </section>
 <section id="probability-review" class="slide level2">
@@ -645,6 +785,25 @@ students.
 density and <span class="math inline">\(\mu\)</span> is the mean.
 </center>
 </div>
+</section>
+<section id="old-books-and-the-wikipedia-effect" class="slide level2">
+<h2>Old Books, and the Wikipedia Effect</h2>
+<div>
+<ul>
+<li class="fragment">Rogers and Mayhew: engineering thermodynamics,
+father then son</li>
+<li class="fragment">An out-of-print 1961 physics thermodynamics text —
+often clearer than a modern one</li>
+<li class="fragment">Wikipedia about 2006 versus Wikipedia now:
+intuition edited into correctness</li>
+<li class="fragment">Not required reading; a warning about where
+intuition lives</li>
+</ul>
+</div>
+<aside class="notes">
+Physical books in the room if you have them. This sits immediately
+before Socrates / worksheets, as delivered.
+</aside>
 </section>
 <section id="doubt" class="slide level2">
 <h2>Doubt</h2>
@@ -1013,10 +1172,9 @@ E_i}\)</span> with coldness <span class="math inline">\(\beta =
 <li class="fragment">Normaliser <span class="math inline">\(Z=\sum_i
 e^{-\beta E_i}\)</span>, so <span class="math inline">\(p_i = e^{-\beta
 E_i}/Z\)</span></li>
-<li class="fragment">Week 2: name Gibbs, account with free energy <span
-class="math inline">\(F=U-TS\)</span>; Carnot–Clausius history;
-potential <span class="math inline">\(\to\)</span> kinetic <span
-class="math inline">\(\to\)</span> HMC</li>
+<li class="fragment">Week 2: Hydrodynamica / entropy bridge /
+embodiment; Week 3 clears Gibbs / <span class="math inline">\(F\)</span>
+/ HMC then Shannon</li>
 </ul>
 </div>
 <aside class="notes">
@@ -1026,11 +1184,14 @@ curious about why <em>this</em> exponential, what <span
 class="math inline">\(\beta\)</span> means, and whether entropy here is
 a constraint or a recipe. Point back to cross-entropy / BM pairwise
 energy if they ask what <span class="math inline">\(E\)</span> is.
-Hamiltonian / HMC demos wait for lecture 2.
+Hamiltonian / HMC demos wait for lecture 3. If asked what you gain by
+calling a loss an energy: the honest answer is that some people hope to
+avoid <span class="math inline">\(Z\)</span>; LeCun’s energy-based
+models are that habit.
 </aside>
 <aside class="notes">
 Optional live check. Deep dive, free-energy plots, and HMC are lecture
-2.
+3.
 </aside>
 </section>
 <section id="section-8" class="slide level2">
@@ -1057,13 +1218,14 @@ gas acting on sides (but constant velocity).
 settled</li>
 <li class="fragment">Bernoulli’s assumptions; ensemble as
 coarse-graining</li>
-<li class="fragment">Entropy bridge; embodiment; Gibbs–Boltzmann and
-free energy</li>
+<li class="fragment">Entropy bridge; embodiment (Gibbs / <span
+class="math inline">\(F\)</span> / HMC spill to Week 3)</li>
 </ul>
 </div>
 <aside class="notes">
-Cliffhanger only. Do not open the Hydrodynamica plates or the billiards
-demo today.
+As delivered this was one sentence: if there had been time, more on
+Daniel Bernoulli. Keep it as a pointer. Do not open the Hydrodynamica
+plates or the billiards demo today.
 </aside>
 </section>
 <section id="define-this-week" class="slide level2">
@@ -1088,7 +1250,8 @@ E_i}/Z\)</span></li>
 naming dialogue + handwritten reflection)</li>
 <li class="fragment">Quiz 1 next week: probability and Week 1 energy
 seeds</li>
-<li class="fragment">Then: Hydrodynamica → entropy → free energy</li>
+<li class="fragment">Then: Hydrodynamica → entropy bridge →
+embodiment</li>
 </ul>
 </div>
 </section>
@@ -1135,9 +1298,24 @@ Hopfield, J.J., 1982. Neural networks and physical systems with emergent
 collective computational abilities. Proceedings of the National Academy
 of Sciences 79, 2554–2558.
 </div>
+<div id="ref-Jaynes-probability03" class="csl-entry" role="listitem">
+Jaynes, E.T., 2003. Probability theory: The logic of science. Cambridge
+University Press, Cambridge, UK.
+</div>
+<div id="ref-Landauer-irreversibility61" class="csl-entry"
+role="listitem">
+Landauer, R., 1961. Irreversibility and heat generation in the computing
+process. IBM Journal of Research and Development 5, 183–191. <a
+href="https://doi.org/10.1147/rd.53.0183">https://doi.org/10.1147/rd.53.0183</a>
+</div>
 <div id="ref-Laplace-essai14" class="csl-entry" role="listitem">
 Laplace, P.S., 1814. Essai philosophique sur les probabilités, 2nd ed.
 Courcier, Paris.
+</div>
+<div id="ref-Lawrence-atomic24" class="csl-entry" role="listitem">
+Lawrence, N.D., 2024. <a
+href="https://www.penguin.co.uk/books/455130/the-atomic-human-by-lawrence-neil-d/9780241625248">The
+atomic human: Understanding ourselves in the age of AI</a>. Allen Lane.
 </div>
 <div id="ref-Suits-grasshopper78" class="csl-entry" role="listitem">
 Suits, B., 1978. The grasshopper: Games, life and utopia. University of

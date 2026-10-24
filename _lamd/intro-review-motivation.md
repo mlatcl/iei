@@ -9,7 +9,9 @@ transition: None
 abstract: >
   In this lecture we motivate the course and describe the mechanics of delivery.
   That will involve a review of Laplace's demon and Laplace's gremlin. The aim is
-  to centre the notion of uncertainty in the material. We'll also how we would like
+  to centre the notion of uncertainty in the material. Maxwell's demon and
+  Landauer's principle appear as a preview of Week 4; entropy as no-go versus
+  mechanism is a preview of Week 2. We'll also show how we would like
   to see you deploy that in your course worksheets, where marks will be given for
   answers that demonstrate the type of skepticism we see in the Socratic method.
   We will give a brief review of probability, then relate energy to probability
@@ -46,34 +48,38 @@ reading:
     required: false
 ---
 
-\notes{First meeting. FW26. Two hours from 10:00; no class test. Worksheet 1 (Socratic dialogue) is released and due by 10:00 at the start of lecture 2 (20 October). Quiz 1 is also at the start of lecture 2: probability foundations and the Week 1 energy / Boltzmann seeds. Hydrodynamica, entropy review, and embodiment open lecture 2 after the quiz.}
+\notes{First meeting. FW26. Two hours from 10:00; no class test. Worksheet 1 (Socratic dialogue) is released and due by 10:00 at the start of lecture 2 (20 October). Quiz 1 is also at the start of lecture 2: probability foundations and the Week 1 energy / Boltzmann seeds. Hydrodynamica, entropy review, and embodiment open lecture 2 after the quiz. Maxwell / Landauer and the no-go contrast are previews, not the later treatments.}
 
 \subsection{This Session}
 
+\notes{The course is called Information, Energy and Intelligence because information is the well-defined quantity, intelligence is not, and energy is how the two meet a physical ledger. Part of the first hour is a handwritten reflection on the worksheet habit: we mark the quality of the probe, not the prose. Socrates is previewed here as "I know that I do not know" before the worksheet slides. *The Atomic Human* comes out as a trade book, not a textbook.}
+
 \slidesincremental{
 * Room FW26; eight Tuesdays from today
-* Motivation → probability → doubt / Socrates → energy → Daniel Bernoulli
+* Motivation, including Maxwell / Landauer as a Week 4 preview
+* Probability → doubt / Socrates → energy seed → Daniel Bernoulli
 * Worksheet 1 released today; entropy continues next week
 }
 
 \newslide{Time Plan}
-\notes{**Time plan (120 minutes).** Order matches the lecture source below. As delivered we stop at Daniel Bernoulli; Week 2 opens with Hydrodynamica and the entropy bridge.}
+\notes{**Time plan (120 minutes).** As delivered on 13 October 2026. Maxwell / Landauer / no-go are previews of later weeks, spoken in the first hour. Probability, Socrates, and the energy seed follow the break. Daniel Bernoulli is a pointer, not Hydrodynamica.}
 
 | Minutes | Block |
 |--------:|-------|
-| 0–10 | Course mechanics; questions list |
-| 10–22 | Motivation: theme; Laplace's demon and gremlin |
-| 22–42 | Probability review: product/sum/Bayes; named distributions |
-| 42–55 | Doubt; Socratic worksheets and LLM habit |
-| 55–65 | Break |
-| 65–100 | Energy: ML energies; Boltzmann seed $p_i \propto e^{-\beta E_i}$ |
-| 100–110 | Daniel Bernoulli (portrait); bridge to kinetic theory |
-| 110–120 | Worksheet 1 brief; Quiz 1 preview |
+| 0–15 | Course mechanics; questions list; course site |
+| 15–25 | Perpetual motion and superintelligence |
+| 25–50 | Preview: Maxwell's demon, Landauer, no-go versus mechanism |
+| 50–60 | Laplace's demon and gremlin; Jaynes as a pointer |
+| 60–70 | Break |
+| 70–90 | Probability review: product/sum/Bayes; named distributions |
+| 90–105 | Textbooks aside; Socratic worksheets and LLM habit |
+| 105–115 | Energy seed; Boltzmann $p_i \propto e^{-\beta E_i}$ |
+| 115–120 | Daniel Bernoulli pointer; Worksheet 1 / Quiz 1 |
 
 
 \subsection{Course Mechanics}
 
-\notes{Eight lectures, Tuesdays, this room. Four in-class Moodle quizzes, ten minutes, at the start of lectures 2, 5, 7 and 8. Students need a device. No notes, no network, no LLMs during the quiz. Four take-home worksheets, each an LLM-centred exercise under the curiosity–skepticism habit from this lecture. Worksheets are released in lectures 1, 2, 4 and 6 and due at the start of lectures 2, 4, 6 and 8 respectively. For module questions — clarifications, logistics, conceptual confusion — use [GitHub Discussions](https://github.com/mlatcl/iei/discussions); start from the pinned [Course Q&A — start here](https://github.com/mlatcl/iei/discussions/1) post and open a new Q&A thread per question. Personal or confidential matters stay on email or the course office.}
+\notes{Eight lectures, Tuesdays, this room. Four in-class Moodle quizzes, ten minutes, at the start of lectures 2, 4, 6 and 8. Students need a device. No notes, no network, no LLMs during the quiz. The first quiz is foundations plus this lecture, not two weeks of new material; later quizzes cover the preceding pair of lectures. Four take-home worksheets, each an LLM-centred exercise under the curiosity–skepticism habit from this lecture. Worksheets are released in lectures 1, 2, 4 and 6 and due at the start of lectures 2, 4, 6 and 8 respectively. Identify work by CRSid in filenames and on the handwritten proforma, not by full name. For module questions — clarifications, logistics, conceptual confusion — use [GitHub Discussions](https://github.com/mlatcl/iei/discussions); start from the pinned [Course Q&A — start here](https://github.com/mlatcl/iei/discussions/1) post and open a new Q&A thread per question. Personal or confidential matters stay on email or the course office.}
 
 \slidesincremental{
 * Four quizzes (start of lectures 2, 4, 6, 8)
@@ -84,7 +90,7 @@ reading:
 
 \subsection{Questions We Will Return To}
 
-\notes{The [questions page](https://mlatcl.github.io/iei/questions/) is published today. Students should meet the whole list. They should not expect to answer most of it. Two stages: *define* (textbook answer, usually this week or the week the object is introduced) and *interpret* (the course's own reading, often week 5 or week 8).}
+\notes{The [questions page](https://mlatcl.github.io/iei/questions/) is published today. Students should meet the whole list. They should not expect to answer most of it. Two stages: *define* (textbook answer, usually this week or the week the object is introduced) and *interpret* (the course's own reading, often week 5 or week 8). The course site is [mlatcl.github.io/iei](https://mlatcl.github.io/iei/); Reveal.js is the slide engine, not a command to uncover hidden text. Notes for weeks 1--4 have been walked; after that the headlines are mine and the prose may still move. Week 4, Maxwell's demon, is a motivating idea for the whole course and is previewed today. Thermodynamics is a contested subject even among people who have spent their working lives in it; Daniel Bernoulli is named here as eighteenth-century colour, not as this week's derivation.}
 
 \slides{List: [mlatcl.github.io/iei/questions/](https://mlatcl.github.io/iei/questions/)}
 
@@ -96,16 +102,24 @@ reading:
 
 
 \include{_iei/includes/iei-notebook-setup.md}
+\include{includes/week1-atomic-human-shown.md}
 \include{_information/includes/perpetual-motion-superintelligence-analogy.md}
+\include{includes/week1-maxwell-landauer-preview.md}
+\include{includes/week1-nogo-preview.md}
 \include{_physics/includes/laplace-portrait.md}
 \include{_physics/includes/laplaces-determinism.md}
 \include{_physics/includes/laplaces-gremlin.md}
+\include{includes/week1-jaynes-preview.md}
 
 \include{_ml/includes/probability-review-compact.md}
 
 \notes{Quiz 1 will ask a small discrete Bayes inversion (barrels, coins, two hypotheses) and recognition of the named distributions below.}
 
 \include{_ml/includes/common-distributions-review.md}
+
+\notes{Colour, not examinable beyond recognising the families. Football scores are a rough Poisson with rate about one goal per team per match. De Moivre used the Gaussian as a binomial approximation; Laplace used the same quadratic in what we would now call a Laplace approximation, expanding a log posterior about its mode; Gauss credits Laplace when he fits the orbit of Ceres. Heights are a standard story and an invalid support, because a Gaussian puts mass on negative height. The velocities of air, to the extent the gas is ideal, are Gaussian --- that is the Maxwell--Boltzmann distribution on the Cartesian components, with temperature setting the variance. The cosmic microwave background is another Gaussian that people have spent a great deal of money testing for non-Gaussianity (Planck).}
+
+\include{includes/week1-textbooks-aside.md}
 
 \subsection{Doubt}
 
@@ -194,7 +208,9 @@ So in other words we are asking you to take on the role of Socrates in these con
 * Week 2: Hydrodynamica / entropy bridge / embodiment; Week 3 clears Gibbs / $F$ / HMC then Shannon
 }
 
-\speakernotes{Do not derive Lagrange multipliers today. State the formula so Worksheet 1 has a concrete claim to open and then press. Students should leave curious about why *this* exponential, what $\beta$ means, and whether entropy here is a constraint or a recipe. Point back to cross-entropy / BM pairwise energy if they ask what $E$ is. Hamiltonian / HMC demos wait for lecture 3.}
+\notes{In machine learning an energy is often just a negative log probability, measured in nats, which is a peculiar unit for something that in physics is measured in joules. Energy-based models are, among other things, a way of not writing the partition function $Z$. In physics $Z$ is the whole story. We return to it with free energy; do not compute it today.}
+
+\speakernotes{Do not derive Lagrange multipliers today. State the formula so Worksheet 1 has a concrete claim to open and then press. Students should leave curious about why *this* exponential, what $\beta$ means, and whether entropy here is a constraint or a recipe. Point back to cross-entropy / BM pairwise energy if they ask what $E$ is. Hamiltonian / HMC demos wait for lecture 3. If asked what you gain by calling a loss an energy: the honest answer is that some people hope to avoid $Z$; LeCun's energy-based models are that habit.}
 
 \setupcode{import numpy as np}
 
@@ -221,7 +237,7 @@ So in other words we are asking you to take on the role of Socrates in these con
 * Entropy bridge; embodiment (Gibbs / $F$ / HMC spill to Week 3)
 }
 
-\speakernotes{Cliffhanger only. Do not open the Hydrodynamica plates or the billiards demo today.}
+\speakernotes{As delivered this was one sentence: if there had been time, more on Daniel Bernoulli. Keep it as a pointer. Do not open the Hydrodynamica plates or the billiards demo today.}
 
 \subsection{Define This Week}
 
@@ -234,7 +250,7 @@ So in other words we are asking you to take on the role of Socrates in these con
 
 \subsection{After This Lecture}
 
-\notes{Worksheet 1: Socratic dialogue on the *history of the name* entropy --- why Shannon used the word; von Neumann anecdote versus Shannon's Tolman footnote and the Wiener--Gibbs trail. Exactly ten turns (mandated opening pair, then free probes); handwritten reflection on the scanned proforma (separate upload). Use the handouts. Due 20 October, start of lecture 2. Quiz 1 in the first ten minutes of lecture 2 covers today's probability review and energy / Boltzmann seeds; lecture 2 then presses Laplace's molecule as anachronism, Bernoulli's assumptions, and the ensemble as coarse-graining before Hydrodynamica and the entropy bridge.}
+\notes{Worksheet 1: Socratic dialogue on the *history of the name* entropy --- why Shannon used the word; von Neumann anecdote versus Shannon's Tolman footnote and the Wiener--Gibbs trail. Exactly ten turns (mandated opening pair, then free probes); handwritten reflection on the scanned proforma (separate upload). Use the handouts. Due 20 October, start of lecture 2. Quiz 1 in the first ten minutes of lecture 2 covers today's probability review and energy / Boltzmann seeds; lecture 2 then presses Laplace's molecule as anachronism, Bernoulli's assumptions, and the ensemble as coarse-graining before Hydrodynamica and the entropy bridge. As delivered, a copy of *The Atomic Human* went to the student who asked the most questions; that is not part of the mark.}
 
 \slidesincremental{
 * Worksheet 1 released; due 20 October (Shannon naming dialogue + handwritten reflection)
