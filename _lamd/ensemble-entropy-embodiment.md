@@ -50,6 +50,8 @@ reading:
 
 \notes{Worksheet 1 is due at the start of this session. Quiz 1 occupies the first ten minutes. After the quiz: Laplace's molecule, Bernoulli / *Hydrodynamica*, ensemble as coarse-graining, entropy bridge (distributions; continuous entropy and relative entropy / KL named), then embodiment (*Atomic Human*). As delivered we stop at embodiment --- overrun. Week 3 opens with the unfinished Week 2 queue: info game / MacKay / die coarse-graining, then Gibbs--Boltzmann, $F=U-TS$, and HMC, before Shannon axioms. Do not derive the occupation from MaxEnt today --- that is week 5.}
 
+\machinereviewlink
+
 \subsection{This Session}
 
 \slidesincremental{
@@ -105,7 +107,7 @@ reading:
 
 \include{_ai/includes/embodiment-factors-celsius.md}
 
-\notes{Shannon measured information in bits: one bit is the result of a fair coin toss. He estimated $\sim 12$ bits per English word on average [@Shannon-info48], which with typical speaking rates gives $\sim 10$--$60$ bits per second for human communication [@Reed-information98,@Lawrence-embodiment17,@Lawrence-atomic24]. Machines communicate orders of magnitude faster — the embodiment factor is the ratio between compute and that narrow channel.}
+\notes{Shannon measured information in bits: one bit is the result of a fair coin toss. The $\sim 12$ bits per English word figure is $11.82$ bits/word from word frequencies in [@Shannon-prediction51], not the 1948 paper; it is a crude Zipf estimate, and with context the entropy per letter falls to around one bit. With typical speaking rates that crude figure gives $\sim 10$--$60$ bits per second for human communication [@Reed-information98,@Lawrence-embodiment17,@Lawrence-atomic24]. Machines communicate orders of magnitude faster — the embodiment factor is the ratio between compute and that narrow channel.}
 
 \newslide{As Delivered --- Stop}
 
@@ -128,7 +130,7 @@ reading:
 * Continuous entropy vs relative entropy / KL (named; formalised week 3)
 }
 
-\notes{Interpret later: how entropy is understood today; equilibrium versus non-equilibrium; die grouping, Gibbs / $F$, HMC, bath and Schottky (Week 3); the purely entropic Schottky reading (Week 8). Define-stage answer to "How was entropy discovered?": Carnot on engines; Clausius names entropy and states the second law (1865); Boltzmann and Gibbs give the statistical count; Shannon and Jaynes reuse $H$ with different operational readings.}
+\notes{Interpret later: how entropy is understood today; equilibrium versus non-equilibrium; die grouping, Gibbs / $F$, HMC, bath and Schottky (Week 3); the purely entropic Schottky reading (Week 8). Define-stage answer to "How was entropy discovered?": Carnot on engines (1824); Clausius states the second law in the 1850s and coins the name entropy in 1865; Boltzmann and Gibbs give the statistical count; Shannon and Jaynes reuse $H$ with different operational readings.}
 
 
 \subsection{After This Lecture}
@@ -139,6 +141,12 @@ reading:
 * Next: finish Week 2 queue, then Shannon / Schottky
 * LLM probe (after $F$): is free energy a bound or a recipe?
 }
+
+\machinereview
+
+\ifdef{NOTES}
+\include{includes/ensemble-entropy-embodiment-machine-review.md}
+\endif
 
 \reading
 
