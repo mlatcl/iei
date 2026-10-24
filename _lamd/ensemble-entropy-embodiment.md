@@ -105,6 +105,8 @@ reading:
 
 \include{_books/includes/the-atomic-human.md}
 
+\include{_iei/includes/the-atomic-human-iei.md}
+
 \include{_ai/includes/embodiment-factors-celsius.md}
 
 \notes{Shannon measured information in bits: one bit is the result of a fair coin toss. The $\sim 12$ bits per English word figure is $11.82$ bits/word from word frequencies in [@Shannon-prediction51], not the 1948 paper; it is a crude Zipf estimate, and with context the entropy per letter falls to around one bit. With typical speaking rates that crude figure gives $\sim 10$--$60$ bits per second for human communication [@Reed-information98,@Lawrence-embodiment17,@Lawrence-atomic24]. Machines communicate orders of magnitude faster — the embodiment factor is the ratio between compute and that narrow channel.}
