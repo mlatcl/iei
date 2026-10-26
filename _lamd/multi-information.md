@@ -181,7 +181,7 @@ ax.set_xlabel(r'$I(X;T)$ (bits)')
 ax.set_ylabel(r'$I(T;Y)$ (bits)')
 ax.set_title('Feasible region for a representation $T$')
 ax.legend(loc='upper left')
-mlai.write_figure('information-bottleneck-region.svg', directory='\\writeDiagramsDir/ml')}
+mlai.write_figure('information-bottleneck-region.svg', directory='\writeDiagramsDir/ml')}
 
 \figure{\includediagram{\diagramsDir/ml/information-bottleneck-region}{75%}}{DPI supplies the feasible region. The information bottleneck traces the upper boundary: keep $I(T;Y)$, spend as little $I(X;T)$ as possible.}{information-bottleneck-region}
 
