@@ -48,7 +48,7 @@ reading:
     required: false
 ---
 
-\notes{Worksheet 1 is due at the start of this session. Quiz 1 occupies the first ten minutes. After the quiz: Laplace's molecule, Bernoulli / *Hydrodynamica*, ensemble as coarse-graining, entropy bridge (distributions; continuous entropy and relative entropy / KL named), then embodiment (*Atomic Human*). As delivered we stop at embodiment --- overrun. Week 3 opens with the unfinished Week 2 queue: info game / MacKay / die coarse-graining, then Gibbs--Boltzmann, $F=U-TS$, and HMC, before Shannon axioms. Do not derive the occupation from MaxEnt today --- that is week 5.}
+\notes{Worksheet 1 is due at the start of this session. The slot is 10:05--11:55 (110 minutes, not 120). Quiz 1 occupies the first ten minutes from 10:05. After the quiz: Laplace's molecule, Bernoulli / *Hydrodynamica*, ensemble as coarse-graining. Entropy bridge (distributions; continuous entropy and relative entropy / KL named) sat after the break; embodiment (*Atomic Human*) was the last ten minutes. As delivered we stop at embodiment --- overrun to 12:00. Week 3 opens with the unfinished Week 2 queue: info game / MacKay / die coarse-graining, then Gibbs--Boltzmann, $F=U-TS$, and HMC, before Shannon axioms. Do not derive the occupation from MaxEnt today --- that is week 5.}
 
 \machinereviewlink
 
@@ -63,18 +63,15 @@ reading:
 }
 
 \notes{
-**Time plan (as delivered, 120 minutes)**
+**Time plan (as delivered 20 October 2026).** Clocks from the Panopto recording (00:00 ≈ 10:00) plus the transcript. The slot is 10:05--11:55 (110 minutes, not 120). Quiz silence is 10:08--10:18; the break ran 11:09--11:17 (spoken as five minutes, started late). Entropy review sat *after* the break; embodiment was the last ten minutes, not the whole second hour. Close overran five-to.
 
-| Minutes | Block |
-|--------:|-------|
-| 0–10 | Quiz 1 (Moodle; probability / Week 1 energy seeds) |
-| 10–15 | Collect Worksheet 1; release Worksheet 2; recap seed $p_i \propto e^{-\beta E_i}$ |
-| 15–35 | Laplace molecule anachronism; Bernoulli assumptions; ensemble / coarse-graining |
-| 35–55 | Hydrodynamica / billiards; entropy bridge; common distributions; continuous / KL named |
-| 55–65 | Break |
-| 65–110 | Embodiment / bits as bandwidth (*Atomic Human*) |
-| 110–120 | Close; flag Week 3 carry-over (die / Gibbs / $F$ / HMC) |
-
+| Clock | Block |
+|------:|-------|
+| 10:05–10:18 | Quiz 1 (Moodle; briefing then ~10 minutes sitting) |
+| 10:18–11:09 | Laplace molecule; Bernoulli / Hydrodynamica; ensemble / coarse-graining |
+| 11:09–11:17 | Break |
+| 11:17–11:50 | Entropy bridge; common distributions; continuous / KL named |
+| 11:50–12:00 | Embodiment / bits as bandwidth (*Atomic Human*); flag Week 3 carry-over |
 }
 
 \subsection{Quiz 1}
@@ -87,7 +84,7 @@ reading:
 * Ten minutes
 }
 
-\classtimer{10:00}
+\classtimer{10:05}
 
 \subsection{From Daniel Bernoulli: Week 1 Carry-Over}
 

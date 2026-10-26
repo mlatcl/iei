@@ -48,11 +48,11 @@ reading:
     required: false
 ---
 
-\notes{First meeting. FW26. Two hours from 10:00; no class test. Worksheet 1 (Socratic dialogue) is released and due by 10:00 at the start of lecture 2 (20 October). Quiz 1 is also at the start of lecture 2: probability foundations and the Week 1 energy / Boltzmann seeds. Hydrodynamica, entropy review, and embodiment open lecture 2 after the quiz. Maxwell / Landauer and the no-go contrast are previews, not the later treatments.}
+\notes{First meeting. FW26. The slot is 10:05--11:55 (110 minutes, not 120); no class test. Worksheet 1 (Socratic dialogue) is released and due by 10:00 at the start of lecture 2 (20 October). Quiz 1 is also at the start of lecture 2: probability foundations and the Week 1 energy / Boltzmann seeds. Hydrodynamica, entropy review, and embodiment open lecture 2 after the quiz. Maxwell / Landauer and the no-go contrast are previews, not the later treatments.}
 
 \subsection{This Session}
 
-\notes{The course is called Information, Energy and Intelligence because information is the well-defined quantity, intelligence is not, and energy is how the two meet a physical ledger. Part of the first hour is a handwritten reflection on the worksheet habit: we mark the quality of the probe, not the prose. Socrates is previewed here as "I know that I do not know" before the worksheet slides. *The Atomic Human* comes out as a trade book, not a textbook.}
+\notes{The course is called Information, Energy and Intelligence because information is the well-defined quantity, intelligence is not, and energy is how the two meet a physical ledger. After the break comes a handwritten reflection on the worksheet habit: we mark the quality of the probe, not the prose. Socrates is previewed in the opening as "I know that I do not know" before the worksheet slides. *The Atomic Human* comes out as a trade book, not a textbook.}
 
 \slidesincremental{
 * Room FW26; eight Tuesdays from today
@@ -62,19 +62,19 @@ reading:
 }
 
 \newslide{Time Plan}
-\notes{**Time plan (120 minutes).** As delivered on 13 October 2026. Maxwell / Landauer / no-go are previews of later weeks, spoken in the first hour. Probability, Socrates, and the energy seed follow the break. Daniel Bernoulli is a pointer, not Hydrodynamica.}
+\notes{**Time plan (as delivered 13 October 2026).** Clocks from the Panopto SRT (recording 00:00 ≈ 10:00). The slot is 10:05--11:55 (110 minutes, not 120). Speech from 10:04; this session ran to 12:00. Maxwell / Landauer / no-go are previews of later weeks, spoken in the first hour. Probability, Socrates, and the energy seed follow the break. Daniel Bernoulli is a pointer, not Hydrodynamica.}
 
-| Minutes | Block |
-|--------:|-------|
-| 0–15 | Course mechanics; questions list; course site |
-| 15–25 | Perpetual motion and superintelligence |
-| 25–50 | Preview: Maxwell's demon, Landauer, no-go versus mechanism |
-| 50–60 | Laplace's demon and gremlin; Jaynes as a pointer |
-| 60–70 | Break |
-| 70–90 | Probability review: product/sum/Bayes; named distributions |
-| 90–105 | Textbooks aside; Socratic worksheets and LLM habit |
-| 105–115 | Energy seed; Boltzmann $p_i \propto e^{-\beta E_i}$ |
-| 115–120 | Daniel Bernoulli pointer; Worksheet 1 / Quiz 1 |
+| Clock | Block |
+|------:|-------|
+| 10:05–10:23 | Course mechanics; questions list; course site |
+| 10:23–10:32 | Perpetual motion and superintelligence |
+| 10:32–10:52 | Preview: Maxwell's demon, Landauer, no-go versus mechanism |
+| 10:52–11:00 | Laplace's demon and gremlin; Jaynes as a pointer |
+| 11:00–11:07 | Break |
+| 11:07–11:30 | Probability review: product/sum/Bayes; named distributions |
+| 11:30–11:47 | Textbooks aside; Socratic worksheets and LLM habit |
+| 11:47–11:58 | Energy seed; Boltzmann $p_i \propto e^{-\beta E_i}$ |
+| 11:58–12:00 | Daniel Bernoulli pointer; Worksheet 1 / Quiz 1 (past five-to) |
 
 
 \subsection{Course Mechanics}
