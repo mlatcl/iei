@@ -46,11 +46,12 @@ reading:
     required: false
 ---
 
-\notes{No class test today. Week 2 stopped at embodiment: open with die / MacKay / Gibbs / $F$ / HMC, then Shannon $H$, $Z$, KL / differential entropy, then bath / Schottky / finite time. Honest note: this is a packed session --- prioritise carry-over and Shannon axioms if time runs short.}
+\notes{No class test today. Eight minutes on Worksheet 1 and Quiz 1, then Week 2 carry-over: die / MacKay / Gibbs / $F$ / HMC, then Shannon $H$, $Z$, KL / differential entropy, then bath / Schottky / finite time. Honest note: this is a packed session --- keep the debrief short, then prioritise carry-over and Shannon axioms if time runs short.}
 
 \subsection{This Session}
 
 \slidesincremental{
+* Homework from Weeks 1--2 (Quiz 1 / Worksheet 1)
 * Finish Week 2: die / MacKay → Gibbs / $F$ → HMC
 * Shannon $H$; Boltzmann $S = kH$
 * Arithmetic coding → Dasher; $Z$; $\KL{\cdot}{\cdot}$
@@ -62,14 +63,17 @@ reading:
 
 | Minutes | Block |
 |--------:|-------|
-| 0–25 | Week 2 carry-over: info game / MacKay / die grouping |
-| 25–45 | Gibbs--Boltzmann; $F=U-TS$; HMC (compressed if needed) |
-| 45–55 | Break |
-| 55–80 | Shannon axioms; $S=kH$; arithmetic coding / Dasher |
-| 80–100 | $Z$; KL; differential entropy / Maxwell Jacobian; local equilibrium |
-| 100–120 | Bath; Schottky; finite-time naming (statements; $I$/capacity if time) |
+| 0–8 | Homework debrief: Quiz 1 / Worksheet 1 |
+| 8–30 | Week 2 carry-over: info game / MacKay / die grouping |
+| 30–50 | Gibbs--Boltzmann; $F=U-TS$; HMC (compressed if needed) |
+| 50–60 | Break |
+| 60–85 | Shannon axioms; $S=kH$; arithmetic coding / Dasher |
+| 85–105 | $Z$; KL; differential entropy / Maxwell Jacobian; local equilibrium |
+| 105–120 | Bath; Schottky; finite-time naming (statements; $I$/capacity if time) |
 
 }
+
+\include{includes/week3-homework-debrief.md}
 
 \subsection{Week 2 Carry-Over}
 
@@ -171,7 +175,7 @@ mlai.write_figure('three-state-thermo.svg', directory='\writeDiagramsDir/ml')}
 
 \include{_ml/includes/from-loss-to-hamiltonian.md}
 
-\notes{Week 1 left the ML energies as *scores* and the Boltzmann seed as a static occupation. Those scores become potentials $V$: descent is motion on $V$; practice is stochastic; kinetic energy completes the Hamiltonian; HMC (Neal) is the sampler that uses both. The live demos use ``mlai.HamiltonianMonteCarlo``: leapfrog paths on a quadratic potential, then logistic regression with an SGD point estimate versus an HMC posterior cloud.}
+\notes{Week 1 left the ML energies as *scores* and the Boltzmann seed as a static occupation. Those scores become potentials $V$: descent is motion on $V$; practice is stochastic; kinetic energy completes the Hamiltonian; HMC (Neal) is the sampler that uses both. A move along a contour of $H$ is free ($\Delta H=0$); momentum refresh hops between contours. Descent heads for the mode, which in high dimensions is not where the mass sits ($\|q\|^2\sim\chi^2_d$). Leapfrog is the discrete map that stays near the contour. The loop is hop, ride, correct: neither move covers the joint space alone. The live demos use ``mlai.HamiltonianMonteCarlo``.}
 
 \include{_books/includes/welling-lu-holdijk.md}
 \include{_information/includes/welling-boltzmann-free-energy.md}
