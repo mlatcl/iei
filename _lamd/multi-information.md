@@ -175,13 +175,13 @@ ix_t = np.linspace(0.0, 2.0, 300)
 it_y_bound = np.minimum(ix_t, Ixy)
 fig, ax = plt.subplots(figsize=(7, 4))
 ax.fill_between(ix_t, 0.0, it_y_bound, alpha=0.25)
-ax.plot(ix_t, it_y_bound, linewidth=2, label=r'DPI: $I(T;Y)\le\min(I(X;T),I(X;Y))$')
+ax.plot(ix_t, it_y_bound, linewidth=2, label=r'DPI: $I(T;Y)\leq\min(I(X;T),I(X;Y))$')
 ax.axhline(Ixy, linestyle='--', linewidth=1)
 ax.set_xlabel(r'$I(X;T)$ (bits)')
 ax.set_ylabel(r'$I(T;Y)$ (bits)')
 ax.set_title('Feasible region for a representation $T$')
 ax.legend(loc='upper left')
-mlai.write_figure('information-bottleneck-region.svg', directory='\\writeDiagramsDir/ml')}
+mlai.write_figure('information-bottleneck-region.svg', directory='\writeDiagramsDir/ml')}
 
 \figure{\includediagram{\diagramsDir/ml/information-bottleneck-region}{75%}}{DPI supplies the feasible region. The information bottleneck traces the upper boundary: keep $I(T;Y)$, spend as little $I(X;T)$ as possible.}{information-bottleneck-region}
 

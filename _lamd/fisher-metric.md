@@ -250,11 +250,11 @@ from scipy.stats import norm as sp_norm}
 \plotcode{x = np.linspace(-5, 5, 1000)
 # True bimodal p
 p = 0.5*sp_norm.pdf(x, -1.8, 0.65) + 0.5*sp_norm.pdf(x, 1.8, 0.65)
-p = p / np.trapz(p, x)
+p = p / np.trapezoid(p, x)
 
 # Forward KL minimiser: Gaussian matched to mean and variance of p
-mu_p = np.trapz(x*p, x)
-var_p = np.trapz((x - mu_p)**2 * p, x)
+mu_p = np.trapezoid(x*p, x)
+var_p = np.trapezoid((x - mu_p)**2 * p, x)
 q_fwd = sp_norm.pdf(x, mu_p, np.sqrt(var_p))
 
 # Reverse KL minimiser: concentrate on one mode
