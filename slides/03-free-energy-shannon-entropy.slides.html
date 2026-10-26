@@ -388,7 +388,7 @@ likely objects <span class="math inline">\(\Rightarrow\)</span> need
 probability as evenly as possible</li>
 </ul>
 </div>
-<p>The same idea with a three-outcome instrument comes next — MacKay’s
+<p>The same idea, with a different instrument, comes next — MacKay’s
 balance.</p>
 </section>
 <section id="mackays-balance-and-balls" class="slide level2">
@@ -407,26 +407,41 @@ lighter.</p>
 </div>
 </div>
 <aside class="notes">
-A two-pan balance and twelve identical balls. Each use of the balance
-returns one of three readings: left heavy, balance, or right heavy.
+A two-pan balance and twelve identical balls.
 </aside>
 <div>
 <ul>
 <li class="fragment">Instrument: a two-pan balance</li>
-<li class="fragment">Each use: left heavy, right heavy, or balance —
-<em>three</em> outcomes</li>
 <li class="fragment">Task: identify the odd ball <em>and</em> whether it
 is heavy or light</li>
 </ul>
 </div>
 <aside class="notes">
-State the puzzle. Do not walk through which balls go on which pan. The
-lecture point is the information budget, not the adaptive strategy tree.
+State the puzzle. Do not list the readings of the balance, and do not
+walk through which balls go on which pan.
+</aside>
+</section>
+<section id="how-should-we-proceed" class="slide level2">
+<h2>How Should We Proceed?</h2>
+<p>We have a finite list of hypotheses and a physical instrument. How
+should we think?</p>
+<div>
+<ul>
+<li class="fragment">What, exactly, do we need to name?</li>
+<li class="fragment">What would count as a useful use of the
+balance?</li>
+<li class="fragment">When would we know we were done?</li>
+</ul>
+</div>
+<aside class="notes">
+Leave this live. Do not say left, right, or level, and do not say three.
+After they have named the hypotheses, try the two-outcome story next —
+as if this were the information game again.
 </aside>
 </section>
 <section id="information-at-the-start" class="slide level2">
 <h2>Information at the Start</h2>
-<p>Before any weighing, how many hypotheses?</p>
+<p><em>Maths.</em> Before any weighing, how many hypotheses?</p>
 <div>
 <ul>
 <li class="fragment">12 choices for which ball is odd</li>
@@ -437,19 +452,228 @@ likely states of the world</li>
 </ul>
 </div>
 </section>
-<section id="information-from-the-balance" class="slide level2">
-<h2>Information from the Balance</h2>
-<p>Each weighing has three possible readings.</p>
+<section id="try-two-outcomes" class="slide level2">
+<h2>Try Two Outcomes</h2>
+</section>
+<section id="lets-try-two-outcomes" class="slide level2">
+<h2>Let’s Try Two Outcomes</h2>
+<p>Treat the balance as the information game: <em>left heavy</em> or
+<em>right heavy</em> only.</p>
 <div>
 <ul>
-<li class="fragment">Ideal (equiprobable) outcomes: <span
-class="math inline">\(\log_2 3 \approx 1.58\)</span> bits per use</li>
-<li class="fragment">Two weighings: at most <span
-class="math inline">\(3^2 = 9\)</span> leaves — too few for <span
-class="math inline">\(24\)</span> hypotheses</li>
-<li class="fragment">Three weighings: at most <span
-class="math inline">\(3^3 = 27\)</span> leaves — enough, since <span
-class="math inline">\(27 \ge 24\)</span></li>
+<li class="fragment">Two readings <span
+class="math inline">\(\Rightarrow\)</span> at most <span
+class="math inline">\(\log_2 2\)</span> bits per use</li>
+<li class="fragment">Mechanism next: what we actually put on the
+pans</li>
+<li class="fragment">Maths stays on its own slides — the two accounts
+can disagree</li>
+</ul>
+</div>
+<aside class="notes">
+Say ``log two bits’’ — one bit if the two readings are equally likely.
+Do not yet mention a third reading. Board 6 vs 6 as the move people
+reach for from twenty questions.
+</aside>
+</section>
+<section id="maths-two-readings" class="slide level2">
+<h2>Maths: Two Readings</h2>
+<p><em>Maths.</em> Start from <span class="math inline">\(\log_2
+24\)</span>. Each use returns at most <span class="math inline">\(\log_2
+2\)</span>.</p>
+<p><small> <span class="math display">\[
+\log_2 24 \approx 4.58,\qquad 2^4 = 16 &lt; 24 \le 32 = 2^5
+\]</span> </small></p>
+<div>
+<ul>
+<li class="fragment">Four uses cannot name 24 hypotheses</li>
+<li class="fragment">Five uses can, <em>if</em> each use really returns
+one bit</li>
+<li class="fragment">That ``if’’ is mechanism, not maths</li>
+</ul>
+</div>
+</section>
+<section id="mechanism-6-vs-6" class="slide level2">
+<h2>Mechanism: 6 vs 6</h2>
+<p><em>Mechanism.</em> Put six against six.</p>
+<div>
+<ul>
+<li class="fragment">The pans will tip — the odd ball is on one
+side</li>
+<li class="fragment">Follow the down pan, as if the odd ball were
+heavier</li>
+<li class="fragment">Six balls remain under that story</li>
+</ul>
+</div>
+<aside class="notes">
+Ask what we actually learned. Under ``it is heavier’’, 12 balls become
+6, one bit toward which ball. We do <em>not</em> know the direction. The
+down pan is six maybe-heavies; the up pan is six maybe-lights. All
+twelve balls are still in play. Maths next.
+</aside>
+</section>
+<section id="maths-what-6-vs-6-bought" class="slide level2">
+<h2>Maths: What 6 vs 6 Bought</h2>
+<p><em>Maths.</em> Score the same physical act on the 24 hypotheses.</p>
+<div>
+<ul>
+<li class="fragment">24 <span class="math inline">\(\to\)</span> 12
+remaining hypotheses: exactly <span class="math inline">\(\log_2
+2\)</span> bits</li>
+<li class="fragment">Zero balls eliminated — each ball is still possibly
+odd</li>
+<li class="fragment">The bit went into a <em>coupling</em> of group and
+direction</li>
+</ul>
+</div>
+</section>
+<section id="mechanism-3-vs-3" class="slide level2">
+<h2>Mechanism: 3 vs 3</h2>
+<p><em>Mechanism.</em> Keep going as a binary search of the balls: three
+against three.</p>
+<div>
+<ul>
+<li class="fragment">Under the heavier-side story, three balls
+remain</li>
+<li class="fragment">Same move, smaller pile</li>
+<li class="fragment">We are still not asking about light versus
+heavy</li>
+</ul>
+</div>
+</section>
+<section id="mechanism-three-left" class="slide level2">
+<h2>Mechanism: Three Left</h2>
+<p><em>Mechanism.</em> Three balls remain. We cannot put one and a half
+on a pan.</p>
+<div>
+<ul>
+<li class="fragment">2 vs 2 needs a fourth ball</li>
+<li class="fragment">Borrow one of <em>known normal</em> mass</li>
+<li class="fragment">Then 1 vs 1 on whatever the 2 vs 2 leaves</li>
+</ul>
+</div>
+<aside class="notes">
+Make them say the known ball out loud. Ask: how many bits do we get from
+2 vs 2 now? Do not calculate before they see that the split of three
+remaining balls cannot be even.
+</aside>
+</section>
+<section id="maths-the-known-ball-taxes-the-bit" class="slide level2">
+<h2>Maths: The Known Ball Taxes the Bit</h2>
+<p><em>Maths.</em> Three remaining heavier-suspects; pans are 2 vs
+1+known.</p>
+<p><small> <span class="math display">\[
+\left(\tfrac{2}{3},\tfrac{1}{3}\right)
+\quad\Rightarrow\quad
+H = h_2\!\left(\tfrac{2}{3}\right) \approx 0.92 &lt; 1 \text{ bit}
+\]</span> </small></p>
+<div>
+<ul>
+<li class="fragment">The even split was <span
+class="math inline">\(\log_2 2\)</span>; the pans cannot make it</li>
+<li class="fragment">Padding with a known ball is a mechanism patch</li>
+<li class="fragment">Information gain falls because the
+<em>probabilities</em> are no longer equal</li>
+</ul>
+</div>
+</section>
+<section id="mechanism-1-vs-1" class="slide level2">
+<h2>Mechanism: 1 vs 1</h2>
+<p><em>Mechanism.</em> If two suspects remain, weigh them against each
+other.</p>
+<div>
+<ul>
+<li class="fragment">Now the split <em>can</em> be even</li>
+<li class="fragment">Under the heavier story, this names the ball</li>
+<li class="fragment">We still have not asked light versus heavy</li>
+</ul>
+</div>
+</section>
+<section id="mechanism-lighter-or-heavier" class="slide level2">
+<h2>Mechanism: Lighter or Heavier?</h2>
+<p><em>Mechanism.</em> We have a candidate ball. Can we name the
+direction?</p>
+<div>
+<ul>
+<li class="fragment">Weigh the candidate against a known normal</li>
+<li class="fragment">Two outcomes name heavy versus light — <em>if</em>
+it tips</li>
+<li class="fragment">If it <em>balances</em>, our heavier-side story was
+wrong</li>
+</ul>
+</div>
+<aside class="notes">
+This is the crack in the two-outcome attempt. A known-normal comparison
+is the natural test for direction, and it keeps offering a third
+reading: level. The instrument was never a yes/no question. Pause, then
+the aha slide.
+</aside>
+</section>
+<section id="two-accounts-one-experiment" class="slide level2">
+<h2>Two Accounts, One Experiment</h2>
+<p>Keep the columns separate.</p>
+<div>
+<ul>
+<li class="fragment"><em>Maths:</em> <span class="math inline">\(\log_2
+24\)</span> to close; at most <span class="math inline">\(\log_2
+2\)</span> per two-outcome use</li>
+<li class="fragment"><em>Mechanism:</em> 6 vs 6, 3 vs 3, 2 vs 2 with a
+known, 1 vs 1, then direction</li>
+<li class="fragment">The known ball, and the unused ``level’’ reading,
+are mechanism — they change the gain</li>
+</ul>
+</div>
+</section>
+<section id="three-readings" class="slide level2">
+<h2>Three Readings</h2>
+</section>
+<section id="aha-it-balances-three-ways" class="slide level2">
+<h2>Aha: It Balances Three Ways</h2>
+<p>The pans also sit <em>level</em>. Left heavy, right heavy, or
+balance.</p>
+<div>
+<ul>
+<li class="fragment">The instrument was never a yes/no question</li>
+<li class="fragment">6 vs 6 made the third reading impossible</li>
+<li class="fragment">That was a mechanism choice that <em>threw
+away</em> a symbol</li>
+</ul>
+</div>
+<aside class="notes">
+Let them say the three readings. Then go straight to the new budget. Do
+not start the 4 vs 4 tree.
+</aside>
+</section>
+<section id="maths-three-readings" class="slide level2">
+<h2>Maths: Three Readings</h2>
+<p><em>Maths.</em> Each use now returns at most <span
+class="math inline">\(\log_2 3\)</span>.</p>
+<p><small> <span class="math display">\[
+\log_2 3 \approx 1.58,\qquad 3^2 = 9 &lt; 24 \le 27 = 3^3
+\]</span> </small></p>
+<div>
+<ul>
+<li class="fragment">Two uses cannot name 24 hypotheses</li>
+<li class="fragment">Three uses can, <em>if</em> each use really returns
+<span class="math inline">\(\log_2 3\)</span></li>
+<li class="fragment">Same ``if’’ as before: mechanism must realise the
+split</li>
+</ul>
+</div>
+</section>
+<section id="mechanism-must-collect-log_2-3" class="slide level2">
+<h2>Mechanism Must Collect <span class="math inline">\(\log_2
+3\)</span></h2>
+<p><em>Mechanism.</em> To earn <span class="math inline">\(\log_2
+3\)</span>, all three readings must be possible and near equal.</p>
+<div>
+<ul>
+<li class="fragment">First weighing: 4 vs 4, not 6 vs 6 — so
+<em>level</em> can happen</li>
+<li class="fragment">A known ball, or emptying a reading, is again a
+tax</li>
+<li class="fragment">Optimal play keeps the three readings as near
+equiprobable as possible</li>
 </ul>
 </div>
 </section>
@@ -461,17 +685,17 @@ in principle.</p>
 <ul>
 <li class="fragment">We do <em>not</em> give the sequence of groupings
 today</li>
-<li class="fragment">Optimal play keeps the three readings as near
-equiprobable as possible</li>
-<li class="fragment">Same moral as twenty questions: ask questions that
-split the prior evenly</li>
+<li class="fragment">Info gained and mechanism are separate ledgers —
+score both</li>
+<li class="fragment">Same moral as twenty questions: split the prior
+evenly, now three ways</li>
 </ul>
 </div>
 <aside class="notes">
 Stop here. Invite them to try Exercise 4.1 before reading MacKay’s
-solution figure. Optional aside: a first weighing of 1–6 vs 7–12 can
-never balance under the problem statement, so it yields only one bit and
-is already suboptimal.
+solution figure. Optional aside: 1–6 vs 7–12 can never balance, so it
+yields only one bit and is already suboptimal <em>once we know there are
+three readings</em>.
 </aside>
 </section>
 <section id="coarse-graining-a-die" class="slide level2">

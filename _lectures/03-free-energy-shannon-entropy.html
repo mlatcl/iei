@@ -111,7 +111,7 @@ k \ge \log_2 N
 <div style="text-align:right">
 <span class="editsection-bracket" style="">[</span><span class="editsection" style=""><a href="https://github.com/lawrennd/snippets/edit/main/_information/includes/mackay-weighing-problem.md" target="_blank" onclick="ga('send', 'event', 'Edit Page', 'Edit', 'https://github.com/lawrennd/snippets/edit/main/_information/includes/mackay-weighing-problem.md', 13);">edit</a></span><span class="editsection-bracket" style="">]</span>
 </div>
-<p>David MacKay opens the compression half of <em>Information Theory, Inference, and Learning Algorithms</em> with a weighing puzzle <span class="citation" data-cites="MacKay-information03">(MacKay, 2003, p. Exercise~4.1)</span>. It is the information game with a ternary instrument instead of a binary question. We use it here only as a <em>counting</em> argument: how much uncertainty we start with, how much each use of the balance can remove, and why three weighings are enough in principle — without exhibiting a particular sequence of measurements.</p>
+<p>David MacKay opens the compression half of <em>Information Theory, Inference, and Learning Algorithms</em> with a weighing puzzle <span class="citation" data-cites="MacKay-information03">(MacKay, 2003, p. Exercise~4.1)</span>. State the puzzle first. Do not yet say that the instrument is ternary. The information-game habit is to ask how we should proceed — what we must name — and then to try the instrument as if it had two readings, like a yes/no question. Keep the <em>mechanism</em> (what we put on the pans) on a different slide from the <em>maths</em> (how many bits that use can return). Only after that sequence do we notice that the balance has a third reading.</p>
 <div class="figure">
 <div id="mackay-balance-balls-figure" class="figure-frame">
 <object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/information/mackay-balance-balls.svg" width="80%" style=" ">
@@ -123,14 +123,41 @@ k \ge \log_2 N
 </button>
 </div>
 <div id="mackay-balance-balls-caption" class="caption-frame">
-<p>Figure: A two-pan balance and twelve identical balls. Each use of the balance returns one of three readings: left heavy, balance, or right heavy.</p>
+<p>Figure: A two-pan balance and twelve identical balls.</p>
 </div>
 </div>
-<p>You are given twelve balls, identical in appearance. Exactly one differs in weight from the others; you do not know whether that odd ball is heavier or lighter. A two-pan balance compares two equal-sized groups and returns one of three readings: left side heavier, right side heavier, or equal. Design a strategy that finds the odd ball and the direction of the defect.</p>
+<p>You are given twelve balls, identical in appearance. Exactly one differs in weight from the others; you do not know whether that odd ball is heavier or lighter. A two-pan balance compares two equal-sized groups. Design a strategy that finds the odd ball and the direction of the defect.</p>
+<p>Resist jumping to a particular grouping. Count first: how many states of the world. Then try the instrument as a two-outcome device, because that is the game we already know. Keep what we put on the pans separate from the information budget those pans can return.</p>
 <p>Under a uniform prior over those twenty-four possibilities, the Shannon uncertainty we must remove is <span class="math display">\[
 H_{\mathrm{start}} = \log_2 24 \approx 4.58 \text{ bits}.
-\]</span> At the end we need a single named hypothesis: <span class="math inline">\(H_{\mathrm{end}} = 0\)</span>. The <em>deficit</em> to close is therefore about <span class="math inline">\(4.58\)</span> bits. That difference — start minus end — is the information the experiment must supply.</p>
-<p>A binary question yields at most one bit. The balance is richer: its alphabet size is three. If the three readings are equiprobable, one weighing contributes <span class="math display">\[
+\]</span> At the end we need a single named hypothesis: <span class="math inline">\(H_{\mathrm{end}} = 0\)</span>. The <em>deficit</em> to close is therefore about <span class="math inline">\(4.58\)</span> bits. That difference — start minus end — is the information the experiment must supply. We have not yet said what the balance returns.</p>
+<h2 id="try-two-outcomes">Try Two Outcomes</h2>
+<p>A two-outcome instrument, used optimally, returns at most <span class="math inline">\(\log_2 2 = 1\)</span> bit per measurement. The information budget then says <span class="math display">\[
+2^4 = 16 &lt; 24 \le 32 = 2^5,
+\]</span> so five uses can suffice on paper and four cannot. Whether a physical balance <em>achieves</em> that one bit is a different question: it depends on what we put on the pans.</p>
+<p><span class="math display">\[
+\log_2 24 \approx 4.58,\qquad 2^4 = 16 &lt; 24 \le 32 = 2^5
+\]</span></p>
+<p>Write two columns if you can: left, the information budget; right, the pans. The left column does not know about equal group sizes, leftover balls, or borrowing a ball of known mass. Those constraints live on the right. The rest of this block is the right-hand column, scored afterwards by the left.</p>
+<p>The move 6 vs 6 is the binary-search instinct. If we already knew the odd ball was heavier, it would be a perfect split of twelve balls. We do not know that. A down-left reading means ``one of the left six is heavy, <em>or</em> one of the right six is light’’: twelve of the original twenty-four hypotheses remain. One bit toward the 24, and <em>no</em> ball has been eliminated. Mechanism and maths have already come apart: the pans moved, the pile of balls did not shrink.</p>
+<p>The information gain can be perfect for the two-outcome model — an even split of 24 — while the mechanism fails to name a set of six suspect <em>balls</em>. What we carry forward is six maybe-heavy and six maybe-light. If we now <em>pretend</em> it was heavier and keep only the down pan, we have thrown away half of the remaining hypotheses by assumption, not by measurement.</p>
+<p>This is the sequence people sketch on the board: 6 vs 6, then 3 vs 3. It is the right mechanism for a different puzzle — twelve balls, one <em>heavier</em>. Hold that sequence, because the next move is where the pans refuse to cooperate.</p>
+<p>With three suspects we have two mechanical choices. Weigh 1 vs 1 and leave one off: the left-off ball is the odd one <em>if the pans balance</em>. That reading is not in the two-outcome story we are trying to tell. Or weigh 2 vs 2 by padding with a ball already known to be normal: A,B against C plus a normal. The pans are now full, so in the heavier-only story they must tip, and we have not used a third symbol. We have changed the split.</p>
+<p><span class="math display">\[
+\left(\tfrac{2}{3},\tfrac{1}{3}\right)
+\quad\Rightarrow\quad
+H = h_2\!\left(\tfrac{2}{3}\right) \approx 0.92 &lt; 1 \text{ bit}
+\]</span></p>
+<p>If A,B,C are the three remaining heavier-suspects and N is known normal, the reading A,B down leaves two hypotheses and has probability <span class="math inline">\(2/3\)</span>; C,N down names C and has probability <span class="math inline">\(1/3\)</span>. Binary entropy <span class="math inline">\(h_2(2/3)\approx 0.92\)</span> bits. The deficit <span class="math inline">\(1-0.92\)</span> is exactly the price of the mechanical constraint ``equal numbers on the pans, and no third reading’’. We did not lose those bits because the mathematics of two outcomes changed. We lost them because the mechanism could not realise an equiprobable two-way split of three objects.</p>
+<p>1 vs 1 of two remaining heavier-suspects returns the missing bit: the down pan is the odd ball, if the heavier-side story is true. The sequence of <em>acts</em> was 6 vs 6, 3 vs 3, 2 vs 2 with a known, then 1 vs 1. The sequence of <em>gains</em> was 1, 1, <span class="math inline">\(0.92\)</span>, 1 — already not four bits. And this named a ball only inside the heavier-side story.</p>
+<p>To finish the original task we must name the direction as well as the ball. The obvious mechanism is candidate versus known normal. If the two-outcome story were true, this use would return the last bit: heavy or light. But if we followed the down pan all the way and the odd ball was actually light, the candidate may be normal — and then the pans <em>balance</em>. The third reading has been sitting in the mechanism whenever a known ball appears. We cannot keep it out without lying about what the device does. That is the cue to abandon the two-outcome model, not to patch it again.</p>
+<p>The moral is not that the binary budget is wrong. It is that an information budget is silent about pans. Equal group sizes, leftover balls, and borrowed normals are constraints on the <em>channel we actually have</em>. Score every weighing twice: what the device did, then how many bits that split was worth.</p>
+<h2 id="three-readings">Three Readings</h2>
+<p>A two-pan balance has a ternary alphabet. The reading ``level’’ is not an annoyance to be designed out; it is a symbol that can carry information. The first move of the two-outcome story, 6 vs 6, sets the probability of that symbol to zero: with exactly one odd ball among the twelve, the pans cannot balance. We spent a mechanism choice to turn a three-outcome device into a two-outcome device, and then paid further mechanism taxes (the known ball) to keep the third symbol from coming back.</p>
+<p><span class="math display">\[
+\log_2 3 \approx 1.58,\qquad 3^2 = 9 &lt; 24 \le 27 = 3^3
+\]</span></p>
+<p>A binary question yields at most one bit. If the three readings are equiprobable, one weighing contributes <span class="math display">\[
 \log_2 3 \approx 1.585 \text{ bits}.
 \]</span> After <span class="math inline">\(k\)</span> weighings the strategy tree has at most <span class="math inline">\(3^k\)</span> leaves, so it can name at most <span class="math inline">\(3^k\)</span> hypotheses. Compare budgets: <span class="math display">\[
 \begin{align*}
@@ -139,8 +166,9 @@ H_{\mathrm{start}} = \log_2 24 \approx 4.58 \text{ bits}.
 \end{align*}
 \]</span> Two weighings cannot suffice no matter how clever the groupings. Three weighings <em>can</em>: there is spare capacity of three unused leaves (<span class="math inline">\(27-24=3\)</span>). In bits, <span class="math display">\[
 3\log_2 3 \approx 4.75 &gt; \log_2 24 \approx 4.58.
-\]</span> The gap is small. That is why the puzzle feels tight, and why a first weighing that wastes an outcome (for example putting six against six, which can never balance if exactly one ball is odd) fails: you have thrown away ternary resolution and fallen back toward a binary split.</p>
-<p>We stop at the existence argument. Constructing the adaptive tree — which balls on which pan at each step — is MacKay’s exercise, and solving it is the best way to feel what ``informative experiment’’ means. The only design principle we need today is the one already present in the information game: choose each measurement so that its outcomes are as nearly equiprobable as possible under the current posterior. That maximises expected information gain per weighing and is what makes the <span class="math inline">\(3^3 \ge 24\)</span> budget achievable in practice.</p>
+\]</span> The gap is small. That is why the puzzle feels tight. It is the same comparison we already made with <span class="math inline">\(\log_2 2\)</span>, with a larger per-use budget.</p>
+<p>The first weighing that realises the ternary budget puts four against four and leaves four off. Level then means the odd ball is in the four left off; a tip couples a group of four with a direction, as 6 vs 6 did, but now the third symbol is alive. We do not give the rest of the tree. The design principle is the one already present in the information game: choose each measurement so that its outcomes are as nearly equiprobable as possible under the current posterior. That maximises expected information gain per weighing and is what makes the <span class="math inline">\(3^3 \ge 24\)</span> budget achievable in practice. Adding a known-normal ball, or arranging a weighing that can never balance, is the same kind of mechanism tax we already computed for <span class="math inline">\(h_2(2/3)\)</span>.</p>
+<p>We stop at the existence argument. Constructing the adaptive tree — which balls on which pan at each step — is MacKay’s exercise, and solving it is the best way to feel what ``informative experiment’’ means. What the lecture owns is the split between ledgers: <span class="math inline">\(\log_2 24\)</span> versus <span class="math inline">\(\log_2 2\)</span> or <span class="math inline">\(\log_2 3\)</span> is the information account; 6 vs 6, 4 vs 4, and padding with a known ball are the mechanical account. The two are not the same, and the known-ball tax is the exhibit.</p>
 <h2 id="coarse-graining-a-die">Coarse-Graining a Die</h2>
 <div style="text-align:right">
 <span class="editsection-bracket" style="">[</span><span class="editsection" style=""><a href="https://github.com/lawrennd/snippets/edit/main/_information/includes/die-coarse-graining.md" target="_blank" onclick="ga('send', 'event', 'Edit Page', 'Edit', 'https://github.com/lawrennd/snippets/edit/main/_information/includes/die-coarse-graining.md', 13);">edit</a></span><span class="editsection-bracket" style="">]</span>
