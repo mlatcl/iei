@@ -46,7 +46,7 @@ reading:
     required: false
 ---
 
-\notes{No class test today. Eight minutes on Worksheet 1 and Quiz 1, then Week 2 carry-over: die / MacKay / Gibbs / $F$ / HMC, then Shannon $H$, $Z$, KL / differential entropy, then bath / Schottky / finite time. Honest note: this is a packed session --- keep the debrief short, then prioritise carry-over and Shannon axioms if time runs short.}
+\notes{No class test today. The slot is 10:05--11:55 (110 minutes, not 120). Eight minutes on Worksheet 1 and Quiz 1, then Week 2 carry-over: die / MacKay / Gibbs / $F$ / HMC, then Shannon $H$, $Z$, KL / differential entropy, then bath / Schottky / finite time. Honest note: this is a packed session --- keep the debrief short, then prioritise carry-over and Shannon axioms if time runs short.}
 
 \subsection{This Session}
 
@@ -59,17 +59,17 @@ reading:
 }
 
 \notes{
-**Time plan (120 minutes; crowded)**
+**Time plan (10:05--11:55; 110 minutes; crowded)**
 
-| Minutes | Block |
-|--------:|-------|
-| 0–8 | Homework debrief: Quiz 1 / Worksheet 1 |
-| 8–30 | Week 2 carry-over: info game / MacKay / die grouping |
-| 30–50 | Gibbs--Boltzmann; $F=U-TS$; HMC (compressed if needed) |
-| 50–60 | Break |
-| 60–85 | Shannon axioms; $S=kH$; arithmetic coding / Dasher |
-| 85–105 | $Z$; KL; differential entropy / Maxwell Jacobian; local equilibrium |
-| 105–120 | Bath; Schottky; finite-time naming (statements; $I$/capacity if time) |
+| Clock | Block |
+|------:|-------|
+| 10:05–10:13 | Homework debrief: Quiz 1 / Worksheet 1 |
+| 10:13–10:32 | Week 2 carry-over: info game / MacKay / die grouping |
+| 10:32–10:50 | Gibbs--Boltzmann; $F=U-TS$; HMC (compressed if needed) |
+| 10:50–11:00 | Break |
+| 11:00–11:22 | Shannon axioms; $S=kH$; arithmetic coding / Dasher |
+| 11:22–11:40 | $Z$; KL; differential entropy / Maxwell Jacobian; local equilibrium |
+| 11:40–11:55 | Bath; Schottky; finite-time naming (statements; $I$/capacity if time) |
 
 }
 

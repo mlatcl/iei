@@ -15,7 +15,7 @@
 * Worksheet 1: thirteen scripts; mean $12.2/15$
 }
 
-\speakernotes{Eight minutes, then carry-over. Do not read out individuals. One worksheet was not submitted; one reflection was missing; one auditor sat the quiz without Week 1 --- those are omitted from the means. If anyone asks for their mark: email, not the room.}
+\speakernotes{Eight minutes, 10:05--10:13, then carry-over. Stop at 10:13 even if the see-saw is still live. Do not read out individuals. One worksheet was not submitted; one reflection was missing; one auditor sat the quiz without Week 1 --- those are omitted from the means. If anyone asks for their mark: email, not the room.}
 
 \subsection{Quiz 1}
 
