@@ -7,11 +7,12 @@ venue: FW26, William Gates Building
 room: FW26
 transition: None
 abstract: >
-  The lecture is the heat thread from quantity to free energy: Black, Carnot,
-  Rumford, the air thermometer, Thomson's 1848 mill-scale, Joule, Clausius, Thomson's 1851 return,
-  Maxwell--Boltzmann, Gibbs, Helmholtz $F=U-TS$. After that story: the entropy
-  game, MacKay's weighing problem, and die grouping. Shannon axioms, HMC, $Z$,
-  KL and Schottky are parked in Week 4 for sorting.
+  Homework from Weeks 1--2, then the heat thread from quantity toward free
+  energy: Black, Carnot, Rumford, the air thermometer, Thomson's 1848 mill-scale,
+  Joule. After the break, Helmholtz $F=U-TS$ on the board; Clausius after that.
+  Shannon, Jaynes and Wiener appear as a close preview. The entropy game and
+  MacKay's weighing problem were named and not reached. Shannon axioms, HMC,
+  $Z$, KL and Schottky remain parked in Week 4.
 author:
 - given: Neil D.
   family: Lawrence
@@ -46,38 +47,40 @@ reading:
     required: false
 ---
 
-\notes{No class test today. The slot is 10:05--11:55 (110 minutes, not 120). Eight minutes on Worksheet 1 and Quiz 1, then the heat thread is the lecture: Black, Carnot, Rumford, the air thermometer, Thomson 1848, Joule, Clausius, Thomson 1851, Maxwell--Boltzmann, Gibbs, Helmholtz. The entropy game and MacKay's weighing problem come *after* that story, not before. Shannon axioms, HMC, $Z$, KL, Schottky and finite-time are parked at the end of Week 4 --- not in today's notes, not in the live Week 4 clock --- and will need sorting before 3 November. The LO1 payload is still the free-energy algebra at the end of the physics spine.}
+\notes{No class test *today*. Next week there is a class test, even if the webpage said otherwise on 27 October. Laptops away; notes by hand. The slot is 10:05--11:55 (110 minutes, not 120). As taught, the homework debrief ran about twenty-four minutes, then the heat thread as far as Joule before the break. Helmholtz was the LO1 payload after the break, on the visualiser, before the Clausius slides. Maxwell--Boltzmann and Gibbs were pointers, not the planned decks. Shannon / Jaynes / Wiener were a close preview. The entropy game and MacKay's weighing problem stay in this file as overflow; they were not given. Shannon axioms, HMC, $Z$, KL, Schottky and finite-time remain parked at the end of Week 4.}
 
 \subsection{This Session}
 
 \slidesincremental{
-* Homework from Weeks 1--2 (Quiz 1 / Worksheet 1)
-* Heat: Black, Carnot, Rumford, air thermometer, Kelvin, Joule, Clausius, Kelvin
-* Then: Maxwell--Boltzmann, Gibbs, Helmholtz $F=U-TS$
-* After the story: entropy game / MacKay / grouping
+* No laptops; homework from Weeks 1--2 (Quiz 1 / Worksheet 1)
+* Heat as far as Joule before the break
+* Helmholtz $F=U-TS$ on the board after the break (LO1)
+* Clausius after Helmholtz; Shannon / Jaynes / Wiener as a preview
 }
 
 \notes{
-**Time plan (10:05--11:55; 110 minutes)**
+**Time plan (as delivered 27 October 2026).** Clocks from the Panopto SRT (recording 00:00 ≈ 10:00). The slot is 10:05--11:55 (110 minutes, not 120). Speech from 10:04; this session ran to about 11:58. Helmholtz on the board is the LO1 payload. Shannon / Jaynes / Wiener and Maxwell's demon as coarse-graining are previews of later weeks. MacKay / entropy game stay in the file; they were not given.
 
 | Clock | Block |
 |------:|-------|
-| 10:05–10:13 | Homework debrief: Quiz 1 / Worksheet 1 |
-| 10:13–10:25 | Joseph Black: heat as a quantity; calorimeter; latent heat |
-| 10:25–10:38 | Carnot: engines, caloric, the mill |
-| 10:38–10:50 | Rumford: heat from friction (flashback) |
-| 10:50–11:00 | Break |
-| 11:00–11:05 | Fahrenheit, Celsius, air thermometer |
-| 11:05–11:12 | Thomson 1848: mill-scale, no bottom |
-| 11:12–11:18 | Joule: paddle; the contradiction |
-| 11:18–11:26 | Clausius: two laws; $\mathrm{d}Q/T$; a reversible cycle produces no entropy |
-| 11:26–11:30 | Thomson 1851: $Q_h/T_h=Q_c/T_c$; now there is a bottom |
-| 11:30–11:35 | Maxwell--Boltzmann: Gaussian components; speed is not |
-| 11:35–11:40 | Gibbs occupation; coldness |
-| 11:40–11:52 | Helmholtz: $F=U-TS$ from $U=\expSamp{E}$; Gaussian quadratic |
-| 11:52–11:55 | Entropy game / MacKay / grouping (open; continue if overrun) |
+| 10:04–10:06 | Laptops away |
+| 10:06–10:09 | This session: heat story, Helmholtz, MacKay if time |
+| 10:09–10:23 | Quiz 1 debrief (mean $8.2/10$; gremlin; energy as score; coldness) |
+| 10:23–10:32 | Worksheet 1 (mean $12.2$; rat-hole; see-saw) |
+| 10:32–10:33 | Worksheet 2 already out; quiz 2 next week |
+| 10:33–10:37 | The story of the lecture |
+| 10:37–10:45 | Joseph Black: latent heat; Watt; calorimeter |
+| 10:45–10:53 | Carnot: mill, caloric, Clapeyron, cholera |
+| 10:53–10:56 | Rumford: inexhaustible heat |
+| 10:56–11:01 | Air thermometer; Thomson 1848 |
+| 11:01–11:05 | Joule; the contradiction; Clausius after the break |
+| 11:05–11:13 | Break |
+| 11:13–11:17 | Pens; Cavendish / royal-commission aside |
+| 11:17–11:48 | Helmholtz on the visualiser; questions ($T$--$S$ square; four-stroke) |
+| 11:48–11:54 | Clausius; Maxwell--Boltzmann pointer |
+| 11:54–11:58 | Preview: Shannon / Jaynes / Wiener; class test next week |
 
-The physics snippets can fill the slot. Protect Helmholtz; if colour overruns, MacKay is the thing that shortens, not $F=U-TS$. Shannon / HMC / Schottky are parked in `_lamd/maxwell-landauer.md`, not in this file.
+The include order below is still Black $\to$ \ldots $\to$ Helmholtz $\to$ MacKay. As taught, Helmholtz was boarded after Joule and before the Clausius slides. Protect Helmholtz; MacKay is the overflow, not a cut. Shannon / HMC / Schottky stay parked in `_lamd/maxwell-landauer.md`.
 
 }
 
@@ -85,7 +88,7 @@ The physics snippets can fill the slot. Protect Helmholtz; if colour overruns, M
 
 \subsection{From Heat to Helmholtz}
 
-\notes{Week 1 seeded the occupation $p_i \propto e^{-\beta E_i}$. Worksheet 1 told us Clausius did not make entropy a measure of uncertainty. The lecture is the heat thread that gets us to Helmholtz: Black, Carnot, Rumford, the air thermometer, Thomson's 1848 mill-scale, Joule, Clausius, Thomson's 1851 return, Maxwell--Boltzmann, Gibbs, then $F=U-TS$ with $U=\expSamp{E}$. The entropy game and MacKay's weighing problem come after that story. Shannon axioms are parked in Week 4.
+\notes{Week 1 seeded the occupation $p_i \propto e^{-\beta E_i}$. Worksheet 1 told us Clausius did not make entropy a measure of uncertainty. The lecture is the heat thread that gets us to Helmholtz: Black, Carnot, Rumford, the air thermometer, Thomson's 1848 mill-scale, Joule --- then, as taught, the board work on $F=U-TS$ with $U=\expSamp{E}$, and Clausius after that. Maxwell--Boltzmann and Gibbs remain in the file after Clausius. The entropy game and MacKay's weighing problem come after that story; they were not reached on 27 October. Shannon axioms are parked in Week 4.
 
 From a stationary distribution with given energy we will write the *Gibbs distribution*,
 $$
@@ -102,9 +105,9 @@ where $U=\expSamp{E}$ is inner energy, $F$ is Helmholtz free energy, $T$ is temp
 \slides{Heat first. Information after Helmholtz.}
 
 \slidesincremental{
-* Black $\to$ Carnot $\to$ Rumford $\to$ air thermometer $\to$ Kelvin $\to$ Joule $\to$ Clausius $\to$ Kelvin
-* Maxwell--Boltzmann $\to$ Gibbs $\to$ Helmholtz
-* Then: entropy game / MacKay
+* Black $\to$ Carnot $\to$ Rumford $\to$ air thermometer $\to$ Kelvin $\to$ Joule
+* Helmholtz on the board after the break; Clausius after Helmholtz
+* Shannon / Jaynes / Wiener as a preview; entropy game / MacKay if time
 }
 
 \include{_iei/includes/iei-notebook-setup.md}
@@ -129,12 +132,16 @@ where $U=\expSamp{E}$ is inner energy, $F$ is Helmholtz free energy, $T$ is temp
 \include{_physics/includes/coldness-and-temperature.md}
 
 \include{_physics/includes/free-energy-decomposition.md}
+\include{includes/week3-helmholtz-as-taught.md}
 
 \include{_physics/includes/gaussian-quadratic-free-energy.md}
+\include{_physics/includes/free-energy-entropy-two-sides.md}
+
+\include{includes/week3-shannon-wiener-preview.md}
 
 \subsection{After Helmholtz: The Entropy Game}
 
-\notes{The physics story has arrived at $F=U-TS$. What follows is the information reading that Week 2 did not reach: guessing, MacKay's weighing problem, and die coarse-graining. Grouping is the live close; the chain-rule / Shannon axiom block is parked in Week 4.}
+\notes{The physics story has arrived at $F=U-TS$. Welling's book reads that identity from $F$; we have been reading it from $S$; inner energy is the hinge. What follows is the information reading that Week 2 did not reach: guessing, MacKay's weighing problem, and die coarse-graining. As taught on 27 October this block was not given --- named at the start as the overflow, deferred explicitly at 10:33 and again at 11:56. Grouping remains the intended close if the heat thread is short; the chain-rule / Shannon axiom block is parked in Week 4.}
 
 \include{_information/includes/information-game-guessing.md}
 
@@ -148,7 +155,7 @@ where $U=\expSamp{E}$ is inner energy, $F$ is Helmholtz free energy, $T$ is temp
 
 \include{_information/includes/grouping-static-vs-ensemble.md}
 
-\speakernotes{If the heat thread ran long, this is the close: one weighing example, then stop. Shannon axioms are parked in Week 4, not in these slides.}
+\speakernotes{As taught 27 October: do not open these slides. One sentence: we did not get onto the entropy game; next week. Shannon axioms stay parked in Week 4.}
 
 \addreading{@Callen-thermostatistics85}{Chapters 1--4}
 \addreading{@Callen-thermostatistics85}{Chapters 5--6}
@@ -156,19 +163,19 @@ where $U=\expSamp{E}$ is inner energy, $F$ is Helmholtz free energy, $T$ is temp
 \subsection{Define This Week}
 
 \slidesincremental{
-* Heat thread: Black $\to$ Carnot $\to$ Rumford $\to$ Kelvin $\to$ Joule $\to$ Clausius $\to$ Kelvin
-* Maxwell--Boltzmann; Gibbs; derive $F=U-TS$ from $U=\expSamp{E}$; Gaussian $E=x^2/2$
-* Entropy game / MacKay / die grouping: $H=H(w)+\sum_i w_i H(p_i)$
+* Heat thread: Black $\to$ Carnot $\to$ Rumford $\to$ air thermometer $\to$ Kelvin $\to$ Joule
+* Helmholtz $F=U-TS$ on the board; Clausius after; Welling reads $F$, we read $S$
+* Shannon / Jaynes / Wiener preview; entropy game / MacKay not reached
 }
 
 \notes{Shannon axioms, $Z$ as generating function, KL, Schottky and finite time are parked at the end of Week 4 and need sorting. Interpret later: how entropy is understood today (week 5, then week 8); chain rule as the source of multi-information (week 8). DPI proof is week 8. Legendre transform on $F$ waits for week 5.}
 
 \subsection{After This Lecture}
 
-\notes{Worksheet 2 (due start of lecture 4) presses whether Shannon $H$ and Boltzmann $S$ are the same object or a metaphor. Next week: Maxwell's demon and Landauer. Sort the Week 3 overflow parked at the end of that file before 3 November.}
+\notes{Worksheet 2 (due start of lecture 4) presses whether Shannon $H$ and Boltzmann $S$ are the same object or a metaphor. Next week there *is* a class test --- Quiz 2 --- even though the webpage on 27 October said there was not. Maxwell's demon and Landauer remain the Week 4 treatment; Shannon / Jaynes / Wiener were previewed today. Sort the Week 3 overflow parked at the end of that file, and the entropy game if it is still sitting here, before 3 November.}
 
 \slidesincremental{
-* Next: Maxwell and Landauer (3 November)
+* Next: class test (Quiz 2), then Maxwell and Landauer (3 November)
 * Worksheet 2: $H$ vs $S$ — identity or metaphor?
 }
 
