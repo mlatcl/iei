@@ -125,11 +125,9 @@
 
 <section id="title-slide">
   <h1 class="title">Free Energy and Shannon Entropy</h1>
-  <p class="author" style="text-align:center"><a href="http://inverseprobability.com">Neil
-D. Lawrence</a></p>
+  <p class="author" style="text-align:center"><a href="http://inverseprobability.com">Neil D. Lawrence</a></p>
   <p class="date" style="text-align:center"><time>2026-10-27</time></p>
-  <p class="venue" style="text-align:center">FW26, William Gates
-Building</p>
+  <p class="venue" style="text-align:center">FW26, William Gates Building</p>
 </section>
 
 <section class="slide level2">
@@ -149,15 +147,9 @@ Building</p>
 <div>
 <ul>
 <li class="fragment">Homework from Weeks 1–2 (Quiz 1 / Worksheet 1)</li>
-<li class="fragment">Finish Week 2: die / MacKay → Gibbs / <span
-class="math inline">\(F\)</span> → HMC</li>
-<li class="fragment">Shannon <span class="math inline">\(H\)</span>;
-Boltzmann <span class="math inline">\(S = kH\)</span></li>
-<li class="fragment">Arithmetic coding → Dasher; <span
-class="math inline">\(Z\)</span>; <span
-class="math inline">\(\text{KL}\left( \cdot\,\|\,\cdot
-\right)\)</span></li>
-<li class="fragment">Bath; Schottky; finite-time dissipation named</li>
+<li class="fragment">Heat: Black, Carnot, Rumford, air thermometer, Kelvin, Joule, Clausius, Kelvin</li>
+<li class="fragment">Then: Maxwell–Boltzmann, Gibbs, Helmholtz <span class="math inline">\(F=U-TS\)</span></li>
+<li class="fragment">After the story: entropy game / MacKay / grouping</li>
 </ul>
 </div>
 </section>
@@ -166,24 +158,16 @@ class="math inline">\(\text{KL}\left( \cdot\,\|\,\cdot
 </section>
 <section id="no-quiz-today" class="slide level2">
 <h2>No Quiz Today</h2>
-<p>Worksheet 1 and Quiz 1 are marked. Today we spend a few minutes on
-what the scripts showed, then finish Week 2.</p>
+<p>Worksheet 1 and Quiz 1 are marked. Today we spend a few minutes on what the scripts showed, then finish Week 2.</p>
 <div>
 <ul>
-<li class="fragment">Comments by email; no names or marks on the
-slides</li>
-<li class="fragment">Quiz 1: fifteen papers from people who had Week 1;
-mean <span class="math inline">\(8.2/10\)</span></li>
-<li class="fragment">Worksheet 1: thirteen scripts; mean <span
-class="math inline">\(12.2/15\)</span></li>
+<li class="fragment">Comments by email; no names or marks on the slides</li>
+<li class="fragment">Quiz 1: fifteen papers from people who had Week 1; mean <span class="math inline">\(8.2/10\)</span></li>
+<li class="fragment">Worksheet 1: thirteen scripts; mean <span class="math inline">\(12.2/15\)</span></li>
 </ul>
 </div>
 <aside class="notes">
-Eight minutes, 10:05–10:13, then carry-over. Stop at 10:13 even if the
-see-saw is still live. Do not read out individuals. One worksheet was
-not submitted; one reflection was missing; one auditor sat the quiz
-without Week 1 — those are omitted from the means. If anyone asks for
-their mark: email, not the room.
+Eight minutes, 10:05–10:13, then carry-over. Stop at 10:13 even if the see-saw is still live. Do not read out individuals. One worksheet was not submitted; one reflection was missing; one auditor sat the quiz without Week 1 — those are omitted from the means. If anyone asks for their mark: email, not the room.
 </aside>
 </section>
 <section id="quiz-1" class="slide level2">
@@ -191,51 +175,37 @@ their mark: email, not the room.
 </section>
 <section id="quiz-1-where-marks-moved" class="slide level2">
 <h2>Quiz 1: Where Marks Moved</h2>
-<p>Mean <span class="math inline">\(8.2/10\)</span>. Two items accounted
-for most of the misses.</p>
+<p>Mean <span class="math inline">\(8.2/10\)</span>. Two items accounted for most of the misses.</p>
 <div>
 <ul>
-<li class="fragment">Demon versus gremlin: about three in five missed
-it</li>
+<li class="fragment">Demon versus gremlin: about three in five missed it</li>
 <li class="fragment">Energy as a machine-learning score: about half</li>
-<li class="fragment">Entropy as limit versus probability as
-prescription: one in five</li>
+<li class="fragment">Entropy as limit versus probability as prescription: one in five</li>
 </ul>
 </div>
 </section>
 <section id="gremlin-not-demon" class="slide level2">
 <h2>Gremlin, Not Demon</h2>
-<p>Maxwell’s demon <em>sorts</em>. Laplace’s gremlin is the admission
-that complete knowledge is not available in practice.</p>
+<p>Maxwell’s demon <em>sorts</em>. Laplace’s gremlin is the admission that complete knowledge is not available in practice.</p>
 <div>
 <ul>
-<li class="fragment">The demon is an intelligent mechanism at a trap
-door</li>
-<li class="fragment">The gremlin is not a mind in the box; it is a limit
-on what we can know</li>
-<li class="fragment">Shannon’s <span class="math inline">\(H\)</span>,
-in an hour, is a calculus for that incomplete knowledge</li>
+<li class="fragment">The demon is an intelligent mechanism at a trap door</li>
+<li class="fragment">The gremlin is not a mind in the box; it is a limit on what we can know</li>
+<li class="fragment">Shannon’s <span class="math inline">\(H\)</span>, in an hour, is a calculus for that incomplete knowledge</li>
 </ul>
 </div>
 <aside class="notes">
-Do not put the correct option letters on the slide. If a student
-presses: the gremlin item was the one that wanted <em>only</em> the
-practical-impossibility reading, not the sorting-demon reading.
+Do not put the correct option letters on the slide. If a student presses: the gremlin item was the one that wanted <em>only</em> the practical-impossibility reading, not the sorting-demon reading.
 </aside>
 </section>
 <section id="energy-is-a-score" class="slide level2">
 <h2>Energy Is a Score</h2>
-<p>In machine learning, energy is a preference: lower is more probable.
-Several losses play that role. That does not make them thermodynamic
-<span class="math inline">\(U\)</span>.</p>
+<p>In machine learning, energy is a preference: lower is more probable. Several losses play that role. That does not make them thermodynamic <span class="math inline">\(U\)</span>.</p>
 <div>
 <ul>
-<li class="fragment"><span class="math inline">\(p_i \propto e^{-\beta
-E_i}\)</span>: the occupation from Week 1</li>
-<li class="fragment">Quadratic loss and cross-entropy are
-energy-<em>like</em> objectives</li>
-<li class="fragment">The word energy does not, by itself, buy you a heat
-bath</li>
+<li class="fragment"><span class="math inline">\(p_i \propto e^{-\beta E_i}\)</span>: the occupation from Week 1</li>
+<li class="fragment">Quadratic loss and cross-entropy are energy-<em>like</em> objectives</li>
+<li class="fragment">The word energy does not, by itself, buy you a heat bath</li>
 </ul>
 </div>
 </section>
@@ -244,162 +214,990 @@ bath</li>
 </section>
 <section id="worksheet-1-the-habit" class="slide level2">
 <h2>Worksheet 1: The Habit</h2>
-<p>Curiosity ran slightly ahead of skepticism. Reflection was where the
-conversation was least often turned back on itself.</p>
+<p>Curiosity ran slightly ahead of skepticism. Reflection was where the conversation was least often turned back on itself.</p>
 <div>
 <ul>
-<li class="fragment">Mean <span class="math inline">\(12.2/15\)</span>;
-the dialogues did the job</li>
-<li class="fragment">Strongest work expanded after the first thread,
-then challenged without collapsing the chat</li>
-<li class="fragment">Weaker work ratholed, or let the model agree and
-stop</li>
+<li class="fragment">Mean <span class="math inline">\(12.2/15\)</span>; the dialogues did the job</li>
+<li class="fragment">Strongest work expanded after the first thread, then challenged without collapsing the chat</li>
+<li class="fragment">Weaker work ratholed, or let the model agree and stop</li>
 </ul>
 </div>
 </section>
 <section id="the-see-saw" class="slide level2">
 <h2>The See-Saw</h2>
-<p>A direct challenge is often met by sycophancy: the model agrees, and
-the conversation has nowhere to go.</p>
+<p>A direct challenge is often met by sycophancy: the model agrees, and the conversation has nowhere to go.</p>
 <div>
 <ul>
-<li class="fragment">Concede the part you accept; then ask what
-follows</li>
-<li class="fragment">Admitting ``this may be my misunderstanding’’
-denies the model the chance to merely please</li>
+<li class="fragment">Concede the part you accept; then ask what follows</li>
+<li class="fragment">Admitting ``this may be my misunderstanding’’ denies the model the chance to merely please</li>
 <li class="fragment">Grasshopper does not do this. The models do.</li>
 </ul>
 </div>
 <aside class="notes">
-Live: one sentence of see-saw, then the judo alternative. Do not quote a
-student. Gemini Flash came up in several scripts as shorter and more
-usable than a larger model; mention as a cohort observation, not a
-ranking of students.
+Live: one sentence of see-saw, then the judo alternative. Do not quote a student. Gemini Flash came up in several scripts as shorter and more usable than a larger model; mention as a cohort observation, not a ranking of students.
 </aside>
 </section>
 <section id="expand-then-return" class="slide level2">
 <h2>Expand, Then Return</h2>
-<p>Once a thread is established, step back. Ten turns is enough to open
-a second front and still close.</p>
+<p>Once a thread is established, step back. Ten turns is enough to open a second front and still close.</p>
 <div>
 <ul>
-<li class="fragment">Early precision is good; staying there for six
-turns is not</li>
-<li class="fragment">State the model’s point in your prompt, then ask
-the adjacent question</li>
-<li class="fragment">Smaller models sometimes left more to work with
-than verbose ones</li>
+<li class="fragment">Early precision is good; staying there for six turns is not</li>
+<li class="fragment">State the model’s point in your prompt, then ask the adjacent question</li>
+<li class="fragment">Smaller models sometimes left more to work with than verbose ones</li>
 </ul>
 </div>
 </section>
 <section id="who-made-entropy-uncertainty" class="slide level2">
 <h2>Who Made Entropy Uncertainty?</h2>
-<p>Clausius did not. A question most chats approached and few quite
-landed.</p>
+<p>Clausius did not. A question most chats approached and few quite landed.</p>
 <div>
 <ul>
 <li class="fragment">Clausius: a thermodynamic accounting identity</li>
-<li class="fragment">Uncertainty as entropy is already in the
-statistical tradition — Boltzmann, Gibbs, then Wiener’s
-``ignorance’’</li>
-<li class="fragment">Shannon’s footnote is Tolman, not the
-cocktail-party story</li>
+<li class="fragment">Uncertainty as entropy is already in the statistical tradition — Boltzmann, Gibbs, then Wiener’s ``ignorance’’</li>
+<li class="fragment">Shannon’s footnote is Tolman, not the cocktail-party story</li>
 </ul>
 </div>
 <aside class="notes">
-This slide is the hinge into Shannon later in the hour. Do not derive
-<span class="math inline">\(H\)</span> here. Plant the question.
+This slide is the hinge. Do not derive <span class="math inline">\(H\)</span> here. Later in the hour we go back to heat, starting with Joseph Black, to see what Clausius <em>was</em> solving.
 </aside>
 </section>
 <section id="worksheet-2-is-already-out" class="slide level2">
 <h2>Worksheet 2 Is Already Out</h2>
-<p>Same habit, different claim: is Shannon’s <span
-class="math inline">\(H\)</span> Boltzmann’s <span
-class="math inline">\(S\)</span>, or an analogy?</p>
+<p>Same habit, different claim: is Shannon’s <span class="math inline">\(H\)</span> Boltzmann’s <span class="math inline">\(S\)</span>, or an analogy?</p>
 <div>
 <ul>
-<li class="fragment">Due 10:00 at the start of lecture 4 (3
-November)</li>
-<li class="fragment">Open on the equivalence; then press sample space,
-discrete vs continuous, what <span class="math inline">\(p\)</span> is
-over</li>
-<li class="fragment">Use the see-saw lesson: concede, then move. Do not
-rathole on the first definition.</li>
+<li class="fragment">Due 10:00 at the start of lecture 4 (3 November)</li>
+<li class="fragment">Open on the equivalence; then press sample space, discrete vs continuous, what <span class="math inline">\(p\)</span> is over</li>
+<li class="fragment">Use the see-saw lesson: concede, then move. Do not rathole on the first definition.</li>
 </ul>
 </div>
 <aside class="notes">
-One minute. Point at the course page rather than re-reading the brief.
-Then: finish Week 2.
+One minute. Point at the course page rather than re-reading the brief. Then: finish Week 2.
 </aside>
 </section>
-<section id="week-2-carry-over" class="slide level2">
-<h2>Week 2 Carry-Over</h2>
+<section id="from-heat-to-helmholtz" class="slide level2">
+<h2>From Heat to Helmholtz</h2>
 </section>
-<section id="finish-week-2-first" class="slide level2">
-<h2>Finish Week 2 First</h2>
-<p>Week 2 stopped at <em>Atomic Human</em> / embodiment. Today we clear
-that queue before Shannon.</p>
+<section id="the-story-of-the-lecture" class="slide level2">
+<h2>The Story of the Lecture</h2>
+<p>Heat first. Information after Helmholtz.</p>
 <div>
 <ul>
-<li class="fragment">Info game / MacKay / die coarse-graining</li>
-<li class="fragment">Gibbs–Boltzmann; <span
-class="math inline">\(F=U-TS\)</span>; HMC</li>
-<li class="fragment">Then: Shannon <span
-class="math inline">\(H\)</span>, <span
-class="math inline">\(Z\)</span>, Schottky</li>
+<li class="fragment">Black <span class="math inline">\(\to\)</span> Carnot <span class="math inline">\(\to\)</span> Rumford <span class="math inline">\(\to\)</span> air thermometer <span class="math inline">\(\to\)</span> Kelvin <span class="math inline">\(\to\)</span> Joule <span class="math inline">\(\to\)</span> Clausius <span class="math inline">\(\to\)</span> Kelvin</li>
+<li class="fragment">Maxwell–Boltzmann <span class="math inline">\(\to\)</span> Gibbs <span class="math inline">\(\to\)</span> Helmholtz</li>
+<li class="fragment">Then: entropy game / MacKay</li>
 </ul>
 </div>
+<!--setupplotcode{import seaborn as sns
+sns.set_style('darkgrid')
+sns.set_context('paper')
+sns.set_palette('colorblind')}-->
+</section>
+<section id="joseph-black-and-heat-as-a-quantity" class="slide level2">
+<h2>Joseph Black and Heat as a Quantity</h2>
+</section>
+<section id="joseph-black" class="slide level2">
+<h2>Joseph Black</h2>
+<div class="figure">
+<div id="joseph-black-figure" class="figure-frame">
+<div class="centered centered" style="">
+<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/joseph-black.jpg" width="40%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
+</div>
+</div>
+</div>
+<aside class="notes">
+Joseph Black (1728–1799). Black was a physician and chemist at Glasgow, then Edinburgh. Stipple engraving by James Heath after Henry Raeburn, 1800 (Wellcome Collection / Wikimedia Commons, public domain).
+</aside>
+<aside class="notes">
+This is the Worksheet 1 follow-up. Clausius was not doing uncertainty. He was doing heat. We start with the person who made heat measurable. Do not yet write <span class="math inline">\(\mathrm{d}Q/T\)</span>. Portrait, dates, Glasgow then Edinburgh, Watt as a colleague. Then the stuck thermometer.
+</aside>
+</section>
+<section id="the-problem" class="slide level2">
+<h2>The Problem</h2>
+<p>Ice melts. The thermometer does not move.</p>
+<div>
+<ul>
+<li class="fragment">Heat is entering the mixture</li>
+<li class="fragment">Temperature stays at the melting point until the ice is gone</li>
+<li class="fragment">If heat <em>were</em> temperature, that would be a contradiction</li>
+</ul>
+</div>
+</section>
+<section id="heat-is-not-temperature" class="slide level2">
+<h2>Heat Is Not Temperature</h2>
+<p>Temperature is the reading. Heat is a quantity you can add, mix, and hide.</p>
+<div>
+<ul>
+<li class="fragment"><em>Mixing</em>: known masses, known starting temperatures, one final temperature</li>
+<li class="fragment"><em>Capacity</em>: when a substance absorbs heat at different rates</li>
+<li class="fragment"><em>Latent</em> heat: when a substance ‘swallows heat’</li>
+</ul>
+</div>
+<aside class="notes">
+Keep mechanism and maths apart. Mechanism: mix, or melt ice, or time a kettle. Maths: heat as an additive quantity independent of the thermometer. Capacity first, then latent. Students often still hear <code>heat'' as</code>how hot’’.
+</aside>
+</section>
+<section id="the-ice-calorimeter" class="slide level2">
+<h2>The Ice Calorimeter</h2>
+<div class="figure">
+<div id="ice-calorimeter-figure" class="figure-frame">
+<div class="centered centered" style="">
+<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/ice-calorimeter.jpg" width="45%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
+</div>
+</div>
+</div>
+<aside class="notes">
+The calorimeter of Lavoisier and Laplace. Heat delivered is read as the mass of ice melted; the conversion factor is Black’s latent heat of fusion. Plate XI from <em>Encyclopaedia Londinensis</em> (1801–02), after H. Lascelles (Wikimedia Commons / Science History Institute, public domain).
+</aside>
+<aside class="notes">
+Be precise if someone asks who invented the calorimeter. Black made heat measurable. This apparatus is Lavoisier and Laplace, using Black’s latent heat of fusion as the scale. The picture is the mechanism: weigh what melted.
+</aside>
+</section>
+<section id="latent-heat-of-steam" class="slide level2">
+<h2>Latent Heat of Steam</h2>
+<p>Black: about <span class="math inline">\(810^\circ\mathrm{F}\)</span> of latent heat — the heat that would raise the same water by <span class="math inline">\(810^\circ\mathrm{F}\)</span>.</p>
+<div>
+<ul>
+<li class="fragment">Ice to steam on his scale is <span class="math inline">\(180^\circ\mathrm{F}\)</span>, so vaporisation is about four and a half times that interval</li>
+<li class="fragment">The method is a kettle on a steady fire: time to the boil versus time to boil dry</li>
+<li class="fragment">Heat losses make the figure low. Watt, by condensation: nearer <span class="math inline">\(950^\circ\mathrm{F}\)</span>. Modern: about <span class="math inline">\(967^\circ\mathrm{F}\)</span>, or <span class="math inline">\(2256\,\mathrm{kJ\,kg}^{-1}\)</span></li>
+</ul>
+</div>
+<aside class="notes">
+Put Black’s <span class="math inline">\(810\)</span> on the slide; the modern comparison lives in the notes. Do not fight over calories versus kilojoules. The point is the size: making steam swallows several times the heat that brought the water to the boil, and none of it shows on the thermometer.
+</aside>
+</section>
+<section id="sadi-carnot-and-the-fall-of-heat" class="slide level2">
+<h2>Sadi Carnot and the Fall of Heat</h2>
+</section>
+<section id="sadi-carnot" class="slide level2">
+<h2>Sadi Carnot</h2>
+<div class="figure">
+<div id="sadi-carnot-figure" class="figure-frame">
+<div class="centered centered" style="">
+<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/sadi-carnot.jpg" width="40%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
+</div>
+</div>
+</div>
+<aside class="notes">
+Sadi Carnot (1796–1832), aged 17, in the uniform of the École Polytechnique. Portrait by Louis-Léopold Boilly, 1813 (Wikimedia Commons, public domain).
+</aside>
+<aside class="notes">
+Military engineer, not a natural philosopher. Son of Lazare; Polytechnique; the book is 1824. Do not yet say second law or entropy. The question is engines.
+</aside>
+</section>
+<section id="why-look-at-heat-engines" class="slide level2">
+<h2>Why Look at Heat Engines?</h2>
+<p>Steam is already doing the work of a nation. Nobody has a theory of it.</p>
+<div>
+<ul>
+<li class="fragment">Watt’s engines are a British industrial fact; typical efficiency is a few per cent</li>
+<li class="fragment">Engineers try higher pressure, and other working fluids than steam</li>
+<li class="fragment">Carnot’s questions: is there a <em>limit</em>? Does the choice of fluid matter?</li>
+</ul>
+</div>
+</section>
+<section id="the-réflexions" class="slide level2">
+<h2>The Réflexions</h2>
+<div class="figure">
+<div id="carnot-reflexions-figure" class="figure-frame">
+<div class="centered centered" style="">
+<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/carnot-reflexions-thurston.jpg" width="45%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
+</div>
+</div>
+</div>
+<aside class="notes">
+Title page of R.~H. Thurston’s 1890 English translation of Carnot’s 1824 <em>Réflexions sur la puissance motrice du feu</em>. The original was printed in Paris by Bachelier, at Carnot’s expense, in six hundred copies.
+</aside>
+</section>
+<section id="a-heat-engine-is-a-mill" class="slide level2">
+<h2>A Heat Engine Is a Mill</h2>
+<p>Work comes from the <em>fall</em> of caloric, not from destroying it.</p>
+<div>
+<ul>
+<li class="fragment">Water mill: quantity of water, height of the fall</li>
+<li class="fragment">Heat engine: quantity of caloric, difference of temperature</li>
+<li class="fragment">The caloric that leaves the boiler arrives in the condenser</li>
+</ul>
+</div>
+<aside class="notes">
+The mill is the slide. Quantity conserved, work from the height. Students will want to correct him. Hold that. Conservation of heat is the assumption that fits <em>his</em> question.
+</aside>
+</section>
+<section id="not-joules-question" class="slide level2">
+<h2>Not Joule’s Question</h2>
+<p>Carnot is looking at a <em>cycle</em> between two baths. He is not looking at conversion.</p>
+<div>
+<ul>
+<li class="fragment">His object is an engine: maximum work from a fall of heat</li>
+<li class="fragment">Joule’s object will be a paddle wheel: how much work makes how much heat</li>
+<li class="fragment">Conservation of caloric is an assumption that fits the mill. It is not an answer to Joule</li>
+</ul>
+</div>
+<aside class="notes">
+Do not introduce the mechanical equivalent here. Plant the gap: mill versus paddle wheel. Next is a flashback to Rumford, then Thomson’s scale from this picture, then Joule’s twist.
+</aside>
+</section>
+<section id="a-short-life" class="slide level2">
+<h2>A Short Life</h2>
+<p>Carnot dies in the 1832 cholera epidemic, aged 36. The book almost vanishes with him.</p>
+<div>
+<ul>
+<li class="fragment">Six hundred copies, paid for by the author, unread</li>
+<li class="fragment">Clapeyron recasts the argument in 1834</li>
+<li class="fragment">Kelvin and Clausius will read it later — and will have to keep the limit after the mill’s working fluid is given up</li>
+</ul>
+</div>
+<aside class="notes">
+Stop. Do not derive <span class="math inline">\(\mathrm{d}Q/T\)</span>. Next is Rumford’s cannon, then Thomson’s 1848 scale, still under conservation of heat, then Joule.
+</aside>
+</section>
+<section id="count-rumfords-cannon" class="slide level2">
+<h2>Count Rumford’s Cannon</h2>
+</section>
+<section id="count-rumford" class="slide level2">
+<h2>Count Rumford</h2>
+<div class="figure">
+<div id="count-rumford-figure" class="figure-frame">
+<div class="centered centered" style="">
+<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/count-rumford.jpg" width="40%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
+</div>
+</div>
+</div>
+<aside class="notes">
+Benjamin Thompson, Count Rumford (1753–1814). American-born, then in the service of the Elector of Bavaria. Portrait by Moritz Kellerhoven (Wikimedia Commons, public domain).
+</aside>
+<aside class="notes">
+Flashback, not a new founding myth. Dates: 1798 paper, Munich arsenal. Do not say this killed caloric. Carnot still uses caloric in 1824.
+</aside>
+</section>
+<section id="the-cannon" class="slide level2">
+<h2>The Cannon</h2>
+<p>A blunt borer, a brass cylinder, a box of water, horses turning the gun.</p>
+<div>
+<ul>
+<li class="fragment">About <span class="math inline">\(18.8\,\mathrm{lb}\)</span> of water, starting at <span class="math inline">\(60^\circ\mathrm{F}\)</span></li>
+<li class="fragment">The cylinder at about <span class="math inline">\(32\)</span> turns a minute</li>
+<li class="fragment">After two hours and thirty minutes the water boils — with no fire</li>
+</ul>
+</div>
+</section>
+<section id="rumfords-apparatus" class="slide level2">
+<h2>Rumford’s Apparatus</h2>
+<div class="figure">
+<div id="rumford-cannon-boring-figure" class="figure-frame">
+<div class="centered centered" style="">
+<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/rumford-cannon-boring.jpg" width="55%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
+</div>
+</div>
+</div>
+<aside class="notes">
+Rumford’s 1798 apparatus, as reprinted in <em>The Complete Works of Count Rumford</em> (1870). Fig.~2: the cannon in the boring machine, turned by the bar <span class="math inline">\(w\)</span>. Fig.~3: the same cylinder in the water box that is brought to the boil.
+</aside>
+<aside class="notes">
+Fig.~3 is the mechanism: blunt borer inside, water outside. The heat is not coming from the chips, and it does not run out.
+</aside>
+</section>
+<section id="inexhaustible" class="slide level2">
+<h2>Inexhaustible</h2>
+<p>Furnishing heat without limitation …</p>
+<div>
+<ul>
+<li class="fragment">The chips do not lose a hidden store of caloric</li>
+<li class="fragment">The heat continues as long as the work continues</li>
+<li class="fragment">Rumford’s conclusion: heat is a <em>mode of motion</em></li>
+</ul>
+</div>
+<aside class="notes">
+Quote: inexhaustible, therefore not a substance. Motion, not a number. Joule will supply the number. Carnot never had to face this, because his question was a cycle, not friction.
+</aside>
+</section>
+<section id="mercury-ice-steam-and-air" class="slide level2">
+<h2>Mercury, Ice, Steam, and Air</h2>
+</section>
+<section id="fahrenheit-and-celsius" class="slide level2">
+<h2>Fahrenheit and Celsius</h2>
+<div class="figure">
+<div id="fahrenheit-thermometer-figure" class="figure-frame">
+<div class="centered centered" style="">
+<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/fahrenheit-thermometer.jpg" width="42%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
+</div>
+</div>
+</div>
+<aside class="notes">
+Daniel Gabriel Fahrenheit (1686–1736) with a mercury thermometer. Anonymous engraving, 18th century (Wikimedia Commons, public domain). The instrument is mercury in glass; the scale is equal expansion of that mercury between two pins.
+</aside>
+<p>A degree is an equal expansion of mercury. Ice and steam are the pins.</p>
+<div>
+<ul>
+<li class="fragment">Fahrenheit (1724): mercury; ice at <span class="math inline">\(32\)</span>, steam at <span class="math inline">\(212\)</span></li>
+<li class="fragment">Celsius (1742): the same two pins, later numbered <span class="math inline">\(0\)</span> and <span class="math inline">\(100\)</span></li>
+<li class="fragment">Neither scale is heat. Both are the expansion of one liquid</li>
+</ul>
+</div>
+<aside class="notes">
+Hold up the mercury tube. Two pins, ice and steam. Fahrenheit or Celsius is only how you number the interval. Do not call this heat. Black already split those. Thomson is about to ask what a <em>degree</em> should be if it is not this expansion.
+</aside>
+</section>
+<section id="the-air-thermometer" class="slide level2">
+<h2>The Air Thermometer</h2>
+<div class="figure">
+<div id="air-thermometer-scheme-figure" class="figure-frame">
+<div class="centered" style="">
+<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/air-thermometer-scheme.png" width="72%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
+</div>
+</div>
+</div>
+<aside class="notes">
+<ol type="a">
+<li>Constant <em>pressure</em>: a sliding mercury index, open to the room; the volume of the trapped air is the reading. (b) Constant <em>volume</em>: a mercury manometer; the height <span class="math inline">\(h\)</span> is the reading. Scheme by P. Peterlin (Wikimedia Commons, CC BY-SA 3.0). Thomson’s 1848 comparison is with (a).
+</aside></li>
+</ol>
+<p>The laboratory standard is air, not mercury. Pressure is held at the room’s.</p>
+<div>
+<ul>
+<li class="fragment">Trap a mass of air behind mercury that is open to the atmosphere</li>
+<li class="fragment">Slide the thread, or lower the cistern, until the mercury surfaces are level</li>
+<li class="fragment">Volume is then the reading; ice and steam still pin <span class="math inline">\(0\)</span> and <span class="math inline">\(100\)</span></li>
+</ul>
+</div>
+<aside class="notes">
+This is the apparatus. Mercury open to the room, surfaces level, pressure of the trapped air equals the barometer. Volume is the degree. Ice <span class="math inline">\(0\)</span>, steam <span class="math inline">\(100\)</span>, same pins as Celsius. Still air. Kelvin’s question is: what is a degree if it is not this?
+</aside>
+</section>
+<section id="thomsons-scale-from-the-mill" class="slide level2">
+<h2>Thomson’s Scale from the Mill</h2>
+</section>
+<section id="william-thomson" class="slide level2">
+<h2>William Thomson</h2>
+<div class="figure">
+<div id="william-thomson-kelvin-figure" class="figure-frame">
+<div class="centered centered" style="">
+<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/william-thomson-kelvin.jpg" width="38%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
+</div>
+</div>
+</div>
+<aside class="notes">
+William Thomson (1824–1907), later Lord Kelvin. Photograph from <em>The World’s Work</em>, 1902 (Wikimedia Commons, public domain) — half a century after the 1848 scale.
+</aside>
+<aside class="notes">
+Call him Thomson. Glasgow, 1848, age 24. Do not call this the Kelvin scale. Black already measures heat. Fahrenheit is already a scale. The mill only equalises <em>degrees</em> under conserved heat. The scale students think of is 1851, after Joule.
+</aside>
+</section>
+<section id="not-blacks-capacity" class="slide level2">
+<h2>Not Black’s Capacity</h2>
+<p>Three rulers. Only one of them is a heat capacity.</p>
+<div>
+<ul>
+<li class="fragment">Fahrenheit, Celsius, air: equal <em>expansion</em> of a chosen substance; ice and steam as pins</li>
+<li class="fragment">Black: the same rise of that thermometer takes different heat in different bodies</li>
+<li class="fragment">Thomson: equal <em>mill-work</em> from a unit of Black’s heat falling one degree</li>
+</ul>
+</div>
+<aside class="notes">
+If someone hears <code>absolute'' as</code>comparing substances’ heat capacities’’, stop them. That is Black. Fahrenheit is expansion. Thomson is equal mill-rungs for a unit of heat that Black already knows how to measure.
+</aside>
+</section>
+<section id="an-absolute-thermometer" class="slide level2">
+<h2>An Absolute Thermometer</h2>
+<p>A degree is a height of fall of conserved heat. Ice is still <span class="math inline">\(0\)</span>, steam still <span class="math inline">\(100\)</span>.</p>
+<div>
+<ul>
+<li class="fragment">Take a unit of heat from a body at <span class="math inline">\(T\)</span> on this scale</li>
+<li class="fragment">Let it fall to a body at <span class="math inline">\(T-1\)</span>; the same unit arrives</li>
+<li class="fragment">A perfect mill in between always gives the same motive power, whatever <span class="math inline">\(T\)</span> is</li>
+</ul>
+</div>
+</section>
+<section id="is-there-a-bottom" class="slide level2">
+<h2>Is There a Bottom?</h2>
+<p>In 1848 the mill has no bottom. Infinite cold is infinitely far down.</p>
+<div>
+<ul>
+<li class="fragment">Air already suggests a wall: its volume would vanish at about <span class="math inline">\(-273^\circ\)</span></li>
+<li class="fragment">That number is Gay-Lussac’s expansion, not Carnot’s mill</li>
+<li class="fragment">Thomson still pins <span class="math inline">\(0\)</span> at ice; on his mill scale you can always fall one more equal degree</li>
+</ul>
+</div>
+<aside class="notes">
+Do not sell 1848 as discovering <span class="math inline">\(0\,\mathrm{K}\)</span>. Fahrenheit and the ice/steam points are already known. The air thermometer’s <span class="math inline">\(-273\)</span> is vanishing volume. The mill still has no floor. The floor is the 1851 rewrite.
+</aside>
+</section>
+<section id="heat-is-not-destroyed" class="slide level2">
+<h2>Heat Is Not Destroyed</h2>
+<p>In 1848 Thomson still thinks heat cannot be turned into work.</p>
+<div>
+<ul>
+<li class="fragment">“The conversion of heat into mechanical effect is probably impossible, certainly undiscovered”</li>
+<li class="fragment">Motive power comes from the <em>fall</em>, as in Carnot</li>
+<li class="fragment">A footnote: Mr Joule of Manchester thinks otherwise</li>
+</ul>
+</div>
+<aside class="notes">
+Read the quote, then the footnote. Thomson has built a scale on conservation of heat while already hearing Joule. Next: the paddle wheel, which is the experiment Thomson says has not yet shown the converse.
+</aside>
+</section>
+<section id="joule-and-the-mechanical-equivalent" class="slide level2">
+<h2>Joule and the Mechanical Equivalent</h2>
+</section>
+<section id="james-prescott-joule" class="slide level2">
+<h2>James Prescott Joule</h2>
+<div class="figure">
+<div id="james-prescott-joule-figure" class="figure-frame">
+<div class="centered centered" style="">
+<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/james-prescott-joule.jpg" width="40%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
+</div>
+</div>
+</div>
+<aside class="notes">
+James Prescott Joule (1818–1889). Seated portrait, later in life (Wikimedia Commons, public domain).
+</aside>
+<aside class="notes">
+Brewer, Manchester, private lab. Not Carnot’s question. Do not start a Mayer priority fight; one sentence is enough. The paddle wheel is the mechanism.
+</aside>
+</section>
+<section id="the-paddle-wheel" class="slide level2">
+<h2>The Paddle Wheel</h2>
+<div class="figure">
+<div id="joule-apparatus-harpers-figure" class="figure-frame">
+<div class="centered" style="">
+<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/joule-apparatus-harpers.png" width="48%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
+</div>
+</div>
+</div>
+<aside class="notes">
+Joule’s apparatus for the mechanical equivalent of heat. A falling weight turns a paddle in water; the work is known, the rise in temperature is measured. Engraving from <em>Harper’s New Monthly Magazine</em>, August 1869 (Wikimedia Commons, public domain).
+</aside>
+<aside class="notes">
+Mechanism: falling weights, paddle, thermometer. Maths: work against heat, a ratio. Contrast with Carnot’s mill still in the students’ heads.
+</aside>
+</section>
+<section id="a-number" class="slide level2">
+<h2>A Number</h2>
+<p>A definite amount of work makes a definite amount of heat.</p>
+<div>
+<ul>
+<li class="fragment">1845, Cambridge: the paddle already gives an equivalent, still scattered</li>
+<li class="fragment">1850, <em>Philosophical Transactions</em>: <span class="math inline">\(772\)</span> foot-pounds to raise <span class="math inline">\(1\,\mathrm{lb}\)</span> of water by <span class="math inline">\(1^\circ\mathrm{F}\)</span></li>
+<li class="fragment">Modern, on the same scale: about <span class="math inline">\(778\)</span> foot-pounds, or <span class="math inline">\(4.186\,\mathrm{J}\)</span> per calorie</li>
+</ul>
+</div>
+</section>
+<section id="not-carnots-question" class="slide level2">
+<h2>Not Carnot’s Question</h2>
+<p>Joule is converting work into heat. He is not running a mill between two baths.</p>
+<div>
+<ul>
+<li class="fragment">Carnot: maximum work from a <em>fall</em> of conserved caloric</li>
+<li class="fragment">Joule: how much work <em>makes</em> how much heat</li>
+<li class="fragment">Conservation of heat cannot be the general law if the paddle is right</li>
+</ul>
+</div>
+<aside class="notes">
+Mill versus paddle, one more time. Then the contradiction. Do not derive <span class="math inline">\(\mathrm{d}Q/T\)</span>.
+</aside>
+</section>
+<section id="the-contradiction" class="slide level2">
+<h2>The Contradiction</h2>
+<p>You cannot keep Carnot’s conserved heat and Joule’s equivalent as general laws.</p>
+<div>
+<ul>
+<li class="fragment">If heat is conserved, none of it becomes work</li>
+<li class="fragment">If Joule is right, some of it does</li>
+<li class="fragment">What can be kept: a <em>limit</em> that depends only on the two temperatures</li>
+</ul>
+</div>
+</section>
+<section id="clausius-and-mathrmdqt" class="slide level2">
+<h2>Clausius and <span class="math inline">\(\mathrm{d}Q/T\)</span></h2>
+</section>
+<section id="rudolf-clausius" class="slide level2">
+<h2>Rudolf Clausius</h2>
+<div class="figure">
+<div id="rudolf-clausius-figure" class="figure-frame">
+<div class="centered centered" style="">
+<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/rudolf-clausius.jpg" width="40%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
+</div>
+</div>
+</div>
+<aside class="notes">
+Rudolf Clausius (1822–1888). Photograph from the AIP Emilio Segrè Visual Archives, Lande Collection (Wikimedia Commons, CC0).
+</aside>
+<aside class="notes">
+Portrait, 1850, two laws. Do not start with Boltzmann. The question is still engines: if heat is not conserved, what is the leftover identity?
+</aside>
+</section>
+<section id="two-laws" class="slide level2">
+<h2>Two Laws</h2>
+<p>Keep Joule’s equivalent. Keep Carnot’s limit. Drop conservation of heat.</p>
+<div>
+<ul>
+<li class="fragment">First law: heat and work are interchangeable, at Joule’s rate</li>
+<li class="fragment">Second law: heat does not flow from cold to hot without a cost</li>
+<li class="fragment">A cycle cannot turn the heat of one bath entirely into work</li>
+</ul>
+</div>
+</section>
+<section id="the-ratio-that-survives" class="slide level2">
+<h2>The Ratio that Survives</h2>
+<p>After Joule, Carnot’s mill is a ratio of heats, not a conserved fluid.</p>
+<div>
+<ul>
+<li class="fragment">Reversible engine: <span class="math inline">\(Q_h/T_h = Q_c/T_c\)</span></li>
+<li class="fragment"><span class="math inline">\(Q_h\)</span> taken from the hot bath, <span class="math inline">\(Q_c\)</span> delivered to the cold</li>
+<li class="fragment">Heat does not balance. Heat over temperature does</li>
+</ul>
+</div>
+<aside class="notes">
+Put <span class="math inline">\(Q_h/T_h = Q_c/T_c\)</span> on the board. Both <span class="math inline">\(Q\)</span>s positive. The gap <span class="math inline">\(Q_h-Q_c\)</span> is the work. The thing that matches is <span class="math inline">\(Q/T\)</span>.
+</aside>
+</section>
+<section id="the-loop" class="slide level2">
+<h2>The Loop</h2>
+<p>A reversible cycle is a closed path. The <span class="math inline">\(Q/T\)</span> account closes with it.</p>
+<p><span class="math display">\[\oint \frac{\mathrm{d}Q}{T} = 0 \qquad \text{(reversible cycle)}\]</span></p>
+<div>
+<ul>
+<li class="fragment">Every reversible loop integrates to zero</li>
+<li class="fragment">So there is a state function <span class="math inline">\(S\)</span> with <span class="math inline">\(\mathrm{d}S = \mathrm{d}Q_{\mathrm{rev}}/T\)</span></li>
+</ul>
+</div>
+<aside class="notes">
+One display, then state function. Contrast <span class="math inline">\(\oint\mathrm{d}Q \neq 0\)</span> (work) with <span class="math inline">\(\oint\mathrm{d}Q/T = 0\)</span> (no leftover transformation). Next slide is the sentence they should leave with.
+</aside>
+</section>
+<section id="a-reversible-cycle-produces-no-entropy" class="slide level2">
+<h2>A Reversible Cycle Produces No Entropy</h2>
+<p>You return to the start. Nothing has been created.</p>
+<div>
+<ul>
+<li class="fragment">The working substance: <span class="math inline">\(S\)</span> is a state function, so <span class="math inline">\(\Delta S = 0\)</span> around any cycle</li>
+<li class="fragment">The baths: the entropy that left the hot bath arrives at the cold bath</li>
+<li class="fragment">Universe: <span class="math inline">\(\Delta S = 0\)</span>. A reversible cycle produces no entropy</li>
+</ul>
+</div>
+<aside class="notes">
+Say the title sentence twice. System versus baths versus universe, in that order, slowly. Students will try to make <span class="math inline">\(S\)</span> increase around a reversible cycle. Hold them to zero.
+</aside>
+</section>
+<section id="when-the-cycle-is-irreversible" class="slide level2">
+<h2>When the Cycle Is Irreversible</h2>
+<p>The working substance still comes home. The books do not.</p>
+<div>
+<ul>
+<li class="fragment">Friction, a finite drop of temperature, a paddle in the mechanism</li>
+<li class="fragment">More heat is dumped to the cold bath than the reversible case</li>
+<li class="fragment"><span class="math inline">\(\displaystyle\oint \mathrm{d}Q/T &lt; 0\)</span>, and the entropy of the universe increases</li>
+</ul>
+</div>
+</section>
+<section id="the-name" class="slide level2">
+<h2>The Name</h2>
+<div class="figure">
+<div id="clausius-coins-entropy-figure" class="figure-frame">
+<div class="centered centered" style="">
+<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/clausius-coins-entropy.jpg" width="62%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
+</div>
+</div>
+</div>
+<aside class="notes">
+Clausius names entropy, 1865. English translation of the memoir: <span class="math inline">\(\int \mathrm{d}Q/T = S-S_0\)</span>, from Greek τροπή, <em>transformation</em>. He forms the word to sit beside <em>energy</em>.
+</aside>
+<aside class="notes">
+Show the page. Transformation, not disorder, not uncertainty. Worksheet 1 payoff: this is what Clausius was measuring. Boltzmann’s count and Shannon’s <span class="math inline">\(H\)</span> come later, and they reuse a functional form, not this operational meaning.
+</aside>
+</section>
+<section id="not-uncertainty" class="slide level2">
+<h2>Not Uncertainty</h2>
+<p>Clausius’s <span class="math inline">\(S\)</span> is an accounting identity for heat and temperature.</p>
+<div>
+<ul>
+<li class="fragment">Macroscopic: <span class="math inline">\(S\)</span> from <span class="math inline">\(\mathrm{d}Q_{\mathrm{rev}}/T\)</span>; a reversible cycle produces none</li>
+<li class="fragment">Microscopic, later: Maxwell, Boltzmann, Gibbs count the same <span class="math inline">\(S\)</span></li>
+<li class="fragment">Information, later: Shannon, Jaynes reuse the functional form for a different job</li>
+</ul>
+</div>
+</section>
+<section id="thomson-returns-the-scale-after-joule" class="slide level2">
+<h2>Thomson Returns: The Scale After Joule</h2>
+</section>
+<section id="thomson-1851" class="slide level2">
+<h2>Thomson, 1851</h2>
+<p>The 1848 scale assumed conserved heat. After Joule that assumption is gone.</p>
+<div>
+<ul>
+<li class="fragment">Clausius, 1850: two laws; Carnot’s ceiling without caloric conservation</li>
+<li class="fragment">Thomson, 1851: accepts Joule; heat is not a conserved fluid</li>
+<li class="fragment">What survives: a reversible engine still has a limit that depends only on the two temperatures</li>
+</ul>
+</div>
+<aside class="notes">
+Call him Thomson still. 1851, not 1848. Clausius has already written the two laws. Thomson is rewriting the thermometer, not discovering the second law.
+</aside>
+</section>
+<section id="the-ratio-not-the-fall" class="slide level2">
+<h2>The Ratio, Not the Fall</h2>
+<p>Equal mill-degrees are replaced by a proportion of the two heats.</p>
+<div>
+<ul>
+<li class="fragment">Reversible engine: <span class="math inline">\(\displaystyle\frac{Q_h}{T_h} = \frac{Q_c}{T_c}\)</span></li>
+<li class="fragment">The same identity Clausius wrote as <span class="math inline">\(\mathrm{d}S = \mathrm{d}Q_{\mathrm{rev}}/T\)</span></li>
+<li class="fragment">Absolute temperatures are now those for which this ratio holds</li>
+</ul>
+</div>
+</section>
+<section id="now-there-is-a-bottom" class="slide level2">
+<h2>Now There Is a Bottom</h2>
+<p>Absolute zero is where a reversible engine would reject no heat.</p>
+<div>
+<ul>
+<li class="fragment"><span class="math inline">\(T=0\)</span> is <span class="math inline">\(Q_c=0\)</span> for a perfect mill between <span class="math inline">\(T_h\)</span> and the floor</li>
+<li class="fragment">The air thermometer’s <span class="math inline">\(-273^\circ\)</span> was vanishing volume; this is vanishing rejected heat</li>
+<li class="fragment">Infinite cold is no longer infinitely far down the mill</li>
+</ul>
+</div>
+<aside class="notes">
+1848: ice is zero, infinite cold at <span class="math inline">\(-\infty\)</span>. 1851: <span class="math inline">\(T=0\)</span> is <span class="math inline">\(Q_c=0\)</span>. Do not linger on the later title Lord Kelvin — the paper is Thomson’s.
+</aside>
+</section>
+<section id="molecules" class="slide level2">
+<h2>Molecules</h2>
+<div class="figure">
+<div id="maxwell-boltzmann-gibbs-week3-figure" class="figure-frame">
+<div class="lamd-columns" style="display:flex; width:100%; justify-content:center; align-items:center; column-gap:1em;">
+<div style="flex:0 0 30%; max-width:30%;">
+<div class="centered" style="">
+<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/james-clerk-maxwell.png" width="100%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
+</div>
+</div>
+<div style="flex:0 0 30%; max-width:30%;">
+<div class="centered centered" style="">
+<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/boltzmann2.jpg" width="100%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
+</div>
+</div>
+<div style="flex:0 0 30%; max-width:30%;">
+<div class="centered centered" style="">
+<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/j-w-gibbs.jpg" width="100%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
+</div>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes">
+James Clerk Maxwell (1831–1879), Ludwig Boltzmann (1844–1906), Josiah Willard Gibbs (1839–1903). After Clausius the account becomes statistical: components of velocity, then occupation of energy, then free energy.
+</aside>
+</section>
+<section id="maxwellboltzmann-components-versus-speed" class="slide level2">
+<h2>Maxwell–Boltzmann: Components Versus Speed</h2>
+<p>Each Cartesian velocity component is Gaussian. Speed <span class="math inline">\(v=|\mathbf{v}|\)</span> is not.</p>
+<div>
+<ul>
+<li class="fragment">Component: <span class="math inline">\(f(v_x)=\sqrt{m/(2\pi kT)}\,e^{-mv_x^2/2kT}\)</span></li>
+<li class="fragment">Speed: integrate the isotropic 3D Gaussian over angles</li>
+<li class="fragment">Jacobian <span class="math inline">\(d^3v = v^2\,dv\,d\Omega\)</span> supplies the <span class="math inline">\(v^2\)</span> factor</li>
+</ul>
+</div>
+<aside class="notes">
+Both statements are Maxwell–Boltzmann. The histogram of one component is Gaussian; the histogram of speed peaks away from zero. Board the spherical shell volume briefly.
+</aside>
+</section>
+<section id="same-physics-different-variable" class="slide level2">
+<h2>Same Physics, Different Variable</h2>
+<p><small> <span class="math display">\[
+f(v_x)=\sqrt{\tfrac{m}{2\pi kT}}\,e^{-mv_x^2/2kT}
+\qquad\text{versus}\qquad
+f(v)\propto v^2\,e^{-mv^2/2kT}
+\]</span> </small></p>
+<div>
+<ul>
+<li class="fragment">The <span class="math inline">\(v^2\)</span> is not an energy correction — it is geometry</li>
+<li class="fragment">Each component is the quadratic <span class="math inline">\(E=mv_x^2/2\)</span> whose expectation we split next</li>
+</ul>
+</div>
+</section>
+<section id="the-gibbsboltzmann-distribution" class="slide level2">
+<h2>The Gibbs–Boltzmann Distribution</h2>
+</section>
+<section id="gibbsboltzmann-occupation" class="slide level2">
+<h2>Gibbs–Boltzmann Occupation</h2>
+<p>Same formula, three names: Boltzmann weights, Gibbs distribution, canonical ensemble.</p>
+<div>
+<ul>
+<li class="fragment"><span class="math inline">\(p_i = e^{-\beta E_i}/Z\)</span>, <span class="math inline">\(\quad Z(\beta)=\sum_j e^{-\beta E_j}\)</span></li>
+<li class="fragment"><span class="math inline">\(\beta=1/k_B T\)</span>: coldness; <span class="math inline">\(T\)</span>: bath temperature</li>
+<li class="fragment"><span class="math inline">\(\log Z\)</span> is the cumulant generating function of the energy</li>
+</ul>
+</div>
+<aside class="notes">
+Introduce and use, do not derive. Board the formula. MaxEnt with fixed mean energy recovers the same <span class="math inline">\(p_i\)</span>.
+</aside>
+<div class="figure">
+<div id="two-state-boltzmann-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/physics/two-state-boltzmann.svg" width="75%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+Occupation of a two-state system as coldness increases. At low <span class="math inline">\(\beta\)</span> both states are populated; at high <span class="math inline">\(\beta\)</span> the ground state dominates.
+</aside>
+</section>
+<section id="aside-hopfield-boltzmann-machines-nobel-2024" class="slide level2">
+<h2>Aside: Hopfield, Boltzmann Machines, Nobel 2024</h2>
+<p>The same energy-and-occupation grammar reappears in associative memory and early deep learning.</p>
+<div>
+<ul>
+<li class="fragment">Hopfield (1982): fixed-weight energy; recall as settling</li>
+<li class="fragment">Boltzmann machine (1985): make those couplings <em>learnable</em></li>
+<li class="fragment">Pairwise energy: <span class="math inline">\(E(\mathbf{s})=-\sum_i b_i s_i-\sum_{i&lt;j}W_{ij}s_i s_j\)</span></li>
+</ul>
+</div>
+<aside class="notes">
+Colour only. Nobel 2024 (Hopfield and Hinton) names the line. Do not divert into training algorithms or Landauer here.
+</aside>
+</section>
+<section id="coldness-and-temperature" class="slide level2">
+<h2>Coldness and Temperature</h2>
+<div>
+<ul>
+<li class="fragment"><span class="math inline">\(T\)</span>: the bath, the thermometer</li>
+<li class="fragment"><span class="math inline">\(\beta = 1/k_B T\)</span>: coldness</li>
+<li class="fragment">Same occupation; entropy sits in a different place</li>
+</ul>
+</div>
+</section>
+<section id="two-representations" class="slide level2">
+<h2>Two Representations</h2>
+<div>
+<ul>
+<li class="fragment"><span class="math inline">\(T\)</span>-first: <span class="math inline">\(F = U - TS\)</span></li>
+<li class="fragment"><span class="math inline">\(\beta\)</span>-first: <span class="math inline">\(Z(\beta)\)</span>, then <span class="math inline">\(U = -\partial_\beta\log Z\)</span></li>
+<li class="fragment">Week 5: <span class="math inline">\(\beta\)</span> is the Lagrange multiplier</li>
+</ul>
+</div>
+</section>
+<section id="free-energy-decomposition" class="slide level2">
+<h2>Free Energy Decomposition</h2>
+</section>
+<section id="from-occupation-to-accounting" class="slide level2">
+<h2>From Occupation to Accounting</h2>
+<p>From Gibbs distribution to energy bookkeeping.</p>
+<div>
+<ul>
+<li class="fragment"><span class="math inline">\(p(x)=e^{-\beta E(x)}/Z\)</span></li>
+<li class="fragment">Equilibrium: inner energy is an <em>expectation</em>, <span class="math inline">\(U=\left\langle E\right\rangle\)</span></li>
+<li class="fragment">Algebra then <em>defines</em> <span class="math inline">\(F\)</span> and <span class="math inline">\(S\)</span></li>
+</ul>
+</div>
+<aside class="notes">
+LO1. Board the log of <span class="math inline">\(p\)</span>, then take the expectation. Do not invoke MaxEnt — that is week 5. The occupation is given; we are reading it.
+</aside>
+</section>
+<section id="take-the-logarithm" class="slide level2">
+<h2>Take the Logarithm</h2>
+<p><span class="math display">\[
+\log p(x) = -\beta E(x) - \log Z
+\]</span></p>
+<div>
+<ul>
+<li class="fragment">Solve for the microscopic score: <span class="math inline">\(E(x)=-k_BT\log p(x)-k_BT\log Z\)</span></li>
+<li class="fragment"><span class="math inline">\(1/\beta=k_BT\)</span> converts coldness back to the bath’s temperature</li>
+</ul>
+</div>
+</section>
+<section id="equilibrium-identifies-u-with-leftlangle-erightrangle" class="slide level2">
+<h2>Equilibrium Identifies <span class="math inline">\(U\)</span> with <span class="math inline">\(\left\langle E\right\rangle\)</span></h2>
+<p><span class="math display">\[
+U \equiv \left\langle E\right\rangle = \sum_x p(x)\, E(x)
+\]</span></p>
+<div>
+<ul>
+<li class="fragment"><span class="math inline">\(E(x)\)</span> is a score on configurations</li>
+<li class="fragment"><span class="math inline">\(U\)</span> is what a calorimeter would call the energy of the <em>system</em></li>
+<li class="fragment">The move is the ensemble: replace a number by an expectation</li>
+</ul>
+</div>
+</section>
+<section id="name-the-two-remaining-terms" class="slide level2">
+<h2>Name the Two Remaining Terms</h2>
+<p><span class="math display">\[
+U = \underbrace{-k_BT\log Z}_{F} + T\underbrace{\bigl(-k_B\sum_x p(x)\log p(x)\bigr)}_{S}
+\]</span></p>
+<div>
+<ul>
+<li class="fragment">Helmholtz free energy: <span class="math inline">\(F=-k_BT\log Z\)</span></li>
+<li class="fragment">Boltzmann entropy: <span class="math inline">\(S=-k_B\sum_x p(x)\log p(x)=k_B H\)</span></li>
+<li class="fragment">Hence <span class="math inline">\(U=F+TS\)</span>, or <span class="math inline">\(F=U-TS\)</span></li>
+</ul>
+</div>
+<aside class="notes">
+Board <span class="math inline">\(F=U-TS\)</span> and <span class="math inline">\(U=F+TS\)</span> as the same equation. Helmholtz wrote <span class="math inline">\(A=U-TS\)</span> (<span class="math inline">\(A\)</span> for <em>Arbeit</em>). We use <span class="math inline">\(F\)</span> because week 5 needs <span class="math inline">\(A(\theta)\)</span> for the log-partition.
+</aside>
+</section>
+<section id="two-temperatures-one-identity" class="slide level2">
+<h2>Two Temperatures, One Identity</h2>
+<div>
+<ul>
+<li class="fragment"><span class="math inline">\(T\)</span>-first: <span class="math inline">\(F=U-TS\)</span> — energy, then entropy’s cut</li>
+<li class="fragment"><span class="math inline">\(\beta\)</span>-first: <span class="math inline">\(F=-\beta^{-1}\log Z\)</span>, then <span class="math inline">\(U=-\partial_\beta\log Z\)</span></li>
+<li class="fragment">Same numbers; week 5 makes <span class="math inline">\(\beta\)</span> a Lagrange multiplier</li>
+</ul>
+</div>
+</section>
+<section id="three-state-check" class="slide level2">
+<h2>Three-State Check</h2>
+<div class="figure">
+<div id="three-state-thermo-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/three-state-thermo.svg" width="75%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+<span class="math inline">\(U\)</span>, <span class="math inline">\(S\)</span>, and <span class="math inline">\(F\)</span> for the Worksheet 1 three-state system (<span class="math inline">\(k_B=1\)</span>). The dashed curve is <span class="math inline">\(-\log Z/\beta\)</span>; it sits on <span class="math inline">\(F\)</span>, which is the identity just derived.
+</aside>
+<div>
+<ul>
+<li class="fragment">Prescription: <span class="math inline">\(p(x)=e^{-\beta E(x)}/Z\)</span></li>
+<li class="fragment">Accounting: <span class="math inline">\(F=U-TS\)</span> with <span class="math inline">\(U=\left\langle E\right\rangle\)</span></li>
+</ul>
+</div>
+</section>
+<section id="gaussian-expected-quadratic-energy" class="slide level2">
+<h2>Gaussian: Expected Quadratic Energy</h2>
+</section>
+<section id="a-quadratic-energy" class="slide level2">
+<h2>A Quadratic Energy</h2>
+<p><span class="math display">\[
+E(x)=\frac{x^2}{2},\qquad p(x)=\sqrt{\frac{\beta}{2\pi}}\,e^{-\beta x^2/2}
+\]</span></p>
+<div>
+<ul>
+<li class="fragment">Week 1: Gaussian as <span class="math inline">\(p\propto e^{-E}\)</span> with a parabolic well</li>
+<li class="fragment">Now: the same <span class="math inline">\(E\)</span>, in contact with a bath at <span class="math inline">\(T=1/\beta\)</span></li>
+<li class="fragment"><span class="math inline">\(p=\mathcal{N}(0,T)\)</span> — variance <em>is</em> temperature (<span class="math inline">\(k_B=1\)</span>)</li>
+</ul>
+</div>
+<aside class="notes">
+Callback to the height-Gaussian parabola from week 1. One quadratic degree of freedom, not a covariance model. Equipartition is the headline: <span class="math inline">\(U=T/2\)</span>.
+</aside>
+</section>
+<section id="inner-energy-is-equipartition" class="slide level2">
+<h2>Inner Energy is Equipartition</h2>
+<p><span class="math display">\[
+U=\left\langle E\right\rangle=\left\langle\frac{x^2}{2}\right\rangle=\frac{T}{2}
+\]</span></p>
+<div>
+<ul>
+<li class="fragment"><span class="math inline">\(\left\langle x^2\right\rangle=T\)</span> because <span class="math inline">\(p=\mathcal{N}(0,T)\)</span></li>
+<li class="fragment">One quadratic degree of freedom holds <span class="math inline">\(k_BT/2\)</span></li>
+<li class="fragment">Maxwell’s kinetic energy <span class="math inline">\(\tfrac32 k_BT\)</span> is three copies of this</li>
+</ul>
+</div>
+</section>
+<section id="free-energy-and-entropy-closed-form" class="slide level2">
+<h2>Free Energy and Entropy, Closed Form</h2>
+<p><span class="math display">\[
+F=-T\log Z=-\frac{T}{2}\log(2\pi T),\qquad S=\frac{1}{2}+\frac{1}{2}\log(2\pi T)
+\]</span></p>
+<div>
+<ul>
+<li class="fragment"><span class="math inline">\(Z=\sqrt{2\pi T}\)</span>, so <span class="math inline">\(F\)</span> is immediate</li>
+<li class="fragment"><span class="math inline">\(S=(U-F)/T\)</span> recovers the Gaussian differential entropy</li>
+<li class="fragment">Check: <span class="math inline">\(F+TS=T/2=U\)</span></li>
+</ul>
+</div>
+</section>
+<section id="the-well-and-the-expectation" class="slide level2">
+<h2>The Well, and the Expectation</h2>
+<div class="figure">
+<div id="gaussian-quadratic-well-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/gaussian-quadratic-well.svg" width="70%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+The energy is the same parabola at every temperature. Raising <span class="math inline">\(T\)</span> spreads <span class="math inline">\(p=\mathcal{N}(0,T)\)</span> and the occupation climbs the walls: <span class="math inline">\(\left\langle E\right\rangle=T/2\)</span> rises linearly.
+</aside>
+</section>
+<section id="the-decomposition-versus-t" class="slide level2">
+<h2>The Decomposition versus <span class="math inline">\(T\)</span></h2>
+<div class="figure">
+<div id="gaussian-quadratic-thermo-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/gaussian-quadratic-thermo.svg" width="75%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+Closed form for <span class="math inline">\(E(x)=x^2/2\)</span> with <span class="math inline">\(k_B=1\)</span>. Inner energy <span class="math inline">\(U=T/2\)</span> is the straight line; <span class="math inline">\(TS\)</span> takes a growing cut; <span class="math inline">\(F=U-TS\)</span> is negative and decreases.
+</aside>
+</section>
+<section id="d-quadratic-degrees-of-freedom" class="slide level2">
+<h2><span class="math inline">\(d\)</span> Quadratic Degrees of Freedom</h2>
+<p><span class="math display">\[
+E(\mathbf{x})=\frac{1}{2}\sum_{i=1}^{d} x_i^2
+\qquad\Longrightarrow\qquad
+U=\frac{d\,T}{2}
+\]</span></p>
+<div>
+<ul>
+<li class="fragment"><span class="math inline">\(Z=(2\pi T)^{d/2}\)</span>, so <span class="math inline">\(F=-(d T/2)\log(2\pi T)\)</span></li>
+<li class="fragment">Independent coordinates: the one-dimensional split, <span class="math inline">\(d\)</span> times</li>
+<li class="fragment">Maxwell’s three velocity components were this with <span class="math inline">\(d=3\)</span></li>
+</ul>
+</div>
+</section>
+<section id="the-air-thermometer-1" class="slide level2">
+<h2>The Air Thermometer?</h2>
+<p>Gay-Lussac’s vanishing volume is not this well. It is the same <span class="math inline">\(T\)</span>.</p>
+<div>
+<ul>
+<li class="fragment">Three velocity components: <span class="math inline">\(U_{\mathrm{kin}}=\tfrac32 T\)</span> per particle — done</li>
+<li class="fragment">A box, not a well: positions contribute a factor <span class="math inline">\(V\)</span> to <span class="math inline">\(Z\)</span>, not another Gaussian</li>
+<li class="fragment">Helmholtz: <span class="math inline">\(\displaystyle P=-\bigl(\partial F/\partial V\bigr)_T = NT/V\)</span></li>
+</ul>
+</div>
+<aside class="notes">
+Do not derive Sackur–Tetrode or Gibbs <span class="math inline">\(G\)</span>. Kinetic Gaussians are done. Name <span class="math inline">\(V\)</span> in <span class="math inline">\(Z\)</span>, name the Helmholtz derivative, sit down. Charles’s law is <span class="math inline">\(PV=NT\)</span> at fixed <span class="math inline">\(P\)</span>.
+</aside>
+</section>
+<section id="after-helmholtz-the-entropy-game" class="slide level2">
+<h2>After Helmholtz: The Entropy Game</h2>
 </section>
 <section id="the-information-game" class="slide level2">
 <h2>The Information Game</h2>
 </section>
 <section id="the-information-game-1" class="slide level2">
 <h2>The Information Game</h2>
-<p>One player has chosen an object from a known finite list. The other
-may ask only <em>yes/no</em> questions.</p>
+<p>One player has chosen an object from a known finite list. The other may ask only <em>yes/no</em> questions.</p>
 <div>
 <ul>
 <li class="fragment">Goal: name the object</li>
-<li class="fragment">Cost: number of questions (worst case, or on
-average)</li>
-<li class="fragment">Optimal play halves the remaining possibilities
-each time</li>
+<li class="fragment">Cost: number of questions (worst case, or on average)</li>
+<li class="fragment">Optimal play halves the remaining possibilities each time</li>
 </ul>
 </div>
 <aside class="notes">
-Run this live if time allows: pick a small list (sixteen animals, eight
-Cambridge colleges). Students should feel that a balanced question buys
-one bit. Do not yet write <span class="math inline">\(-\sum p\log
-p\)</span>; the counting argument is enough.
+Run this live if time allows: pick a small list (sixteen animals, eight Cambridge colleges). Students should feel that a balanced question buys one bit. Do not yet write <span class="math inline">\(-\sum p\log p\)</span>; the counting argument is enough.
 </aside>
 </section>
 <section id="bits-as-balanced-questions" class="slide level2">
 <h2>Bits as Balanced Questions</h2>
-<p>A fair yes/no answer distinguishes two equally likely cases — one
-<em>bit</em>.</p>
+<p>A fair yes/no answer distinguishes two equally likely cases — one <em>bit</em>.</p>
 <div>
 <ul>
-<li class="fragment"><span class="math inline">\(N\)</span> equally
-likely objects <span class="math inline">\(\Rightarrow\)</span> need
-<span class="math inline">\(\log_2 N\)</span> bits</li>
-<li class="fragment">Twenty questions reach about a million hypotheses
-(<span class="math inline">\(2^{20}\)</span>)</li>
-<li class="fragment">Unequal priors: best questions still split
-probability as evenly as possible</li>
+<li class="fragment"><span class="math inline">\(N\)</span> equally likely objects <span class="math inline">\(\Rightarrow\)</span> need <span class="math inline">\(\log_2 N\)</span> bits</li>
+<li class="fragment">Twenty questions reach about a million hypotheses (<span class="math inline">\(2^{20}\)</span>)</li>
+<li class="fragment">Unequal priors: best questions still split probability as evenly as possible</li>
 </ul>
 </div>
-<p>The same idea, with a different instrument, comes next — MacKay’s
-balance.</p>
+<p>The same idea, with a different instrument, comes next — MacKay’s balance.</p>
 </section>
 <section id="mackays-balance-and-balls" class="slide level2">
 <h2>MacKay’s Balance and Balls</h2>
 </section>
 <section id="twelve-balls-one-odd" class="slide level2">
 <h2>Twelve Balls, One Odd</h2>
-<p>MacKay’s weighing problem <span class="citation"
-data-cites="MacKay-information03">(MacKay, 2003, p. Ex.~4.1)</span>:
-twelve balls; exactly one is odd; it may be heavier <em>or</em>
-lighter.</p>
+<p>MacKay’s weighing problem <span class="citation" data-cites="MacKay-information03">(MacKay, 2003, p. Ex.~4.1)</span>: twelve balls; exactly one is odd; it may be heavier <em>or</em> lighter.</p>
 <div class="figure">
 <div id="mackay-balance-balls-figure" class="figure-frame">
 <object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/information/mackay-balance-balls.svg" width="80%" style=" ">
@@ -412,31 +1210,25 @@ A two-pan balance and twelve identical balls.
 <div>
 <ul>
 <li class="fragment">Instrument: a two-pan balance</li>
-<li class="fragment">Task: identify the odd ball <em>and</em> whether it
-is heavy or light</li>
+<li class="fragment">Task: identify the odd ball <em>and</em> whether it is heavy or light</li>
 </ul>
 </div>
 <aside class="notes">
-State the puzzle. Do not list the readings of the balance, and do not
-walk through which balls go on which pan.
+State the puzzle. Do not list the readings of the balance, and do not walk through which balls go on which pan.
 </aside>
 </section>
 <section id="how-should-we-proceed" class="slide level2">
 <h2>How Should We Proceed?</h2>
-<p>We have a finite list of hypotheses and a physical instrument. How
-should we think?</p>
+<p>We have a finite list of hypotheses and a physical instrument. How should we think?</p>
 <div>
 <ul>
 <li class="fragment">What, exactly, do we need to name?</li>
-<li class="fragment">What would count as a useful use of the
-balance?</li>
+<li class="fragment">What would count as a useful use of the balance?</li>
 <li class="fragment">When would we know we were done?</li>
 </ul>
 </div>
 <aside class="notes">
-Leave this live. Do not say left, right, or level, and do not say three.
-After they have named the hypotheses, try the two-outcome story next —
-as if this were the information game again.
+Leave this live. Do not say left, right, or level, and do not say three. After they have named the hypotheses, try the two-outcome story next — as if this were the information game again.
 </aside>
 </section>
 <section id="information-at-the-start" class="slide level2">
@@ -445,10 +1237,8 @@ as if this were the information game again.
 <div>
 <ul>
 <li class="fragment">12 choices for which ball is odd</li>
-<li class="fragment"><span class="math inline">\(\times\)</span> 2
-directions (heavy or light)</li>
-<li class="fragment"><span class="math inline">\(= 24\)</span> equally
-likely states of the world</li>
+<li class="fragment"><span class="math inline">\(\times\)</span> 2 directions (heavy or light)</li>
+<li class="fragment"><span class="math inline">\(= 24\)</span> equally likely states of the world</li>
 </ul>
 </div>
 </section>
@@ -457,38 +1247,28 @@ likely states of the world</li>
 </section>
 <section id="lets-try-two-outcomes" class="slide level2">
 <h2>Let’s Try Two Outcomes</h2>
-<p>Treat the balance as the information game: <em>left heavy</em> or
-<em>right heavy</em> only.</p>
+<p>Treat the balance as the information game: <em>left heavy</em> or <em>right heavy</em> only.</p>
 <div>
 <ul>
-<li class="fragment">Two readings <span
-class="math inline">\(\Rightarrow\)</span> at most <span
-class="math inline">\(\log_2 2\)</span> bits per use</li>
-<li class="fragment">Mechanism next: what we actually put on the
-pans</li>
-<li class="fragment">Maths stays on its own slides — the two accounts
-can disagree</li>
+<li class="fragment">Two readings <span class="math inline">\(\Rightarrow\)</span> at most <span class="math inline">\(\log_2 2\)</span> bits per use</li>
+<li class="fragment">Mechanism next: what we actually put on the pans</li>
+<li class="fragment">Maths stays on its own slides — the two accounts can disagree</li>
 </ul>
 </div>
 <aside class="notes">
-Say ``log two bits’’ — one bit if the two readings are equally likely.
-Do not yet mention a third reading. Board 6 vs 6 as the move people
-reach for from twenty questions.
+Say ``log two bits’’ — one bit if the two readings are equally likely. Do not yet mention a third reading. Board 6 vs 6 as the move people reach for from twenty questions.
 </aside>
 </section>
 <section id="maths-two-readings" class="slide level2">
 <h2>Maths: Two Readings</h2>
-<p><em>Maths.</em> Start from <span class="math inline">\(\log_2
-24\)</span>. Each use returns at most <span class="math inline">\(\log_2
-2\)</span>.</p>
+<p><em>Maths.</em> Start from <span class="math inline">\(\log_2 24\)</span>. Each use returns at most <span class="math inline">\(\log_2 2\)</span>.</p>
 <p><small> <span class="math display">\[
 \log_2 24 \approx 4.58,\qquad 2^4 = 16 &lt; 24 \le 32 = 2^5
 \]</span> </small></p>
 <div>
 <ul>
 <li class="fragment">Four uses cannot name 24 hypotheses</li>
-<li class="fragment">Five uses can, <em>if</em> each use really returns
-one bit</li>
+<li class="fragment">Five uses can, <em>if</em> each use really returns one bit</li>
 <li class="fragment">That ``if’’ is mechanism, not maths</li>
 </ul>
 </div>
@@ -498,18 +1278,13 @@ one bit</li>
 <p><em>Mechanism.</em> Put six against six.</p>
 <div>
 <ul>
-<li class="fragment">The pans will tip — the odd ball is on one
-side</li>
-<li class="fragment">Follow the down pan, as if the odd ball were
-heavier</li>
+<li class="fragment">The pans will tip — the odd ball is on one side</li>
+<li class="fragment">Follow the down pan, as if the odd ball were heavier</li>
 <li class="fragment">Six balls remain under that story</li>
 </ul>
 </div>
 <aside class="notes">
-Ask what we actually learned. Under ``it is heavier’’, 12 balls become
-6, one bit toward which ball. We do <em>not</em> know the direction. The
-down pan is six maybe-heavies; the up pan is six maybe-lights. All
-twelve balls are still in play. Maths next.
+Ask what we actually learned. Under ``it is heavier’’, 12 balls become 6, one bit toward which ball. We do <em>not</em> know the direction. The down pan is six maybe-heavies; the up pan is six maybe-lights. All twelve balls are still in play. Maths next.
 </aside>
 </section>
 <section id="maths-what-6-vs-6-bought" class="slide level2">
@@ -517,34 +1292,26 @@ twelve balls are still in play. Maths next.
 <p><em>Maths.</em> Score the same physical act on the 24 hypotheses.</p>
 <div>
 <ul>
-<li class="fragment">24 <span class="math inline">\(\to\)</span> 12
-remaining hypotheses: exactly <span class="math inline">\(\log_2
-2\)</span> bits</li>
-<li class="fragment">Zero balls eliminated — each ball is still possibly
-odd</li>
-<li class="fragment">The bit went into a <em>coupling</em> of group and
-direction</li>
+<li class="fragment">24 <span class="math inline">\(\to\)</span> 12 remaining hypotheses: exactly <span class="math inline">\(\log_2 2\)</span> bits</li>
+<li class="fragment">Zero balls eliminated — each ball is still possibly odd</li>
+<li class="fragment">The bit went into a <em>coupling</em> of group and direction</li>
 </ul>
 </div>
 </section>
 <section id="mechanism-3-vs-3" class="slide level2">
 <h2>Mechanism: 3 vs 3</h2>
-<p><em>Mechanism.</em> Keep going as a binary search of the balls: three
-against three.</p>
+<p><em>Mechanism.</em> Keep going as a binary search of the balls: three against three.</p>
 <div>
 <ul>
-<li class="fragment">Under the heavier-side story, three balls
-remain</li>
+<li class="fragment">Under the heavier-side story, three balls remain</li>
 <li class="fragment">Same move, smaller pile</li>
-<li class="fragment">We are still not asking about light versus
-heavy</li>
+<li class="fragment">We are still not asking about light versus heavy</li>
 </ul>
 </div>
 </section>
 <section id="mechanism-three-left" class="slide level2">
 <h2>Mechanism: Three Left</h2>
-<p><em>Mechanism.</em> Three balls remain. We cannot put one and a half
-on a pan.</p>
+<p><em>Mechanism.</em> Three balls remain. We cannot put one and a half on a pan.</p>
 <div>
 <ul>
 <li class="fragment">2 vs 2 needs a fourth ball</li>
@@ -553,15 +1320,12 @@ on a pan.</p>
 </ul>
 </div>
 <aside class="notes">
-Make them say the known ball out loud. Ask: how many bits do we get from
-2 vs 2 now? Do not calculate before they see that the split of three
-remaining balls cannot be even.
+Make them say the known ball out loud. Ask: how many bits do we get from 2 vs 2 now? Do not calculate before they see that the split of three remaining balls cannot be even.
 </aside>
 </section>
 <section id="maths-the-known-ball-taxes-the-bit" class="slide level2">
 <h2>Maths: The Known Ball Taxes the Bit</h2>
-<p><em>Maths.</em> Three remaining heavier-suspects; pans are 2 vs
-1+known.</p>
+<p><em>Maths.</em> Three remaining heavier-suspects; pans are 2 vs 1+known.</p>
 <p><small> <span class="math display">\[
 \left(\tfrac{2}{3},\tfrac{1}{3}\right)
 \quad\Rightarrow\quad
@@ -569,18 +1333,15 @@ H = h_2\!\left(\tfrac{2}{3}\right) \approx 0.92 &lt; 1 \text{ bit}
 \]</span> </small></p>
 <div>
 <ul>
-<li class="fragment">The even split was <span
-class="math inline">\(\log_2 2\)</span>; the pans cannot make it</li>
+<li class="fragment">The even split was <span class="math inline">\(\log_2 2\)</span>; the pans cannot make it</li>
 <li class="fragment">Padding with a known ball is a mechanism patch</li>
-<li class="fragment">Information gain falls because the
-<em>probabilities</em> are no longer equal</li>
+<li class="fragment">Information gain falls because the <em>probabilities</em> are no longer equal</li>
 </ul>
 </div>
 </section>
 <section id="mechanism-1-vs-1" class="slide level2">
 <h2>Mechanism: 1 vs 1</h2>
-<p><em>Mechanism.</em> If two suspects remain, weigh them against each
-other.</p>
+<p><em>Mechanism.</em> If two suspects remain, weigh them against each other.</p>
 <div>
 <ul>
 <li class="fragment">Now the split <em>can</em> be even</li>
@@ -591,22 +1352,16 @@ other.</p>
 </section>
 <section id="mechanism-lighter-or-heavier" class="slide level2">
 <h2>Mechanism: Lighter or Heavier?</h2>
-<p><em>Mechanism.</em> We have a candidate ball. Can we name the
-direction?</p>
+<p><em>Mechanism.</em> We have a candidate ball. Can we name the direction?</p>
 <div>
 <ul>
 <li class="fragment">Weigh the candidate against a known normal</li>
-<li class="fragment">Two outcomes name heavy versus light — <em>if</em>
-it tips</li>
-<li class="fragment">If it <em>balances</em>, our heavier-side story was
-wrong</li>
+<li class="fragment">Two outcomes name heavy versus light — <em>if</em> it tips</li>
+<li class="fragment">If it <em>balances</em>, our heavier-side story was wrong</li>
 </ul>
 </div>
 <aside class="notes">
-This is the crack in the two-outcome attempt. A known-normal comparison
-is the natural test for direction, and it keeps offering a third
-reading: level. The instrument was never a yes/no question. Pause, then
-the aha slide.
+This is the crack in the two-outcome attempt. A known-normal comparison is the natural test for direction, and it keeps offering a third reading: level. The instrument was never a yes/no question. Pause, then the aha slide.
 </aside>
 </section>
 <section id="two-accounts-one-experiment" class="slide level2">
@@ -614,13 +1369,9 @@ the aha slide.
 <p>Keep the columns separate.</p>
 <div>
 <ul>
-<li class="fragment"><em>Maths:</em> <span class="math inline">\(\log_2
-24\)</span> to close; at most <span class="math inline">\(\log_2
-2\)</span> per two-outcome use</li>
-<li class="fragment"><em>Mechanism:</em> 6 vs 6, 3 vs 3, 2 vs 2 with a
-known, 1 vs 1, then direction</li>
-<li class="fragment">The known ball, and the unused ``level’’ reading,
-are mechanism — they change the gain</li>
+<li class="fragment"><em>Maths:</em> <span class="math inline">\(\log_2 24\)</span> to close; at most <span class="math inline">\(\log_2 2\)</span> per two-outcome use</li>
+<li class="fragment"><em>Mechanism:</em> 6 vs 6, 3 vs 3, 2 vs 2 with a known, 1 vs 1, then direction</li>
+<li class="fragment">The known ball, and the unused ``level’’ reading, are mechanism — they change the gain</li>
 </ul>
 </div>
 </section>
@@ -629,79 +1380,60 @@ are mechanism — they change the gain</li>
 </section>
 <section id="aha-it-balances-three-ways" class="slide level2">
 <h2>Aha: It Balances Three Ways</h2>
-<p>The pans also sit <em>level</em>. Left heavy, right heavy, or
-balance.</p>
+<p>The pans also sit <em>level</em>. Left heavy, right heavy, or balance.</p>
 <div>
 <ul>
 <li class="fragment">The instrument was never a yes/no question</li>
 <li class="fragment">6 vs 6 made the third reading impossible</li>
-<li class="fragment">That was a mechanism choice that <em>threw
-away</em> a symbol</li>
+<li class="fragment">That was a mechanism choice that <em>threw away</em> a symbol</li>
 </ul>
 </div>
 <aside class="notes">
-Let them say the three readings. Then go straight to the new budget. Do
-not start the 4 vs 4 tree.
+Let them say the three readings. Then go straight to the new budget. Do not start the 4 vs 4 tree.
 </aside>
 </section>
 <section id="maths-three-readings" class="slide level2">
 <h2>Maths: Three Readings</h2>
-<p><em>Maths.</em> Each use now returns at most <span
-class="math inline">\(\log_2 3\)</span>.</p>
+<p><em>Maths.</em> Each use now returns at most <span class="math inline">\(\log_2 3\)</span>.</p>
 <p><small> <span class="math display">\[
 \log_2 3 \approx 1.58,\qquad 3^2 = 9 &lt; 24 \le 27 = 3^3
 \]</span> </small></p>
 <div>
 <ul>
 <li class="fragment">Two uses cannot name 24 hypotheses</li>
-<li class="fragment">Three uses can, <em>if</em> each use really returns
-<span class="math inline">\(\log_2 3\)</span></li>
-<li class="fragment">Same ``if’’ as before: mechanism must realise the
-split</li>
+<li class="fragment">Three uses can, <em>if</em> each use really returns <span class="math inline">\(\log_2 3\)</span></li>
+<li class="fragment">Same ``if’’ as before: mechanism must realise the split</li>
 </ul>
 </div>
 </section>
 <section id="mechanism-must-collect-log_2-3" class="slide level2">
-<h2>Mechanism Must Collect <span class="math inline">\(\log_2
-3\)</span></h2>
-<p><em>Mechanism.</em> To earn <span class="math inline">\(\log_2
-3\)</span>, all three readings must be possible and near equal.</p>
+<h2>Mechanism Must Collect <span class="math inline">\(\log_2 3\)</span></h2>
+<p><em>Mechanism.</em> To earn <span class="math inline">\(\log_2 3\)</span>, all three readings must be possible and near equal.</p>
 <div>
 <ul>
-<li class="fragment">First weighing: 4 vs 4, not 6 vs 6 — so
-<em>level</em> can happen</li>
-<li class="fragment">A known ball, or emptying a reading, is again a
-tax</li>
-<li class="fragment">Optimal play keeps the three readings as near
-equiprobable as possible</li>
+<li class="fragment">First weighing: 4 vs 4, not 6 vs 6 — so <em>level</em> can happen</li>
+<li class="fragment">A known ball, or emptying a reading, is again a tax</li>
+<li class="fragment">Optimal play keeps the three readings as near equiprobable as possible</li>
 </ul>
 </div>
 </section>
 <section id="doable-in-three-strategy-deferred" class="slide level2">
 <h2>Doable in Three — Strategy Deferred</h2>
-<p>The counting argument shows three weighings <em>must</em> be enough
-in principle.</p>
+<p>The counting argument shows three weighings <em>must</em> be enough in principle.</p>
 <div>
 <ul>
-<li class="fragment">We do <em>not</em> give the sequence of groupings
-today</li>
-<li class="fragment">Info gained and mechanism are separate ledgers —
-score both</li>
-<li class="fragment">Same moral as twenty questions: split the prior
-evenly, now three ways</li>
+<li class="fragment">We do <em>not</em> give the sequence of groupings today</li>
+<li class="fragment">Info gained and mechanism are separate ledgers — score both</li>
+<li class="fragment">Same moral as twenty questions: split the prior evenly, now three ways</li>
 </ul>
 </div>
 <aside class="notes">
-Stop here. Invite them to try Exercise 4.1 before reading MacKay’s
-solution figure. Optional aside: 1–6 vs 7–12 can never balance, so it
-yields only one bit and is already suboptimal <em>once we know there are
-three readings</em>.
+Stop here. Invite them to try Exercise 4.1 before reading MacKay’s solution figure. Optional aside: 1–6 vs 7–12 can never balance, so it yields only one bit and is already suboptimal <em>once we know there are three readings</em>.
 </aside>
 </section>
 <section id="coarse-graining-a-die" class="slide level2">
 <h2>Coarse-Graining a Die</h2>
-<p>A fair die has <span class="math inline">\(H(X)=\log_2 6\approx
-2.58\)</span> bits.</p>
+<p>A fair die has <span class="math inline">\(H(X)=\log_2 6\approx 2.58\)</span> bits.</p>
 <aside class="notes">
 Stage the question: does every yes/no cost one bit?
 </aside>
@@ -709,20 +1441,16 @@ Stage the question: does every yes/no cost one bit?
 <ul>
 <li class="fragment">First cut: odd or even?</li>
 <li class="fragment">Second cut: is it a six?</li>
-<li class="fragment">Same total either way — different prices for the
-first answer</li>
+<li class="fragment">Same total either way — different prices for the first answer</li>
 </ul>
 </div>
 <aside class="notes">
-Board both partitions. Odd/even is balanced so exactly 1 bit. ``Is it
-six?’’ is <em>not</em> one bit — students often assume every binary
-question buys a bit. That is the MacKay moral applied to grouping.
+Board both partitions. Odd/even is balanced so exactly 1 bit. ``Is it six?’’ is <em>not</em> one bit — students often assume every binary question buys a bit. That is the MacKay moral applied to grouping.
 </aside>
 </section>
 <section id="odd-or-even-exactly-one-bit" class="slide level2">
 <h2>Odd or Even: Exactly One Bit</h2>
-<p>Groups <span class="math inline">\(\{1,3,5\}\)</span> and <span
-class="math inline">\(\{2,4,6\}\)</span> are equiprobable.</p>
+<p>Groups <span class="math inline">\(\{1,3,5\}\)</span> and <span class="math inline">\(\{2,4,6\}\)</span> are equiprobable.</p>
 <p><small> <span class="math display">\[
 H(G_{\mathrm{parity}})=1 \text{ bit},
 \qquad
@@ -731,17 +1459,14 @@ H(X\mid G_{\mathrm{parity}})=\log_2 3 \approx 1.585 \text{ bits}
 <div>
 <ul>
 <li class="fragment">Group label: fair coin — one bit</li>
-<li class="fragment">Inside either group: three equally likely
-faces</li>
-<li class="fragment">Total: <span class="math inline">\(1+\log_2
-3=\log_2 6\)</span></li>
+<li class="fragment">Inside either group: three equally likely faces</li>
+<li class="fragment">Total: <span class="math inline">\(1+\log_2 3=\log_2 6\)</span></li>
 </ul>
 </div>
 </section>
 <section id="is-it-a-six-not-one-bit" class="slide level2">
 <h2>“Is It a Six?”: Not One Bit</h2>
-<p>A yes/no question is one bit only when the two answers are
-equiprobable.</p>
+<p>A yes/no question is one bit only when the two answers are equiprobable.</p>
 <p><small> <span class="math display">\[
 w=\Bigl(\tfrac16,\tfrac56\Bigr),
 \qquad
@@ -749,147 +1474,100 @@ H(G_{\mathrm{six}})=h_2\Bigl(\tfrac16\Bigr)\approx 0.65 \text{ bits}
 \]</span> </small></p>
 <div>
 <ul>
-<li class="fragment">Yes (<span class="math inline">\(X=6\)</span>): no
-residual uncertainty</li>
-<li class="fragment">No: five faces left, <span
-class="math inline">\(H=\log_2 5\)</span></li>
-<li class="fragment">Remaining: <span
-class="math inline">\(\tfrac56\log_2 5\approx 1.93\)</span> bits</li>
-<li class="fragment">Total again <span class="math inline">\(\approx
-0.65+1.93=2.58=\log_2 6\)</span></li>
+<li class="fragment">Yes (<span class="math inline">\(X=6\)</span>): no residual uncertainty</li>
+<li class="fragment">No: five faces left, <span class="math inline">\(H=\log_2 5\)</span></li>
+<li class="fragment">Remaining: <span class="math inline">\(\tfrac56\log_2 5\approx 1.93\)</span> bits</li>
+<li class="fragment">Total again <span class="math inline">\(\approx 0.65+1.93=2.58=\log_2 6\)</span></li>
 </ul>
 </div>
 </section>
 <section id="same-total-different-first-cut" class="slide level2">
 <h2>Same Total, Different First Cut</h2>
-<p>However you slice the questions, you pay <span
-class="math inline">\(\log_2 6\)</span> in total.</p>
+<p>However you slice the questions, you pay <span class="math inline">\(\log_2 6\)</span> in total.</p>
 <div>
 <ul>
-<li class="fragment">Odd/even first: pay <span
-class="math inline">\(1\)</span>, then <span
-class="math inline">\(\log_2 3\)</span></li>
-<li class="fragment">Six-or-not first: pay <span
-class="math inline">\(\approx 0.65\)</span>, then <span
-class="math inline">\(\approx 1.93\)</span></li>
-<li class="fragment">Coarse-graining keeps only the group term and
-<em>throws away</em> the rest</li>
+<li class="fragment">Odd/even first: pay <span class="math inline">\(1\)</span>, then <span class="math inline">\(\log_2 3\)</span></li>
+<li class="fragment">Six-or-not first: pay <span class="math inline">\(\approx 0.65\)</span>, then <span class="math inline">\(\approx 1.93\)</span></li>
+<li class="fragment">Coarse-graining keeps only the group term and <em>throws away</em> the rest</li>
 </ul>
 </div>
 </section>
 <section id="grouping-composition" class="slide level2">
 <h2>Grouping Composition</h2>
-<p>Uncertainty splits into stages: which group, then where inside the
-group.</p>
+<p>Uncertainty splits into stages: which group, then where inside the group.</p>
 <p><small> <span class="math display">\[
 H(X)=H(w)+\sum_i w_i\, H(p_i)
 \]</span> </small></p>
 <div>
 <ul>
-<li class="fragment"><span class="math inline">\(w_i\)</span>:
-probability of group <span class="math inline">\(i\)</span></li>
-<li class="fragment"><span class="math inline">\(p_i\)</span>:
-distribution <em>inside</em> group <span
-class="math inline">\(i\)</span></li>
-<li class="fragment">First term: cost of the coarse label; second:
-average residual detail</li>
+<li class="fragment"><span class="math inline">\(w_i\)</span>: probability of group <span class="math inline">\(i\)</span></li>
+<li class="fragment"><span class="math inline">\(p_i\)</span>: distribution <em>inside</em> group <span class="math inline">\(i\)</span></li>
+<li class="fragment">First term: cost of the coarse label; second: average residual detail</li>
 </ul>
 </div>
 <aside class="notes">
-This is the chain rule for a deterministic grouping <span
-class="math inline">\(G=g(X)\)</span>: <span
-class="math inline">\(H(X)=H(G)+H(X\mid G)\)</span>. Board that
-identification. Khinchin pointer only — consistency under staged
-questions characterises Shannon <span class="math inline">\(H\)</span>;
-no proof today.
+This is the chain rule for a deterministic grouping <span class="math inline">\(G=g(X)\)</span>: <span class="math inline">\(H(X)=H(G)+H(X\mid G)\)</span>. Board that identification. Khinchin pointer only — consistency under staged questions characterises Shannon <span class="math inline">\(H\)</span>; no proof today.
 </aside>
 </section>
 <section id="reverse-direction" class="slide level2">
 <h2>Reverse Direction</h2>
-<p>Learning the face determines the group for free. What is left to find
-after the group?</p>
+<p>Learning the face determines the group for free. What is left to find after the group?</p>
 <div>
 <ul>
-<li class="fragment"><span class="math inline">\(H(G\mid X)=0\)</span>:
-the coarse label is redundant given <span
-class="math inline">\(X\)</span></li>
-<li class="fragment">Information <em>extracted</em> by the group: <span
-class="math inline">\(I(X;G)=H(G)\)</span></li>
-<li class="fragment">Information <em>still to find</em>: <span
-class="math inline">\(H(X\mid G)\)</span></li>
+<li class="fragment"><span class="math inline">\(H(G\mid X)=0\)</span>: the coarse label is redundant given <span class="math inline">\(X\)</span></li>
+<li class="fragment">Information <em>extracted</em> by the group: <span class="math inline">\(I(X;G)=H(G)\)</span></li>
+<li class="fragment">Information <em>still to find</em>: <span class="math inline">\(H(X\mid G)\)</span></li>
 </ul>
 </div>
 </section>
 <section id="why-the-total-is-invariant" class="slide level2">
 <h2>Why the Total Is Invariant</h2>
-<p>Entropy is the uncertainty that is consistent no matter how you
-decompose a question into stages.</p>
+<p>Entropy is the uncertainty that is consistent no matter how you decompose a question into stages.</p>
 <div>
 <ul>
-<li class="fragment">Any partition: <span
-class="math inline">\(H(w)+\sum_i w_i H(p_i)\)</span> returns the same
-<span class="math inline">\(H(X)\)</span></li>
-<li class="fragment">That consistency is special to the Shannon form
-(Khinchin; later Baez–Fritz–Leinster)</li>
-<li class="fragment">Pointer only today — week 3 derives <span
-class="math inline">\(H\)</span> from axioms</li>
+<li class="fragment">Any partition: <span class="math inline">\(H(w)+\sum_i w_i H(p_i)\)</span> returns the same <span class="math inline">\(H(X)\)</span></li>
+<li class="fragment">That consistency is special to the Shannon form (Khinchin; later Baez–Fritz–Leinster)</li>
+<li class="fragment">Pointer only today — week 3 derives <span class="math inline">\(H\)</span> from axioms</li>
 </ul>
 </div>
 </section>
 <section id="coarse-graining-as-abstraction" class="slide level2">
 <h2>Coarse-Graining as Abstraction</h2>
-<p>Bernoulli already coarse-grained. Intelligence does it
-constantly.</p>
+<p>Bernoulli already coarse-grained. Intelligence does it constantly.</p>
 <div>
 <ul>
-<li class="fragment">Kinetic theory: keep pressure; discard each
-molecule’s curve</li>
-<li class="fragment">Thermodynamics: keep <span
-class="math inline">\(T,V,P\)</span>; discard which microstate</li>
-<li class="fragment">Perception / ML: pixels <span
-class="math inline">\(\to\)</span> features <span
-class="math inline">\(\to\)</span> concepts</li>
+<li class="fragment">Kinetic theory: keep pressure; discard each molecule’s curve</li>
+<li class="fragment">Thermodynamics: keep <span class="math inline">\(T,V,P\)</span>; discard which microstate</li>
+<li class="fragment">Perception / ML: pixels <span class="math inline">\(\to\)</span> features <span class="math inline">\(\to\)</span> concepts</li>
 </ul>
 </div>
 <aside class="notes">
-Callback to the early ensemble block and to Jaynes’ anthropomorphic
-entropy below. One slide only — the die gave the accounting; this is the
-moral.
+Callback to the early ensemble block and to Jaynes’ anthropomorphic entropy below. One slide only — the die gave the accounting; this is the moral.
 </aside>
 </section>
 <section id="bridge-back-to-the-ensemble" class="slide level2">
 <h2>Bridge Back to the Ensemble</h2>
-<p>Macrostate <span class="math inline">\(=\)</span> group. Microstate
-<span class="math inline">\(=\)</span> face inside the group.</p>
+<p>Macrostate <span class="math inline">\(=\)</span> group. Microstate <span class="math inline">\(=\)</span> face inside the group.</p>
 <div>
 <ul>
-<li class="fragment">Information lost by the macro description: <span
-class="math inline">\(\sum_i w_i H(p_i)\)</span></li>
+<li class="fragment">Information lost by the macro description: <span class="math inline">\(\sum_i w_i H(p_i)\)</span></li>
 <li class="fragment">That is what thermodynamic entropy is counting</li>
-<li class="fragment">Same bookkeeping from atoms to gas, or pixels to
-concepts</li>
+<li class="fragment">Same bookkeeping from atoms to gas, or pixels to concepts</li>
 </ul>
 </div>
 </section>
-<section id="static-bookkeeping-versus-a-physical-ensemble"
-class="slide level2">
+<section id="static-bookkeeping-versus-a-physical-ensemble" class="slide level2">
 <h2>Static Bookkeeping Versus a Physical Ensemble</h2>
-<p>The grouping identity needs no dynamics. Reading <span
-class="math inline">\(p\)</span> as an ensemble does.</p>
+<p>The grouping identity needs no dynamics. Reading <span class="math inline">\(p\)</span> as an ensemble does.</p>
 <div>
 <ul>
-<li class="fragment">Die identity: true for any <span
-class="math inline">\(p\)</span> and any partition, at one instant</li>
-<li class="fragment">Physical ensemble: stationarity (and usually
-ergodicity) so averages match long-run time</li>
-<li class="fragment">Equilibrium: each group has settled; only the
-weights <span class="math inline">\(w_i\)</span> can still move</li>
+<li class="fragment">Die identity: true for any <span class="math inline">\(p\)</span> and any partition, at one instant</li>
+<li class="fragment">Physical ensemble: stationarity (and usually ergodicity) so averages match long-run time</li>
+<li class="fragment">Equilibrium: each group has settled; only the weights <span class="math inline">\(w_i\)</span> can still move</li>
 </ul>
 </div>
 <aside class="notes">
-Forward pointer only. No Markov chains, no lumpability, no glasses
-today. Finite-time later this lecture will move <span
-class="math inline">\(w\)</span>; Crooks weeks 6–7; DPI week 8.
+Forward pointer only. No Markov chains, no lumpability, no glasses today. Finite-time later this lecture will move <span class="math inline">\(w\)</span>; Crooks weeks 6–7; DPI week 8.
 </aside>
 </section>
 <section id="what-comes-next" class="slide level2">
@@ -897,1425 +1575,23 @@ class="math inline">\(w\)</span>; Crooks weeks 6–7; DPI week 8.
 <p>Today the die is frozen. Later lectures thaw the groups.</p>
 <div>
 <ul>
-<li class="fragment">Week 3: name local equilibrium — <span
-class="math inline">\(p_i\approx\pi_i\)</span>, <span
-class="math inline">\(w(t)\)</span> may move</li>
-<li class="fragment">Week 4: demon sorts groups; Landauer wells freeze
-<span class="math inline">\(w_i\)</span></li>
-<li class="fragment">Weeks 6–7: finite-time driving moves <span
-class="math inline">\(w\)</span> on the equilibrium manifold</li>
-<li class="fragment">Week 8: <span class="math inline">\(\text{KL}\left(
-p_t\,\|\,\pi \right)\)</span> falls; same split for approach to
-equilibrium</li>
+<li class="fragment">Week 3: name local equilibrium — <span class="math inline">\(p_i\approx\pi_i\)</span>, <span class="math inline">\(w(t)\)</span> may move</li>
+<li class="fragment">Week 4: demon sorts groups; Landauer wells freeze <span class="math inline">\(w_i\)</span></li>
+<li class="fragment">Weeks 6–7: finite-time driving moves <span class="math inline">\(w\)</span> on the equilibrium manifold</li>
+<li class="fragment">Week 8: <span class="math inline">\(\text{KL}\left( p_t\,\|\,\pi \right)\)</span> falls; same split for approach to equilibrium</li>
 </ul>
 </div>
 <aside class="notes">
-Grouping prepares the chain rule. Axiomatic <span
-class="math inline">\(H\)</span> follows after Gibbs / <span
-class="math inline">\(F\)</span> / HMC.
-</aside>
-</section>
-<section id="ml-to-thermodynamics" class="slide level2">
-<h2>ML to Thermodynamics</h2>
-<!--setupplotcode{import seaborn as sns
-sns.set_style('darkgrid')
-sns.set_context('paper')
-sns.set_palette('colorblind')}-->
-</section>
-<section id="carnot-and-clausius" class="slide level2">
-<h2>Carnot and Clausius</h2>
-</section>
-<section id="before-boltzmann-heat-engines" class="slide level2">
-<h2>Before Boltzmann: Heat Engines</h2>
-<div>
-<ul>
-<li class="fragment">Carnot (1824): no real engine beats a reversible
-cycle between two baths</li>
-<li class="fragment">Clausius (1850s): heat cannot flow from cold to hot
-without work</li>
-<li class="fragment">Clausius (1865): names <em>entropy</em> — the
-state’s transformation content</li>
-</ul>
-</div>
-<aside class="notes">
-Carnot is the efficiency question; Clausius is the second law and the
-word entropy. Perpetual motion fails because it tries to evade that
-toll.
-</aside>
-</section>
-<section id="clausius-and-the-no-go" class="slide level2">
-<h2>Clausius and the No-Go</h2>
-<p>Clausius: the entropy of the universe tends to a maximum.</p>
-<div>
-<ul>
-<li class="fragment">You cannot run a cyclic engine that converts heat
-entirely into work</li>
-<li class="fragment">Similar for perpetual motion — Clausius makes the
-prohibition explicit</li>
-<li class="fragment">Prescription follows separately: Boltzmann weights,
-then Shannon/Jaynes</li>
-</ul>
-</div>
-<div>
-<ul>
-<li class="fragment">Macroscopic: Carnot <span
-class="math inline">\(\to\)</span> Clausius (second law, entropy
-named)</li>
-<li class="fragment">Microscopic: Maxwell, Boltzmann, Gibbs (same <span
-class="math inline">\(S\)</span>, counted states)</li>
-<li class="fragment">Information: Shannon, Jaynes (same <span
-class="math inline">\(H\)</span>, different job)</li>
-</ul>
-</div>
-</section>
-<section id="the-gibbsboltzmann-distribution" class="slide level2">
-<h2>The Gibbs–Boltzmann Distribution</h2>
-</section>
-<section id="gibbsboltzmann-occupation" class="slide level2">
-<h2>Gibbs–Boltzmann Occupation</h2>
-<p>Same formula, three names: Boltzmann weights, Gibbs distribution,
-canonical ensemble.</p>
-<div>
-<ul>
-<li class="fragment"><span class="math inline">\(p_i = e^{-\beta
-E_i}/Z\)</span>, <span class="math inline">\(\quad Z(\beta)=\sum_j
-e^{-\beta E_j}\)</span></li>
-<li class="fragment"><span class="math inline">\(\beta=1/k_B T\)</span>:
-coldness; <span class="math inline">\(T\)</span>: bath temperature</li>
-<li class="fragment"><span class="math inline">\(\log Z\)</span> is the
-cumulant generating function of the energy</li>
-</ul>
-</div>
-<aside class="notes">
-Introduce and use, do not derive. Board the formula. MaxEnt with fixed
-mean energy recovers the same <span class="math inline">\(p_i\)</span>.
-</aside>
-<div class="figure">
-<div id="two-state-boltzmann-figure" class="figure-frame">
-<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/physics/two-state-boltzmann.svg" width="75%" style=" ">
-</object>
-</div>
-</div>
-<aside class="notes">
-Occupation of a two-state system as coldness increases. At low <span
-class="math inline">\(\beta\)</span> both states are populated; at high
-<span class="math inline">\(\beta\)</span> the ground state dominates.
-</aside>
-</section>
-<section id="aside-hopfield-boltzmann-machines-nobel-2024"
-class="slide level2">
-<h2>Aside: Hopfield, Boltzmann Machines, Nobel 2024</h2>
-<p>The same energy-and-occupation grammar reappears in associative
-memory and early deep learning.</p>
-<div>
-<ul>
-<li class="fragment">Hopfield (1982): fixed-weight energy; recall as
-settling</li>
-<li class="fragment">Boltzmann machine (1985): make those couplings
-<em>learnable</em></li>
-<li class="fragment">Pairwise energy: <span
-class="math inline">\(E(\mathbf{s})=-\sum_i b_i
-s_i-\sum_{i&lt;j}W_{ij}s_i s_j\)</span></li>
-</ul>
-</div>
-<aside class="notes">
-Colour only. Nobel 2024 (Hopfield and Hinton) names the line. Do not
-divert into training algorithms or Landauer here.
-</aside>
-</section>
-<section id="coldness-and-temperature" class="slide level2">
-<h2>Coldness and Temperature</h2>
-<div>
-<ul>
-<li class="fragment"><span class="math inline">\(T\)</span>: the bath,
-the thermometer</li>
-<li class="fragment"><span class="math inline">\(\beta = 1/k_B
-T\)</span>: coldness</li>
-<li class="fragment">Same occupation; entropy sits in a different
-place</li>
-</ul>
-</div>
-</section>
-<section id="two-representations" class="slide level2">
-<h2>Two Representations</h2>
-<div>
-<ul>
-<li class="fragment"><span class="math inline">\(T\)</span>-first: <span
-class="math inline">\(F = U - TS\)</span></li>
-<li class="fragment"><span class="math inline">\(\beta\)</span>-first:
-<span class="math inline">\(Z(\beta)\)</span>, then <span
-class="math inline">\(U = -\partial_\beta\log Z\)</span></li>
-<li class="fragment">Week 5: <span class="math inline">\(\beta\)</span>
-is the Lagrange multiplier</li>
-</ul>
-</div>
-</section>
-<section id="free-energy-decomposition" class="slide level2">
-<h2>Free Energy Decomposition</h2>
-<!-- SNIPPET: _physics/includes/free-energy-decomposition.md -->
-<p>Once <span class="math inline">\(p_i = e^{-\beta E_i}/Z\)</span> is
-fixed, thermodynamics is bookkeeping.</p>
-<div>
-<ul>
-<li class="fragment">Mean energy: <span class="math inline">\(U =
-\langle E\rangle = \sum_i p_i E_i\)</span></li>
-<li class="fragment">Entropy: <span class="math inline">\(S = -k_B\sum_i
-p_i \log p_i\)</span></li>
-<li class="fragment">Helmholtz free energy: <span
-class="math inline">\(F = U - TS = -kT\log Z\)</span></li>
-</ul>
-</div>
-<aside class="notes">
-LO1. Read <span class="math inline">\(F=U-TS\)</span> as available
-energy. Name the subtraction; Legendre transform waits for week 5.
-</aside>
-<div class="figure">
-<div id="three-state-thermo-figure" class="figure-frame">
-<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/three-state-thermo.svg" width="75%" style=" ">
-</object>
-</div>
-</div>
-<aside class="notes">
-<span class="math inline">\(U\)</span>, <span
-class="math inline">\(S\)</span>, and <span
-class="math inline">\(F\)</span> for the Worksheet 1 three-state system.
-Verify <span class="math inline">\(F=-\log Z/\beta\)</span> numerically.
-</aside>
-<!-- /SNIPPET: _physics/includes/free-energy-decomposition.md -->
-<div>
-<ul>
-<li class="fragment">Prescription: <span class="math inline">\(p_i =
-e^{-\beta E_i}/Z\)</span></li>
-<li class="fragment">Accounting: <span class="math inline">\(F = U -
-TS\)</span></li>
-</ul>
-</div>
-</section>
-<section id="from-loss-landscapes-to-hamiltonians" class="slide level2">
-<h2>From Loss Landscapes to Hamiltonians</h2>
-</section>
-<section id="walking-down-an-energy" class="slide level2">
-<h2>Walking Down an Energy</h2>
-<p>Gradient descent: ‘walking downhill’</p>
-<div>
-<ul>
-<li class="fragment">Contours of <span class="math inline">\(E(\mathbf{
-w})\)</span> = elevation lines on a hill</li>
-<li class="fragment">Steepest descent: step opposite <span
-class="math inline">\(\nabla E\)</span></li>
-<li class="fragment">Same <span class="math inline">\(E\)</span> as
-least squares / negative log-likelihood</li>
-</ul>
-</div>
-<div class="figure">
-<div id="loss-energy-contour-figure" class="figure-frame">
-<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/loss-energy-contour.svg" width="55%" style=" ">
-</object>
-</div>
-</div>
-<aside class="notes">
-Contours of the least-squares energy <span
-class="math inline">\(E(m,c)=\sum_n(y_n-mx_n-c)^2\)</span>. Steepest
-descent walks toward the bowl.
-</aside>
-</section>
-<section id="potential-energy" class="slide level2">
-<h2>Potential Energy</h2>
-<p>The loss is a <em>potential energy</em> <span
-class="math inline">\(V(\mathbf{q})\)</span> on parameter space.</p>
-<div>
-<ul>
-<li class="fragment">Configuration <span
-class="math inline">\(\mathbf{q}=\mathbf{ w}\)</span>: where the system
-sits</li>
-<li class="fragment">Force <span class="math inline">\(\propto -\nabla
-V\)</span>: direction of steepest descent</li>
-<li class="fragment">Common analogy: ball in a bowl; GD is the
-overdamped limit</li>
-</ul>
-</div>
-</section>
-<section id="in-practice-stochastic" class="slide level2">
-<h2>In Practice: Stochastic</h2>
-<p>SGD estimates <span class="math inline">\(\nabla V\)</span> from a
-random mini-batch</p>
-<div>
-<ul>
-<li class="fragment">Full-batch <span class="math inline">\(\nabla
-V\)</span>: exact force, expensive</li>
-<li class="fragment">SGD: noisy force; cheap; enables online
-updates</li>
-<li class="fragment">Noise can help escape shallow traps (less relevant
-for convex bowls)</li>
-</ul>
-</div>
-</section>
-<section id="where-is-the-kinetic-energy" class="slide level2">
-<h2>Where Is the Kinetic Energy?</h2>
-<p>Where is the kinetic energy?</p>
-<div>
-<ul>
-<li class="fragment">GD / SGD: overdamped—friction, no momentum
-inventory</li>
-<li class="fragment">Momentum methods (heavy ball, Adam): heuristic
-inertia</li>
-<li class="fragment">Physics: kinetic energy <span
-class="math inline">\(T(\mathbf{p})\)</span> lives on <em>momentum</em>
-<span class="math inline">\(\mathbf{p}\)</span></li>
-</ul>
-</div>
-</section>
-<section id="the-hamiltonian" class="slide level2">
-<h2>The Hamiltonian</h2>
-<p><span class="math display">\[
-H(\mathbf{q},\mathbf{p}) = T(\mathbf{p}) + V(\mathbf{q})
-\]</span></p>
-<div>
-<ul>
-<li class="fragment">Total energy = kinetic + potential</li>
-<li class="fragment">Hamilton: <span
-class="math inline">\(\dot{\mathbf{q}}=\partial
-H/\partial\mathbf{p}\)</span>, <span
-class="math inline">\(\dot{\mathbf{p}}=-\partial
-H/\partial\mathbf{q}\)</span></li>
-<li class="fragment"><span class="math inline">\(H\)</span> conserved
-along the flow (ideal, frictionless case)</li>
-</ul>
-</div>
-</section>
-<section id="hamiltonian-monte-carlo" class="slide level2">
-<h2>Hamiltonian Monte Carlo</h2>
-<p>HMC: invent momentum, simulate Hamiltonian dynamics,
-accept/reject.</p>
-<div>
-<ul>
-<li class="fragment">Draw <span
-class="math inline">\(\mathbf{p}\sim\mathcal{N}(0,M)\)</span>; integrate
-Hamilton’s equations for a short fictitious time</li>
-<li class="fragment">Propose the <em>endpoint</em> <span
-class="math inline">\((\mathbf{q}&#39;,\mathbf{p}&#39;)\)</span>;
-Metropolis test on <span class="math inline">\(H\)</span></li>
-<li class="fragment">Marginal samples of <span
-class="math inline">\(\mathbf{q}\)</span> target <span
-class="math inline">\(p(\mathbf{q})\propto
-e^{-V(\mathbf{q})}\)</span></li>
-</ul>
-</div>
-</section>
-<section id="why-stay-on-a-contour-of-h" class="slide level2">
-<h2>Why Stay on a Contour of <span
-class="math inline">\(H\)</span>?</h2>
-<p>Moving along a contour of <span class="math inline">\(H\)</span>
-costs nothing.</p>
-<div>
-<ul>
-<li class="fragment">Target on <span
-class="math inline">\((\mathbf{q},\mathbf{p})\)</span>: <span
-class="math inline">\(\pi\propto
-e^{-H(\mathbf{q},\mathbf{p})}\)</span></li>
-<li class="fragment">Along a contour <span
-class="math inline">\(H\)</span> is constant, so <span
-class="math inline">\(\pi\)</span> is constant</li>
-<li class="fragment">Metropolis accepts with <span
-class="math inline">\(\min(1,e^{-\Delta H})\)</span>: <span
-class="math inline">\(\Delta H\approx 0\)</span> means accept</li>
-</ul>
-</div>
-</section>
-<section id="contours-are-not-contours-of-v" class="slide level2">
-<h2>Contours Are Not Contours of <span
-class="math inline">\(V\)</span></h2>
-<p>Staying on a level of <span class="math inline">\(H\)</span> is not
-staying at a level of <span class="math inline">\(V\)</span>.</p>
-<div>
-<ul>
-<li class="fragment"><span
-class="math inline">\(H=V(\mathbf{q})+T(\mathbf{p})\)</span>: kinetic
-energy converts to potential and back</li>
-<li class="fragment">Up the side of the bowl, <span
-class="math inline">\(\mathbf{p}\)</span> shrinks; back down, it
-grows</li>
-<li class="fragment">Fresh <span
-class="math inline">\(\mathbf{p}\sim\mathcal{N}(0,M)\)</span> jumps to a
-new level of <span class="math inline">\(H\)</span></li>
-</ul>
-</div>
-<div class="figure">
-<div id="hmc-level-refresh-figure" class="figure-frame">
-<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/hmc-level-refresh.svg" width="55%" style=" ">
-</object>
-</div>
-</div>
-<aside class="notes">
-Unit harmonic oscillator, <span
-class="math inline">\(H=(q^2+p^2)/2\)</span>. Circles are levels of
-<span class="math inline">\(H\)</span>. The solid arc rides one level
-(Hamiltonian flow). The dashed jump at fixed <span
-class="math inline">\(q\)</span> is a momentum refresh onto a new level.
-</aside>
-<aside class="notes">
-Solid = free trip around a contour. Dashed = Gibbs update of <span
-class="math inline">\(p\)</span>, which changes <span
-class="math inline">\(H\)</span> and leaves <span
-class="math inline">\(q\)</span> alone.
-</aside>
-</section>
-<section id="why-not-just-descend" class="slide level2">
-<h2>Why Not Just Descend?</h2>
-<p>Descent crosses contours of <span class="math inline">\(V\)</span>.
-Sampling must not.</p>
-<div>
-<ul>
-<li class="fragment">Descent goes toward the mode: great for a point
-estimate, wrong for a distribution</li>
-<li class="fragment">Each descent step changes <span
-class="math inline">\(V\)</span> a lot, so <span
-class="math inline">\(\pi\)</span> changes a lot, so it gets
-rejected</li>
-<li class="fragment">High dimensions: typical samples sit away from the
-mode</li>
-</ul>
-</div>
-<div class="figure">
-<div id="chi2-concentration-figure" class="figure-frame">
-<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/chi2-concentration.svg" width="60%" style=" ">
-</object>
-</div>
-</div>
-<aside class="notes">
-Density of <span class="math inline">\(\|q\|^2/d\)</span> for <span
-class="math inline">\(q\sim\mathcal{N}(0,I_d)\)</span>. Mean is <span
-class="math inline">\(1\)</span> for every <span
-class="math inline">\(d\)</span>; the mass tightens around that value.
-Typical samples sit in a shell, not at the mode.
-</aside>
-<aside class="notes">
-Point at <span class="math inline">\(d=50\)</span>: almost all the mass
-is near <span class="math inline">\(\|q\|^2=d\)</span>. The mode of the
-Gaussian is still the origin. Descent heads for a point that is not
-where samples live.
-</aside>
-</section>
-<section id="why-leapfrog" class="slide level2">
-<h2>Why Leapfrog?</h2>
-<p>We now know we want to follow a contour of <span
-class="math inline">\(H\)</span>. The computer cannot follow a curve, it
-takes steps.</p>
-<div>
-<ul>
-<li class="fragment">A descent-shaped step walks off the level: <span
-class="math inline">\(H\)</span> grows, and Metropolis fights the
-drift</li>
-<li class="fragment">The discrete map must be reversible and
-volume-preserving, or the accept/reject is no longer a small
-correction</li>
-</ul>
-</div>
-<aside class="notes">
-The contour argument is done. This slide is the discrete-step problem.
-Then Euler leaving the circle, then leapfrog.
-</aside>
-</section>
-<section id="euler-leaves-the-orbit" class="slide level2">
-<h2>Euler Leaves the Orbit</h2>
-<p>Forward Euler on a quadratic well: each step is a shear, the circle
-inflates.</p>
-<div>
-<ul>
-<li class="fragment"><span class="math inline">\(q\leftarrow
-q+\varepsilon p\)</span>, <span class="math inline">\(p\leftarrow
-p-\varepsilon q\)</span></li>
-<li class="fragment"><span class="math inline">\(H\)</span> grows at
-every step</li>
-<li class="fragment">Metropolis on <span class="math inline">\(\Delta
-H\)</span> then rejects almost everything</li>
-</ul>
-</div>
-</section>
-<section id="leapfrog-stays-near-it" class="slide level2">
-<h2>Leapfrog Stays Near It</h2>
-<p>Leapfrog: half-step <span class="math inline">\(\mathbf{p}\)</span>,
-full-step <span class="math inline">\(\mathbf{q}\)</span>, half-step
-<span class="math inline">\(\mathbf{p}\)</span>.</p>
-<div>
-<ul>
-<li class="fragment">Reversible: flip <span
-class="math inline">\(\mathbf{p}\)</span>, replay, flip <span
-class="math inline">\(\mathbf{p}\)</span></li>
-<li class="fragment">Each substep has <span class="math inline">\(\det
-J=1\)</span> — a cloud of states keeps its area</li>
-<li class="fragment"><span class="math inline">\(H\)</span> wobbles
-without a secular drift, so accept rates stay high</li>
-</ul>
-</div>
-<aside class="notes">
-Do not derive the symplectic form. The figure is the argument: Euler
-walks off the circle, leapfrog stays. Name reversible +
-volume-preserving; stop.
-</aside>
-<div class="figure">
-<div id="leapfrog-vs-euler-figure" class="figure-frame">
-<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/leapfrog-vs-euler.svg" width="55%" style=" ">
-</object>
-</div>
-</div>
-<aside class="notes">
-Harmonic oscillator <span class="math inline">\(H=(q^2+p^2)/2\)</span>,
-forty steps of size <span class="math inline">\(0.3\)</span> from <span
-class="math inline">\((1,0)\)</span>. The exact motion is the dashed
-circle. Euler inflates <span class="math inline">\(H\)</span>; leapfrog
-stays near the level set.
-</aside>
-</section>
-<section id="the-algorithm-hop-ride-correct" class="slide level2">
-<h2>The Algorithm: Hop, Ride, Correct</h2>
-<p>Each iteration: hop to a new level, ride around it, correct.</p>
-<div>
-<ol type="1">
-<li class="fragment"><strong>Hop:</strong> draw <span
-class="math inline">\(\mathbf{p}\sim\mathcal{N}(0,M)\)</span> (changes
-<span class="math inline">\(H\)</span>, not <span
-class="math inline">\(\mathbf{q}\)</span>)</li>
-<li class="fragment"><strong>Ride:</strong> <span
-class="math inline">\(L\)</span> leapfrog steps from <span
-class="math inline">\((\mathbf{q},\mathbf{p})\)</span> to <span
-class="math inline">\((\mathbf{q}&#39;,\mathbf{p}&#39;)\)</span></li>
-<li class="fragment"><strong>Correct:</strong> accept with probability
-<span class="math inline">\(\min(1,e^{-\Delta H})\)</span>, else stay at
-<span class="math inline">\(\mathbf{q}\)</span></li>
-</ol>
-</div>
-<aside class="notes">
-Say it as three verbs: hop, ride, correct. Then point at the trajectory
-figure: the curves are step 2, the markers are what survives step 3.
-</aside>
-<div class="figure">
-<div id="hmc-hop-ride-figure" class="figure-frame">
-<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/hmc-hop-ride.svg" width="55%" style=" ">
-</object>
-</div>
-</div>
-<aside class="notes">
-Hop, ride, correct on <span
-class="math inline">\(H=(q^2+p^2)/2\)</span>. Dashed verticals: momentum
-refresh (hop). Marked polylines: leapfrog (ride). Large markers:
-accepted endpoints (correct).
-</aside>
-</section>
-<section id="trajectories-propose-endpoints-sample"
-class="slide level2">
-<h2>Trajectories Propose; Endpoints Sample</h2>
-<p>Curves are step 2; markers are what survives step 3.</p>
-<div>
-<ul>
-<li class="fragment">The leapfrog path builds one proposal — waypoints
-are discarded</li>
-<li class="fragment">Only the accepted endpoint enters the chain</li>
-<li class="fragment">Next iteration hops again: fresh <span
-class="math inline">\(\mathbf{p}\)</span>, new level of <span
-class="math inline">\(H\)</span></li>
-</ul>
-</div>
-<aside class="notes">
-Point at the quadratic figure: curves = step 2; markers = step 3. The
-three circles were the same loop in <span
-class="math inline">\((q,p)\)</span>.
-</aside>
-</section>
-<section id="radford-neal" class="slide level2">
-<h2>Radford Neal</h2>
-<div class="figure">
-<div id="radford-neal-figure" class="figure-frame">
-<div class="centered" style="">
-<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/people/radford-neal.jpg" width="35%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
-</div>
-</div>
-</div>
-<aside class="notes">
-Radford M. Neal (University of Toronto).
-</aside>
-</section>
-<section id="radford-neal-1" class="slide level2">
-<h2>Radford Neal</h2>
-<p>Radford Neal brought Hamiltonian Monte Carlo into Bayesian neural
-nets.</p>
-<div>
-<ul>
-<li class="fragment">Toronto; Bayesian learning and MCMC</li>
-<li class="fragment">Hybrid Monte Carlo for backpropagation networks
-<span class="citation" data-cites="Neal:hmc92">(Neal, 1992)</span></li>
-<li class="fragment">PhD thesis: Bayesian neural nets; infinite width
-<span class="math inline">\(\to\)</span> GP <span class="citation"
-data-cites="Neal:bayesian94">(Neal, 1994)</span></li>
-</ul>
-</div>
-</section>
-<section id="hamiltonian-monte-carlo-example" class="slide level2">
-<h2>Hamiltonian Monte Carlo Example</h2>
-<div>
-<ul>
-<li class="fragment">Target: <span
-class="math inline">\(V(\mathbf{q})=-\log
-p(\mathbf{q}\mid\mathcal{D})\)</span> (loss as potential)</li>
-<li class="fragment"><code>HamiltonianMonteCarlo</code> in
-<code>mlai</code>; trace <span class="math inline">\(H\)</span> and
-accept rate</li>
-<li class="fragment">Contrast: SGD point estimate vs HMC posterior
-samples</li>
-</ul>
-</div>
-</section>
-<section id="section" class="slide level2">
-<h2></h2>
-<div class="figure">
-<div id="hmc-quadratic-trajectories-figure" class="figure-frame">
-<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/hmc-quadratic-trajectories.svg" width="55%" style=" ">
-</object>
-</div>
-</div>
-<aside class="notes">
-Leapfrog <em>trajectories</em> (curves) are proposals, not samples.
-Markers are accepted endpoints only. Target <span
-class="math inline">\(V(\mathbf{q})=\tfrac12\|\mathbf{q}\|^2\)</span>;
-Metropolis on <span class="math inline">\(\Delta H\)</span> keeps the
-chain on <span class="math inline">\(e^{-V}\)</span>.
-</aside>
-</section>
-<section id="section-1" class="slide level2">
-<h2></h2>
-<div class="figure">
-<div id="hmc-logistic-traces-figure" class="figure-frame">
-<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/hmc-logistic-traces.svg" width="70%" style=" ">
-</object>
-</div>
-</div>
-<aside class="notes">
-Hamiltonian and weight traces for logistic regression. <span
-class="math inline">\(V(\mathbf{ w})=-\log p(\mathbf{
-w}\mid\mathcal{D})\)</span>; SGD gives one downhill point, HMC a cloud
-of posterior samples.
-</aside>
-<aside class="notes">
-Name kinetic energy and Neal. Hop, ride, correct is the loop. Euler
-leaves the circle, leapfrog stays. Trajectory figure: curves = ride;
-markers = correct. <span class="math inline">\(V=-\log\)</span>
-posterior, not a new loss species.
-</aside>
-<p>Week 2 counted human communication in Shannon’s bits — a bottleneck
-on how fast thought can leave the body.</p>
-<div>
-<ul>
-<li class="fragment">Now: derive <span class="math inline">\(H\)</span>
-and connect <span class="math inline">\(S = kH\)</span></li>
-<li class="fragment">The bottleneck remains; we gain the measure behind
-the bit</li>
-</ul>
-</div>
-<aside class="notes">
-Callback before axioms. Bandwidth is not a thermodynamic no-go — it
-constrains intelligence. <span class="math inline">\(H\)</span> is the
-formal account of uncertainty in <span class="math inline">\(p\)</span>.
-</aside>
-</section>
-<section id="shannon-entropy" class="slide level2">
-<h2>Shannon Entropy</h2>
-</section>
-<section id="information-theory-and-ai" class="slide level2">
-<h2>Information Theory and AI</h2>
-<div>
-<ul>
-<li class="fragment">Claude Shannon developed information theory at Bell
-Labs</li>
-<li class="fragment">Information measured in bits, separated from
-context</li>
-<li class="fragment">Makes information fungible and comparable</li>
-</ul>
-</div>
-</section>
-<section id="fungibility-of-information" class="slide level2">
-<h2>Fungibility of Information</h2>
-</section>
-<section id="information-transfer-rates" class="slide level2">
-<h2>Information Transfer Rates</h2>
-<div>
-<ul>
-<li class="fragment">Humans speaking: ~2,000 bits per minute</li>
-<li class="fragment">Machines communicating: ~600 billion bits per
-minute</li>
-<li class="fragment">Machines share information 300 million times faster
-than humans</li>
-</ul>
-</div>
-</section>
-<section id="brownian-motion-and-wiener" class="slide level2">
-<h2>Brownian Motion and Wiener</h2>
-<div class="figure">
-<div id="albert-einstein-photo-figure" class="figure-frame">
-<div class="centered" style="">
-<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/Albert_Einstein_photo_1921.jpg" width="40%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
-</div>
-</div>
-</div>
-<aside class="notes">
-Albert Einstein’s 1905 paper on Brownian motion introduced stochastic
-differential equations which can be used to model the ‘curve of a simple
-molecule of air’.
-</aside>
-</section>
-<section id="section-2" class="slide level2">
-<h2></h2>
-<div class="figure">
-<div id="russell-wiener-russell-figure" class="figure-frame">
-<div class="lamd-columns"
-style="display:flex; width:100%; justify-content:center; align-items:center; column-gap:1em;">
-<div style="flex:0 0 30%; max-width:30%;">
-<center>
-<div class="centered" style="">
-<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/philosophy/Bertrand_Russell_1957.jpg" width="100%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
-</div>
-</center>
-<center>
-<em>Betrand Russell</em>
-</center>
-</div>
-<div style="flex:0 0 30%; max-width:30%;">
-<center>
-<div class="centered" style="">
-<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/Albert_Einstein_photo_1921.jpg" width="85%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
-</div>
-</center>
-<center>
-<em>Albert Einstein</em>
-</center>
-</div>
-<div style="flex:0 0 30%; max-width:30%;">
-<center>
-<div class="centered" style="">
-<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/Norbert_wiener.jpg" width="100%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
-</div>
-</center>
-<center>
-<em>Norbert Wiener</em>
-</center>
-</div>
-</div>
-</div>
-</div>
-<aside class="notes">
-Bertrand Russell (1872-1970), Albert Einstein (1879-1955), Norbert
-Wiener, (1894-1964)
-</aside>
-<aside class="notes">
-Wiener came to Cambridge in 1913. Russell showed him Einstein’s 1905
-paper on Brownian motion (<span class="citation"
-data-cites="Einstein-brownian05">Einstein (1905)</span>)
-</aside>
-</section>
-<section id="brownian-motion" class="slide level2">
-<h2>Brownian Motion</h2>
-<div class="figure">
-<div id="brownian-motion-figure" class="figure-frame">
-<div class="centered" style="">
-<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/brownian-motion.gif" width="40%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
-</div>
-</div>
-</div>
-<aside class="notes">
-Brownian motion of a large particle in a group of smaller particles. The
-movement is known as a <em>Wiener process</em> after Norbert Wiener.
-</aside>
-</section>
-<section id="stochasticity-and-control" class="slide level2">
-<h2>Stochasticity and Control</h2>
-<div class="figure">
-<div id="norbert-wiener-yellow-peril-figure" class="figure-frame">
-<div class="lamd-columns"
-style="display:flex; width:100%; justify-content:center; align-items:center; column-gap:1em;">
-<div style="flex:0 0 45%; max-width:45%;">
-<div class="centered" style="">
-<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/Norbert_wiener.jpg" width="100%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
-</div>
-</div>
-<div style="flex:0 0 45%; max-width:45%;">
-<div class="centered" style="">
-<img class="" src="https://mlatcl.github.io/iei/slides/diagrams/books/wiener-yellow-peril.png" width="100%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
-</div>
-</div>
-</div>
-</div>
-</div>
-<aside class="notes">
-Norbert Wiener (1894 - 1964). Founder of cybernetics and the information
-era. He used Gibbs’s ideas to develop a “theory of ignorance” that he
-deployed in early communication. On the right is Wiener’s wartime report
-that used stochastic processes in forecasting with applications in radar
-control (image from <span class="citation"
-data-cites="Coales-yellow14">Coales and Kane (2014)</span>).
-</aside>
-</section>
-<section id="shannon-entropy-from-axioms" class="slide level2">
-<h2>Shannon Entropy from Axioms</h2>
-<p>Shannon asked: what number measures uncertainty in a discrete
-distribution <span
-class="math inline">\(p=(p_1,\ldots,p_n)\)</span>?</p>
-<div>
-<ul>
-<li class="fragment">Continuity; maximum at uniform; additive for
-independent parts</li>
-<li class="fragment">Result: <span class="math inline">\(H(p) = -\sum_i
-p_i \log p_i\)</span></li>
-</ul>
-</div>
-<aside class="notes">
-Sketch the axioms; do not prove uniqueness. Board: fair coin, <span
-class="math inline">\(p=0.9\)</span>, uniform-8. LO2. Wiener: Gibbs →
-communication.
-</aside>
-</section>
-<section id="binary-entropy" class="slide level2">
-<h2>Binary Entropy</h2>
-<div class="figure">
-<div id="binary-entropy-figure" class="figure-frame">
-<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/binary-entropy.svg" width="70%" style=" ">
-</object>
-</div>
-</div>
-<aside class="notes">
-Binary entropy is maximal at <span
-class="math inline">\(p=\frac12\)</span> and falls as the source becomes
-predictable.
-</aside>
-</section>
-<section id="arithmetic-coding-and-dasher" class="slide level2">
-<h2>Arithmetic Coding and Dasher</h2>
-</section>
-<section id="arithmetic-coding" class="slide level2">
-<h2>Arithmetic Coding</h2>
-<ul>
-<li>Compression entails probabilistic modelling <span class="citation"
-data-cites="MacKay-information03">(MacKay, 2003, p. Ch.~6)</span></li>
-<li>Predict next symbol → encode cheaply when the prediction is
-sharp</li>
-<li>Modelling separated from the bit-string construction</li>
-</ul>
-</section>
-<section id="the-guessing-game" class="slide level2">
-<h2>The guessing game</h2>
-<ul>
-<li>Human predicts next character (MacKay Sec.~6.1)</li>
-<li>Record guess-rank → skewed alphabet → easy to compress</li>
-<li>Decoder: identical twin, stopped after the same number of
-guesses</li>
-</ul>
-</section>
-<section id="from-guesses-to-intervals" class="slide level2">
-<h2>From guesses to intervals</h2>
-<ul>
-<li>Model supplies <span class="math inline">\(P(x_n \mid
-x_{&lt;n})\)</span> — any context-dependent distribution</li>
-<li>Subdivide <span class="math inline">\([0,1)\)</span> so each symbol
-interval has length equal to its probability</li>
-<li>Code = any bit-string whose dyadic interval ⊆ message interval</li>
-<li>Length of final interval <span class="math inline">\(=
-P(\text{message}\mid\text{model})\)</span></li>
-</ul>
-</section>
-<section id="train-a-predictive-model" class="slide level2">
-<h2>Train a Predictive Model</h2>
-</section>
-<section id="algorithm-6.3-in-code" class="slide level2">
-<h2>Algorithm 6.3 in Code</h2>
-</section>
-<section id="export-for-dasher" class="slide level2">
-<h2>Export for Dasher</h2>
-<ul>
-<li>Retrain on another corpus → rewrite JSON → reload Dasher</li>
-<li>Box heights follow your <span class="math inline">\(P(c \mid
-\mathrm{context})\)</span></li>
-</ul>
-</section>
-<section id="dasher-arithmetic-coding-as-interface"
-class="slide level2">
-<h2>Dasher: Arithmetic Coding as Interface</h2>
-<ul>
-<li>Letters sized by <span class="math inline">\(P(\texttt{char} |
-\texttt{context})\)</span>. A large target = common = cheap</li>
-<li>Move pointer <strong>right</strong> of centre: boxes enlarge and
-stream <strong>left</strong></li>
-<li>Move pointer <strong>left</strong> of centre to zoom out /
-unwrite</li>
-<li>Character written when its box crosses the centre crosshair</li>
-<li><em>Ease of selection <span class="math inline">\(\propto\)</span>
-probability <span class="math inline">\(\propto\)</span> 1 / information
-cost</em></li>
-</ul>
-</section>
-<section id="section-3" class="slide level2">
-<h2></h2>
-<div class="figure">
-<div id="dasher-visualisation-figure" class="figure-frame">
-<div
-style="width:100%;font-family:&#39;Courier New&#39;,monospace;font-size:0.85em">
-<div
-style="display:flex;justify-content:space-between;align-items:center;gap:8px;padding:6px 14px;background:#131320;border-bottom:1px solid #2a2a3e">
-<div
-style="display:flex;align-items:center;gap:12px;min-width:0;flex:1">
-<p><span
-style="color:#4ecdc4;letter-spacing:3px;font-size:14px">DASHER</span>
-<span
-style="color:#404068;font-style:italic;font-size:10px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">screen
-height ∝ probability · boxes stream left across the crosshair</span></p>
-</div>
-<div style="display:flex;flex-wrap:wrap;gap:6px;flex-shrink:0">
-<button id="dasher-pause" style="background:#1a1a2e;border:1px solid #2a2a3e;color:#505080;padding:3px 10px;cursor:pointer;font-family:inherit;font-size:11px;border-radius:3px">
-Go
-</button>
-<button id="dasher-copy" style="background:#1a1a2e;border:1px solid #2a2a3e;color:#505080;padding:3px 10px;cursor:pointer;font-family:inherit;font-size:11px;border-radius:3px">
-Copy
-</button>
-<button id="dasher-reset" style="background:#1a1a2e;border:1px solid #2a2a3e;color:#505080;padding:3px 10px;cursor:pointer;font-family:inherit;font-size:11px;border-radius:3px">
-Reset
-</button>
-</div>
-</div>
-<div
-style="display:flex;align-items:center;gap:12px;padding:5px 14px;background:#0f0f1e;border-bottom:1px solid #1e1e32;min-height:34px">
-<div style="font-size:9px;color:#404068;flex-shrink:0">
-TYPED:
-</div>
-<div id="dasher-text"
-style="font-size:16px;color:#4ecdc4;letter-spacing:2px;flex:1;min-width:0;overflow:hidden;white-space:nowrap;text-align:right">
-▋
-</div>
-<div style="display:flex;flex-wrap:wrap;gap:6px;flex-shrink:0">
-<p><span
-style="background:#131320;border:1px solid #2a2a3e;border-radius:3px;padding:2px 7px;font-size:11px;color:#505080;white-space:nowrap">bits:
-<span id="dasher-bits" style="color:#ffd93d">0.0</span></span> <span
-style="background:#131320;border:1px solid #2a2a3e;border-radius:3px;padding:2px 7px;font-size:11px;color:#505080;white-space:nowrap">avg:
-<span id="dasher-avgbits" style="color:#ffd93d">—</span> b/ch</span>
-<span
-style="background:#131320;border:1px solid #2a2a3e;border-radius:3px;padding:2px 7px;font-size:11px;color:#505080;white-space:nowrap">H(next):
-<span id="dasher-entropy" style="color:#ffd93d">—</span></span></p>
-</div>
-</div>
-<div
-style="position:relative;width:min(100%,480px);height:480px;margin:0 auto;cursor:crosshair;overflow:hidden">
-<canvas id="dasher-canvas" width="480" height="480" data-dasher-lm="../scripts//dasher/dasher-lm.json" style="display:block;width:100%;height:100%">
-</canvas>
-</div>
-<div
-style="padding:5px 14px;background:#0f0f1e;border-top:1px solid #1e1e32;font-size:9px;color:#303055;text-align:center">
-<p><strong style="color:#4ecdc460">Click</strong> or
-<strong style="color:#4ecdc460">Space</strong> to Go/Pause ·
-<strong style="color:#4ecdc460">Copy</strong> extracts text · pointer
-right zooms · left zooms out · Backspace unwrites · Escape resets</p>
-</div>
-</div>
-<script src="../scripts//dasher/dasher.js?v=22"></script>
-</div>
-</div>
-<aside class="notes">
-Dasher: continuous-zoom arithmetic coding interface. Move the pointer
-right of centre — boxes enlarge and stream left across the crosshair.
-Character height is proportional to <span
-class="math inline">\(P(\texttt{char} | \texttt{context})\)</span>. Try
-“th”: after ‘t’ and ‘h’, ‘e’ swells to dominate the display.
-</aside>
-</section>
-<section id="the-partition-function" class="slide level2">
-<h2>The Partition Function</h2>
-</section>
-<section id="z-as-generating-function" class="slide level2">
-<h2><span class="math inline">\(Z\)</span> as Generating Function</h2>
-<p>The canonical ensemble from the bath: fix <span
-class="math inline">\(\beta\)</span> and let the small system
-fluctuate.</p>
-<div>
-<ul>
-<li class="fragment"><span class="math inline">\(Z(\beta) = \sum_i
-e^{-\beta E_i}\)</span></li>
-<li class="fragment"><span class="math inline">\(U = -\partial_\beta
-\log Z\)</span>, <span class="math inline">\(F = -\beta^{-1}\log
-Z\)</span>, <span class="math inline">\(S = \beta(U-F)\)</span></li>
-<li class="fragment">Equilibrium = on the <span
-class="math inline">\(\beta\)</span>-manifold; finite-time driving
-leaves it</li>
-</ul>
-</div>
-<aside class="notes">
-LO3. Work the two-state example on the board. Finite-time cost: named
-lecture 2, Crooks week 6.
-</aside>
-</section>
-<section id="section-4" class="slide level2">
-<h2></h2>
-<div class="figure">
-<div id="two-state-partition-figure" class="figure-frame">
-<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/two-state-partition.svg" width="75%" style=" ">
-</object>
-</div>
-</div>
-<aside class="notes">
-Thermodynamic quantities from <span
-class="math inline">\(Z(\beta)\)</span> for the two-state system used as
-a running example.
-</aside>
-</section>
-<section id="section-5" class="slide level2">
-<h2></h2>
-<div>
-<ul>
-<li class="fragment"><span class="math inline">\(U = -\partial_\beta
-\log Z\)</span></li>
-<li class="fragment"><span class="math inline">\(F = -\beta^{-1}\log
-Z\)</span></li>
-<li class="fragment">Bath justifies the canonical ensemble</li>
-</ul>
-</div>
-</section>
-<section id="discrete-shannon-entropy-is-bounded" class="slide level2">
-<h2>Discrete Shannon Entropy Is Bounded</h2>
-<p>Week 3 derived Shannon entropy for discrete <span
-class="math inline">\(p=(p_1,\ldots,p_n)\)</span>.</p>
-<div>
-<ul>
-<li class="fragment"><span class="math inline">\(0 \le H(p) \le \log
-n\)</span> on <span class="math inline">\(n\)</span> outcomes</li>
-<li class="fragment">Maximum at uniform; zero on a delta</li>
-<li class="fragment">Code interpretation: average length cannot beat
-<span class="math inline">\(H\)</span></li>
-</ul>
-</div>
-</section>
-<section id="kl-divergence" class="slide level2">
-<h2>KL Divergence</h2>
-<p>Comparing two distributions needs a functional that is always
-sensible.</p>
-<div>
-<ul>
-<li class="fragment"><span class="math inline">\(\text{KL}\left(
-p\,\|\,q \right) = \sum_i p_i \log(p_i/q_i)\)</span> discrete; <span
-class="math inline">\(\int p\log(p/q)\,dx\)</span> continuous</li>
-<li class="fragment">Always <span class="math inline">\(\text{KL}\left(
-p\,\|\,q \right) \ge 0\)</span>; zero iff <span class="math inline">\(p
-= q\)</span> (same support)</li>
-<li class="fragment">Extra surprise when <span
-class="math inline">\(q\)</span> stands in for <span
-class="math inline">\(p\)</span> — not a metric, but a directed
-cost</li>
-</ul>
-</div>
-<aside class="notes">
-LO8 setup. Use <span class="math inline">\(\text{KL}\left( p\,\|\,q
-\right)\)</span> throughout. Physics synonym: relative entropy. Board:
-<span class="math inline">\(\text{KL}\left( p\,\|\,q
-\right)\neq\text{KL}\left( q\,\|\,p \right)\)</span>. Jaynes die week 5
-minimised <span class="math inline">\(\text{KL}\left( p\,\|\,r
-\right)\)</span> without naming it. Week 7: <span
-class="math inline">\(m\)</span>-projection.
-</aside>
-</section>
-<section id="differential-entropy-is-a-different-object"
-class="slide level2">
-<h2>Differential Entropy Is a Different Object</h2>
-<p>Gaussian channel uses <span class="math inline">\(-\int p\log
-p\)</span> — differential entropy.</p>
-<div>
-<ul>
-<li class="fragment">Can be <em>negative</em>; not bounded below</li>
-<li class="fragment">Not a code-length bound — compare distributions
-with KL.</li>
-</ul>
-</div>
-</section>
-<section id="section-6" class="slide level2">
-<h2></h2>
-<div class="figure">
-<div id="entropy-bounded-vs-differential-figure" class="figure-frame">
-<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/entropy-bounded-vs-differential.svg" width="90%" style=" ">
-</object>
-</div>
-</div>
-<aside class="notes">
-Left: binary Shannon entropy is bounded. Right: Gaussian differential
-entropy can be negative.
-</aside>
-</section>
-<section id="maxwellboltzmann-components-versus-speed"
-class="slide level2">
-<h2>Maxwell–Boltzmann: Components Versus Speed</h2>
-<p>Each Cartesian velocity component is Gaussian. Speed <span
-class="math inline">\(v=|\mathbf{v}|\)</span> is not.</p>
-<div>
-<ul>
-<li class="fragment">Component: <span
-class="math inline">\(f(v_x)=\sqrt{m/(2\pi
-kT)}\,e^{-mv_x^2/2kT}\)</span></li>
-<li class="fragment">Speed: integrate the isotropic 3D Gaussian over
-angles</li>
-<li class="fragment">Jacobian <span class="math inline">\(d^3v =
-v^2\,dv\,d\Omega\)</span> supplies the <span
-class="math inline">\(v^2\)</span> factor</li>
-</ul>
-</div>
-<aside class="notes">
-Both statements are Maxwell–Boltzmann. The histogram of one component is
-Gaussian; the histogram of speed peaks away from zero. Board the
-spherical shell volume briefly.
-</aside>
-</section>
-<section id="same-physics-different-variable" class="slide level2">
-<h2>Same Physics, Different Variable</h2>
-<p><small> <span class="math display">\[
-f(v_x)=\sqrt{\tfrac{m}{2\pi kT}}\,e^{-mv_x^2/2kT}
-\qquad\text{versus}\qquad
-f(v)\propto v^2\,e^{-mv^2/2kT}
-\]</span> </small></p>
-<div>
-<ul>
-<li class="fragment">The <span class="math inline">\(v^2\)</span> is not
-an energy correction — it is geometry</li>
-<li class="fragment">Continuous entropy will shift under this map
-(next)</li>
-</ul>
-</div>
-</section>
-<section id="how-differential-entropy-transforms" class="slide level2">
-<h2>How Differential Entropy Transforms</h2>
-<p>Continuous entropy is not invariant under reparametrisation.</p>
-<p><small> <span class="math display">\[
-h(Y)=h(X)+\mathbb{E}\bigl[\ln|g&#39;(X)|\bigr]
-\]</span> </small></p>
-<div>
-<ul>
-<li class="fragment">Linear rescaling: <span
-class="math inline">\(h(aX)=h(X)+\ln|a|\)</span></li>
-<li class="fragment">Changing units (m/s <span
-class="math inline">\(\to\)</span> km/s) changes <span
-class="math inline">\(h\)</span></li>
-<li class="fragment"><span class="math inline">\(h\)</span> can be
-negative (narrow Gaussian) — not Shannon uncertainty</li>
-</ul>
-</div>
-<aside class="notes">
-Board the one-line derivation. Emphasise: <span
-class="math inline">\(\ln f\)</span> takes the log of a density with
-units, so something is missing. Week 5: MaxEnt ``Gaussian maximises
-entropy for fixed variance’’ is relative to the chosen coordinate.
-</aside>
-</section>
-<section id="maxwell-speed-versus-component" class="slide level2">
-<h2>Maxwell Speed Versus Component</h2>
-<p>The two Maxwell–Boltzmann entropies differ by the log-Jacobian of the
-speed map.</p>
-</section>
-<section id="discrete-entropy-from-binning" class="slide level2">
-<h2>Discrete Entropy from Binning</h2>
-<p>Discrete <span class="math inline">\(H\)</span> is well defined.
-Differential <span class="math inline">\(h\)</span> is what remains
-after subtracting <span class="math inline">\(\ln\Delta\)</span>.</p>
-<div>
-<ul>
-<li class="fragment">Bin <span class="math inline">\(X\)</span> with
-width <span class="math inline">\(\Delta\)</span>: <span
-class="math inline">\(p_i\approx f(x_i)\Delta\)</span></li>
-<li class="fragment"><span class="math inline">\(H(X^\Delta)\approx
-h(X)-\ln\Delta\)</span></li>
-<li class="fragment">As <span class="math inline">\(\Delta\to
-0\)</span>, discrete <span class="math inline">\(H\)</span> diverges;
-<span class="math inline">\(h\)</span> is the finite part</li>
-</ul>
-</div>
-<aside class="notes">
-Board <span class="math inline">\(p_i\approx f\Delta\)</span> for one
-bin. The <span class="math inline">\(-\ln\Delta\)</span> is the price of
-resolving more finely. Relabelling with <span
-class="math inline">\(y=g(x)\)</span> while keeping uniform bins in
-<span class="math inline">\(y\)</span> changes the partition in <span
-class="math inline">\(x\)</span>.
-</aside>
-</section>
-<section id="phase-space-needs-a-cell-size" class="slide level2">
-<h2>Phase Space Needs a Cell Size</h2>
-<p>Classical statistical mechanics faces the same issue: <span
-class="math inline">\(S\)</span> needs a cell volume in phase space.</p>
-<div>
-<ul>
-<li class="fragment">Cell size <span
-class="math inline">\(h^{3N}\)</span> makes dimensionless occupation
-numbers</li>
-<li class="fragment">Liouville: canonical maps have unit Jacobian —
-phase-space entropy is invariant under them</li>
-<li class="fragment">A generic change of variables is not canonical</li>
-</ul>
-</div>
-</section>
-<section id="kl-fixes-the-coordinate-dependence" class="slide level2">
-<h2>KL Fixes the Coordinate Dependence</h2>
-<p>KL divergence is invariant under invertible reparametrisation.
-Differential entropy is not.</p>
-<p><small> <span class="math display">\[
-\text{KL}\left( f_Y\,\|\,g_Y \right)=\text{KL}\left( f_X\,\|\,g_X
-\right)
-\]</span> </small></p>
-<div>
-<ul>
-<li class="fragment">Both densities transform by the same Jacobian — it
-cancels</li>
-<li class="fragment">Discrete KL converges; differential entropy does
-not</li>
-<li class="fragment">Mutual information is likewise
-reparametrisation-invariant</li>
-</ul>
-</div>
-</section>
-<section id="differential-entropy-is-kl-against-m" class="slide level2">
-<h2>Differential Entropy Is KL Against <span
-class="math inline">\(m\)</span></h2>
-<p>Ordinary <span class="math inline">\(h\)</span> hides a reference
-density <span class="math inline">\(m\)</span> — usually ``Lebesgue in
-the coordinate we chose’’.</p>
-<p><small> <span class="math display">\[
-h_m(f)=-\int f\ln\frac{f}{m}\,dx=-\text{KL}\left( f\,\|\,m \right)
-\]</span> </small></p>
-<div>
-<ul>
-<li class="fragment">Taking <span class="math inline">\(m\)</span>
-uniform in <span class="math inline">\(x\)</span> recovers ordinary
-<span class="math inline">\(h\)</span></li>
-<li class="fragment">Jaynes: limiting density of discrete points — the
-bin width promoted to a density</li>
-<li class="fragment">Change coordinates <span
-class="math inline">\(\Leftrightarrow\)</span> change the undeclared
-<span class="math inline">\(m\)</span></li>
-</ul>
-</div>
-<aside class="notes">
-This is the hinge for week 5 MaxEnt: maximising <span
-class="math inline">\(h\)</span> is maximising <span
-class="math inline">\(-\text{KL}\left( f\,\|\,m \right)\)</span> for a
-forgotten <span class="math inline">\(m\)</span>. Name Jaynes’ limiting
-density of discrete points; do not digress into measure theory.
-</aside>
-</section>
-<section id="local-equilibrium-as-grouping" class="slide level2">
-<h2>Local Equilibrium as Grouping</h2>
-<p>Equilibrium is the special case where within-group dynamics is
-fast.</p>
-<p><small> <span class="math display">\[
-S(t)=H\bigl(w(t)\bigr)+\sum_i w_i(t)\, H(\pi_i)
-\]</span> </small></p>
-<div>
-<ul>
-<li class="fragment">Groups <span class="math inline">\(=\)</span>
-macrostates; <span class="math inline">\(\pi_i=\)</span> conditional
-equilibrium inside group <span class="math inline">\(i\)</span></li>
-<li class="fragment">Timescale separation: <span
-class="math inline">\(p_i\)</span> relaxes quickly to <span
-class="math inline">\(\pi_i\)</span>; <span
-class="math inline">\(w_i(t)\)</span> evolves slowly</li>
-<li class="fragment">Thermodynamic entropy at fixed macrostate is the
-within-group term</li>
-</ul>
-</div>
-<aside class="notes">
-Answers ``equilibrium versus non-equilibrium? (first cut)’’ from the
-define list. Non-eq: either <span
-class="math inline">\(p_i\neq\pi_i\)</span> still relaxing, or <span
-class="math inline">\(w(t)\)</span> driven. No proof of Markov mixing.
-</aside>
-</section>
-<section id="stationary-occupation-revisited" class="slide level2">
-<h2>Stationary Occupation Revisited</h2>
-<p>Gibbs–Boltzmann <span class="math inline">\(p_i\propto e^{-\beta
-E_i}\)</span> is a assignment — not a path.</p>
-<div>
-<ul>
-<li class="fragment">MaxEnt / canonical ensemble fix <span
-class="math inline">\(\pi\)</span>, not <span
-class="math inline">\(\dot\pi\)</span></li>
-<li class="fragment">The die was the static analogue: one <span
-class="math inline">\(p\)</span>, no roll dynamics</li>
-<li class="fragment">Next week: a demon that sorts on group labels while
-assuming fast mixing inside</li>
-</ul>
-</div>
-<aside class="notes">
-Define-list item ``equilibrium versus non-equilibrium’’: local
-equilibrium is <span class="math inline">\(p_i\approx\pi_i\)</span> with
-<span class="math inline">\(w(t)\)</span> free; non-eq is residual
-within-group divergence or driven <span
-class="math inline">\(w\)</span>.
-</aside>
-</section>
-<section id="scaffolding-not-outcomes" class="slide level2">
-<h2>Scaffolding, Not Outcomes</h2>
-</section>
-<section id="chain-rule-mutual-information-capacity"
-class="slide level2">
-<h2>Chain Rule, Mutual Information, Capacity</h2>
-<p>Four results we will need later — stated, not proved today.</p>
-<div>
-<ul>
-<li class="fragment">Chain rule: <span class="math inline">\(H(X,Y) =
-H(X) + H(Y|X)\)</span></li>
-<li class="fragment">Mutual information: <span
-class="math inline">\(I(X;Y) = H(X)-H(X|Y) =
-H(X)+H(Y)-H(X,Y)\)</span></li>
-<li class="fragment">Capacity: no rate above <span
-class="math inline">\(C\)</span>; achieving <span
-class="math inline">\(C\)</span> requires the capacity-achieving <span
-class="math inline">\(p(x)\)</span></li>
-<li class="fragment">Data processing: if <span
-class="math inline">\(X\to Y\to Z\)</span> is Markov, <span
-class="math inline">\(I(X;Z)\le I(X;Y)\)</span></li>
-</ul>
-</div>
-<aside class="notes">
-Define <span class="math inline">\(I\)</span> from the chain rule. State
-DPI; do not prove. Proof and the information bottleneck are week 8
-(LO10). Capacity remains this week’s no-go/prescription pair.
-</aside>
-<div class="figure">
-<div id="bsc-capacity-figure" class="figure-frame">
-<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/bsc-capacity.svg" width="70%" style=" ">
-</object>
-</div>
-</div>
-<aside class="notes">
-Mutual information for a binary symmetric channel; capacity is achieved
-at uniform input.
-</aside>
-</section>
-<section id="section-7" class="slide level2">
-<h2></h2>
-<div>
-<ul>
-<li class="fragment">No-go: <span class="math inline">\(R \le
-C\)</span>; processing cannot create information</li>
-<li class="fragment">Prescription: the <span
-class="math inline">\(p(x)\)</span> that achieves <span
-class="math inline">\(C\)</span></li>
-<li class="fragment">Week 8: prove DPI; information bottleneck as the
-prescription on <span class="math inline">\(I\)</span></li>
-</ul>
-</div>
-</section>
-<section id="three-framings-first-pass" class="slide level2">
-<h2>Three Framings, First Pass</h2>
-<div>
-<ul>
-<li class="fragment">Same <span class="math inline">\(H\)</span>; three
-operational assumptions</li>
-<li class="fragment">Week 4: one bit <span
-class="math inline">\(\leftrightarrow\)</span> <span
-class="math inline">\(k_B T \ln 2\)</span> joules (Szilard,
-Landauer)</li>
-<li class="fragment">Full LO7 synthesis is also week 4</li>
-</ul>
-</div>
-<aside class="notes">
-Name the three framings today. Next week makes the bit operational in a
-piston stroke. Full LO7 synthesis is week 4.
-</aside>
-</section>
-<section id="thermodynamic-bath-and-schottkys-anomaly"
-class="slide level2">
-<h2>Thermodynamic Bath and Schottky’s Anomaly</h2>
-<!-- SNIPPET: _physics/includes/thermodynamic-bath-schottky.md -->
-<p>A thermodynamic bath is the large system that justifies the canonical
-ensemble: it fixes <span class="math inline">\(T\)</span> and exchanges
-energy with a small system.</p>
-<div>
-<ul>
-<li class="fragment">Two-state system: <span
-class="math inline">\(E\in\{0,\varepsilon\}\)</span></li>
-<li class="fragment">Heat capacity: <span class="math inline">\(C =
-\partial U/\partial T\)</span> peaks at intermediate <span
-class="math inline">\(T\)</span></li>
-<li class="fragment">Schottky’s anomaly: both states populated; maximal
-thermal response</li>
-</ul>
-</div>
-<aside class="notes">
-Name the Schottky peak. Entropic reading waits for week 8.
-</aside>
-</section>
-<section id="section-8" class="slide level2">
-<h2></h2>
-<div class="figure">
-<div id="schottky-two-state-figure" class="figure-frame">
-<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/schottky-two-state.svg" width="85%" style=" ">
-</object>
-</div>
-</div>
-<aside class="notes">
-Mean energy and heat capacity of a two-state system. The Schottky peak
-appears when <span class="math inline">\(p_0\approx
-p_1\approx\frac12\)</span>.
-</aside>
-<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/schottky-two-state.svg" width="85%" style=" ">
-</object>
-<!-- /SNIPPET: _physics/includes/thermodynamic-bath-schottky.md -->
-<div>
-<ul>
-<li class="fragment">Bath: why the canonical ensemble exists</li>
-<li class="fragment">Two-state system: Schottky peak in heat
-capacity</li>
-<li class="fragment">Entropic reading of Schottky: not today</li>
-</ul>
-</div>
-</section>
-<section id="finite-time-costs-more-than-delta-f" class="slide level2">
-<h2>Finite Time Costs More Than <span class="math inline">\(\Delta
-F\)</span></h2>
-<!-- SNIPPET: _physics/includes/finite-time-dissipation-intro.md -->
-</section>
-<section id="quasi-static-versus-finite-time" class="slide level2">
-<h2>Quasi-Static versus Finite Time</h2>
-<p>Equilibrium thermodynamics gives a prescription for
-<em>reversible</em> work. Real protocols take time.</p>
-<aside class="notes">
-Do not define thermodynamic length today. Name quasi-static <span
-class="math inline">\(W=\Delta F\)</span> versus finite-time excess. Tie
-to the die: today <span class="math inline">\(w\)</span> was fixed;
-finite time moves <span class="math inline">\(w(t)\)</span> while hoping
-groups stay near <span class="math inline">\(\pi_i\)</span>. Crooks in
-weeks 6–7; intelligence in week 8.
-</aside>
-</section>
-<section id="section-9" class="slide level2">
-<h2></h2>
-<div class="figure">
-<div id="finite-time-sketch-figure" class="figure-frame">
-<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/finite-time-sketch.svg" width="70%" style=" ">
-</object>
-</div>
-</div>
-<aside class="notes">
-Cartoon of quasi-static versus finite-time driving between two
-equilibrium states.
+If the heat thread ran long, this is the close: one weighing example, then stop. Shannon axioms are parked in Week 4, not in these slides.
 </aside>
 </section>
 <section id="define-this-week" class="slide level2">
 <h2>Define This Week</h2>
 <div>
 <ul>
-<li class="fragment">Die coarse-graining / grouping: <span
-class="math inline">\(H=H(w)+\sum_i w_i H(p_i)\)</span></li>
-<li class="fragment">What is the Gibbs–Boltzmann distribution? Free
-energy <span class="math inline">\(F=U-TS\)</span></li>
-<li class="fragment">Loss as potential <span
-class="math inline">\(V\)</span>; Hamiltonian <span
-class="math inline">\(H=K+V\)</span>; HMC (named)</li>
-<li class="fragment">Why is entropy a sensible measure of
-information?</li>
-<li class="fragment">Equilibrium versus non-equilibrium? (first
-cut)</li>
-<li class="fragment">What is a thermodynamic bath? Schottky’s
-anomaly?</li>
-<li class="fragment">Quasi-static <span class="math inline">\(W=\Delta
-F\)</span> versus finite-time excess (named)</li>
+<li class="fragment">Heat thread: Black <span class="math inline">\(\to\)</span> Carnot <span class="math inline">\(\to\)</span> Rumford <span class="math inline">\(\to\)</span> Kelvin <span class="math inline">\(\to\)</span> Joule <span class="math inline">\(\to\)</span> Clausius <span class="math inline">\(\to\)</span> Kelvin</li>
+<li class="fragment">Maxwell–Boltzmann; Gibbs; derive <span class="math inline">\(F=U-TS\)</span> from <span class="math inline">\(U=\left\langle E\right\rangle\)</span>; Gaussian <span class="math inline">\(E=x^2/2\)</span></li>
+<li class="fragment">Entropy game / MacKay / die grouping: <span class="math inline">\(H=H(w)+\sum_i w_i H(p_i)\)</span></li>
 </ul>
 </div>
 </section>
@@ -2324,128 +1600,65 @@ F\)</span> versus finite-time excess (named)</li>
 <div>
 <ul>
 <li class="fragment">Next: Maxwell and Landauer (3 November)</li>
-<li class="fragment">Worksheet 2: <span class="math inline">\(H\)</span>
-vs <span class="math inline">\(S\)</span> — identity or metaphor?</li>
+<li class="fragment">Worksheet 2: <span class="math inline">\(H\)</span> vs <span class="math inline">\(S\)</span> — identity or metaphor?</li>
 </ul>
 </div>
 </section>
 <section id="further-reading" class="slide level2 scrollable">
 <h2 class="scrollable">Further Reading</h2>
 <ul>
-<li><p>Exercise 4.1 and the discussion on pp.~69–70 of
-MacKay-information03</p></li>
-<li><p>Boltzmann machines (optional colour) of <span class="citation"
-data-cites="Ackley-boltzmann85">Ackley et al. (1985)</span></p></li>
-<li><p>Hopfield networks (optional colour) of <span class="citation"
-data-cites="Hopfield:neural82">Hopfield (1982)</span></p></li>
-<li><p>Section 3.2.1 of <span class="citation"
-data-cites="Welling-generative26">Welling et al. (2026)</span></p></li>
-<li><p>Section 11.4.2 of <span class="citation"
-data-cites="Welling-generative26">Welling et al. (2026)</span></p></li>
-<li><p>Hybrid Monte Carlo for backpropagation networks of <span
-class="citation" data-cites="Neal:hmc92">Neal (1992)</span></p></li>
-<li><p>Bayesian Learning for Neural Networks (thesis) of <span
-class="citation" data-cites="Neal:bayesian94">Neal
-(1994)</span></p></li>
-<li><p>Why Stochastic Thermodynamics of Machine Learning? of <span
-class="citation" data-cites="Welling-generative26">Welling et al.
-(2026)</span></p></li>
-<li><p>Chapter 3 of <span class="citation"
-data-cites="Welling-generative26">Welling et al. (2026)</span></p></li>
-<li><p>Chapters 1–4 of <span class="citation"
-data-cites="Callen-thermostatistics85">Callen (1985)</span></p></li>
-<li><p>Chapters 5–6 of <span class="citation"
-data-cites="Callen-thermostatistics85">Callen (1985)</span></p></li>
-<li><p>Sections 1–6 of <span class="citation"
-data-cites="Shannon-mathematical48">Shannon (1948)</span></p></li>
-<li><p>Chapters 1–4; Chapter 6 of <span class="citation"
-data-cites="MacKay-information03">MacKay (2003)</span></p></li>
-<li><p>Chapter 2 of <span class="citation"
-data-cites="Cover:elements91">Cover and Thomas (1991)</span></p></li>
-<li><p>Sections 1.2.3–1.2.4 and 3.2.4 of <span class="citation"
-data-cites="Welling-generative26">Welling et al. (2026)</span></p></li>
-<li><p>Chapter 16 of <span class="citation"
-data-cites="Callen-thermostatistics85">Callen (1985)</span></p></li>
-<li><p>Chapter 7 of <span class="citation"
-data-cites="Cover:elements91">Cover and Thomas (1991)</span></p></li>
-<li><p>Chapters 8–10 of <span class="citation"
-data-cites="MacKay-information03">MacKay (2003)</span></p></li>
+<li><p>The mill analogy: motive power of heat compared to a waterfall of <span class="citation" data-cites="Carnot-reflexions24">Carnot (1824)</span></p></li>
+<li><p>The 1848 absolute scale: equal mill-degrees, ice still zero; <span class="math inline">\(-273^\circ\)</span> is the air thermometer, not his bottom of <span class="citation" data-cites="Thomson-absolute48">Thomson (1848)</span></p></li>
+<li><p>The 1850 paper: two laws, Carnot’s limit without conserved heat of <span class="citation" data-cites="Clausius-motive50">Clausius (1850)</span></p></li>
+<li><p>The 1865 memoir: <span class="math inline">\(\mathrm{d}S = \mathrm{d}Q_{\mathrm{rev}}/T\)</span>, and the name entropy of <span class="citation" data-cites="Clausius-entropy65">Clausius (1865)</span></p></li>
+<li><p>The 1851 dynamical theory: Joule accepted; <span class="math inline">\(Q_h/T_h=Q_c/T_c\)</span>; the scale now has a bottom of <span class="citation" data-cites="Thomson-dynamical51">Thomson (1851)</span></p></li>
+<li><p>Boltzmann machines (optional colour) of <span class="citation" data-cites="Ackley-boltzmann85">Ackley et al. (1985)</span></p></li>
+<li><p>Hopfield networks (optional colour) of <span class="citation" data-cites="Hopfield:neural82">Hopfield (1982)</span></p></li>
+<li><p>Exercise 4.1 and the discussion on pp.~69–70 of MacKay-information03</p></li>
+<li><p>Chapters 1–4 of <span class="citation" data-cites="Callen-thermostatistics85">Callen (1985)</span></p></li>
+<li><p>Chapters 5–6 of <span class="citation" data-cites="Callen-thermostatistics85">Callen (1985)</span></p></li>
 </ul>
 </section>
 <section id="thanks" class="slide level2 scrollable">
 <h2 class="scrollable">Thanks!</h2>
 <ul>
 <li>company: <a href="https://trent.ai">Trent AI</a></li>
-<li>book: <a
-href="https://www.penguin.co.uk/books/455130/the-atomic-human-by-lawrence-neil-d/9780241625248">The
-Atomic Human</a></li>
+<li>book: <a href="https://www.penguin.co.uk/books/455130/the-atomic-human-by-lawrence-neil-d/9780241625248">The Atomic Human</a></li>
 <li>twitter: <a href="https://twitter.com/lawrennd">@lawrennd</a></li>
-<li><a href="https://the-atomic-human.ai">The Atomic Human</a>
-pages</li>
+<li><a href="https://the-atomic-human.ai">The Atomic Human</a></li>
+<li>newspaper: <a href="http://www.theguardian.com/profile/neil-lawrence">Guardian Profile Page</a></li>
+<li>blog: <a href="http://inverseprobability.com/blog.html">http://inverseprobability.com</a></li>
 </ul>
-<p>, . * newspaper: <a
-href="http://www.theguardian.com/profile/neil-lawrence">Guardian Profile
-Page</a> * blog: <a
-href="http://inverseprobability.com/blog.html">http://inverseprobability.com</a></p>
 </section>
 <section id="references" class="slide level2 unnumbered scrollable">
 <h2 class="unnumbered scrollable">References</h2>
-<div id="refs" class="references csl-bib-body hanging-indent"
-role="list">
-<div id="ref-Ackley-boltzmann85" class="csl-entry" role="listitem">
-Ackley, D., Hinton, G.E., Sejnowski, T.J., 1985. A learning algorithm
-for <span>B</span>oltzmann machines. Cognitive Science 9, 147–169.
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-Ackley-boltzmann85" class="csl-entry" role="doc-biblioentry">
+Ackley, D., Hinton, G.E., Sejnowski, T.J., 1985. A learning algorithm for <span>B</span>oltzmann machines. Cognitive Science 9, 147–169.
 </div>
-<div id="ref-Callen-thermostatistics85" class="csl-entry"
-role="listitem">
-Callen, H.B., 1985. Thermodynamics and an introduction to
-thermostatistics, 2nd ed. Wiley, New York.
+<div id="ref-Callen-thermostatistics85" class="csl-entry" role="doc-biblioentry">
+Callen, H.B., 1985. Thermodynamics and an introduction to thermostatistics, 2nd ed. Wiley, New York.
 </div>
-<div id="ref-Coales-yellow14" class="csl-entry" role="listitem">
-Coales, J.F., Kane, S.J., 2014. The <span>“yellow peril”</span> and
-after. IEEE Control Systems Magazine 34, 65–69. <a
-href="https://doi.org/10.1109/MCS.2013.2287387">https://doi.org/10.1109/MCS.2013.2287387</a>
+<div id="ref-Carnot-reflexions24" class="csl-entry" role="doc-biblioentry">
+Carnot, S., 1824. R<span>é</span>flexions sur la puissance motrice du feu et sur les machines propres <span class="nocase">à</span> d<span>é</span>velopper cette puissance. Bachelier, Paris.
 </div>
-<div id="ref-Cover:elements91" class="csl-entry" role="listitem">
-Cover, T.M., Thomas, J.A., 1991. Elements of information theory. Wiley,
-New York.
+<div id="ref-Clausius-entropy65" class="csl-entry" role="doc-biblioentry">
+Clausius, R., 1865. Ueber verschiedene f<span>ü</span>r die anwendung bequeme formen der hauptgleichungen der mechanischen w<span>ä</span>rmetheorie. Annalen der Physik 125, 353–400.
 </div>
-<div id="ref-Einstein-brownian05" class="csl-entry" role="listitem">
-Einstein, A., 1905. Über die von der molekularkinetischen
-<span>T</span>heorie der <span>W</span>ärme geforderte
-<span>B</span>ewegung von in ruhenden <span>F</span>lüssigkeiten
-suspendierten <span>T</span>eilchen. Annalen der Physik 322, 549–560. <a
-href="https://doi.org/10.1002/andp.19053220806">https://doi.org/10.1002/andp.19053220806</a>
+<div id="ref-Clausius-motive50" class="csl-entry" role="doc-biblioentry">
+Clausius, R., 1850. Ueber die bewegende kraft der w<span>ä</span>rme und die gesetze, welche sich daraus f<span>ü</span>r die w<span>ä</span>rmelehre selbst ableiten lassen. Annalen der Physik 79, 368–397, 500–524.
 </div>
-<div id="ref-Hopfield:neural82" class="csl-entry" role="listitem">
-Hopfield, J.J., 1982. Neural networks and physical systems with emergent
-collective computational abilities. Proceedings of the National Academy
-of Sciences 79, 2554–2558.
+<div id="ref-Hopfield:neural82" class="csl-entry" role="doc-biblioentry">
+Hopfield, J.J., 1982. Neural networks and physical systems with emergent collective computational abilities. Proceedings of the National Academy of Sciences 79, 2554–2558.
 </div>
-<div id="ref-MacKay-information03" class="csl-entry" role="listitem">
-MacKay, D.J.C., 2003. Information theory, inference and learning
-algorithms. Cambridge University Press, Cambridge, U.K.
+<div id="ref-MacKay-information03" class="csl-entry" role="doc-biblioentry">
+MacKay, D.J.C., 2003. Information theory, inference and learning algorithms. Cambridge University Press, Cambridge, U.K.
 </div>
-<div id="ref-Neal:bayesian94" class="csl-entry" role="listitem">
-Neal, R.M., 1994. Bayesian learning for neural networks (PhD thesis).
-Dept. of Computer Science, University of Toronto.
+<div id="ref-Thomson-dynamical51" class="csl-entry" role="doc-biblioentry">
+Thomson, W., 1851. On the dynamical theory of heat, with numerical results deduced from mr joule’s equivalent of a thermal unit, and m. Regnault’s observations on steam. Transactions of the Royal Society of Edinburgh 20, 261–288.
 </div>
-<div id="ref-Neal:hmc92" class="csl-entry" role="listitem">
-Neal, R.M., 1992. <span>B</span>ayesian training of backpropagation
-networks by the hybrid <span>M</span>onte <span>C</span>arlo method (No.
-CRG-TR-92-1). Department of Computer Science, University of Toronto,
-Canada.
-</div>
-<div id="ref-Shannon-mathematical48" class="csl-entry" role="listitem">
-Shannon, C.E., 1948. A mathematical theory of communication. The Bell
-System Technical Journal 27, 379–423. <a
-href="https://doi.org/10.1002/j.1538-7305">https://doi.org/10.1002/j.1538-7305</a>
-</div>
-<div id="ref-Welling-generative26" class="csl-entry" role="listitem">
-Welling, M., Lu, S., Holdijk, L., 2026. <a
-href="https://www.cambridge.org/core/books/generative-ai-and-stochastic-thermodynamics/A462AB4186719C2D4EBCC1F58A5D5764">Generative
-AI and stochastic thermodynamics: A tale of free energies</a>. Cambridge
-University Press, Cambridge, U.K.
+<div id="ref-Thomson-absolute48" class="csl-entry" role="doc-biblioentry">
+Thomson, W., 1848. On an absolute thermometric scale founded on carnot’s theory of the motive power of heat, and calculated from regnault’s observations. Proceedings of the Cambridge Philosophical Society 1, 66–71.
 </div>
 </div>
 </section>
@@ -2460,39 +1673,10 @@ University Press, Cambridge, U.K.
       // Full list of configuration options available at:
       // https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
-        // Display controls in the bottom right corner
-        controls: true,
-        // Display a presentation progress bar
-        progress: true,
         // Push each slide change to the browser history
         history: true,
-        // Enable keyboard shortcuts for navigation
-        keyboard: true,
-        // Enable the slide overview mode
-        overview: true,
-        // Vertical centering of slides
-        center: true,
-        // Enables touch navigation on devices with touch input
-        touch: true,
-        // Turns fragments on and off globally
-        fragments: true,
-        // Flags if we should show a help overlay when the questionmark
-        // key is pressed
-        help: true,
-        // Number of milliseconds between automatically proceeding to the
-        // next slide, disabled when set to 0, this value can be overwritten
-        // by using a data-autoslide attribute on your slides
-        autoSlide: 0,
-        // Stop auto-sliding after user input
-        autoSlideStoppable: true,
         // Transition style
         transition: 'None', // none/fade/slide/convex/concave/zoom
-        // Transition speed
-        transitionSpeed: 'default', // default/fast/slow
-        // Transition style for full page slide backgrounds
-        backgroundTransition: 'fade', // none/fade/slide/convex/concave/zoom
-        // Number of slides away from the current that are visible
-        viewDistance: 3,
         math: {
           mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js',
           config: 'TeX-AMS_HTML-full',

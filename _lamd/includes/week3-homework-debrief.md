@@ -113,7 +113,7 @@
 
 \notes{This was the probe I kept writing in the comments. If Shannon's $H$ is ``entropy as uncertainty,'' someone in physics must already have treated entropy that way, or Shannon (and Wiener) did it independently. It is not in Clausius. It *is* in the Boltzmann--Gibbs statistical reading, and Wiener is explicit that his information comes from a Gibbsian theory of ignorance. Whether Wiener and Shannon had that conversation before 1948 is a historical question the models will fluently invent. Primary sources still beat the fluency: Shannon footnotes Tolman; he credits Wiener in another footnote; the von Neumann cocktail party is later folklore. Worksheet 2 asks a sharper version of the same issue: once the *name* is granted, is $H$ the same mathematical object as $S$, or a metaphor?}
 
-\speakernotes{This slide is the hinge into Shannon later in the hour. Do not derive $H$ here. Plant the question.}
+\speakernotes{This slide is the hinge. Do not derive $H$ here. Later in the hour we go back to heat, starting with Joseph Black, to see what Clausius *was* solving.}
 
 \newslide{Worksheet 2 Is Already Out}
 

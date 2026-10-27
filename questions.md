@@ -61,20 +61,13 @@ Quiz 1 occupies the first ten minutes (probability and Week 1 energy seeds). The
 
 ## Lecture 3 — 27 October — Free Energy and Shannon Entropy
 
-Week 2 carry-over first (die / MacKay / Gibbs / $F$ / HMC), then Shannon $H$, Dasher, $Z$, KL / differential entropy, then bath / Schottky / finite time.
+Heat thread first (Black, Carnot, Rumford, Kelvin, Joule, Clausius, Kelvin, Maxwell--Boltzmann, Gibbs, Helmholtz), then entropy game / MacKay / grouping. Shannon $H$, Dasher, $Z$, KL, Schottky and finite time are parked at the end of Week 4 and need sorting.
 
 **Define this week**
 
-- Die coarse-graining / grouping: $H=H(w)+\sum_i w_i H(p_i)$
+- Heat thread: Black $\to$ Helmholtz; $F=U-TS$ from $U=\langle E\rangle$
 - What is the Gibbs--Boltzmann distribution (canonical ensemble)?
-- How do internal energy, entropy, and Helmholtz free energy enter $p_i$?
-- Loss as potential $V$; Hamiltonian $H=K+V$; HMC (named)
-- Why is entropy a sensible measure of information?
-- What is the chain rule of entropy?
-- What is the difference between equilibrium and non-equilibrium thermodynamics? (first cut)
-- What is a thermodynamic bath?
-- What is Schottky's anomaly?
-- Quasi-static $W=\Delta F$ versus finite-time excess (named)
+- Die coarse-graining / grouping: $H=H(w)+\sum_i w_i H(p_i)$
 
 **Named, not yet answered**
 
@@ -86,6 +79,8 @@ Week 2 carry-over first (die / MacKay / Gibbs / $F$ / HMC), then Shannon $H$, Da
 - Purely entropic Schottky reading (Week 8); thermodynamic length (Week 6)
 
 ## Lecture 4 — 3 November — Maxwell and Landauer
+
+Week 3 overflow is parked at the end of `_lamd/maxwell-landauer.md` and needs sorting before this session (Shannon axioms, HMC, $Z$, KL, Schottky, finite time). Not in the live clock.
 
 **Define this week**
 

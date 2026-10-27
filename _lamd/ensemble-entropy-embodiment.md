@@ -12,9 +12,8 @@ abstract: >
   state Bernoulli's kinetic assumptions, and introduce the statistical ensemble
   as coarse-graining. Then *Hydrodynamica*, the entropy bridge (no-go versus
   prescription; common distributions; continuous / relative entropy named), and
-  embodiment as bandwidth (*The Atomic Human*). As delivered we stop there:
-  information game / MacKay / die coarse-graining, Gibbs--Boltzmann, free energy,
-  and HMC open Week 3.
+  embodiment as bandwidth (*The Atomic Human*). As delivered we stop there.
+  Week 3 is the heat thread through Helmholtz, then MacKay / grouping.
 author:
 - given: Neil D.
   family: Lawrence
@@ -48,7 +47,7 @@ reading:
     required: false
 ---
 
-\notes{Worksheet 1 is due at the start of this session. The slot is 10:05--11:55 (110 minutes, not 120). Quiz 1 occupies the first ten minutes from 10:05. After the quiz: Laplace's molecule, Bernoulli / *Hydrodynamica*, ensemble as coarse-graining. Entropy bridge (distributions; continuous entropy and relative entropy / KL named) sat after the break; embodiment (*Atomic Human*) was the last ten minutes. As delivered we stop at embodiment --- overrun to 12:00. Week 3 opens with the unfinished Week 2 queue: info game / MacKay / die coarse-graining, then Gibbs--Boltzmann, $F=U-TS$, and HMC, before Shannon axioms. Do not derive the occupation from MaxEnt today --- that is week 5.}
+\notes{Worksheet 1 is due at the start of this session. The slot is 10:05--11:55 (110 minutes, not 120). Quiz 1 occupies the first ten minutes from 10:05. After the quiz: Laplace's molecule, Bernoulli / *Hydrodynamica*, ensemble as coarse-graining. Entropy bridge (distributions; continuous entropy and relative entropy / KL named) sat after the break; embodiment (*Atomic Human*) was the last ten minutes. As delivered we stop at embodiment --- overrun to 12:00. Week 3 is the heat thread (Black through Helmholtz), then the unfinished info game / MacKay / die coarse-graining. Do not derive the occupation from MaxEnt today --- that is week 5.}
 
 \machinereviewlink
 
@@ -59,7 +58,7 @@ reading:
 * Laplace's molecule → Bernoulli assumptions → ensemble as coarse-graining
 * Hydrodynamica / entropy bridge (distributions; continuous / relative entropy named)
 * Embodiment / bits as bandwidth (Atomic Human) --- stop
-* Next week: die / MacKay → Gibbs / $F$ → HMC → Shannon
+* Next week: Black → Helmholtz, then MacKay / grouping
 }
 
 \notes{
@@ -110,12 +109,12 @@ reading:
 
 \newslide{As Delivered --- Stop}
 
-\slides{We stop at embodiment. Week 3 opens with the unfinished queue.}
+\slides{We stop at embodiment. Week 3 is the heat thread, then MacKay.}
 
 \slidesincremental{
-* Next: info game / MacKay / die coarse-graining
-* Then: Gibbs--Boltzmann, $F=U-TS$, HMC
-* Then: Shannon axioms, $Z$, Schottky
+* Next: Black, Carnot, Rumford, Kelvin, Joule, Clausius, Kelvin
+* Then: Maxwell--Boltzmann, Gibbs, Helmholtz $F=U-TS$
+* After that story: entropy game / MacKay / grouping
 }
 
 \speakernotes{Honest close after overrun. Do not start the die board today.}
@@ -134,10 +133,10 @@ reading:
 
 \subsection{After This Lecture}
 
-\notes{Next week is crowded: Week 2 carry-over (die / MacKay / Gibbs / $F$ / HMC), then Shannon $H$, $Z$, KL formally, bath / Schottky / finite time. Optional LLM probe: is free energy a constraint or a recipe? (after $F$ is taught).}
+\notes{Next week is the heat thread through Helmholtz, then MacKay / grouping. Shannon $H$, $Z$, KL, bath / Schottky are parked in Week 4 for sorting. Optional LLM probe: is free energy a constraint or a recipe? (after $F$ is taught).}
 
 \slidesincremental{
-* Next: finish Week 2 queue, then Shannon / Schottky
+* Next: heat thread through Helmholtz, then MacKay
 * LLM probe (after $F$): is free energy a bound or a recipe?
 }
 
