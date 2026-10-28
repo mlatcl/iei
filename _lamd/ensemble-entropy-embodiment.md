@@ -119,6 +119,8 @@ reading:
 
 \speakernotes{Honest close after overrun. Do not start the die board today.}
 
+\notes{As promised on 20 October, Week 3 was to take MacKay after the heat thread. As taught on 27 October the heat thread filled the slot. The information game, MacKay and grouping now open Week 4 after Quiz 2.}
+
 \subsection{Define This Week}
 
 \slidesincremental{

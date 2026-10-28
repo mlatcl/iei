@@ -10,7 +10,7 @@ outcomes:
     text: "Students will be able to derive Shannon entropy as a measure of uncertainty and prove its formal equivalence to thermodynamic (Gibbs) entropy in equilibrium statistical mechanics."
     bloom_level: apply
     week: 3
-    notes: "Shannon H = -Σ p_i log p_i; Boltzmann S = k H. H bounds what a code cannot do; p is the code or the belief. Channel capacity (R ≤ C) and the capacity-achieving input are this week's pair, taught as scaffolding. Mutual information I(X;Y)=H(X)−H(X|Y) is defined from the chain rule. The data-processing inequality is stated, not proved; proof and the information bottleneck wait for week 8 (LO10)."
+    notes: "Shannon H = -Σ p_i log p_i; Boltzmann S = k H. H bounds what a code cannot do; p is the code or the belief. The information game, MacKay's balance, and die grouping $H=H(w)+∑ w_i H(p_i)$ were named in week 3 and are taught at the start of week 4 as the setup for Maxwell's demon. Channel capacity (R ≤ C) remains scaffolding; the data-processing inequality is stated, not proved; proof and the information bottleneck wait for week 8 (LO10)."
 
   - id: LO3
     text: "Students will be able to derive the canonical ensemble and use the partition function to compute mean energy, entropy, and free energy for simple systems."
@@ -134,8 +134,8 @@ Eight Tuesdays, 13 October – 1 December 2026, 10:00–12:00, FW26, William Gat
 |------|------|-------|----------|---------|
 | 1 | 13 Oct | Theme; perpetual motion; *Atomic Human* bandwidth; probability review; energy / Boltzmann seed; entropy review | LO1 (seed) | W1 released |
 | 2 | 20 Oct | Gibbs--Boltzmann form; free energy $F=U-TS$; HMC; Schottky | LO1 | Q1 (10 min); W1 due |
-| 3 | 27 Oct | Shannon entropy; partition function; chain rule; $I$ and DPI (statement) | LO2, LO3 | |
-| 4 | 3 Nov | Maxwell's demon; Landauer; intelligence (first cut) | LO4 | W2 released |
+| 3 | 27 Oct | Heat thread; Helmholtz $F=U-TS$. Game / MacKay named, not reached | LO1, LO2, LO3 | |
+| 4 | 3 Nov | Quiz 2; information game / MacKay / grouping; heat and the box; demon as punchline; Landauer | LO2, LO4 | Q2 (10 min); W2 due; W3 released |
 | 5 | 10 Nov | MaxEnt; exponential family; three-perspective synthesis | LO5, LO6, LO7 | Q2 (10 min); W2 due |
 | 6 | 17 Nov | Fisher metric; thermodynamic length defined (Crooks) | LO8 | W3 released |
 | 7 | 24 Nov | MaxEnt as projection; natural gradient; geodesics | LO9 | Q3 (10 min); W3 due; W4 released |

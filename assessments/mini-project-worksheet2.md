@@ -19,7 +19,7 @@ workload_hours: 3
 authentication:
   mechanism: mixed
   ai_robust: true
-  ai_robust_rationale: "Students must pose curiosity and skepticism prompts as Socrates in exactly ten turns from one continuous conversation with a single LLM (model name and version declared); planning may use any tools, but only the final exchange is submitted. The reflection is handwritten on a scanned proforma. Related material is checked later under invigilated Quiz 2 (Week 5)."
+  ai_robust_rationale: "Students must pose curiosity and skepticism prompts as Socrates in exactly ten turns from one continuous conversation with a single LLM (model name and version declared); planning may use any tools, but only the final exchange is submitted. The reflection is handwritten on a scanned proforma. Related material is checked under invigilated Quiz 2 (Week 4)."
 ---
 
 # Worksheet 2: Socratic Dialogue on Shannon H and Boltzmann S

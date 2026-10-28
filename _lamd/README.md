@@ -7,6 +7,7 @@ This directory contains the source files for your course lectures and practicals
 - `_lamd.yml` - Configuration file for LaMD processing
 - `lectures.csv` - Lecture stubs compiled by `./compile.sh`
 - `worksheets.csv` - Worksheet (`*-practical.md`) stubs compiled by `./compile.sh`
+- `parking.md` - Overflow holding bay (not a week; do not add to `lectures.csv`)
 - `*.md` - Lecture source files in LaMD format
 - `*-practical.md` - Worksheets (compile with `maketalk`; layout: practical)
 
@@ -45,6 +46,14 @@ Lectures use a descriptive slug. The week number is in frontmatter; `maketalk` p
 - `free-energy-shannon-entropy.md` — `week: 3`
 
 There is one session per week, so do not set a `session` field.
+
+## Parking lot
+
+`parking.md` holds leftover slides when a live lecture overruns. It is not a
+week, not in the 16h contact total, and not presented until an item is moved
+into a live `_lamd/*.md` file. Record each leftover in the `parked:` frontmatter
+list. Compile with `maketalk parking.md` only to review overflow. Do not add
+`parking` to `lectures.csv`.
 
 Practicals and worksheets should include `-practical` in the name so they are not treated as lectures:
 
