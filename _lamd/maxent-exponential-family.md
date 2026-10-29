@@ -19,10 +19,7 @@ author:
 outcomes: [LO5, LO6, LO7]
 duration_hours: 2
 type: lecture
-in_class_test:
-  id: Q2
-  duration_minutes: 10
-  timing: start
+in_class_test: null
 reading:
   - title: "Information Theory and Statistical Mechanics"
     author: "Jaynes"
@@ -47,12 +44,11 @@ reading:
     required: false
 ---
 
-\notes{Quiz 2 occupies the first ten minutes (MaxEnt, exponential family, Landauer). Worksheet 2 was due last week (start of lecture 4).}
+\notes{No class test today. Quiz 2 was last week (start of lecture 4). Worksheet 2 was due last week.}
 
 \subsection{This Session}
 
 \slidesincremental{
-* Quiz 2 (ten minutes)
 * Laplace: insufficient reason $\to$ rule of succession
 * MaxEnt with Lagrange multipliers
 * Exponential family as the MaxEnt family
@@ -65,26 +61,13 @@ reading:
 
 | Minutes | Block |
 |--------:|-------|
-| 0–10 | Quiz 2 (Moodle) |
-| 10–55 | Laplace $\to$ Jaynes; Lagrange; die and Gaussian |
+| 0–55 | Laplace $\to$ Jaynes; Lagrange; die and Gaussian |
 | 55–65 | Break |
 | 65–85 | MaxEnt proof $\to$ exponential family; $\theta=-\lambda$ |
 | 85–100 | Examples: Bernoulli, softmax, two-spin |
 | 100–110 | Legendre transform: $F=U-TS$ again; $H=A-\theta\cdot\eta$ |
 | 110–120 | LO7 synthesis; “how is entropy understood today?” |
 }
-
-\subsection{Quiz 2}
-
-\notes{Invigilated Moodle, own device, no notes, no network, no LLMs. Ten questions on MaxEnt, the exponential family, and Landauer — on a four-sided spinner and a Bernoulli, not the Worksheet 2 examples.}
-
-\slidesincremental{
-* Device required; Moodle open
-* No notes, no network, no LLMs
-* Ten minutes
-}
-
-\classtimer{10:00}
 
 \include{_iei/includes/iei-notebook-setup.md}
 
@@ -330,10 +313,10 @@ def perspective_table(H_value, p_maxent, p_uniform):
 
 \subsection{After This Lecture}
 
-\notes{Quiz 2 opens this session (10 November): MaxEnt, exponential family, Landauer, on a four-sided spinner and a Bernoulli — not the Worksheet 2 examples.}
+\notes{No class test today. Quiz 3 is 24 November at the start of lecture 7.}
 
 \slidesincremental{
-* Quiz 2: 10 November, first ten minutes
+* Quiz 3: 24 November, first ten minutes
 }
 
 \reading

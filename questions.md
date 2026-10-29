@@ -52,7 +52,7 @@ Quiz 1 occupies the first ten minutes (probability and Week 1 energy seeds). The
 **Named, not yet answered**
 
 - How is entropy understood today?
-- Die coarse-graining / grouping (Week 3)
+- Die coarse-graining / grouping (Week 4, after Quiz 2)
 - What is the Gibbs--Boltzmann distribution? Free energy $F=U-TS$? (Week 3)
 - Loss as potential $V$; HMC (Week 3)
 - What is the Legendre transform?
@@ -61,16 +61,16 @@ Quiz 1 occupies the first ten minutes (probability and Week 1 energy seeds). The
 
 ## Lecture 3 — 27 October — Free Energy and Shannon Entropy
 
-Heat thread first (Black, Carnot, Rumford, Kelvin, Joule, Clausius, Kelvin, Maxwell--Boltzmann, Gibbs, Helmholtz), then entropy game / MacKay / grouping. Shannon $H$, Dasher, $Z$, KL, Schottky and finite time are parked at the end of Week 4 and need sorting.
+Heat thread first (Black, Carnot, Rumford, Kelvin, Joule, Clausius, Kelvin, Maxwell--Boltzmann, Gibbs, Helmholtz). The entropy game / MacKay / grouping were named and not reached; they now open Week 4 after Quiz 2. Shannon axioms, Dasher, $Z$, KL, Schottky and finite time live in `_lamd/parking.md`.
 
 **Define this week**
 
 - Heat thread: Black $\to$ Helmholtz; $F=U-TS$ from $U=\langle E\rangle$
 - What is the Gibbs--Boltzmann distribution (canonical ensemble)?
-- Die coarse-graining / grouping: $H=H(w)+\sum_i w_i H(p_i)$
 
 **Named, not yet answered**
 
+- Die coarse-graining / grouping: $H=H(w)+\sum_i w_i H(p_i)$ (Week 4, after Quiz 2)
 - What is mutual information? / channel capacity? / DPI? (name if time; proof week 8)
 - What is the information bottleneck? (week 8)
 - How is entropy understood today? (Shannon alone is not the intended answer)
@@ -80,10 +80,12 @@ Heat thread first (Black, Carnot, Rumford, Kelvin, Joule, Clausius, Kelvin, Maxw
 
 ## Lecture 4 — 3 November — Maxwell and Landauer
 
-Week 3 overflow is parked at the end of `_lamd/maxwell-landauer.md` and needs sorting before this session (Shannon axioms, HMC, $Z$, KL, Schottky, finite time). Not in the live clock.
+Quiz 2 occupies the first ten minutes (Weeks 2--3 as delivered: ensemble, heat thread, Helmholtz, Shannon $H$ versus Boltzmann $S$). Worksheet 2 is due at 10:00. Then the Week 3 overflow: information game, MacKay, die grouping. A review of heat and the box, then Maxwell's demon as the punchline. Landauer after the break. Shannon axioms, HMC, $Z$, KL, Schottky and finite time live in `_lamd/parking.md`.
 
 **Define this week**
 
+- Information game; MacKay's balance; die grouping: $H=H(w)+\sum_i w_i H(p_i)$
+- Heat and the box (review): the vessel is the coarse label
 - What is Maxwell's demon?
 - How does one Shannon bit relate to thermodynamic work? (Szilard; Feynman piston chain)
 - Why cannot Maxwell-demon feedback improve a car engine the way ATP synthase uses information?
@@ -100,7 +102,7 @@ Week 3 overflow is parked at the end of `_lamd/maxwell-landauer.md` and needs so
 
 ## Lecture 5 — 10 November — MaxEnt and Synthesis
 
-Quiz 2 occupies the first ten minutes.
+No class test. Quiz 2 was last week.
 
 **Define this week**
 
