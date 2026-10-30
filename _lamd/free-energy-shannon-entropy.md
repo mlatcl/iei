@@ -133,6 +133,7 @@ where $U=\expSamp{E}$ is inner energy, $F$ is Helmholtz free energy, $T$ is temp
 
 \include{_physics/includes/free-energy-decomposition.md}
 \include{includes/week3-helmholtz-as-taught.md}
+\include{_physics/includes/carnot-ts-cycle.md}
 
 \include{_physics/includes/gaussian-quadratic-free-energy.md}
 \include{_physics/includes/free-energy-entropy-two-sides.md}
