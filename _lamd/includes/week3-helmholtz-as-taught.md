@@ -17,7 +17,7 @@ p_i = \frac{e^{-\beta E_i}}{Z},\qquad Z=\sum_i e^{-\beta E_i}.
 $$
 $Z$ is German: sum of states, Summe der Zustände. Take the logarithm, take the expectation. Inner energy $U$ is composed of an entropy term and an available-energy term in $\log Z$. Watch the signs on the board. Surprisal is $-\log p$.}
 
-\notes{A student asked why the exponential. Equilibrium. Another asked what $\log Z$ *is*. Available energy: the work you can get out. Carnot on a $T$--$S$ diagram is a square; a four-stroke engine is the engineering picture of the same cycle. Once the bookkeeping is in view, the Industrial Revolution is an information revolution.}
+\notes{A student asked why the exponential. Equilibrium. Another asked what $\log Z$ *is*. Available energy: the work you can get out. The $T$--$S$ square and the four-stroke as its implementation come next. Once the bookkeeping is in view, the Industrial Revolution is an information revolution.}
 
 \notes{Maxwell's demon enters here as a preview, not as Week 4. You can convert all the work into heat. You cannot get all the heat back as work, because the motion is now going in different directions. The energy is still there at the particle level. The demon is an attempt to reverse that by seeing where the particles are. The scale we have just written assumes an ensemble. Dive into the ensemble and play with it, and you cross levels of coarse graining. That is easy to do in modelling. Week 4 is where the ledger is resolved; today is the warning.}
 
