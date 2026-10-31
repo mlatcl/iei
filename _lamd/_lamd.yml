@@ -37,13 +37,15 @@ assignment: False
 ipynb: True
 reveal: True
 
+# VIBECOURSE-GENERATED: run `./vc generate-site` to update
 baseurl: "iei/"
 url: "https://mlatcl.github.io/"
-macrosdir: $HOME/lawrennd/lamd/lamd/macros
-transition: None
-
 ghub:
 - organization: mlatcl
   repository: iei
   branch: gh-pages
   directory: _lamd
+# END VIBECOURSE-GENERATED
+macrosdir: $HOME/lawrennd/lamd/lamd/macros
+transition: None
+

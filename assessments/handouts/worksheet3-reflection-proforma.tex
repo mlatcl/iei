@@ -1,0 +1,124 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  11pt,
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={L172 Worksheet 3 --- Handwritten reflection},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=20mm]{geometry}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\pagestyle{empty}
+\usepackage{pgffor}
+\AtBeginDocument{\pagestyle{empty}\thispagestyle{empty}}
+\newcommand{\ruledlines}[1]{\par\smallskip\begingroup\offinterlineskip\foreach \n in {1,...,#1}{\vskip 7mm\hrule height 0.4pt}\endgroup\par}
+\newcommand{\fieldbox}[1]{\fbox{\parbox[t][3.2em][t]{\dimexpr0.48\textwidth-2\fboxsep-2\fboxrule\relax}{\textbf{#1}\\[1.4ex]\rule{0.9\linewidth}{0.5pt}}}}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\title{L172 Worksheet 3 --- Handwritten reflection}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{Information, Entropy and Intelligence}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+Print this form, write \textbf{by hand}, then either scan or photograph
+clearly and upload as a \textbf{separate PDF}, or hand in a paper copy
+at the start of lecture 6. Do \textbf{not} type the reflection.
+
+\vspace{1.2ex}
+
+\noindent\fbox{\parbox[t][3.2em][t]{\dimexpr 0.48\textwidth-2\fboxsep-2\fboxrule\relax}{\textbf{CRSid}\\[1.4ex]\rule{0.9\linewidth}{0.5pt}}}\hfill\fbox{\parbox[t][3.2em][t]{\dimexpr 0.48\textwidth-2\fboxsep-2\fboxrule\relax}{\textbf{Date}\\[1.4ex]\rule{0.9\linewidth}{0.5pt}}}
+
+\vspace{1.2ex}
+
+\textbf{Prompt} (up to about 300 words; use the lined pages):
+
+\begin{itemize}
+\tightlist
+\item
+  What did the exchange teach you about which coarse graining of Maxwell
+  is legal?
+\item
+  What did you learn about the model's way of locating the missing
+  entropy?
+\item
+  How does this relate to lecture 4 as you understand it?
+\item
+  Has your sense of LLMs as tools of inquiry changed since Worksheet 2?
+  Was this approach useful, or did you rely on other techniques?
+\end{itemize}
+
+{\footnotesize Upload as \texttt{L172\_<CRSid>\_worksheet3\_reflection.pdf}
+(or hand in a paper copy). Dialogue file is separate:
+\texttt{L172\_<CRSid>\_worksheet3\_dialogue.md}.}
+
+\vspace{0.8ex}
+
+\noindent
+
+\rule{\textwidth}{0.6pt}
+
+\par\smallskip\begingroup\offinterlineskip\foreach \n in {1,...,12}{\vskip 7mm\hrule height 0.4pt}\endgroup\par
+
+\newpage
+
+{\footnotesize L172 Worksheet 3 reflection --- CRSid:
+\rule{45mm}{0.5pt}\hfill page 2 of 2}
+
+\vspace{0.8ex}
+
+\noindent
+
+\rule{\textwidth}{0.6pt}
+
+\par\smallskip\begingroup\offinterlineskip\foreach \n in {1,...,28}{\vskip 7mm\hrule height 0.4pt}\endgroup\par
+
+\end{document}

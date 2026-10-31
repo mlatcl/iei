@@ -161,10 +161,10 @@ where $U=\expSamp{E}$ is inner energy, $F$ is Helmholtz free energy, $T$ is temp
 
 \subsection{After This Lecture}
 
-\notes{Worksheet 2 (due start of lecture 4) presses whether Shannon $H$ and Boltzmann $S$ are the same object or a metaphor. Next week there *is* a class test --- Quiz 2 --- even though the webpage on 27 October said there was not. After the quiz: information game, MacKay, grouping, then heat and the box, then Maxwell's demon as the punchline. Shannon / Jaynes / Wiener were previewed today.}
+\notes{Worksheet 2 (due start of lecture 4) presses whether Shannon $H$ and Boltzmann $S$ are the same object or a metaphor. Next week there *is* a class test --- Quiz 2 --- even though the webpage on 27 October said there was not. After the quiz: questions, MacKay, grouping, the missing measure, then Maxwell's demon as compartments and two ledgers. The resolution families are Worksheet 3. Shannon / Jaynes / Wiener were previewed today.}
 
 \slidesincremental{
-* Next: class test (Quiz 2), then the information game, then the demon
+* Next: class test (Quiz 2), then grouping, then the demon
 * Worksheet 2: $H$ vs $S$ — identity or metaphor?
 }
 

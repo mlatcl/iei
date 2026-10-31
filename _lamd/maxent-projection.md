@@ -19,10 +19,7 @@ author:
 outcomes: [LO9]
 duration_hours: 2
 type: lecture
-in_class_test:
-  id: Q3
-  duration_minutes: 10
-  timing: start
+in_class_test: null
 reading:
   - title: "Information Geometry and Its Applications"
     author: "Amari"
@@ -30,40 +27,26 @@ reading:
     estimated_hours: 2
 ---
 
-\notes{Quiz 3 occupies the first ten minutes (Fisher metric, natural gradient, dual flatness). Worksheet 3 was due last week (start of lecture 6); Worksheet 4 is already out (due 1 December).}
+\notes{No class test today. Quiz 3 was last week (start of lecture 6). Worksheet 3 was due last week; Worksheet 4 is already out (due 1 December).}
 
 \subsection{This Session}
 
 \slidesincremental{
-* Quiz 3 (ten minutes)
 * MaxEnt as m-projection
 * Natural gradient: $F^{-1}\nabla L$
 * Geodesics = minimum-dissipation protocols
 }
 
 \notes{
-**Time plan (120 minutes)**
+**Time plan.** The slot is 10:05--11:55 (110 minutes, not 120).
 
-| Minutes | Block |
-|--------:|-------|
-| 0–10 | Quiz 3 (Moodle) |
-| 10–55 | MaxEnt as projection; dual coordinates |
-| 55–65 | Break |
-| 65–100 | Natural gradient; one worked comparison |
-| 100–120 | A geodesic on a two-parameter exponential family |
+| Clock | Block |
+|------:|-------|
+| 10:05--11:00 | MaxEnt as projection; dual coordinates |
+| 11:00--11:10 | Break |
+| 11:10--11:40 | Natural gradient; one worked comparison |
+| 11:40--11:55 | A geodesic on a two-parameter exponential family |
 }
-
-\subsection{Quiz 3}
-
-\notes{Invigilated Moodle, own device, no notes, no network, no LLMs. Ten questions on the Fisher metric, natural gradient, and dual flatness — on a new parameterised family, not Worksheet 3's Gaussian.}
-
-\slidesincremental{
-* Device required; Moodle open
-* No notes, no network, no LLMs
-* Ten minutes
-}
-
-\classtimer{10:00}
 
 \include{_iei/includes/iei-notebook-setup.md}
 
@@ -264,10 +247,10 @@ mlai.write_figure('geodesic-vs-straight.svg', directory='\writeDiagramsDir/ml')}
 
 \subsection{After This Lecture}
 
-\notes{Quiz 3 at the start of lecture 7 (24 November): Fisher metric, natural gradient, dual flatness, on a new parameterised family.}
+\notes{No class test today. Quiz 4 is 1 December at the start of lecture 8.}
 
 \slidesincremental{
-* Quiz 3: 24 November, first ten minutes
+* Quiz 4: 1 December, first ten minutes
 * LLM: is the natural gradient a bound or a recipe?
 }
 

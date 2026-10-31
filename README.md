@@ -26,7 +26,7 @@ Entropy appears in three apparently separate traditions — thermodynamics (Bolt
 5. multi-information, $I+H=C$, DPI and the information bottleneck, von Neumann entropy,
 6. probability transport, Schrödinger bridges, and information-theoretic limits on intelligent agency.
 
-Four ten-minute in-class Moodle quizzes sit at the start of lectures 2, 5, 7 and 8.
+Four ten-minute in-class quizzes sit at the start of lectures 2, 4, 6 and 8.
 
 Worksheets use LLMs under a Socratic protocol introduced in lecture 1: students act as Socrates (curiosity, then skepticism). Each worksheet is an LLM-centred exercise plus reflection, due at the start of weeks 2, 4, 6 and 8. Moodle filenames use `L172_<CRSid>_worksheet…`; file contents are anonymous (candidate number, not CRSid or name).
 
