@@ -43,12 +43,26 @@ parked:
   - id: finite-time
     from_week: 3
     likely_home: "Week 6 Crooks / thermodynamic length"
+  - id: local-equilibrium-grouping
+    from_week: 4
+    likely_home: "demon compartments already name kinetic layers; drop or a named callback"
+  - id: coarse-graining-intelligence
+    from_week: 4
+    likely_home: "grouping-as-macrostate already pays the moral"
+  - id: grouping-static-vs-ensemble
+    from_week: 4
+    likely_home: "named on the fork / Worksheet 3"
+  - id: landauer-szilard-ellis
+    from_week: 4
+    likely_home: "Worksheet 3 coarse-grains Maxwell; live lecture stops at the fork"
 ---
 
 \notes{This file is the module parking lot. It is not a week, not a contact
 hour, and not the demon lecture. Sort an item into a live `_lamd/*.md`
-week file before presenting it. The information game, MacKay, die grouping
-and local equilibrium already moved into the Week 4 live clock (28 October).}
+week file before presenting it. Questions, MacKay, die grouping, the missing
+measure and the demon compartments are the live Week 4 clock. Szilard,
+Landauer, Ellis, and local-equilibrium grouping sit here until Worksheet 3
+needs them.}
 
 \speakernotes{Stop. This is the parking lot. Sort before presenting.}
 
@@ -59,6 +73,7 @@ and local equilibrium already moved into the Week 4 live clock (28 October).}
 \slidesincremental{
 * Shannon axioms, HMC, $Z$, Dasher, KL, capacity
 * Three framings, Schottky, finite time
+* Local equilibrium; Szilard / Landauer / Ellis
 }
 
 \subsection{Shannon axioms}
@@ -240,6 +255,30 @@ mlai.write_figure('finite-time-sketch.svg', directory='\writeDiagramsDir/ml')}
 \newslide{}
 
 \figure{\includediagram{\diagramsDir/ml/finite-time-sketch}{70%}}{Cartoon of quasi-static versus finite-time driving between two equilibrium states.}{finite-time-sketch}
+
+\subsection{Local equilibrium as grouping}
+
+\newslides{Parked: local equilibrium}
+
+\slides{Overflow from Week 4. The live lecture already names kinetic layers; this is the grouping callback.}
+
+\include{_physics/includes/local-equilibrium-grouping.md}
+
+\subsection{Coarse graining and intelligence}
+
+\include{_information/includes/coarse-graining-intelligence.md}
+
+\subsection{Static grouping versus ensemble}
+
+\include{_information/includes/grouping-static-vs-ensemble.md}
+
+\subsection{Szilard, Landauer, Ellis}
+
+\newslides{Parked: Szilard / Landauer}
+
+\slides{Overflow from Week 4. The live lecture stops at the fork; Worksheet 3 is the resolution families.}
+
+\include{includes/landauer-resolution-overflow.md}
 
 \reading
 

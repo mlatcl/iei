@@ -128,17 +128,17 @@ multi-perspective fluency required by LO7.
 
 ## Lecture map
 
-Eight Tuesdays, 13 October – 1 December 2026, 10:00–12:00, FW26, William Gates Building. Each slot is two hours. Class tests take the first ten minutes of lectures 2, 5, 7 and 8 (weeks 2, 5, 7, 8). Week 8 splits the two-hour slot: multi-information / DPI / IB / von Neumann, then probability transport and limits.
+Eight Tuesdays, 13 October – 1 December 2026, 10:00–12:00, FW26, William Gates Building. Each slot is two hours (speech 10:05--11:55). Class tests take the first ten minutes of lectures 2, 4, 6 and 8 (weeks 2, 4, 6, 8). Week 8 splits the two-hour slot: multi-information / DPI / IB / von Neumann, then probability transport and limits.
 
 | Week | Date | Topic | Outcomes | In slot |
 |------|------|-------|----------|---------|
 | 1 | 13 Oct | Theme; perpetual motion; *Atomic Human* bandwidth; probability review; energy / Boltzmann seed; entropy review | LO1 (seed) | W1 released |
 | 2 | 20 Oct | Gibbs--Boltzmann form; free energy $F=U-TS$; HMC; Schottky | LO1 | Q1 (10 min); W1 due |
 | 3 | 27 Oct | Heat thread; Helmholtz $F=U-TS$. Game / MacKay named, not reached | LO1, LO2, LO3 | |
-| 4 | 3 Nov | Quiz 2; information game / MacKay / grouping; heat and the box; demon as punchline; Landauer | LO2, LO4 | Q2 (10 min); W2 due; W3 released |
-| 5 | 10 Nov | MaxEnt; exponential family; three-perspective synthesis | LO5, LO6, LO7 | Q2 (10 min); W2 due |
-| 6 | 17 Nov | Fisher metric; thermodynamic length defined (Crooks) | LO8 | W3 released |
-| 7 | 24 Nov | MaxEnt as projection; natural gradient; geodesics | LO9 | Q3 (10 min); W3 due; W4 released |
+| 4 | 3 Nov | Quiz 2; questions / MacKay / grouping; missing measure; demon as compartments and two ledgers | LO2, LO4 | Q2 (10 min); W2 due; W3 released |
+| 5 | 10 Nov | MaxEnt; exponential family; three-perspective synthesis | LO5, LO6, LO7 | |
+| 6 | 17 Nov | Quiz 3; Fisher metric; thermodynamic length defined (Crooks) | LO8 | Q3 (10 min); W3 due; W4 released |
+| 7 | 24 Nov | MaxEnt as projection; natural gradient; geodesics | LO9 | |
 | 8 | 1 Dec | Multi-information; DPI; IB; von Neumann; three geometries; limits on intelligence | LO10–LO13 | Q4 (10 min); W4 due |
 
 ## Outcome summary

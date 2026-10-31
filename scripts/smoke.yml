@@ -2,6 +2,6 @@
 # skip: filename prefixes to omit. plot_dirs: extra dirs created under _notebooks.
 # timeout_by_prefix: optional per-prefix cell timeouts in seconds.
 skip: []
-plot_dirs: []
+plot_dirs: ["./physics", "./information"]
 timeout: 900
 timeout_by_prefix: {}

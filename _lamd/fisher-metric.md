@@ -23,7 +23,11 @@ author:
 outcomes: [LO8]
 duration_hours: 2
 type: lecture
-in_class_test: null
+in_class_test:
+  id: Q3
+  duration_minutes: 10
+  timing: start
+  covers: [grouping, demon compartments, MaxEnt, exponential family]
 worksheet_due: W3
 worksheet_released: W4
 reading:
@@ -41,33 +45,47 @@ reading:
     estimated_hours: 1
 ---
 
-\notes{No class test today. Clarify what Fisher meant by information, then geometry. Bridge from Crooks (1999)/Jarzynski to the near-equilibrium bound, then define thermodynamic length (Crooks 2007). Worksheet 3 is due at the start of this session. Worksheet 4 is released; due 1 December (start of lecture 8).}
+\notes{Quiz 3 occupies the first ten minutes from 10:05 --- Weeks 4--5 as delivered (grouping, demon compartments and two ledgers, MaxEnt and the exponential family). Not Fisher: that starts after the quiz. Collect Worksheet 3 as they sit (due 10:00). Then Fisher's notion of information, geometry, and thermodynamic length (Crooks 2007). Worksheet 4 is released at the close; due 1 December (start of lecture 8).}
 
 \subsection{This Session}
 
 \slidesincremental{
+* Quiz 3 (ten minutes); collect Worksheet 3
 * Fisher's information $\neq$ Shannon's $H$
-* Fréchet–Rao–Cramér: identifiability
 * Fisher metric; dual flatness
-* Fluctuation theorem $\to$ $\langle W\rangle\ge\Delta F$ $\to$ length bound
 * Thermodynamic length: define, do not interpret
 }
 
 \notes{
-**Time plan (120 minutes)**
+**Time plan.** The slot is 10:05--11:55 (110 minutes, not 120). Quiz 3 is Moodle. Protect Fisher versus Shannon, dual flatness, and the length definition.
 
-| Minutes | Block |
-|--------:|-------|
-| 0–15 | Recap MaxEnt / $G=\nabla^2 A$; Fisher's notion of information |
-| 15–30 | Fréchet–Rao–Cramér: identifiability; name Schottky as Fisher peak |
-| 30–55 | Riemannian geometry; KL; statistical manifold as metric |
-| 55–65 | Break |
-| 65–85 | Dual flatness; Pythagorean theorem for KL |
-| 85–100 | Bridge: Crooks (1999) / Jarzynski $\to$ second law $\to$ near-eq expansion |
-| 100–120 | Thermodynamic length (Crooks 2007); $\langle W_{\mathrm{ex}}\rangle \ge \mathcal{L}^2/\tau$; collect Worksheet 3; release Worksheet 4 |
+| Clock | Block |
+|------:|-------|
+| 10:05--10:15 | Quiz 3 (Moodle); collect Worksheet 3 |
+| 10:15--10:40 | Recap MaxEnt / $G=\nabla^2 A$; Fisher's notion of information |
+| 10:40--11:00 | Fréchet–Rao–Cramér; Riemannian geometry; KL |
+| 11:00--11:10 | Break |
+| 11:10--11:30 | Dual flatness; Pythagorean theorem for KL |
+| 11:30--11:45 | Bridge: Crooks (1999) / Jarzynski $\to$ near-eq expansion |
+| 11:45--11:55 | Thermodynamic length; release Worksheet 4 |
 }
 
+\subsection{Quiz 3}
+
+\notes{Invigilated Moodle, own device, no notes, no network, no LLMs. Ten questions on Weeks 4--5 as delivered: grouping $H=H(w)+\sum_i w_i H(p_i)$, the missing measure, Maxwell's demon as compartments and two ledgers, MaxEnt and the exponential family. Not Fisher, not Crooks --- those start after the quiz. Worksheet 3 is collected as they sit.}
+
+\slidesincremental{
+* Device required; Moodle open
+* No notes, no network, no LLMs
+* Ten minutes
+* Worksheet 3 in as you sit
+}
+
+\classtimer{10:05}
+
 \include{_iei/includes/iei-notebook-setup.md}
+
+\classtimer{10:15}
 
 \subsection{What Did Fisher Mean by Information?}
 
@@ -458,7 +476,7 @@ These geometric properties will be essential when we study constrained informati
 * Pythagorean theorem for KL on dual flats
 }
 
-\speakernotes{LO8. Connect to week 5 Legendre pair. Worksheet 3: Gaussian Fisher matrix and gradient comparison.}
+\speakernotes{LO8. Connect to week 5 Legendre pair. Gaussian Fisher matrix and gradient comparison; geometry worksheet is deferred.}
 
 \notes{The Fisher matrix $g_{ij}=\mathbb{E}[\partial_i\log p\,\partial_j\log p]$ defines a Riemannian metric on the statistical manifold. On exponential families, e-flat ($\theta$) and m-flat ($\eta$) charts are dual; Hessians of $A$ and $A^*$ are inverse metrics. The Pythagorean theorem for KL holds on dual flats.}
 
@@ -501,7 +519,7 @@ $$
 * Intelligence question: week 8
 }
 
-\speakernotes{Define length today; do not interpret for intelligence until lecture 8. Worksheet 3: straight-line path $(0,1)\to(2,4)$. The bound is the near-equilibrium expansion of the fluctuation theorem, not a separate axiom.}
+\speakernotes{Define length today; do not interpret for intelligence until lecture 8. Straight-line path $(0,1)\to(2,4)$ is the worked sketch; the geometry notebook is deferred. The bound is the near-equilibrium expansion of the fluctuation theorem, not a separate axiom.}
 
 \notes{Crooks (2007) packages the near-equilibrium expansion as Fisher--Rao length on the equilibrium manifold [@Crooks-length07]. In linear response, $\langle W_{\mathrm{ex}}\rangle\ge\mathcal{L}^2/\tau$. The metric is the prescription for measuring a change of state; geodesics minimise the leading dissipative cost. The exact distributional statement underneath is Crooks (1999) / Jarzynski, above.}
 
@@ -530,10 +548,10 @@ ax.plot(path[:, 0], path[:, 1], 'k-', linewidth=2)
 ax.scatter([0, 2], [1, 4], s=80, c=['green', 'red'])
 ax.set_xlabel('$\\mu$')
 ax.set_ylabel('$\\sigma^2$')
-ax.set_title('Worksheet 3 path in mean parameters')
+ax.set_title('Straight-line path in mean parameters')
 mlai.write_figure('crooks-path-sketch.svg', directory='\writeDiagramsDir/ml')}
 
-\figure{\includediagram{\diagramsDir/ml/crooks-path-sketch}{65%}}{Straight-line path in $(\mu,\sigma^2)$ whose Fisher–Rao length Worksheet 3 computes.}{crooks-path-sketch}
+\figure{\includediagram{\diagramsDir/ml/crooks-path-sketch}{65%}}{Straight-line path in $(\mu,\sigma^2)$ whose Fisher–Rao length is the worked sketch for thermodynamic length.}{crooks-path-sketch}
 
 
 <!-- /SNIPPET: _information/includes/crooks-thermodynamic-length.md -->
@@ -561,11 +579,11 @@ mlai.write_figure('crooks-path-sketch.svg', directory='\writeDiagramsDir/ml')}
 
 \subsection{After This Lecture}
 
-\notes{Worksheet 3 was due at the start of this lecture: Fisher matrix for a Gaussian; vanilla versus natural gradient; Crooks length of the straight-line path from $(0,1)$ to $(2,4)$. Worksheet 4 is released today; due 1 December. Quiz 3 is 24 November at the start of lecture 7.}
+\notes{Worksheet 3 was due at the start of this lecture, before Quiz 3: coarse-graining Maxwell — which description is legal for each compartment, and where the missing entropy may sit. Worksheet 4 is released today; due 1 December. Quiz 4 is 1 December at the start of lecture 8.}
 
 \slidesincremental{
-* Worksheet 3 due today; Worksheet 4 released (due 1 December)
-* LLM exercise: thermodynamic length, two sides
+* Worksheet 3 due today, before the quiz
+* Worksheet 4 released (due 1 December)
 }
 
 \reading

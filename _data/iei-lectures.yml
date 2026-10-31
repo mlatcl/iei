@@ -2,7 +2,8 @@
   status: Draft
   status_modified: '2026-10-20 06:48:00.000000'
   status_created: '2026-10-20 06:48:00.000000'
-- sessionPath: _lamd/03-geometry-practical.md
+- sessionPath: _lamd/03-geometry-practical.md.deferred
+- sessionPath: _lamd/grouping-maxwell-practical.md
   status: Draft
   status_modified: '2026-10-13 08:44:45.593726'
   status_created: '2026-10-13 08:44:45.593726'
@@ -34,7 +35,7 @@
   status: Draft
   status_modified: '2026-10-13 08:44:51.858816'
   status_created: '2026-10-13 08:44:51.858816'
-- sessionPath: _lamd/maxwell-landauer.md
+- sessionPath: _lamd/grouping-maxwell-demon.md
   status: Draft
   status_modified: '2026-10-13 08:44:42.839111'
   status_created: '2026-10-13 08:44:42.839111'

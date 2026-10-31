@@ -60,7 +60,8 @@ Practicals and worksheets should include `-practical` in the name so they are no
 - `intro-history-entropy-shannon-practical.md` — Worksheet 1
 - `shannon-boltzmann-practical.md` — Worksheet 2 (Socratic: H vs S)
 - `02-maxent-practical.md.deferred` — former MaxEnt notebook brief (parked for later redesign)
-- `03-geometry-practical.md` — Worksheet 3
+- `grouping-maxwell-practical.md` — Worksheet 3 (Socratic: coarse-grain Maxwell)
+- `03-geometry-practical.md.deferred` — former geometry notebook brief (parked for later redesign)
 - `04-intelligence-practical.md` — Worksheet 4
 
 Compile a worksheet with `maketalk intro-history-entropy-shannon-practical.md` from this directory. Output goes to `../_practicals/` and `../_notebooks/`.

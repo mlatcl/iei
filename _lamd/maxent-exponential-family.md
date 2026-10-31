@@ -57,16 +57,15 @@ reading:
 }
 
 \notes{
-**Time plan (120 minutes)**
+**Time plan.** The slot is 10:05--11:55 (110 minutes, not 120).
 
-| Minutes | Block |
-|--------:|-------|
-| 0–55 | Laplace $\to$ Jaynes; Lagrange; die and Gaussian |
-| 55–65 | Break |
-| 65–85 | MaxEnt proof $\to$ exponential family; $\theta=-\lambda$ |
-| 85–100 | Examples: Bernoulli, softmax, two-spin |
-| 100–110 | Legendre transform: $F=U-TS$ again; $H=A-\theta\cdot\eta$ |
-| 110–120 | LO7 synthesis; “how is entropy understood today?” |
+| Clock | Block |
+|------:|-------|
+| 10:05--11:00 | Laplace $\to$ Jaynes; Lagrange; die and Gaussian |
+| 11:00--11:10 | Break |
+| 11:10--11:30 | MaxEnt proof $\to$ exponential family; $\theta=-\lambda$ |
+| 11:30--11:45 | Examples: Bernoulli, softmax, two-spin |
+| 11:45--11:55 | Legendre: $F=U-TS$ again; $H=A-\theta\cdot\eta$; LO7 synthesis |
 }
 
 \include{_iei/includes/iei-notebook-setup.md}
@@ -313,10 +312,10 @@ def perspective_table(H_value, p_maxent, p_uniform):
 
 \subsection{After This Lecture}
 
-\notes{No class test today. Quiz 3 is 24 November at the start of lecture 7.}
+\notes{No class test today. Quiz 3 is 17 November at the start of lecture 6, on Weeks 4--5 as delivered.}
 
 \slidesincremental{
-* Quiz 3: 24 November, first ten minutes
+* Quiz 3: 17 November, first ten minutes
 }
 
 \reading

@@ -78,31 +78,25 @@ Heat thread first (Black, Carnot, Rumford, Kelvin, Joule, Clausius, Kelvin, Maxw
 - Shannon entropy versus differential entropy? (full contrast: week 6)
 - Purely entropic Schottky reading (Week 8); thermodynamic length (Week 6)
 
-## Lecture 4 — 3 November — Maxwell and Landauer
+## Lecture 4 — 3 November — Grouping and Maxwell's Demon
 
-Quiz 2 occupies the first ten minutes (Weeks 2--3 as delivered: ensemble, heat thread, Helmholtz, Shannon $H$ versus Boltzmann $S$). Worksheet 2 is due at 10:00. Then the Week 3 overflow: information game, MacKay, die grouping. A review of heat and the box, then Maxwell's demon as the punchline. Landauer after the break. Shannon axioms, HMC, $Z$, KL, Schottky and finite time live in `_lamd/parking.md`.
+Quiz 2 occupies 10:05--10:15 (Weeks 2--3 as delivered: ensemble, heat thread, Helmholtz, Shannon $H$ versus Boltzmann $S$). Worksheet 2 is due at 10:00. Then questions, MacKay, die grouping, the missing measure, then Maxwell's demon as compartments and two ledgers. The fork is named, not resolved. Szilard, Landauer and Ellis live in `_lamd/parking.md`; they are Worksheet 3, not the live clock.
 
 **Define this week**
 
-- Information game; MacKay's balance; die grouping: $H=H(w)+\sum_i w_i H(p_i)$
-- Heat and the box (review): the vessel is the coarse label
-- What is Maxwell's demon?
-- How does one Shannon bit relate to thermodynamic work? (Szilard; Feynman piston chain)
-- Why cannot Maxwell-demon feedback improve a car engine the way ATP synthase uses information?
-- How does Landauer's principle relate to Clausius's second law?
-- What is a Boltzmann memory (equal-depth double well), and how does it relate to an information reservoir?
-- What is the thermodynamics of information? (Parrondo et al.; first cut)
-- What is the relationship between information and intelligence? (first cut: Landauer)
-- What are the information constraints on a human? (bandwidth and erasure)
+- Questions; MacKay's balance; die grouping: $H=H(w)+\sum_i w_i H(p_i)$
+- Gaussian versus Maxwell--Boltzmann: $H$ without a declared measure $m$
+- What is Maxwell's demon, drawn as compartments and two ledgers?
+- Where can the missing entropy sit? (fork: illegal Maxwellian-to-gate; trapdoor; record; one ensemble)
 
-**Interpret (Worksheet 2; revisit week 8)**
+**Interpret (Worksheet 3)**
 
+- Which coarse graining is legal for each compartment, and what entropy may that description claim?
 - Dissipation ledger (Ellis) versus information ledger (Szilard/Landauer/Bennett): same no-go, different bookkeeping — which argument matches the generality of the second law?
-- Does Landauer *derive* the erasure cost, or *assume* the second law to save it? (Contrast bad textbook circularity with Bennett (1982) on logical irreversibility of erasure.)
 
 ## Lecture 5 — 10 November — MaxEnt and Synthesis
 
-No class test. Quiz 2 was last week.
+No class test. Quiz 2 was last week. Quiz 3 is next week.
 
 **Define this week**
 
@@ -118,6 +112,8 @@ No class test. Quiz 2 was last week.
 - What if MaxEnt is over a coupling, with two prescribed marginals rather than a list of moments? (Sinkhorn; week 8)
 
 ## Lecture 6 — 17 November — Fisher Metric
+
+Quiz 3 occupies 10:05--10:15 (Weeks 4--5 as delivered: grouping, demon compartments, MaxEnt). Worksheet 3 is due at 10:00.
 
 **Define this week**
 
@@ -135,7 +131,7 @@ No class test. Quiz 2 was last week.
 
 ## Lecture 7 — 24 November — Projection and Geodesics
 
-Quiz 3 occupies the first ten minutes.
+No class test. Quiz 3 was last week.
 
 **Define this week**
 
