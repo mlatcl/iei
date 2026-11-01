@@ -38,7 +38,9 @@ reading:
     required: false
 ---
 
-\notes{Worksheet 2 is due at the start of this session. Quiz 2 occupies the first ten minutes from 10:05 --- Weeks 2--3 as delivered (ensemble, the heat thread through Joule, Helmholtz on the board, Shannon $H$ versus Boltzmann $S$). Collect the worksheets as they sit. After the quiz the three composition wrappers: questions--MacKay--die, Gaussian--Maxwell missing measure, then the demon as compartments and two ledgers. The fork is named, not resolved; Worksheet 3 is released. Shannon axioms, HMC, $Z$, KL, Schottky, finite time, Szilard, Landauer and Ellis live in `_lamd/parking.md`, not this file.}
+\notes{Worksheet 2 is due at the start of this session. Quiz 2 occupies the first ten minutes from 10:05 --- Weeks 2--3 as delivered (ensemble, the heat thread through Joule, Helmholtz on the board, Shannon $H$ versus Boltzmann $S$). Collect the worksheets as they sit. After the quiz the three composition wrappers: questions--MacKay--die, Gaussian--Maxwell missing measure, then the demon as compartments and two ledgers. The fork is named, not resolved; Worksheet 3 is released. Shannon axioms, HMC, $Z$, KL, Schottky and finite time stay parked; Szilard, Landauer and Ellis wait for Worksheet 3.}
+
+\machinereviewlink
 
 \subsection{Define This Week}
 
@@ -49,13 +51,11 @@ reading:
 * Worksheet 3: where can the entropy sit?
 }
 
-\subsection{After This Lecture}
-
-\notes{Worksheet 2 was due at the start of this lecture, before Quiz 2. Worksheet 3 is released today; due 17 November (start of lecture 6), the same morning as Quiz 3.}
-
-\slidesincremental{
-* Worksheet 2 due today, before the quiz
-* Worksheet 3 released (due 17 November, with Quiz 3)
+\notes{
+* Questions; MacKay's balance; die grouping $H=H(w)+\sum_i w_i H(p_i)$
+* Gaussian vs Maxwell: $H$ without a measure $m$
+* The demon: compartments and two ledgers
+* Worksheet 3: where can the entropy sit?
 }
 
 \subsection{This Session}
@@ -80,6 +80,15 @@ reading:
 | 11:50--11:55 | Release Worksheet 3 |
 }
 
+\subsection{After This Lecture}
+
+\notes{Worksheet 2 was due at the start of this lecture, before Quiz 2. Worksheet 3 is released today; due 17 November (start of lecture 6), the same morning as Quiz 3.}
+
+\slidesincremental{
+* Worksheet 2 due today, before the quiz
+* Worksheet 3 released (due 17 November, with Quiz 3)
+}
+
 \subsection{Quiz 2}
 
 \notes{Invigilated paper test, no notes, no network, no LLMs. Ten questions on Weeks 2--3 as delivered: Bernoulli / ensemble, the heat thread (Black through Joule and Clausius), Helmholtz $F=U-TS$ and $\log Z$, Shannon $H$ versus Boltzmann $S$. Not the information game, not MacKay's balance, not Maxwell's demon --- those start after the quiz. Worksheet 2 is collected as they sit.}
@@ -94,8 +103,6 @@ reading:
 
 \include{_iei/includes/iei-notebook-setup.md}
 
-\classtimer{10:15}
-
 \include{_information/includes/questions-mackay-die-abstraction.md}
 
 \include{_physics/includes/gaussian-maxwell-missing-measure.md}
@@ -104,7 +111,13 @@ reading:
 
 \include{_physics/includes/demon-groups-hot-cold.md}
 
-\notes{Worksheet 3 is the coarse-graining of Maxwell: which description is legal for each compartment, and where the missing entropy is allowed to sit. Szilard, Landauer, Ellis, and the information-engine scale argument are parked until that worksheet needs them.}
+\notes{Worksheet 3 is the coarse-graining of Maxwell: which description is legal for each compartment, and where the missing entropy is allowed to sit. Szilard, Landauer, Ellis, and the information-engine scale argument wait until that worksheet needs them.}
+
+\machinereview
+
+\ifdef{NOTES}
+\include{includes/grouping-maxwell-demon-machine-review.md}
+\endif
 
 \reading
 

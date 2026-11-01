@@ -153,15 +153,6 @@
 </ul>
 </div>
 </section>
-<section id="after-this-lecture" class="slide level2">
-<h2>After This Lecture</h2>
-<div>
-<ul>
-<li class="fragment">Worksheet 2 due today, before the quiz</li>
-<li class="fragment">Worksheet 3 released (due 17 November, with Quiz 3)</li>
-</ul>
-</div>
-</section>
 <section id="this-session" class="slide level2">
 <h2>This Session</h2>
 <div>
@@ -170,6 +161,15 @@
 <li class="fragment">Questions / MacKay / grouping; then the missing measure</li>
 <li class="fragment">Compartments and two ledgers</li>
 <li class="fragment">Worksheet 3 after the fork</li>
+</ul>
+</div>
+</section>
+<section id="after-this-lecture" class="slide level2">
+<h2>After This Lecture</h2>
+<div>
+<ul>
+<li class="fragment">Worksheet 2 due today, before the quiz</li>
+<li class="fragment">Worksheet 3 released (due 17 November, with Quiz 3)</li>
 </ul>
 </div>
 </section>
@@ -188,14 +188,11 @@
 sns.set_style('darkgrid')
 sns.set_context('paper')
 sns.set_palette('colorblind')}-->
-<section data-background-iframe="../scripts//timer/index.html?duration=10:15" data-background-interactive>
-</section>
-<!-- SECTION Questions, a Balance, and a Die -->
 </section>
 <section id="questions-a-balance-and-a-die" class="slide level2">
 <h2>Questions, a Balance, and a Die</h2>
 <aside class="notes">
-Composition wrapper only. Through-line: the game is the idealised yes/no world; the pans and then the cube are where mechanism spoils nested questions. Then stop part way down the die: low/high <em>is</em> a coin, and <span class="math inline">\(H(G)\)</span> composes. Stop MacKay after two-versus-three readings if the clock is tight. Protect three-faces-left as the known-ball echo, the <span class="math inline">\(1\)</span>–<span class="math inline">\(3\)</span> / <span class="math inline">\(4\)</span>–<span class="math inline">\(6\)</span> coin, the grouping trees, then the extensive/intensive sentence. Do not include the Gaussian–Maxwell measure files here — lectures that want both include this file, then that one.
+Composition wrapper only. Through-line: the game is the idealised yes/no world; the pans and then the cube are where mechanism spoils it. Stop MacKay after two-versus-three readings if the clock is tight. Protect three-faces-left as the known-ball echo, then the <span class="math inline">\(1\)</span>–<span class="math inline">\(3\)</span> / <span class="math inline">\(4\)</span>–<span class="math inline">\(6\)</span> cut versus odd/even as <em>different</em> groupings, then the extensive/intensive sentence. Do not include the Gaussian–Maxwell measure files here — lectures that want both include this file, then that one.
 </aside>
 </section>
 <section id="the-information-game" class="slide level2">
@@ -203,7 +200,7 @@ Composition wrapper only. Through-line: the game is the idealised yes/no world; 
 </section>
 <section id="the-information-game-1" class="slide level2">
 <h2>The Information Game</h2>
-<p>I’m thinking of an animal …</p>
+<p>One player has chosen an object from a known finite list. The other may ask only <em>yes/no</em> questions.</p>
 <div>
 <ul>
 <li class="fragment">Goal: name the object</li>
@@ -212,39 +209,27 @@ Composition wrapper only. Through-line: the game is the idealised yes/no world; 
 </ul>
 </div>
 <aside class="notes">
-Run this live if time allows: owl, fox, snake, Gruffalo. Two fair questions name one of four. Students should feel that a balanced question buys one bit. Do not yet write <span class="math inline">\(-\sum p\log p\)</span>; the counting argument is enough.
-</aside>
-</section>
-<section id="four-animals-two-bits" class="slide level2">
-<h2>Four Animals, Two Bits</h2>
-<p>Owl, fox, snake, Gruffalo. Two fair yes/nos name one of four.</p>
-<div class="figure">
-<div id="information-game-animal-tree-figure" class="figure-frame">
-<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/information/information-game-animal-tree.svg" width="70%" style=" ">
-</object>
-</div>
-</div>
-<aside class="notes">
-A balanced yes/no tree for four animals. Each question halves the remaining list, so two answers name one of <span class="math inline">\(2^2=4\)</span> hypotheses.
+Run this live if time allows: pick a small list (sixteen animals, eight Cambridge colleges). Students should feel that a balanced question buys one bit. Do not yet write <span class="math inline">\(-\sum p\log p\)</span>; the counting argument is enough.
 </aside>
 </section>
 <section id="bits-as-balanced-questions" class="slide level2">
 <h2>Bits as Balanced Questions</h2>
-<p>A fair yes/no answer distinguishes two equally likely cases i.e. one <em>bit</em>.</p>
+<p>A fair yes/no answer distinguishes two equally likely cases — one <em>bit</em>.</p>
 <div>
 <ul>
-<li class="fragment"><span class="math inline">\(N\)</span> equally likely objects <span class="math inline">\(\Rightarrow\)</span> need <span class="math inline">\(\log_2 N\)</span> bits</li>
-<li class="fragment">Twenty questions covers megabit or <span class="math inline">\(\approx\)</span> million hypotheses: <span class="math inline">\(2^{20}=2^{10}\times 2^{10}\approx 10^3\times 10^3\)</span></li>
+<li class="fragment"><span class="math inline">\(N\)</span> equally likely objects <span class="math inline">\(\Rightarrow\)</span> worst case <span class="math inline">\(\lceil\log_2 N\rceil\)</span> bits</li>
+<li class="fragment">Twenty questions reach about a million hypotheses (<span class="math inline">\(2^{20}\)</span>)</li>
 <li class="fragment">Unequal priors: best questions still split probability as evenly as possible</li>
 </ul>
 </div>
+<p>The same idea, with a different instrument, comes next — MacKay’s balance.</p>
 </section>
 <section id="mackays-balance-and-balls" class="slide level2">
 <h2>MacKay’s Balance and Balls</h2>
 </section>
 <section id="twelve-balls-one-odd" class="slide level2">
 <h2>Twelve Balls, One Odd</h2>
-<p>MacKay’s weighing problem <span class="citation" data-cites="MacKay-information03">(MacKay, 2003, p. Ex.~4.1)</span>: twelve balls; exactly one is odd; it may be heavier <em>or</em> lighter.</p>
+<p>MacKay’s weighing problem, Exercise 4.1 <span class="citation" data-cites="MacKay-information03">(MacKay, 2003)</span>: twelve balls; exactly one is odd; it may be heavier <em>or</em> lighter.</p>
 <div class="figure">
 <div id="mackay-balance-balls-figure" class="figure-frame">
 <object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/information/mackay-balance-balls.svg" width="80%" style=" ">
@@ -269,11 +254,14 @@ State the puzzle. Do not list the readings of the balance, and do not walk throu
 <p>We have a finite list of hypotheses and a physical instrument. How should we think?</p>
 <div>
 <ul>
-<li class="fragment">How many outcomes are there?</li>
-<li class="fragment">How much information do we get per measurement?</li>
-<li class="fragment">How many measurements do we require?</li>
+<li class="fragment">What, exactly, do we need to name?</li>
+<li class="fragment">What would count as a useful use of the balance?</li>
+<li class="fragment">When would we know we were done?</li>
 </ul>
 </div>
+<aside class="notes">
+Leave this live. Do not say left, right, or level, and do not say three. After they have named the hypotheses, try the two-outcome story next — as if this were the information game again.
+</aside>
 </section>
 <section id="information-at-the-start" class="slide level2">
 <h2>Information at the Start</h2>
@@ -289,12 +277,14 @@ State the puzzle. Do not list the readings of the balance, and do not walk throu
 <section id="try-two-outcomes" class="slide level2">
 <h2>Try Two Outcomes</h2>
 </section>
-<section id="what-should-we-do" class="slide level2">
-<h2>What should we do?</h2>
+<section id="lets-try-two-outcomes" class="slide level2">
+<h2>Let’s Try Two Outcomes</h2>
+<p>Treat the balance as the information game: <em>left heavy</em> or <em>right heavy</em> only.</p>
 <div>
 <ul>
 <li class="fragment">Two readings <span class="math inline">\(\Rightarrow\)</span> at most <span class="math inline">\(\log_2 2\)</span> bits per use</li>
 <li class="fragment">Mechanism next: what we actually put on the pans</li>
+<li class="fragment">Maths stays on its own slides — the two accounts can disagree</li>
 </ul>
 </div>
 <aside class="notes">
@@ -310,8 +300,8 @@ Say ``log two bits’’ — one bit if the two readings are equally likely. Do 
 <div>
 <ul>
 <li class="fragment">Four uses cannot name 24 hypotheses</li>
-<li class="fragment">Five uses can, <em>if</em> each use really returns one bit</li>
-<li class="fragment">That “if” is the mechanism … answered separately</li>
+<li class="fragment">Five uses are not ruled out, <em>if</em> each use really returns one bit</li>
+<li class="fragment">That ``if’’ is mechanism, not maths</li>
 </ul>
 </div>
 </section>
@@ -339,7 +329,83 @@ Ask what we actually learned. Under ``it is heavier’’, 12 balls become 6, on
 <li class="fragment">The bit went into a <em>coupling</em> of group and direction</li>
 </ul>
 </div>
-<p>%% INSERT EXERCISE FOR thE reSt OF THE ANSWeR HERE</p>
+</section>
+<section id="mechanism-3-vs-3" class="slide level2">
+<h2>Mechanism: 3 vs 3</h2>
+<p><em>Mechanism.</em> Keep going as a binary search of the balls: three against three.</p>
+<div>
+<ul>
+<li class="fragment">Under the heavier-side story, three balls remain</li>
+<li class="fragment">Same move, smaller pile</li>
+<li class="fragment">We are still not asking about light versus heavy</li>
+</ul>
+</div>
+</section>
+<section id="mechanism-three-left" class="slide level2">
+<h2>Mechanism: Three Left</h2>
+<p><em>Mechanism.</em> Three balls remain. We cannot put one and a half on a pan.</p>
+<div>
+<ul>
+<li class="fragment">2 vs 2 needs a fourth ball</li>
+<li class="fragment">Borrow one of <em>known normal</em> mass</li>
+<li class="fragment">Then 1 vs 1 on whatever the 2 vs 2 leaves</li>
+</ul>
+</div>
+<aside class="notes">
+Make them say the known ball out loud. Ask: how many bits do we get from 2 vs 2 now? Do not calculate before they see that the split of three remaining balls cannot be even.
+</aside>
+</section>
+<section id="maths-the-known-ball-taxes-the-bit" class="slide level2">
+<h2>Maths: The Known Ball Taxes the Bit</h2>
+<p><em>Maths.</em> Three remaining heavier-suspects; pans are 2 vs 1+known.</p>
+<p><small> <span class="math display">\[
+\left(\tfrac{2}{3},\tfrac{1}{3}\right)
+\quad\Rightarrow\quad
+H = h_2\!\left(\tfrac{2}{3}\right) \approx 0.92 &lt; 1 \text{ bit}
+\]</span> </small></p>
+<div>
+<ul>
+<li class="fragment">The even split was <span class="math inline">\(\log_2 2\)</span>; the pans cannot make it</li>
+<li class="fragment">Padding with a known ball is a mechanism patch</li>
+<li class="fragment">Information gain falls because the <em>probabilities</em> are no longer equal</li>
+</ul>
+</div>
+</section>
+<section id="mechanism-1-vs-1" class="slide level2">
+<h2>Mechanism: 1 vs 1</h2>
+<p><em>Mechanism.</em> If two suspects remain, weigh them against each other.</p>
+<div>
+<ul>
+<li class="fragment">Now the split <em>can</em> be even</li>
+<li class="fragment">Under the heavier story, this names the ball</li>
+<li class="fragment">We still have not asked light versus heavy</li>
+</ul>
+</div>
+</section>
+<section id="mechanism-lighter-or-heavier" class="slide level2">
+<h2>Mechanism: Lighter or Heavier?</h2>
+<p><em>Mechanism.</em> We have a candidate ball. Can we name the direction?</p>
+<div>
+<ul>
+<li class="fragment">Weigh the candidate against a known normal</li>
+<li class="fragment">Two outcomes name heavy versus light — <em>if</em> it tips</li>
+<li class="fragment">If it <em>balances</em>, our heavier-side story was wrong</li>
+</ul>
+</div>
+<aside class="notes">
+This is the crack in the two-outcome attempt. A known-normal comparison is the natural test for direction, and it keeps offering a third reading: level. The instrument was never a yes/no question. Pause, then the aha slide.
+</aside>
+</section>
+<section id="two-accounts-one-experiment" class="slide level2">
+<h2>Two Accounts, One Experiment</h2>
+<p>Keep the columns separate.</p>
+<div>
+<ul>
+<li class="fragment"><em>Maths:</em> <span class="math inline">\(\log_2 24\)</span> to close; at most <span class="math inline">\(\log_2 2\)</span> per two-outcome use</li>
+<li class="fragment"><em>Mechanism:</em> 6 vs 6, 3 vs 3, 2 vs 2 with a known, 1 vs 1, then direction</li>
+<li class="fragment">The known ball, and the unused ``level’’ reading, are mechanism — they change the gain</li>
+</ul>
+</div>
 </section>
 <section id="three-readings" class="slide level2">
 <h2>Three Readings</h2>
@@ -349,7 +415,7 @@ Ask what we actually learned. Under ``it is heavier’’, 12 balls become 6, on
 <p>The pans also sit <em>level</em>. Left heavy, right heavy, or balance.</p>
 <div>
 <ul>
-<li class="fragment">The instrument can give left down, right down, equal</li>
+<li class="fragment">The instrument was never a yes/no question</li>
 <li class="fragment">6 vs 6 made the third reading impossible</li>
 <li class="fragment">That was a mechanism choice that <em>threw away</em> a symbol</li>
 </ul>
@@ -366,70 +432,57 @@ Let them say the three readings. Then go straight to the new budget. Do not star
 \]</span> </small></p>
 <div>
 <ul>
-<li class="fragment">Two uses (<span class="math inline">\(3 \times 3\)</span>) cannot name 24 hypotheses</li>
+<li class="fragment">Two uses cannot name 24 hypotheses</li>
 <li class="fragment">Three uses can, <em>if</em> each use really returns <span class="math inline">\(\log_2 3\)</span></li>
-<li class="fragment">Same “if” as before: mechanism must realise the split</li>
+<li class="fragment">Same ``if’’ as before: mechanism must realise the split</li>
 </ul>
 </div>
 </section>
 <section id="mechanism-must-collect-log_2-3" class="slide level2">
 <h2>Mechanism Must Collect <span class="math inline">\(\log_2 3\)</span></h2>
 <p><em>Mechanism.</em> To earn <span class="math inline">\(\log_2 3\)</span>, all three readings must be possible and near equal.</p>
-<p>%%% ADD IN ADDITIONAL EXERCISE HERE … 4.1 of Mackay repeated.</p>
+<div>
+<ul>
+<li class="fragment">First weighing: 4 vs 4, not 6 vs 6 — so <em>level</em> can happen</li>
+<li class="fragment">A known ball, or emptying a reading, is again a tax</li>
+<li class="fragment">Optimal play keeps the three readings as near equiprobable as possible</li>
+</ul>
+</div>
+</section>
+<section id="doable-in-three-strategy-deferred" class="slide level2">
+<h2>Doable in Three — Strategy Deferred</h2>
+<p>The counting argument shows three weighings <em>must</em> be enough in principle.</p>
+<div>
+<ul>
+<li class="fragment">We do <em>not</em> give the sequence of groupings today</li>
+<li class="fragment">Info gained and mechanism are separate ledgers — score both</li>
+<li class="fragment">Same moral as twenty questions: split the prior evenly, now three ways</li>
+</ul>
+</div>
+<aside class="notes">
+Stop here. Invite them to try Exercise 4.1 before reading MacKay’s solution figure. Optional aside: 1–6 vs 7–12 can never balance, so it yields only one bit and is already suboptimal <em>once we know there are three readings</em>.
+</aside>
 </section>
 <section id="coarse-graining-a-die" class="slide level2">
 <h2>Coarse-Graining a Die</h2>
-<p>The game let us invent any yes/no. A cube, like the pans, will not.</p>
+<p>A fair die has <span class="math inline">\(H(X)=\log_2 6\approx 2.58\)</span> bits.</p>
 <aside class="notes">
-Same moral as MacKay, new instrument. Twenty questions was the idealised world. The balance already spoiled it. The die spoils it again: six faces, not <span class="math inline">\(2^k\)</span>. <span class="math inline">\(\{1,2,3\}\)</span> versus <span class="math inline">\(\{4,5,6\}\)</span> is one grouping the cube affords. Odd versus even is another — not the next question. After the first grouping three faces remain, as three balls remained on the pans.
+Stage the question: does every yes/no cost one bit?
 </aside>
 <div>
 <ul>
-<li class="fragment">Fair die: <span class="math inline">\(H(X)=\log_2 6\approx 2.58\)</span> bits — not an integer</li>
-<li class="fragment">One grouping the cube affords: <span class="math inline">\(\{1,2,3\}\)</span> versus <span class="math inline">\(\{4,5,6\}\)</span></li>
-<li class="fragment">A <em>different</em> grouping, not a nested question: odd versus even</li>
-</ul>
-</div>
-</section>
-<section id="low-or-high-one-question-three-faces" class="slide level2">
-<h2>Low or High: One Question, Three Faces</h2>
-<p>Is the face in <span class="math inline">\(\{1,2,3\}\)</span> or <span class="math inline">\(\{4,5,6\}\)</span>? One yes/no combines three faces.</p>
-<p><small> <span class="math display">\[
-H(G_{\text{low}})=1 \text{ bit},
-\qquad
-H(X\mid G_{\text{low}})=\log_2 3 \approx 1.585 \text{ bits}
-\]</span> </small></p>
-<div>
-<ul>
-<li class="fragment">Group label: fair coin — one bit</li>
-<li class="fragment">Inside either group: three equally likely faces</li>
-<li class="fragment">Total: <span class="math inline">\(1+\log_2 3=\log_2 6\)</span></li>
+<li class="fragment">First cut: odd or even?</li>
+<li class="fragment">Second cut: is it a six?</li>
+<li class="fragment">Same total either way — different prices for the first answer</li>
 </ul>
 </div>
 <aside class="notes">
-Board <span class="math inline">\(\{1,2,3\}\)</span> versus <span class="math inline">\(\{4,5,6\}\)</span>. This is one grouping the cube affords, not a three-sided die. We keep the coarse label and refuse the face. The residual is <span class="math inline">\(\log_2 3\)</span> — mechanism will not sell that remainder as a bit.
+Board both partitions. Odd/even is balanced so exactly 1 bit. ``Is it six?’’ is <em>not</em> one bit — students often assume every binary question buys a bit. That is the MacKay moral applied to grouping.
 </aside>
 </section>
-<section id="mechanism-three-faces-left" class="slide level2">
-<h2>Mechanism: Three Faces Left</h2>
-<p><em>Mechanism.</em> Three faces remain. We cannot ask a nested fair yes/no.</p>
-<p><small> <span class="math display">\[
-h_2\Bigl(\tfrac13\Bigr)\approx 0.92 &lt; 1 \text{ bit}
-\]</span> </small></p>
-<div>
-<ul>
-<li class="fragment">After low/high: <span class="math inline">\(\{1,2,3\}\)</span> or <span class="math inline">\(\{4,5,6\}\)</span> — three faces</li>
-<li class="fragment">Odd versus even <em>inside</em> either group is <span class="math inline">\(2\)</span> versus <span class="math inline">\(1\)</span> — the known-ball tax again</li>
-<li class="fragment">An eight-sided die would still be the game: <span class="math inline">\(4\)</span>–<span class="math inline">\(4\)</span>, then <span class="math inline">\(2\)</span>–<span class="math inline">\(2\)</span>, then <span class="math inline">\(1\)</span>–<span class="math inline">\(1\)</span></li>
-</ul>
-</div>
-<aside class="notes">
-Echo the pans: three balls left, cannot put one and a half on a pan. If a student offers odd/even as the follow-up, board it inside <span class="math inline">\(\{1,2,3\}\)</span>: odd <span class="math inline">\(\{1,3\}\)</span>, even <span class="math inline">\(\{2\}\)</span>. That is <span class="math inline">\(h_2(1/3)\)</span>, not <span class="math inline">\(1\)</span>. The twenty-questions tree needs <span class="math inline">\(2^k\)</span> leaves. Six is the mechanism refusing. Eight would still live in the idealised world.
-</aside>
-</section>
-<section id="odd-or-even-a-different-grouping-the-cube-affords" class="slide level2">
-<h2>Odd or Even: A Different Grouping the Cube Affords</h2>
-<p>Go back to all six faces. Odd versus even is another physical cut, not the next question.</p>
+<section id="odd-or-even-exactly-one-bit" class="slide level2">
+<h2>Odd or Even: Exactly One Bit</h2>
+<p>Groups <span class="math inline">\(\{1,3,5\}\)</span> and <span class="math inline">\(\{2,4,6\}\)</span> are equiprobable.</p>
 <p><small> <span class="math display">\[
 H(G_{\mathrm{parity}})=1 \text{ bit},
 \qquad
@@ -437,9 +490,9 @@ H(X\mid G_{\mathrm{parity}})=\log_2 3 \approx 1.585 \text{ bits}
 \]</span> </small></p>
 <div>
 <ul>
-<li class="fragment">Same accounting as low/high — a <em>different</em> grouping the cube affords</li>
-<li class="fragment">Not the second question after <span class="math inline">\(\{1,2,3\}\)</span> versus <span class="math inline">\(\{4,5,6\}\)</span></li>
-<li class="fragment">Mechanism offers cuts; it does not offer the game’s next bit</li>
+<li class="fragment">Group label: fair coin — one bit</li>
+<li class="fragment">Inside either group: three equally likely faces</li>
+<li class="fragment">Total: <span class="math inline">\(1+\log_2 3=\log_2 6\)</span></li>
 </ul>
 </div>
 </section>
@@ -459,75 +512,33 @@ H(G_{\mathrm{six}})=h_2\Bigl(\tfrac16\Bigr)\approx 0.65 \text{ bits}
 <li class="fragment">Total again <span class="math inline">\(\approx 0.65+1.93=2.58=\log_2 6\)</span></li>
 </ul>
 </div>
-<aside class="notes">
-MacKay callback: a yes/no is one bit only when the mechanism realises an even split. The pans taught that; ``is it a six?’’ says it on the cube.
-</aside>
 </section>
-<section id="same-total-mechanism-chooses-the-cut" class="slide level2">
-<h2>Same Total, Mechanism Chooses the Cut</h2>
-<p>The budget still adds to <span class="math inline">\(\log_2 6\)</span>. The cube decides which splits exist.</p>
+<section id="same-total-different-first-cut" class="slide level2">
+<h2>Same Total, Different First Cut</h2>
+<p>However you slice the questions, you pay <span class="math inline">\(\log_2 6\)</span> in total.</p>
 <div>
 <ul>
-<li class="fragment">Low/high, <em>or</em> odd/even: each pays <span class="math inline">\(1\)</span>, then <span class="math inline">\(\log_2 3\)</span> — separately</li>
-<li class="fragment">Six-or-not: pay <span class="math inline">\(\approx 0.65\)</span>, then <span class="math inline">\(\approx 1.93\)</span></li>
-<li class="fragment">If you <em>stop</em> at low/high, the die <em>is</em> a coin — composition next</li>
+<li class="fragment">Odd/even first: pay <span class="math inline">\(1\)</span>, then <span class="math inline">\(\log_2 3\)</span></li>
+<li class="fragment">Six-or-not first: pay <span class="math inline">\(\approx 0.65\)</span>, then <span class="math inline">\(\approx 1.93\)</span></li>
+<li class="fragment">Coarse-graining keeps only the group term and <em>throws away</em> the rest</li>
 </ul>
 </div>
-<aside class="notes">
-Do not board the grouping identity here. The next include is the tree: stop at the squares and <span class="math inline">\(H(G)\)</span> is all you pay. Low/high is the 50/50 use of a die.
-</aside>
 </section>
 <section id="grouping-composition" class="slide level2">
 <h2>Grouping Composition</h2>
-<p>You rarely need the bottom number. Ask a coarser question and stop.</p>
-<div>
-<ul>
-<li class="fragment">“Is it five or above?” — two outcomes, odds <span class="math inline">\(1:2\)</span></li>
-<li class="fragment">“Low or high?” — two outcomes, odds <span class="math inline">\(1:1\)</span>: the die <em>is</em> a fair coin</li>
-<li class="fragment">The coarse-grained state has its own entropy, <span class="math inline">\(H(G)\)</span></li>
-</ul>
-</div>
-<aside class="notes">
-Start from the practical move: I don’t care which face, only whether it is five or above. Or I want a 50/50 decision and I only have a die — low/high is a coin. In both cases I have stopped part way down the tree. The point of the section is what happens to the entropy when I stop, and when I carry on.
-</aside>
-<div class="figure">
-<div id="die-coarse-graining-trees-figure" class="figure-frame">
-<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/information/die-coarse-graining-trees.svg" width="90%" style=" ">
-</object>
-</div>
-</div>
-<aside class="notes">
-Two coarse-grainings of a fair die. The top level is the coarse question, with branch widths set by the group probabilities <span class="math inline">\(w_i\)</span>; the bottom level is the residual detail. Stopping at the squares costs <span class="math inline">\(H(G)\)</span>. Going all the way down costs <span class="math inline">\(H(G)+H(X\mid G)\)</span>, which is <span class="math inline">\(\log_2 6\)</span> for either cut.
-</aside>
-</section>
-<section id="coarse-grained-entropies-compose" class="slide level2">
-<h2>Coarse-Grained Entropies Compose</h2>
-<p>Stopping costs <span class="math inline">\(H(G)\)</span>. Carrying on adds the residual. The total never changes.</p>
+<p>Uncertainty splits into stages: which group, then where inside the group.</p>
 <p><small> <span class="math display">\[
-H(X)=\underbrace{H(w)}_{\text{coarse state}}+\underbrace{\sum_i w_i\, H(p_i)}_{\text{residual detail}}
+H(X)=H(w)+\sum_i w_i\, H(p_i)
 \]</span> </small></p>
 <div>
 <ul>
-<li class="fragment"><span class="math inline">\(w_i\)</span>: probability of group <span class="math inline">\(i\)</span>; <span class="math inline">\(p_i\)</span>: distribution <em>inside</em> group <span class="math inline">\(i\)</span></li>
-<li class="fragment">Five or above: <span class="math inline">\(0.918 + \left(\tfrac{2}{3}\cdot 2 + \tfrac{1}{3}\cdot 1\right) = 0.918 + 1.667 = \log_2 6\)</span></li>
-<li class="fragment">Coin: <span class="math inline">\(1 + \log_2 3 = \log_2 6\)</span></li>
+<li class="fragment"><span class="math inline">\(w_i\)</span>: probability of group <span class="math inline">\(i\)</span></li>
+<li class="fragment"><span class="math inline">\(p_i\)</span>: distribution <em>inside</em> group <span class="math inline">\(i\)</span></li>
+<li class="fragment">First term: cost of the coarse label; second: average residual detail</li>
 </ul>
 </div>
 <aside class="notes">
-This is the chain rule for a deterministic grouping <span class="math inline">\(G=g(X)\)</span>: <span class="math inline">\(H(X)=H(G)+H(X\mid G)\)</span>. Board that identification.
-</aside>
-</section>
-<section id="coarse-graining-a-coarse-graining" class="slide level2">
-<h2>Coarse-Graining a Coarse-Graining</h2>
-<p>Coarse-grainings nest, and their entropies add stage by stage.</p>
-<div class="figure">
-<div id="die-coarse-graining-budget-figure" class="figure-frame">
-<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/information/die-coarse-graining-budget.svg" width="90%" style=" ">
-</object>
-</div>
-</div>
-<aside class="notes">
-The entropy budget of a die under different coarse-grainings. Each bar is a sequence of questions, each segment the entropy paid at that stage. The third bar refines “five or above” into pairs <span class="math inline">\(\{1,2\},\{3,4\},\{5,6\}\)</span> and then into faces. You may stop after any segment; the cost so far is the entropy of the coarse-grained state you have reached.
+This is the chain rule for a deterministic grouping <span class="math inline">\(G=g(X)\)</span>: <span class="math inline">\(H(X)=H(G)+H(X\mid G)\)</span>. Board that identification. Khinchin pointer only — consistency under staged questions characterises Shannon <span class="math inline">\(H\)</span>; no proof today.
 </aside>
 </section>
 <section id="reverse-direction" class="slide level2">
@@ -546,14 +557,11 @@ The entropy budget of a die under different coarse-grainings. Each bar is a sequ
 <p>Entropy is the uncertainty that is consistent no matter how you decompose a question into stages.</p>
 <div>
 <ul>
-<li class="fragment">Any partition, any nesting: the stages sum to the same <span class="math inline">\(H(X)\)</span></li>
-<li class="fragment">That consistency is special to the Shannon form <span class="citation" data-cites="Khinchin-information57 Baez-characterisation11">(Baez et al., 2011; Khinchin, 1957)</span></li>
-<li class="fragment">Pointer only today</li>
+<li class="fragment">Any partition: <span class="math inline">\(H(w)+\sum_i w_i H(p_i)\)</span> returns the same <span class="math inline">\(H(X)\)</span></li>
+<li class="fragment">That consistency is special to the Shannon form (Khinchin; later Baez–Fritz–Leinster)</li>
+<li class="fragment">Pointer only today — grouping is Shannon’s third requirement in 1948; the axioms stay parked</li>
 </ul>
 </div>
-<aside class="notes">
-Khinchin pointer only — consistency under staged questions characterises Shannon <span class="math inline">\(H\)</span>; no proof today. Cite Baez–Fritz–Leinster as the later categorical form of the same demand.
-</aside>
 </section>
 <section id="grouping-is-a-choice-of-abstraction" class="slide level2">
 <h2>Grouping Is a Choice of Abstraction</h2>
@@ -572,7 +580,7 @@ Callback only — extensive versus intensive was week 2. Do not re-derive. Do no
 <section id="gaussian-maxwellboltzmann-and-the-missing-measure" class="slide level2">
 <h2>Gaussian, Maxwell–Boltzmann, and the Missing Measure</h2>
 <aside class="notes">
-Composition wrapper only. Children carry the figures. The die has already paid grouping; these figures are the continuous remainder and the undeclared <span class="math inline">\(m\)</span>. Stop before MaxEnt / Lagrange.
+Composition wrapper only. Children carry the figures. Stop before MaxEnt / Lagrange / the die.
 </aside>
 </section>
 <section id="entropy-of-a-gaussian-velocity-histogram" class="slide level2">
@@ -764,7 +772,7 @@ Name <span class="math inline">\(m\)</span>. Do not do Lagrange, the die, or Max
 <section id="maxwells-demon-compartments-two-ledgers" class="slide level2">
 <h2>Maxwell’s Demon, Compartments, Two Ledgers</h2>
 <aside class="notes">
-Composition wrapper only. Overview (quote and canvas), then extra partitions, then number versus energy at the gate, then the fork. Canvas handedness: hot left to right, right bulk heats. Detailed-balance already includes the compartments and the fork, so a lecture that already pulls that file gets the new order. Do not include Gaussian-Maxwell, grouping composition, Szilard, Landauer, or Ellis here. Stop before the worksheet.
+Composition wrapper only. Overview (quote and canvas), then extra partitions, then number versus energy at the gate, then the fork. Canvas handedness: hot left to right, right bulk heats. Detailed-balance already includes the compartments and the fork, so a lecture that already pulls that file gets the new order. Do not include Gaussian–Maxwell, grouping composition, Szilard, Landauer, or Ellis here. Stop before the worksheet.
 </aside>
 </section>
 <section id="maxwells-demon" class="slide level2">
@@ -827,45 +835,8 @@ behaviour is provided by follow-on scripts such as maxwell.js.
 Maxwell’s Demon. The demon decides balls are either cold (blue) or hot (red) according to their velocity. Balls are allowed to pass the green membrane from right to left only if they are cold, and from left to right only if they are hot. The displayed entropy is the Shannon entropy of the velocity histogram (a coarse-grained proxy, not full thermodynamic entropy).
 </aside>
 </section>
-<section id="compartments-around-the-membrane" class="slide level2">
-<h2>Compartments Around the Membrane</h2>
-<p>Draw extra partitions. Local equilibrium is allowed only where collisions can restore it.</p>
-<div>
-<ul>
-<li class="fragment">Distant left, distant right: far from the gate — Maxwellian at <span class="math inline">\(T_L\)</span>, <span class="math inline">\(T_R\)</span></li>
-<li class="fragment">Kinetic layers against the membrane: selected arrivals, not remixed</li>
-<li class="fragment">The membrane itself is the JS rule: hot left <span class="math inline">\(\to\)</span> right, cold right <span class="math inline">\(\to\)</span> left</li>
-</ul>
-</div>
-<aside class="notes">
-Match the canvas: red hot, blue cold, threshold <span class="math inline">\(v_\star=3\)</span>. Hot crosses left to right, so the <em>right</em> bulk heats. The new move is spatial: two extra dashed partitions. Do not start the flux ledgers yet.
-</aside>
-<div class="figure">
-<div id="demon-spatial-compartments-figure" class="figure-frame">
-<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/physics/demon-spatial-compartments.svg" width="85%" style=" ">
-</object>
-</div>
-</div>
-<aside class="notes">
-The vessel with two extra partitions. Distant bulks may sit at local equilibrium, <span class="math inline">\(T_L\)</span> on the left and <span class="math inline">\(T_R\)</span> on the right. The kinetic layers against the membrane cannot: the gate selects a tail one way and a body the other. Arrows follow the JS convention — hot left to right, cold right to left — so the right bulk heats.
-</aside>
-</section>
-<section id="bulks-are-groups-the-gate-is-not" class="slide level2">
-<h2>Bulks Are Groups; the Gate Is Not</h2>
-<p>The extra partitions are a coarse graining. They are legal only where mixing is fast.</p>
-<div>
-<ul>
-<li class="fragment">Each bulk: the die’s move — keep <span class="math inline">\(T\)</span>, <span class="math inline">\(N\)</span>, <span class="math inline">\(E\)</span>; refuse which molecule</li>
-<li class="fragment">Kinetic layer: the faces have just been selected; <span class="math inline">\(\pi_i\)</span> has not returned</li>
-<li class="fragment">We may write a Maxwellian in the distant compartments. Not at the gate</li>
-</ul>
-</div>
-<aside class="notes">
-Callback to grouping-as-macrostate and local-equilibrium-grouping. Do not re-derive <span class="math inline">\(H=H(w)+\sum w_i H(p_i)\)</span>. The next include is the two ledgers: number current versus energy current.
-</aside>
-</section>
-<section id="two-ledgers-at-the-membrane" class="slide level2">
-<h2>Two Ledgers at the Membrane</h2>
+<section id="detailed-balance-across-the-membrane" class="slide level2">
+<h2>Detailed Balance Across the Membrane</h2>
 </section>
 <section id="what-does-the-membrane-do" class="slide level2">
 <h2>What Does the Membrane Do?</h2>
@@ -874,64 +845,26 @@ Callback to grouping-as-macrostate and local-equilibrium-grouping. Do not re-der
 <ul>
 <li class="fragment">Left <span class="math inline">\(\to\)</span> right: pass only if <span class="math inline">\(v &gt; v_\star\)</span> (hot)</li>
 <li class="fragment">Right <span class="math inline">\(\to\)</span> left: pass only if <span class="math inline">\(v \le v_\star\)</span> (cold)</li>
-<li class="fragment">Elastic collisions remix velocities in the bulks; the membrane only gates crossings</li>
+<li class="fragment">Elastic collisions remix velocities; the membrane only gates crossings</li>
 </ul>
 </div>
 <aside class="notes">
-Match the canvas: red = hot, blue = cold. Threshold in the sim is <span class="math inline">\(v_\star=3\)</span> with initial speed <span class="math inline">\(5\)</span>. Right bulk heats. The compartments include already drew the extra partitions.
+Match the canvas: red = hot, blue = cold, green strip = membrane. Threshold in the sim is <span class="math inline">\(v_\star=3\)</span> with initial speed <span class="math inline">\(5\)</span>.
 </aside>
 </section>
-<section id="steady-state-is-two-ledgers" class="slide level2">
-<h2>Steady State Is Two Ledgers</h2>
-<p>A closed box in steady state needs <em>both</em> currents through the gate to vanish. That is not detailed balance.</p>
+<section id="steady-state-balanced-fluxes" class="slide level2">
+<h2>Steady State <span class="math inline">\(=\)</span> Balanced Fluxes</h2>
+<p>In a steady state the number of balls leaving left equals the number leaving right — detailed balance of membrane crossings.</p>
 <div>
 <ul>
-<li class="fragment">Number current: balls left <span class="math inline">\(\to\)</span> right equal balls right <span class="math inline">\(\to\)</span> left, or density keeps drifting</li>
-<li class="fragment">Energy current: the two streams carry different energy per ball</li>
-<li class="fragment">Detailed balance would match every velocity class with its reverse — the gate forbids that</li>
-</ul>
-</div>
-<aside class="notes">
-Name the distinction once. Flux balance of a conserved quantity is necessary for a NESS of that quantity. Detailed balance is stronger: each process equals its reverse. The membrane is non-reciprocal, so velocity-resolved detailed balance fails by construction. Board number versus energy next.
-</aside>
-<div class="figure">
-<div id="demon-two-ledgers-figure" class="figure-frame">
-<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/physics/demon-two-ledgers.svg" width="80%" style=" ">
-</object>
-</div>
-</div>
-<aside class="notes">
-Two ledgers at the same gate. For a closed box, a steady bulk <em>number</em> requires equal counts both ways. The hot stream carries more energy per ball than the cold stream, so those equal counts are not an energy balance. A steady bulk <em>energy</em> would need the lower pair of arrows to match as well.
-</aside>
-</section>
-<section id="maxwellians-cannot-close-both" class="slide level2">
-<h2>Maxwellians Cannot Close Both</h2>
-<p>Assume Maxwellian bulks at the gate. Then number balance leaves a heat current.</p>
-<div>
-<ul>
-<li class="fragment">Hot crossings carry more energy per ball than cold crossings</li>
-<li class="fragment">Equal <em>number</em> fluxes still leave a net <em>energy</em> flux</li>
-<li class="fragment">Closing energy as well would break number — unless <span class="math inline">\(T_L=T_R\)</span>, which the filter drives away from</li>
-<li class="fragment">So the distributions <em>at the gate</em> are not the bulk Maxwellians</li>
-</ul>
-</div>
-<aside class="notes">
-This is the compartments paying rent. The distant left and right may be Maxwellian. The kinetic layers cannot be, because that is the only way a closed box can stop evolving. Do not dive into the <span class="math inline">\(T_L\)</span>, <span class="math inline">\(T_R\)</span> numbers until they ask; those numbers force the illegal assumption.
-</aside>
-</section>
-<section id="a-first-cut-close-only-the-number-ledger" class="slide level2">
-<h2>A First Cut: Close Only the Number Ledger</h2>
-<p>If we force Maxwellian bulks and balance <em>counts</em> only, the temperatures split and gas entropy falls.</p>
-<div>
-<ul>
-<li class="fragment">Assume each bulk thermalises to a 2D Maxwellian at its own <span class="math inline">\(T_L\)</span>, <span class="math inline">\(T_R\)</span></li>
+<li class="fragment">Assume each side thermalises to a 2D Maxwellian at its own <span class="math inline">\(T_L\)</span>, <span class="math inline">\(T_R\)</span></li>
 <li class="fragment">Particle flux <span class="math inline">\(L\to R\)</span>: only the hot tail, <span class="math inline">\(v&gt;v_\star\)</span></li>
 <li class="fragment">Particle flux <span class="math inline">\(R\to L\)</span>: only the cold body, <span class="math inline">\(v\le v_\star\)</span></li>
-<li class="fragment">Number ledger: <span class="math inline">\(\Phi_L^{\mathrm{hot}}(n_L,T_L)=\Phi_R^{\mathrm{cold}}(n_R,T_R)\)</span></li>
+<li class="fragment">Steady state: <span class="math inline">\(\Phi_L^{\mathrm{hot}}(n_L,T_L)=\Phi_R^{\mathrm{cold}}(n_R,T_R)\)</span></li>
 </ul>
 </div>
 <aside class="notes">
-These numbers are what you get if you extend local equilibrium up to the gate and ignore the energy ledger. Live <span class="math inline">\(T_L\approx 1.9\)</span>, <span class="math inline">\(T_R\approx 23\)</span> from the plot. They are a first cut on direction, not a true NESS.
+Local equilibrium is an approximation: collisions fast compared with crossings. Energy flux need not balance under the same Maxwellians — flag that after the calculation.
 </aside>
 <div class="figure">
 <div id="maxwell-membrane-detailed-balance-figure" class="figure-frame">
@@ -940,42 +873,55 @@ These numbers are what you get if you extend local equilibrium up to the gate an
 </div>
 </div>
 <aside class="notes">
-Left: temperatures from balancing <em>number</em> flux at equal populations, forcing Maxwellian bulks all the way to the gate. Right: entropy of that two-Maxwellian state minus the single-temperature equilibrium. The red point is the simulation threshold <span class="math inline">\(v_\star=3\)</span>. These numbers close only one ledger.
+Left: temperatures on each side of the selective membrane from particle-flux detailed balance at equal populations (simulation energy budget). Right: entropy of the two-Maxwellian state minus the single-temperature equilibrium. The red point is the simulation threshold <span class="math inline">\(v_\star=3\)</span>.
 </aside>
 </section>
-<section id="the-split-is-the-illegal-extension" class="slide level2">
-<h2>The Split Is the Illegal Extension</h2>
-<p>For the simulation budget, number-flux balance at equal <span class="math inline">\(N\)</span> yields <span class="math inline">\(T_L\approx 1.9\)</span>, <span class="math inline">\(T_R\approx 23\)</span> (<span class="math inline">\(k_B=1\)</span>).</p>
+<section id="temperatures-split-entropy-falls" class="slide level2">
+<h2>Temperatures Split; Entropy Falls</h2>
+<p>For the simulation budget, particle-flux balance at equal <span class="math inline">\(N\)</span> yields <span class="math inline">\(T_L\approx 1.9\)</span>, <span class="math inline">\(T_R\approx 23\)</span> (<span class="math inline">\(k_B=1\)</span>) — a large split.</p>
 <div>
 <ul>
 <li class="fragment">Unconstrained equilibrium: one <span class="math inline">\(T_0=\langle\mathrm{KE}\rangle\)</span>, entropy <span class="math inline">\(S_0\)</span></li>
-<li class="fragment">This first cut: <span class="math inline">\(S_{\mathrm{ss}}&lt;S_0\)</span> (here <span class="math inline">\(\Delta S\approx -24\)</span> nats)</li>
-<li class="fragment">The gas <em>under this assumption</em> looks like a second-law violation</li>
-<li class="fragment">The assumption was the Maxwellian gate — which the energy ledger already forbade</li>
+<li class="fragment">Membrane steady state: <span class="math inline">\(S_{\mathrm{ss}}&lt;S_0\)</span> (here <span class="math inline">\(\Delta S\approx -24\)</span> nats at <span class="math inline">\(N=39\)</span>)</li>
+<li class="fragment">The gas alone looks like a second-law violation</li>
 </ul>
 </div>
 <aside class="notes">
-Canvas entropy is a coarse velocity-bin proxy; this <span class="math inline">\(S\)</span> is the ideal-gas Shannon entropy of two Maxwellians. Do not harvest the <span class="math inline">\(\Delta S\)</span>. The fork is next: where the entropy is allowed to sit once the gate is not Maxwellian.
+Live the numbers from the plotcode printout. Canvas entropy is a coarse velocity-bin proxy; this <span class="math inline">\(S\)</span> is the ideal-gas Shannon entropy of two Maxwellians.
 </aside>
 </section>
-<section id="where-can-the-entropy-sit" class="slide level2">
-<h2>Where Can the Entropy Sit?</h2>
-<p>The two ledgers do not close under a Maxwellian gate. That is the fork, not the resolution.</p>
+<section id="maxwellians-are-only-an-approximation" class="slide level2">
+<h2>Maxwellians Are Only an Approximation</h2>
+<p>Particle balance and energy balance cannot both hold for two Maxwellians — the true steady state depletes velocity tails.</p>
 <div>
 <ul>
-<li class="fragment">Illegal coarse graining: Maxwellian all the way to <span class="math inline">\(v_\star\)</span> — both ledgers cannot close</li>
-<li class="fragment">Physical trapdoor: the door thermalises <span class="citation" data-cites="Smoluchowski-gultigkeitsgrenzen14">(Smoluchowski, 1914)</span></li>
-<li class="fragment">Memoryful policy: the record fills; erasure is on the ledger <span class="citation" data-cites="Szilard-intelligenter29 Landauer-irreversibility61">(Landauer, 1961; Szilard, 1929)</span></li>
-<li class="fragment">One ensemble for the whole box: sorting is a fluctuation, not a cycle <span class="citation" data-cites="Maxwell-theory71">(Maxwell, 1871)</span></li>
+<li class="fragment">Hot crossings carry more energy per ball than cold crossings</li>
+<li class="fragment">Equal <em>number</em> fluxes still leave a net <em>energy</em> flux under Maxwellians</li>
+<li class="fragment">Collisions rebuild the tails; the membrane continually sculpts them</li>
+<li class="fragment">Local-<span class="math inline">\(T\)</span> picture still predicts the direction and an entropy deficit</li>
 </ul>
 </div>
 <aside class="notes">
-Pointer only. Do not open Szilard, Landauer, or Ellis here. Name the families so the next worksheet has somewhere to go. Maxwell’s own point is already on the quote slide: the second law is about bodies we deal with in large masses.
+Do not oversell the numbers as exact NESS values. The point is the ledger: gas entropy down; cost elsewhere.
+</aside>
+</section>
+<section id="where-did-the-entropy-go" class="slide level2">
+<h2>Where Did the Entropy Go?</h2>
+<p>The membrane implements Maxwell’s sorting policy. The gas entropy falls; Clausius is not repealed.</p>
+<div>
+<ul>
+<li class="fragment">Prescription: the velocity gate (who may cross)</li>
+<li class="fragment">No-go: you cannot harvest that <span class="math inline">\(\Delta S\)</span> for free in a cycle</li>
+<li class="fragment">Next: Szilard priced measurement; Landauer priced erasure; Bennett (1982) made the erasure resolution</li>
+</ul>
+</div>
+<aside class="notes">
+Bridge forward. Ellis locates dissipation at measurement/gating; information ledger locates it at stored outcomes and erasure. Same Clausius, different bookkeeping.
 </aside>
 </section>
 <section id="the-demon-sorts-groups" class="slide level2">
 <h2>The Demon Sorts Groups</h2>
-<p>Hot versus cold is a coarse label — week 2’s grouping, now with a policy.</p>
+<p>Hot versus cold is a coarse label — this lecture’s grouping, now with a policy.</p>
 <div>
 <ul>
 <li class="fragment">Group <span class="math inline">\(G\)</span>: pass / no-pass under the membrane rule (tail vs body)</li>
@@ -984,7 +930,7 @@ Pointer only. Do not open Szilard, Landauer, or Ellis here. Name the families so
 </ul>
 </div>
 <aside class="notes">
-Callback to the die <em>and</em> to the extra partitions. Maxwellians are licensed in the distant bulks, not at the gate. Hot versus cold is a second grouping, now in velocity, on top of the spatial one. The number-flux <span class="math inline">\(T_L\)</span>, <span class="math inline">\(T_R\)</span> split already used local equilibrium as a hypothesis — and the energy ledger forbade extending it to the membrane.
+Callback to the die: the demon pays attention to <span class="math inline">\(H(w)\)</span> over coarse velocity sets and hopes the within-group term stays near equilibrium. The detailed-balance calculation above already used that hypothesis.
 </aside>
 </section>
 <section id="lumpability-pointer" class="slide level2">
@@ -1001,12 +947,8 @@ Callback to the die <em>and</em> to the extra partitions. Maxwellians are licens
 <section id="further-reading" class="slide level2 scrollable">
 <h2 class="scrollable">Further Reading</h2>
 <ul>
-<li><p>Exercise 4.1 and the discussion on pp.~69–70 of MacKay-information03</p></li>
+<li><p>Exercise 4.1 and the discussion on pp. 69–70 of <span class="citation" data-cites="MacKay-information03">MacKay (2003)</span></p></li>
 <li><p>limiting density of discrete points of <span class="citation" data-cites="Jaynes-information63">Jaynes (1963)</span></p></li>
-<li><p>the trapdoor is in the bath of Smoluchowski-gultigkeitsgrenzen14</p></li>
-<li><p>one bit of the sorting policy of Szilard-intelligenter29</p></li>
-<li><p>erasure cost of Landauer-irreversibility61</p></li>
-<li><p>logical irreversibility of erasure, not a patch on Clausius of Bennett-thermodynamics82</p></li>
 </ul>
 </section>
 <section id="thanks" class="slide level2 scrollable">
@@ -1023,29 +965,11 @@ Callback to the die <em>and</em> to the extra partitions. Maxwellians are licens
 <section id="references" class="slide level2 unnumbered scrollable">
 <h2 class="unnumbered scrollable">References</h2>
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
-<div id="ref-Baez-characterisation11" class="csl-entry" role="doc-biblioentry">
-Baez, J.C., Fritz, T., Leinster, T., 2011. A characterization of entropy in terms of information loss. Entropy 13, 1945–1957. <a href="https://doi.org/10.3390/e13111945">https://doi.org/10.3390/e13111945</a>
-</div>
 <div id="ref-Jaynes-information63" class="csl-entry" role="doc-biblioentry">
 Jaynes, E.T., 1963. Information theory and statistical mechanics, in: Ford, K.W. (Ed.), Brandeis University Summer Institute Lectures in Theoretical Physics, Vol. 3: Statistical Physics. W. A. Benjamin, Inc., New York, pp. 181–218.
 </div>
-<div id="ref-Khinchin-information57" class="csl-entry" role="doc-biblioentry">
-Khinchin, A.I., 1957. Mathematical foundations of information theory. Dover, New York.
-</div>
-<div id="ref-Landauer-irreversibility61" class="csl-entry" role="doc-biblioentry">
-Landauer, R., 1961. Irreversibility and heat generation in the computing process. IBM Journal of Research and Development 5, 183–191. <a href="https://doi.org/10.1147/rd.53.0183">https://doi.org/10.1147/rd.53.0183</a>
-</div>
 <div id="ref-MacKay-information03" class="csl-entry" role="doc-biblioentry">
 MacKay, D.J.C., 2003. Information theory, inference and learning algorithms. Cambridge University Press, Cambridge, U.K.
-</div>
-<div id="ref-Maxwell-theory71" class="csl-entry" role="doc-biblioentry">
-Maxwell, J.C., 1871. Theory of heat. Longmans, Green; Co, London.
-</div>
-<div id="ref-Smoluchowski-gultigkeitsgrenzen14" class="csl-entry" role="doc-biblioentry">
-Smoluchowski, M. von, 1914. Gültigkeitsgrenzen des <span>Z</span>weiten <span>H</span>auptsatzes der <span>W</span>ärmetheorie, in: Planck, M. (Ed.), Vorträge Über Die Kinetische <span>T</span>heorie Der <span>M</span>aterie Und Der <span>E</span>lektrizität: Gehalten in <span>G</span>öttingen Auf Einladung Der <span>K</span>ommission Der <span>W</span>olfskehlstiftung. Teubner, Leipzig, pp. 90–111.
-</div>
-<div id="ref-Szilard-intelligenter29" class="csl-entry" role="doc-biblioentry">
-Szilard, L., 1929. <span>Ü</span>ber die <span>E</span>ntropieverminderung in einem thermodynamischen <span>S</span>ystem bei <span>E</span>ingriffen intelligenter <span>W</span>esen. Zeitschrift f<span>ü</span>r Physik 53, 840–856. <a href="https://doi.org/10.1007/BF01341281">https://doi.org/10.1007/BF01341281</a>
 </div>
 </div>
 </section>
