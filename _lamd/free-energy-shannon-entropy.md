@@ -49,6 +49,8 @@ reading:
 
 \notes{No class test *today*. Next week there is a class test, even if the webpage said otherwise on 27 October. Laptops away; notes by hand. The slot is 10:05--11:55 (110 minutes, not 120). As taught, the homework debrief ran about twenty-four minutes, then the heat thread as far as Joule before the break. Helmholtz was the LO1 payload after the break, on the visualiser, before the Clausius slides. Maxwell--Boltzmann and Gibbs were pointers, not the planned decks. Shannon / Jaynes / Wiener were a close preview. The entropy game and MacKay's weighing problem were not given; they now open Week 4 after Quiz 2. Shannon axioms, HMC, $Z$, KL, Schottky and finite-time live in `_lamd/parking.md`.}
 
+\machinereviewlink
+
 \subsection{This Session}
 
 \slidesincremental{
@@ -164,6 +166,12 @@ where $U=\expSamp{E}$ is inner energy, $F$ is Helmholtz free energy, $T$ is temp
 * Next: class test (Quiz 2), then grouping, then the demon
 * Worksheet 2: $H$ vs $S$ — identity or metaphor?
 }
+
+\machinereview
+
+\ifdef{NOTES}
+\include{includes/free-energy-shannon-entropy-machine-review.md}
+\endif
 
 \reading
 
