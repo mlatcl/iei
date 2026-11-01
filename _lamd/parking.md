@@ -97,6 +97,7 @@ needs them.}
 
 \include{_books/includes/welling-lu-holdijk.md}
 \include{_information/includes/welling-boltzmann-free-energy.md}
+\include{_physics/includes/gaussian-quadratic-free-energy.md}
 
 \subsection{Shannon Entropy}
 
