@@ -50,9 +50,11 @@ reading:
 
 \notes{First meeting. FW26. The slot is 10:05--11:55 (110 minutes, not 120); no class test. Worksheet 1 (Socratic dialogue) is released and due by 10:00 at the start of lecture 2 (20 October). Quiz 1 is also at the start of lecture 2: probability foundations and the Week 1 energy / Boltzmann seeds. Hydrodynamica, entropy review, and embodiment open lecture 2 after the quiz. Maxwell / Landauer and the no-go contrast are previews, not the later treatments.}
 
+\machinereviewlink
+
 \subsection{This Session}
 
-\notes{The course is called Information, Energy and Intelligence because information is the well-defined quantity, intelligence is not, and energy is how the two meet a physical ledger. After the break comes a handwritten reflection on the worksheet habit: we mark the quality of the probe, not the prose. Socrates is previewed in the opening as "I know that I do not know" before the worksheet slides. *The Atomic Human* comes out as a trade book, not a textbook.}
+\notes{The course is called Information, Energy and Intelligence because information is the well-defined quantity, intelligence is not, and energy is how the two meet a physical ledger. After the break comes a handwritten reflection on the worksheet habit: we mark the quality of the probe, not the prose. Socrates is previewed in the opening from *Apology* 21d: he does not think he knows what he does not know --- a more modest claim than the popular paraphrase "I know that I do not know". *The Atomic Human* comes out as a trade book, not a textbook.}
 
 \slidesincremental{
 * Room FW26; eight Tuesdays from today
@@ -117,7 +119,7 @@ reading:
 
 \include{_ml/includes/common-distributions-review.md}
 
-\notes{Colour, not examinable beyond recognising the families. Football scores are a rough Poisson with rate about one goal per team per match. De Moivre used the Gaussian as a binomial approximation; Laplace used the same quadratic in what we would now call a Laplace approximation, expanding a log posterior about its mode; Gauss credits Laplace when he fits the orbit of Ceres. Heights are a standard story and an invalid support, because a Gaussian puts mass on negative height. The velocities of air, to the extent the gas is ideal, are Gaussian --- that is the Maxwell--Boltzmann distribution on the Cartesian components, with temperature setting the variance. The cosmic microwave background is another Gaussian that people have spent a great deal of money testing for non-Gaussianity (Planck).}
+\notes{Colour, not examinable beyond recognising the families. Football scores are a rough Poisson; top-flight averages are nearer $1.3$--$1.6$ goals per team per match, not one. De Moivre used the Gaussian as a binomial approximation; Laplace used the same quadratic in what we would now call a Laplace approximation, expanding a log posterior about its mode. Gauss fitted Ceres in 1801; the normal-law derivation, which acknowledges Laplace's evaluation of the Gaussian integral, is in *Theoria Motus* (1809). Heights are a standard story and an invalid support, because a Gaussian puts mass on negative height. The velocities of air, to the extent the gas is ideal, are Gaussian --- that is the Maxwell--Boltzmann distribution on the Cartesian components, with temperature setting the variance. The cosmic microwave background is another Gaussian that people have spent a great deal of money testing for non-Gaussianity (Planck).}
 
 \include{includes/week1-textbooks-aside.md}
 
@@ -141,21 +143,21 @@ way in which you can develop your understanding. Learning to express that doubt 
 
 \newslide{Curiosity, Then Skepticism}
 
-\notes{The general approach we'd like to take to this course is that of a "community of inquiry" (see Chapter 4, @Lipman-thinking12). The unusual modern twist on this notion is that the LLMs themselves become part of that community.}
+\notes{The general approach we'd like to take to this course is that of a "community of inquiry" (see Chapter 4 of *Thinking in Education*, 2nd ed.\ 2003, @Lipman-thinking12). The unusual modern twist on this notion is that the LLMs themselves become part of that community.}
 
 \notes{Each of us will have different perspectives on what an LLM does and does not provide. You are welcome to bring those perspectives into your work. In particular, for each worksheet, you will be asked to reflect on the LLM responses and the process. Part of that reflection should be specific to the exercise and what you learnt about the subject. But I would like part of that reflection to be general about your understanding of the LLM and what it does and doesn't provide. For worksheets 2, 3, and 4 a portion of that reflection will be on how you feel your understanding of LLMs as a tool of inquiry has evolved (if it evolved!).} 
 
-\notes{The assessment model is based on is 
+\notes{The assessment model is based on
 1. a form of questioning enquiry generally called "the Socratic method" is an informative way of exploring a topic
-2. an impression that the current generation of LL models is weak when asked to sustain Socratic dialogue. Answers tend to be expansive and when read carefully can lead to 'dialectical vertigo'
+2. an impression that the current generation of LLMs is weak when asked to sustain Socratic dialogue. Answers tend to be expansive and when read carefully can lead to 'dialectical vertigo'
 3. The new idea we're testing "Socratic method" can be deployed by reversing the role of Socrates and the student.
 
 So in other words we are asking you to take on the role of Socrates in these conversations.
 }
 
-\notes{The general background is an idea that in order to develop your understanding of a subject through interaction with an LLM you need two components to your enquiry: *curiousity* and *skepticism*. The curiousity allows you to generate the prompt and the LLM to regurgitate some of its knowled (or perform searches that it summarises). But the skepticism engages with that summary through challenging the conclusions that the LLM has. In the Socratic *elenchus* that challenge is through pointing out a logical inconsistency that arises  (@Vlastos-socratic93), perhaps through a side implication. For our purpose that challenge may not take exactly that form. But it should push back on the narrative the LLM provides. Generating such push back also requires you to engage with the material the LLM has provided.}
+\notes{The general background is an idea that in order to develop your understanding of a subject through interaction with an LLM you need two components to your enquiry: *curiosity* and *skepticism*. The curiosity allows you to generate the prompt and the LLM to regurgitate some of its knowledge (or perform searches that it summarises). But the skepticism engages with that summary through challenging the conclusions that the LLM has. In the Socratic *elenchus* that challenge is through pointing out a logical inconsistency that arises (@Vlastos-socratic93), perhaps through a side implication. For our purpose that challenge may not take exactly that form. But it should push back on the narrative the LLM provides. Generating such push back also requires you to engage with the material the LLM has provided.}
 
-\notes{For Socrates these are curated dialogues (written by Plato, e.g. @Fowler-euthyphro14). So its normally the case that his challenges hit home. In your case, that won't normally be the case. And we don't expect you to curate your dialogue. What we'd like instead is a period of inquiry that is then summarised by a single dialogue that is played out with one LLM in a short session of 10 prompts and responses.}
+\notes{For Socrates these are curated dialogues (written by Plato; the modest "I do not think I know what I do not know" is *Apology* 21d, alongside the *Euthyphro* @Fowler-euthyphro14). So it is normally the case that his challenges hit home. In your case, that will not normally be the case. And we don't expect you to curate your dialogue. What we'd like instead is a period of inquiry that is then summarised by a single dialogue that is played out with one LLM in a short session of 10 prompts and responses.}
 
 \notes{Classical Socratic practice (*elenchus*) tests consistency by questioning, not by lecturing. Contemporary seminar pedagogy keeps the same habit: the questioner holds the inquiry. Current LLMs default to exposition and agreement; they rarely sustain adversarial follow-ups without being steered. Assigning the student the Socrates role forces engagement with the subject matter rather than passive acceptance of a fluent summary.}
 
@@ -185,7 +187,7 @@ So in other words we are asking you to take on the role of Socrates in these con
 * Then a short **handwritten** reflection (print the proforma; scan to PDF)
 }
 
-\notes{Worksheets are marked with 5 points for curiosity, 5 for skepticism, and 5 points for the reflection (15% of the module). Worksheet 1 uses a markdown dialogue template (YAML records CRSid, model, and interface) and a separate handwritten reflection proforma. Moodle upload names follow the departmental pattern `L172_<CRSid>_worksheet1_dialogue.md` and `L172_<CRSid>_worksheet1_reflection.pdf`. Use your CRSid in the YAML and on the proforma; do not write your full name.}
+\notes{Each worksheet is marked with 5 points for curiosity, 5 for skepticism, and 5 points for the reflection; the four worksheets together are 15\% of the module. See the [Assessment](https://mlatcl.github.io/iei/assessment.html) page. Worksheet 1 uses a markdown dialogue template (YAML records CRSid, model, and interface) and a separate handwritten reflection proforma. Moodle upload names follow the departmental pattern `L172_<CRSid>_worksheet1_dialogue.md` and `L172_<CRSid>_worksheet1_reflection.pdf`. Use your CRSid in the YAML and on the proforma; do not write your full name.}
 
 \slidesincremental{
 * Templates: assessments/handouts/ (dialogue.md + reflection proforma)
@@ -248,6 +250,14 @@ So in other words we are asking you to take on the role of Socrates in these con
 * Seed: $p_i = e^{-\beta E_i}/Z$
 }
 
+\notes{
+* Product rule, sum rule, Bayes (including the barrels inversion)
+* Named families: Bernoulli, binomial, Poisson, multinomial, Gaussian
+* Given a distribution, write its energy; given an energy, normalise it
+* Identify least squares and cross-entropy as negative log-likelihoods
+* Seed: $p_i = e^{-\beta E_i}/Z$
+}
+
 \subsection{After This Lecture}
 
 \notes{Worksheet 1: Socratic dialogue on the *history of the name* entropy --- why Shannon used the word; von Neumann anecdote versus Shannon's Tolman footnote and the Wiener--Gibbs trail. Exactly ten turns (mandated opening pair, then free probes); handwritten reflection on the scanned proforma (separate upload). Use the handouts. Due 20 October, start of lecture 2. Quiz 1 in the first ten minutes of lecture 2 covers today's probability review and energy / Boltzmann seeds; lecture 2 then presses Laplace's molecule as anachronism, Bernoulli's assumptions, and the ensemble as coarse-graining before Hydrodynamica and the entropy bridge. As delivered, a copy of *The Atomic Human* went to the student who asked the most questions; that is not part of the mark.}
@@ -257,6 +267,12 @@ So in other words we are asking you to take on the role of Socrates in these con
 * Quiz 1 next week: probability and Week 1 energy seeds
 * Then: Hydrodynamica → entropy bridge → embodiment
 }
+
+\machinereview
+
+\ifdef{NOTES}
+\include{includes/intro-review-motivation-machine-review.md}
+\endif
 
 \reading
 
