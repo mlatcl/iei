@@ -135,7 +135,6 @@ where $U=\expSamp{E}$ is inner energy, $F$ is Helmholtz free energy, $T$ is temp
 \include{includes/week3-helmholtz-as-taught.md}
 \include{_physics/includes/carnot-ts-cycle.md}
 
-\include{_physics/includes/gaussian-quadratic-free-energy.md}
 \include{_physics/includes/free-energy-entropy-two-sides.md}
 
 \include{includes/week3-shannon-wiener-preview.md}
@@ -144,8 +143,6 @@ where $U=\expSamp{E}$ is inner energy, $F$ is Helmholtz free energy, $T$ is temp
 
 \notes{The physics story arrived at $F=U-TS$. The information reading that Week 2 did not reach --- guessing, MacKay's weighing problem, and die coarse-graining --- was named at 10:05 on 27 October and deferred at 10:33 and again at 11:56. Those slides now open Week 4 after Quiz 2, and they are the setup for Maxwell's demon: the box as a group, the being who looks inside. Do not keep a second copy here.}
 
-\speakernotes{As taught 27 October: we did not get onto the entropy game. It is next week, after the class test.}
-
 \addreading{@Callen-thermostatistics85}{Chapters 1--4}
 \addreading{@Callen-thermostatistics85}{Chapters 5--6}
 
@@ -153,11 +150,11 @@ where $U=\expSamp{E}$ is inner energy, $F$ is Helmholtz free energy, $T$ is temp
 
 \slidesincremental{
 * Heat thread: Black $\to$ Carnot $\to$ Rumford $\to$ air thermometer $\to$ Kelvin $\to$ Joule
-* Helmholtz $F=U-TS$ on the board; Clausius after; Welling reads $F$, we read $S$
+* Helmholtz $F=U-TS$; Clausius after; Welling reads $F$, we read $S$
 * Shannon / Jaynes / Wiener preview; entropy game / MacKay next week
 }
 
-\notes{The information game, MacKay and grouping open Week 4 after Quiz 2. Shannon axioms, $Z$ as generating function, KL, Schottky and finite time live in `_lamd/parking.md`. Interpret later: how entropy is understood today (week 5, then week 8); chain rule as the source of multi-information (week 8). DPI proof is week 8. Legendre transform on $F$ waits for week 5.}
+\notes{The information game, MacKay and grouping open Week 4 after Quiz 2.}
 
 \subsection{After This Lecture}
 
