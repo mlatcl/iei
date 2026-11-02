@@ -1,0 +1,7 @@
+{% comment %}
+Unix-second cutoff for listing and releasing lectures: site.time + lookahead_days.
+Set site.lookahead_days in _config.yml (0 means "today only" once future: true).
+{% endcomment %}
+{% assign lookahead_days = site.lookahead_days | default: 0 %}
+{% assign lookahead_seconds = lookahead_days | times: 86400 %}
+{% assign lookahead_cutoff = site.time | date: "%s" | plus: lookahead_seconds %}
