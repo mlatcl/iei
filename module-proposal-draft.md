@@ -125,25 +125,25 @@ The module is assessed by two paired components that together ensure both explor
 
 *Worksheets (60% total, 15% each)*
 
-Each worksheet consists of a short Python notebook and a written reflection (300–500 words). Use of LLMs is explicitly permitted and encouraged for both code generation and written exploration. Formative feedback on each worksheet is issued before the next worksheet opens (fortnightly cycle). Summative feedback is issued within 21 days of the final submission deadline.
+Worksheets 1–3 are Socratic LLM dialogues (curiosity then skepticism) plus a handwritten reflection. Worksheet 4 is a short Python notebook plus written reflection. LLMs are permitted on worksheets. Feedback on each of W1–W3 is issued before the next worksheet is due; summative feedback on W4 within 21 days.
 
 | Worksheet | Due | Topics | LOs | Weight |
 |-----------|-----|--------|-----|--------|
-| Worksheet 1: Socratic LLM dialogue on the history of entropy | Start of Week 2 (20 Oct) | Shannon naming; Socrates habit | LO1, LO2 | 15% |
-| Worksheet 2: Socratic dialogue — Shannon $H$ vs Boltzmann $S$ | Start of Week 4 (3 Nov) | Identity vs metaphor; LO2–LO3 | LO2, LO3 | 15% |
-| Worksheet 3: LLM worksheet on weeks 4–5 material | Start of Week 6 (17 Nov) | Demon / Landauer / MaxEnt; curiosity–skepticism | LO4–LO7 | 15% |
-| Worksheet 4: LLM worksheet on weeks 6–7 material | Start of Week 8 (1 Dec) | Geometry / multi-information bridge; curiosity–skepticism | LO8–LO13 | 15% |
+| Worksheet 1: Socratic dialogue on the history of entropy | Start of Week 2 (20 Oct) | Shannon naming; Socrates habit | LO1, LO2 | 15% |
+| Worksheet 2: Socratic dialogue — Shannon $H$ vs Boltzmann $S$ | Start of Week 4 (3 Nov) | Identity vs metaphor | LO2, LO3 | 15% |
+| Worksheet 3: Socratic dialogue on coarse-graining Maxwell | Start of Week 6 (17 Nov) | Demon as compartments / two ledgers | LO4 | 15% |
+| Worksheet 4: Notebook — multi-info, von Neumann, geometries, limits | Start of Week 8 (1 Dec) | $I+H=C$; three geometries; perpetual-motion synthesis | LO7–LO13 | 15% |
 
-*In-class Moodle quizzes (40% total, 10% each)*
+*In-class quizzes (40% total, 10% each)*
 
-Each quiz is administered at the start of the relevant lecture (10 minutes, ~10 auto-marked items). Students use their own phones or laptops; no external resources are permitted. Because quizzes are invigilated and in-person, LLM assistance is not possible — these provide a direct comprehension check independent of worksheet work. Questions are drawn from large YAML banks and auto-graded.
+Each quiz is administered at the start of the relevant lecture (10 minutes, ~10 auto-marked items). Because quizzes are invigilated and in-person, LLM assistance is not possible — these authenticate the worksheets. Questions are drawn from large YAML banks (Moodle) or a fixed paper sitting (Quiz 2).
 
 | Quiz | Administered | Topics tested | LOs | Weight |
 |------|-------------|---------------|-----|--------|
 | Quiz 1 | Start of Week 2 | Probability/entropy foundations; Week 1 Boltzmann seeds | LO1–LO3 | 10% |
-| Quiz 2 | Start of Week 5 | MaxEnt, exponential family, Landauer | LO4–LO7 | 10% |
-| Quiz 3 | Start of Week 7 | Fisher metric, natural gradient, dually flat geometry | LO8, LO9 | 10% |
-| Quiz 4 | Start of Week 8 | Multi-information, I + H = C, DPI/IB, von Neumann, limits | LO10–LO13 | 10% |
+| Quiz 2 | Start of Week 4 | Ensemble, Helmholtz, Shannon $H$ vs Boltzmann $S$ | LO1–LO3 | 10% |
+| Quiz 3 | Start of Week 6 | Grouping, Maxwell demon, MaxEnt, exponential family | LO4–LO7 | 10% |
+| Quiz 4 | Start of Week 8 | Fisher geometry, projection / natural gradient, multi-info, limits | LO8–LO13 | 10% |
 
 ACS constraints satisfied: 60% pass, 75% distinction, formative feedback issued fortnightly, summative feedback within 21 days of final submission. Worksheets satisfy the Cambridge "coursework" definition (submission window > 24 hours).
 
