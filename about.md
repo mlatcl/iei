@@ -23,23 +23,50 @@ Develop the mathematical connections between thermodynamics, information theory,
 Entropy appears in three apparently separate traditions — thermodynamics (Boltzmann, Gibbs), information theory (Shannon), and Bayesian inference (Jaynes) — and turns out to be the same mathematical object viewed from different operational assumptions. The operational split is: **entropy forbids, probability prescribes.** The course covers:
 
 1. probability and entropy review; Socratic LLM method; that theme via perpetual motion and the human–machine bandwidth gap of *The Atomic Human*; then the Boltzmann distribution and free energy,
-2. Shannon entropy and its formal equivalence to thermodynamic entropy; mutual information and the data-processing inequality (statement); MaxEnt and the exponential family,
-3. Maxwell's demon and Landauer's principle: the thermodynamic cost of decision-making,
+2. Shannon entropy and its formal equivalence to thermodynamic entropy; grouping / missing measure; MaxEnt and the exponential family,
+3. Maxwell's demon as compartments and two ledgers; Landauer's principle as the thermodynamic cost of decision-making,
 4. information geometry: the Fisher metric, Crooks' thermodynamic length, dually flat geometry, MaxEnt as projection, and natural gradient descent,
 5. multi-information, $I+H=C$, DPI and the information bottleneck, von Neumann entropy,
 6. probability transport, Schrödinger bridges, and information-theoretic limits on intelligent agency.
 
 Four ten-minute in-class quizzes sit at the start of lectures 2, 4, 6 and 8.
 
-Worksheets use LLMs under a Socratic protocol introduced in lecture 1: students act as Socrates (curiosity, then skepticism). Each worksheet is an LLM-centred exercise plus reflection, due at the start of weeks 2, 4, 6 and 8. Moodle filenames use `L172_<CRSid>_worksheet…`; file contents are anonymous (candidate number, not CRSid or name).
+Worksheets 1–3 are Socratic LLM dialogues (curiosity then skepticism) plus a handwritten reflection. Worksheet 4 is a short notebook plus written reflection. Due at the start of weeks 2, 4, 6 and 8. Moodle filenames use `L172_<CRSid>_worksheet…`; file contents are anonymous (candidate number, not CRSid or name).
 
-## Objectives
+## Learning outcomes
 
-Equip students to reason rigorously about entropy across thermodynamics, information theory, and Bayesian inference, and to evaluate claims about intelligent systems using information-theoretic constraints.
+| ID | Students will be able to… | Week |
+|----|---------------------------|------|
+| LO1 | Decompose the Boltzmann distribution into internal energy, entropy, and Helmholtz free energy, and interpret each term | 2 |
+| LO2 | Derive Shannon entropy as uncertainty and prove its formal equivalence to thermodynamic (Gibbs) entropy in equilibrium | 3 |
+| LO3 | Derive the canonical ensemble and use the partition function to compute mean energy, entropy, and free energy | 3 |
+| LO4 | Explain Maxwell's demon, locate the apparent second-law violation, and apply Landauer's principle | 4 |
+| LO5 | Apply Jaynes' maximum entropy principle with Lagrange multipliers under moment constraints | 5 |
+| LO6 | Identify the exponential family as the MaxEnt family (canonical, Gaussian, Bernoulli, …) | 5 |
+| LO7 | Compare information-theoretic, thermodynamic, and Bayesian perspectives on entropy | 5 |
+| LO8 | Describe the manifold of distributions with the Fisher metric and the dually flat geometry of exponential families | 6 |
+| LO9 | Interpret MaxEnt as a projection and explain why natural gradient descent is the geometrically correct gradient | 7 |
+| LO10 | Define multi-information $I$, state $I+H=C$, and relate it to the DPI and information bottleneck | 8 |
+| LO11 | Explain why classical $I=C$ forces $H=0$, and show von Neumann entropy resolves nontrivial marginals | 8 |
+| LO12 | Articulate probability transport as an abstraction of agency (Fisher–Rao / Wasserstein / Schrödinger bridge) | 8 |
+| LO13 | Evaluate capability claims with Landauer, $\mathcal{L}^2/\tau$, $I+H=C$, DPI, and human bandwidth | 8 |
 
 ## Assessment
 
-Four take-home worksheets (15% each, 60% total), each LLM-centred under the lecture 1 curiosity–skepticism habit, due weeks 2, 4, 6 and 8. Four short in-class Moodle quizzes (10% each, 40% total).
+Four take-home worksheets (15% each, 60% total) and four short in-class quizzes (10% each, 40% total).
+
+| Component | Due | Form | Outcomes |
+|-----------|-----|------|----------|
+| Worksheet 1 | Start of week 2 | Socratic dialogue + handwritten reflection | LO1, LO2 |
+| Quiz 1 | Start of week 2 lecture | 10 min invigilated | LO1, LO2, LO3 |
+| Worksheet 2 | Start of week 4 | Socratic dialogue + handwritten reflection | LO2, LO3 |
+| Quiz 2 | Start of week 4 lecture | 10 min invigilated (paper) | LO1, LO2, LO3 |
+| Worksheet 3 | Start of week 6 | Socratic dialogue + handwritten reflection | LO4 |
+| Quiz 3 | Start of week 6 lecture | 10 min invigilated | LO4, LO5, LO6, LO7 |
+| Worksheet 4 | Start of week 8 | Notebook + written reflection | LO7–LO13 |
+| Quiz 4 | Start of week 8 lecture | 10 min invigilated | LO8–LO13 |
+
+Details and marking guidance: [assessment]({{ "/assessment/" | relative_url }}).
 
 ## Generative AI
 

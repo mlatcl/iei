@@ -3,7 +3,7 @@ outcomes:
   - id: LO1
     text: "Students will be able to decompose the Boltzmann distribution into contributions from internal energy, entropy, and Helmholtz free energy, and interpret each term's physical and informational meaning."
     bloom_level: analyse
-    week: 3
+    week: 2
     notes: "p_i ∝ exp(-E_i/kT); Z; F = -kT log Z = U - TS. Available (free) energy is what remains after the entropic no-go. Seeded in week 1; Hydrodynamica / entropy / embodiment in week 2 as delivered; named and accounted in week 3 (Gibbs/Boltzmann form, log Z as CGF; Hopfield / Boltzmann-machine colour only). MaxEnt derivation of the weights waits for week 5 (LO5). Theme: entropy forbids; probability prescribes. Historical thread: Carnot (1824, engines) → Clausius (1850s–1865, second law; entropy named) → Boltzmann/Gibbs (statistical count) → Shannon/Jaynes (information). Motivations: perpetual motion, and the human–machine bandwidth gap from The Atomic Human (Lawrence, 2024)."
 
   - id: LO2
@@ -139,7 +139,7 @@ Eight Tuesdays, 13 October – 1 December 2026, 10:00–12:00, FW26, William Gat
 | 5 | 10 Nov | MaxEnt; exponential family; three-perspective synthesis | LO5, LO6, LO7 | |
 | 6 | 17 Nov | Quiz 3; Fisher metric; thermodynamic length defined (Crooks) | LO8 | Q3 (10 min); W3 due; W4 released |
 | 7 | 24 Nov | MaxEnt as projection; natural gradient; geodesics | LO9 | |
-| 8 | 1 Dec | Multi-information; DPI; IB; von Neumann; three geometries; limits on intelligence | LO10–LO13 | Q4 (10 min); W4 due |
+| 8 | 1 Dec | Multi-information; DPI; IB; von Neumann; three geometries; limits on intelligence | LO10–LO13 | Q4 (10 min, LO8–LO13); W4 due (LO7–LO13) |
 
 ## Outcome summary
 
