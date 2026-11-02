@@ -6,7 +6,7 @@ mode: summative
 weight: 10
 due_week: 6
 outcomes: [LO4, LO5, LO6, LO7]
-question_bank: quiz-banks/q3-fisher-geometry.yaml
+question_bank: quiz-banks/q2-maxent-landauer.yaml
 questions_per_sitting: 10
 pool_target: 100
 draw:
@@ -20,7 +20,7 @@ workload_hours: 0.17
 authentication:
   mechanism: in-person-moodle
   ai_robust: true
-  ai_robust_rationale: "Invigilated in-class test on Moodle. No external resources. This sitting covers Weeks 4–5 as delivered; the yaml bank path is leftover Moodle scaffolding and is not this sitting."
+  ai_robust_rationale: "Invigilated in-class test on Moodle. No external resources. Random draw from the MaxEnt / demon bank stratified by LO4–LO7."
 delivery: in-class
 duration_minutes: 10
 platform: Moodle
@@ -32,7 +32,7 @@ platform: Moodle
 **Format**: 10 auto-marked questions on Moodle. No notes, no internet, no LLMs.  
 **Covers**: Weeks 4–5 as delivered (LO4–LO7): grouping $H=H(w)+\sum_i w_i H(p_i)$; the missing measure; Maxwell's demon as compartments and two ledgers; MaxEnt and the exponential family. Not Fisher / Crooks (taught after the quiz).
 
-The yaml bank path is leftover Moodle scaffolding and is not this sitting.
+Question pool: `quiz-banks/q2-maxent-landauer.yaml` (100 items tagged LO4–LO7; filename is historical). LO7 also returns on Worksheet 4 as a second surface.
 
 ## Marking
 

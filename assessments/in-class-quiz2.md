@@ -6,7 +6,7 @@ mode: summative
 weight: 10
 due_week: 4
 outcomes: [LO1, LO2, LO3]
-question_bank: quiz-banks/q2-maxent-landauer.yaml
+question_bank: quiz-banks/q1-probability-entropy-foundations.yaml
 questions_per_sitting: 10
 pool_target: 100
 draw:
@@ -20,7 +20,7 @@ workload_hours: 0.17
 authentication:
   mechanism: in-person-moodle
   ai_robust: true
-  ai_robust_rationale: "Invigilated in-class paper test. No external resources. This sitting is paper (as Quiz 1); the yaml bank is not this sitting."
+  ai_robust_rationale: "Invigilated in-class paper test. No external resources. This sitting is paper; the yaml path is only a LO1–LO3-tagged pool for reuse, not the printed paper."
 delivery: in-class
 duration_minutes: 10
 platform: paper
@@ -32,7 +32,7 @@ platform: paper
 **Format**: 10-mark paper test (matching, T/F, fill-blank, selection). No notes, no internet, no LLMs.  
 **Covers**: Weeks 2–3 as delivered (LO1–LO3): Bernoulli / ensemble / coarse-graining; heat thread through Helmholtz; Shannon \(H\) versus Boltzmann \(S\). Not Maxwell / Landauer (taught after the quiz).
 
-This year's sitting is the gitignored paper draft `assessments/generated/week4-quiz-draft.tex`. The yaml bank path is leftover Moodle scaffolding and is not this sitting.
+This year's sitting is the gitignored paper draft `assessments/generated/week4-quiz-draft.tex`. The `question_bank` path points at the LO1–LO3 foundation pool for tooling reuse only; it is not the printed paper.
 
 ## Marking
 
