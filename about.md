@@ -41,6 +41,10 @@ Equip students to reason rigorously about entropy across thermodynamics, informa
 
 Four take-home worksheets (15% each, 60% total), each LLM-centred under the lecture 1 curiosity–skepticism habit, due weeks 2, 4, 6 and 8. Four short in-class Moodle quizzes (10% each, 40% total).
 
+## Generative AI
+
+How the lecturer uses generative AI to write and maintain the module, and the student-facing rule for worksheets versus quizzes, is on the [generative AI]({{ "/ai/" | relative_url }}) page.
+
 ## Getting help
 
 Ask module questions on [GitHub Discussions](https://github.com/mlatcl/iei/discussions). Start from the pinned [Course Q&A — start here](https://github.com/mlatcl/iei/discussions/1) post, then open a new Q&A discussion for each question. Keep personal or confidential matters (extensions, marks, candidate numbers) off Discussions — use email or the course office instead.
