@@ -53,8 +53,11 @@ ghub:
   edit: true
   repository: iei
 
-future: false
-  
+# Build future-dated collection pages so a Liquid lookahead can list
+# the next few days without publishing the whole term early.
+future: true
+lookahead_days: 4
+
 # Build settings
 plugins:
 - jekyll-feed

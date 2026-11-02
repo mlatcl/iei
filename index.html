@@ -22,19 +22,26 @@ title: Information, Entropy and Intelligence
 <tr><th>Week</th><th>Date</th><th>Topic</th></tr>
 </thead>
 <tbody>
+{% include lookahead-cutoff.html %}
 {% assign lectures_by_week = site.lectures | group_by: "week" %}
 {% for group in lectures_by_week %}
   {% assign lecture = group.items | first %}
+  {% assign lecture_epoch = lecture.date | date: "%s" | plus: 0 %}
+  {% if lecture_epoch <= lookahead_cutoff %}
 <tr>
   <td>{{ group.name }}</td>
   <td>{{ lecture.date | date: "%-d %b" }}</td>
   <td>
     {% for item in group.items %}
+      {% assign item_epoch = item.date | date: "%s" | plus: 0 %}
+      {% if item_epoch <= lookahead_cutoff %}
       {% unless forloop.first %} · {% endunless %}
       <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+      {% endif %}
     {% endfor %}
   </td>
 </tr>
+  {% endif %}
 {% endfor %}
 </tbody>
 </table>
