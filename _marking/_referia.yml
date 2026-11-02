@@ -1,7 +1,7 @@
 # L172 marking hub (referia CIP-0010 / inline_list).
 # Discovered from the course root overview as a top entry. Lists class list
-# and worksheet/quiz marking tasks under this directory. Future week 4/6/8
-# quizzes appear automatically when their `_referia.yml` is added.
+# and worksheet/quiz marking tasks under this directory. Week 4 configs are
+# present; Week 6 / 8 quizzes appear when their `_referia.yml` is added.
 #
 # Serve from course root (preferred) or here:
 #   referia serve --root ~/mlatcl/iei
@@ -133,8 +133,8 @@ viewer:
       ## Marking hub
 
       Class list first, then worksheets and in-class quizzes by week. Open a
-      title to enter that review. When Week 4 / 6 / 8 quiz configs land under
-      `_marking/`, they show up here without changing this file.
+      title to enter that review. Week 6 / 8 quiz configs under `_marking/`
+      show up here without changing this file.
 
       Serve from the course root so links resolve:
       `referia serve --root ~/mlatcl/iei` → open **L172 — marking**.
