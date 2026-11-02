@@ -53,7 +53,7 @@ ghub:
   edit: true
   repository: iei
 
-future: true
+future: false
   
 # Build settings
 plugins:
