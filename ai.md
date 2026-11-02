@@ -50,6 +50,6 @@ A language model is a strong prescription engine will give you a history of Shan
 
 That is the same gap the module spends eight weeks making precise for intelligent systems. Superintelligence claims are to be treated the way the second law treats perpetual motion: ask where the accounting closed, and what was smuggled in as a free lunch. The Socratic worksheet is that habit in miniature. The machine review on the notes is me applying it to my own drafts. The invigilated quiz is the check that the accounting still closes when the model is out of the room.
 
-If you want the institutional argument rather than the course one, the MIT report's useful pages are the call for an AI policy with a rationale, the warning against detectors, and the request that instructors share how they themselves work. This page is the last of those.
+If you want the institutional argument rather than the course one, the departmental rule is the [CST policy on the use of AI tools](https://www.cst.cam.ac.uk/files/ai_policy.pdf) (Faculty Board, October 2026). Course conveners set the module rule on the syllabus; this page and the assessment briefs are that rule for L172. The MIT report's useful pages are the call for an AI policy with a rationale, the warning against detectors, and the request that instructors share how they themselves work. This page is the last of those.
 
 *Drafted from the L172 repository history with a coding assistant that had access to the repo and my chats, then edited by Neil D. Lawrence. 1 November 2026.*
