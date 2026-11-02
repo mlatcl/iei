@@ -20,11 +20,13 @@ I write and maintain this module in the course repository, with a coding assista
 
 None of this replaces the live two hours. I speak in FW26. The model does not. I am responsible for the material I share, the model is not.
 
+The drafting and restructuring means that it can be that errors or hallucinations have slipped through (in a similar way to my own errors slipping through). If you spot something, you can use the edit links in the lectures to submit a pull request to fix it.
+
 ## What I do not use it for
 
-I do not send your worksheets to a model for a mark. I use my own marking system, [`referia`](https://github.com/lawrennd/referia) to enter my own comments. It presents the dialogue and the scanned reflection; I score curiosity, skepticism, and the handwritten page myself. The YAML on your dialogue records *your* model, so I can see which interlocutor you chose. That helps me with provenance.
+I do not send your worksheets to a model for a mark. I use my own marking system, [`referia`](https://github.com/lawrennd/referia) to enter my own comments. It presents the dialogue and the scanned reflection; I score curiosity, skepticism, and the handwritten page myself. The YAML header on your dialogue records *your* model, so I can see which interlocutor you chose. That helps me feedback what I see the different models are doing.
 
-I do not use a detector to police AI. The MIT report is right that detectors start an arms race and punish the wrong people. The design here is different: the take-home work *requires* a model, and the invigilated quiz checks whether the ideas survived contact with you.
+I do not use a detector to police AI. The MIT report suggests that detectors start an arms race and punish the wrong people. The design here is different: the take-home work *requires* a model, and the invigilated quiz checks whether the ideas survived contact with you.
 
 I do not treat a machine review as a substitute for reading the sources. When the review and the notes disagree, the next move is the paper, the recording, or the board, not another prompt.
 
@@ -46,10 +48,10 @@ The worksheets have no AI-free variant, because the object of the exercise *is* 
 
 ## Why this split
 
-A language model is a strong prescription engine will give you a history of Shannon's footnote, a derivation of $F=U-TS$, or a confident date for Watt's engine. The no-go is that fluency is not a ledger. It does not know what it cannot do.
+A language model  will give you a history of Shannon's footnote, a derivation of $F=U-TS$, or a confident date for Watt's engine. When pushed it can also give you the broader spectrum of opinion, particular where there are uncertainties. But it cannot dedicate its life to resolving those uncertainties, nor can it place a reputation on its conclusions.
 
-That is the same gap the module spends eight weeks making precise for intelligent systems. Superintelligence claims are to be treated the way the second law treats perpetual motion: ask where the accounting closed, and what was smuggled in as a free lunch. The Socratic worksheet is that habit in miniature. The machine review on the notes is me applying it to my own drafts. The invigilated quiz is the check that the accounting still closes when the model is out of the room.
+We would like to treat superintelligence claims are to be treated the way the second law treats perpetual motion. What is the process of information accounting? What has been smuggled in as a free lunch? The Socratic approach is knowing that we don't know. Machine reviews of my notes is me applying it to my own drafts. The invigilated quiz is a reminder that there are some facts and they are worth learning.
 
-If you want the institutional argument rather than the course one, the MIT report's useful pages are the call for an AI policy with a rationale, the warning against detectors, and the request that instructors share how they themselves work. This page is the last of those.
+This is my perspective, if you're interested in the departmental policy you can find it [here](https://www.cst.cam.ac.uk/files/ai_policy.pdf) (Faculty Board, October 2026). Course conveners set the module rules on the syllabus; this page and the assessment briefs are those rules for L172. The MIT report authors present a reflective and realistic perspective on how we might use and deploy AI. They call for AI policies with rationale, they warning against detectors, and they request that instructors share how they themselves work. This page is the last of those.
 
 *Drafted from the L172 repository history with a coding assistant that had access to the repo and my chats, then edited by Neil D. Lawrence. 1 November 2026.*
