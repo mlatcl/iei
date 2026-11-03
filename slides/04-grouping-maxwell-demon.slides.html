@@ -535,13 +535,13 @@ Composition wrapper only. Children carry the figures. Stop before MaxEnt / Lagra
 <p>Equal-width bins of one Cartesian component. Discrete <span class="math inline">\(H\)</span> is a sum over masses.</p>
 <div>
 <ul>
-<li class="fragment"><span class="math inline">\(p_i = n_i/N\)</span> from equal-<span class="math inline">\(\Delta v\)</span> bins of <span class="math inline">\(v_x\sim\mathscr{N}\left(0,\sigma^2\right)\)</span></li>
+<li class="fragment">Midpoint rule: <span class="math inline">\(p_i\approx f(x_i)\Delta\)</span> on equal-<span class="math inline">\(\Delta v\)</span> bins of <span class="math inline">\(v_x\sim\mathscr{N}\left(0,\sigma^2\right)\)</span></li>
 <li class="fragment"><span class="math inline">\(H=-\sum_i p_i \log p_i\)</span> depends only on those masses</li>
-<li class="fragment">Analytic <span class="math inline">\(h=\tfrac12\log(2\pi e \sigma^2)\)</span>; the histogram tracks <span class="math inline">\(h-\log\Delta\)</span></li>
+<li class="fragment">Analytic <span class="math inline">\(h=\tfrac12\log(2\pi e \sigma^2)\)</span>; the Riemann partition tracks <span class="math inline">\(h-\log\Delta\)</span></li>
 </ul>
 </div>
 <aside class="notes">
-Callback to the week-2 velocity histogram. Board <span class="math inline">\(p_i\approx f\Delta\)</span> once. The two numbers on the figure should agree; <span class="math inline">\(h\)</span> itself is smaller by <span class="math inline">\(\log\Delta\)</span> (and is negative if <span class="math inline">\(\Delta\)</span> is large). Nats throughout.
+Callback to the week-2 velocity histogram, then switch to the Riemann picture. Board <span class="math inline">\(p_i\approx f\Delta\)</span> once. The figure is the piecewise-constant midpoint approximation, not a sample histogram. The two numbers should agree; <span class="math inline">\(h\)</span> itself is smaller by <span class="math inline">\(\log\Delta\)</span> (and is negative if <span class="math inline">\(\Delta\)</span> is large). Nats throughout.
 </aside>
 </section>
 <section id="histograms-as-riemann-sums" class="slide level2">
@@ -559,8 +559,8 @@ Callback to the week-2 velocity histogram. Board <span class="math inline">\(p_i
 Draw the Gaussian, overlay rectangles of width <span class="math inline">\(\Delta\)</span> and height <span class="math inline">\(f(x_i)\)</span>, shade one rectangle and label its area <span class="math inline">\(p_i\)</span>. Then split <span class="math inline">\(\log(f_i\Delta)\)</span> on the board. Point out that the second sum is not a Riemann sum of anything finite as <span class="math inline">\(\Delta\to 0\)</span>, which is why <span class="math inline">\(H\)</span> diverges while <span class="math inline">\(h\)</span> doesn’t.
 </aside>
 </section>
-<section id="histograms-as-riemann-summs" class="slide level2">
-<h2>Histograms as Riemann Summs</h2>
+<section id="histograms-as-riemann-sums-1" class="slide level2">
+<h2>Histograms as Riemann Sums</h2>
 <div class="figure">
 <div id="gaussian-histogram-discrete-entropy-figure" class="figure-frame">
 <object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/physics/gaussian-histogram-discrete-entropy.svg" width="60%" style=" ">
@@ -568,7 +568,7 @@ Draw the Gaussian, overlay rectangles of width <span class="math inline">\(\Delt
 </div>
 </div>
 <aside class="notes">
-Equal-width histogram of one Cartesian velocity component. Discrete <span class="math inline">\(H\)</span> matches <span class="math inline">\(h-\log\Delta\)</span>; <span class="math inline">\(h\)</span> itself is the remainder after the bin-width term is subtracted.
+Equal-width midpoint Riemann approximation of a Gaussian velocity component. Discrete <span class="math inline">\(H\)</span> matches <span class="math inline">\(h-\log\Delta\)</span>; <span class="math inline">\(h\)</span> itself is the remainder after the bin-width term is subtracted.
 </aside>
 </section>
 <section id="one-dimension-velocity-versus-modulus" class="slide level2">
@@ -661,7 +661,7 @@ Left panel: probability bars, equal visual width, height <span class="math inlin
 </div>
 </div>
 <aside class="notes">
-Equal-volume shells in 3D velocity, written two ways. Left: probability masses. Right: the same masses as a density on the speed axis. The bins change shape; <span class="math inline">\(H\)</span> does not.
+Equal-volume shells in 3D velocity, written two ways. Left: midpoint masses <span class="math inline">\(p_i\)</span>. Right: the same partition as a piecewise-constant density on the speed axis. The bins change shape; <span class="math inline">\(H\)</span> does not.
 </aside>
 </section>
 <section id="the-continuous-limit-drops-logdelta" class="slide level2">
@@ -701,7 +701,7 @@ Discrete entropy of an equal-width Gaussian histogram against <span class="math 
 </ul>
 </div>
 <aside class="notes">
-Overlay the Maxwell curve on an equal-<span class="math inline">\(\Delta s\)</span> histogram of the same 3D sample. Read both numbers. The Gaussian <span class="math inline">\(h\)</span> was for <span class="math inline">\(v_x\)</span>; this <span class="math inline">\(h\)</span> is for <span class="math inline">\(s\)</span>. Different variable <em>and</em> different Lebesgue measure. Leave the Jacobian for the next snippet.
+Overlay the Maxwell curve on equal-<span class="math inline">\(\Delta s\)</span> midpoint Riemann rectangles. Read both numbers. The Gaussian <span class="math inline">\(h\)</span> was for <span class="math inline">\(v_x\)</span>; this <span class="math inline">\(h\)</span> is for <span class="math inline">\(s\)</span>. Different variable <em>and</em> different Lebesgue measure. Leave the Jacobian for the next snippet.
 </aside>
 </section>
 <section id="entropy-of-the-maxwell-speed-law-1" class="slide level2">
@@ -713,7 +713,7 @@ Overlay the Maxwell curve on an equal-<span class="math inline">\(\Delta s\)</sp
 </div>
 </div>
 <aside class="notes">
-Equal-width histogram of speed from the same 3D Gaussian sample. Discrete <span class="math inline">\(H\)</span> tracks <span class="math inline">\(h(s)-\log\Delta\)</span>. The Maxwell <span class="math inline">\(h(s)\)</span> is not the Gaussian <span class="math inline">\(h(v_x)\)</span>.
+Equal-width midpoint Riemann approximation of Maxwell speed. Discrete <span class="math inline">\(H\)</span> tracks <span class="math inline">\(h(s)-\log\Delta\)</span>. The Maxwell <span class="math inline">\(h(s)\)</span> is not the Gaussian <span class="math inline">\(h(v_x)\)</span>.
 </aside>
 </section>
 <section id="two-discretisations-of-the-same-speeds" class="slide level2">
@@ -721,13 +721,13 @@ Equal-width histogram of speed from the same 3D Gaussian sample. Discrete <span 
 <p>Equal <span class="math inline">\(\Delta s\)</span> is a different partition from the pushed equal-volume cells. Discrete <span class="math inline">\(H\)</span> changes.</p>
 <div>
 <ul>
-<li class="fragment">Same samples <span class="math inline">\(s=|\mathbf{v}|\)</span>, two partitions</li>
+<li class="fragment">Same speed law <span class="math inline">\(f(s)\)</span>, two partitions</li>
 <li class="fragment">Pushed: equal 3D volume (<span class="math inline">\(u=s^3\)</span>); uniform: equal <span class="math inline">\(\Delta s\)</span></li>
 <li class="fragment">The discretisation <em>is</em> the measure</li>
 </ul>
 </div>
 <aside class="notes">
-Side by side: same <span class="math inline">\(N\)</span>, same <span class="math inline">\(s_{\max}\)</span>, same number of bins. Only the edge placement changes. Two values of <span class="math inline">\(H\)</span>. Uniform-in-<span class="math inline">\(s\)</span> is Lebesgue on the speed axis; equal-volume is Lebesgue in 3D, written in <span class="math inline">\(s\)</span>.
+Side by side: same <span class="math inline">\(f\)</span>, same <span class="math inline">\(s_{\max}\)</span>, same number of bins. Only the edge placement changes. Midpoint Riemann rectangles; two values of <span class="math inline">\(H\)</span>. Uniform-in-<span class="math inline">\(s\)</span> is Lebesgue on the speed axis; equal-volume is Lebesgue in 3D, written in <span class="math inline">\(s\)</span>.
 </aside>
 <div class="figure">
 <div id="mb-uniform-vs-pushed-discretisation-figure" class="figure-frame">
@@ -744,7 +744,7 @@ Side by side: same <span class="math inline">\(N\)</span>, same <span class="mat
 </div>
 </div>
 <aside class="notes">
-The same speed samples, two partitions, two values of discrete <span class="math inline">\(H\)</span>. Left: equal 3D volume, pushed to the speed axis. Right: equal <span class="math inline">\(\Delta s\)</span>. The discretisation is the measure.
+The same Maxwell density, two midpoint Riemann partitions, two values of discrete <span class="math inline">\(H\)</span>. Left: equal 3D volume, pushed to the speed axis. Right: equal <span class="math inline">\(\Delta s\)</span>. The discretisation is the measure.
 </aside>
 </section>
 <section id="bin-widths-are-a-radon-nikodym-derivative" class="slide level2">
