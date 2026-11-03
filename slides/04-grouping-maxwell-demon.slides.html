@@ -288,7 +288,7 @@ Leave this live. Do not say left, right, or level, and do not say three. After t
 </ul>
 </div>
 <aside class="notes">
-Say ``log two bits’’ — one bit if the two readings are equally likely. Do not yet mention a third reading. Board 6 vs 6 as the move people reach for from twenty questions.
+Say “log two bits” — one bit if the two readings are equally likely. Do not yet mention a third reading. Board 6 vs 6 as the move people reach for from twenty questions.
 </aside>
 </section>
 <section id="maths-two-readings" class="slide level2">
@@ -301,7 +301,7 @@ Say ``log two bits’’ — one bit if the two readings are equally likely. Do 
 <ul>
 <li class="fragment">Four uses cannot name 24 hypotheses</li>
 <li class="fragment">Five uses are not ruled out, <em>if</em> each use really returns one bit</li>
-<li class="fragment">That ``if’’ is mechanism, not maths</li>
+<li class="fragment">That “if” is the mechanism, not <em>entropy</em>/<em>information</em> maths</li>
 </ul>
 </div>
 </section>
@@ -316,12 +316,12 @@ Say ``log two bits’’ — one bit if the two readings are equally likely. Do 
 </ul>
 </div>
 <aside class="notes">
-Ask what we actually learned. Under ``it is heavier’’, 12 balls become 6, one bit toward which ball. We do <em>not</em> know the direction. The down pan is six maybe-heavies; the up pan is six maybe-lights. All twelve balls are still in play. Maths next.
+Ask what we actually learned. Under “it is heavier,” 12 balls become 6, one bit toward which ball. We do <em>not</em> know the direction. The down pan is six maybe-heavies; the up pan is six maybe-lights. All twelve balls are still in play. Maths next.
 </aside>
 </section>
 <section id="maths-what-6-vs-6-bought" class="slide level2">
 <h2>Maths: What 6 vs 6 Bought</h2>
-<p><em>Maths.</em> Score the same physical act on the 24 hypotheses.</p>
+<p><em>Maths.</em> Score the result of the action on the 24 hypotheses.</p>
 <div>
 <ul>
 <li class="fragment">24 <span class="math inline">\(\to\)</span> 12 remaining hypotheses: exactly <span class="math inline">\(\log_2 2\)</span> bits</li>
@@ -338,6 +338,7 @@ Ask what we actually learned. Under ``it is heavier’’, 12 balls become 6, on
 <li class="fragment">Under the heavier-side story, three balls remain</li>
 <li class="fragment">Same move, smaller pile</li>
 <li class="fragment">We are still not asking about light versus heavy</li>
+<li class="fragment">Are there only two possibilities with 3 vs 3?</li>
 </ul>
 </div>
 </section>
@@ -355,58 +356,6 @@ Ask what we actually learned. Under ``it is heavier’’, 12 balls become 6, on
 Make them say the known ball out loud. Ask: how many bits do we get from 2 vs 2 now? Do not calculate before they see that the split of three remaining balls cannot be even.
 </aside>
 </section>
-<section id="maths-the-known-ball-taxes-the-bit" class="slide level2">
-<h2>Maths: The Known Ball Taxes the Bit</h2>
-<p><em>Maths.</em> Three remaining heavier-suspects; pans are 2 vs 1+known.</p>
-<p><small> <span class="math display">\[
-\left(\tfrac{2}{3},\tfrac{1}{3}\right)
-\quad\Rightarrow\quad
-H = h_2\!\left(\tfrac{2}{3}\right) \approx 0.92 &lt; 1 \text{ bit}
-\]</span> </small></p>
-<div>
-<ul>
-<li class="fragment">The even split was <span class="math inline">\(\log_2 2\)</span>; the pans cannot make it</li>
-<li class="fragment">Padding with a known ball is a mechanism patch</li>
-<li class="fragment">Information gain falls because the <em>probabilities</em> are no longer equal</li>
-</ul>
-</div>
-</section>
-<section id="mechanism-1-vs-1" class="slide level2">
-<h2>Mechanism: 1 vs 1</h2>
-<p><em>Mechanism.</em> If two suspects remain, weigh them against each other.</p>
-<div>
-<ul>
-<li class="fragment">Now the split <em>can</em> be even</li>
-<li class="fragment">Under the heavier story, this names the ball</li>
-<li class="fragment">We still have not asked light versus heavy</li>
-</ul>
-</div>
-</section>
-<section id="mechanism-lighter-or-heavier" class="slide level2">
-<h2>Mechanism: Lighter or Heavier?</h2>
-<p><em>Mechanism.</em> We have a candidate ball. Can we name the direction?</p>
-<div>
-<ul>
-<li class="fragment">Weigh the candidate against a known normal</li>
-<li class="fragment">Two outcomes name heavy versus light — <em>if</em> it tips</li>
-<li class="fragment">If it <em>balances</em>, our heavier-side story was wrong</li>
-</ul>
-</div>
-<aside class="notes">
-This is the crack in the two-outcome attempt. A known-normal comparison is the natural test for direction, and it keeps offering a third reading: level. The instrument was never a yes/no question. Pause, then the aha slide.
-</aside>
-</section>
-<section id="two-accounts-one-experiment" class="slide level2">
-<h2>Two Accounts, One Experiment</h2>
-<p>Keep the columns separate.</p>
-<div>
-<ul>
-<li class="fragment"><em>Maths:</em> <span class="math inline">\(\log_2 24\)</span> to close; at most <span class="math inline">\(\log_2 2\)</span> per two-outcome use</li>
-<li class="fragment"><em>Mechanism:</em> 6 vs 6, 3 vs 3, 2 vs 2 with a known, 1 vs 1, then direction</li>
-<li class="fragment">The known ball, and the unused ``level’’ reading, are mechanism — they change the gain</li>
-</ul>
-</div>
-</section>
 <section id="three-readings" class="slide level2">
 <h2>Three Readings</h2>
 </section>
@@ -416,7 +365,6 @@ This is the crack in the two-outcome attempt. A known-normal comparison is the n
 <div>
 <ul>
 <li class="fragment">The instrument was never a yes/no question</li>
-<li class="fragment">6 vs 6 made the third reading impossible</li>
 <li class="fragment">That was a mechanism choice that <em>threw away</em> a symbol</li>
 </ul>
 </div>
@@ -434,7 +382,7 @@ Let them say the three readings. Then go straight to the new budget. Do not star
 <ul>
 <li class="fragment">Two uses cannot name 24 hypotheses</li>
 <li class="fragment">Three uses can, <em>if</em> each use really returns <span class="math inline">\(\log_2 3\)</span></li>
-<li class="fragment">Same ``if’’ as before: mechanism must realise the split</li>
+<li class="fragment">Same “if” as before: mechanism must realise the split</li>
 </ul>
 </div>
 </section>
@@ -558,8 +506,7 @@ This is the chain rule for a deterministic grouping <span class="math inline">\(
 <div>
 <ul>
 <li class="fragment">Any partition: <span class="math inline">\(H(w)+\sum_i w_i H(p_i)\)</span> returns the same <span class="math inline">\(H(X)\)</span></li>
-<li class="fragment">That consistency is special to the Shannon form (Khinchin; later Baez–Fritz–Leinster)</li>
-<li class="fragment">Pointer only today — grouping is Shannon’s third requirement in 1948; the axioms stay parked</li>
+<li class="fragment">That consistency is special to the weighted logarithm form</li>
 </ul>
 </div>
 </section>
@@ -568,8 +515,8 @@ This is the chain rule for a deterministic grouping <span class="math inline">\(
 <p>Keeping <span class="math inline">\(\{1,2,3\}\)</span> versus <span class="math inline">\(\{4,5,6\}\)</span> and refusing the face is the same move as a macrostate.</p>
 <div>
 <ul>
-<li class="fragment">The group label is what we keep; <span class="math inline">\(\sum_i w_i H(p_i)\)</span> is what we refuse</li>
-<li class="fragment">Macroscopic variables: extensive <span class="math inline">\(N,V,E,S\)</span>; intensive <span class="math inline">\(T,P\)</span></li>
+<li class="fragment">The group label is what we keep; <span class="math inline">\(\sum_i w_i H(p_i)\)</span> is what we ignore</li>
+<li class="fragment">Macroscopic variables: extensive <span class="math inline">\(N\)</span>,<span class="math inline">\(V\)</span>,<span class="math inline">\(E\)</span>,<span class="math inline">\(S\)</span>; intensive <span class="math inline">\(T\)</span>,<span class="math inline">\(P\)</span></li>
 <li class="fragment">We cannot follow Laplace’s curves, so we keep a few numbers</li>
 </ul>
 </div>
@@ -599,7 +546,7 @@ Callback to the week-2 velocity histogram. Board <span class="math inline">\(p_i
 </section>
 <section id="histograms-as-riemann-sums" class="slide level2">
 <h2>Histograms as Riemann Sums</h2>
-<p>A histogram replaces <span class="math inline">\(f(x)\)</span> by a piecewise-constant function: height <span class="math inline">\(f(x_i)\)</span> on each bin of width <span class="math inline">\(\Delta\)</span>.</p>
+<p>A histogram replaces <span class="math inline">\(f(x)\)</span> by a piecewise-constant function: height <span class="math inline">\(f(x_i)=f_i\)</span> on each bin of width <span class="math inline">\(\Delta\)</span>.</p>
 <div>
 <ul>
 <li class="fragment">Bin mass <span class="math inline">\(p_i = \int_{\text{bin } i} f(x)\,\text{d}x \approx f(x_i)\Delta\)</span> (midpoint rule)</li>
@@ -611,14 +558,79 @@ Callback to the week-2 velocity histogram. Board <span class="math inline">\(p_i
 <aside class="notes">
 Draw the Gaussian, overlay rectangles of width <span class="math inline">\(\Delta\)</span> and height <span class="math inline">\(f(x_i)\)</span>, shade one rectangle and label its area <span class="math inline">\(p_i\)</span>. Then split <span class="math inline">\(\log(f_i\Delta)\)</span> on the board. Point out that the second sum is not a Riemann sum of anything finite as <span class="math inline">\(\Delta\to 0\)</span>, which is why <span class="math inline">\(H\)</span> diverges while <span class="math inline">\(h\)</span> doesn’t.
 </aside>
+</section>
+<section id="histograms-as-riemann-summs" class="slide level2">
+<h2>Histograms as Riemann Summs</h2>
 <div class="figure">
 <div id="gaussian-histogram-discrete-entropy-figure" class="figure-frame">
-<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/physics/gaussian-histogram-discrete-entropy.svg" width="80%" style=" ">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/physics/gaussian-histogram-discrete-entropy.svg" width="60%" style=" ">
 </object>
 </div>
 </div>
 <aside class="notes">
 Equal-width histogram of one Cartesian velocity component. Discrete <span class="math inline">\(H\)</span> matches <span class="math inline">\(h-\log\Delta\)</span>; <span class="math inline">\(h\)</span> itself is the remainder after the bin-width term is subtracted.
+</aside>
+</section>
+<section id="one-dimension-velocity-versus-modulus" class="slide level2">
+<h2>One Dimension: Velocity Versus Modulus</h2>
+<p>Same one-dimensional sample: <span class="math inline">\(v\)</span> peaks at zero; folding to <span class="math inline">\(|v|\)</span> keeps the mode at zero.</p>
+<div>
+<ul>
+<li class="fragment">Left: <span class="math inline">\(v\sim\mathcal{N}(0,\sigma^2)\)</span> — peak at <span class="math inline">\(0\)</span></li>
+<li class="fragment">Right: <span class="math inline">\(s=|v|\)</span> — half-normal; support <span class="math inline">\([0,\infty)\)</span>, mode still at <span class="math inline">\(0\)</span></li>
+<li class="fragment">Folding alone does not push the peak away from zero</li>
+</ul>
+</div>
+<aside class="notes">
+Side by side. Point at both modes: both sit at zero. The student’s ``why isn’t the peak at zero?’’ question is about speed in three dimensions, not about taking a modulus. Board <span class="math inline">\(f(s)=\sqrt{2/(\pi\sigma^2)}\,e^{-s^2/2\sigma^2}\)</span> briefly if needed.
+</aside>
+<div class="figure">
+<div id="velocity-vs-modulus-1d-figure" class="figure-frame">
+<div class="lamd-columns" style="display:flex; width:100%; justify-content:center; align-items:center; column-gap:1em;">
+<div style="flex:0 0 50%; max-width:50%;">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/physics/velocity-vs-modulus-1d-velocity.svg" width="100%" style=" ">
+</object>
+</div>
+<div style="flex:0 0 50%; max-width:50%;">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/physics/velocity-vs-modulus-1d-speed.svg" width="100%" style=" ">
+</object>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes">
+One dimension. Left: a Gaussian velocity component peaks at zero. Right: the same sample folded to <span class="math inline">\(|v|\)</span> is half-normal — the mode is still at zero.
+</aside>
+</section>
+<section id="three-dimensions-component-versus-speed" class="slide level2">
+<h2>Three Dimensions: Component Versus Speed</h2>
+<p>Same 3D sample: one Cartesian component peaks at zero; speed peaks away from zero.</p>
+<div>
+<ul>
+<li class="fragment">Left: <span class="math inline">\(v_x\sim\mathcal{N}(0,\sigma^2)\)</span> — peak at <span class="math inline">\(0\)</span></li>
+<li class="fragment">Right: <span class="math inline">\(s=|\mathbf{v}|\)</span> — Maxwell; factor <span class="math inline">\(s^2\)</span> from shell volume</li>
+<li class="fragment">The nonzero mode is geometry, not folding</li>
+</ul>
+</div>
+<aside class="notes">
+Side by side with the 1D pair still in mind. Left mode at zero; right mode at <span class="math inline">\(\sigma\sqrt{2}\)</span>. Point at the <span class="math inline">\(s^2\)</span>: that is the spherical shell in velocity space. Absolute value alone did not move the peak; the Jacobian does.
+</aside>
+<div class="figure">
+<div id="velocity-vs-speed-3d-figure" class="figure-frame">
+<div class="lamd-columns" style="display:flex; width:100%; justify-content:center; align-items:center; column-gap:1em;">
+<div style="flex:0 0 50%; max-width:50%;">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/physics/velocity-vs-speed-3d-velocity.svg" width="100%" style=" ">
+</object>
+</div>
+<div style="flex:0 0 50%; max-width:50%;">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/physics/velocity-vs-speed-3d-speed.svg" width="100%" style=" ">
+</object>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes">
+Three dimensions. Left: one Cartesian component still peaks at zero. Right: speed peaks at <span class="math inline">\(\sigma\sqrt{2}\)</span> because of the <span class="math inline">\(s^2\)</span> shell volume — not because of taking a modulus.
 </aside>
 </section>
 <section id="pushed-bins-keep-the-same-entropy" class="slide level2">
@@ -665,6 +677,9 @@ Equal-volume shells in 3D velocity, written two ways. Left: probability masses. 
 <aside class="notes">
 The scatter should sit on the line <span class="math inline">\(h-\log\Delta\)</span>. The horizontal line at <span class="math inline">\(h\)</span> is the finite remainder. The move to a continuous entropy is exactly ignoring a term that is driving to <span class="math inline">\(+\infty\)</span>.
 </aside>
+</section>
+<section id="the-continuous-limit-drops-log-delta" class="slide level2">
+<h2>The Continuous Limit Drops <span class="math inline">\(\log \Delta\)</span></h2>
 <div class="figure">
 <div id="log-delta-divergence-figure" class="figure-frame">
 <object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/information/log-delta-divergence.svg" width="80%" style=" ">
@@ -688,6 +703,9 @@ Discrete entropy of an equal-width Gaussian histogram against <span class="math 
 <aside class="notes">
 Overlay the Maxwell curve on an equal-<span class="math inline">\(\Delta s\)</span> histogram of the same 3D sample. Read both numbers. The Gaussian <span class="math inline">\(h\)</span> was for <span class="math inline">\(v_x\)</span>; this <span class="math inline">\(h\)</span> is for <span class="math inline">\(s\)</span>. Different variable <em>and</em> different Lebesgue measure. Leave the Jacobian for the next snippet.
 </aside>
+</section>
+<section id="entropy-of-the-maxwell-speed-law-1" class="slide level2">
+<h2>Entropy of the Maxwell Speed Law</h2>
 <div class="figure">
 <div id="maxwell-speed-histogram-entropy-figure" class="figure-frame">
 <object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/physics/maxwell-speed-histogram-entropy.svg" width="80%" style=" ">
@@ -742,6 +760,9 @@ The same speed samples, two partitions, two values of discrete <span class="math
 <aside class="notes">
 Board <span class="math inline">\(h\approx H+\sum p_i\log\Delta_i\)</span> for unequal bins. The difference of the two remainders is <span class="math inline">\(\sum p_i\log(\Delta s_i/\Delta u_i)\)</span>, which tracks <span class="math inline">\(\mathbb{E}\log|J|\)</span>. Do not do <span class="math inline">\(\sigma\)</span>-algebras. The width ratio <em>is</em> the discrete RN derivative.
 </aside>
+</section>
+<section id="bin-widths-are-a-radon-nikodym-derivative-1" class="slide level2">
+<h2>Bin Widths are a Radon-Nikodym Derivative</h2>
 <div class="figure">
 <div id="discrete-jacobian-radon-nikodym-figure" class="figure-frame">
 <object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/information/discrete-jacobian-radon-nikodym.svg" width="80%" style=" ">
