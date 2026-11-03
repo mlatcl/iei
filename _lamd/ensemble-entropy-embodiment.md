@@ -83,7 +83,7 @@ reading:
 * Ten minutes
 }
 
-\classtimer{10:05}
+\classtimertitled{10:05}{Quiz 1}
 
 \subsection{From Daniel Bernoulli: Week 1 Carry-Over}
 

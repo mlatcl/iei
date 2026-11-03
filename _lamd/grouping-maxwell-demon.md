@@ -99,7 +99,7 @@ reading:
 * Worksheet 2 in as you sit
 }
 
-\classtimer{10:05}
+\classtimertitled{10:05}{Quiz 2}
 
 \include{_iei/includes/iei-notebook-setup.md}
 

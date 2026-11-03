@@ -88,7 +88,7 @@ If the slot is still listed as one hour, run long: the second half (limits) can 
 * Ten minutes
 }
 
-\classtimer{10:00}
+\classtimertitled{10:00}{Quiz 4}
 
 \include{_iei/includes/iei-notebook-setup.md}
 
