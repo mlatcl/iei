@@ -81,11 +81,11 @@ reading:
 * Worksheet 3 in as you sit
 }
 
-\classtimer{10:05}
+\classtimer{10:05}{Quiz 3}
 
 \include{_iei/includes/iei-notebook-setup.md}
 
-\classtimer{10:15}
+\classtimer{10:15}{Quiz 3}
 
 \subsection{What Did Fisher Mean by Information?}
 
