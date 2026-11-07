@@ -8,7 +8,7 @@ room: FW26
 transition: None
 abstract: >
   Jaynes' maximum entropy principle, the exponential family as the MaxEnt
-  family, the overlapping coarse-graining remainder $H(I\mid X)$ with mutual
+  family, overlapping coarse-graining with $H(I\mid X)$ and mutual
   information, and the first synthesis of the three operational readings of
   entropy. This is the intended answer to “how is entropy understood today?”,
   to be revised again after von Neumann entropy in week 8. The Legendre
@@ -103,7 +103,7 @@ Legendre ($H=A-\theta\cdot\eta$, dual charts) is parked for week 6.
 * Lagrange multiplier on energy is coldness $\beta$ from week 1
 }
 
-\speakernotes{LO5. After die demo, recover canonical ensemble and Gaussian on the board. Worksheet 2 implements the die.}
+\speakernotes{LO5. After the die demo, the canonical ensemble and the Gaussian are the same MaxEnt pattern. Worksheet 2 implements the die.}
 
 \notes{Maximum entropy is the week's pair in one move: entropy forbids assuming more structure than the constraints; probability is the recipe. One mean-energy constraint gives Boltzmann weights; mean and variance give the Gaussian. The Lagrange multiplier on energy is coldness $\beta$.}
 
@@ -157,7 +157,7 @@ mlai.write_figure('jaynes-die-maxent.svg', directory='\writeDiagramsDir/ml')}
 * Stationarity: $\partial\mathscr{L}/\partial p_i=0$ $\Rightarrow$ $p_i\propto e^{-\sum_k \lambda_k f_k(x_i)}$
 }
 
-\speakernotes{Board the derivative. Sign: we maximise $H$ so the Lagrangian uses $+\log p_i$ terms; Jaynes' die and Boltzmann are special cases with one constraint $f_1(x)=x$ or $f_1(x)=E_i$.}
+\speakernotes{The stationarity condition is $\partial L/\partial p_i=0$. Sign: we maximise $H$ so the Lagrangian uses $+\log p_i$ terms; Jaynes' die and Boltzmann are special cases with one constraint $f_1(x)=x$ or $f_1(x)=E_i$.}
 
 \notes{Fix a finite outcome set $\{x_1,\ldots,x_n\}$ and unknown probabilities $p_i>0$. The maximum entropy principle asks for the $p_i$ that maximise Shannon entropy
 \begin{align}
@@ -252,14 +252,13 @@ We use the minus sign so that high-energy states are down-weighted when $\theta_
 
 \include{_information/includes/grouping-partition-overlap-mi.md}
 
-\speakernotes{Week 4 exclusive case had $H(G\mid X)=0$. Soft mixtures leave $H(I\mid X)>0$. Define $I(X;I)$ from the chain rule; name the KL form. Legendre / dual charts wait for week 6.}
+\speakernotes{Week 4 exclusive case had $H(G\mid X)=0$. Soft mixtures leave $H(I\mid X)>0$. From the chain rule, $I(X;I)=H(w)-H(I\mid X)$, and the same quantity is $\KL{p(x,i)}{p(x)p(i)}$. Legendre / dual charts wait for week 6.}
 
 \notes{Week 4 stopped at exclusive partitions. The soft-partition identity
 \begin{align}
 H(X)=H(w)+\sum_i w_i H(p_i)-H(I\mid X)
 \end{align}
-is the bookkeeping for overlapping coarse-graining; mutual information $I(X;I)=H(w)-H(I\mid X)$ isolates the remainder. The Legendre transform $H=A-\theta\cdot\eta$ (conjugate of the log-partition) is parked --- week 6 needs that pair for dual flatness.}
-
+is the bookkeeping for overlapping coarse-graining; mutual information $I(X;I)=H(w)-H(I\mid X)$ is exactly that leftover term. The Legendre transform $H=A-\theta\cdot\eta$ (conjugate of the log-partition) is parked (week 6 needs that pair for dual flatness).}
 \subsection{Three Perspectives}
 
 <!-- SNIPPET: _information/includes/three-perspectives-entropy.md -->

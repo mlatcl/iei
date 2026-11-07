@@ -58,7 +58,7 @@ reading:
 }
 
 \notes{
-**Time plan.** The slot is 10:05--11:55 (110 minutes, not 120). Quiz 3 is Moodle. Protect Fisher versus Shannon, dual flatness, and the length definition. Open with the Legendre transform parked from week 5 --- it is the dual-chart setup for today.
+**Time plan.** The slot is 10:05--11:55 (110 minutes, not 120). Quiz 3 is Moodle. Protect Fisher versus Shannon, dual flatness, and the length definition. Open with the Legendre transform parked from week 5 (it is the dual-chart setup for today).
 
 | Clock | Block |
 |------:|-------|
@@ -73,7 +73,7 @@ reading:
 
 \subsection{Quiz 3}
 
-\notes{Invigilated Moodle, own device, no notes, no network, no LLMs. Ten questions on Weeks 4--5 as delivered: exclusive grouping $H=H(w)+\sum_i w_i H(p_i)$, soft remainder $H(I\mid X)$ / $I(X;I)$, the missing measure, Maxwell's demon as compartments and two ledgers, MaxEnt and the exponential family. Not Fisher, not Legendre, not Crooks --- those start after the quiz. Worksheet 3 is collected as they sit.}
+\notes{Invigilated Moodle, own device, no notes, no network, no LLMs. Ten questions on Weeks 4--5 as delivered: exclusive grouping $H=H(w)+\sum_i w_i H(p_i)$, soft partitions $H(I\mid X)$ / $I(X;I)$, the missing measure, Maxwell's demon as compartments and two ledgers, MaxEnt and the exponential family. Not Fisher, not Legendre, not Crooks (those start after the quiz). Worksheet 3 is collected as they sit.}
 
 \slidesincremental{
 * Device required; Moodle open
@@ -483,7 +483,7 @@ These geometric properties will be essential when we study constrained informati
 * Pythagorean theorem for KL on dual flats
 }
 
-\speakernotes{LO8. Connect to the Legendre pair just boarded. Gaussian Fisher matrix and gradient comparison; geometry worksheet is deferred.}
+\speakernotes{LO8. The Legendre pair $(\theta,\eta)$ is the dual-chart setup. Gaussian Fisher matrix and gradient comparison; geometry worksheet is deferred.}
 
 \notes{The Fisher matrix $g_{ij}=\mathbb{E}[\partial_i\log p\,\partial_j\log p]$ defines a Riemannian metric on the statistical manifold. On exponential families, e-flat ($\theta$) and m-flat ($\eta$) charts are dual; Hessians of $A$ and $A^*$ are inverse metrics. The Pythagorean theorem for KL holds on dual flats.}
 

@@ -31,7 +31,7 @@
 * Pressure as intensive was the usual miss on intensive / extensive
 }
 
-\notes{Named matching (Black, Carnot, Rumford, Joule), the joule blank on $k_BTH$, hurricane / grid coarse-graining, and $S=k_BH$ with units were mostly got when attempted. The two ideas worth looking at again are what $\log Z$ *is*, and what Clausius was *doing* in the heat thread --- not naming uncertainty.}
+\notes{Named matching (Black, Carnot, Rumford, Joule), the joule blank on $k_BTH$, hurricane / grid coarse-graining, and $S=k_BH$ with units were mostly got when attempted. The two ideas worth looking at again are what $\log Z$ *is*, and what Clausius was *doing* in the heat thread (not naming uncertainty).}
 
 \newslide{What $\log Z$ Is}
 
@@ -40,16 +40,16 @@
 \slidesincremental{
 * $p_i = e^{-\beta E_i}/Z$; $Z$ sums the states
 * One piece of the split is entropy; the other sits in $\log Z$
-* Up to $-k_BT$, that second piece is available energy --- not $U$, and not $H$
+* Up to $-k_BT$, that second piece is available energy (not $U$, and not $H$)
 }
 
-\notes{The distractors that showed up were $\log Z=U$ and $\log Z=H$. The Zustandssumme etymology was often known on its own; the available-energy reading was the part that dropped. Week 3 put the split on the board: inner energy is composed of an entropy term and an available-energy term in $\log Z$. Equivalently $F=U-TS=-k_BT\log Z$. The MaxEnt hour recovers the same object from constraints: the Lagrange multiplier on mean energy is coldness $\beta$, and $\log Z$ is the normaliser that becomes the free energy.}
+\notes{The distractors that showed up were $\log Z=U$ and $\log Z=H$. The Zustandssumme etymology was often known on its own; the available-energy reading was the part that dropped. Week 3 gave the split: inner energy is composed of an entropy term and an available-energy term in $\log Z$. Equivalently $F=U-TS=-k_BT\log Z$. The MaxEnt hour recovers the same object from constraints: the Lagrange multiplier on mean energy is coldness $\beta$, and $\log Z$ is the normaliser that becomes the free energy.}
 
-\speakernotes{If the room needs the one-liner: $F=-k_BT\log Z$. Prefer the split story over listing wrong options. Do not derive MaxEnt here --- that is the rest of the hour.}
+\speakernotes{If the room needs the one-liner: $F=-k_BT\log Z$. Prefer the split story over listing wrong options. Do not derive MaxEnt here (that is the rest of the hour).}
 
 \newslide{Clausius Did Not Name Uncertainty}
 
-\slides{Clausius is bookkeeping after Joule and Carnot --- not a Shannon preamble.}
+\slides{Clausius is bookkeeping after Joule and Carnot (not a Shannon preamble).}
 
 \slidesincremental{
 * Kept the mechanical equivalent of heat and Carnot's limit; dropped conserved caloric
@@ -57,7 +57,7 @@
 * For a reversible engine, $Q_\mathrm{h}/T_\mathrm{h}=Q_\mathrm{c}/T_\mathrm{c}$
 }
 
-\notes{The sticky wrong option was that Clausius coined entropy *to name uncertainty*. That is the Worksheet 1 / 2 confusion again. Clausius's move is thermodynamic bookkeeping after Joule and Carnot, not a Shannon preamble. Uncertainty-as-entropy sits in the statistical tradition --- Boltzmann, Gibbs, Wiener --- and in Shannon's $H$. The quiz wanted the engineering story of the heat thread, not the naming story.}
+\notes{The sticky wrong option was that Clausius coined entropy *to name uncertainty*. That is the Worksheet 1 / 2 confusion again. Clausius's move is thermodynamic bookkeeping after Joule and Carnot, not a Shannon preamble. Uncertainty-as-entropy sits in the statistical tradition (Boltzmann, Gibbs, Wiener) and in Shannon's $H$. The quiz wanted the engineering story of the heat thread, not the naming story.}
 
 \speakernotes{Bridge: Worksheet 2 pressed $H$ versus $S$; this item pressed the physical thread that $S$ came from. Then into Laplace / MaxEnt.}
 
