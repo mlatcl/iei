@@ -125,9 +125,11 @@
 
 <section id="title-slide">
   <h1 class="title">Grouping and Maxwell’s Demon</h1>
-  <p class="author" style="text-align:center"><a href="http://inverseprobability.com">Neil D. Lawrence</a></p>
+  <p class="author" style="text-align:center"><a href="http://inverseprobability.com">Neil
+D. Lawrence</a></p>
   <p class="date" style="text-align:center"><time>2026-11-03</time></p>
-  <p class="venue" style="text-align:center">FW26, William Gates Building</p>
+  <p class="venue" style="text-align:center">FW26, William Gates
+Building</p>
 </section>
 
 <section class="slide level2">
@@ -146,8 +148,10 @@
 <h2>Define This Week</h2>
 <div>
 <ul>
-<li class="fragment">Questions; MacKay’s balance; die grouping <span class="math inline">\(H=H(w)+\sum_i w_i H(p_i)\)</span></li>
-<li class="fragment">Gaussian vs Maxwell: <span class="math inline">\(H\)</span> without a measure <span class="math inline">\(m\)</span></li>
+<li class="fragment">Questions; MacKay’s balance; die grouping <span
+class="math inline">\(H=H(w)+\sum_i w_i H(p_i)\)</span></li>
+<li class="fragment">Gaussian vs Maxwell: variable, grouping, and
+measure <span class="math inline">\(m\)</span></li>
 <li class="fragment">The demon: compartments and two ledgers</li>
 <li class="fragment">Worksheet 3: where can the entropy sit?</li>
 </ul>
@@ -155,21 +159,17 @@
 </section>
 <section id="this-session" class="slide level2">
 <h2>This Session</h2>
-<div>
-<ul>
-<li class="fragment">Quiz 2 (ten minutes); collect Worksheet 2</li>
-<li class="fragment">Questions / MacKay / grouping; then the missing measure</li>
-<li class="fragment">Compartments and two ledgers</li>
-<li class="fragment">Worksheet 3 after the fork</li>
-</ul>
-</div>
+<aside class="notes">
+Do not open Szilard or Landauer in this slot.
+</aside>
 </section>
 <section id="after-this-lecture" class="slide level2">
 <h2>After This Lecture</h2>
 <div>
 <ul>
 <li class="fragment">Worksheet 2 due today, before the quiz</li>
-<li class="fragment">Worksheet 3 released (due 17 November, with Quiz 3)</li>
+<li class="fragment">Worksheet 3 released (due 17 November, with Quiz
+3)</li>
 </ul>
 </div>
 </section>
@@ -178,7 +178,8 @@
 <div>
 <ul>
 <li class="fragment">Paper; no notes, no network, no LLMs</li>
-<li class="fragment">Ten minutes</li>
+<li class="fragment">Opening block (about fifteen minutes as
+delivered)</li>
 <li class="fragment">Worksheet 2 in as you sit</li>
 </ul>
 </div>
@@ -189,24 +190,38 @@ sns.set_style('darkgrid')
 sns.set_context('paper')
 sns.set_palette('colorblind')}-->
 </section>
-<section id="as-taught-missing-measure-then-the-fork" class="slide level2">
-<h2>As Taught: Missing Measure, Then the Fork</h2>
+<section id="as-taught" class="slide level2">
+<h2>As Taught</h2>
 <p>Harry’s speed question first. Compartments last, as Worksheet 3.</p>
 <div>
 <ul>
-<li class="fragment">Grid and concentric rings: why speed peaks away from zero</li>
-<li class="fragment">Declare <span class="math inline">\(m\)</span>; Gaussian versus Maxwell was an undeclared change of measure</li>
-<li class="fragment">Demon: three (maybe four) compartments; number ledger versus energy ledger</li>
+<li class="fragment">Grid and concentric rings: why speed peaks away
+from zero</li>
+<li class="fragment">Variable, grouping, measure: Jaynes’ <span
+class="math inline">\(m\)</span> is only the last</li>
+<li class="fragment">Demon: three (maybe four) compartments; number
+ledger versus energy ledger</li>
 </ul>
 </div>
 <aside class="notes">
-As taught: protect the shell figure and the compartment schematic. MacKay strategy stays deferred. Stop at the fork; do not open Landauer.
+After the break, the shell figure and the compartment schematic are what
+this session is for. MacKay strategy stays deferred. Stop at the fork;
+Landauer waits.
 </aside>
 </section>
 <section id="questions-a-balance-and-a-die" class="slide level2">
 <h2>Questions, a Balance, and a Die</h2>
 <aside class="notes">
-Composition wrapper only. Through-line: the game is the idealised yes/no world; the pans and then the cube are where mechanism spoils it. Stop MacKay after two-versus-three readings if the clock is tight. Protect three-faces-left as the known-ball echo, then the <span class="math inline">\(1\)</span>–<span class="math inline">\(3\)</span> / <span class="math inline">\(4\)</span>–<span class="math inline">\(6\)</span> cut versus odd/even as <em>different</em> groupings, then the extensive/intensive sentence. Do not include the Gaussian–Maxwell measure files here — lectures that want both include this file, then that one.
+Composition wrapper only. Through-line: the game is the idealised yes/no
+world; the pans and then the cube are where mechanism spoils it. Stop
+MacKay after two-versus-three readings if the clock is tight. Protect
+three-faces-left as the known-ball echo, then the <span
+class="math inline">\(1\)</span>–<span class="math inline">\(3\)</span>
+/ <span class="math inline">\(4\)</span>–<span
+class="math inline">\(6\)</span> cut versus odd/even as
+<em>different</em> groupings, then the extensive/intensive sentence. Do
+not include the Gaussian–Maxwell measure files here — lectures that want
+both include this file, then that one.
 </aside>
 </section>
 <section id="the-information-game" class="slide level2">
@@ -214,36 +229,55 @@ Composition wrapper only. Through-line: the game is the idealised yes/no world; 
 </section>
 <section id="the-information-game-1" class="slide level2">
 <h2>The Information Game</h2>
-<p>One player has chosen an object from a known finite list. The other may ask only <em>yes/no</em> questions.</p>
+<p>One player has chosen an object from a known finite list. The other
+may ask only <em>yes/no</em> questions.</p>
 <div>
 <ul>
 <li class="fragment">Goal: name the object</li>
-<li class="fragment">Cost: number of questions (worst case, or on average)</li>
-<li class="fragment">Optimal play halves the remaining possibilities each time</li>
+<li class="fragment">Cost: number of questions (worst case, or on
+average)</li>
+<li class="fragment">Optimal play halves the remaining possibilities
+each time</li>
 </ul>
 </div>
 <aside class="notes">
-Run this live if time allows: pick a small list (sixteen animals, eight Cambridge colleges). Students should feel that a balanced question buys one bit. Do not yet write <span class="math inline">\(-\sum p\log p\)</span>; the counting argument is enough.
+Run this live if time allows: pick a small list (sixteen animals, eight
+Cambridge colleges). Students should feel that a balanced question buys
+one bit. Do not yet write <span class="math inline">\(-\sum p\log
+p\)</span>; the counting argument is enough.
 </aside>
 </section>
 <section id="bits-as-balanced-questions" class="slide level2">
 <h2>Bits as Balanced Questions</h2>
-<p>A fair yes/no answer distinguishes two equally likely cases — one <em>bit</em>.</p>
+<p>A fair yes/no answer distinguishes two equally likely cases — one
+<em>bit</em>.</p>
 <div>
 <ul>
-<li class="fragment"><span class="math inline">\(N\)</span> equally likely objects <span class="math inline">\(\Rightarrow\)</span> worst case <span class="math inline">\(\lceil\log_2 N\rceil\)</span> bits</li>
-<li class="fragment">Twenty questions reach about a million hypotheses (<span class="math inline">\(2^{20}\)</span>)</li>
-<li class="fragment">Unequal priors: best questions still split probability as evenly as possible</li>
+<li class="fragment"><span class="math inline">\(N\)</span> equally
+likely objects <span class="math inline">\(\Rightarrow\)</span> worst
+case <span class="math inline">\(\lceil\log_2 N\rceil\)</span> bits</li>
+<li class="fragment">Twenty questions reach about a million hypotheses
+(<span class="math inline">\(2^{20}\)</span>)</li>
+<li class="fragment">Unequal priors: best questions still split
+probability as evenly as possible</li>
 </ul>
 </div>
-<p>The same idea, with a different instrument, comes next — MacKay’s balance.</p>
+<p>The same idea, with a different instrument, comes next — MacKay’s
+balance.</p>
 </section>
 <section id="mackays-balance-and-balls" class="slide level2">
 <h2>MacKay’s Balance and Balls</h2>
+<aside class="notes">
+State the puzzle first. Do not yet say that the instrument is ternary.
+Keep the <em>mechanism</em> (what we put on the pans) on a different
+slide from the <em>maths</em> (how many bits that use can return).
+</aside>
 </section>
 <section id="twelve-balls-one-odd" class="slide level2">
 <h2>Twelve Balls, One Odd</h2>
-<p>MacKay’s weighing problem, Exercise 4.1 <span class="citation" data-cites="MacKay-information03">(MacKay, 2003)</span>: twelve balls; exactly one is odd; it may be heavier <em>or</em> lighter.</p>
+<p>MacKay’s weighing problem, Exercise 4.1 <span class="citation"
+data-cites="MacKay-information03">(MacKay, 2003)</span>: twelve balls;
+exactly one is odd; it may be heavier <em>or</em> lighter.</p>
 <div class="figure">
 <div id="mackay-balance-balls-figure" class="figure-frame">
 <object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/information/mackay-balance-balls.svg" width="80%" style=" ">
@@ -256,25 +290,31 @@ A two-pan balance and twelve identical balls.
 <div>
 <ul>
 <li class="fragment">Instrument: a two-pan balance</li>
-<li class="fragment">Task: identify the odd ball <em>and</em> whether it is heavy or light</li>
+<li class="fragment">Task: identify the odd ball <em>and</em> whether it
+is heavy or light</li>
 </ul>
 </div>
 <aside class="notes">
-State the puzzle. Do not list the readings of the balance, and do not walk through which balls go on which pan.
+State the puzzle. Do not list the readings of the balance, and do not
+walk through which balls go on which pan.
 </aside>
 </section>
 <section id="how-should-we-proceed" class="slide level2">
 <h2>How Should We Proceed?</h2>
-<p>We have a finite list of hypotheses and a physical instrument. How should we think?</p>
+<p>We have a finite list of hypotheses and a physical instrument. How
+should we think?</p>
 <div>
 <ul>
 <li class="fragment">What, exactly, do we need to name?</li>
-<li class="fragment">What would count as a useful use of the balance?</li>
+<li class="fragment">What would count as a useful use of the
+balance?</li>
 <li class="fragment">When would we know we were done?</li>
 </ul>
 </div>
 <aside class="notes">
-Leave this live. Do not say left, right, or level, and do not say three. After they have named the hypotheses, try the two-outcome story next — as if this were the information game again.
+Leave this live. Do not say left, right, or level, and do not say three.
+After they have named the hypotheses, try the two-outcome story next —
+as if this were the information game again.
 </aside>
 </section>
 <section id="information-at-the-start" class="slide level2">
@@ -283,8 +323,10 @@ Leave this live. Do not say left, right, or level, and do not say three. After t
 <div>
 <ul>
 <li class="fragment">12 choices for which ball is odd</li>
-<li class="fragment"><span class="math inline">\(\times\)</span> 2 directions (heavy or light)</li>
-<li class="fragment"><span class="math inline">\(= 24\)</span> equally likely states of the world</li>
+<li class="fragment"><span class="math inline">\(\times\)</span> 2
+directions (heavy or light)</li>
+<li class="fragment"><span class="math inline">\(= 24\)</span> equally
+likely states of the world</li>
 </ul>
 </div>
 </section>
@@ -293,29 +335,40 @@ Leave this live. Do not say left, right, or level, and do not say three. After t
 </section>
 <section id="lets-try-two-outcomes" class="slide level2">
 <h2>Let’s Try Two Outcomes</h2>
-<p>Treat the balance as the information game: <em>left heavy</em> or <em>right heavy</em> only.</p>
+<p>Treat the balance as the information game: <em>left heavy</em> or
+<em>right heavy</em> only.</p>
 <div>
 <ul>
-<li class="fragment">Two readings <span class="math inline">\(\Rightarrow\)</span> at most <span class="math inline">\(\log_2 2\)</span> bits per use</li>
-<li class="fragment">Mechanism next: what we actually put on the pans</li>
-<li class="fragment">Maths stays on its own slides — the two accounts can disagree</li>
+<li class="fragment">Two readings <span
+class="math inline">\(\Rightarrow\)</span> at most <span
+class="math inline">\(\log_2 2\)</span> bits per use</li>
+<li class="fragment">Mechanism next: what we actually put on the
+pans</li>
+<li class="fragment">Maths stays on its own slides — the two accounts
+can disagree</li>
 </ul>
 </div>
 <aside class="notes">
-Say “log two bits” — one bit if the two readings are equally likely. Do not yet mention a third reading. Board 6 vs 6 as the move people reach for from twenty questions.
+Say “log two bits” — one bit if the two readings are equally likely. Do
+not yet mention a third reading. Board 6 vs 6 as the move people reach
+for from twenty questions.
 </aside>
 </section>
 <section id="maths-two-readings" class="slide level2">
 <h2>Maths: Two Readings</h2>
-<p><em>Maths.</em> Start from <span class="math inline">\(\log_2 24\)</span>. Each use returns at most <span class="math inline">\(\log_2 2\)</span>.</p>
+<p><em>Maths.</em> Start from <span class="math inline">\(\log_2
+24\)</span>. Each use returns at most <span class="math inline">\(\log_2
+2\)</span>.</p>
 <p><small> <span class="math display">\[
 \log_2 24 \approx 4.58,\qquad 2^4 = 16 &lt; 24 \le 32 = 2^5
 \]</span> </small></p>
 <div>
 <ul>
 <li class="fragment">Four uses cannot name 24 hypotheses</li>
-<li class="fragment">Five uses are not ruled out, <em>if</em> each use really returns one bit</li>
-<li class="fragment">That “if” is the mechanism, not <em>entropy</em>/<em>information</em> maths</li>
+<li class="fragment">Five uses are not ruled out, <em>if</em> each use
+really returns one bit</li>
+<li class="fragment">That “if” is the mechanism, not
+<em>entropy</em>/<em>information</em> maths</li>
 </ul>
 </div>
 </section>
@@ -324,41 +377,55 @@ Say “log two bits” — one bit if the two readings are equally likely. Do no
 <p><em>Mechanism.</em> Put six against six.</p>
 <div>
 <ul>
-<li class="fragment">The pans will tip — the odd ball is on one side</li>
-<li class="fragment">Follow the down pan, as if the odd ball were heavier</li>
+<li class="fragment">The pans will tip — the odd ball is on one
+side</li>
+<li class="fragment">Follow the down pan, as if the odd ball were
+heavier</li>
 <li class="fragment">Six balls remain under that story</li>
 </ul>
 </div>
 <aside class="notes">
-Ask what we actually learned. Under “it is heavier,” 12 balls become 6, one bit toward which ball. We do <em>not</em> know the direction. The down pan is six maybe-heavies; the up pan is six maybe-lights. All twelve balls are still in play. Maths next.
+Ask what we actually learned. Under “it is heavier”, 12 balls become 6,
+one bit toward which ball. We do <em>not</em> know the direction. The
+down pan is six maybe-heavies; the up pan is six maybe-lights. All
+twelve balls are still in play. Maths next.
 </aside>
 </section>
 <section id="maths-what-6-vs-6-bought" class="slide level2">
 <h2>Maths: What 6 vs 6 Bought</h2>
-<p><em>Maths.</em> Score the result of the action on the 24 hypotheses.</p>
+<p><em>Maths.</em> Score the result of the action on the 24
+hypotheses.</p>
 <div>
 <ul>
-<li class="fragment">24 <span class="math inline">\(\to\)</span> 12 remaining hypotheses: exactly <span class="math inline">\(\log_2 2\)</span> bits</li>
-<li class="fragment">Zero balls eliminated — each ball is still possibly odd</li>
-<li class="fragment">The bit went into a <em>coupling</em> of group and direction</li>
+<li class="fragment">24 <span class="math inline">\(\to\)</span> 12
+remaining hypotheses: exactly <span class="math inline">\(\log_2
+2\)</span> bits</li>
+<li class="fragment">Zero balls eliminated — each ball is still possibly
+odd</li>
+<li class="fragment">The bit went into a <em>coupling</em> of group and
+direction</li>
 </ul>
 </div>
 </section>
 <section id="mechanism-3-vs-3" class="slide level2">
 <h2>Mechanism: 3 vs 3</h2>
-<p><em>Mechanism.</em> Keep going as a binary search of the balls: three against three.</p>
+<p><em>Mechanism.</em> Keep going as a binary search of the balls: three
+against three.</p>
 <div>
 <ul>
-<li class="fragment">Under the heavier-side story, three balls remain</li>
+<li class="fragment">Under the heavier-side story, three balls
+remain</li>
 <li class="fragment">Same move, smaller pile</li>
-<li class="fragment">We are still not asking about light versus heavy</li>
+<li class="fragment">We are still not asking about light versus
+heavy</li>
 <li class="fragment">Are there only two possibilities with 3 vs 3?</li>
 </ul>
 </div>
 </section>
 <section id="mechanism-three-left" class="slide level2">
 <h2>Mechanism: Three Left</h2>
-<p><em>Mechanism.</em> Three balls remain. We cannot put one and a half on a pan.</p>
+<p><em>Mechanism.</em> Three balls remain. We cannot put one and a half
+on a pan.</p>
 <div>
 <ul>
 <li class="fragment">2 vs 2 needs a fourth ball</li>
@@ -367,7 +434,9 @@ Ask what we actually learned. Under “it is heavier,” 12 balls become 6, one 
 </ul>
 </div>
 <aside class="notes">
-Make them say the known ball out loud. Ask: how many bits do we get from 2 vs 2 now? Do not calculate before they see that the split of three remaining balls cannot be even.
+Make them say the known ball out loud. Ask: how many bits do we get from
+2 vs 2 now? Do not calculate before they see that the split of three
+remaining balls cannot be even.
 </aside>
 </section>
 <section id="three-readings" class="slide level2">
@@ -375,59 +444,78 @@ Make them say the known ball out loud. Ask: how many bits do we get from 2 vs 2 
 </section>
 <section id="aha-it-balances-three-ways" class="slide level2">
 <h2>Aha: It Balances Three Ways</h2>
-<p>The pans also sit <em>level</em>. Left heavy, right heavy, or balance.</p>
+<p>The pans also sit <em>level</em>. Left heavy, right heavy, or
+balance.</p>
 <div>
 <ul>
 <li class="fragment">The instrument was never a yes/no question</li>
-<li class="fragment">That was a mechanism choice that <em>threw away</em> a symbol</li>
+<li class="fragment">That was a mechanism choice that <em>threw
+away</em> a symbol</li>
 </ul>
 </div>
 <aside class="notes">
-Let them say the three readings. Then go straight to the new budget. Do not start the 4 vs 4 tree.
+Let them say the three readings. Then go straight to the new budget. Do
+not start the 4 vs 4 tree.
 </aside>
 </section>
 <section id="maths-three-readings" class="slide level2">
 <h2>Maths: Three Readings</h2>
-<p><em>Maths.</em> Each use now returns at most <span class="math inline">\(\log_2 3\)</span>.</p>
+<p><em>Maths.</em> Each use now returns at most <span
+class="math inline">\(\log_2 3\)</span>.</p>
 <p><small> <span class="math display">\[
 \log_2 3 \approx 1.58,\qquad 3^2 = 9 &lt; 24 \le 27 = 3^3
 \]</span> </small></p>
 <div>
 <ul>
 <li class="fragment">Two uses cannot name 24 hypotheses</li>
-<li class="fragment">Three uses can, <em>if</em> each use really returns <span class="math inline">\(\log_2 3\)</span></li>
-<li class="fragment">Same “if” as before: mechanism must realise the split</li>
+<li class="fragment">Three uses can, <em>if</em> each use really returns
+<span class="math inline">\(\log_2 3\)</span></li>
+<li class="fragment">Same “if” as before: mechanism must realise the
+split</li>
 </ul>
 </div>
 </section>
 <section id="mechanism-must-collect-log_2-3" class="slide level2">
-<h2>Mechanism Must Collect <span class="math inline">\(\log_2 3\)</span></h2>
-<p><em>Mechanism.</em> To earn <span class="math inline">\(\log_2 3\)</span>, all three readings must be possible and near equal.</p>
+<h2>Mechanism Must Collect <span class="math inline">\(\log_2
+3\)</span></h2>
+<p><em>Mechanism.</em> To earn <span class="math inline">\(\log_2
+3\)</span>, all three readings must be possible and near equal.</p>
 <div>
 <ul>
-<li class="fragment">First weighing: 4 vs 4, not 6 vs 6 — so <em>level</em> can happen</li>
-<li class="fragment">A known ball, or emptying a reading, is again a tax</li>
-<li class="fragment">Optimal play keeps the three readings as near equiprobable as possible</li>
+<li class="fragment">First weighing: 4 vs 4, not 6 vs 6 — so
+<em>level</em> can happen</li>
+<li class="fragment">A known ball, or emptying a reading, is again a
+tax</li>
+<li class="fragment">Optimal play keeps the three readings as near
+equiprobable as possible</li>
 </ul>
 </div>
 </section>
 <section id="doable-in-three-strategy-deferred" class="slide level2">
 <h2>Doable in Three — Strategy Deferred</h2>
-<p>The counting argument shows three weighings <em>must</em> be enough in principle.</p>
+<p>The counting argument shows three weighings <em>must</em> be enough
+in principle.</p>
 <div>
 <ul>
-<li class="fragment">We do <em>not</em> give the sequence of groupings today</li>
-<li class="fragment">Info gained and mechanism are separate ledgers — score both</li>
-<li class="fragment">Same moral as twenty questions: split the prior evenly, now three ways</li>
+<li class="fragment">We do <em>not</em> give the sequence of groupings
+today</li>
+<li class="fragment">Info gained and mechanism are separate ledgers —
+score both</li>
+<li class="fragment">Same moral as twenty questions: split the prior
+evenly, now three ways</li>
 </ul>
 </div>
 <aside class="notes">
-Stop here. Invite them to try Exercise 4.1 before reading MacKay’s solution figure. Optional aside: 1–6 vs 7–12 can never balance, so it yields only one bit and is already suboptimal <em>once we know there are three readings</em>.
+Stop here. Invite them to try Exercise 4.1 before reading MacKay’s
+solution figure. Optional aside: 1–6 vs 7–12 can never balance, so it
+yields only one bit and is already suboptimal <em>once we know there are
+three readings</em>.
 </aside>
 </section>
 <section id="coarse-graining-a-die" class="slide level2">
 <h2>Coarse-Graining a Die</h2>
-<p>A fair die has <span class="math inline">\(H(X)=\log_2 6\approx 2.58\)</span> bits.</p>
+<p>A fair die has <span class="math inline">\(H(X)=\log_2 6\approx
+2.58\)</span> bits.</p>
 <aside class="notes">
 Stage the question: does every yes/no cost one bit?
 </aside>
@@ -435,16 +523,20 @@ Stage the question: does every yes/no cost one bit?
 <ul>
 <li class="fragment">First cut: odd or even?</li>
 <li class="fragment">Second cut: is it a six?</li>
-<li class="fragment">Same total either way — different prices for the first answer</li>
+<li class="fragment">Same total either way — different prices for the
+first answer</li>
 </ul>
 </div>
 <aside class="notes">
-Board both partitions. Odd/even is balanced so exactly 1 bit. ``Is it six?’’ is <em>not</em> one bit — students often assume every binary question buys a bit. That is the MacKay moral applied to grouping.
+Board both partitions. Odd/even is balanced so exactly 1 bit. ``Is it
+six?’’ is <em>not</em> one bit — students often assume every binary
+question buys a bit. That is the MacKay moral applied to grouping.
 </aside>
 </section>
 <section id="odd-or-even-exactly-one-bit" class="slide level2">
 <h2>Odd or Even: Exactly One Bit</h2>
-<p>Groups <span class="math inline">\(\{1,3,5\}\)</span> and <span class="math inline">\(\{2,4,6\}\)</span> are equiprobable.</p>
+<p>Groups <span class="math inline">\(\{1,3,5\}\)</span> and <span
+class="math inline">\(\{2,4,6\}\)</span> are equiprobable.</p>
 <p><small> <span class="math display">\[
 H(G_{\mathrm{parity}})=1 \text{ bit},
 \qquad
@@ -453,14 +545,17 @@ H(X\mid G_{\mathrm{parity}})=\log_2 3 \approx 1.585 \text{ bits}
 <div>
 <ul>
 <li class="fragment">Group label: fair coin — one bit</li>
-<li class="fragment">Inside either group: three equally likely faces</li>
-<li class="fragment">Total: <span class="math inline">\(1+\log_2 3=\log_2 6\)</span></li>
+<li class="fragment">Inside either group: three equally likely
+faces</li>
+<li class="fragment">Total: <span class="math inline">\(1+\log_2
+3=\log_2 6\)</span></li>
 </ul>
 </div>
 </section>
 <section id="is-it-a-six-not-one-bit" class="slide level2">
 <h2>“Is It a Six?”: Not One Bit</h2>
-<p>A yes/no question is one bit only when the two answers are equiprobable.</p>
+<p>A yes/no question is one bit only when the two answers are
+equiprobable.</p>
 <p><small> <span class="math display">\[
 w=\Bigl(\tfrac16,\tfrac56\Bigr),
 \qquad
@@ -468,139 +563,318 @@ H(G_{\mathrm{six}})=h_2\Bigl(\tfrac16\Bigr)\approx 0.65 \text{ bits}
 \]</span> </small></p>
 <div>
 <ul>
-<li class="fragment">Yes (<span class="math inline">\(X=6\)</span>): no residual uncertainty</li>
-<li class="fragment">No: five faces left, <span class="math inline">\(H=\log_2 5\)</span></li>
-<li class="fragment">Remaining: <span class="math inline">\(\tfrac56\log_2 5\approx 1.93\)</span> bits</li>
-<li class="fragment">Total again <span class="math inline">\(\approx 0.65+1.93=2.58=\log_2 6\)</span></li>
+<li class="fragment">Yes (<span class="math inline">\(X=6\)</span>): no
+residual uncertainty</li>
+<li class="fragment">No: five faces left, <span
+class="math inline">\(H=\log_2 5\)</span></li>
+<li class="fragment">Remaining: <span
+class="math inline">\(\tfrac56\log_2 5\approx 1.93\)</span> bits</li>
+<li class="fragment">Total again <span class="math inline">\(\approx
+0.65+1.93=2.58=\log_2 6\)</span></li>
 </ul>
 </div>
 </section>
 <section id="same-total-different-first-cut" class="slide level2">
 <h2>Same Total, Different First Cut</h2>
-<p>However you slice the questions, you pay <span class="math inline">\(\log_2 6\)</span> in total.</p>
+<p>However you slice the questions, you pay <span
+class="math inline">\(\log_2 6\)</span> in total.</p>
 <div>
 <ul>
-<li class="fragment">Odd/even first: pay <span class="math inline">\(1\)</span>, then <span class="math inline">\(\log_2 3\)</span></li>
-<li class="fragment">Six-or-not first: pay <span class="math inline">\(\approx 0.65\)</span>, then <span class="math inline">\(\approx 1.93\)</span></li>
-<li class="fragment">Coarse-graining keeps only the group term and <em>throws away</em> the rest</li>
+<li class="fragment">Odd/even first: pay <span
+class="math inline">\(1\)</span>, then <span
+class="math inline">\(\log_2 3\)</span></li>
+<li class="fragment">Six-or-not first: pay <span
+class="math inline">\(\approx 0.65\)</span>, then <span
+class="math inline">\(\approx 1.93\)</span></li>
+<li class="fragment">Coarse-graining keeps only the group term and
+<em>throws away</em> the rest</li>
 </ul>
 </div>
 </section>
+<section id="partitions-that-do-not-overlap" class="slide level2">
+<h2>Partitions That Do Not Overlap</h2>
+<p>Coarse-grain into groups that do not leak into each other.</p>
+<div>
+<ul>
+<li class="fragment">Face <span class="math inline">\(d\)</span>;
+partition index <span class="math inline">\(i\)</span></li>
+<li class="fragment"><span class="math inline">\(p(d\mid i)\)</span> is
+<em>not</em> a general conditional (once <span
+class="math inline">\(i\)</span> is known, the support is
+restricted)</li>
+<li class="fragment">Divide so the partitions do not overlap: we do not
+want things to leak in ways we are not modelling</li>
+</ul>
+</div>
+<aside class="notes">
+Here <span class="math inline">\(d\)</span> is the die face and <span
+class="math inline">\(i\)</span> is the partition: low/high or <span
+class="math inline">\(1\)</span>–<span class="math inline">\(2\)</span>
+versus <span class="math inline">\(3\)</span>–<span
+class="math inline">\(6\)</span>. Outside the active cell the
+probabilities are zero. Soft mixtures (several <span
+class="math inline">\(i\)</span> active for one <span
+class="math inline">\(d\)</span>) come next.
+</aside>
+</section>
+<section id="why-non-overlap-matters" class="slide level2">
+<h2>Why Non-Overlap Matters</h2>
+<p>The log of a sum is a headache. The log of a product is trivial.
+Non-overlap lets us use the product.</p>
+<p><small> <span class="math display">\[
+p(d)=\sum_i p(d\mid i)\,p(i)
+\]</span> </small></p>
+<div>
+<ul>
+<li class="fragment">Product rule and sum rule give the marginal (that
+much is ordinary)</li>
+<li class="fragment">For each face <span
+class="math inline">\(d\)</span>, only <em>one</em> <span
+class="math inline">\(i\)</span> is valid</li>
+<li class="fragment">The other terms in the sum are zero, so the log-sum
+collapses</li>
+</ul>
+</div>
+<aside class="notes">
+If <span class="math inline">\(d\in\{1,2\}\)</span> then only <span
+class="math inline">\(i=1\)</span> contributes; if <span
+class="math inline">\(d\in\{3,4,5,6\}\)</span> then only <span
+class="math inline">\(i=2\)</span>. The partitions are on or off: that
+is the trick.
+</aside>
+</section>
+<section id="overlapping-components-are-a-different-model"
+class="slide level2">
+<h2>Overlapping Components Are a Different Model</h2>
+<p>A mixture of Gaussians (or a mixture of experts) lets components
+overlap. Then the trick fails.</p>
+<div>
+<ul>
+<li class="fragment">Soft mixture: several <span
+class="math inline">\(i\)</span> can be active for the same <span
+class="math inline">\(d\)</span></li>
+<li class="fragment">The sum inside the log stays a sum</li>
+<li class="fragment">Coarse-graining as used here is the exclusive case
+(break the world down, and throw the within-cell uncertainty away)</li>
+</ul>
+</div>
+<aside class="notes">
+A mixture of Gaussians or mixture of experts is the overlapping
+contrast. We do not need EM here. Then back to the die identity.
+</aside>
+</section>
 <section id="grouping-composition" class="slide level2">
 <h2>Grouping Composition</h2>
-<p>Uncertainty splits into stages: which group, then where inside the group.</p>
+<p>Uncertainty splits into stages: which group, then where inside the
+group.</p>
 <p><small> <span class="math display">\[
 H(X)=H(w)+\sum_i w_i\, H(p_i)
 \]</span> </small></p>
 <div>
 <ul>
-<li class="fragment"><span class="math inline">\(w_i\)</span>: probability of group <span class="math inline">\(i\)</span></li>
-<li class="fragment"><span class="math inline">\(p_i\)</span>: distribution <em>inside</em> group <span class="math inline">\(i\)</span></li>
-<li class="fragment">First term: cost of the coarse label; second: average residual detail</li>
+<li class="fragment"><span class="math inline">\(w_i\)</span>:
+probability of group <span class="math inline">\(i\)</span></li>
+<li class="fragment"><span class="math inline">\(p_i\)</span>:
+distribution <em>inside</em> group <span
+class="math inline">\(i\)</span></li>
+<li class="fragment">First term: cost of the coarse label; second:
+average residual detail</li>
 </ul>
 </div>
 <aside class="notes">
-This is the chain rule for a deterministic grouping <span class="math inline">\(G=g(X)\)</span>: <span class="math inline">\(H(X)=H(G)+H(X\mid G)\)</span>. Board that identification. Khinchin pointer only — consistency under staged questions characterises Shannon <span class="math inline">\(H\)</span>; no proof today.
+This is the chain rule for a deterministic grouping <span
+class="math inline">\(G=g(X)\)</span>: <span
+class="math inline">\(H(X)=H(G)+H(X\mid G)\)</span>. Khinchin’s point is
+only that consistency under staged questions characterises Shannon <span
+class="math inline">\(H\)</span>; no proof today, and no mutual
+information yet.
 </aside>
 </section>
 <section id="reverse-direction" class="slide level2">
 <h2>Reverse Direction</h2>
-<p>Learning the face determines the group for free. What is left to find after the group?</p>
+<p>Learning the face determines the group for free. What is left to find
+after the group?</p>
 <div>
 <ul>
-<li class="fragment"><span class="math inline">\(H(G\mid X)=0\)</span>: the coarse label is redundant given <span class="math inline">\(X\)</span></li>
-<li class="fragment">Information <em>extracted</em> by the group: <span class="math inline">\(I(X;G)=H(G)\)</span></li>
-<li class="fragment">Information <em>still to find</em>: <span class="math inline">\(H(X\mid G)\)</span></li>
+<li class="fragment"><span class="math inline">\(H(G\mid X)=0\)</span>:
+the coarse label is redundant given <span
+class="math inline">\(X\)</span></li>
+<li class="fragment">Cost of the coarse question: <span
+class="math inline">\(H(G)\)</span></li>
+<li class="fragment">Still to find after the group: <span
+class="math inline">\(H(X\mid G)\)</span></li>
 </ul>
 </div>
+<aside class="notes">
+For exclusive partitions <span class="math inline">\(H(G\mid
+X)=0\)</span> (today’s assumption). Soft / overlapping mixtures leave
+<span class="math inline">\(H(G\mid X)&gt;0\)</span>; that derivation
+waits for week 5, once we treat the leftover term with mutual
+information.
+</aside>
 </section>
 <section id="why-the-total-is-invariant" class="slide level2">
 <h2>Why the Total Is Invariant</h2>
-<p>Entropy is the uncertainty that is consistent no matter how you decompose a question into stages.</p>
+<p>Entropy is the uncertainty that is consistent no matter how you
+decompose a question into stages.</p>
 <div>
 <ul>
-<li class="fragment">Any partition: <span class="math inline">\(H(w)+\sum_i w_i H(p_i)\)</span> returns the same <span class="math inline">\(H(X)\)</span></li>
-<li class="fragment">That consistency is special to the weighted logarithm form</li>
+<li class="fragment">Any partition: <span
+class="math inline">\(H(w)+\sum_i w_i H(p_i)\)</span> returns the same
+<span class="math inline">\(H(X)\)</span></li>
+<li class="fragment">That consistency is special to the weighted
+logarithm form</li>
 </ul>
 </div>
 </section>
 <section id="grouping-is-a-choice-of-abstraction" class="slide level2">
 <h2>Grouping Is a Choice of Abstraction</h2>
-<p>Keeping <span class="math inline">\(\{1,2,3\}\)</span> versus <span class="math inline">\(\{4,5,6\}\)</span> and refusing the face is the same move as a macrostate.</p>
+<p>Keeping <span class="math inline">\(\{1,2,3\}\)</span> versus <span
+class="math inline">\(\{4,5,6\}\)</span> and refusing the face is the
+same move as a macrostate.</p>
 <div>
 <ul>
-<li class="fragment">The group label is what we keep; <span class="math inline">\(\sum_i w_i H(p_i)\)</span> is what we ignore</li>
-<li class="fragment">Macroscopic variables: extensive <span class="math inline">\(N\)</span>,<span class="math inline">\(V\)</span>,<span class="math inline">\(E\)</span>,<span class="math inline">\(S\)</span>; intensive <span class="math inline">\(T\)</span>,<span class="math inline">\(P\)</span></li>
-<li class="fragment">We cannot follow Laplace’s curves, so we keep a few numbers</li>
+<li class="fragment">The group label is what we keep; <span
+class="math inline">\(\sum_i w_i H(p_i)\)</span> is what we ignore</li>
+<li class="fragment">Macroscopic variables: extensive <span
+class="math inline">\(N\)</span>,<span
+class="math inline">\(V\)</span>,<span
+class="math inline">\(E\)</span>,<span class="math inline">\(S\)</span>;
+intensive <span class="math inline">\(T\)</span>,<span
+class="math inline">\(P\)</span></li>
+<li class="fragment">We cannot follow Laplace’s curves, so we keep a few
+numbers</li>
 </ul>
 </div>
 <aside class="notes">
-Callback only — extensive versus intensive was week 2. Do not re-derive. Do not open MaxEnt, Lagrange, or the demon. The next include, if you want it, is the Gaussian-Maxwell measure arc. Units: the die was bits; those figures are nats. Same <span class="math inline">\(H\)</span>, different <span class="math inline">\(\log\)</span> base.
+Callback only — extensive versus intensive was week 2. Do not re-derive.
+Do not open MaxEnt, Lagrange, or the demon. The next include, if you
+want it, is the Gaussian-Maxwell measure arc. Units: the die was bits;
+those figures are nats. Same <span class="math inline">\(H\)</span>,
+different <span class="math inline">\(\log\)</span> base.
 </aside>
 </section>
-<section id="gaussian-maxwellboltzmann-and-the-missing-measure" class="slide level2">
+<section id="gaussian-maxwellboltzmann-and-the-missing-measure"
+class="slide level2">
 <h2>Gaussian, Maxwell–Boltzmann, and the Missing Measure</h2>
 <aside class="notes">
-Composition wrapper only. Children carry the figures. As taught: open from Harry’s speed-peak question and the anthropomorphic bridge, then histogram arithmetic, then the velocity-space shell before the 3D Maxwell pair. Stop before MaxEnt / Lagrange / the die.
+Composition wrapper only. Children carry the figures. As taught: open
+from Harry’s speed-peak question and the anthropomorphic bridge, then
+histogram arithmetic, then the velocity-space shell before the 3D
+Maxwell pair. Stop before MaxEnt / Lagrange / the die.
 </aside>
 </section>
-<section id="entropy-of-a-gaussian-velocity-histogram" class="slide level2">
+<section id="entropy-of-a-gaussian-velocity-histogram"
+class="slide level2">
 <h2>Entropy of a Gaussian Velocity Histogram</h2>
-<p>Equal-width bins of one Cartesian component. Discrete <span class="math inline">\(H\)</span> is a sum over masses.</p>
+<p>Equal-width bins of one Cartesian component. Discrete <span
+class="math inline">\(H\)</span> is a sum over masses.</p>
 <div>
 <ul>
-<li class="fragment">Midpoint rule: <span class="math inline">\(p_i\approx f(x_i)\Delta\)</span> on equal-<span class="math inline">\(\Delta v\)</span> bins of <span class="math inline">\(v_x\sim\mathscr{N}\left(0,\sigma^2\right)\)</span></li>
-<li class="fragment"><span class="math inline">\(H=-\sum_i p_i \log p_i\)</span> depends only on those masses</li>
-<li class="fragment">Analytic <span class="math inline">\(h=\tfrac12\log(2\pi e \sigma^2)\)</span>; the Riemann partition tracks <span class="math inline">\(h-\log\Delta\)</span></li>
+<li class="fragment">Midpoint rule: <span
+class="math inline">\(p_i\approx f(x_i)\Delta\)</span> on equal-<span
+class="math inline">\(\Delta v\)</span> bins of <span
+class="math inline">\(v_x\sim\mathscr{N}\left(0,\sigma^2\right)\)</span></li>
+<li class="fragment"><span class="math inline">\(H=-\sum_i p_i \log
+p_i\)</span> depends only on those masses</li>
+<li class="fragment">Analytic <span
+class="math inline">\(h=\tfrac12\log(2\pi e \sigma^2)\)</span>; the
+Riemann partition tracks <span
+class="math inline">\(h-\log\Delta\)</span></li>
 </ul>
 </div>
 <aside class="notes">
-As taught: open from Harry’s ``why isn’t the speed peak at zero?’’ and the anthropomorphic bridge, then this Riemann picture. Board <span class="math inline">\(p_i\approx f\Delta\)</span> once. The figure is the piecewise-constant midpoint approximation, not a sample histogram. The two numbers should agree; <span class="math inline">\(h\)</span> itself is smaller by <span class="math inline">\(\log\Delta\)</span> (and is negative if <span class="math inline">\(\Delta\)</span> is large). Nats throughout. The shell-geometry figure follows the 1D fold.
+As taught: open from Harry’s ``why isn’t the speed peak at zero?’’ and
+the anthropomorphic bridge, then this Riemann picture. Board <span
+class="math inline">\(p_i\approx f\Delta\)</span> once. The figure is
+the piecewise-constant midpoint approximation, not a sample histogram.
+The two numbers should agree; <span class="math inline">\(h\)</span>
+itself is smaller by <span class="math inline">\(\log\Delta\)</span>
+(and is negative if <span class="math inline">\(\Delta\)</span> is
+large). Nats throughout. The shell-geometry figure follows the 1D fold.
 </aside>
 </section>
 <section id="histograms-as-riemann-sums" class="slide level2">
 <h2>Histograms as Riemann Sums</h2>
-<p>A histogram replaces <span class="math inline">\(f(x)\)</span> by a piecewise-constant function: height <span class="math inline">\(f(x_i)=f_i\)</span> on each bin of width <span class="math inline">\(\Delta\)</span>.</p>
+<p>A histogram replaces <span class="math inline">\(f(x)\)</span> by a
+piecewise-constant function: height <span
+class="math inline">\(f(x_i)=f_i\)</span> on each bin of width <span
+class="math inline">\(\Delta\)</span>.</p>
 <div>
 <ul>
-<li class="fragment">Bin mass <span class="math inline">\(p_i = \int_{\text{bin } i} f(x)\,\text{d}x \approx f(x_i)\Delta\)</span> (midpoint rule)</li>
-<li class="fragment"><span class="math inline">\(\sum_i g(x_i)\Delta \to \int g(x)\,\text{d}x\)</span> as <span class="math inline">\(\Delta\to 0\)</span></li>
-<li class="fragment">Used twice: <span class="math inline">\(\sum_i f_i\Delta \approx 1\)</span> and <span class="math inline">\(-\sum_i f_i\log f_i\,\Delta \approx h\)</span></li>
-<li class="fragment">So <span class="math inline">\(H \approx h - \log\Delta\)</span>: the <span class="math inline">\(-\log\Delta\)</span> comes from the <span class="math inline">\(\Delta\)</span> inside the log</li>
+<li class="fragment">Bin mass <span class="math inline">\(p_i =
+\int_{\text{bin } i} f(x)\,\text{d}x \approx f(x_i)\Delta\)</span>
+(midpoint rule)</li>
+<li class="fragment"><span class="math inline">\(\sum_i g(x_i)\Delta \to
+\int g(x)\,\text{d}x\)</span> as <span class="math inline">\(\Delta\to
+0\)</span></li>
+<li class="fragment">Used twice: <span class="math inline">\(\sum_i
+f_i\Delta \approx 1\)</span> and <span class="math inline">\(-\sum_i
+f_i\log f_i\,\Delta \approx h\)</span></li>
+<li class="fragment">So <span class="math inline">\(H \approx h -
+\log\Delta\)</span>: the <span
+class="math inline">\(-\log\Delta\)</span> comes from the <span
+class="math inline">\(\Delta\)</span> inside the log</li>
 </ul>
 </div>
 <aside class="notes">
-Draw the Gaussian, overlay rectangles of width <span class="math inline">\(\Delta\)</span> and height <span class="math inline">\(f(x_i)\)</span>, shade one rectangle and label its area <span class="math inline">\(p_i\)</span>. Then split <span class="math inline">\(\log(f_i\Delta)\)</span> on the board. Point out that the second sum is not a Riemann sum of anything finite as <span class="math inline">\(\Delta\to 0\)</span>, which is why <span class="math inline">\(H\)</span> diverges while <span class="math inline">\(h\)</span> doesn’t.
+Draw the Gaussian, overlay rectangles of width <span
+class="math inline">\(\Delta\)</span> and height <span
+class="math inline">\(f(x_i)\)</span>, shade one rectangle and label its
+area <span class="math inline">\(p_i\)</span>. Then split <span
+class="math inline">\(\log(f_i\Delta)\)</span> on the board. Point out
+that the second sum is not a Riemann sum of anything finite as <span
+class="math inline">\(\Delta\to 0\)</span>, which is why <span
+class="math inline">\(H\)</span> diverges while <span
+class="math inline">\(h\)</span> doesn’t.
 </aside>
 </section>
 <section id="histograms-as-riemann-sums-1" class="slide level2">
 <h2>Histograms as Riemann Sums</h2>
 <div class="figure">
-<div id="gaussian-histogram-discrete-entropy-figure" class="figure-frame">
+<div id="gaussian-histogram-discrete-entropy-figure"
+class="figure-frame">
 <object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/physics/gaussian-histogram-discrete-entropy.svg" width="60%" style=" ">
 </object>
 </div>
 </div>
 <aside class="notes">
-Equal-width midpoint Riemann approximation of a Gaussian velocity component. Discrete <span class="math inline">\(H\)</span> matches <span class="math inline">\(h-\log\Delta\)</span>; <span class="math inline">\(h\)</span> itself is the remainder after the bin-width term is subtracted.
+Equal-width midpoint Riemann approximation of a Gaussian velocity
+component. Discrete <span class="math inline">\(H\)</span> matches <span
+class="math inline">\(h-\log\Delta\)</span>; <span
+class="math inline">\(h\)</span> itself is the remainder after the
+bin-width term is subtracted.
 </aside>
 </section>
-<section id="one-dimension-velocity-versus-modulus" class="slide level2">
+<section id="one-dimension-velocity-versus-modulus"
+class="slide level2">
 <h2>One Dimension: Velocity Versus Modulus</h2>
-<p>Same one-dimensional sample: <span class="math inline">\(v\)</span> peaks at zero; folding to <span class="math inline">\(|v|\)</span> keeps the mode at zero.</p>
+<p>Same one-dimensional sample: <span class="math inline">\(v\)</span>
+peaks at zero; folding to <span class="math inline">\(|v|\)</span> keeps
+the mode at zero.</p>
 <div>
 <ul>
-<li class="fragment">Left: <span class="math inline">\(v\sim\mathcal{N}(0,\sigma^2)\)</span> — peak at <span class="math inline">\(0\)</span></li>
-<li class="fragment">Right: <span class="math inline">\(s=|v|\)</span> — half-normal; support <span class="math inline">\([0,\infty)\)</span>, mode still at <span class="math inline">\(0\)</span></li>
-<li class="fragment">Folding alone does not push the peak away from zero</li>
+<li class="fragment">Left: <span
+class="math inline">\(v\sim\mathcal{N}(0,\sigma^2)\)</span> — peak at
+<span class="math inline">\(0\)</span></li>
+<li class="fragment">Right: <span class="math inline">\(s=|v|\)</span> —
+half-normal; support <span class="math inline">\([0,\infty)\)</span>,
+mode still at <span class="math inline">\(0\)</span></li>
+<li class="fragment">Folding alone does not push the peak away from
+zero</li>
 </ul>
 </div>
 <aside class="notes">
-Side by side. Point at both modes: both sit at zero. The student’s ``why isn’t the peak at zero?’’ question is about speed in three dimensions, not about taking a modulus. Board <span class="math inline">\(f(s)=\sqrt{2/(\pi\sigma^2)}\,e^{-s^2/2\sigma^2}\)</span> briefly if needed.
+Side by side. Point at both modes: both sit at zero. The student’s ``why
+isn’t the peak at zero?’’ question is about speed in three dimensions,
+not about taking a modulus. Board <span
+class="math inline">\(f(s)=\sqrt{2/(\pi\sigma^2)}\,e^{-s^2/2\sigma^2}\)</span>
+briefly if needed.
 </aside>
 <div class="figure">
 <div id="velocity-vs-modulus-1d-figure" class="figure-frame">
-<div class="lamd-columns" style="display:flex; width:100%; justify-content:center; align-items:center; column-gap:1em;">
+<div class="lamd-columns"
+style="display:flex; width:100%; justify-content:center; align-items:center; column-gap:1em;">
 <div style="flex:0 0 50%; max-width:50%;">
 <object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/physics/velocity-vs-modulus-1d-velocity.svg" width="100%" style=" ">
 </object>
@@ -613,21 +887,35 @@ Side by side. Point at both modes: both sit at zero. The student’s ``why isn�
 </div>
 </div>
 <aside class="notes">
-One dimension. Left: a Gaussian velocity component peaks at zero. Right: the same sample folded to <span class="math inline">\(|v|\)</span> is half-normal — the mode is still at zero.
+One dimension. Left: a Gaussian velocity component peaks at zero. Right:
+the same sample folded to <span class="math inline">\(|v|\)</span> is
+half-normal — the mode is still at zero.
 </aside>
 </section>
 <section id="velocity-space-grid-and-speed-rings" class="slide level2">
 <h2>Velocity Space: Grid and Speed Rings</h2>
-<p>Same sample in the <span class="math inline">\((v_x,v_y)\)</span> plane. Equal-<span class="math inline">\(\Delta v\)</span> bins are a grid; equal-<span class="math inline">\(\Delta s\)</span> bins are concentric rings.</p>
+<p>Same sample in the <span class="math inline">\((v_x,v_y)\)</span>
+plane. Equal-<span class="math inline">\(\Delta v\)</span> bins are a
+grid; equal-<span class="math inline">\(\Delta s\)</span> bins are
+concentric rings.</p>
 <div>
 <ul>
-<li class="fragment">Left: isotropic cloud in two Cartesian components</li>
-<li class="fragment">Equal-<span class="math inline">\(\Delta v\)</span> grid: each square has the same area</li>
-<li class="fragment">Concentric rings: shell circumference grows as <span class="math inline">\(s\)</span> — more cells at larger speed</li>
+<li class="fragment">Left: isotropic cloud in two Cartesian
+components</li>
+<li class="fragment">Equal-<span class="math inline">\(\Delta v\)</span>
+grid: each square has the same area</li>
+<li class="fragment">Concentric rings: shell circumference grows as
+<span class="math inline">\(s\)</span> — more cells at larger speed</li>
 </ul>
 </div>
 <aside class="notes">
-Board this before the 3D histograms if a student asks why speed peaks away from zero. Point at a ring: more grid cells sit at larger <span class="math inline">\(s\)</span>, so even an isotropic Gaussian piles probability away from the origin once you bin by speed. Two dimensions is enough for the geometry; three dimensions replaces rings by spherical shells (<span class="math inline">\(s^2\)</span>).
+If a student asks why speed peaks away from zero, this figure is the
+answer before the 3D histograms. A ring at larger <span
+class="math inline">\(s\)</span> holds more grid cells, so even an
+isotropic Gaussian piles probability away from the origin once you bin
+by speed. Two dimensions is enough for the geometry; three dimensions
+replaces rings by spherical shells (<span
+class="math inline">\(s^2\)</span>).
 </aside>
 <div class="figure">
 <div id="velocity-space-shell-2d-figure" class="figure-frame">
@@ -636,25 +924,44 @@ Board this before the 3D histograms if a student asks why speed peaks away from 
 </div>
 </div>
 <aside class="notes">
-Two Cartesian velocity components. The pale grid is equal-<span class="math inline">\(\Delta v\)</span> area. The red circles are equal-<span class="math inline">\(\Delta s\)</span> shells: circumference grows with <span class="math inline">\(s\)</span>, so a speed histogram weights larger speeds more heavily. Three dimensions replaces rings by spherical shells of area <span class="math inline">\(4\pi s^2\)</span>.
+Two Cartesian velocity components. The pale grid is equal-<span
+class="math inline">\(\Delta v\)</span> area. The red circles are
+equal-<span class="math inline">\(\Delta s\)</span> shells:
+circumference grows with <span class="math inline">\(s\)</span>, so a
+speed histogram weights larger speeds more heavily. Three dimensions
+replaces rings by spherical shells of area <span
+class="math inline">\(4\pi s^2\)</span>.
 </aside>
 </section>
-<section id="three-dimensions-component-versus-speed" class="slide level2">
+<section id="three-dimensions-component-versus-speed"
+class="slide level2">
 <h2>Three Dimensions: Component Versus Speed</h2>
-<p>Same 3D sample: one Cartesian component peaks at zero; speed peaks away from zero.</p>
+<p>Same 3D sample: one Cartesian component peaks at zero; speed peaks
+away from zero.</p>
 <div>
 <ul>
-<li class="fragment">Left: <span class="math inline">\(v_x\sim\mathcal{N}(0,\sigma^2)\)</span> — peak at <span class="math inline">\(0\)</span></li>
-<li class="fragment">Right: <span class="math inline">\(s=|\mathbf{v}|\)</span> — Maxwell; factor <span class="math inline">\(s^2\)</span> from shell volume</li>
+<li class="fragment">Left: <span
+class="math inline">\(v_x\sim\mathcal{N}(0,\sigma^2)\)</span> — peak at
+<span class="math inline">\(0\)</span></li>
+<li class="fragment">Right: <span
+class="math inline">\(s=|\mathbf{v}|\)</span> — Maxwell; factor <span
+class="math inline">\(s^2\)</span> from shell volume</li>
 <li class="fragment">The nonzero mode is geometry, not folding</li>
 </ul>
 </div>
 <aside class="notes">
-Side by side with the 1D pair and the 2D grid-and-rings figure still in mind. Left mode at zero; right mode at <span class="math inline">\(\sigma\sqrt{2}\)</span>. Point at the <span class="math inline">\(s^2\)</span>: that is the spherical shell in velocity space — the three-dimensional version of the concentric rings just drawn. Absolute value alone did not move the peak; the Jacobian does.
+Side by side with the 1D pair and the 2D grid-and-rings figure still in
+mind. Left mode at zero; right mode at <span
+class="math inline">\(\sigma\sqrt{2}\)</span>. Point at the <span
+class="math inline">\(s^2\)</span>: that is the spherical shell in
+velocity space — the three-dimensional version of the concentric rings
+just drawn. Absolute value alone did not move the peak; the Jacobian
+does.
 </aside>
 <div class="figure">
 <div id="velocity-vs-speed-3d-figure" class="figure-frame">
-<div class="lamd-columns" style="display:flex; width:100%; justify-content:center; align-items:center; column-gap:1em;">
+<div class="lamd-columns"
+style="display:flex; width:100%; justify-content:center; align-items:center; column-gap:1em;">
 <div style="flex:0 0 50%; max-width:50%;">
 <object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/physics/velocity-vs-speed-3d-velocity.svg" width="100%" style=" ">
 </object>
@@ -667,25 +974,43 @@ Side by side with the 1D pair and the 2D grid-and-rings figure still in mind. Le
 </div>
 </div>
 <aside class="notes">
-Three dimensions. Left: one Cartesian component still peaks at zero. Right: speed peaks at <span class="math inline">\(\sigma\sqrt{2}\)</span> because of the <span class="math inline">\(s^2\)</span> shell volume — not because of taking a modulus.
+Three dimensions. Left: one Cartesian component still peaks at zero.
+Right: speed peaks at <span
+class="math inline">\(\sigma\sqrt{2}\)</span> because of the <span
+class="math inline">\(s^2\)</span> shell volume — not because of taking
+a modulus.
 </aside>
 </section>
 <section id="pushed-bins-keep-the-same-entropy" class="slide level2">
 <h2>Pushed Bins Keep the Same Entropy</h2>
-<p>The same cells, written on the speed axis: masses unchanged, widths change.</p>
+<p>The same cells, written on the speed axis: masses unchanged, widths
+change.</p>
 <div>
 <ul>
-<li class="fragment">Equal-volume shells in 3D velocity: equal width in <span class="math inline">\(u=s^3\)</span></li>
-<li class="fragment">Push the edges to <span class="math inline">\(s=u^{1/3}\)</span>; <span class="math inline">\(\Delta s_i\)</span> now grows then shrinks</li>
-<li class="fragment"><span class="math inline">\(H\)</span> is a functional of the masses — it does not see the widths</li>
+<li class="fragment">Equal-volume shells in 3D velocity: equal width in
+<span class="math inline">\(u=s^3\)</span></li>
+<li class="fragment">Push the edges to <span
+class="math inline">\(s=u^{1/3}\)</span>; <span
+class="math inline">\(\Delta s_i\)</span> now grows then shrinks</li>
+<li class="fragment"><span class="math inline">\(H\)</span> is a
+functional of the masses — it does not see the widths</li>
 </ul>
 </div>
 <aside class="notes">
-Left panel: probability bars, equal visual width, height <span class="math inline">\(p_i\)</span>. Right: density <span class="math inline">\(p_i/\Delta s_i\)</span> with the true speed widths. Same <span class="math inline">\(H\)</span> on both. This is a 1–1 relabelling of a partition of speed (volume coordinate <span class="math inline">\(\leftrightarrow\)</span> speed). Folding <span class="math inline">\(v\mapsto|v|\)</span>, or grouping Cartesian cubes into shells, merges cells and <em>drops</em> <span class="math inline">\(H\)</span>. That is not this figure.
+Left panel: probability bars, equal visual width, height <span
+class="math inline">\(p_i\)</span>. Right: density <span
+class="math inline">\(p_i/\Delta s_i\)</span> with the true speed
+widths. Same <span class="math inline">\(H\)</span> on both. This is a
+1–1 relabelling of a partition of speed (volume coordinate <span
+class="math inline">\(\leftrightarrow\)</span> speed). Folding <span
+class="math inline">\(v\mapsto|v|\)</span>, or grouping Cartesian cubes
+into shells, merges cells and <em>drops</em> <span
+class="math inline">\(H\)</span>. That is not this figure.
 </aside>
 <div class="figure">
 <div id="pushed-bins-same-entropy-figure" class="figure-frame">
-<div class="lamd-columns" style="display:flex; width:100%; justify-content:center; align-items:center; column-gap:1em;">
+<div class="lamd-columns"
+style="display:flex; width:100%; justify-content:center; align-items:center; column-gap:1em;">
 <div style="flex:0 0 50%; max-width:50%;">
 <object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/physics/pushed-bins-same-entropy-masses.svg" width="100%" style=" ">
 </object>
@@ -698,25 +1023,39 @@ Left panel: probability bars, equal visual width, height <span class="math inlin
 </div>
 </div>
 <aside class="notes">
-Equal-volume shells in 3D velocity, written two ways. Left: midpoint masses <span class="math inline">\(p_i\)</span>. Right: the same partition as a piecewise-constant density on the speed axis. The bins change shape; <span class="math inline">\(H\)</span> does not.
+Equal-volume shells in 3D velocity, written two ways. Left: midpoint
+masses <span class="math inline">\(p_i\)</span>. Right: the same
+partition as a piecewise-constant density on the speed axis. The bins
+change shape; <span class="math inline">\(H\)</span> does not.
 </aside>
 </section>
 <section id="the-continuous-limit-drops-logdelta" class="slide level2">
-<h2>The Continuous Limit Drops <span class="math inline">\(\log\Delta\)</span></h2>
-<p>As the bins shrink, discrete <span class="math inline">\(H\)</span> tracks <span class="math inline">\(-\log\Delta\)</span> to infinity. Differential <span class="math inline">\(h\)</span> is what remains.</p>
+<h2>The Continuous Limit Drops <span
+class="math inline">\(\log\Delta\)</span></h2>
+<p>As the bins shrink, discrete <span class="math inline">\(H\)</span>
+tracks <span class="math inline">\(-\log\Delta\)</span> to infinity.
+Differential <span class="math inline">\(h\)</span> is what remains.</p>
 <div>
 <ul>
-<li class="fragment"><span class="math inline">\(H(X^\Delta)\approx h-\log\Delta\)</span></li>
-<li class="fragment"><span class="math inline">\(-\log\Delta\to+\infty\)</span> as <span class="math inline">\(\Delta\to 0\)</span></li>
+<li class="fragment"><span class="math inline">\(H(X^\Delta)\approx
+h-\log\Delta\)</span></li>
+<li class="fragment"><span
+class="math inline">\(-\log\Delta\to+\infty\)</span> as <span
+class="math inline">\(\Delta\to 0\)</span></li>
 <li class="fragment">Passing to a density throws that term away</li>
 </ul>
 </div>
 <aside class="notes">
-The scatter should sit on the line <span class="math inline">\(h-\log\Delta\)</span>. The horizontal line at <span class="math inline">\(h\)</span> is the finite remainder. The move to a continuous entropy is exactly ignoring a term that is driving to <span class="math inline">\(+\infty\)</span>.
+The scatter should sit on the line <span
+class="math inline">\(h-\log\Delta\)</span>. The horizontal line at
+<span class="math inline">\(h\)</span> is the finite remainder. The move
+to a continuous entropy is exactly ignoring a term that is driving to
+<span class="math inline">\(+\infty\)</span>.
 </aside>
 </section>
 <section id="the-continuous-limit-drops-log-delta" class="slide level2">
-<h2>The Continuous Limit Drops <span class="math inline">\(\log \Delta\)</span></h2>
+<h2>The Continuous Limit Drops <span class="math inline">\(\log
+\Delta\)</span></h2>
 <div class="figure">
 <div id="log-delta-divergence-figure" class="figure-frame">
 <object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/information/log-delta-divergence.svg" width="80%" style=" ">
@@ -724,21 +1063,35 @@ The scatter should sit on the line <span class="math inline">\(h-\log\Delta\)</s
 </div>
 </div>
 <aside class="notes">
-Discrete entropy of an equal-width Gaussian histogram against <span class="math inline">\(-\log\Delta\)</span>. The points track <span class="math inline">\(h-\log\Delta\)</span>; <span class="math inline">\(h\)</span> is the finite part. The continuous limit discards a term that diverges.
+Discrete entropy of an equal-width Gaussian histogram against <span
+class="math inline">\(-\log\Delta\)</span>. The points track <span
+class="math inline">\(h-\log\Delta\)</span>; <span
+class="math inline">\(h\)</span> is the finite part. The continuous
+limit discards a term that diverges.
 </aside>
 </section>
 <section id="entropy-of-the-maxwell-speed-law" class="slide level2">
 <h2>Entropy of the Maxwell Speed Law</h2>
-<p>The speed <span class="math inline">\(s=|\mathbf{v}|\)</span> is a different random variable, with a different <span class="math inline">\(h\)</span>.</p>
+<p>The speed <span class="math inline">\(s=|\mathbf{v}|\)</span> is a
+different random variable, with a different <span
+class="math inline">\(h\)</span>.</p>
 <div>
 <ul>
-<li class="fragment"><span class="math inline">\(f(s)=4\pi s^2(2\pi\sigma^2)^{-3/2}e^{-s^2/2\sigma^2}\)</span></li>
-<li class="fragment"><span class="math inline">\(h(s)=\log(\sigma\sqrt{2\pi})+\gamma-\tfrac12\)</span>, not <span class="math inline">\(\tfrac12\log(2\pi e\sigma^2)\)</span></li>
-<li class="fragment">Why is this number not the Gaussian’s <span class="math inline">\(h\)</span>?</li>
+<li class="fragment"><span class="math inline">\(f(s)=4\pi
+s^2(2\pi\sigma^2)^{-3/2}e^{-s^2/2\sigma^2}\)</span></li>
+<li class="fragment"><span
+class="math inline">\(h(s)=\log(\sigma\sqrt{2\pi})+\gamma-\tfrac12\)</span>,
+not <span class="math inline">\(\tfrac12\log(2\pi
+e\sigma^2)\)</span></li>
+<li class="fragment">Why is this number not the Gaussian’s <span
+class="math inline">\(h\)</span>?</li>
 </ul>
 </div>
 <aside class="notes">
-Overlay the Maxwell curve on equal-<span class="math inline">\(\Delta s\)</span> midpoint Riemann rectangles. Read both numbers. The Gaussian <span class="math inline">\(h\)</span> was for <span class="math inline">\(v_x\)</span>; this <span class="math inline">\(h\)</span> is for <span class="math inline">\(s\)</span>. Different variable <em>and</em> different Lebesgue measure. Leave the Jacobian for the next snippet.
+Overlay the Maxwell curve on equal-<span class="math inline">\(\Delta
+s\)</span> midpoint Riemann rectangles. Read both numbers. Headline the
+three-way split: different variable, grouping (direction), measure
+(Jacobian). Leave the pushforward density for the next snippets.
 </aside>
 </section>
 <section id="entropy-of-the-maxwell-speed-law-1" class="slide level2">
@@ -750,25 +1103,43 @@ Overlay the Maxwell curve on equal-<span class="math inline">\(\Delta s\)</span>
 </div>
 </div>
 <aside class="notes">
-Equal-width midpoint Riemann approximation of Maxwell speed. Discrete <span class="math inline">\(H\)</span> tracks <span class="math inline">\(h(s)-\log\Delta\)</span>. The Maxwell <span class="math inline">\(h(s)\)</span> is not the Gaussian <span class="math inline">\(h(v_x)\)</span>.
+Equal-width midpoint Riemann approximation of Maxwell speed. Discrete
+<span class="math inline">\(H\)</span> tracks <span
+class="math inline">\(h(s)-\log\Delta\)</span>. The Maxwell <span
+class="math inline">\(h(s)\)</span> is not the Gaussian <span
+class="math inline">\(h(v_x)\)</span>.
 </aside>
 </section>
-<section id="two-discretisations-of-the-same-speeds" class="slide level2">
+<section id="two-discretisations-of-the-same-speeds"
+class="slide level2">
 <h2>Two Discretisations of the Same Speeds</h2>
-<p>Equal <span class="math inline">\(\Delta s\)</span> is a different partition from the pushed equal-volume cells. Discrete <span class="math inline">\(H\)</span> changes.</p>
+<p>Equal <span class="math inline">\(\Delta s\)</span> is a different
+partition from the pushed equal-volume cells. Discrete <span
+class="math inline">\(H\)</span> changes.</p>
 <div>
 <ul>
-<li class="fragment">Same speed law <span class="math inline">\(f(s)\)</span>, two partitions</li>
-<li class="fragment">Pushed: equal 3D volume (<span class="math inline">\(u=s^3\)</span>); uniform: equal <span class="math inline">\(\Delta s\)</span></li>
+<li class="fragment">Same speed law <span
+class="math inline">\(f(s)\)</span>, two partitions</li>
+<li class="fragment">Pushed: equal 3D volume (<span
+class="math inline">\(u=s^3\)</span>); uniform: equal <span
+class="math inline">\(\Delta s\)</span></li>
 <li class="fragment">The discretisation <em>is</em> the measure</li>
 </ul>
 </div>
 <aside class="notes">
-Side by side: same <span class="math inline">\(f\)</span>, same <span class="math inline">\(s_{\max}\)</span>, same number of bins. Only the edge placement changes. Midpoint Riemann rectangles; two values of <span class="math inline">\(H\)</span>. Uniform-in-<span class="math inline">\(s\)</span> is Lebesgue on the speed axis; equal-volume is Lebesgue in 3D, written in <span class="math inline">\(s\)</span>.
+Side by side: same <span class="math inline">\(f\)</span>, same <span
+class="math inline">\(s_{\max}\)</span>, same number of bins. Only the
+edge placement changes. Midpoint Riemann rectangles; two values of <span
+class="math inline">\(H\)</span>. Uniform-in-<span
+class="math inline">\(s\)</span> is Lebesgue on the speed axis;
+equal-volume is Lebesgue in 3D, written in <span
+class="math inline">\(s\)</span>.
 </aside>
 <div class="figure">
-<div id="mb-uniform-vs-pushed-discretisation-figure" class="figure-frame">
-<div class="lamd-columns" style="display:flex; width:100%; justify-content:center; align-items:center; column-gap:1em;">
+<div id="mb-uniform-vs-pushed-discretisation-figure"
+class="figure-frame">
+<div class="lamd-columns"
+style="display:flex; width:100%; justify-content:center; align-items:center; column-gap:1em;">
 <div style="flex:0 0 50%; max-width:50%;">
 <object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/physics/mb-uniform-vs-pushed-discretisation-pushed.svg" width="100%" style=" ">
 </object>
@@ -781,24 +1152,41 @@ Side by side: same <span class="math inline">\(f\)</span>, same <span class="mat
 </div>
 </div>
 <aside class="notes">
-The same Maxwell density, two midpoint Riemann partitions, two values of discrete <span class="math inline">\(H\)</span>. Left: equal 3D volume, pushed to the speed axis. Right: equal <span class="math inline">\(\Delta s\)</span>. The discretisation is the measure.
+The same Maxwell density, two midpoint Riemann partitions, two values of
+discrete <span class="math inline">\(H\)</span>. Left: equal 3D volume,
+pushed to the speed axis. Right: equal <span
+class="math inline">\(\Delta s\)</span>. The discretisation is the
+measure.
 </aside>
 </section>
-<section id="bin-widths-are-a-radon-nikodym-derivative" class="slide level2">
+<section id="bin-widths-are-a-radon-nikodym-derivative"
+class="slide level2">
 <h2>Bin Widths Are a Radon-Nikodym Derivative</h2>
-<p>The ratio of widths is the discrete Jacobian. It converts one <span class="math inline">\(h\)</span> into the other.</p>
+<p>The ratio of widths is the discrete Jacobian. It converts one <span
+class="math inline">\(h\)</span> into the other.</p>
 <div>
 <ul>
-<li class="fragment">Same cells: <span class="math inline">\(H\)</span> is shared; <span class="math inline">\(h\approx H+\sum_i p_i\log\Delta_i\)</span></li>
-<li class="fragment"><span class="math inline">\(\Delta s_i/\Delta u_i \to |{\mathrm{d}s}/{\mathrm{d}u}|=1/(3s^2)\)</span></li>
-<li class="fragment">Continuum name: Radon-Nikodym derivative between the two measures</li>
+<li class="fragment">Same cells: <span class="math inline">\(H\)</span>
+is shared; <span class="math inline">\(h\approx H+\sum_i
+p_i\log\Delta_i\)</span></li>
+<li class="fragment"><span class="math inline">\(\Delta s_i/\Delta u_i
+\to |{\mathrm{d}s}/{\mathrm{d}u}|=1/(3s^2)\)</span></li>
+<li class="fragment">Continuum name: Radon-Nikodym derivative between
+the two measures</li>
 </ul>
 </div>
 <aside class="notes">
-Board <span class="math inline">\(h\approx H+\sum p_i\log\Delta_i\)</span> for unequal bins. The difference of the two remainders is <span class="math inline">\(\sum p_i\log(\Delta s_i/\Delta u_i)\)</span>, which tracks <span class="math inline">\(\mathbb{E}\log|J|\)</span>. Do not do <span class="math inline">\(\sigma\)</span>-algebras. The width ratio <em>is</em> the discrete RN derivative.
+Board <span class="math inline">\(h\approx H+\sum
+p_i\log\Delta_i\)</span> for unequal bins. The difference of the two
+remainders is <span class="math inline">\(\sum p_i\log(\Delta s_i/\Delta
+u_i)\)</span>, which tracks <span
+class="math inline">\(\mathbb{E}\log|J|\)</span>. Do not do <span
+class="math inline">\(\sigma\)</span>-algebras. The width ratio
+<em>is</em> the discrete RN derivative.
 </aside>
 </section>
-<section id="bin-widths-are-a-radon-nikodym-derivative-1" class="slide level2">
+<section id="bin-widths-are-a-radon-nikodym-derivative-1"
+class="slide level2">
 <h2>Bin Widths are a Radon-Nikodym Derivative</h2>
 <div class="figure">
 <div id="discrete-jacobian-radon-nikodym-figure" class="figure-frame">
@@ -807,30 +1195,82 @@ Board <span class="math inline">\(h\approx H+\sum p_i\log\Delta_i\)</span> for u
 </div>
 </div>
 <aside class="notes">
-Width ratio of the pushed equal-volume cells, against the Jacobian <span class="math inline">\(1/(3s^2)\)</span>. The average log-ratio converts <span class="math inline">\(h(u)\)</span> into <span class="math inline">\(h(s)\)</span>. That ratio is the discrete Radon-Nikodym derivative.
+Width ratio of the pushed equal-volume cells, against the Jacobian <span
+class="math inline">\(1/(3s^2)\)</span>. The average log-ratio converts
+<span class="math inline">\(h(u)\)</span> into <span
+class="math inline">\(h(s)\)</span>. That ratio is the discrete
+Radon-Nikodym derivative.
+</aside>
+</section>
+<section id="the-form-of-the-radonnikodym-derivative"
+class="slide level2">
+<h2>The Form of the Radon–Nikodym Derivative</h2>
+<p>If <span class="math inline">\(\mu\)</span> is absolutely continuous
+with respect to <span class="math inline">\(\nu\)</span>, there is a
+density <span
+class="math inline">\(\mathrm{d}\mu/\mathrm{d}\nu\)</span>.</p>
+<p><small> <span class="math display">\[
+\mu(A)=\int_A \frac{\mathrm{d}\mu}{\mathrm{d}\nu}\,\mathrm{d}\nu
+\]</span> </small></p>
+<div>
+<ul>
+<li class="fragment">Densities <span class="math inline">\(f\)</span>
+and <span class="math inline">\(m\)</span> against Lebesgue: <span
+class="math inline">\(\mathrm{d}F/\mathrm{d}m=f/m\)</span></li>
+<li class="fragment">That ratio is what sits inside <span
+class="math inline">\(\text{KL}\left( f\,\|\,m \right)\)</span></li>
+<li class="fragment">The width ratio <span class="math inline">\(\Delta
+s_i/\Delta u_i\)</span> was the same object on a partition</li>
+</ul>
+</div>
+<aside class="notes">
+One slide. Write <span
+class="math inline">\(\mathrm{d}F/\mathrm{d}m=f/m\)</span> on the board.
+Point back at <span class="math inline">\(\Delta s_i/\Delta u_i\)</span>
+and forward at Jaynes’ <span class="math inline">\(m\)</span>. No <span
+class="math inline">\(\sigma\)</span>-algebras.
 </aside>
 </section>
 <section id="jaynes-promote-the-bins-to-a-measure" class="slide level2">
 <h2>Jaynes: Promote the Bins to a Measure</h2>
-<p>The well-defined continuum object is relative entropy against a declared <span class="math inline">\(m\)</span>.</p>
+<p>The well-defined continuum object is relative entropy against a
+declared <span class="math inline">\(m\)</span>.</p>
 <p><small> <span class="math display">\[
-h_m(f)=-\int f\log\frac{f}{m}\,{\mathrm{d}}x=-\text{KL}\left( f\,\|\,m \right)
+h_m(f)=-\int f\log\frac{f}{m}\,{\mathrm{d}}x=-\text{KL}\left( f\,\|\,m
+\right)
 \]</span> </small></p>
 <div>
 <ul>
-<li class="fragment"><span class="math inline">\(m\)</span> is Jaynes’ limiting density of discrete points — the binning, written as a density</li>
-<li class="fragment">Uniform <span class="math inline">\(m\)</span> in <span class="math inline">\(v_x\)</span> recovers ordinary <span class="math inline">\(h(v_x)\)</span></li>
-<li class="fragment">Uniform <span class="math inline">\(m\)</span> in 3D velocity is <span class="math inline">\(m(s)\propto s^2\)</span> in speed</li>
+<li class="fragment"><span class="math inline">\(m\)</span> is Jaynes’
+limiting density of discrete points — the binning, written as a
+density</li>
+<li class="fragment">Uniform <span class="math inline">\(m\)</span> in
+<span class="math inline">\(v_x\)</span> recovers ordinary <span
+class="math inline">\(h(v_x)\)</span></li>
+<li class="fragment">Uniform <span class="math inline">\(m\)</span> in
+3D velocity is <span class="math inline">\(m(s)\propto s^2\)</span> in
+speed</li>
 </ul>
 </div>
 <aside class="notes">
-Name <span class="math inline">\(m\)</span>. Do not do Lagrange, the die, or MaxEnt — those snippets already exist. The Gaussian versus Maxwell disagreement was an undeclared change of <span class="math inline">\(m\)</span>. KL against a common <span class="math inline">\(m\)</span> is invariant; see relative-entropy-reparametrisation.
+Name <span class="math inline">\(m\)</span>. Do not do Lagrange, the
+die, or MaxEnt — those snippets already exist. The Gaussian versus
+Maxwell disagreement was an undeclared change of <span
+class="math inline">\(m\)</span>. KL against a common <span
+class="math inline">\(m\)</span> is invariant; see
+relative-entropy-reparametrisation.
 </aside>
 </section>
-<section id="maxwells-demon-compartments-two-ledgers" class="slide level2">
+<section id="maxwells-demon-compartments-two-ledgers"
+class="slide level2">
 <h2>Maxwell’s Demon, Compartments, Two Ledgers</h2>
 <aside class="notes">
-Composition wrapper only. Overview (quote and canvas), then the compartment schematic (three, maybe four), then number versus energy at the gate, then the fork. Canvas handedness: hot left to right, right bulk heats. Detailed-balance already includes the ledgers and the fork. Do not include Gaussian–Maxwell, grouping composition, Szilard, Landauer, or Ellis here. Stop before the worksheet.
+Composition wrapper only. Overview (quote and canvas), then the
+compartment schematic (three, maybe four), then number versus energy at
+the gate, then the fork. Canvas handedness: hot left to right, right
+bulk heats. Flux-balance already includes the ledgers and the fork. Do
+not include Gaussian–Maxwell, grouping composition, Szilard, Landauer,
+or Ellis here. Stop before the worksheet.
 </aside>
 </section>
 <section id="maxwells-demon" class="slide level2">
@@ -838,12 +1278,15 @@ Composition wrapper only. Overview (quote and canvas), then the compartment sche
 <div class="figure">
 <div id="maxwells-demon-figure" class="figure-frame">
 <div class="centered" style="">
-<a href="https://play.google.com/books/reader?id=0p8AAAAAMAAJ&amp;pg=PA308"><img data-src="https://mlatcl.github.io/iei/slides/diagrams/books/0p8AAAAAMAAJ-PA308.png" /></a>
+<a
+href="https://play.google.com/books/reader?id=0p8AAAAAMAAJ&amp;pg=PA308"><img
+data-src="https://mlatcl.github.io/iei/slides/diagrams/books/0p8AAAAAMAAJ-PA308.png" /></a>
 </div>
 </div>
 </div>
 <aside class="notes">
-Maxwell’s demon was designed to highlight the statistical nature of the second law of thermodynamics.
+Maxwell’s demon was designed to highlight the statistical nature of the
+second law of thermodynamics.
 </aside>
 </section>
 <section id="section" class="slide level2">
@@ -855,7 +1298,8 @@ Maxwell’s demon was designed to highlight the statistical nature of the second
 <canvas id="maxwell-canvas" width="700" height="500" style="border:1px solid black;display:block;width:100%">
 </canvas>
 </div>
-<div style="flex:0 1 280px;min-width:0;display:flex;flex-direction:column;gap:6px">
+<div
+style="flex:0 1 280px;min-width:0;display:flex;flex-direction:column;gap:6px">
 <div>
 Velocity-bin entropy:
 <output id="maxwell-entropy">
@@ -890,22 +1334,34 @@ behaviour is provided by follow-on scripts such as maxwell.js.
 </div>
 </div>
 <aside class="notes">
-Maxwell’s Demon. The demon decides balls are either cold (blue) or hot (red) according to their velocity. Balls are allowed to pass the green membrane from right to left only if they are cold, and from left to right only if they are hot. The displayed entropy is the Shannon entropy of the velocity histogram (a coarse-grained proxy, not full thermodynamic entropy).
+Maxwell’s Demon. The demon decides balls are either cold (blue) or hot
+(red) according to their velocity. Balls are allowed to pass the green
+membrane from right to left only if they are cold, and from left to
+right only if they are hot. The displayed entropy is the Shannon entropy
+of the velocity histogram (a coarse-grained proxy, not full
+thermodynamic entropy).
 </aside>
 </section>
 <section id="a-compartment-model-of-the-demon" class="slide level2">
 <h2>A Compartment Model of the Demon</h2>
-<p>Draw the box as compartments, not as one fluent Maxwellian.</p>
+<p>The box as compartments, not as one fluent Maxwellian.</p>
 <div>
 <ul>
-<li class="fragment">Left bulk: roughly local equilibrium at a cold <span class="math inline">\(T_L\)</span></li>
-<li class="fragment">Right bulk: roughly local equilibrium at a hot <span class="math inline">\(T_R\)</span></li>
-<li class="fragment">Kinetic layer at the membrane: not in equilibrium</li>
-<li class="fragment">Optional fourth: the gate itself (the velocity rule)</li>
+<li class="fragment">Left bulk: roughly local equilibrium at a cold
+<span class="math inline">\(T_L\)</span></li>
+<li class="fragment">Right bulk: roughly local equilibrium at a hot
+<span class="math inline">\(T_R\)</span></li>
+<li class="fragment">Kinetic layer at the membrane: not in
+equilibrium</li>
+<li class="fragment">Optional fourth: the gate itself (the velocity
+rule)</li>
 </ul>
 </div>
 <aside class="notes">
-As taught: three compartments, maybe four. The bulks are far enough from the membrane that collisions restore a Maxwellian; the band at the gate is where the sorting rule acts. Do not resolve the demon here — name the bookkeeping Worksheet 3 will press.
+Three compartments, maybe four. The bulks are far enough from the
+membrane that collisions restore a Maxwellian; the band at the gate is
+where the sorting rule acts. We do not resolve the demon here: Worksheet
+3 presses the particle-flux versus energy-flux bookkeeping.
 </aside>
 <div class="figure">
 <div id="maxwell-demon-compartment-model-figure" class="figure-frame">
@@ -914,39 +1370,62 @@ As taught: three compartments, maybe four. The bulks are far enough from the mem
 </div>
 </div>
 <aside class="notes">
-Three compartments for Worksheet 3: cold left bulk, hot right bulk, and a non-equilibrium kinetic layer at the membrane. The green gate is an optional fourth compartment — the microscopic velocity rule. Number flux and energy flux are the two ledgers that must both close.
+Three compartments for Worksheet 3: cold left bulk, hot right bulk, and
+a non-equilibrium kinetic layer at the membrane. The green gate is an
+optional fourth compartment — the microscopic velocity rule. Number flux
+and energy flux are the two ledgers that must both close.
 </aside>
 </section>
-<section id="detailed-balance-across-the-membrane" class="slide level2">
-<h2>Detailed Balance Across the Membrane</h2>
+<section id="flux-balance-across-the-membrane" class="slide level2">
+<h2>Flux Balance Across the Membrane</h2>
 </section>
 <section id="what-does-the-membrane-do" class="slide level2">
 <h2>What Does the Membrane Do?</h2>
-<p>The JavaScript demon is a <em>selective membrane</em>: one speed threshold <span class="math inline">\(v_\star\)</span>, opposite rules on each side.</p>
+<p>The JavaScript demon is a <em>selective membrane</em>: one speed
+threshold <span class="math inline">\(v_\star\)</span>, opposite rules
+on each side.</p>
 <div>
 <ul>
-<li class="fragment">Left <span class="math inline">\(\to\)</span> right: pass only if <span class="math inline">\(v &gt; v_\star\)</span> (hot)</li>
-<li class="fragment">Right <span class="math inline">\(\to\)</span> left: pass only if <span class="math inline">\(v \le v_\star\)</span> (cold)</li>
-<li class="fragment">Elastic collisions remix velocities; the membrane only gates crossings</li>
+<li class="fragment">Left <span class="math inline">\(\to\)</span>
+right: pass only if <span class="math inline">\(v &gt; v_\star\)</span>
+(hot)</li>
+<li class="fragment">Right <span class="math inline">\(\to\)</span>
+left: pass only if <span class="math inline">\(v \le v_\star\)</span>
+(cold)</li>
+<li class="fragment">Elastic collisions remix velocities; the membrane
+only gates crossings</li>
 </ul>
 </div>
 <aside class="notes">
-Match the canvas: red = hot, blue = cold, green strip = membrane. Threshold in the sim is <span class="math inline">\(v_\star=3\)</span> with initial speed <span class="math inline">\(5\)</span>.
+Match the canvas: red = hot, blue = cold, green strip = membrane.
+Threshold in the sim is <span class="math inline">\(v_\star=3\)</span>
+with initial speed <span class="math inline">\(5\)</span>.
 </aside>
 </section>
 <section id="steady-state-balanced-fluxes" class="slide level2">
-<h2>Steady State <span class="math inline">\(=\)</span> Balanced Fluxes</h2>
-<p>In a steady state the number of balls leaving left equals the number leaving right — detailed balance of membrane crossings.</p>
+<h2>Steady State <span class="math inline">\(=\)</span> Balanced
+Fluxes</h2>
+<p>In a steady state the number of balls leaving left equals the number
+leaving right — flux balance of membrane crossings.</p>
 <div>
 <ul>
-<li class="fragment">Assume each side thermalises to a 2D Maxwellian at its own <span class="math inline">\(T_L\)</span>, <span class="math inline">\(T_R\)</span></li>
-<li class="fragment">Particle flux <span class="math inline">\(L\to R\)</span>: only the hot tail, <span class="math inline">\(v&gt;v_\star\)</span></li>
-<li class="fragment">Particle flux <span class="math inline">\(R\to L\)</span>: only the cold body, <span class="math inline">\(v\le v_\star\)</span></li>
-<li class="fragment">Steady state: <span class="math inline">\(\Phi_L^{\mathrm{hot}}(n_L,T_L)=\Phi_R^{\mathrm{cold}}(n_R,T_R)\)</span></li>
+<li class="fragment">Assume each side thermalises to a 2D Maxwellian at
+its own <span class="math inline">\(T_L\)</span>, <span
+class="math inline">\(T_R\)</span></li>
+<li class="fragment">Particle flux <span class="math inline">\(L\to
+R\)</span>: only the hot tail, <span
+class="math inline">\(v&gt;v_\star\)</span></li>
+<li class="fragment">Particle flux <span class="math inline">\(R\to
+L\)</span>: only the cold body, <span class="math inline">\(v\le
+v_\star\)</span></li>
+<li class="fragment">Steady state: <span
+class="math inline">\(\Phi_L^{\mathrm{hot}}(n_L,T_L)=\Phi_R^{\mathrm{cold}}(n_R,T_R)\)</span></li>
 </ul>
 </div>
 <aside class="notes">
-Local equilibrium is an approximation: collisions fast compared with crossings. Energy flux need not balance under the same Maxwellians — flag that after the calculation.
+Local equilibrium is an approximation: collisions fast compared with
+crossings. Energy flux need not balance under the same Maxwellians —
+flag that after the calculation.
 </aside>
 <div class="figure">
 <div id="maxwell-membrane-detailed-balance-figure" class="figure-frame">
@@ -955,64 +1434,100 @@ Local equilibrium is an approximation: collisions fast compared with crossings. 
 </div>
 </div>
 <aside class="notes">
-Left: temperatures on each side of the selective membrane from particle-flux detailed balance at equal populations (simulation energy budget). Right: entropy of the two-Maxwellian state minus the single-temperature equilibrium. The red point is the simulation threshold <span class="math inline">\(v_\star=3\)</span>.
+Left: temperatures on each side of the selective membrane from
+particle-flux balance at equal populations (simulation energy budget).
+Right: entropy of the two-Maxwellian state minus the single-temperature
+equilibrium. The red point is the simulation threshold <span
+class="math inline">\(v_\star=3\)</span>.
 </aside>
 </section>
 <section id="temperatures-split-entropy-falls" class="slide level2">
 <h2>Temperatures Split; Entropy Falls</h2>
-<p>For the simulation budget, particle-flux balance at equal <span class="math inline">\(N\)</span> yields <span class="math inline">\(T_L\approx 1.9\)</span>, <span class="math inline">\(T_R\approx 23\)</span> (<span class="math inline">\(k_B=1\)</span>) — a large split.</p>
+<p>For the simulation budget, particle-flux balance at equal <span
+class="math inline">\(N\)</span> yields <span
+class="math inline">\(T_L\approx 1.9\)</span>, <span
+class="math inline">\(T_R\approx 23\)</span> (<span
+class="math inline">\(k_B=1\)</span>) — a large split.</p>
 <div>
 <ul>
-<li class="fragment">Unconstrained equilibrium: one <span class="math inline">\(T_0=\langle\mathrm{KE}\rangle\)</span>, entropy <span class="math inline">\(S_0\)</span></li>
-<li class="fragment">Membrane steady state: <span class="math inline">\(S_{\mathrm{ss}}&lt;S_0\)</span> (here <span class="math inline">\(\Delta S\approx -24\)</span> nats at <span class="math inline">\(N=39\)</span>)</li>
-<li class="fragment">The gas alone looks like a second-law violation</li>
+<li class="fragment">Unconstrained equilibrium: one <span
+class="math inline">\(T_0=\langle\mathrm{KE}\rangle\)</span>, entropy
+<span class="math inline">\(S_0\)</span></li>
+<li class="fragment">Membrane steady state: <span
+class="math inline">\(S_{\mathrm{ss}}&lt;S_0\)</span> (here <span
+class="math inline">\(\Delta S\approx -25\)</span> nats at <span
+class="math inline">\(N=40\)</span>)</li>
+<li class="fragment">The gas alone looks like a second-law
+violation</li>
 </ul>
 </div>
 <aside class="notes">
-Live the numbers from the plotcode printout. Canvas entropy is a coarse velocity-bin proxy; this <span class="math inline">\(S\)</span> is the ideal-gas Shannon entropy of two Maxwellians.
+Live the numbers from the plotcode printout. Canvas entropy is a coarse
+velocity-bin proxy; this <span class="math inline">\(S\)</span> is the
+ideal-gas Shannon entropy of two Maxwellians.
 </aside>
 </section>
-<section id="maxwellians-are-only-an-approximation" class="slide level2">
+<section id="maxwellians-are-only-an-approximation"
+class="slide level2">
 <h2>Maxwellians Are Only an Approximation</h2>
-<p>Particle balance and energy balance cannot both hold for two Maxwellians — the true steady state depletes velocity tails.</p>
+<p>Particle balance and energy balance cannot both hold for two
+Maxwellians — the true steady state depletes velocity tails.</p>
 <div>
 <ul>
-<li class="fragment">Hot crossings carry more energy per ball than cold crossings</li>
-<li class="fragment">Equal <em>number</em> fluxes still leave a net <em>energy</em> flux under Maxwellians</li>
-<li class="fragment">Collisions rebuild the tails; the membrane continually sculpts them</li>
-<li class="fragment">Local-<span class="math inline">\(T\)</span> picture still predicts the direction and an entropy deficit</li>
+<li class="fragment">Hot crossings carry more energy per ball than cold
+crossings</li>
+<li class="fragment">Equal <em>number</em> fluxes still leave a net
+<em>energy</em> flux under Maxwellians</li>
+<li class="fragment">Collisions rebuild the tails; the membrane
+continually sculpts them</li>
+<li class="fragment">Local-<span class="math inline">\(T\)</span>
+picture still predicts the direction and an entropy deficit</li>
 </ul>
 </div>
 <aside class="notes">
-Do not oversell the numbers as exact NESS values. The point is the ledger: gas entropy down; cost elsewhere.
+Do not oversell the numbers as exact NESS values. The point is the
+ledger: gas entropy down; cost elsewhere.
 </aside>
 </section>
 <section id="where-did-the-entropy-go" class="slide level2">
 <h2>Where Did the Entropy Go?</h2>
-<p>The membrane implements Maxwell’s sorting policy. The gas entropy falls; Clausius is not repealed.</p>
+<p>The membrane implements Maxwell’s sorting policy. The gas entropy
+falls; Clausius is not repealed.</p>
 <div>
 <ul>
-<li class="fragment">Prescription: the velocity gate (who may cross)</li>
-<li class="fragment">No-go: you cannot harvest that <span class="math inline">\(\Delta S\)</span> for free in a cycle</li>
-<li class="fragment">Next: Szilard priced measurement; Landauer priced erasure; Bennett (1982) made the erasure resolution</li>
+<li class="fragment">Prescription: the velocity gate (who may
+cross)</li>
+<li class="fragment">No-go: you cannot harvest that <span
+class="math inline">\(\Delta S\)</span> for free in a cycle</li>
+<li class="fragment">Next: Szilard priced measurement; Landauer priced
+erasure; Bennett (1982) made the erasure resolution</li>
 </ul>
 </div>
 <aside class="notes">
-Bridge forward. Ellis locates dissipation at measurement/gating; information ledger locates it at stored outcomes and erasure. Same Clausius, different bookkeeping.
+Bridge forward. Ellis locates dissipation at measurement/gating;
+information ledger locates it at stored outcomes and erasure. Same
+Clausius, different bookkeeping.
 </aside>
 </section>
 <section id="the-demon-sorts-groups" class="slide level2">
 <h2>The Demon Sorts Groups</h2>
-<p>Hot versus cold is a coarse label — this lecture’s grouping, now with a policy.</p>
+<p>Hot versus cold is a coarse label — this lecture’s grouping, now with
+a policy.</p>
 <div>
 <ul>
-<li class="fragment">Group <span class="math inline">\(G\)</span>: pass / no-pass under the membrane rule (tail vs body)</li>
-<li class="fragment">Within group: collisions try to restore a Maxwellian <span class="math inline">\(\pi_G\)</span></li>
-<li class="fragment">Local-equilibrium assumption: mixing inside each side is fast vs crossings</li>
+<li class="fragment">Group <span class="math inline">\(G\)</span>: pass
+/ no-pass under the membrane rule (tail vs body)</li>
+<li class="fragment">Within group: collisions try to restore a
+Maxwellian <span class="math inline">\(\pi_G\)</span></li>
+<li class="fragment">Local-equilibrium assumption: mixing inside each
+side is fast vs crossings</li>
 </ul>
 </div>
 <aside class="notes">
-Callback to the die: the demon pays attention to <span class="math inline">\(H(w)\)</span> over coarse velocity sets and hopes the within-group term stays near equilibrium. The detailed-balance calculation above already used that hypothesis.
+Callback to the die: the demon pays attention to <span
+class="math inline">\(H(w)\)</span> over coarse velocity sets and hopes
+the within-group term stays near equilibrium. The flux-balance
+calculation above already used that hypothesis.
 </aside>
 </section>
 <section id="lumpability-pointer" class="slide level2">
@@ -1020,38 +1535,55 @@ Callback to the die: the demon pays attention to <span class="math inline">\(H(w
 <p>When do the groups themselves form a Markov process?</p>
 <div>
 <ul>
-<li class="fragment">If exit rates agree for every microstate in a group <span class="math inline">\(\Rightarrow\)</span> coarse chain is Markov (lumpable)</li>
-<li class="fragment">Otherwise coarse-graining leaves memory — projection operators (Zwanzig/Mori), not this course’s core</li>
-<li class="fragment">Demon membrane: approximately lumpable only while local equilibrium holds</li>
+<li class="fragment">If exit rates agree for every microstate in a group
+<span class="math inline">\(\Rightarrow\)</span> coarse chain is Markov
+(lumpable)</li>
+<li class="fragment">Otherwise coarse-graining leaves memory —
+projection operators (Zwanzig/Mori), not this course’s core</li>
+<li class="fragment">Demon membrane: approximately lumpable only while
+local equilibrium holds</li>
 </ul>
 </div>
 </section>
 <section id="further-reading" class="slide level2 scrollable">
 <h2 class="scrollable">Further Reading</h2>
 <ul>
-<li><p>Exercise 4.1 and the discussion on pp. 69–70 of <span class="citation" data-cites="MacKay-information03">MacKay (2003)</span></p></li>
-<li><p>limiting density of discrete points of <span class="citation" data-cites="Jaynes-information63">Jaynes (1963)</span></p></li>
+<li><p>Exercise 4.1 and the discussion on pp. 69–70 of <span
+class="citation" data-cites="MacKay-information03">MacKay
+(2003)</span></p></li>
+<li><p>limiting density of discrete points of <span class="citation"
+data-cites="Jaynes-information63">Jaynes (1963)</span></p></li>
 </ul>
 </section>
 <section id="thanks" class="slide level2 scrollable">
 <h2 class="scrollable">Thanks!</h2>
 <ul>
 <li>company: <a href="https://trent.ai">Trent AI</a></li>
-<li>book: <a href="https://www.penguin.co.uk/books/455130/the-atomic-human-by-lawrence-neil-d/9780241625248">The Atomic Human</a></li>
+<li>book: <a
+href="https://www.penguin.co.uk/books/455130/the-atomic-human-by-lawrence-neil-d/9780241625248">The
+Atomic Human</a></li>
 <li>twitter: <a href="https://twitter.com/lawrennd">@lawrennd</a></li>
 <li><a href="https://the-atomic-human.ai">The Atomic Human</a></li>
-<li>newspaper: <a href="http://www.theguardian.com/profile/neil-lawrence">Guardian Profile Page</a></li>
-<li>blog: <a href="http://inverseprobability.com/blog.html">http://inverseprobability.com</a></li>
+<li>newspaper: <a
+href="http://www.theguardian.com/profile/neil-lawrence">Guardian Profile
+Page</a></li>
+<li>blog: <a
+href="http://inverseprobability.com/blog.html">http://inverseprobability.com</a></li>
 </ul>
 </section>
 <section id="references" class="slide level2 unnumbered scrollable">
 <h2 class="unnumbered scrollable">References</h2>
-<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
-<div id="ref-Jaynes-information63" class="csl-entry" role="doc-biblioentry">
-Jaynes, E.T., 1963. Information theory and statistical mechanics, in: Ford, K.W. (Ed.), Brandeis University Summer Institute Lectures in Theoretical Physics, Vol. 3: Statistical Physics. W. A. Benjamin, Inc., New York, pp. 181–218.
+<div id="refs" class="references csl-bib-body hanging-indent"
+role="list">
+<div id="ref-Jaynes-information63" class="csl-entry" role="listitem">
+Jaynes, E.T., 1963. Information theory and statistical mechanics, in:
+Ford, K.W. (Ed.), Brandeis University Summer Institute Lectures in
+Theoretical Physics, Vol. 3: Statistical Physics. W. A. Benjamin, Inc.,
+New York, pp. 181–218.
 </div>
-<div id="ref-MacKay-information03" class="csl-entry" role="doc-biblioentry">
-MacKay, D.J.C., 2003. Information theory, inference and learning algorithms. Cambridge University Press, Cambridge, U.K.
+<div id="ref-MacKay-information03" class="csl-entry" role="listitem">
+MacKay, D.J.C., 2003. Information theory, inference and learning
+algorithms. Cambridge University Press, Cambridge, U.K.
 </div>
 </div>
 </section>
@@ -1066,10 +1598,39 @@ MacKay, D.J.C., 2003. Information theory, inference and learning algorithms. Cam
       // Full list of configuration options available at:
       // https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+        // Display a presentation progress bar
+        progress: true,
         // Push each slide change to the browser history
         history: true,
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+        // Enable the slide overview mode
+        overview: true,
+        // Vertical centering of slides
+        center: true,
+        // Enables touch navigation on devices with touch input
+        touch: true,
+        // Turns fragments on and off globally
+        fragments: true,
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
         // Transition style
         transition: 'none', // none/fade/slide/convex/concave/zoom
+        // Transition speed
+        transitionSpeed: 'default', // default/fast/slow
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'fade', // none/fade/slide/convex/concave/zoom
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
         math: {
           mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js',
           config: 'TeX-AMS_HTML-full',
