@@ -7,14 +7,15 @@ venue: FW26, William Gates Building
 room: FW26
 transition: None
 abstract: >
-  Fisher's notion of information (sensitivity of the score, not Shannon
-  uncertainty), the Fréchet–Rao–Cramér reading as identifiability, and
-  the Fisher matrix as a Riemannian metric. A short bridge from Crooks'
-  fluctuation theorem (1999) and Jarzynski to the near-equilibrium bound
-  ⟨W_ex⟩ ≥ ℒ²/τ; thermodynamic length (Crooks 2007) is then the
-  Fisher–Rao length of a path of equilibrium states. Students should be
-  able to *define* thermodynamic length today; the Schottky peak as a
-  Fisher peak is named, not interpreted.
+  Legendre duality $H=A-\theta\cdot\eta$ (using Week 5's $A=\log Z$ and
+  $\eta=\nabla A$), then Fisher's notion of information (sensitivity of the
+  score, not Shannon uncertainty), the Fréchet–Rao–Cramér reading as
+  identifiability, and the Fisher matrix as a Riemannian metric. A short
+  bridge from Crooks' fluctuation theorem (1999) and Jarzynski to the
+  near-equilibrium bound ⟨W_ex⟩ ≥ ℒ²/τ; thermodynamic length (Crooks 2007)
+  is then the Fisher–Rao length of a path of equilibrium states. Students
+  should be able to *define* thermodynamic length today; the Schottky peak
+  as a Fisher peak is named, not interpreted.
 author:
 - given: Neil D.
   family: Lawrence
@@ -27,7 +28,7 @@ in_class_test:
   id: Q3
   duration_minutes: 10
   timing: start
-  covers: [grouping, soft partitions / MI, demon compartments, MaxEnt, exponential family]
+  covers: [grouping, soft partitions / MI / KL, demon compartments, MaxEnt, exponential family, log Z as CGF]
 worksheet_due: W3
 worksheet_released: W4
 reading:
@@ -51,19 +52,19 @@ reading:
 
 \slidesincremental{
 * Quiz 3 (ten minutes); collect Worksheet 3
-* Legendre: $H=A-\theta\cdot\eta$ (parked from week 5)
+* Legendre: $H=A-\theta\cdot\eta$ (Week 5 gave $A=\log Z$, $\eta=\nabla A$)
 * Fisher's information $\neq$ Shannon's $H$
 * Fisher metric; dual flatness
 * Thermodynamic length: define, do not interpret
 }
 
 \notes{
-**Time plan.** The slot is 10:05--11:55 (110 minutes, not 120). Quiz 3 is Moodle. Protect Fisher versus Shannon, dual flatness, and the length definition. Open with the Legendre transform parked from week 5 (it is the dual-chart setup for today).
+**Time plan.** The slot is 10:05--11:55 (110 minutes, not 120). Quiz 3 is Moodle. Protect Fisher versus Shannon, dual flatness, and the length definition. Open with the Legendre transform (Week 5 already taught $A=\log Z$ as CGF and $\eta=\nabla A$).
 
 | Clock | Block |
 |------:|-------|
 | 10:05--10:15 | Quiz 3 (Moodle); collect Worksheet 3 |
-| 10:15--10:40 | Legendre $H=A-\theta\cdot\eta$; recap MaxEnt / $G=\nabla^2 A$; Fisher's notion |
+| 10:15--10:40 | Legendre $H=A-\theta\cdot\eta$; Fisher's notion |
 | 10:40--11:00 | Fréchet–Rao–Cramér; Riemannian geometry; KL |
 | 11:00--11:10 | Break |
 | 11:10--11:30 | Dual flatness; Pythagorean theorem for KL |
@@ -73,7 +74,7 @@ reading:
 
 \subsection{Quiz 3}
 
-\notes{Invigilated Moodle, own device, no notes, no network, no LLMs. Ten questions on Weeks 4--5 as delivered: exclusive grouping $H=H(w)+\sum_i w_i H(p_i)$, soft partitions $H(I\mid X)$ / $I(X;I)$, the missing measure, Maxwell's demon as compartments and two ledgers, MaxEnt and the exponential family. Not Fisher, not Legendre, not Crooks (those start after the quiz). Worksheet 3 is collected as they sit.}
+\notes{Invigilated Moodle, own device, no notes, no network, no LLMs. Ten questions on Weeks 4--5 as delivered: exclusive grouping $H=H(w)+\sum_i w_i H(p_i)$, soft partitions $H(I\mid X)$ / $I(X;I)$ / KL, the missing measure, Maxwell's demon as compartments and two ledgers, MaxEnt, exponential family, and $\log Z$ as CGF. Not Fisher, not Legendre, not Crooks (those start after the quiz). Worksheet 3 is collected as they sit.}
 
 \slidesincremental{
 * Device required; Moodle open
@@ -92,7 +93,9 @@ reading:
 
 \include{_information/includes/legendre-transform.md}
 
-\speakernotes{Parked from week 5 to free MaxEnt for soft partitions / $I$. Name $H=A-\theta\cdot\eta$ as Helmholtz $F=U-TS$. Dual charts $(\theta,\eta)$ are today's e/m coordinates.}
+\speakernotes{Parked from week 5 so the KL arc, MaxEnt, and CGF had clock. Week 5 already gave $A=\log Z$ and $\eta=\nabla A$. Name $H=A-\theta\cdot\eta$ as Helmholtz $F=U-TS$. Dual charts $(\theta,\eta)$ are today's e/m coordinates; $G=\nabla^2 A$ is the Fisher metric next.}
+
+\notes{Recall only: Week 5 closed with $A(\boldsymbol{\theta})=\log Z(-\boldsymbol{\theta})$ as cumulant generating function and $\boldsymbol{\eta}=\nabla A=\langle T\rangle$. Today's new move is the Legendre dual that makes $H=A-\theta\cdot\eta$ first-class and puts $(\theta,\eta)$ on dual flat charts.}
 
 \subsection{What Did Fisher Mean by Information?}
 

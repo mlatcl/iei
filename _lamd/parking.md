@@ -21,7 +21,7 @@ parked:
     likely_home: "after the game, or drop — the counting argument is already live"
   - id: partition-Z
     from_week: 3
-    likely_home: "Week 5, or a named callback"
+    likely_home: "Sorted into Week 5 (maxent-exponential-family.md) — log Z as CGF after θ=-λ"
   - id: hmc
     from_week: 3
     likely_home: "named callback from Week 1 scores, or drop"
@@ -30,7 +30,7 @@ parked:
     likely_home: "optional colour; bandwidth already in Week 2"
   - id: kl-differential
     from_week: 3
-    likely_home: "Week 6 contrast, or the recap"
+    likely_home: "Sorted into Week 5 (maxent-exponential-family.md) KL arc"
   - id: capacity-dpi
     from_week: 3
     likely_home: "scaffolding for LO2; proof is Week 8"
@@ -62,10 +62,9 @@ parked:
 
 \notes{This file is the module parking lot. It is not a week, not a contact
 hour, and not the demon lecture. Sort an item into a live `_lamd/*.md`
-week file before presenting it. Questions, MacKay, die grouping, the missing
-measure and the demon compartments are the live Week 4 clock. Szilard,
-Landauer, Ellis, and local-equilibrium grouping sit here until Worksheet 3
-needs them.}
+week file before presenting it. KL / differential entropy and $\log Z$ as
+CGF both live in Week 5; Legendre is Week 6. Szilard, Landauer, Ellis, and
+local-equilibrium grouping sit here until Worksheet 3 needs them.}
 
 \speakernotes{Stop. This is the parking lot. Sort before presenting.}
 
@@ -74,7 +73,8 @@ needs them.}
 \slides{Overflow. Not a weekly lecture.}
 
 \slidesincremental{
-* Shannon axioms, HMC, $Z$, Dasher, KL, capacity
+* Shannon axioms, HMC, Dasher, capacity (still parked)
+* $Z$ as CGF → Week 5; KL discrete/continuous → Week 5
 * Three framings, Schottky, finite time
 * Local equilibrium; Szilard / Landauer / Ellis
 * Legendre transform (from Week 5 → Week 6)
@@ -122,13 +122,13 @@ needs them.}
 
 \notes{Dasher is the pair in one interface. Letter height is $p(\text{char}\mid\text{context})$; the information cost of a hit is $-\log p$. $H(\text{next})$ is the no-go on the remaining rate. The language model is the prescription: this is the next letter you should make easy to hit. The bits-per-second counter is the same unit as lecture 1's bandwidth bottleneck — here spent on a pointer, not on speech.}
 
-\notes{The Helmholtz split is already on the board: $F=-k_BT\log Z$ and $U=\expSamp{E}$. What follows is the other reading of the same identity --- $\log Z$ as a generating function, derivatives rather than an expectation of $E(x)$. The Gaussian quadratic was the closed form; the two-state system is the discrete check.}
+\notes{Sorted into Week 5 (`maxent-exponential-family.md`) after $\theta=-\lambda$: $\log Z$ as cumulant generating function, with $A(\theta)=\log Z(-\theta)$ and $\eta=\nabla A$. The include below remains here for overflow review only.}
 
 \include{_physics/includes/partition-function-generating.md}
 
 \include{_information/includes/welling-entropy-partition.md}
 
-\notes{GAIST §1.2.3 uses $-\int p\log p$ for Gaussians — that is *differential* entropy. It can be negative and is not bounded like discrete Shannon $H\in[0,\log n]$. Below we introduce $\KL{p}{q}$, which is always $\ge 0$ discrete and continuous. That is why MaxEnt projections minimise $\KL{\cdot}{r}$, not raw $H$.}
+\notes{Sorted into Week 5 (`maxent-exponential-family.md`) KL arc. GAIST §1.2.3 uses $-\int p\log p$ for Gaussians — that is *differential* entropy. It can be negative and is not bounded like discrete Shannon $H\in[0,\log n]$. $\KL{p}{q}$ is always $\ge 0$ discrete and continuous. That is why MaxEnt projections minimise $\KL{\cdot}{r}$, not raw $H$. The include below remains here for overflow review only.}
 
 \addreading{@Callen-thermostatistics85}{Chapter 16}
 
