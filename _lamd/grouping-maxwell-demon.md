@@ -38,7 +38,7 @@ reading:
     required: false
 ---
 
-\notes{Worksheet 2 is due at the start of this session. Quiz 2 occupies the first ten minutes from 10:05 --- Weeks 2--3 as delivered (ensemble, the heat thread through Joule, Helmholtz on the board, Shannon $H$ versus Boltzmann $S$). Collect the worksheets as they sit. After the quiz the three composition wrappers: questions--MacKay--die, Gaussian--Maxwell missing measure, then the demon as compartments and two ledgers. The fork is named, not resolved; Worksheet 3 is released. Shannon axioms, HMC, $Z$, KL, Schottky and finite time stay parked; Szilard, Landauer and Ellis wait for Worksheet 3.}
+\notes{Worksheet 2 is due at the start of this session. Quiz 2 occupies the opening block from 10:05 --- Weeks 2--3 as delivered (ensemble, the heat thread through Joule, Helmholtz on the board, Shannon $H$ versus Boltzmann $S$). After the quiz: questions--MacKay--die, Gaussian--Maxwell missing measure, then the demon as compartments and two ledgers. The fork is named, not resolved; Worksheet 3 is released. Shannon axioms, HMC, $Z$, KL, Schottky and finite time stay parked; Szilard, Landauer and Ellis wait for Worksheet 3.}
 
 \machinereviewlink
 
@@ -46,38 +46,33 @@ reading:
 
 \slidesincremental{
 * Questions; MacKay's balance; die grouping $H=H(w)+\sum_i w_i H(p_i)$
-* Gaussian vs Maxwell: $H$ without a measure $m$
+* Gaussian vs Maxwell: variable, grouping, and measure $m$
 * The demon: compartments and two ledgers
 * Worksheet 3: where can the entropy sit?
 }
 
 \notes{
 * Questions; MacKay's balance; die grouping $H=H(w)+\sum_i w_i H(p_i)$
-* Gaussian vs Maxwell: $H$ without a measure $m$
+* Gaussian vs Maxwell: variable, grouping, and measure $m$
 * The demon: compartments and two ledgers
 * Worksheet 3: where can the entropy sit?
 }
 
 \subsection{This Session}
 
-\slidesincremental{
-* Quiz 2 (ten minutes); collect Worksheet 2
-* Questions / MacKay / grouping; then the missing measure
-* Compartments and two ledgers
-* Worksheet 3 after the fork
-}
-
 \notes{
-**Time plan (as delivered 3 November 2026).** Clocks from the Panopto SRT (recording 00:00 $\approx$ 10:00). The slot is 10:05--11:55 (110 minutes, not 120). Quiz 2 is paper, as Quiz 1 was. As taught: MacKay and the die filled the first half (board-first); the missing measure --- including the velocity-space shell answer to Harry's question --- took almost the whole second half; the demon compartments and two ledgers were an eight-minute close for Worksheet 3; the session finished early. Do not open Szilard or Landauer.
+**Time plan (as delivered 3 November 2026).** Clocks from the Panopto SRT (recording 00:00 $\approx$ 10:00). The published slot is 10:05--11:55 (110 minutes). Quiz 2 is paper, as Quiz 1 was. As taught: MacKay and the die filled the first half (board-first); the missing measure --- including the velocity-space shell answer to Harry's question --- took most of the second half; the demon compartments and two ledgers were a short close for Worksheet 3.
 
 | Clock | Block |
 |------:|-------|
-| 10:05--10:22 | Quiz 2 (paper; quiet ran long); collect Worksheet 2 |
+| 10:05--10:22 | Quiz 2 (paper; quiet ran long); Worksheet 2 collected |
 | 10:22--10:53 | Questions, MacKay (board), die grouping on the board |
 | 10:53--11:03 | Break |
 | 11:03--11:47 | Anthropomorphic bridge; histogram; shell geometry; Radon--Nikodym / Jaynes $m$ |
-| 11:47--11:56 | Compartment model; two ledgers; release Worksheet 3 |
+| 11:47--11:55 | Compartment model; two ledgers; release Worksheet 3 |
 }
+
+\speakernotes{Do not open Szilard or Landauer in this slot.}
 
 \subsection{After This Lecture}
 
@@ -90,11 +85,11 @@ reading:
 
 \subsection{Quiz 2}
 
-\notes{Invigilated paper test, no notes, no network, no LLMs. Ten questions on Weeks 2--3 as delivered: Bernoulli / ensemble, the heat thread (Black through Joule and Clausius), Helmholtz $F=U-TS$ and $\log Z$, Shannon $H$ versus Boltzmann $S$. Not the information game, not MacKay's balance, not Maxwell's demon --- those start after the quiz. Worksheet 2 is collected as they sit.}
+\notes{Invigilated paper test, no notes, no network, no LLMs. Ten questions on Weeks 2--3 as delivered: Bernoulli / ensemble, the heat thread (Black through Joule and Clausius), Helmholtz $F=U-TS$ and $\log Z$, Shannon $H$ versus Boltzmann $S$. Not the information game, not MacKay's balance, not Maxwell's demon --- those start after the quiz.}
 
 \slidesincremental{
 * Paper; no notes, no network, no LLMs
-* Ten minutes
+* Opening block (about fifteen minutes as delivered)
 * Worksheet 2 in as you sit
 }
 
