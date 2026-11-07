@@ -162,6 +162,7 @@ viewer:
 
       Marks from [`worksheet1/info/worksheet1_scores.csv`](../worksheet1/info/worksheet1_scores.csv).
       Edit individual scripts in **L172 — Worksheet 1 marking**.
+      After marking, use **Reload scores** here (browser refresh keeps the old CSV in memory).
       **15 marks** (curiosity 5 + skepticism 5 + reflection 5).
 
       {% assign sum = 0 %}{% assign n = 0 %}{% assign unmarked = 0 %}
@@ -204,6 +205,15 @@ viewer:
       {% endif %}
 
 review:
+  # Section → listing chrome (top-level ReloadButton is skipped on inline_list).
+  - type: Section
+    title: Data
+    args:
+      collapse: false
+    entries:
+      - type: ReloadButton
+        args:
+          description: Reload scores
   - type: Checkbox
     field: noted
     default: false
@@ -223,12 +233,13 @@ documents:
       field: markedFlag
       equals: "yes"
     to:
-      liquid: "{{ email }}"
+      # Mapping Email→email overwrites the identity alias; use Email / givenName.
+      liquid: "{{ Email }}"
     title:
       liquid: "L172 Worksheet 1 — feedback"
     header:
       liquid: |
-        Hi {{ given }},
+        Hi {{ givenName }},
     body:
       liquid: |
         {{ feedbackBody }}

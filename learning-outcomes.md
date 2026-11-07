@@ -34,7 +34,7 @@ outcomes:
     text: "Students will be able to identify the exponential family as the MaxEnt family and explain why the canonical ensemble, Gaussian, and Bernoulli distributions all belong to it."
     bloom_level: analyse
     week: 5
-    notes: "p(x|θ) = exp(θ·T(x) - A(θ)). Unifies thermodynamics, Bayesian statistics and ML. Entropy is the Legendre conjugate of the log-partition, H = A − θ·η, the same subtraction as Helmholtz F = U − TS. That pair (θ, η) is the dual coordinates of weeks 5–6. Softmax is MaxEnt with a feature map; the two-spin Ising model is the first product sufficient statistic. Connects to variational inference and the natural gradient."
+    notes: "p(x|θ) = exp(θ·T(x) - A(θ)). Unifies thermodynamics, Bayesian statistics and ML. Softmax is MaxEnt with a feature map; the two-spin Ising model is the first product sufficient statistic. Week 5 also returns to soft/overlapping coarse-graining: H(X)=H(w)+∑ w_i H(p_i)−H(I|X), with mutual information I(X;I)=H(w)−H(I|X). The Legendre conjugate H = A − θ·η (same subtraction as Helmholtz F = U − TS) and the dual charts (θ, η) are named in week 5 and developed in week 6. Connects to variational inference and the natural gradient."
 
   - id: LO7
     text: "Students will be able to compare and contrast the information-theoretic, thermodynamic, and Bayesian perspectives on entropy, articulating the distinct operational assumptions each makes and identifying what each perspective illuminates or obscures."
@@ -46,7 +46,7 @@ outcomes:
     text: "Students will be able to describe the manifold of probability distributions as a Riemannian space, define the Fisher information matrix as its metric, and explain the dually flat geometry of exponential families including the Pythagorean theorem for KL divergence."
     bloom_level: analyse
     week: 6
-    notes: "Amari & Nagaoka (2000). g_ij = E[∂_i log p · ∂_j log p]. e-flat (natural parameters) and m-flat (mean parameters) coordinate systems — the Legendre pair (θ, η) from week 5. Pythagorean theorem: KL(p||r) = KL(p||q) + KL(q||r) when q is the e/m projection. This metric is Crooks' thermodynamic length (2007): the Fisher–Rao length of a path of equilibrium states. In the slow-driving regime dissipation is bounded by L²/τ. Define length in week 6; interpret as a constraint on intelligence in week 8."
+    notes: "Amari & Nagaoka (2000). g_ij = E[∂_i log p · ∂_j log p]. e-flat (natural parameters) and m-flat (mean parameters) coordinate systems — the Legendre pair (θ, η), developed here after being parked from week 5. Pythagorean theorem: KL(p||r) = KL(p||q) + KL(q||r) when q is the e/m projection. This metric is Crooks' thermodynamic length (2007): the Fisher–Rao length of a path of equilibrium states. In the slow-driving regime dissipation is bounded by L²/τ. Define length in week 6; interpret as a constraint on intelligence in week 8."
 
   - id: LO9
     text: "Students will be able to apply information geometry to interpret maximum entropy inference as a projection onto a constraint manifold and to explain why natural gradient descent is the geometrically correct gradient for statistical models."
@@ -136,7 +136,7 @@ Eight Tuesdays, 13 October – 1 December 2026, 10:00–12:00, FW26, William Gat
 | 2 | 20 Oct | Gibbs--Boltzmann form; free energy $F=U-TS$; HMC; Schottky | LO1 | Q1 (10 min); W1 due |
 | 3 | 27 Oct | Heat thread; Helmholtz $F=U-TS$. Game / MacKay named, not reached | LO1, LO2, LO3 | |
 | 4 | 3 Nov | Quiz 2; questions / MacKay / grouping; missing measure; demon as compartments and two ledgers | LO2, LO4 | Q2 (10 min); W2 due; W3 released |
-| 5 | 10 Nov | MaxEnt; exponential family; three-perspective synthesis | LO5, LO6, LO7 | |
+| 5 | 10 Nov | MaxEnt; exponential family; overlapping grouping / MI; three-perspective synthesis | LO5, LO6, LO7 | |
 | 6 | 17 Nov | Quiz 3; Fisher metric; thermodynamic length defined (Crooks) | LO8 | Q3 (10 min); W3 due; W4 released |
 | 7 | 24 Nov | MaxEnt as projection; natural gradient; geodesics | LO9 | |
 | 8 | 1 Dec | Multi-information; DPI; IB; von Neumann; three geometries; limits on intelligence | LO10–LO13 | Q4 (10 min, LO8–LO13); W4 due (LO7–LO13) |

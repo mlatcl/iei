@@ -55,6 +55,9 @@ parked:
   - id: landauer-szilard-ellis
     from_week: 4
     likely_home: "Worksheet 3 coarse-grains Maxwell; live lecture stops at the fork"
+  - id: legendre-transform
+    from_week: 5
+    likely_home: "Sorted into Week 6 (fisher-metric.md) before dual flatness"
 ---
 
 \notes{This file is the module parking lot. It is not a week, not a contact
@@ -74,6 +77,7 @@ needs them.}
 * Shannon axioms, HMC, $Z$, Dasher, KL, capacity
 * Three framings, Schottky, finite time
 * Local equilibrium; Szilard / Landauer / Ellis
+* Legendre transform (from Week 5 → Week 6)
 }
 
 \subsection{Shannon axioms}
@@ -280,6 +284,14 @@ mlai.write_figure('finite-time-sketch.svg', directory='\writeDiagramsDir/ml')}
 \slides{Overflow from Week 4. The live lecture stops at the fork; Worksheet 3 is the resolution families.}
 
 \include{includes/landauer-resolution-overflow.md}
+
+\subsection{Legendre transform}
+
+\newslides{Parked: Legendre — sorted}
+
+\slides{Moved into Week 6 (`fisher-metric.md`) before dual flatness.}
+
+\notes{Originally overflow from Week 5 when the MaxEnt clock took soft partitions and $I(X;I)$. Now included live in week 6; keep this stub only as the trail.}
 
 \reading
 

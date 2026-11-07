@@ -67,32 +67,42 @@ mapping:
   conversationDate: conversation_date
   nExchanges: n_exchanges
   dialogueContent: content
+  llmTopics: llm_topics
+  llmTopicsDetail: llm_topics_detail
 
 # Join submitted dialogues (left: class list stays visible if a file is missing).
 # An empty submissions/ glob has no crsid column and cannot be joined — keep
 # _none_dialogue.md until the first real Moodle file is copied in.
 # Reflection PDFs are resolved by path, not joined, so missing scans still show.
+# LLM-only topic tags: regenerate info/worksheet2_llm_topics.csv from dialogues
+# when the cohort set changes (subjects/ideas the model covered, not prompts).
 additional:
-  index: crsid
-  type: markdown_directory
-  how: left
-  source:
-    - directory: submissions
-      glob: "*_dialogue.md"
-  fields:
-    - crsid
-    - worksheet
-    - title
-    - llm_provider
-    - llm_model
-    - llm_interface
-    - conversation_date
-    - n_exchanges
-    - content
-  store_fields:
-    directory: dialogueDirectory
-    filename: dialogueFilename
-    root: dialogueRoot
+  - index: crsid
+    type: markdown_directory
+    how: left
+    source:
+      - directory: submissions
+        glob: "*_dialogue.md"
+    fields:
+      - crsid
+      - worksheet
+      - title
+      - llm_provider
+      - llm_model
+      - llm_interface
+      - conversation_date
+      - n_exchanges
+      - content
+    store_fields:
+      directory: dialogueDirectory
+      filename: dialogueFilename
+      root: dialogueRoot
+  - type: csv
+    index: crsid
+    filename: worksheet2_llm_topics.csv
+    directory: info
+    header: 0
+    how: left
 
 output:
   index: crsid
@@ -158,16 +168,25 @@ viewer:
       {% endif %}
     collapse:
       headings: [LLM]
+      # End LLM blocks only at role/exchange headings. Student pastes often
+      # include ### / ## content headings inside the model reply.
+      peers: [User, LLM, Exchange]
       default: closed
 
 review:
   - type: CriterionCommentScore
     prefix: Curiosity
-    criterion: |
+    liquid: |
       #### Curiosity (5)
 
       Exchange 1 and later open questions invite substantive explanation of
       the \(H\)/\(S\) claim; not trivia or yes/no.
+
+      {% assign detail = llm_topics_detail | append: "" | strip %}{% if detail != blank and detail != "nan" and detail != "NaN" %}
+      **Subjects covered in the LLM’s answers:**
+
+      {{ detail }}
+      {% else %}*No LLM subject summary for this script.*{% endif %}
     value: 3
     min: 0
     max: 5

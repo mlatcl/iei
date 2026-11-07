@@ -57,15 +57,15 @@ input:
       row_args:
         givenName: given
         familyName: family
-    # Prefer Total Score; if blank (combinator missed a save), sum Q1–Q10.
-    # Guard NaN from left-join misses (Liquid treats NaN as non-blank).
+    # Checkbox Correct fields store True / False / blank — not 1 / 0.
+    # Count True/yes/1 as 1; blank/False/0 as 0. Show a total only if at
+    # least one Q score was touched (else left-join miss = unmarked).
     - field: totalDisplay
       function: render_liquid
       args:
         template: >-
-          {% assign s = totalScore | append: "" | strip %}{% if s != blank and s != "nan" and s != "NaN" and s != "None" %}{{ s }}{% else %}{% assign t = 0 %}{% assign n = 0 %}{% assign a = q1Score | append: "" | strip %}{% if a != blank and a != "nan" and a != "NaN" %}{% assign t = t | plus: a %}{% assign n = n | plus: 1 %}{% endif %}{% assign a = q2Score | append: "" | strip %}{% if a != blank and a != "nan" and a != "NaN" %}{% assign t = t | plus: a %}{% assign n = n | plus: 1 %}{% endif %}{% assign a = q3Score | append: "" | strip %}{% if a != blank and a != "nan" and a != "NaN" %}{% assign t = t | plus: a %}{% assign n = n | plus: 1 %}{% endif %}{% assign a = q4Score | append: "" | strip %}{% if a != blank and a != "nan" and a != "NaN" %}{% assign t = t | plus: a %}{% assign n = n | plus: 1 %}{% endif %}{% assign a = q5Score | append: "" | strip %}{% if a != blank and a != "nan" and a != "NaN" %}{% assign t = t | plus: a %}{% assign n = n | plus: 1 %}{% endif %}{% assign a = q6Score | append: "" | strip %}{% if a != blank and a != "nan" and a != "NaN" %}{% assign t = t | plus: a %}{% assign n = n | plus: 1 %}{% endif %}{% assign a = q7Score | append: "" | strip %}{% if a != blank and a != "nan" and a != "NaN" %}{% assign t = t | plus: a %}{% assign n = n | plus: 1 %}{% endif %}{% assign a = q8Score | append: "" | strip %}{% if a != blank and a != "nan" and a != "NaN" %}{% assign t = t | plus: a %}{% assign n = n | plus: 1 %}{% endif %}{% assign a = q9Score | append: "" | strip %}{% if a != blank and a != "nan" and a != "NaN" %}{% assign t = t | plus: a %}{% assign n = n | plus: 1 %}{% endif %}{% assign a = q10Score | append: "" | strip %}{% if a != blank and a != "nan" and a != "NaN" %}{% assign t = t | plus: a %}{% assign n = n | plus: 1 %}{% endif %}{% if n > 0 %}{{ t }}{% endif %}{% endif %}
+          {% assign t = 0 %}{% assign touched = 0 %}{% assign a = q1Score | append: "" | strip | downcase %}{% if a == "1" or a == "1.0" or a == "true" or a == "yes" %}{% assign t = t | plus: 1 %}{% assign touched = touched | plus: 1 %}{% elsif a == "0" or a == "0.0" or a == "false" or a == "no" %}{% assign touched = touched | plus: 1 %}{% endif %}{% assign a = q2Score | append: "" | strip | downcase %}{% if a == "1" or a == "1.0" or a == "true" or a == "yes" %}{% assign t = t | plus: 1 %}{% assign touched = touched | plus: 1 %}{% elsif a == "0" or a == "0.0" or a == "false" or a == "no" %}{% assign touched = touched | plus: 1 %}{% endif %}{% assign a = q3Score | append: "" | strip | downcase %}{% if a == "1" or a == "1.0" or a == "true" or a == "yes" %}{% assign t = t | plus: 1 %}{% assign touched = touched | plus: 1 %}{% elsif a == "0" or a == "0.0" or a == "false" or a == "no" %}{% assign touched = touched | plus: 1 %}{% endif %}{% assign a = q4Score | append: "" | strip | downcase %}{% if a == "1" or a == "1.0" or a == "true" or a == "yes" %}{% assign t = t | plus: 1 %}{% assign touched = touched | plus: 1 %}{% elsif a == "0" or a == "0.0" or a == "false" or a == "no" %}{% assign touched = touched | plus: 1 %}{% endif %}{% assign a = q5Score | append: "" | strip | downcase %}{% if a == "1" or a == "1.0" or a == "true" or a == "yes" %}{% assign t = t | plus: 1 %}{% assign touched = touched | plus: 1 %}{% elsif a == "0" or a == "0.0" or a == "false" or a == "no" %}{% assign touched = touched | plus: 1 %}{% endif %}{% assign a = q6Score | append: "" | strip | downcase %}{% if a == "1" or a == "1.0" or a == "true" or a == "yes" %}{% assign t = t | plus: 1 %}{% assign touched = touched | plus: 1 %}{% elsif a == "0" or a == "0.0" or a == "false" or a == "no" %}{% assign touched = touched | plus: 1 %}{% endif %}{% assign a = q7Score | append: "" | strip | downcase %}{% if a == "1" or a == "1.0" or a == "true" or a == "yes" %}{% assign t = t | plus: 1 %}{% assign touched = touched | plus: 1 %}{% elsif a == "0" or a == "0.0" or a == "false" or a == "no" %}{% assign touched = touched | plus: 1 %}{% endif %}{% assign a = q8Score | append: "" | strip | downcase %}{% if a == "1" or a == "1.0" or a == "true" or a == "yes" %}{% assign t = t | plus: 1 %}{% assign touched = touched | plus: 1 %}{% elsif a == "0" or a == "0.0" or a == "false" or a == "no" %}{% assign touched = touched | plus: 1 %}{% endif %}{% assign a = q9Score | append: "" | strip | downcase %}{% if a == "1" or a == "1.0" or a == "true" or a == "yes" %}{% assign t = t | plus: 1 %}{% assign touched = touched | plus: 1 %}{% elsif a == "0" or a == "0.0" or a == "false" or a == "no" %}{% assign touched = touched | plus: 1 %}{% endif %}{% assign a = q10Score | append: "" | strip | downcase %}{% if a == "1" or a == "1.0" or a == "true" or a == "yes" %}{% assign t = t | plus: 1 %}{% assign touched = touched | plus: 1 %}{% elsif a == "0" or a == "0.0" or a == "false" or a == "no" %}{% assign touched = touched | plus: 1 %}{% endif %}{% if touched > 0 %}{{ t }}{% endif %}
       row_args:
-        totalScore: Total Score
         q1Score: Q1 Score
         q2Score: Q2 Score
         q3Score: Q3 Score
@@ -83,22 +83,22 @@ input:
           {% assign s = totalDisplay | append: "" | strip %}{% if s != blank %}yes{% else %}no{% endif %}
       row_args:
         totalDisplay: totalDisplay
-    # One topic area per missed item (score not 1 / 1.0). No marks in the text.
+    # One topic per missed item (not True/yes/1). Sitting order. No marks in text.
     - field: needWork
       function: render_liquid
       args:
         template: |
-          {% if markedFlag == "yes" %}{% assign a = q1Score | append: "" | strip %}{% if a != "1" and a != "1.0" %}* The heat thread (Black, Rumford, Carnot, Joule)
-          {% endif %}{% assign a = q2Score | append: "" | strip %}{% if a != "1" and a != "1.0" %}* Units of \(k_B T H\) (joules)
-          {% endif %}{% assign a = q3Score | append: "" | strip %}{% if a != "1" and a != "1.0" %}* \(\log Z\) as available energy / sum of states
-          {% endif %}{% assign a = q4Score | append: "" | strip %}{% if a != "1" and a != "1.0" %}* \(S = k_B H\) and the units of physical entropy
-          {% endif %}{% assign a = q5Score | append: "" | strip %}{% if a != "1" and a != "1.0" %}* Coarse-graining (hurricane / Navier–Stokes)
-          {% endif %}{% assign a = q6Score | append: "" | strip %}{% if a != "1" and a != "1.0" %}* Bernoulli's kinetic picture of pressure
-          {% endif %}{% assign a = q7Score | append: "" | strip %}{% if a != "1" and a != "1.0" %}* Differential entropy and the undeclared measure
-          {% endif %}{% assign a = q8Score | append: "" | strip %}{% if a != "1" and a != "1.0" %}* Intensive versus extensive quantities
-          {% endif %}{% assign a = q9Score | append: "" | strip %}{% if a != "1" and a != "1.0" %}* Clausius, Joule, and the reversible engine
-          {% endif %}{% assign a = q10Score | append: "" | strip %}{% if a != "1" and a != "1.0" %}* Ensemble, independence, Shannon versus Wiener
-          {% endif %}{% endif %}
+          {% if markedFlag == "yes" %}{% assign a = q1Score | append: "" | strip | downcase %}{% unless a == "1" or a == "1.0" or a == "true" or a == "yes" %}* The heat thread (Black, Rumford, Carnot, Joule)
+          {% endunless %}{% assign a = q2Score | append: "" | strip | downcase %}{% unless a == "1" or a == "1.0" or a == "true" or a == "yes" %}* Units of \(k_B T H\) (joules)
+          {% endunless %}{% assign a = q3Score | append: "" | strip | downcase %}{% unless a == "1" or a == "1.0" or a == "true" or a == "yes" %}* Differential entropy and the undeclared measure
+          {% endunless %}{% assign a = q4Score | append: "" | strip | downcase %}{% unless a == "1" or a == "1.0" or a == "true" or a == "yes" %}* Coarse-graining (hurricane / Navier–Stokes)
+          {% endunless %}{% assign a = q5Score | append: "" | strip | downcase %}{% unless a == "1" or a == "1.0" or a == "true" or a == "yes" %}* \(\log Z\) as available energy / sum of states
+          {% endunless %}{% assign a = q6Score | append: "" | strip | downcase %}{% unless a == "1" or a == "1.0" or a == "true" or a == "yes" %}* \(S = k_B H\) and the units of physical entropy
+          {% endunless %}{% assign a = q7Score | append: "" | strip | downcase %}{% unless a == "1" or a == "1.0" or a == "true" or a == "yes" %}* Bernoulli's kinetic picture of pressure
+          {% endunless %}{% assign a = q8Score | append: "" | strip | downcase %}{% unless a == "1" or a == "1.0" or a == "true" or a == "yes" %}* Ensemble, independence, Shannon versus Wiener
+          {% endunless %}{% assign a = q9Score | append: "" | strip | downcase %}{% unless a == "1" or a == "1.0" or a == "true" or a == "yes" %}* Intensive versus extensive quantities
+          {% endunless %}{% assign a = q10Score | append: "" | strip | downcase %}{% unless a == "1" or a == "1.0" or a == "true" or a == "yes" %}* Clausius, Joule, and the reversible engine
+          {% endunless %}{% endif %}
       row_args:
         markedFlag: markedFlag
         q1Score: Q1 Score
@@ -181,6 +181,7 @@ viewer:
 
       Marks from [`quiz2/info/quiz2_scores.csv`](../quiz2/info/quiz2_scores.csv).
       Edit individual papers in **L172 — Quiz 2 marking**.
+      After marking, use **Reload scores** here (browser refresh keeps the old CSV in memory).
 
       {% assign sum = 0 %}{% assign n = 0 %}{% assign unmarked = 0 %}
       {% for row in rows %}
@@ -211,7 +212,7 @@ viewer:
 
       {% assign s = totalDisplay | append: "" | strip %}
       - Total: {% if s != blank and s != "nan" and s != "NaN" %}**{{ s }}** / 10{% else %}*unmarked*{% endif %}
-      - Items: Q1 {% assign x = q1Score | append: "" %}{% if x != blank and x != "nan" and x != "NaN" %}{{ x }}{% else %}—{% endif %} · Q2 {% assign x = q2Score | append: "" %}{% if x != blank and x != "nan" and x != "NaN" %}{{ x }}{% else %}—{% endif %} · Q3 {% assign x = q3Score | append: "" %}{% if x != blank and x != "nan" and x != "NaN" %}{{ x }}{% else %}—{% endif %} · Q4 {% assign x = q4Score | append: "" %}{% if x != blank and x != "nan" and x != "NaN" %}{{ x }}{% else %}—{% endif %} · Q5 {% assign x = q5Score | append: "" %}{% if x != blank and x != "nan" and x != "NaN" %}{{ x }}{% else %}—{% endif %} · Q6 {% assign x = q6Score | append: "" %}{% if x != blank and x != "nan" and x != "NaN" %}{{ x }}{% else %}—{% endif %} · Q7 {% assign x = q7Score | append: "" %}{% if x != blank and x != "nan" and x != "NaN" %}{{ x }}{% else %}—{% endif %} · Q8 {% assign x = q8Score | append: "" %}{% if x != blank and x != "nan" and x != "NaN" %}{{ x }}{% else %}—{% endif %} · Q9 {% assign x = q9Score | append: "" %}{% if x != blank and x != "nan" and x != "NaN" %}{{ x }}{% else %}—{% endif %} · Q10 {% assign x = q10Score | append: "" %}{% if x != blank and x != "nan" and x != "NaN" %}{{ x }}{% else %}—{% endif %}
+      - Items: Q1 {% assign x = q1Score | append: "" | strip | downcase %}{% if x == "1" or x == "1.0" or x == "true" or x == "yes" %}1{% elsif markedFlag == "yes" %}0{% else %}—{% endif %} · Q2 {% assign x = q2Score | append: "" | strip | downcase %}{% if x == "1" or x == "1.0" or x == "true" or x == "yes" %}1{% elsif markedFlag == "yes" %}0{% else %}—{% endif %} · Q3 {% assign x = q3Score | append: "" | strip | downcase %}{% if x == "1" or x == "1.0" or x == "true" or x == "yes" %}1{% elsif markedFlag == "yes" %}0{% else %}—{% endif %} · Q4 {% assign x = q4Score | append: "" | strip | downcase %}{% if x == "1" or x == "1.0" or x == "true" or x == "yes" %}1{% elsif markedFlag == "yes" %}0{% else %}—{% endif %} · Q5 {% assign x = q5Score | append: "" | strip | downcase %}{% if x == "1" or x == "1.0" or x == "true" or x == "yes" %}1{% elsif markedFlag == "yes" %}0{% else %}—{% endif %} · Q6 {% assign x = q6Score | append: "" | strip | downcase %}{% if x == "1" or x == "1.0" or x == "true" or x == "yes" %}1{% elsif markedFlag == "yes" %}0{% else %}—{% endif %} · Q7 {% assign x = q7Score | append: "" | strip | downcase %}{% if x == "1" or x == "1.0" or x == "true" or x == "yes" %}1{% elsif markedFlag == "yes" %}0{% else %}—{% endif %} · Q8 {% assign x = q8Score | append: "" | strip | downcase %}{% if x == "1" or x == "1.0" or x == "true" or x == "yes" %}1{% elsif markedFlag == "yes" %}0{% else %}—{% endif %} · Q9 {% assign x = q9Score | append: "" | strip | downcase %}{% if x == "1" or x == "1.0" or x == "true" or x == "yes" %}1{% elsif markedFlag == "yes" %}0{% else %}—{% endif %} · Q10 {% assign x = q10Score | append: "" | strip | downcase %}{% if x == "1" or x == "1.0" or x == "true" or x == "yes" %}1{% elsif markedFlag == "yes" %}0{% else %}—{% endif %}
       {% assign note = overallComment | append: "" | strip %}{% if note != blank and note != "nan" and note != "NaN" %}- Note: {{ note }}{% endif %}
 
       {% assign fb = feedbackBody | strip %}
@@ -222,6 +223,15 @@ viewer:
       {% endif %}
 
 review:
+  # Section → listing chrome (top-level ReloadButton is skipped on inline_list).
+  - type: Section
+    title: Data
+    args:
+      collapse: false
+    entries:
+      - type: ReloadButton
+        args:
+          description: Reload scores
   - type: Checkbox
     field: noted
     default: false
@@ -241,12 +251,13 @@ documents:
       field: markedFlag
       equals: "yes"
     to:
-      liquid: "{{ email }}"
+      # Mapping Email→email overwrites the identity alias; use Email / givenName.
+      liquid: "{{ Email }}"
     title:
       liquid: "L172 Quiz 2 — feedback"
     header:
       liquid: |
-        Hi {{ given }},
+        Hi {{ givenName }},
     body:
       liquid: |
         {{ feedbackBody }}

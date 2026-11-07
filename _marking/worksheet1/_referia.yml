@@ -156,6 +156,9 @@ viewer:
       {% endif %}
     collapse:
       headings: [LLM]
+      # End LLM blocks only at role/exchange headings. Student pastes often
+      # include ### / ## content headings inside the model reply.
+      peers: [User, LLM, Exchange]
       default: closed
 
 review:
