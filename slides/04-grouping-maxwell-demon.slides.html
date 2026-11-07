@@ -189,6 +189,20 @@ sns.set_style('darkgrid')
 sns.set_context('paper')
 sns.set_palette('colorblind')}-->
 </section>
+<section id="as-taught-missing-measure-then-the-fork" class="slide level2">
+<h2>As Taught: Missing Measure, Then the Fork</h2>
+<p>Harry’s speed question first. Compartments last, as Worksheet 3.</p>
+<div>
+<ul>
+<li class="fragment">Grid and concentric rings: why speed peaks away from zero</li>
+<li class="fragment">Declare <span class="math inline">\(m\)</span>; Gaussian versus Maxwell was an undeclared change of measure</li>
+<li class="fragment">Demon: three (maybe four) compartments; number ledger versus energy ledger</li>
+</ul>
+</div>
+<aside class="notes">
+As taught: protect the shell figure and the compartment schematic. MacKay strategy stays deferred. Stop at the fork; do not open Landauer.
+</aside>
+</section>
 <section id="questions-a-balance-and-a-die" class="slide level2">
 <h2>Questions, a Balance, and a Die</h2>
 <aside class="notes">
@@ -527,7 +541,7 @@ Callback only — extensive versus intensive was week 2. Do not re-derive. Do no
 <section id="gaussian-maxwellboltzmann-and-the-missing-measure" class="slide level2">
 <h2>Gaussian, Maxwell–Boltzmann, and the Missing Measure</h2>
 <aside class="notes">
-Composition wrapper only. Children carry the figures. Stop before MaxEnt / Lagrange / the die.
+Composition wrapper only. Children carry the figures. As taught: open from Harry’s speed-peak question and the anthropomorphic bridge, then histogram arithmetic, then the velocity-space shell before the 3D Maxwell pair. Stop before MaxEnt / Lagrange / the die.
 </aside>
 </section>
 <section id="entropy-of-a-gaussian-velocity-histogram" class="slide level2">
@@ -541,7 +555,7 @@ Composition wrapper only. Children carry the figures. Stop before MaxEnt / Lagra
 </ul>
 </div>
 <aside class="notes">
-Callback to the week-2 velocity histogram, then switch to the Riemann picture. Board <span class="math inline">\(p_i\approx f\Delta\)</span> once. The figure is the piecewise-constant midpoint approximation, not a sample histogram. The two numbers should agree; <span class="math inline">\(h\)</span> itself is smaller by <span class="math inline">\(\log\Delta\)</span> (and is negative if <span class="math inline">\(\Delta\)</span> is large). Nats throughout.
+As taught: open from Harry’s ``why isn’t the speed peak at zero?’’ and the anthropomorphic bridge, then this Riemann picture. Board <span class="math inline">\(p_i\approx f\Delta\)</span> once. The figure is the piecewise-constant midpoint approximation, not a sample histogram. The two numbers should agree; <span class="math inline">\(h\)</span> itself is smaller by <span class="math inline">\(\log\Delta\)</span> (and is negative if <span class="math inline">\(\Delta\)</span> is large). Nats throughout. The shell-geometry figure follows the 1D fold.
 </aside>
 </section>
 <section id="histograms-as-riemann-sums" class="slide level2">
@@ -602,6 +616,29 @@ Side by side. Point at both modes: both sit at zero. The student’s ``why isn�
 One dimension. Left: a Gaussian velocity component peaks at zero. Right: the same sample folded to <span class="math inline">\(|v|\)</span> is half-normal — the mode is still at zero.
 </aside>
 </section>
+<section id="velocity-space-grid-and-speed-rings" class="slide level2">
+<h2>Velocity Space: Grid and Speed Rings</h2>
+<p>Same sample in the <span class="math inline">\((v_x,v_y)\)</span> plane. Equal-<span class="math inline">\(\Delta v\)</span> bins are a grid; equal-<span class="math inline">\(\Delta s\)</span> bins are concentric rings.</p>
+<div>
+<ul>
+<li class="fragment">Left: isotropic cloud in two Cartesian components</li>
+<li class="fragment">Equal-<span class="math inline">\(\Delta v\)</span> grid: each square has the same area</li>
+<li class="fragment">Concentric rings: shell circumference grows as <span class="math inline">\(s\)</span> — more cells at larger speed</li>
+</ul>
+</div>
+<aside class="notes">
+Board this before the 3D histograms if a student asks why speed peaks away from zero. Point at a ring: more grid cells sit at larger <span class="math inline">\(s\)</span>, so even an isotropic Gaussian piles probability away from the origin once you bin by speed. Two dimensions is enough for the geometry; three dimensions replaces rings by spherical shells (<span class="math inline">\(s^2\)</span>).
+</aside>
+<div class="figure">
+<div id="velocity-space-shell-2d-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/physics/velocity-space-shell-2d.svg" width="70%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+Two Cartesian velocity components. The pale grid is equal-<span class="math inline">\(\Delta v\)</span> area. The red circles are equal-<span class="math inline">\(\Delta s\)</span> shells: circumference grows with <span class="math inline">\(s\)</span>, so a speed histogram weights larger speeds more heavily. Three dimensions replaces rings by spherical shells of area <span class="math inline">\(4\pi s^2\)</span>.
+</aside>
+</section>
 <section id="three-dimensions-component-versus-speed" class="slide level2">
 <h2>Three Dimensions: Component Versus Speed</h2>
 <p>Same 3D sample: one Cartesian component peaks at zero; speed peaks away from zero.</p>
@@ -613,7 +650,7 @@ One dimension. Left: a Gaussian velocity component peaks at zero. Right: the sam
 </ul>
 </div>
 <aside class="notes">
-Side by side with the 1D pair still in mind. Left mode at zero; right mode at <span class="math inline">\(\sigma\sqrt{2}\)</span>. Point at the <span class="math inline">\(s^2\)</span>: that is the spherical shell in velocity space. Absolute value alone did not move the peak; the Jacobian does.
+Side by side with the 1D pair and the 2D grid-and-rings figure still in mind. Left mode at zero; right mode at <span class="math inline">\(\sigma\sqrt{2}\)</span>. Point at the <span class="math inline">\(s^2\)</span>: that is the spherical shell in velocity space — the three-dimensional version of the concentric rings just drawn. Absolute value alone did not move the peak; the Jacobian does.
 </aside>
 <div class="figure">
 <div id="velocity-vs-speed-3d-figure" class="figure-frame">
@@ -793,7 +830,7 @@ Name <span class="math inline">\(m\)</span>. Do not do Lagrange, the die, or Max
 <section id="maxwells-demon-compartments-two-ledgers" class="slide level2">
 <h2>Maxwell’s Demon, Compartments, Two Ledgers</h2>
 <aside class="notes">
-Composition wrapper only. Overview (quote and canvas), then extra partitions, then number versus energy at the gate, then the fork. Canvas handedness: hot left to right, right bulk heats. Detailed-balance already includes the compartments and the fork, so a lecture that already pulls that file gets the new order. Do not include Gaussian–Maxwell, grouping composition, Szilard, Landauer, or Ellis here. Stop before the worksheet.
+Composition wrapper only. Overview (quote and canvas), then the compartment schematic (three, maybe four), then number versus energy at the gate, then the fork. Canvas handedness: hot left to right, right bulk heats. Detailed-balance already includes the ledgers and the fork. Do not include Gaussian–Maxwell, grouping composition, Szilard, Landauer, or Ellis here. Stop before the worksheet.
 </aside>
 </section>
 <section id="maxwells-demon" class="slide level2">
@@ -854,6 +891,30 @@ behaviour is provided by follow-on scripts such as maxwell.js.
 </div>
 <aside class="notes">
 Maxwell’s Demon. The demon decides balls are either cold (blue) or hot (red) according to their velocity. Balls are allowed to pass the green membrane from right to left only if they are cold, and from left to right only if they are hot. The displayed entropy is the Shannon entropy of the velocity histogram (a coarse-grained proxy, not full thermodynamic entropy).
+</aside>
+</section>
+<section id="a-compartment-model-of-the-demon" class="slide level2">
+<h2>A Compartment Model of the Demon</h2>
+<p>Draw the box as compartments, not as one fluent Maxwellian.</p>
+<div>
+<ul>
+<li class="fragment">Left bulk: roughly local equilibrium at a cold <span class="math inline">\(T_L\)</span></li>
+<li class="fragment">Right bulk: roughly local equilibrium at a hot <span class="math inline">\(T_R\)</span></li>
+<li class="fragment">Kinetic layer at the membrane: not in equilibrium</li>
+<li class="fragment">Optional fourth: the gate itself (the velocity rule)</li>
+</ul>
+</div>
+<aside class="notes">
+As taught: three compartments, maybe four. The bulks are far enough from the membrane that collisions restore a Maxwellian; the band at the gate is where the sorting rule acts. Do not resolve the demon here — name the bookkeeping Worksheet 3 will press.
+</aside>
+<div class="figure">
+<div id="maxwell-demon-compartment-model-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/physics/maxwell-demon-compartment-model.svg" width="85%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+Three compartments for Worksheet 3: cold left bulk, hot right bulk, and a non-equilibrium kinetic layer at the membrane. The green gate is an optional fourth compartment — the microscopic velocity rule. Number flux and energy flux are the two ledgers that must both close.
 </aside>
 </section>
 <section id="detailed-balance-across-the-membrane" class="slide level2">

@@ -8,9 +8,11 @@ room: FW26
 transition: None
 abstract: >
   Jaynes' maximum entropy principle, the exponential family as the MaxEnt
-  family, and the first synthesis of the three operational readings of
+  family, the overlapping coarse-graining remainder $H(I\mid X)$ with mutual
+  information, and the first synthesis of the three operational readings of
   entropy. This is the intended answer to “how is entropy understood today?”,
-  to be revised again after von Neumann entropy in week 8.
+  to be revised again after von Neumann entropy in week 8. The Legendre
+  transform waits for week 6.
 author:
 - given: Neil D.
   family: Lawrence
@@ -44,29 +46,34 @@ reading:
     required: false
 ---
 
-\notes{No class test today. Quiz 2 was last week (start of lecture 4). Worksheet 2 was due last week.}
+\notes{No class test today. Quiz 2 was last week (start of lecture 4). Worksheet 2 was due last week. Open with the Quiz 2 debrief; Worksheet 2 feedback is still to be added to the same include.}
 
 \subsection{This Session}
 
 \slidesincremental{
+* Quiz 2 feedback (cohort figures; $\log Z$; heat thread)
 * Laplace: insufficient reason $\to$ rule of succession
 * MaxEnt with Lagrange multipliers
 * Exponential family as the MaxEnt family
-* Legendre: entropy as conjugate of $A(\theta)$
+* Overlapping coarse-graining: $H(I\mid X)$ and mutual information
 * Three perspectives: the intended comparison
 }
 
 \notes{
 **Time plan.** The slot is 10:05--11:55 (110 minutes, not 120).
+Legendre ($H=A-\theta\cdot\eta$, dual charts) is parked for week 6.
 
 | Clock | Block |
 |------:|-------|
-| 10:05--11:00 | Laplace $\to$ Jaynes; Lagrange; die and Gaussian |
+| 10:05--10:20 | Quiz 2 debrief (mean $6.3/10$ vs Quiz 1 $8.2$; $\log Z$; heat thread) |
+| 10:20--11:00 | Laplace $\to$ Jaynes; Lagrange; die and Gaussian |
 | 11:00--11:10 | Break |
 | 11:10--11:30 | MaxEnt proof $\to$ exponential family; $\theta=-\lambda$ |
 | 11:30--11:45 | Examples: Bernoulli, softmax, two-spin |
-| 11:45--11:55 | Legendre: $F=U-TS$ again; $H=A-\theta\cdot\eta$; LO7 synthesis |
+| 11:45--11:55 | Soft partitions: $H(I\mid X)$; define $I(X;I)$; LO7 synthesis |
 }
+
+\include{includes/week5-homework-debrief.md}
 
 \include{_iei/includes/iei-notebook-setup.md}
 
@@ -214,7 +221,7 @@ The Lagrange multipliers from the proof are the *negative* natural parameters:
 \begin{align}
 \theta_k = -\lambda_k.
 \end{align}
-We use the minus sign so that high-energy states are down-weighted when $\theta_1=-\beta<0$ in the canonical ensemble. The constraint values enter through the Legendre dual: $\eta_k = \langle T_k\rangle = \partial A/\partial \theta_k$, and the $\lambda_k$ (equivalently $\theta_k$) are chosen so these expectations match the data. Weeks 6–7 reuse this pair $(\boldsymbol{\theta},\boldsymbol{\eta})$ as dual coordinates on the same manifold.}
+We use the minus sign so that high-energy states are down-weighted when $\theta_1=-\beta<0$ in the canonical ensemble. The constraint values enter through the mean parameters $\eta_k = \langle T_k\rangle = \partial A/\partial \theta_k$, and the $\lambda_k$ (equivalently $\theta_k$) are chosen so these expectations match the data. Name the pair $(\boldsymbol{\theta},\boldsymbol{\eta})$ today; the Legendre transform that makes $H=A-\theta\cdot\eta$ first-class is parked for week 6, where dual charts land on the Fisher metric.}
 
 \notes{Continuous $x$ is the same pattern with sums replaced by integrals; Gaussian MaxEnt (mean and variance fixed) is the flagship continuous example. Softmax and the two-spin Hamiltonian later in this lecture are the same theorem with richer $T(x)$.}
 
@@ -243,11 +250,15 @@ We use the minus sign so that high-energy states are down-weighted when $\theta_
 
 \include{_physics/includes/two-spin-maxent.md}
 
-\include{_information/includes/legendre-transform.md}
+\include{_information/includes/grouping-partition-overlap-mi.md}
 
-\speakernotes{Name the Legendre transform. Check Bernoulli: $A=\log(1+e^\theta)$ recovers binary entropy. One slide on $F$ versus $G$: we stay with Helmholtz. Dual charts week 6; $m$-projection week 7.}
+\speakernotes{Week 4 exclusive case had $H(G\mid X)=0$. Soft mixtures leave $H(I\mid X)>0$. Define $I(X;I)$ from the chain rule; name the KL form. Legendre / dual charts wait for week 6.}
 
-\notes{$H=A-\theta\cdot\eta$ is the same subtraction as Helmholtz $F=U-TS$. The conjugate pair $(\theta,\eta)$ is why week 6 has two flat charts on the exponential family. Gibbs $G=F+PV$ is named only: chemistry at fixed $T,P$; this module's baths are fixed-$T$ on a fixed state space.}
+\notes{Week 4 stopped at exclusive partitions. The soft-partition identity
+\begin{align}
+H(X)=H(w)+\sum_i w_i H(p_i)-H(I\mid X)
+\end{align}
+is the bookkeeping for overlapping coarse-graining; mutual information $I(X;I)=H(w)-H(I\mid X)$ isolates the remainder. The Legendre transform $H=A-\theta\cdot\eta$ (conjugate of the log-partition) is parked --- week 6 needs that pair for dual flatness.}
 
 \subsection{Three Perspectives}
 
@@ -297,7 +308,7 @@ def perspective_table(H_value, p_maxent, p_uniform):
 \slidesincremental{
 * What is the maximum entropy principle?
 * What is the exponential family?
-* What is the Legendre transform?
+* What happens to grouping when components overlap?
 * How is entropy understood today?
 }
 

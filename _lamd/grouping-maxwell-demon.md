@@ -68,16 +68,15 @@ reading:
 }
 
 \notes{
-**Time plan.** The slot is 10:05--11:55 (110 minutes, not 120). Quiz 2 is paper, as Quiz 1 was. Protect grouping, the missing-measure figures, and Maxwell's sentence; stop MacKay after two-versus-three readings if the clock is tight. Do not open Szilard or Landauer.
+**Time plan (as delivered 3 November 2026).** Clocks from the Panopto SRT (recording 00:00 $\approx$ 10:00). The slot is 10:05--11:55 (110 minutes, not 120). Quiz 2 is paper, as Quiz 1 was. As taught: MacKay and the die filled the first half (board-first); the missing measure --- including the velocity-space shell answer to Harry's question --- took almost the whole second half; the demon compartments and two ledgers were an eight-minute close for Worksheet 3; the session finished early. Do not open Szilard or Landauer.
 
 | Clock | Block |
 |------:|-------|
-| 10:05--10:15 | Quiz 2 (paper); collect Worksheet 2 |
-| 10:15--10:40 | Questions, MacKay, die grouping |
-| 10:40--11:00 | Gaussian vs Maxwell; undeclared $m$ |
-| 11:00--11:10 | Break |
-| 11:10--11:50 | Compartments; two ledgers; fork; grouping moral |
-| 11:50--11:55 | Release Worksheet 3 |
+| 10:05--10:22 | Quiz 2 (paper; quiet ran long); collect Worksheet 2 |
+| 10:22--10:53 | Questions, MacKay (board), die grouping on the board |
+| 10:53--11:03 | Break |
+| 11:03--11:47 | Anthropomorphic bridge; histogram; shell geometry; Radon--Nikodym / Jaynes $m$ |
+| 11:47--11:56 | Compartment model; two ledgers; release Worksheet 3 |
 }
 
 \subsection{After This Lecture}
@@ -102,6 +101,8 @@ reading:
 \classtimertitled{10:05}{Quiz 2}
 
 \include{_iei/includes/iei-notebook-setup.md}
+
+\include{includes/week4-as-taught.md}
 
 \include{_information/includes/questions-mackay-die-abstraction.md}
 

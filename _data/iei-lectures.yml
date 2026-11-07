@@ -53,3 +53,35 @@
   status: Delivered
   status_modified: '2026-10-21 07:44:36.297226'
   status_created: '2026-10-21 07:44:36.297226'
+- sessionPath: ./_referia.yml
+  complete: false
+  complete_modified: '2026-11-04 17:50:24.957397'
+  complete_created: '2026-11-04 17:50:24.957397'
+- sessionPath: ./intro-review-motivation.md
+  status: Post-lecture fixed
+  status_modified: '2026-11-04 17:51:02.340536'
+  status_created: '2026-11-04 17:51:02.340536'
+  complete: true
+  complete_modified: '2026-11-04 17:50:42.268934'
+  complete_created: '2026-11-04 17:50:42.268934'
+- sessionPath: ./ensemble-entropy-embodiment.md
+  status: Post-lecture fixed
+  status_modified: '2026-11-04 17:50:56.283185'
+  status_created: '2026-11-04 17:50:56.283185'
+  complete: true
+  complete_modified: '2026-11-04 17:50:44.928863'
+  complete_created: '2026-11-04 17:50:44.928863'
+- sessionPath: ./f2.md
+  status: Post-lecture fixed
+  status_modified: '2026-11-04 17:50:58.614093'
+  status_created: '2026-11-04 17:50:58.614093'
+  complete: true
+  complete_modified: '2026-11-04 17:50:46.143495'
+  complete_created: '2026-11-04 17:50:46.143495'
+- sessionPath: ./grouping-maxwell-demon.md
+  status: Delivered
+  status_modified: '2026-11-04 17:51:11.465244'
+  status_created: '2026-11-04 17:51:11.465244'
+  complete: true
+  complete_modified: '2026-11-04 17:50:51.338589'
+  complete_created: '2026-11-04 17:50:51.338589'

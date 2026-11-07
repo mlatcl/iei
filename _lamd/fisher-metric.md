@@ -27,7 +27,7 @@ in_class_test:
   id: Q3
   duration_minutes: 10
   timing: start
-  covers: [grouping, demon compartments, MaxEnt, exponential family]
+  covers: [grouping, soft partitions / MI, demon compartments, MaxEnt, exponential family]
 worksheet_due: W3
 worksheet_released: W4
 reading:
@@ -51,18 +51,19 @@ reading:
 
 \slidesincremental{
 * Quiz 3 (ten minutes); collect Worksheet 3
+* Legendre: $H=A-\theta\cdot\eta$ (parked from week 5)
 * Fisher's information $\neq$ Shannon's $H$
 * Fisher metric; dual flatness
 * Thermodynamic length: define, do not interpret
 }
 
 \notes{
-**Time plan.** The slot is 10:05--11:55 (110 minutes, not 120). Quiz 3 is Moodle. Protect Fisher versus Shannon, dual flatness, and the length definition.
+**Time plan.** The slot is 10:05--11:55 (110 minutes, not 120). Quiz 3 is Moodle. Protect Fisher versus Shannon, dual flatness, and the length definition. Open with the Legendre transform parked from week 5 --- it is the dual-chart setup for today.
 
 | Clock | Block |
 |------:|-------|
 | 10:05--10:15 | Quiz 3 (Moodle); collect Worksheet 3 |
-| 10:15--10:40 | Recap MaxEnt / $G=\nabla^2 A$; Fisher's notion of information |
+| 10:15--10:40 | Legendre $H=A-\theta\cdot\eta$; recap MaxEnt / $G=\nabla^2 A$; Fisher's notion |
 | 10:40--11:00 | Fréchet–Rao–Cramér; Riemannian geometry; KL |
 | 11:00--11:10 | Break |
 | 11:10--11:30 | Dual flatness; Pythagorean theorem for KL |
@@ -72,7 +73,7 @@ reading:
 
 \subsection{Quiz 3}
 
-\notes{Invigilated Moodle, own device, no notes, no network, no LLMs. Ten questions on Weeks 4--5 as delivered: grouping $H=H(w)+\sum_i w_i H(p_i)$, the missing measure, Maxwell's demon as compartments and two ledgers, MaxEnt and the exponential family. Not Fisher, not Crooks --- those start after the quiz. Worksheet 3 is collected as they sit.}
+\notes{Invigilated Moodle, own device, no notes, no network, no LLMs. Ten questions on Weeks 4--5 as delivered: exclusive grouping $H=H(w)+\sum_i w_i H(p_i)$, soft remainder $H(I\mid X)$ / $I(X;I)$, the missing measure, Maxwell's demon as compartments and two ledgers, MaxEnt and the exponential family. Not Fisher, not Legendre, not Crooks --- those start after the quiz. Worksheet 3 is collected as they sit.}
 
 \slidesincremental{
 * Device required; Moodle open
@@ -86,6 +87,12 @@ reading:
 \include{_iei/includes/iei-notebook-setup.md}
 
 \classtimertitled{10:15}{Quiz 3}
+
+\subsection{Legendre Pair (from Week 5)}
+
+\include{_information/includes/legendre-transform.md}
+
+\speakernotes{Parked from week 5 to free MaxEnt for soft partitions / $I$. Name $H=A-\theta\cdot\eta$ as Helmholtz $F=U-TS$. Dual charts $(\theta,\eta)$ are today's e/m coordinates.}
 
 \subsection{What Did Fisher Mean by Information?}
 
@@ -476,7 +483,7 @@ These geometric properties will be essential when we study constrained informati
 * Pythagorean theorem for KL on dual flats
 }
 
-\speakernotes{LO8. Connect to week 5 Legendre pair. Gaussian Fisher matrix and gradient comparison; geometry worksheet is deferred.}
+\speakernotes{LO8. Connect to the Legendre pair just boarded. Gaussian Fisher matrix and gradient comparison; geometry worksheet is deferred.}
 
 \notes{The Fisher matrix $g_{ij}=\mathbb{E}[\partial_i\log p\,\partial_j\log p]$ defines a Riemannian metric on the statistical manifold. On exponential families, e-flat ($\theta$) and m-flat ($\eta$) charts are dual; Hessians of $A$ and $A^*$ are inverse metrics. The Pythagorean theorem for KL holds on dual flats.}
 

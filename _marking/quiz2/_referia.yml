@@ -1,8 +1,8 @@
 # Quiz 2 marking (paper multi-choice, week 4 lecture, 2026-11-03).
 #
-# Inherits the cohort from ../students. Enter 0/1 per item from the
-# paper scripts. Per-question answers load from answer_key.yml (gitignored
-# under _marking/**) and interleave with each mark slider on the review pane.
+# Inherits the cohort from ../students. Tick Correct if right (hides
+# answer widgets); if wrong, record matching letters / blank / ticks.
+# Answer key: answer_key.yml (gitignored under _marking/**).
 # Script scans: submissions/L172_<crsid>_week4_quiz.pdf
 #
 # Serve from this directory:
@@ -19,8 +19,8 @@ kind: marking
 current: true
 author: Neil D. Lawrence
 description: >
-  Mark Quiz 2 (paper, 10 marks). Matching, fill-blank, selection, and
-  true/false lists from week4-quiz-draft. No partial credit on selection.
+  Mark Quiz 2 (paper, 10 marks). Tick Correct if right; otherwise record
+  their form answers (matching letters, fill-blank, selection ticks).
   Covers Weeks 2–3 as delivered (ensemble, heat thread, Helmholtz, H vs S).
 active: True
 due: 2026-11-03 12:00
@@ -50,8 +50,8 @@ inherit:
     - mapping
     - viewer
 
-# Instructor-only answer key (not checked in — see root .gitignore _marking/**).
-# Per-question fields (q1…q10) so review can interleave answer + mark.
+# Multi-select correct sets live only in answer_key.yml (gitignored).
+# Review shows them via {{ q1 }}…{{ q10 }}; do not put "exactly a+b" in this file.
 constants:
   type: yaml
   directory: .
@@ -76,6 +76,45 @@ mapping:
   q8Score: Q8 Score
   q9Score: Q9 Score
   q10Score: Q10 Score
+  q1Black: Q1 Black
+  q1Carnot: Q1 Carnot
+  q1Rumford: Q1 Rumford
+  q1Joule: Q1 Joule
+  q2Blank: Q2 Blank
+  q3a: Q3a
+  q3b: Q3b
+  q3c: Q3c
+  q3d: Q3d
+  q4a: Q4a
+  q4b: Q4b
+  q4c: Q4c
+  q4d: Q4d
+  q5a: Q5a
+  q5b: Q5b
+  q5c: Q5c
+  q5d: Q5d
+  q6a: Q6a
+  q6b: Q6b
+  q6c: Q6c
+  q6d: Q6d
+  q7a: Q7a
+  q7b: Q7b
+  q7c: Q7c
+  q7d: Q7d
+  q8a: Q8a
+  q8b: Q8b
+  q8c: Q8c
+  q8d: Q8d
+  q9a: Q9a
+  q9b: Q9b
+  q9c: Q9c
+  q9d: Q9d
+  q9e: Q9e
+  q10a: Q10a
+  q10b: Q10b
+  q10c: Q10c
+  q10d: Q10d
+  q10e: Q10e
   totalScore: Total Score
   overallComment: Overall Comment
 
@@ -96,6 +135,45 @@ output:
     - Q8 Score
     - Q9 Score
     - Q10 Score
+    - Q1 Black
+    - Q1 Carnot
+    - Q1 Rumford
+    - Q1 Joule
+    - Q2 Blank
+    - Q3a
+    - Q3b
+    - Q3c
+    - Q3d
+    - Q4a
+    - Q4b
+    - Q4c
+    - Q4d
+    - Q5a
+    - Q5b
+    - Q5c
+    - Q5d
+    - Q6a
+    - Q6b
+    - Q6c
+    - Q6d
+    - Q7a
+    - Q7b
+    - Q7c
+    - Q7d
+    - Q8a
+    - Q8b
+    - Q8c
+    - Q8d
+    - Q9a
+    - Q9b
+    - Q9c
+    - Q9d
+    - Q9e
+    - Q10a
+    - Q10b
+    - Q10c
+    - Q10d
+    - Q10e
     - Total Score
     - Overall Comment
     - Quiz 2 Timestamp
@@ -111,6 +189,45 @@ output:
     q8Score: Q8 Score
     q9Score: Q9 Score
     q10Score: Q10 Score
+    q1Black: Q1 Black
+    q1Carnot: Q1 Carnot
+    q1Rumford: Q1 Rumford
+    q1Joule: Q1 Joule
+    q2Blank: Q2 Blank
+    q3a: Q3a
+    q3b: Q3b
+    q3c: Q3c
+    q3d: Q3d
+    q4a: Q4a
+    q4b: Q4b
+    q4c: Q4c
+    q4d: Q4d
+    q5a: Q5a
+    q5b: Q5b
+    q5c: Q5c
+    q5d: Q5d
+    q6a: Q6a
+    q6b: Q6b
+    q6c: Q6c
+    q6d: Q6d
+    q7a: Q7a
+    q7b: Q7b
+    q7c: Q7c
+    q7d: Q7d
+    q8a: Q8a
+    q8b: Q8b
+    q8c: Q8c
+    q8d: Q8d
+    q9a: Q9a
+    q9b: Q9b
+    q9c: Q9c
+    q9d: Q9d
+    q9e: Q9e
+    q10a: Q10a
+    q10b: Q10b
+    q10c: Q10c
+    q10d: Q10d
+    q10e: Q10e
     totalScore: Total Score
     overallComment: Overall Comment
 
@@ -119,18 +236,8 @@ scored:
 
 combinator:
   - field: Total Score
-    liquid: |
-      {% assign a1 = q1Score | default: 0 %}
-      {% assign a2 = q2Score | default: 0 %}
-      {% assign a3 = q3Score | default: 0 %}
-      {% assign a4 = q4Score | default: 0 %}
-      {% assign a5 = q5Score | default: 0 %}
-      {% assign a6 = q6Score | default: 0 %}
-      {% assign a7 = q7Score | default: 0 %}
-      {% assign a8 = q8Score | default: 0 %}
-      {% assign a9 = q9Score | default: 0 %}
-      {% assign a10 = q10Score | default: 0 %}
-      {{ a1 | plus: a2 | plus: a3 | plus: a4 | plus: a5 | plus: a6 | plus: a7 | plus: a8 | plus: a9 | plus: a10 }}
+    liquid: >-
+      {% assign t = 0 %}{% assign a = q1Score | append: "" | strip | downcase %}{% if a == "1" or a == "1.0" or a == "true" or a == "yes" %}{% assign t = t | plus: 1 %}{% endif %}{% assign a = q2Score | append: "" | strip | downcase %}{% if a == "1" or a == "1.0" or a == "true" or a == "yes" %}{% assign t = t | plus: 1 %}{% endif %}{% assign a = q3Score | append: "" | strip | downcase %}{% if a == "1" or a == "1.0" or a == "true" or a == "yes" %}{% assign t = t | plus: 1 %}{% endif %}{% assign a = q4Score | append: "" | strip | downcase %}{% if a == "1" or a == "1.0" or a == "true" or a == "yes" %}{% assign t = t | plus: 1 %}{% endif %}{% assign a = q5Score | append: "" | strip | downcase %}{% if a == "1" or a == "1.0" or a == "true" or a == "yes" %}{% assign t = t | plus: 1 %}{% endif %}{% assign a = q6Score | append: "" | strip | downcase %}{% if a == "1" or a == "1.0" or a == "true" or a == "yes" %}{% assign t = t | plus: 1 %}{% endif %}{% assign a = q7Score | append: "" | strip | downcase %}{% if a == "1" or a == "1.0" or a == "true" or a == "yes" %}{% assign t = t | plus: 1 %}{% endif %}{% assign a = q8Score | append: "" | strip | downcase %}{% if a == "1" or a == "1.0" or a == "true" or a == "yes" %}{% assign t = t | plus: 1 %}{% endif %}{% assign a = q9Score | append: "" | strip | downcase %}{% if a == "1" or a == "1.0" or a == "true" or a == "yes" %}{% assign t = t | plus: 1 %}{% endif %}{% assign a = q10Score | append: "" | strip | downcase %}{% if a == "1" or a == "1.0" or a == "true" or a == "yes" %}{% assign t = t | plus: 1 %}{% endif %}{{ t }}
 
 localpdf:
   - directory: submissions
@@ -146,8 +253,8 @@ viewer:
 
       Assessment: [`assessments/in-class-quiz2.md`](../../assessments/in-class-quiz2.md).
       Paper: `files/L172_week4_quiz.pdf`. **10 marks**, 1 each; no partial credit
-      on multi-select. Covers Weeks 2–3 as delivered (not Maxwell / Landauer).
-      Answers sit above each mark on the **review** pane (from `answer_key.yml`).
+      on multi-select. Tick **Correct** if right (answer boxes hide); if wrong,
+      leave it unticked and record what they marked on the form.
 
   - liquid: |
       ### {{given}} {{family}} (`{{crsid}}`)
@@ -160,116 +267,428 @@ review:
   - type: Markdown
     liquid: |
       {{ preamble }}
+
+  # —— Q1 Matching ——
   - type: Markdown
     liquid: |
       {{ q1 }}
-  - type: IntSlider
+  - type: Checkbox
     field: Q1 Score
     args:
-      min: 0
-      max: 1
-      step: 1
-      value: 0
-      description: "Q1 Matching"
+      description: "Q1 Correct"
+  - type: Markdown
+    visible_if:
+      field: Q1 Score
+      equals: false
+    liquid: |
+      **Their matching letters** (blank if empty / illegible):
+  - type: Dropdown
+    field: Q1 Black
+    visible_if:
+      field: Q1 Score
+      equals: false
+    args:
+      description: "Joseph Black →"
+      options: ["", "a", "b", "c", "d"]
+  - type: Dropdown
+    field: Q1 Carnot
+    visible_if:
+      field: Q1 Score
+      equals: false
+    args:
+      description: "Sadi Carnot →"
+      options: ["", "a", "b", "c", "d"]
+  - type: Dropdown
+    field: Q1 Joule
+    visible_if:
+      field: Q1 Score
+      equals: false
+    args:
+      description: "James Joule →"
+      options: ["", "a", "b", "c", "d"]
+  - type: Dropdown
+    field: Q1 Rumford
+    visible_if:
+      field: Q1 Score
+      equals: false
+    args:
+      description: "Count Rumford →"
+      options: ["", "a", "b", "c", "d"]
+
+  # —— Q2 Fill blank ——
   - type: Markdown
     liquid: |
       {{ q2 }}
-  - type: IntSlider
+  - type: Checkbox
     field: Q2 Score
     args:
-      min: 0
-      max: 1
-      step: 1
-      value: 0
-      description: "Q2 Blank"
+      description: "Q2 Correct"
+  - type: Text
+    field: Q2 Blank
+    visible_if:
+      field: Q2 Score
+      equals: false
+    args:
+      description: "Their blank (SI unit of k_B T H)"
+
+  # —— Q3 Diff. entropy (multi-select) ——
   - type: Markdown
     liquid: |
       {{ q3 }}
-  - type: IntSlider
+  - type: Checkbox
     field: Q3 Score
     args:
-      min: 0
-      max: 1
-      step: 1
-      value: 0
-      description: "Q3 log Z"
+      description: "Q3 Correct"
+  - type: Markdown
+    visible_if:
+      field: Q3 Score
+      equals: false
+    liquid: |
+      **Tick boxes they marked:**
+  - type: Checkbox
+    field: Q3a
+    visible_if:
+      field: Q3 Score
+      equals: false
+    args:
+      description: "(a) Shannon fair-coin entropy can likewise be negative"
+  - type: Checkbox
+    field: Q3b
+    visible_if:
+      field: Q3 Score
+      equals: false
+    args:
+      description: "(b) Differential entropy changes if the coordinate changes"
+  - type: Checkbox
+    field: Q3c
+    visible_if:
+      field: Q3 Score
+      equals: false
+    args:
+      description: "(c) Differential entropy of a density can itself be negative"
+  - type: Checkbox
+    field: Q3d
+    visible_if:
+      field: Q3 Score
+      equals: false
+    args:
+      description: "(d) Multiplying by k_B removes the negativity"
+
+  # —— Q4 Hurricane ——
   - type: Markdown
     liquid: |
       {{ q4 }}
-  - type: IntSlider
+  - type: Checkbox
     field: Q4 Score
     args:
-      min: 0
-      max: 1
-      step: 1
-      value: 0
-      description: "Q4 H vs S"
+      description: "Q4 Correct"
+  - type: Markdown
+    visible_if:
+      field: Q4 Score
+      equals: false
+    liquid: |
+      **Tick boxes they marked:**
+  - type: Checkbox
+    field: Q4a
+    visible_if:
+      field: Q4 Score
+      equals: false
+    args:
+      description: "(a) Hurricane already a degree of freedom in Navier–Stokes"
+  - type: Checkbox
+    field: Q4b
+    visible_if:
+      field: Q4 Score
+      equals: false
+    args:
+      description: "(b) Named storm is a coarse-graining / macro-description"
+  - type: Checkbox
+    field: Q4c
+    visible_if:
+      field: Q4 Score
+      equals: false
+    args:
+      description: "(c) Storm micro-state = trajectory of one air molecule"
+  - type: Checkbox
+    field: Q4d
+    visible_if:
+      field: Q4 Score
+      equals: false
+    args:
+      description: "(d) Coarser grid discards more info, can cost less compute"
+
+  # —— Q5 log Z ——
   - type: Markdown
     liquid: |
       {{ q5 }}
-  - type: IntSlider
+  - type: Checkbox
     field: Q5 Score
     args:
-      min: 0
-      max: 1
-      step: 1
-      value: 0
-      description: "Q5 Coarse-grain"
+      description: "Q5 Correct"
+  - type: Markdown
+    visible_if:
+      field: Q5 Score
+      equals: false
+    liquid: |
+      **Tick boxes they marked:**
+  - type: Checkbox
+    field: Q5a
+    visible_if:
+      field: Q5 Score
+      equals: false
+    args:
+      description: "(a) log Z is the inner energy U"
+  - type: Checkbox
+    field: Q5b
+    visible_if:
+      field: Q5 Score
+      equals: false
+    args:
+      description: "(b) Up to −k_B T, log Z is available energy / work out"
+  - type: Checkbox
+    field: Q5c
+    visible_if:
+      field: Q5 Score
+      equals: false
+    args:
+      description: "(c) Z from Summe der Zustände (sum of states)"
+  - type: Checkbox
+    field: Q5d
+    visible_if:
+      field: Q5 Score
+      equals: false
+    args:
+      description: "(d) log Z is the information-theoretic entropy H"
+
+  # —— Q6 H vs S ——
   - type: Markdown
     liquid: |
       {{ q6 }}
-  - type: IntSlider
+  - type: Checkbox
     field: Q6 Score
     args:
-      min: 0
-      max: 1
-      step: 1
-      value: 0
-      description: "Q6 Bernoulli"
+      description: "Q6 Correct"
+  - type: Markdown
+    visible_if:
+      field: Q6 Score
+      equals: false
+    liquid: |
+      **Tick boxes they marked:**
+  - type: Checkbox
+    field: Q6a
+    visible_if:
+      field: Q6 Score
+      equals: false
+    args:
+      description: "(a) S = k_B H"
+  - type: Checkbox
+    field: Q6b
+    visible_if:
+      field: Q6 Score
+      equals: false
+    args:
+      description: "(b) S = k_B T H"
+  - type: Checkbox
+    field: Q6c
+    visible_if:
+      field: Q6 Score
+      equals: false
+    args:
+      description: "(c) H and S are the same number, including units"
+  - type: Checkbox
+    field: Q6d
+    visible_if:
+      field: Q6 Score
+      equals: false
+    args:
+      description: "(d) k_B supplies units so S is not dimensionless"
+
+  # —— Q7 Bernoulli ——
   - type: Markdown
     liquid: |
       {{ q7 }}
-  - type: IntSlider
+  - type: Checkbox
     field: Q7 Score
     args:
-      min: 0
-      max: 1
-      step: 1
-      value: 0
-      description: "Q7 Diff. entropy"
+      description: "Q7 Correct"
+  - type: Markdown
+    visible_if:
+      field: Q7 Score
+      equals: false
+    liquid: |
+      **Tick boxes they marked:**
+  - type: Checkbox
+    field: Q7a
+    visible_if:
+      field: Q7 Score
+      equals: false
+    args:
+      description: "(a) Heat leaks through pores as conserved caloric"
+  - type: Checkbox
+    field: Q7b
+    visible_if:
+      field: Q7 Score
+      equals: false
+    args:
+      description: "(b) Pressure is the rate of corpuscular impacts on the wall"
+  - type: Checkbox
+    field: Q7c
+    visible_if:
+      field: Q7 Score
+      equals: false
+    args:
+      description: "(c) Individual trajectories discarded; a swarm is summarised"
+  - type: Checkbox
+    field: Q7d
+    visible_if:
+      field: Q7 Score
+      equals: false
+    args:
+      description: "(d) Laplace's exact curve of every molecule is tracked"
+
+  # —— Q8 Ensemble ——
   - type: Markdown
     liquid: |
       {{ q8 }}
-  - type: IntSlider
+  - type: Checkbox
     field: Q8 Score
     args:
-      min: 0
-      max: 1
-      step: 1
-      value: 0
-      description: "Q8 Intensive"
+      description: "Q8 Correct"
+  - type: Markdown
+    visible_if:
+      field: Q8 Score
+      equals: false
+    liquid: |
+      **Tick boxes they marked:**
+  - type: Checkbox
+    field: Q8a
+    visible_if:
+      field: Q8 Score
+      equals: false
+    args:
+      description: "(a) Ensemble = probability over micro-states for a macro-state"
+  - type: Checkbox
+    field: Q8b
+    visible_if:
+      field: Q8 Score
+      equals: false
+    args:
+      description: "(b) Bernoulli already tracked Laplace's curve for every corpuscle"
+  - type: Checkbox
+    field: Q8c
+    visible_if:
+      field: Q8 Score
+      equals: false
+    args:
+      description: "(c) Entropy of a Gaussian density depends on the mean"
+  - type: Checkbox
+    field: Q8d
+    visible_if:
+      field: Q8 Score
+      equals: false
+    args:
+      description: "(d) Shannon H discrete/drops mechanism; Wiener continuous/does not"
+
+  # —— Q9 Intensive / extensive ——
   - type: Markdown
     liquid: |
       {{ q9 }}
-  - type: IntSlider
+  - type: Checkbox
     field: Q9 Score
     args:
-      min: 0
-      max: 1
-      step: 1
-      value: 0
-      description: "Q9 Heat thread"
+      description: "Q9 Correct"
+  - type: Markdown
+    visible_if:
+      field: Q9 Score
+      equals: false
+    liquid: |
+      **Tick boxes they marked:**
+  - type: Checkbox
+    field: Q9a
+    visible_if:
+      field: Q9 Score
+      equals: false
+    args:
+      description: "(a) Temperature is intensive"
+  - type: Checkbox
+    field: Q9b
+    visible_if:
+      field: Q9 Score
+      equals: false
+    args:
+      description: "(b) Physical entropy S is extensive"
+  - type: Checkbox
+    field: Q9c
+    visible_if:
+      field: Q9 Score
+      equals: false
+    args:
+      description: "(c) Pressure is intensive"
+  - type: Checkbox
+    field: Q9d
+    visible_if:
+      field: Q9 Score
+      equals: false
+    args:
+      description: "(d) Volume is intensive"
+  - type: Checkbox
+    field: Q9e
+    visible_if:
+      field: Q9 Score
+      equals: false
+    args:
+      description: "(e) Doubling N at same T,P leaves S unchanged"
+
+  # —— Q10 Heat thread ——
   - type: Markdown
     liquid: |
       {{ q10 }}
-  - type: IntSlider
+  - type: Checkbox
     field: Q10 Score
     args:
-      min: 0
-      max: 1
-      step: 1
-      value: 0
-      description: "Q10 Ensemble"
+      description: "Q10 Correct"
+  - type: Markdown
+    visible_if:
+      field: Q10 Score
+      equals: false
+    liquid: |
+      **Tick boxes they marked:**
+  - type: Checkbox
+    field: Q10a
+    visible_if:
+      field: Q10 Score
+      equals: false
+    args:
+      description: "(a) Clausius coined entropy to name uncertainty"
+  - type: Checkbox
+    field: Q10b
+    visible_if:
+      field: Q10 Score
+      equals: false
+    args:
+      description: "(b) Clausius kept Joule + Carnot, dropped conserved heat"
+  - type: Checkbox
+    field: Q10c
+    visible_if:
+      field: Q10 Score
+      equals: false
+    args:
+      description: "(c) Work → heat entirely; heat cannot all → work"
+  - type: Checkbox
+    field: Q10d
+    visible_if:
+      field: Q10 Score
+      equals: false
+    args:
+      description: "(d) Joule's paddle-wheel shows caloric is conserved"
+  - type: Checkbox
+    field: Q10e
+    visible_if:
+      field: Q10 Score
+      equals: false
+    args:
+      description: "(e) Reversible engine: Q_h/T_h = Q_c/T_c"
+
   - type: CriterionComment
     prefix: Overall
     liquid: |

@@ -145,6 +145,10 @@ input:
           function: render_liquid
           args:
             template: "Week 0 · marking · class list, worksheets, quizzes"
+        # Keep the hub inside the default date window (today−30d … +180d).
+        # Frontmatter date alone drifts out of the window mid-term.
+        - field: date
+          function: today
         - field: today
           function: today
 
@@ -319,9 +323,10 @@ viewer:
 
       ---
 
-      **L172 — marking** (week 0) opens the marking hub: class list, worksheets,
-      and in-class quizzes. Lecture/practical titles open the GitHub edit page
-      for the `_lamd` source. Expand **Abstract** for the session blurb.
+      **[L172 — marking](/_marking/)** (week 0) opens the marking hub: class
+      list, worksheets, and in-class quizzes. Lecture/practical titles open the
+      GitHub edit page for the `_lamd` source. Expand **Abstract** for the
+      session blurb.
 
       Tick **Done** / set **Status** as you prepare each session. Default date
       window: today−30d through +180d. Clear restores defaults. Filter **Kind**
