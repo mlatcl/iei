@@ -315,16 +315,6 @@ We use the minus sign so that high-energy states are down-weighted when $\theta_
 * Why is $\log Z$ (equivalently $A$) a cumulant generating function?
 }
 
-\subsection{Named, Not Yet Answered}
-
-\notes{The same exponential family with *two prescribed marginals* is a MaxEnt coupling. The algorithm is Sinkhorn. Week 8. Softmax and two-spin as worked $T(x)$ wait if unnamed today. Legendre dual of $A$ is week 6.}
-
-\slidesincremental{
-* Softmax / two-spin as MaxEnt examples (if skipped today)
-* MaxEnt over a coupling, not a list of moments? (week 8)
-* Legendre dual $H=A-\theta\cdot\eta$ (week 6)
-}
-
 \subsection{After This Lecture}
 
 \notes{No class test today. Quiz 3 is 17 November at the start of lecture 6, on Weeks 4--5 as delivered (grouping, soft partitions / MI, KL, MaxEnt, exponential family, $\log Z$ as CGF).}

@@ -148,20 +148,20 @@ I(X;I)=\text{KL}\left( p(x,i)\,\|\,p(x)\,p(i) \right)
 <span class="editsection-bracket" style="">[</span><span class="editsection" style=""><a href="https://github.com/lawrennd/snippets/edit/main/_information/includes/radon-nikodym-density-ratio.md" target="_blank" onclick="ga('send', 'event', 'Edit Page', 'Edit', 'https://github.com/lawrennd/snippets/edit/main/_information/includes/radon-nikodym-density-ratio.md', 13);">edit</a></span><span class="editsection-bracket" style="">]</span>
 </div>
 <p><span class="math display">\[
-\mu(A)=\int_A \frac{{\mathrm{d}}\mu}{{\mathrm{d}}\nu}\,{\mathrm{d}}\nu
+\mu(A)=\int_A \frac{\mathrm{d}\mu}{\mathrm{d}\nu}\,\mathrm{d}\nu
 \]</span></p>
 <p>Absolute continuity is the continuum name for what the shared partition already enforced: every cell that carries mass under one description carries mass under the other. When a measure <span class="math inline">\(\mu\)</span> is absolutely continuous with respect to a measure <span class="math inline">\(\nu\)</span> on the same space, there exists a nonnegative density — the Radon–Nikodym derivative — such that <span class="math display">\[\begin{align}
 \mu(A)
-  = \int_A \frac{{\mathrm{d}}\mu}{{\mathrm{d}}\nu}\,{\mathrm{d}}\nu
+  = \int_A \frac{\mathrm{d}\mu}{\mathrm{d}\nu}\,\mathrm{d}\nu
 \end{align}\]</span> for every measurable <span class="math inline">\(A\)</span>. That is the definition. The object is a function, not a metaphor.</p>
 <p>Specialise to the densities that this lecture has been writing. Let <span class="math inline">\(F\)</span> have density <span class="math inline">\(f\)</span> against Lebesgue, and let <span class="math inline">\(m\)</span> be another density against the same Lebesgue (Jaynes’ reference, still undeclared). Then <span class="math display">\[\begin{align}
-\frac{{\mathrm{d}}F}{{\mathrm{d}}m}
+\frac{\mathrm{d}F}{\mathrm{d}m}
   = \frac{f}{m}.
 \end{align}\]</span> Relative entropy is the expectation of the log of that ratio, <span class="math display">\[\begin{align}
 \text{KL}\left( f\,\|\,m \right)
-  = \int f\log\frac{{\mathrm{d}}F}{{\mathrm{d}}m}\,{\mathrm{d}}x
-  = \int f\log\frac{f}{m}\,{\mathrm{d}}x.
-\end{align}\]</span> The bin-width ratio <span class="math inline">\(\Delta s_i/\Delta u_i\)</span> of the previous snippet is the same statement on a finite partition: it is the discrete Radon–Nikodym derivative of Lebesgue-on-speed with respect to Lebesgue-on-volume. In the continuum that ratio becomes the Jacobian. Naming <span class="math inline">\({\mathrm{d}}F/{\mathrm{d}}m=f/m\)</span> makes the next step — declaring <span class="math inline">\(m\)</span> — a change of <em>what one divides by</em>, not a change of vocabulary.</p>
+  = \int f\log\frac{\mathrm{d}F}{\mathrm{d}m}\,\mathrm{d}x
+  = \int f\log\frac{f}{m}\,\mathrm{d}x.
+\end{align}\]</span> The bin-width ratio <span class="math inline">\(\Delta s_i/\Delta u_i\)</span> of the previous snippet is the same statement on a finite partition: it is the discrete Radon–Nikodym derivative of Lebesgue-on-speed with respect to Lebesgue-on-volume. In the continuum that ratio becomes the Jacobian. Naming <span class="math inline">\(\mathrm{d}F/\mathrm{d}m=f/m\)</span> makes the next step — declaring <span class="math inline">\(m\)</span> — a change of <em>what one divides by</em>, not a change of vocabulary.</p>
 <h2 id="jaynes-promote-the-bins-to-a-measure">Jaynes: Promote the Bins to a Measure</h2>
 <div style="text-align:right">
 <span class="editsection-bracket" style="">[</span><span class="editsection" style=""><a href="https://github.com/lawrennd/snippets/edit/main/_physics/includes/jaynes-limiting-density.md" target="_blank" onclick="ga('send', 'event', 'Edit Page', 'Edit', 'https://github.com/lawrennd/snippets/edit/main/_physics/includes/jaynes-limiting-density.md', 13);">edit</a></span><span class="editsection-bracket" style="">]</span>
@@ -651,14 +651,10 @@ G_{ij}(\boldsymbol{\theta}) = \begin{cases}
 <li><p><strong>Computational Tractability</strong>: Many operations (computing gradients, conjugate priors, message passing) have closed-form solutions.</p></li>
 </ol>
 <p>For the inaccessible game, exponential families provide the setting where information dynamics have their cleanest mathematical form.</p>
-<h2 id="looking-ahead">Looking Ahead</h2>
-<p>We’ll see that the form <span class="math inline">\(\nabla H = -G(\boldsymbol{\theta})\boldsymbol{\theta}\)</span> is crucial for deriving the dynamics of the inaccessible game. The natural parameters will be our coordinates, the Fisher information will be our “information topography,” and entropy gradients will drive the system’s evolution.</p>
 <p>The definition <span class="math inline">\(p(x\mid\boldsymbol{\theta})=\exp(\boldsymbol{\theta}\cdot T(x)-A(\boldsymbol{\theta}))\)</span> is the notation for what we have just derived. Canonical, Gaussian, and Bernoulli belong because each is MaxEnt for its moments. Softmax is the same calculation with a feature map. The two-spin example is the first sufficient statistic that is a product — named for later if needed.</p>
 <h2 id="three-perspectives-brief">Three Perspectives (Brief)</h2>
 <p>Clausius gives the macroscopic second law and names entropy. Shannon treats <span class="math inline">\(H\)</span> as a code bound; Szilard and Landauer tie one bit to <span class="math inline">\(k_BT\ln 2\)</span> of work and erasure; Boltzmann counts macrostates at equilibrium; Jaynes treats <span class="math inline">\(p\)</span> as least-committal inference under constraint. All agree: <span class="math inline">\(H\)</span> forbids, <span class="math inline">\(p\)</span> prescribes.</p>
 <h2 id="define-this-week">Define This Week</h2>
-<h2 id="named-not-yet-answered">Named, Not Yet Answered</h2>
-<p>The same exponential family with <em>two prescribed marginals</em> is a MaxEnt coupling. The algorithm is Sinkhorn. Week 8. Softmax and two-spin as worked <span class="math inline">\(T(x)\)</span> wait if unnamed today. Legendre dual of <span class="math inline">\(A\)</span> is week 6.</p>
 <h2 id="after-this-lecture">After This Lecture</h2>
 <p>No class test today. Quiz 3 is 17 November at the start of lecture 6, on Weeks 4–5 as delivered (grouping, soft partitions / MI, KL, MaxEnt, exponential family, <span class="math inline">\(\log Z\)</span> as CGF).</p>
 <h2 id="further-reading">Further Reading</h2>

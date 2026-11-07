@@ -233,18 +233,6 @@ mlai.write_figure('geodesic-vs-straight.svg', directory='\writeDiagramsDir/ml')}
 * The exponential family, now geometrically
 }
 
-\subsection{Named, Not Yet Answered}
-
-\notes{An alternating $m$-projection onto two constraint sets is how Sinkhorn enforces two prescribed marginals. Name it; do not compute it. Week 8.}
-
-\slidesincremental{
-* Alternating $m$-projection onto two constraint sets? (week 8)
-}
-
-\subsection{This Week's Pair}
-
-\notes{No-go: you cannot beat $\mathcal{L}^2/\tau$. Prescription: descend by the natural gradient; travel by the geodesic.}
-
 \subsection{After This Lecture}
 
 \notes{No class test today. Quiz 4 is 1 December at the start of lecture 8.}
