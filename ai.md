@@ -40,9 +40,9 @@ The student-facing rule is already in lecture 1 and on the [assessment]({{ "/ass
 | In-class quizzes | Forbidden. Paper submission, ten minutes, no notes, no network, no models. These sit at the start of lectures 2, 4, 6 and 8. |
 | Live lectures | No laptops. The room is conversation, notes, and the board. |
 
-You are responsible for every claim you submit, including anything a model fabricated. The reflection is where you say what the model gave you and what it could not.
+You are responsible for every claim you submit, including anything a model fabricated, but the structure of the assignment is designed so that you can pick up those areas where it fabricated and challenge.
 
-The worksheets have no AI-free variant, because the object of the exercise *is* the dialogue. The quizzes are the AI-free demonstration of the same outcomes, on a new example, under invigilation.
+The worksheets have no AI-free variant, because the object of the exercise *is* the dialogue. The quizzes are the AI-free demonstration of the learning outcomes under invigilation.
 
 ## Why this split
 
