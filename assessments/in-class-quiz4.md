@@ -18,27 +18,22 @@ feedback:
   before_next: false
 workload_hours: 0.17
 authentication:
-  mechanism: in-person-moodle
+  mechanism: in-person-paper
   ai_robust: true
-  ai_robust_rationale: "Invigilated in-class test on Moodle. Random draw from a large bank. No external resources."
+  ai_robust_rationale: "Invigilated in-class paper test. No external resources. The yaml path is an LO8–LO13-tagged pool for drafting reuse, not the printed paper."
 delivery: in-class
 duration_minutes: 10
-platform: Moodle
+platform: paper
 ---
 
 # In-Class Quiz 4: Geometry, Multi-Information, Limits on Intelligence
 
 **Administered**: Week 8 lecture (first 10 minutes).  
-**Format**: 10 auto-marked questions on Moodle. No notes, no internet, no LLMs.  
+**Format**: 10-mark paper test (matching, T/F, fill-blank, selection). No notes, no internet, no LLMs.  
 **Covers**: Weeks 6–8 as delivered (LO8–LO13): Fisher metric / thermodynamic length and MaxEnt as projection / natural gradient (lectures 6–7), then multi-information, von Neumann entropy, transport, and limits (lecture 8).
 
-Question pool: `quiz-banks/q4-geometry-multiinfo-limits.yaml` (100 items; ~30 LO8–LO9 + ~70 LO10–LO13). Independent coins / GHZ-style examples — not Worksheet 4's prior setups.
+The `question_bank` path points at the merged geometry / multi-info / limits pool for tooling reuse only; it is not the printed paper. Independent coins / GHZ-style examples — not Worksheet 4's prior setups.
 
 ## Marking
 
-Auto-graded by Moodle. 1 mark per correct item. Total: 10 marks → scaled to 10% of module grade.
-
-```bash
-./vc validate-quiz-bank assessments/quiz-banks/q4-multiinfo-limits.yaml
-./vc draw-quiz assessments/in-class-quiz4.md --seed 42
-```
+1 mark per correct item. Total: 10 marks → scaled to 10% of module grade.

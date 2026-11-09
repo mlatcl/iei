@@ -59,11 +59,11 @@ reading:
 }
 
 \notes{
-**Time plan.** The slot is 10:05--11:55 (110 minutes, not 120). Quiz 3 is Moodle. Protect Fisher versus Shannon, dual flatness, and the length definition. Open with the Legendre transform (Week 5 already taught $A=\log Z$ as CGF and $\eta=\nabla A$).
+**Time plan.** The slot is 10:05--11:55 (110 minutes, not 120). Quiz 3 is paper. Protect Fisher versus Shannon, dual flatness, and the length definition. Open with the Legendre transform (Week 5 already taught $A=\log Z$ as CGF and $\eta=\nabla A$).
 
 | Clock | Block |
 |------:|-------|
-| 10:05--10:15 | Quiz 3 (Moodle); collect Worksheet 3 |
+| 10:05--10:15 | Quiz 3 (paper); collect Worksheet 3 |
 | 10:15--10:40 | Legendre $H=A-\theta\cdot\eta$; Fisher's notion |
 | 10:40--11:00 | Fréchet–Rao–Cramér; Riemannian geometry; KL |
 | 11:00--11:10 | Break |
@@ -74,11 +74,10 @@ reading:
 
 \subsection{Quiz 3}
 
-\notes{Invigilated Moodle, own device, no notes, no network, no LLMs. Ten questions on Weeks 4--5 as delivered: exclusive grouping $H=H(w)+\sum_i w_i H(p_i)$, soft partitions $H(I\mid X)$ / $I(X;I)$ / KL, the missing measure, Maxwell's demon as compartments and two ledgers, MaxEnt, exponential family, and $\log Z$ as CGF. Not Fisher, not Legendre, not Crooks (those start after the quiz). Worksheet 3 is collected as they sit.}
+\notes{Invigilated paper test, no notes, no network, no LLMs. Ten questions on Weeks 4--5 as delivered: exclusive grouping $H=H(w)+\sum_i w_i H(p_i)$, soft partitions $H(I\mid X)$ / $I(X;I)$ / KL, the missing measure, Maxwell's demon as compartments and two ledgers, MaxEnt, exponential family, and $\log Z$ as CGF. Not Fisher, not Legendre, not Crooks (those start after the quiz). Worksheet 3 is collected as they sit.}
 
 \slidesincremental{
-* Device required; Moodle open
-* No notes, no network, no LLMs
+* Paper; no notes, no network, no LLMs
 * Ten minutes
 * Worksheet 3 in as you sit
 }

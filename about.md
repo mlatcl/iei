@@ -58,13 +58,13 @@ Four take-home worksheets (15% each, 60% total) and four short in-class quizzes 
 | Component | Due | Form | Outcomes |
 |-----------|-----|------|----------|
 | Worksheet 1 | Start of week 2 | Socratic dialogue + handwritten reflection | LO1, LO2 |
-| Quiz 1 | Start of week 2 lecture | 10 min invigilated | LO1, LO2, LO3 |
+| Quiz 1 | Start of week 2 lecture | 10 min invigilated (paper) | LO1, LO2, LO3 |
 | Worksheet 2 | Start of week 4 | Socratic dialogue + handwritten reflection | LO2, LO3 |
 | Quiz 2 | Start of week 4 lecture | 10 min invigilated (paper) | LO1, LO2, LO3 |
 | Worksheet 3 | Start of week 6 | Socratic dialogue + handwritten reflection | LO4 |
-| Quiz 3 | Start of week 6 lecture | 10 min invigilated | LO4, LO5, LO6, LO7 |
+| Quiz 3 | Start of week 6 lecture | 10 min invigilated (paper) | LO4, LO5, LO6, LO7 |
 | Worksheet 4 | Start of week 8 | Notebook + written reflection | LO7–LO13 |
-| Quiz 4 | Start of week 8 lecture | 10 min invigilated | LO8–LO13 |
+| Quiz 4 | Start of week 8 lecture | 10 min invigilated (paper) | LO8–LO13 |
 
 Details and marking guidance: [assessment]({{ "/assessment/" | relative_url }}).
 
