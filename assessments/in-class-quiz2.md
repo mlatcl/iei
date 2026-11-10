@@ -18,7 +18,7 @@ feedback:
   before_next: true
 workload_hours: 0.17
 authentication:
-  mechanism: in-person-moodle
+  mechanism: in-person-paper
   ai_robust: true
   ai_robust_rationale: "Invigilated in-class paper test. No external resources. This sitting is paper; the yaml path is only a LO1–LO3-tagged pool for reuse, not the printed paper."
 delivery: in-class

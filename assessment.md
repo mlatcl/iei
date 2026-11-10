@@ -28,7 +28,7 @@ This module uses 8 assessment components totalling 100%.
 
 **Type**: in-class-quiz | **Weight**: 10% | **Due week**: 2 | **Delivery**: in-class
 **Estimated workload**: 0.2h
-**AI robustness**: Invigilated in-class test on Moodle. Random draw from a large bank reduces repeatability. No external resources.
+**AI robustness**: Invigilated in-class paper test. No external resources. The yaml path is an LO1–LO3-tagged pool for drafting reuse, not the printed paper.
 
 ### W1: Worksheet 1: Socratic Dialogue on the History of Entropy
 
@@ -52,7 +52,7 @@ This module uses 8 assessment components totalling 100%.
 
 **Type**: in-class-quiz | **Weight**: 10% | **Due week**: 6 | **Delivery**: in-class
 **Estimated workload**: 0.2h
-**AI robustness**: Invigilated in-class test on Moodle. No external resources. Random draw from the MaxEnt / demon bank stratified by LO4–LO7.
+**AI robustness**: Invigilated in-class paper test. No external resources. The yaml path is an LO4–LO7-tagged pool for drafting reuse, not the printed paper.
 
 ### W3: Worksheet 3: Socratic Dialogue on Coarse-Graining Maxwell
 
@@ -64,7 +64,7 @@ This module uses 8 assessment components totalling 100%.
 
 **Type**: in-class-quiz | **Weight**: 10% | **Due week**: 8 | **Delivery**: in-class
 **Estimated workload**: 0.2h
-**AI robustness**: Invigilated in-class test on Moodle. Random draw from a large bank. No external resources.
+**AI robustness**: Invigilated in-class paper test. No external resources. The yaml path is an LO8–LO13-tagged pool for drafting reuse, not the printed paper.
 
 ### W4: Worksheet 4: Multi-Information, Von Neumann Entropy, and Limits on Intelligence
 

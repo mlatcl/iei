@@ -5,8 +5,8 @@ Only this README is tracked under `assessments/quiz-banks/`.
 
 | Bank (local) | Assessment | Outcomes | Notes |
 |--------------|------------|----------|-------|
-| `q1-probability-entropy-foundations.yaml` | `in-class-quiz1.md` | LO1–LO3 | Moodle pool for Quiz 1 |
-| `q1-probability-entropy-foundations.yaml` | `in-class-quiz2.md` | LO1–LO3 | Quiz 2 is a **paper** sitting; bank path is tooling reuse only |
+| `q1-probability-entropy-foundations.yaml` | `in-class-quiz1.md` | LO1–LO3 | Drafting pool for Quiz 1 paper sitting |
+| `q1-probability-entropy-foundations.yaml` | `in-class-quiz2.md` | LO1–LO3 | Drafting pool for Quiz 2 paper sitting |
 | `q2-maxent-landauer.yaml` | `in-class-quiz3.md` | LO4–LO7 | Filename is historical; covers grouping / demon / MaxEnt |
 | `q4-geometry-multiinfo-limits.yaml` | `in-class-quiz4.md` | LO8–LO13 | Merged ~30 LO8–LO9 + ~70 LO10–LO13 |
 
@@ -17,8 +17,8 @@ Keep the YAML files on the teaching machine (or private backup). Do not push the
 
 ## Sitting
 
-- **10 minutes**, **10 questions** per sitting, stratified by outcome (Moodle draws).
-- Delivery: start of lectures **2, 4, 6 and 8** (Quiz 2 paper; others Moodle).
+- **10 minutes**, **10 questions** per sitting, stratified by outcome when drawing from the pool.
+- Delivery: **paper** tests at the start of lectures **2, 4, 6 and 8**. The YAML banks are drafting pools; they are not the printed papers.
 
 ## Rebuild / draw (local pools required)
 
@@ -35,6 +35,6 @@ Keep the YAML files on the teaching machine (or private backup). Do not push the
 ./vc draw-quiz assessments/in-class-quiz1.md --seed 42 --answers-tex
 ```
 
-Drawn sittings land in `assessments/generated/` (gitignored). Import `.gift` into Moodle.
+Drawn sittings land in `assessments/generated/` (gitignored). Use for drafting the paper scripts.
 
 Follow-on items use optional `depends_on: base-id` (see CIP-0008).

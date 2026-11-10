@@ -69,7 +69,7 @@ reading:
 
 | Minutes | Block |
 |--------:|-------|
-| 0–10 | Quiz 4 (Moodle) |
+| 0–10 | Quiz 4 (paper) |
 | 10–35 | Same marginals, different joints; multi-information; $I+H=C$ |
 | 35–55 | Data-processing inequality (proof) |
 | 55–80 | Information bottleneck |
@@ -80,11 +80,10 @@ If the slot is still listed as one hour, run long: the second half (limits) can 
 
 \subsection{Quiz 4}
 
-\notes{Ten MCQs from the multi-information / limits bank. Auto-graded. Invigilated Moodle, own device, no notes, no network, no LLMs.}
+\notes{Ten questions from the multi-information / limits bank. Invigilated paper test, no notes, no network, no LLMs.}
 
 \slidesincremental{
-* Device required; Moodle open
-* No notes, no network, no LLMs
+* Paper; no notes, no network, no LLMs
 * Ten minutes
 }
 

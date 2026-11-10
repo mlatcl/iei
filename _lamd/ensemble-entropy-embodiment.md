@@ -66,7 +66,7 @@ reading:
 
 | Clock | Block |
 |------:|-------|
-| 10:05–10:18 | Quiz 1 (Moodle; briefing then ~10 minutes sitting) |
+| 10:05–10:18 | Quiz 1 (paper; briefing then ~10 minutes sitting) |
 | 10:18–11:09 | Laplace molecule; Bernoulli / Hydrodynamica; ensemble / coarse-graining |
 | 11:09–11:17 | Break |
 | 11:17–11:50 | Entropy bridge; common distributions; continuous / KL named |
@@ -75,11 +75,10 @@ reading:
 
 \subsection{Quiz 1}
 
-\notes{Invigilated Moodle, own device, no notes, no network, no LLMs. Ten questions on last week's probability review and the energy / Boltzmann seeds pressed in Worksheet 1. Hydrodynamica and the entropy bridge follow the quiz.}
+\notes{Invigilated paper test, no notes, no network, no LLMs. Ten questions on last week's probability review and the energy / Boltzmann seeds pressed in Worksheet 1. Hydrodynamica and the entropy bridge follow the quiz.}
 
 \slidesincremental{
-* Device required; Moodle open
-* No notes, no network, no LLMs
+* Paper; no notes, no network, no LLMs
 * Ten minutes
 }
 
