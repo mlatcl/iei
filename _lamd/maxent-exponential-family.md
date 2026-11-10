@@ -10,7 +10,7 @@ abstract: >
   KL divergence via overlapping coarse-graining and Jaynes' reference measure,
   then Jaynes' maximum entropy principle and the exponential family as the
   MaxEnt family. Soft partitions name mutual information; continuous MaxEnt
-  minimises KL to a measure and recovers Maxwell--Boltzmann. $\log Z$ as
+  minimises KL to a measure and recovers Maxwell-Boltzmann. $\log Z$ as
   cumulant generating function ($A=\log Z$, $\eta=\nabla A$).
 author:
 - given: Neil D.
