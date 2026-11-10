@@ -3,7 +3,7 @@ title: |-
   Maximum Entropy and the Exponential Family
 venue: "FW26, William Gates Building"
 abstract: |-
-  <p>KL divergence via overlapping coarse-graining and Jaynes’ reference measure, then Jaynes’ maximum entropy principle and the exponential family as the MaxEnt family. Soft partitions name mutual information; continuous MaxEnt minimises KL to a measure and recovers Maxwell–Boltzmann. <span class="math inline">\(\log Z\)</span> as cumulant generating function (<span class="math inline">\(A=\log Z\)</span>, <span class="math inline">\(\eta=\nabla A\)</span>).</p>
+  <p>Quiz 2 feedback, then KL via overlapping coarse-graining and Jaynes’ reference measure. Soft partitions name mutual information. After the break: Jaynes’ maximum entropy under constraints, Lagrange on the board, the die, and the discrete MaxEnt proof that recovers Boltzmann. The exponential family and <span class="math inline">\(\log Z\)</span> as CGF are named at the close and developed in Week 6. Continuous MaxEnt / Maxwell–Boltzmann density of states stays in the notes as the unread continuous reading.</p>
 author:
 - given: Neil D.
   family: Lawrence
@@ -38,9 +38,9 @@ categories:
 <!--
 
 -->
-<p>No class test today. Quiz 2 was last week (start of lecture 4). Worksheet 2 was due last week. Open with the Quiz 2 debrief; Worksheet 2 feedback is still to be added to the same include. Then KL (overlap, Radon–Nikodym / Jaynes <span class="math inline">\(m\)</span>, mutual information, properties), then MaxEnt.</p>
+<p>No class test today. Quiz 2 was last week (start of lecture 4). Worksheet 2 was due last week. As delivered 10 November 2026: open with a short generative-AI policy aside (MIT report), then Quiz 2 debrief, then KL (overlap, Radon–Nikodym / Jaynes <span class="math inline">\(m\)</span>, mutual information, properties). Break <em>before</em> MaxEnt. After the break: MaxEnt problem, Lagrange on the board, Laplace / sunrise, Jaynes die, discrete MaxEnt proof. Exponential family and <span class="math inline">\(\log Z\)</span> as CGF named at the close — developed in Week 6. Continuous MaxEnt / Maxwell–Boltzmann stays in the notes unread.</p>
 <h2 id="this-session">This Session</h2>
-<p><strong>Time plan.</strong> The slot is 10:05–11:55 (110 minutes, not 120). Legendre (<span class="math inline">\(H=A-\theta\cdot\eta\)</span>, dual charts) is week 6. <span class="math inline">\(\log Z\)</span> as CGF is today.</p>
+<p><strong>Time plan (as delivered 10 November 2026).</strong> Clocks from the Whisper SRT on the Panopto capture (00:00 ≈ 10:00). The slot is 10:05–11:55 (110 minutes, not 120). Break was called <em>before</em> MaxEnt, not mid-MaxEnt. Continuous MaxEnt / <span class="math inline">\(\log Z\)</span> as CGF / full exponential-family tour were not walked as dedicated blocks — named at the close and parked for Week 6. Legendre (<span class="math inline">\(H=A-\theta\cdot\eta\)</span>, dual charts) remains Week 6.</p>
 <table>
 <colgroup>
 <col style="width: 50%" />
@@ -54,42 +54,53 @@ categories:
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;">10:05–10:20</td>
-<td>Quiz 2 debrief (mean <span class="math inline">\(6.3/10\)</span> vs Quiz 1 <span class="math inline">\(8.2\)</span>; <span class="math inline">\(\log Z\)</span> as <span class="math inline">\(F\)</span>; heat thread)</td>
+<td style="text-align: right;">10:02–10:06</td>
+<td>Generative-AI policy aside (MIT report; course page)</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">10:20–10:45</td>
-<td>KL arc: overlap <span class="math inline">\(\to\)</span> MI; RN / Jaynes <span class="math inline">\(m\)</span>; MI as KL; KL properties</td>
+<td style="text-align: right;">10:06–10:09</td>
+<td>This Session / plan</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">10:45–11:00</td>
-<td>MaxEnt setup; Lagrange</td>
+<td style="text-align: right;">10:09–10:22</td>
+<td>Quiz 2 debrief (means <span class="math inline">\(8.2\)</span> / <span class="math inline">\(6.3\)</span>; <span class="math inline">\(\log Z\)</span>; Clausius; pressure; Carnot mill)</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">11:00–11:10</td>
+<td style="text-align: right;">10:22–10:54</td>
+<td>KL arc: overlap <span class="math inline">\(\to\)</span> MI; RN / relative entropy; KL properties</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">10:54–11:05</td>
 <td>Break</td>
 </tr>
+<tr class="even">
+<td style="text-align: right;">11:05–11:40</td>
+<td>MaxEnt: problem; Lagrange board; Laplace sunrise; Jaynes die</td>
+</tr>
 <tr class="odd">
-<td style="text-align: right;">11:10–11:30</td>
-<td>Discrete MaxEnt: Jaynes die</td>
+<td style="text-align: right;">11:40–11:58</td>
+<td>Discrete MaxEnt proof <span class="math inline">\(\to\)</span> Boltzmann / <span class="math inline">\(Z\)</span>; exponential family named</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">11:30–11:45</td>
-<td>Minimise <span class="math inline">\(\text{KL}\left( f\,\|\,m \right)\)</span> under kinetic constraint; Maxwell–Boltzmann</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">11:45–11:55</td>
-<td>Exponential family; <span class="math inline">\(\theta=-\lambda\)</span>; <span class="math inline">\(\log Z\)</span> as CGF; LO7 in brief</td>
+<td style="text-align: right;">11:58–12:00</td>
+<td>Close: quiz and worksheet next week</td>
 </tr>
 </tbody>
 </table>
+<h2 id="how-this-course-uses-generative-ai">How This Course Uses Generative AI</h2>
+<p>Spoken at the open of 10 November 2026, before Quiz 2 feedback. Prompted by an MIT report on AI and education that asks instructors to say plainly how they use generative AI and to give students a policy with the reason attached. The report’s only fault, as spoken, is that it was written in the wrong Cambridge.</p>
+<p>The course page under the course being such an AI lists where generative AI is used to build materials. The emails with comments are auto-populated from marks Neil has already written with the script in front of him — the human stays in the loop; the tool removes the mechanical retyping. That is the same spirit as the LLM worksheets: explore around a contested narrative, then defend what you understand in the room.</p>
 <h2 id="homework-from-weeks-34">Homework from Weeks 3–4</h2>
-<p>No class test today. Feedback on Quiz 2 first; Worksheet 2 follows in a later pass of this include. Marks do not appear on these slides, and names do not either. The numbers below are cohort figures from the marked scripts.</p>
+<p>No class test today. Feedback on Quiz 2 first; Worksheet 2 follows in a later pass of this include. Marks do not appear on these slides, and names do not either. The numbers below are cohort figures from the marked scripts. As delivered 10 November 2026 the debrief ran about thirteen minutes, with Carnot-as-waterwheel colour and a short contested-narrative aside before the KL arc.</p>
 <h2 id="quiz-2">Quiz 2</h2>
 <p>The quiz tested ten items on Weeks 2–3 as delivered. It looked at the thread we followed on the history of heat and then Helmholtz’s decomposition into the free energy (<span class="math inline">\(U\)</span>, <span class="math inline">\(S\)</span>, <span class="math inline">\(\log Z\)</span>). It considered Shannon entropy <span class="math inline">\(H\)</span> versus physical entropy, <span class="math inline">\(S\)</span>, and the notion of an ensemble, and intensive / extensive variables. The first matching question and the units blank were mostly correctly done. The points tended to be lost on multi-select items.</p>
-<p>Named matching (Black, Carnot, Rumford, Joule), the Joule blank on <span class="math inline">\(k_BTH\)</span>, hurricane / grid coarse-graining, and <span class="math inline">\(S=k_BH\)</span> with units were mostly got when attempted. The two ideas worth looking at again are what <span class="math inline">\(\log Z\)</span> <em>is</em>, and what Clausius was <em>doing</em> in the heat thread (not naming uncertainty).</p>
-<p>There were some confusions where people suggested that <span class="math inline">\(\log Z=U\)</span> and <span class="math inline">\(\log Z=H\)</span>. The Zustandssumme etymology was often known on its own; the available-energy reading was the part that dropped. As a reminder inner energy is composed of an entropy term and an available-energy term in <span class="math inline">\(\log Z\)</span>. Equivalently <span class="math inline">\(F=U-TS=-k_BT\log Z\)</span>. We’ll see some related ideas when we look at MaxEnt today.</p>
-<p>Clausius did not coin entropy <em>to name uncertainty</em>. He was dealing with the thermodynamic bookkeeping that arose from combining Joule and Carnot. Entropy was not yet a preamble for Shannon. Uncertainty-as-entropy sits in the statistical tradition (Boltzmann, Gibbs, Wiener) and in Shannon’s <span class="math inline">\(H\)</span>. The quiz was focussed on the engineering story of the heat thread, which sets context for why it wasn’t seen as uncertainty until the rise of statistical mechanics.</p>
+<p>Named matching (Black, Carnot, Rumford, Joule), the Joule blank on <span class="math inline">\(k_BTH\)</span>, hurricane / grid coarse-graining, and <span class="math inline">\(S=k_BH\)</span> with units were mostly got when attempted. The two ideas worth looking at again are what <span class="math inline">\(\log Z\)</span> <em>is</em>, and what Clausius was <em>doing</em> in the heat thread (not naming uncertainty). Pressure as intensive was the third recurring miss: pressure and temperature are weather-map fields (isobars); molecule count and heat energy are extensive — that is why you can draw fields of <span class="math inline">\(P\)</span> and <span class="math inline">\(T\)</span>.</p>
+<p>There were some confusions where people suggested that <span class="math inline">\(\log Z=U\)</span> and <span class="math inline">\(\log Z=H\)</span>. The Zustandssumme etymology was often known on its own; the available-energy reading was the part that dropped. As a reminder inner energy is composed of an entropy term and an available-energy term in <span class="math inline">\(\log Z\)</span>. Equivalently <span class="math inline">\(F=U-TS=-k_BT\log Z\)</span>. Physical entropy versus Shannon: Boltzmann’s constant carries joules per kelvin; <span class="math inline">\(\log Z\)</span> is dimensionless; physicists often omit <span class="math inline">\(k_B\)</span>. We’ll see some related ideas when we look at MaxEnt today. Honest aside as spoken: still looking for a better intuition why the partition function <em>is</em> available energy — learning by teaching.</p>
+<p>Clausius did not coin entropy <em>to name uncertainty</em>. He was dealing with the thermodynamic bookkeeping that arose from combining Joule and Carnot. Entropy was not yet a preamble for Shannon. Uncertainty-as-entropy sits in the statistical tradition (Boltzmann, Gibbs, Wiener) and in Shannon’s <span class="math inline">\(H\)</span>. The quiz was focussed on the engineering story of the heat thread, which sets context for why it wasn’t seen as uncertainty until the rise of statistical mechanics. The Carnot miss <span class="math inline">\(Q_\mathrm{h}/T_\mathrm{h}=Q_\mathrm{c}/T_\mathrm{c}\)</span> is the reversible-engine balance: entropy entering the hot reservoir equals entropy leaving the cold one.</p>
+<p>Spoken colour on 10 November: Carnot as a waterwheel. Entropy enters the bucket at high <span class="math inline">\(T\)</span>, drops through the engine, and leaves at low <span class="math inline">\(T\)</span>; <span class="math inline">\(T\times S\)</span> is an energy in joules. A reversible engine spills no water. The Mill Works pub waterwheel is the inefficiency demo — water that misses the wheel does no work. Kinetic waterwheels (no height drop) were named as a reminder that more is going on than the potential-drop analogy. Course-local: keep the pub name here, not in reusable snippets.</p>
+<p>As spoken: not marking students on the narrative; giving a narrative and letting them explore around it with the LLM worksheets. The subjects students explore on the worksheets are feeding later lectures. Dinner with David Blei, Carl Rasmussen, Rich Turner and Miguel Hernández-Lobato named the same tension — a contested story that scaffolds learning rather than a single correct history. Course-local names stay in this include.</p>
+<h2 id="as-taught">As Taught</h2>
+<p>As taught on 10 November the Quiz 2 debrief ran long with Carnot-as-waterwheel colour, then the KL arc filled the first half: exclusive coarse-graining revisited, soft leftover <span class="math inline">\(H(G\mid X)\)</span>, mutual information as that leftover and as a KL to the product of marginals, Radon–Nikodym / relative entropy, KL properties. The break was called <em>before</em> MaxEnt. After the break: the constrained problem, Lagrange on the board (quadratic subject to <span class="math inline">\(x+y=1\)</span>), Laplace’s sunrise / insufficient reason into Jaynes, the die at mean 4.5, and the discrete MaxEnt stationarity proof that recovers <span class="math inline">\(p_i\propto e^{-\sum\lambda_k f_k}/Z\)</span>. The exponential family and natural parameters <span class="math inline">\(\theta=-\lambda\)</span> were named in the last minute as next week’s object. Continuous MaxEnt / Maxwell–Boltzmann density of states, <span class="math inline">\(\log Z\)</span> as CGF, the full exponential-family tour, and the three perspectives stay in the file as unread continuous reading — developed in Week 6, not cuts.</p>
 <h2 id="information-energy-and-intelligence-course-notebook-setup">Information, energy and intelligence course notebook setup</h2>
 <div style="text-align:right">
 <span class="editsection-bracket" style="">[</span><span class="editsection" style=""><a href="https://github.com/lawrennd/snippets/edit/main/_iei/includes/iei-notebook-setup.md" target="_blank" onclick="ga('send', 'event', 'Edit Page', 'Edit', 'https://github.com/lawrennd/snippets/edit/main/_iei/includes/iei-notebook-setup.md', 13);">edit</a></span><span class="editsection-bracket" style="">]</span>
@@ -117,12 +128,12 @@ sns.set_palette('colorblind')}-->
 </div>
 <p>Week 4 derived <span class="math display">\[\begin{align}
 H(X)=H(w)+\sum_g w_g\, H(p_g)
-\end{align}\]</span> under the exclusive assumption <span class="math inline">\(G=g(x)\)</span>, where <span class="math inline">\(g(x)\)</span> is a funciton that maps each point <span class="math inline">\(x\)</span> to precisely 1 group. This means that we have <span class="math inline">\(H(G\mid X=x)=0\)</span>, i.e. if we know <span class="math inline">\(x\)</span> we know <span class="math inline">\(g\)</span>.</p>
-<p>What if we consider a soft labelling, such that each point <span class="math inline">\(x\)</span> is mapped to a different group <span class="math inline">\(g\)</span> with some probability?. First we keep the probability of the different groups the same as it was before, with a <em>soft</em> label <span class="math inline">\(g\in G\)</span> with joint <span class="math inline">\(p(x,g)\)</span> and prior cell weights <span class="math inline">\(w_g=p(g)\)</span>, with <span class="math inline">\(p_g(x)=p(x\mid g)\)</span>. We can use the chain rule on the joint to show <span class="math display">\[\begin{align}
+\end{align}\]</span> under the exclusive assumption <span class="math inline">\(G=g(x)\)</span>, where <span class="math inline">\(g(x)\)</span> is a function that maps each point <span class="math inline">\(x\)</span> to precisely one group. This means that we have <span class="math inline">\(H(G\mid X=x)=0\)</span>, i.e. if we know <span class="math inline">\(x\)</span> we know <span class="math inline">\(g\)</span>.</p>
+<p>What if we consider a soft labelling, such that each point <span class="math inline">\(x\)</span> is mapped to a different group <span class="math inline">\(g\)</span> with some probability? Keep the cell weights as before, with a <em>soft</em> label <span class="math inline">\(g\in G\)</span>, joint <span class="math inline">\(p(x,g)\)</span>, prior cell weights <span class="math inline">\(w_g=p(g)\)</span>, and <span class="math inline">\(p_g(x)=p(x\mid g)\)</span>. The chain rule on the joint gives <span class="math display">\[\begin{align}
 H(X,G)=H(G)+H(X\mid G)=H(X)+H(G\mid X).
-\end{align}\]</span> Expand <span class="math inline">\(H(X\mid G)=\sum_g w_g H(p_g)\)</span> and the marginal entropy of <span class="math inline">\(G\)</span> just being the marginal entropy of the group’s course graining, <span class="math inline">\(H(G)=H(w)\)</span> to obtain <span class="math display">\[\begin{align}
+\end{align}\]</span> Expand <span class="math inline">\(H(X\mid G)=\sum_g w_g H(p_g)\)</span> and take the marginal entropy of the coarse label as <span class="math inline">\(H(G)=H(w)\)</span> to obtain <span class="math display">\[\begin{align}
 H(X)=H(w)+\sum_g w_g\, H(p_g)-H(G\mid X).
-\end{align}\]</span> The new term <span class="math inline">\(H(G\mid X)\)</span> is zero (as before) when the partition is exclusive. I.e. when given <span class="math inline">\(x\)</span> you already know the group it’s allocated to. In mixture modelling, for example soft mixtures (like mixture of Gaussians, mixture of experts) leave <span class="math inline">\(H(G\mid X)&gt;0\)</span>, meaning that an observation <span class="math inline">\(x\)</span> can be associated with different groups with some probability.</p>
+\end{align}\]</span> The new term <span class="math inline">\(H(G\mid X)\)</span> is zero when the partition is exclusive: given <span class="math inline">\(x\)</span> you already know the group. Soft mixtures (mixture of Gaussians, mixture of experts) leave <span class="math inline">\(H(G\mid X)&gt;0\)</span>: an observation <span class="math inline">\(x\)</span> can still be associated with more than one group. That leftover uncertainty about the label is what mutual information names next.</p>
 <p><span class="math display">\[
 I(X;G)=H(G)-H(G\mid X)=H(X)-H(X\mid G)
 \]</span></p>
@@ -138,7 +149,7 @@ H(X)
 \end{align}\]</span> and equivalently <span class="math display">\[\begin{align}
 H(X)
   = H(w)+\sum_g w_g\, H(p_g)-H(G\mid X),
-\end{align}\]</span> because <span class="math inline">\(I(X;G)=H(w)-H(G\mid X)\)</span>. Exclusive coarse-graining is the special case where <span class="math inline">\(H(I\mid X)=0\)</span>, which means that the mutual information is maximised, <span class="math inline">\(I(X;I)=H(w)\)</span>, and the split we saw for the exclusive coarse-graining case in week-4 split is recovered. Overlapping coarse-graining keeps a positive <span class="math inline">\(H(G\mid X)\)</span>: given <span class="math inline">\(X\)</span>, i.e. even given <span class="math inline">\(X=x\)</span> you are not convident which group, <span class="math inline">\(g\)</span>, it’s allocated to. The relationship is no longer a function, <span class="math inline">\(g(x)\)</span> it’s a stochastic relationship <span class="math inline">\(p(g|x)\)</span>.</p>
+\end{align}\]</span> because <span class="math inline">\(I(X;G)=H(w)-H(G\mid X)\)</span>. Exclusive coarse-graining is the special case where <span class="math inline">\(H(G\mid X)=0\)</span>, so mutual information is maximised, <span class="math inline">\(I(X;G)=H(w)\)</span>, and the week-4 split is recovered. Overlapping coarse-graining keeps a positive <span class="math inline">\(H(G\mid X)\)</span>: even given <span class="math inline">\(X=x\)</span> you are not confident which group <span class="math inline">\(g\)</span> it is allocated to. The relationship is no longer a function <span class="math inline">\(g(x)\)</span>; it is a stochastic map <span class="math inline">\(p(g\mid x)\)</span>. For Shannon that leftover, under the right conditions, is channel capacity — the proof waits.</p>
 <p><span class="math display">\[
 I(X;G)=\text{KL}\left( p(x,g)\,\|\,p(x)\,p(g) \right)
 \]</span></p>
@@ -191,7 +202,7 @@ h_m(f)
 <div style="text-align:right">
 <span class="editsection-bracket" style="">[</span><span class="editsection" style=""><a href="https://github.com/lawrennd/snippets/edit/main/_information/includes/kl-divergence-discrete-continuous.md" target="_blank" onclick="ga('send', 'event', 'Edit Page', 'Edit', 'https://github.com/lawrennd/snippets/edit/main/_information/includes/kl-divergence-discrete-continuous.md', 13);">edit</a></span><span class="editsection-bracket" style="">]</span>
 </div>
-<p>KL divergence <span class="math inline">\(\text{KL}\left( \cdot\,\|\,\cdot \right)\)</span> measures information lost when <span class="math inline">\(q\)</span> is used instead of <span class="math inline">\(p\)</span>. It is non-negative in both discrete and continuous settings (with common support). Unlike Shannon entropy, it is defined relative to a reference. Overlapping coarse-graining already wrote mutual information as <span class="math inline">\(\text{KL}\left( p(x,i)\,\|\,p(x)p(i) \right)\)</span>. MaxEnt and <span class="math inline">\(m\)</span>-projections minimise <span class="math inline">\(\text{KL}\left( \cdot\,\|\,r \right)\)</span> to a reference; that is the continuous reading after the break.</p>
+<p>KL divergence <span class="math inline">\(\text{KL}\left( \cdot\,\|\,\cdot \right)\)</span> measures information lost when <span class="math inline">\(q\)</span> is used instead of <span class="math inline">\(p\)</span>. It is non-negative in both discrete and continuous settings (with common support). Unlike Shannon entropy, it is defined relative to a reference. Overlapping coarse-graining already wrote mutual information as <span class="math inline">\(\text{KL}\left( p(x,g)\,\|\,p(x)p(g) \right)\)</span>. MaxEnt and <span class="math inline">\(m\)</span>-projections minimise <span class="math inline">\(\text{KL}\left( \cdot\,\|\,r \right)\)</span> to a reference; that continuous reading is the unread Week 5 / Week 6 follow-on when the discrete proof fills the hour.</p>
 <p>For <span class="math inline">\(\mathcal{N}(0,\sigma^2)\)</span>, differential entropy is <span class="math inline">\(\frac{1}{2}\log(2\pi e\sigma^2)\)</span> in nats. As <span class="math inline">\(\sigma\to 0\)</span> it diverges negatively. Discrete Shannon entropy stays in <span class="math inline">\([0,\log n]\)</span>. Thermodynamic <span class="math inline">\(S=kH\)</span> in week 1 used the discrete sum form on Boltzmann probabilities. Continuous MaxEnt still works because constraints fix scale; comparing to a reference uses KL, which remains non-negative.</p>
 <div class="figure">
 <div id="entropy-bounded-vs-differential-figure" class="figure-frame">
@@ -208,7 +219,7 @@ h_m(f)
 </div>
 </div>
 <h2 id="maximum-entropy">Maximum Entropy</h2>
-<p>If there were no constraints beyond normalisation, Shannon entropy on a finite alphabet is maximised by the uniform distribution. Thermodynamics adds constraints: mean energy fixed, or mean and variance, or a list of moments. The maximum entropy principle asks for the distribution of largest <span class="math inline">\(H\)</span> among those that meet the constraints. That is today’s discrete calculation (Jaynes’ die). Equivalently, one may minimise <span class="math inline">\(\text{KL}\left( p\,\|\,m \right)\)</span> to a declared reference measure <span class="math inline">\(m\)</span> under the same constraints; that is the continuous ideal-gas reading after the break.</p>
+<p>If there were no constraints beyond normalisation, Shannon entropy on a finite alphabet is maximised by the uniform distribution. Thermodynamics adds constraints: mean energy fixed, or mean and variance, or a list of moments. The maximum entropy principle asks for the distribution of largest <span class="math inline">\(H\)</span> among those that meet the constraints. That is today’s discrete calculation (Jaynes’ die), done after the break on 10 November. Equivalently, one may minimise <span class="math inline">\(\text{KL}\left( p\,\|\,m \right)\)</span> to a declared reference measure <span class="math inline">\(m\)</span> under the same constraints; that continuous ideal-gas reading stays in the notes unread and is developed in Week 6.</p>
 <h2 id="lagrange-multipliers">Lagrange Multipliers</h2>
 <div style="text-align:right">
 <span class="editsection-bracket" style="">[</span><span class="editsection" style=""><a href="https://github.com/lawrennd/snippets/edit/main/_maths/includes/lagrange-multipliers.md" target="_blank" onclick="ga('send', 'event', 'Edit Page', 'Edit', 'https://github.com/lawrennd/snippets/edit/main/_maths/includes/lagrange-multipliers.md', 13);">edit</a></span><span class="editsection-bracket" style="">]</span>
@@ -365,9 +376,9 @@ P(\text{rises tomorrow}\mid n\text{ rises})
 <div style="text-align:right">
 <span class="editsection-bracket" style="">[</span><span class="editsection" style=""><a href="https://github.com/lawrennd/snippets/edit/main/_physics/includes/maximum-entropy-motivation.md" target="_blank" onclick="ga('send', 'event', 'Edit Page', 'Edit', 'https://github.com/lawrennd/snippets/edit/main/_physics/includes/maximum-entropy-motivation.md', 13);">edit</a></span><span class="editsection-bracket" style="">]</span>
 </div>
-<p>Ed Jaynes <span class="citation" data-cites="Jaynes-information57">(Jaynes, 1957)</span>, proposed a foundation for statistical mechanics based on information theory. Jaynes recast that the problem of assigning probabilities in statistical mechanics as a problem of inference with incomplete information.</p>
-<p>A central problem in statistical mechanics is assigning initial probabilities when our knowledge is incomplete. The canonical example is if we know only the average energy of a system, what probability distribution should we use? Jaynes argued that we should use the distribution that maximises entropy subject to the constraints of our knowledge.</p>
-<p>Jaynes illustrated the approach with a simple example. If a die has been tossed many times, with an average result of 4.5 rather than the expected 3.5 for a fair die. What probability assignment <span class="math inline">\(P_n\)</span> (<span class="math inline">\(n=1,2,...,6\)</span>) should we make for the next toss?</p>
+<p>Ed Jaynes <span class="citation" data-cites="Jaynes-information57">(Jaynes, 1957)</span> proposed a foundation for statistical mechanics based on information theory. He recast the problem of assigning probabilities as inference with incomplete information: where do the distributions come from, and why <span class="math inline">\(e^{-\beta E}\)</span>?</p>
+<p>A central problem in statistical mechanics is assigning initial probabilities when our knowledge is incomplete. The canonical example is if we know only the average energy of a system, what probability distribution should we use? Jaynes argued that we should use the distribution that maximises entropy subject to the constraints of our knowledge. The formalism is more general than energy: any expectation constraint; for energy the Lagrange multiplier is inverse temperature <span class="math inline">\(\beta\)</span>. Physicists’ skepticism (``we already knew that law’’) and ML skepticism both sit here — MaxEnt as a crossover that re-derives physics and underwrites the exponential family.</p>
+<p>Jaynes illustrated the approach with a simple example. If a die has been tossed many times, with an average result of 4.5 rather than the expected 3.5 for a fair die, what probability assignment <span class="math inline">\(P_n\)</span> (<span class="math inline">\(n=1,2,\ldots,6\)</span>) should we make for the next toss? The same Lagrange move recovers Boltzmann weights under a mean-energy constraint and the Gaussian under mean and variance.</p>
 <p>We need to satisfy two constraints <span class="math display">\[\begin{align}
 \sum_{n=1}^6 P_n &amp;= 1 \\
 \sum_{n=1}^6 n P_n &amp;= 4.5
@@ -471,7 +482,7 @@ Low-biased: mean 2
 </div>
 <p>For a given mean energy <span class="math inline">\(U\)</span>, among all distributions with that <span class="math inline">\(U\)</span>, pick the one with largest entropy. Week 2 named the Gibbs–Boltzmann occupation; this is the MaxEnt derivation that earns it.</p>
 <!-- Board derivation: Lagrange multipliers → Boltzmann. Coldness $\beta$ is the multiplier on mean energy; $T$ is the bath reading. Two-state occupations for intuition. -->
-<p>Maximum entropy subject to normalisation and fixed mean energy gives <span class="math inline">\(p_i = e^{-\beta E_i}/Z\)</span>. The Lagrange multiplier on the energy constraint <em>is</em> coldness <span class="math inline">\(\beta\)</span> from weeks 1–2.</p>
+<p>Maximum entropy subject to normalisation and fixed mean energy gives <span class="math inline">\(p_i = e^{-\beta E_i}/Z\)</span>. The Lagrange multiplier on the energy constraint <em>is</em> coldness <span class="math inline">\(\beta\)</span> from weeks 1–2. Equilibrium only: saturated entropy under an energy constraint does not give non-equilibrium dynamics. Mean and variance instead of energy recover the Gaussian — the ideal-gas-in-the-room reading of the same Lagrange move.</p>
 <div class="figure">
 <div id="two-state-boltzmann-figure" class="figure-frame">
 <object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/physics/two-state-boltzmann.svg" width="75%" style=" ">
@@ -529,6 +540,7 @@ m\sim\mathrm{Lebesgue}(v_x) &amp; \Rightarrow\text{Gaussian component}\\
 m\sim v^2\,dv &amp; \Rightarrow\text{Maxwell--Boltzmann}
 \end{cases}
 \]</span></p>
+<p>As taught on 10 November the continuous MaxEnt / density-of-states reading was not reached after the discrete proof. Keep the include; develop it in Week 6 alongside <span class="math inline">\(\log Z\)</span> as CGF.</p>
 <h2 id="the-general-maximum-entropy-formalism">The General Maximum-Entropy Formalism</h2>
 <div style="text-align:right">
 <span class="editsection-bracket" style="">[</span><span class="editsection" style=""><a href="https://github.com/lawrennd/snippets/edit/main/_physics/includes/maximum-entropy-formalism.md" target="_blank" onclick="ga('send', 'event', 'Edit Page', 'Edit', 'https://github.com/lawrennd/snippets/edit/main/_physics/includes/maximum-entropy-formalism.md', 13);">edit</a></span><span class="editsection-bracket" style="">]</span>
@@ -554,6 +566,7 @@ Z(\ldots) = \sum_{i=1}^n \exp(-\lambda_1 f_1(x_i) - \ldots - \lambda_m f_m(x_i))
 \langle f_k \rangle = -\frac{\partial}{\partial \lambda_k}\log Z(\lambda_1,\ldots,\lambda_m) \quad k=1,2,\ldots,m.
 \]</span></p>
 <h1 id="the-exponential-family">The Exponential Family</h1>
+<p>As taught on 10 November the exponential family was <em>named</em> in the last minute — natural parameters <span class="math inline">\(\theta=-\lambda\)</span>, fit the <span class="math inline">\(\lambda\)</span>s by maximum likelihood — and not developed. The CGF, full exponential-family tour, and three perspectives below stay in the file as next-week / unread material. Do not reorder the spine.</p>
 <p>The constrained MaxEnt distribution is not merely <em>like</em> an exponential family — on a finite (or countable) state space it <em>is</em> one. Take sufficient statistics <span class="math inline">\(T_k(x)=f_k(x)\)</span>. Then the MaxEnt assignment is <span class="math display">\[\begin{align}
 p(x\mid\boldsymbol{\theta}) = \exp\bigl(\boldsymbol{\theta}\cdot T(x) - A(\boldsymbol{\theta})\bigr)\, h(x),
 \end{align}\]</span> with <span class="math inline">\(h(x)\)</span> the counting measure on the allowed outcomes and <span class="math display">\[\begin{align}
@@ -664,10 +677,10 @@ G_{ij}(\boldsymbol{\theta}) = \begin{cases}
 <p>For the inaccessible game, exponential families provide the setting where information dynamics have their cleanest mathematical form.</p>
 <p>The definition <span class="math inline">\(p(x\mid\boldsymbol{\theta})=\exp(\boldsymbol{\theta}\cdot T(x)-A(\boldsymbol{\theta}))\)</span> is the notation for what we have just derived. Canonical, Gaussian, and Bernoulli belong because each is MaxEnt for its moments. Softmax is the same calculation with a feature map. The two-spin example is the first sufficient statistic that is a product — named for later if needed.</p>
 <h2 id="three-perspectives-brief">Three Perspectives (Brief)</h2>
-<p>Clausius gives the macroscopic second law and names entropy. Shannon treats <span class="math inline">\(H\)</span> as a code bound; Szilard and Landauer tie one bit to <span class="math inline">\(k_BT\ln 2\)</span> of work and erasure; Boltzmann counts macrostates at equilibrium; Jaynes treats <span class="math inline">\(p\)</span> as least-committal inference under constraint. All agree: <span class="math inline">\(H\)</span> forbids, <span class="math inline">\(p\)</span> prescribes.</p>
+<p>Clausius gives the macroscopic second law and names entropy. Shannon treats <span class="math inline">\(H\)</span> as a code bound; Szilard and Landauer tie one bit to <span class="math inline">\(k_BT\ln 2\)</span> of work and erasure; Boltzmann counts macrostates at equilibrium; Jaynes treats <span class="math inline">\(p\)</span> as least-committal inference under constraint. All agree: <span class="math inline">\(H\)</span> forbids, <span class="math inline">\(p\)</span> prescribes. As taught on 10 November this brief was not walked; keep it as unread continuous reading.</p>
 <h2 id="define-this-week">Define This Week</h2>
 <h2 id="after-this-lecture">After This Lecture</h2>
-<p>No class test today. Quiz 3 is 17 November at the start of lecture 6, on Weeks 4–5 as delivered (grouping, soft partitions / MI, KL, MaxEnt, exponential family, <span class="math inline">\(\log Z\)</span> as CGF).</p>
+<p>No class test today. As closed on 10 November: quiz and worksheet next week. Quiz 3 is 17 November at the start of lecture 6, on Weeks 4–5 as delivered (grouping, soft partitions / MI, KL, MaxEnt, exponential family named). Continuous MaxEnt, <span class="math inline">\(\log Z\)</span> as CGF, and the exponential-family tour start after the quiz in Week 6.</p>
 <h2 id="further-reading">Further Reading</h2>
 <ul>
 <li><p>limiting density of discrete points of <span class="citation" data-cites="Jaynes-information63">Jaynes (1963)</span></p></li>
