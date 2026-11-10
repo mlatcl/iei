@@ -169,15 +169,13 @@ class="math inline">\(\log Z\)</span> as CGF</li>
 </section>
 <section id="quiz-2-is-marked" class="slide level2">
 <h2>Quiz 2 Is Marked</h2>
-<p>Fifteen papers. A few minutes on what stuck, then MaxEnt.</p>
+<p>Fifteen papers. A few minutes on matters arising, then MaxEnt.</p>
 <div>
 <ul>
 <li class="fragment">Quiz 1: mean <span
 class="math inline">\(8.2/10\)</span></li>
 <li class="fragment">Quiz 2: mean <span
 class="math inline">\(6.3/10\)</span></li>
-<li class="fragment">Same length; Weeks 2–3 material, and exact-set
-multi-select</li>
 </ul>
 </div>
 <aside class="notes">
@@ -191,16 +189,16 @@ written. Keep names off the slides.
 <section id="quiz-2-where-marks-were-lost" class="slide level2">
 <h2>Quiz 2: Where Marks Were Lost</h2>
 <p>Mean <span class="math inline">\(6.3/10\)</span>, down from Quiz 1’s
-<span class="math inline">\(8.2\)</span>. Two ideas carried most of the
-loss.</p>
+<span class="math inline">\(8.2\)</span>. Two ideas were responsible for
+most of the reduction.</p>
 <div>
 <ul>
 <li class="fragment">What <span class="math inline">\(\log Z\)</span>
 <em>is</em> (about three in five)</li>
-<li class="fragment">What Clausius kept and dropped in the heat thread
+<li class="fragment">What Clausius kept and dropped in the story of heat
 (about two in three)</li>
-<li class="fragment">Pressure as intensive was the usual miss on
-intensive / extensive</li>
+<li class="fragment">What values are intensive: e.g. pressure as an
+intensive variable was a common miss.</li>
 </ul>
 </div>
 </section>
@@ -287,44 +285,45 @@ leftover is mutual information next.
 </section>
 <section id="mutual-information" class="slide level2">
 <h2>Mutual Information</h2>
-<p>Name the leftover: mutual information.</p>
+<p>We assess this with mutual information.</p>
 <p><small> <span class="math display">\[
-I(X;I)=H(I)-H(I\mid X)=H(X)-H(X\mid I)
+I(X;G)=H(G)-H(G\mid X)=H(X)-H(X\mid G)
 \]</span> </small></p>
 <div>
 <ul>
-<li class="fragment">Exclusive: <span class="math inline">\(H(I\mid
+<li class="fragment">Exclusive: <span class="math inline">\(H(G\mid
 X)=0\)</span> <span class="math inline">\(\Rightarrow\)</span> <span
-class="math inline">\(I(X;I)=H(I)=H(w)\)</span></li>
+class="math inline">\(I(X;G)=H(G)=H(w)\)</span></li>
 <li class="fragment">Overlap: <span
-class="math inline">\(0&lt;I(X;I)&lt;H(w)\)</span> (the coarse label is
+class="math inline">\(0&lt;I(X;G)&lt;H(w)\)</span> (the coarse label is
 no longer free given <span class="math inline">\(X\)</span>)</li>
 <li class="fragment">Same algebra: <span
-class="math inline">\(H(X)=H(X\mid I)+I(X;I)\)</span></li>
+class="math inline">\(H(X)=H(X\mid G)+I(X;G)\)</span></li>
 </ul>
 </div>
 <aside class="notes">
 From the two chain-rule expansions, <span
-class="math inline">\(I(X;I)=H(I)-H(I\mid X)\)</span>. Exclusive case
+class="math inline">\(I(X;G)=H(G)-H(G\mid X)\)</span>. Exclusive case
 recovers week 4: <span class="math inline">\(I(X;G)=H(G)\)</span>. Soft
-case keeps a positive <span class="math inline">\(H(I\mid X)\)</span>.
+case keeps a positive <span class="math inline">\(H(G\mid X)\)</span>.
 Next: the same <span class="math inline">\(I\)</span> is a KL.
 </aside>
 </section>
-<section id="mutual-information-is-a-kl" class="slide level2">
-<h2>Mutual Information Is a KL</h2>
-<p>The same <span class="math inline">\(I\)</span> is KL between the
-joint and the product of marginals.</p>
+<section id="mutual-information-is-a-kl-divergence"
+class="slide level2">
+<h2>Mutual information is a KL divergence</h2>
+<p>This <span class="math inline">\(I\)</span> is KL between the joint
+and the product of marginals.</p>
 <p><small> <span class="math display">\[
-I(X;I)=\text{KL}\left( p(x,i)\,\|\,p(x)\,p(i) \right)
+I(X;G)=\text{KL}\left( p(x,g)\,\|\,p(x)\,p(g) \right)
 \]</span> </small></p>
 <div>
 <ul>
-<li class="fragment">Write <span class="math inline">\(I=\sum_{x,i}
-p(x,i)\log\dfrac{p(x,i)}{p(x)p(i)}\)</span></li>
+<li class="fragment">Write <span class="math inline">\(I=\sum_{x,g}
+p(x,g)\log\dfrac{p(x,g)}{p(x)p(g)}\)</span></li>
 <li class="fragment">Independence: <span
 class="math inline">\(I=0\)</span>; exclusive labelling: <span
-class="math inline">\(I=H(I)\)</span></li>
+class="math inline">\(I=H(G)\)</span></li>
 <li class="fragment">Soft partitions are bookkeeping; MaxEnt still
 maximises <span class="math inline">\(H\)</span> under constraints</li>
 </ul>
@@ -358,9 +357,13 @@ class="math inline">\(m\)</span> was the missing measure. Mutual
 information was already written as a KL on the previous slides.
 </aside>
 </section>
-<section id="the-form-of-the-radonnikodym-derivative"
+<section id="radon-nikodym-derivative" class="slide level2">
+<h2>Radon-Nikodym Derivative</h2>
+<p>Recall RN derivative between measures.</p>
+</section>
+<section id="the-form-of-the-radon-nikodym-derivative"
 class="slide level2">
-<h2>The Form of the Radon–Nikodym Derivative</h2>
+<h2>The Form of the Radon-Nikodym Derivative</h2>
 <p>If <span class="math inline">\(\mu\)</span> is absolutely continuous
 with respect to <span class="math inline">\(\nu\)</span>, there is a
 density <span
@@ -370,9 +373,9 @@ class="math inline">\(\mathrm{d}\mu/\mathrm{d}\nu\)</span>.</p>
 \]</span> </small></p>
 <div>
 <ul>
-<li class="fragment">Densities <span class="math inline">\(f\)</span>
-and <span class="math inline">\(m\)</span> against Lebesgue: <span
-class="math inline">\(\mathrm{d}F/\mathrm{d}m=f/m\)</span></li>
+<li class="fragment"><span class="math inline">\(M\)</span> has density
+<span class="math inline">\(m\)</span>: <span
+class="math inline">\(\mathrm{d}F/\mathrm{d}M=f/m\)</span></li>
 <li class="fragment">That ratio is what sits inside <span
 class="math inline">\(\text{KL}\left( f\,\|\,m \right)\)</span></li>
 <li class="fragment">The width ratio <span class="math inline">\(\Delta
@@ -381,9 +384,12 @@ s_i/\Delta u_i\)</span> was the same object on a partition</li>
 </div>
 <aside class="notes">
 One slide. Write <span
-class="math inline">\(\mathrm{d}F/\mathrm{d}m=f/m\)</span> on the board.
-Point back at <span class="math inline">\(\Delta s_i/\Delta u_i\)</span>
-and forward at Jaynes’ <span class="math inline">\(m\)</span>. No <span
+class="math inline">\(\mathrm{d}F/\mathrm{d}M=f/m\)</span> on the board:
+<span class="math inline">\(M\)</span> is the measure with density <span
+class="math inline">\(m\)</span>, not <span
+class="math inline">\(m\)</span> itself. Point back at <span
+class="math inline">\(\Delta s_i/\Delta u_i\)</span> and forward at
+Jaynes’ <span class="math inline">\(m\)</span>. No <span
 class="math inline">\(\sigma\)</span>-algebras.
 </aside>
 </section>
@@ -400,6 +406,9 @@ h_m(f)=-\int f\log\frac{f}{m}\,{\mathrm{d}}x=-\text{KL}\left( f\,\|\,m
 <li class="fragment"><span class="math inline">\(m\)</span> is Jaynes’
 limiting density of discrete points — the binning, written as a
 density</li>
+<li class="fragment"><span class="math inline">\(m\)</span> = density of
+bins: Gaussian <span class="math inline">\(m\)</span> means fine bins in
+the centre</li>
 <li class="fragment">Uniform <span class="math inline">\(m\)</span> in
 <span class="math inline">\(v_x\)</span> recovers ordinary <span
 class="math inline">\(h(v_x)\)</span></li>
@@ -409,9 +418,11 @@ speed</li>
 </ul>
 </div>
 <aside class="notes">
-Name <span class="math inline">\(m\)</span>. Do not do Lagrange, the
-die, or MaxEnt — those snippets already exist. The Gaussian versus
-Maxwell disagreement was an undeclared change of <span
+Name <span class="math inline">\(m\)</span> as the density of the bins.
+A Gaussian <span class="math inline">\(m\)</span> crowds points at the
+centre and thins them in the tails. Do not do Lagrange, the die, or
+MaxEnt — those snippets already exist. The Gaussian versus Maxwell
+disagreement was an undeclared change of <span
 class="math inline">\(m\)</span>. KL against a common <span
 class="math inline">\(m\)</span> is invariant; see
 relative-entropy-reparametrisation.
@@ -710,9 +721,6 @@ class="math inline">\(p_i = 1/n\)</span></li>
 href="https://play.google.com/books/reader?id=1YQPAAAAQAAJ&amp;pg=PA16"><img
 data-src="https://mlatcl.github.io/iei/slides/diagrams/books/1YQPAAAAQAAJ-PA16.png" /></a>
 </div>
-</section>
-<section id="section-2" class="slide level2">
-<h2></h2>
 <div>
 <ul>
 <li class="fragment">Unknown daily rate <span
@@ -740,6 +748,9 @@ alone; (iii) every observation is a success — the sun always rises in
 the data; (iv) he immediately rejects treating the numerical answer as
 the scientific probability of sunrise.
 </aside>
+</section>
+<section id="example-will-the-sun-rise-tomorrow-1" class="slide level2">
+<h2>Example: Will the sun rise tomorrow?</h2>
 <div id="animation-laplace-succession" class="lamd-animation"
 role="region" aria-label="" data-animation-group="laplace-succession">
 <noscript>
@@ -840,25 +851,6 @@ data-animation-frame="laplace-succession">
 </div>
 </div>
 </section>
-<section id="section-3" class="slide level2">
-<h2></h2>
-<div class="figure">
-<div id="laplace-succession-figure-figure" class="figure-frame">
-<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/laplace-succession012.svg" width="70%" style=" ">
-</object>
-</div>
-</div>
-<aside class="notes">
-Each update is belief <span class="math inline">\(\times\)</span>
-likelihood <span class="math inline">\(\rightarrow\)</span> posterior; a
-reset frame then promotes the posterior to the new prior (likelihood
-cleared). Early steps use one more sunrise (<span
-class="math inline">\(\propto\theta\)</span>); the jump to <span
-class="math inline">\(n=20\)</span> uses the likelihood for <span
-class="math inline">\(17\)</span> further rises (<span
-class="math inline">\(\propto\theta^{17}\)</span>).
-</aside>
-</section>
 <section id="entropy-day-by-day" class="slide level2">
 <h2>Entropy Day by Day</h2>
 <p>Track differential entropy of the belief <span
@@ -889,7 +881,7 @@ class="math inline">\(H=0\)</span> by convention of differential entropy
 — not ``zero uncertainty’’ in the Shannon discrete sense.
 </aside>
 </section>
-<section id="section-4" class="slide level2">
+<section id="section-2" class="slide level2">
 <h2></h2>
 <object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/laplace-succession-entropy.svg" width="70%" style=" ">
 </object>
@@ -918,6 +910,9 @@ The punchline: MaxEnt is Laplace’s principle with constraints. Uniform /
 rule of succession are the empty-moment cases; Boltzmann and the
 Gaussian arrive when we add moment constraints.
 </aside>
+</section>
+<section id="edwin-jaynes" class="slide level2">
+<h2>Edwin Jaynes</h2>
 <div class="figure">
 <div id="e-t-jaynes-figure" class="figure-frame">
 <div class="centered" style="">
@@ -959,7 +954,7 @@ constraints</li>
 <section id="die-roll-simulation" class="slide level2">
 <h2>Die Roll Simulation</h2>
 </section>
-<section id="section-5" class="slide level2">
+<section id="section-3" class="slide level2">
 <h2></h2>
 <div class="figure">
 <div class="figure-frame" id="dieroll-simulation-figure">
@@ -1032,6 +1027,10 @@ maximum-entropy distribution (mean 4.5), the simple 50/50 distribution
 (faces 4 and 5 equally, mean 4.5 with minimal entropy), or a low-biased
 distribution (mean 2).
 </aside>
+</section>
+<section id="maxent-recovers-boltzmann-and-gaussian"
+class="slide level2">
+<h2>MaxEnt Recovers Boltzmann and Gaussian</h2>
 <p>Jaynes’ die (mean 4.5, not 3.5) is the running example. The same
 Lagrange move recovers physics and statistics.</p>
 <div>
@@ -1049,6 +1048,9 @@ class="math inline">\(\beta\)</span> from week 1</li>
 LO5. After the die demo, the canonical ensemble and the Gaussian are the
 same MaxEnt pattern. Worksheet 2 implements the die.
 </aside>
+</section>
+<section id="section-4" class="slide level2">
+<h2></h2>
 <div class="figure">
 <div id="jaynes-die-maxent-figure" class="figure-frame">
 <object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/jaynes-die-maxent.svg" width="75%" style=" ">
@@ -1063,23 +1065,28 @@ Jaynes’ die: MaxEnt subject to mean 4.5 versus the uniform distribution.
 class="slide level2">
 <h2>Derivation of the Boltzmann Distribution</h2>
 <p>For fixed mean energy <span class="math inline">\(U\)</span>, maximum
-entropy recovers Boltzmann weights. ::: incremental</p>
+entropy recovers Boltzmann weights.</p>
+<div>
 <ul>
-<li>Constraints: <span class="math inline">\(\sum_i p_i = 1\)</span> and
-<span class="math inline">\(\sum_i p_i E_i = U\)</span></li>
-<li>MaxEnt: <span class="math inline">\(p_i \propto e^{-\beta
-E_i}\)</span> with coldness <span class="math inline">\(\beta = 1/k_B
-T\)</span></li>
-<li>Normalise: <span class="math inline">\(Z(\beta)=\sum_i e^{-\beta
-E_i}\)</span>, so <span class="math inline">\(p_i = e^{-\beta
-E_i}/Z\)</span></li>
+<li class="fragment">Constraints: <span class="math inline">\(\sum_i p_i
+= 1\)</span> and <span class="math inline">\(\sum_i p_i E_i =
+U\)</span></li>
+<li class="fragment">MaxEnt: <span class="math inline">\(p_i \propto
+e^{-\beta E_i}\)</span> with coldness <span class="math inline">\(\beta
+= 1/k_B T\)</span></li>
+<li class="fragment">Normalise: <span
+class="math inline">\(Z(\beta)=\sum_i e^{-\beta E_i}\)</span>, so <span
+class="math inline">\(p_i = e^{-\beta E_i}/Z\)</span></li>
 </ul>
-<p>:::</p>
+</div>
 <!-- Board derivation: Lagrange multipliers → Boltzmann. Coldness $\beta$ is the multiplier on mean energy; $T$ is the bath reading. Two-state occupations for intuition. -->
 <aside class="notes">
 LO5. This is the derivation postponed from week 2. Board the Lagrange
 multipliers; do not treat the formula as new.
 </aside>
+</section>
+<section id="section-5" class="slide level2">
+<h2></h2>
 <div class="figure">
 <div id="two-state-boltzmann-figure" class="figure-frame">
 <object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/physics/two-state-boltzmann.svg" width="75%" style=" ">
