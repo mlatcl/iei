@@ -124,6 +124,8 @@ Legendre ($H=A-\theta\cdot\eta$, dual charts) is week 6. $\log Z$ as CGF is toda
 
 \include{_physics/includes/laplace-insufficient-reason.md}
 
+\newslide{Edwin Jaynes}
+
 \figure{\includejpg{\diagramsDir/physics/e-t-jaynes}{40%}}{Ed Jaynes who developed the maximum entropy principle}{e-t-jaynes}
 
 \include{_physics/includes/maximum-entropy-motivation.md}
@@ -131,7 +133,7 @@ Legendre ($H=A-\theta\cdot\eta$, dual charts) is week 6. $\log Z$ as CGF is toda
 
 \addreading{@Jaynes-information57}{the whole paper}
 
-\newslides{MaxEnt Recovers Boltzmann and Gaussian}
+\newslide{MaxEnt Recovers Boltzmann and Gaussian}
 
 \slides{Jaynes' die (mean 4.5, not 3.5) is the running example. The same Lagrange move recovers physics and statistics.}
 
@@ -174,6 +176,8 @@ ax.set_xlabel('face')
 ax.set_ylabel('probability')
 ax.legend()
 mlai.write_figure('jaynes-die-maxent.svg', directory='\writeDiagramsDir/ml')}
+
+\newslide{}
 
 \figure{\includediagram{\diagramsDir/ml/jaynes-die-maxent}{75%}}{Jaynes' die: MaxEnt subject to mean 4.5 versus the uniform distribution.}{jaynes-die-maxent}
 
