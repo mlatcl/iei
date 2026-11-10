@@ -7,11 +7,13 @@ venue: FW26, William Gates Building
 room: FW26
 transition: None
 abstract: >
-  KL divergence via overlapping coarse-graining and Jaynes' reference measure,
-  then Jaynes' maximum entropy principle and the exponential family as the
-  MaxEnt family. Soft partitions name mutual information; continuous MaxEnt
-  minimises KL to a measure and recovers Maxwell--Boltzmann. $\log Z$ as
-  cumulant generating function ($A=\log Z$, $\eta=\nabla A$).
+  Quiz 2 feedback, then KL via overlapping coarse-graining and Jaynes'
+  reference measure. Soft partitions name mutual information. After the break:
+  Jaynes' maximum entropy under constraints, Lagrange on the board, the die,
+  and the discrete MaxEnt proof that recovers Boltzmann. The exponential
+  family and $\log Z$ as CGF are named at the close and developed in Week 6.
+  Continuous MaxEnt / Maxwell--Boltzmann density of states stays in the notes
+  as the unread continuous reading.
 author:
 - given: Neil D.
   family: Lawrence
@@ -45,35 +47,38 @@ reading:
     required: false
 ---
 
-\notes{No class test today. Quiz 2 was last week (start of lecture 4). Worksheet 2 was due last week. Open with the Quiz 2 debrief; Worksheet 2 feedback is still to be added to the same include. Then KL (overlap, Radon--Nikodym / Jaynes $m$, mutual information, properties), then MaxEnt.}
+\notes{No class test today. Quiz 2 was last week (start of lecture 4). Worksheet 2 was due last week. As delivered 10 November 2026: open with a short generative-AI policy aside (MIT report), then Quiz 2 debrief, then KL (overlap, Radon--Nikodym / Jaynes $m$, mutual information, properties). Break *before* MaxEnt. After the break: MaxEnt problem, Lagrange on the board, Laplace / sunrise, Jaynes die, discrete MaxEnt proof. Exponential family and $\log Z$ as CGF named at the close --- developed in Week 6. Continuous MaxEnt / Maxwell--Boltzmann stays in the notes unread.}
 
 \subsection{This Session}
 
 \slidesincremental{
-* Quiz 2 feedback (cohort figures; $\log Z$ as free energy; heat thread)
-* Overlap: derive $H(I\mid X)$; name mutual information
+* Quiz 2 feedback (cohort figures; $\log Z$; Clausius; intensive pressure)
+* Overlap: $H(G\mid X)$; name mutual information; MI is a KL
 * Jaynes $m$ and Radon--Nikodym: relative entropy is KL
-* Mutual information is a KL; KL discrete or continuous
-* MaxEnt under energy constraint; Jaynes die; minimise KL to $m$
-* Exponential family: $\theta=-\lambda$; $\log Z$ as CGF
+* Break, then MaxEnt: Lagrange; die; discrete proof $\to$ Boltzmann / $Z$
+* Exponential family named at the close ($\theta=-\lambda$); CGF next week
 }
 
 \notes{
-**Time plan.** The slot is 10:05--11:55 (110 minutes, not 120).
-Legendre ($H=A-\theta\cdot\eta$, dual charts) is week 6. $\log Z$ as CGF is today.
+**Time plan (as delivered 10 November 2026).** Clocks from the Whisper SRT on the Panopto capture (00:00 ≈ 10:00). The slot is 10:05--11:55 (110 minutes, not 120). Break was called *before* MaxEnt, not mid-MaxEnt. Continuous MaxEnt / $\log Z$ as CGF / full exponential-family tour were not walked as dedicated blocks --- named at the close and parked for Week 6. Legendre ($H=A-\theta\cdot\eta$, dual charts) remains Week 6.
 
 | Clock | Block |
 |------:|-------|
-| 10:05--10:20 | Quiz 2 debrief (mean $6.3/10$ vs Quiz 1 $8.2$; $\log Z$ as $F$; heat thread) |
-| 10:20--10:45 | KL arc: overlap $\to$ MI; RN / Jaynes $m$; MI as KL; KL properties |
-| 10:45--11:00 | MaxEnt setup; Lagrange |
-| 11:00--11:10 | Break |
-| 11:10--11:30 | Discrete MaxEnt: Jaynes die |
-| 11:30--11:45 | Minimise $\KL{f}{m}$ under kinetic constraint; Maxwell--Boltzmann |
-| 11:45--11:55 | Exponential family; $\theta=-\lambda$; $\log Z$ as CGF; LO7 in brief |
+| 10:02--10:06 | Generative-AI policy aside (MIT report; course page) |
+| 10:06--10:09 | This Session / plan |
+| 10:09--10:22 | Quiz 2 debrief (means $8.2$ / $6.3$; $\log Z$; Clausius; pressure; Carnot mill) |
+| 10:22--10:54 | KL arc: overlap $\to$ MI; RN / relative entropy; KL properties |
+| 10:54--11:05 | Break |
+| 11:05--11:40 | MaxEnt: problem; Lagrange board; Laplace sunrise; Jaynes die |
+| 11:40--11:58 | Discrete MaxEnt proof $\to$ Boltzmann / $Z$; exponential family named |
+| 11:58--12:00 | Close: quiz and worksheet next week |
 }
 
+\include{includes/week5-mit-ai-policy-aside.md}
+
 \include{includes/week5-homework-debrief.md}
+
+\include{includes/week5-as-taught.md}
 
 \include{_iei/includes/iei-notebook-setup.md}
 
@@ -117,7 +122,7 @@ Legendre ($H=A-\theta\cdot\eta$, dual charts) is week 6. $\log Z$ as CGF is toda
 
 \speakernotes{State the problem before Lagrange. Not ``entropy is maximised in nature'' as metaphysics: given what we know (the constraints), which distribution assumes least else?}
 
-\notes{If there were no constraints beyond normalisation, Shannon entropy on a finite alphabet is maximised by the uniform distribution. Thermodynamics adds constraints: mean energy fixed, or mean and variance, or a list of moments. The maximum entropy principle asks for the distribution of largest $H$ among those that meet the constraints. That is today's discrete calculation (Jaynes' die). Equivalently, one may minimise $\KL{p}{m}$ to a declared reference measure $m$ under the same constraints; that is the continuous ideal-gas reading after the break.}
+\notes{If there were no constraints beyond normalisation, Shannon entropy on a finite alphabet is maximised by the uniform distribution. Thermodynamics adds constraints: mean energy fixed, or mean and variance, or a list of moments. The maximum entropy principle asks for the distribution of largest $H$ among those that meet the constraints. That is today's discrete calculation (Jaynes' die), done after the break on 10 November. Equivalently, one may minimise $\KL{p}{m}$ to a declared reference measure $m$ under the same constraints; that continuous ideal-gas reading stays in the notes unread and is developed in Week 6.}
 
 \include{_maths/includes/lagrange-multipliers.md}
 
@@ -193,7 +198,7 @@ mlai.write_figure('jaynes-die-maxent.svg', directory='\writeDiagramsDir/ml')}
 * Stationarity: $\partial\mathscr{L}/\partial p_i=0$ $\Rightarrow$ $p_i\propto e^{-\sum_k \lambda_k f_k(x_i)}$
 }
 
-\speakernotes{The stationarity condition is $\partial L/\partial p_i=0$. Sign: we maximise $H$ so the Lagrangian uses $+\log p_i$ terms; Jaynes' die and Boltzmann are special cases with one constraint $f_1(x)=x$ or $f_1(x)=E_i$.}
+\speakernotes{The stationarity condition is $\partial L/\partial p_i=0$. Sign: Jaynes subtracts the constraints so the exponential comes out with a minus. Class preferred $\mu$ over $\lambda_0$ for the normalisation multiplier. One energy constraint $\Rightarrow\lambda=\beta$. As taught: board derivation; name the exponential family and stop if the clock is gone.}
 
 \notes{Fix a finite outcome set $\{x_1,\ldots,x_n\}$ and unknown probabilities $p_i>0$. The maximum entropy principle asks for the $p_i$ that maximise Shannon entropy
 \begin{align}
@@ -235,13 +240,17 @@ This is the same calculation as Jaynes' die (one linear constraint on the face v
 
 \include{_physics/includes/maxent-reference-measure-density-of-states.md}
 
-\speakernotes{Same principle, continuous reading: minimise $\KL{f}{m}$ at fixed mean kinetic energy. Lebesgue on $v_x$ gives a Gaussian component; Lebesgue on $\mathbb{R}^3$ (shell $v^2$ in speed) gives Maxwell--Boltzmann. The $v^2$ is the density of states.}
+\speakernotes{Same principle, continuous reading: minimise $\KL{f}{m}$ at fixed mean kinetic energy. Lebesgue on $v_x$ gives a Gaussian component; Lebesgue on $\mathbb{R}^3$ (shell $v^2$ in speed) gives Maxwell--Boltzmann. The $v^2$ is the density of states. As taught 10 November: not walked as a dedicated block --- Week 6 / unread continuous reading.}
+
+\notes{As taught on 10 November the continuous MaxEnt / density-of-states reading was not reached after the discrete proof. Keep the include; develop it in Week 6 alongside $\log Z$ as CGF.}
 
 \addreading{@MacKay-information03}{Chapter 22}
 
 \include{_physics/includes/maximum-entropy-formalism.md}
 
 \section{The Exponential Family}
+
+\notes{As taught on 10 November the exponential family was *named* in the last minute --- natural parameters $\theta=-\lambda$, fit the $\lambda$s by maximum likelihood --- and not developed. The CGF, full exponential-family tour, and three perspectives below stay in the file as next-week / unread material. Do not reorder the spine.}
 
 \newslides{Exponential Family: $\theta=-\lambda$}
 
@@ -253,7 +262,7 @@ This is the same calculation as Jaynes' die (one linear constraint on the face v
 * Same object: $A(\boldsymbol{\theta})=\log Z(-\boldsymbol{\theta})$
 }
 
-\speakernotes{LO6 punchline. Physics sign: Boltzmann uses $p_i\propto e^{-\beta E_i}$ so $\theta_1=-\beta$ when $T=E$. Bernoulli two-level: $\theta=-\beta\varepsilon$. Next: $\log Z$ (equivalently $A$) as cumulant generating function.}
+\speakernotes{LO6 punchline. As taught 10 November: name $\theta=-\lambda$ and that fitting the $\lambda$s is maximum likelihood; do not develop the CGF slides. Physics sign: Boltzmann uses $p_i\propto e^{-\beta E_i}$ so $\theta_1=-\beta$ when $T=E$. CGF next week.}
 
 \notes{The constrained MaxEnt distribution is not merely *like* an exponential family --- on a finite (or countable) state space it *is* one. Take sufficient statistics $T_k(x)=f_k(x)$. Then the MaxEnt assignment is
 \begin{align}
@@ -304,9 +313,9 @@ We use the minus sign so that high-energy states are down-weighted when $\theta_
 * All layers: $H$ forbids, $p$ prescribes
 }
 
-\speakernotes{LO7 in brief. Full colour waits if the KL arc ran long. Intended answer to ``how is entropy understood today?'' until week 8.}
+\speakernotes{LO7 in brief. As taught 10 November: not reached. Full colour waits for Week 6 / week 8. Intended answer to ``how is entropy understood today?'' until week 8.}
 
-\notes{Clausius gives the macroscopic second law and names entropy. Shannon treats $H$ as a code bound; Szilard and Landauer tie one bit to $k_BT\ln 2$ of work and erasure; Boltzmann counts macrostates at equilibrium; Jaynes treats $p$ as least-committal inference under constraint. All agree: $H$ forbids, $p$ prescribes.}
+\notes{Clausius gives the macroscopic second law and names entropy. Shannon treats $H$ as a code bound; Szilard and Landauer tie one bit to $k_BT\ln 2$ of work and erasure; Boltzmann counts macrostates at equilibrium; Jaynes treats $p$ as least-committal inference under constraint. All agree: $H$ forbids, $p$ prescribes. As taught on 10 November this brief was not walked; keep it as unread continuous reading.}
 
 \subsection{Define This Week}
 
@@ -315,15 +324,16 @@ We use the minus sign so that high-energy states are down-weighted when $\theta_
 * What is mutual information, and why is it a KL?
 * What is the maximum entropy principle?
 * What is the exponential family, and why $\theta=-\lambda$?
-* Why is $\log Z$ (equivalently $A$) a cumulant generating function?
+* Why is $\log Z$ (equivalently $A$) a cumulant generating function? (named; developed next week)
 }
 
 \subsection{After This Lecture}
 
-\notes{No class test today. Quiz 3 is 17 November at the start of lecture 6, on Weeks 4--5 as delivered (grouping, soft partitions / MI, KL, MaxEnt, exponential family, $\log Z$ as CGF).}
+\notes{No class test today. As closed on 10 November: quiz and worksheet next week. Quiz 3 is 17 November at the start of lecture 6, on Weeks 4--5 as delivered (grouping, soft partitions / MI, KL, MaxEnt, exponential family named). Continuous MaxEnt, $\log Z$ as CGF, and the exponential-family tour start after the quiz in Week 6.}
 
 \slidesincremental{
 * Quiz 3: 17 November, first ten minutes
+* Worksheet due at the start of lecture 6
 }
 
 \reading
