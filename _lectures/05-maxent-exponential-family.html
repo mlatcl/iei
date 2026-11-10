@@ -3,7 +3,7 @@ title: |-
   Maximum Entropy and the Exponential Family
 venue: "FW26, William Gates Building"
 abstract: |-
-  <p>KL divergence via overlapping coarse-graining and Jaynes’ reference measure, then Jaynes’ maximum entropy principle and the exponential family as the MaxEnt family. Soft partitions name mutual information; continuous MaxEnt minimises KL to a measure and recovers Maxwell–Boltzmann. <span class="math inline">\(\log Z\)</span> as cumulant generating function (<span class="math inline">\(A=\log Z\)</span>, <span class="math inline">\(\eta=\nabla A\)</span>) closes the exponential-family hour; the Legendre transform waits for week 6.</p>
+  <p>KL divergence via overlapping coarse-graining and Jaynes’ reference measure, then Jaynes’ maximum entropy principle and the exponential family as the MaxEnt family. Soft partitions name mutual information; continuous MaxEnt minimises KL to a measure and recovers Maxwell–Boltzmann. <span class="math inline">\(\log Z\)</span> as cumulant generating function (<span class="math inline">\(A=\log Z\)</span>, <span class="math inline">\(\eta=\nabla A\)</span>).</p>
 author:
 - given: Neil D.
   family: Lawrence
@@ -116,7 +116,7 @@ sns.set_palette('colorblind')}-->
 <span class="editsection-bracket" style="">[</span><span class="editsection" style=""><a href="https://github.com/lawrennd/snippets/edit/main/_information/includes/grouping-partition-overlap-mi.md" target="_blank" onclick="ga('send', 'event', 'Edit Page', 'Edit', 'https://github.com/lawrennd/snippets/edit/main/_information/includes/grouping-partition-overlap-mi.md', 13);">edit</a></span><span class="editsection-bracket" style="">]</span>
 </div>
 <p>Week 4 derived <span class="math display">\[\begin{align}
-H(X)=H(w)+\sum_i w_i\, H(p_i)
+H(X)=H(w)+\sum_g w_g\, H(p_g)
 \end{align}\]</span> under the exclusive assumption <span class="math inline">\(G=g(x)\)</span>, where <span class="math inline">\(g(x)\)</span> is a funciton that maps each point <span class="math inline">\(x\)</span> to precisely 1 group. This means that we have <span class="math inline">\(H(G\mid X=x)=0\)</span>, i.e. if we know <span class="math inline">\(x\)</span> we know <span class="math inline">\(g\)</span>.</p>
 <p>What if we consider a soft labelling, such that each point <span class="math inline">\(x\)</span> is mapped to a different group <span class="math inline">\(g\)</span> with some probability?. First we keep the probability of the different groups the same as it was before, with a <em>soft</em> label <span class="math inline">\(g\in G\)</span> with joint <span class="math inline">\(p(x,g)\)</span> and prior cell weights <span class="math inline">\(w_g=p(g)\)</span>, with <span class="math inline">\(p_g(x)=p(x\mid g)\)</span>. We can use the chain rule on the joint to show <span class="math display">\[\begin{align}
 H(X,G)=H(G)+H(X\mid G)=H(X)+H(G\mid X).

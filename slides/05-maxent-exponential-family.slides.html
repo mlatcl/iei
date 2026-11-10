@@ -261,24 +261,25 @@ uncertainty about the label.</p>
 <div>
 <ul>
 <li class="fragment">Exclusive: <span
-class="math inline">\(G=g(X)\)</span> forced <span
+class="math inline">\(G=g(x)\)</span> forced <span
 class="math inline">\(H(G\mid X)=0\)</span> and <span
-class="math inline">\(H(X)=H(w)+\sum_i w_i H(p_i)\)</span></li>
-<li class="fragment">Soft label <span class="math inline">\(I\)</span>
-with joint <span class="math inline">\(p(x,i)\)</span> (several <span
-class="math inline">\(i\)</span> can share the same <span
+class="math inline">\(H(X)=H(w)+\sum_g w_g H(p_g)\)</span></li>
+<li class="fragment">Soft label <span
+class="math inline">\(G=g(x)\)</span> with joint <span
+class="math inline">\(p(x,g)\)</span> (several <span
+class="math inline">\(g\)</span> can share the same <span
 class="math inline">\(x\)</span>)</li>
 <li class="fragment">Chain rule always: <span
-class="math inline">\(H(X,I)=H(I)+H(X\mid I)=H(X)+H(I\mid
+class="math inline">\(H(X,G)=H(G)+H(X\mid G)=H(X)+H(G\mid
 X)\)</span></li>
 <li class="fragment">Rearrange: <span
-class="math inline">\(H(X)=H(w)+\sum_i w_i H(p_i)-H(I\mid
+class="math inline">\(H(X)=H(w)+\sum_g w_g H(p_g)-H(G\mid
 X)\)</span></li>
 </ul>
 </div>
 <aside class="notes">
 Week 4: the log-sum collapsed only because non-overlap forced every face
-into one cell. Keep <span class="math inline">\(H(I\mid X)\)</span>:
+into one cell. Keep <span class="math inline">\(H(G\mid X)\)</span>:
 leftover uncertainty about which component, given the face. That
 leftover is mutual information next.
 </aside>
