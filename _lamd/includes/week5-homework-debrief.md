@@ -42,7 +42,9 @@
 * Up to $-k_BT$, that second piece is available energy (not $U$, and not $H$)
 }
 
-\notes{There were some confusions where people suggested that $\log Z=U$ and $\log Z=H$. The Zustandssumme etymology was often known on its own; the available-energy reading was the part that dropped. As a reminder inner energy is composed of an entropy term and an available-energy term in $\log Z$. Equivalently $F=U-TS=-k_BT\log Z$. Physical entropy versus Shannon: Boltzmann's constant carries joules per kelvin; $\log Z$ is dimensionless; physicists often omit $k_B$. We'll see some related ideas when we look at MaxEnt today. Honest aside as spoken: still looking for a better intuition why the partition function *is* available energy --- learning by teaching.}
+\notes{There were some confusions where people suggested that $\log Z=U$ and $\log Z=H$. The Zustandssumme etymology was often known on its own; the available-energy reading was the part that dropped. As a reminder inner energy is composed of an entropy term and an available-energy term in $\log Z$. Equivalently $F=U-TS=-k_BT\log Z$. Physical entropy versus Shannon: Boltzmann's constant carries joules per kelvin; $\log Z$ is dimensionless; physicists often omit $k_B$. We'll see some related ideas when we look at MaxEnt today. 
+
+We haven't provided a good intuition why the partition function *is* available energy.}
 
 \speakernotes{If the room needs the one-liner: $F=-k_BT\log Z$. Prefer the split story over listing wrong options. Do not derive MaxEnt here (that is the rest of the hour).}
 
