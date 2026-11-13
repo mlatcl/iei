@@ -30,7 +30,7 @@
 * What values are intensive: e.g. pressure as an intensive variable was a common miss.
 }
 
-\notes{Named matching (Black, Carnot, Rumford, Joule), the Joule blank on $k_BTH$, hurricane / grid coarse-graining, and $S=k_BH$ with units were mostly got when attempted. The two ideas worth looking at again are what $\log Z$ *is*, and what Clausius was *doing* in the heat thread (not naming uncertainty). Pressure as intensive was the third recurring miss: pressure and temperature are weather-map fields (isobars); molecule count and heat energy are extensive --- that is why you can draw fields of $P$ and $T$.}
+\notes{Named matching (Black, Carnot, Rumford, Joule), the Joule blank on $k_BTH$, hurricane / grid coarse-graining, and $S=k_BH$ with units were mostly got when attempted. The two ideas worth looking at again are what $\log Z$ *is*, and what Clausius was *doing* in the heat thread (not naming uncertainty). Pressure as intensive was the third recurring miss: pressure and temperature are weather-map fields (isobars); molecule count and heat energy are extensive --- that is why you can draw fields of $p$ and $T$.}
 
 \newslide{What $\log Z$ Is}
 
