@@ -7,11 +7,11 @@ Only this README is tracked under `assessments/quiz-banks/`.
 |--------------|------------|----------|-------|
 | `q1-probability-entropy-foundations.yaml` | `in-class-quiz1.md` | LO1–LO3 | Drafting pool for Quiz 1 paper sitting |
 | `q1-probability-entropy-foundations.yaml` | `in-class-quiz2.md` | LO1–LO3 | Drafting pool for Quiz 2 paper sitting |
-| `q2-maxent-landauer.yaml` | `in-class-quiz3.md` | LO4–LO7 | Filename is historical; covers grouping / demon / MaxEnt |
-| `q4-geometry-multiinfo-limits.yaml` | `in-class-quiz4.md` | LO8–LO13 | Merged ~30 LO8–LO9 + ~70 LO10–LO13 |
+| `q2-maxent-landauer.yaml` | `in-class-quiz3.md` | LO4–LO7 | Filename is historical; covers grouping / demon / MaxEnt (not unread CGF) |
+| `q4-multiinfo-limits.yaml` | `in-class-quiz4.md` | LO10–LO13 | DPI / GRT / multi-info / limits after Good-Regulator-first replan |
 
 Archived local copies (not wired to any assessment metadata):
-`q3-fisher-geometry.yaml`, `q4-multiinfo-limits.yaml`.
+`q3-fisher-geometry.yaml`, `q4-geometry-multiinfo-limits.yaml`.
 
 Keep the YAML files on the teaching machine (or private backup). Do not push them to GitHub.
 
@@ -28,7 +28,7 @@ Keep the YAML files on the teaching machine (or private backup). Do not push the
 
 ./vc validate-quiz-bank assessments/quiz-banks/q1-probability-entropy-foundations.yaml
 ./vc validate-quiz-bank assessments/quiz-banks/q2-maxent-landauer.yaml
-./vc validate-quiz-bank assessments/quiz-banks/q4-geometry-multiinfo-limits.yaml
+./vc validate-quiz-bank assessments/quiz-banks/q4-multiinfo-limits.yaml
 ./vc draw-quiz assessments/in-class-quiz1.md --seed 42
 ./vc draw-quiz assessments/in-class-quiz3.md --seed 42
 ./vc draw-quiz assessments/in-class-quiz4.md --seed 42

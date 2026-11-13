@@ -1,36 +1,29 @@
 ---
-title: "Multi-Information and von Neumann Entropy"
-week: 8
+title: "Multi-Information, DPI, and the Information Bottleneck"
+week: 7
 layout: lecture
-date: 2026-12-01
+date: 2026-11-24
 venue: FW26, William Gates Building
 room: FW26
 transition: None
 abstract: >
-  Watanabe's multi-information and the conservation law $I+H=C$; the
-  data-processing inequality and the information bottleneck as the
-  no-go/prescription pair on $I$; then the classical limit $I=C$ and
-  von Neumann entropy. Material may run long; limits on intelligence
-  absorb the overflow.
+  Deepen the Week 6 information-theoretic spine: Watanabe's
+  multi-information and the conservation law I+H=C; prove the
+  data-processing inequality (Cover–Thomas 2.8.1) stated last week;
+  develop the information bottleneck as the prescription paired with
+  DPI and as a gloss after the Good Regulator Theorem (not the theorem
+  itself). Optional vocabulary: Fisher information ≠ Shannon H. Von
+  Neumann / classical limit I=C waits for Week 8 if the clock is tight.
 author:
 - given: Neil D.
   family: Lawrence
   institution: University of Cambridge
   url: http://inverseprobability.com
-outcomes: [LO10, LO11]
-duration_hours: 1
+outcomes: [LO8, LO9, LO10]
+duration_hours: 2
 type: lecture
-worksheet_due: W4
-in_class_test:
-  id: Q4
-  duration_minutes: 10
-  timing: start
+in_class_test: null
 reading:
-  - title: "Quantum Computation and Quantum Information"
-    author: "Nielsen and Chuang"
-    chapter: "Chapter 11"
-    estimated_hours: 2
-    required: false
   - title: "Information Theoretical Analysis of Multivariate Correlation"
     author: "Watanabe"
     chapter: "whole paper"
@@ -46,48 +39,30 @@ reading:
     chapter: "Theorem 2.8.1 (data-processing inequality)"
     estimated_hours: 0.5
     required: false
-  - title: "Information Theory and Statistical Mechanics"
-    author: "Jaynes"
-    chapter: "Brandeis lectures (1963)"
-    estimated_hours: 1
-    required: false
 ---
 
-\notes{Quiz 4 occupies the first ten minutes. Then multi-information, $I+H=C$, the data-processing inequality, the information bottleneck, and von Neumann entropy. Worksheet 4 is due at the start of this lecture. Limits on intelligence follow and can absorb overflow.}
+\notes{No class test today. Quiz 3 was last week (start of lecture 6). Worksheet 3 was due last week; Worksheet 4 is already out (due 1 December, before Quiz 4). Last week earned Shannon capacity, stated DPI, and gave a full Good Regulator overview. Today: multi-information / $I+H=C$, prove DPI, information bottleneck as prescription and as GRT gloss.}
 
 \subsection{This Session}
 
 \slidesincremental{
-* Quiz 4 (ten minutes)
 * Same marginals, different joints; then $I+H=C$
-* DPI and the information bottleneck
-* Why $I=C$ forces von Neumann entropy
+* Prove the data-processing inequality
+* Information bottleneck: prescription paired with DPI; gloss on GRT
+* Optional: Fisher $I(\theta)$ $\neq$ Shannon $H$ (name only)
 }
 
 \notes{
-**Time plan (do not cut DPI / IB / von Neumann to fit the hour)**
+**Time plan.** The slot is 10:05--11:55 (110 minutes, not 120). Protect the DPI proof and the IB block. Do not rebuild Fisher geometry, natural gradient, or geodesics.
 
-| Minutes | Block |
-|--------:|-------|
-| 0–10 | Quiz 4 (paper) |
-| 10–35 | Same marginals, different joints; multi-information; $I+H=C$ |
-| 35–55 | Data-processing inequality (proof) |
-| 55–80 | Information bottleneck |
-| 80–100 | Classical limit $I=C\Rightarrow H=0$; von Neumann entropy |
-
-If the slot is still listed as one hour, run long: the second half (limits) can start late or pick up unfinished interpret questions. Schottky / Good Regulator remain notes-only until the limits lecture: preview the Shannon split $H(E)\ge H(D)-I(D;R)$ versus the existence claim $H(A\mid S)=0$, but leave the concavity proof, caveats, and IB gloss for the second half. DPI and IB are taught here (LO10).
+| Clock | Block |
+|------:|-------|
+| 10:05--10:50 | Same marginals, different joints; multi-information; $I+H=C$ |
+| 10:50--11:00 | Break |
+| 11:00--11:25 | Data-processing inequality (proof) |
+| 11:25--11:45 | Information bottleneck; GRT gloss callback |
+| 11:45--11:55 | Optional Fisher-vs-Shannon name; preview Week 8 |
 }
-
-\subsection{Quiz 4}
-
-\notes{Ten questions from the multi-information / limits bank. Invigilated paper test, no notes, no network, no LLMs.}
-
-\slidesincremental{
-* Paper; no notes, no network, no LLMs
-* Ten minutes
-}
-
-\classtimertitled{10:00}{Quiz 4}
 
 \include{_iei/includes/iei-notebook-setup.md}
 
@@ -114,7 +89,7 @@ If the slot is still listed as one hour, run long: the second half (limits) can 
 * $I$ = stored correlation; $H$ = free uncertainty
 }
 
-\speakernotes{LO10. Point back to velocity demos: same marginals, different joints. Worksheet 4 Part A. Inaccessible-game introduction is light colour only — not a full axiomatic framework.}
+\speakernotes{LO10. Point back to velocity demos: same marginals, different joints. Worksheet 4 Part A. Inaccessible-game introduction is light colour only --- not a full axiomatic framework.}
 
 \notes{Multi-information $I=\sum_i h_i-H\ge 0$ generalises mutual information. With fixed marginal entropies $C=\sum_i h_i$, conservation $I+H=C$ is a no-go: you cannot have both high stored correlation and high free uncertainty without bound. The mechanics analogy is enough: $I$ like potential (stored correlation), $H$ like kinetic (free uncertainty). A brief inaccessible-game introduction may follow as colour; do not expand it into a separate outcome.}
 
@@ -157,9 +132,19 @@ mlai.write_figure('multi-information-rho.svg', directory='\writeDiagramsDir/ml')
 
 <!-- /SNIPPET: _physics/includes/multi-information-worked.md -->
 
+\classtimertitled{10:50}{Break}
+
+\subsection{Data-Processing Inequality}
+
+\classtimertitled{11:00}{DPI proof}
+
+\notes{Week 6 stated the data-processing inequality as a moral after Shannon capacity. Today $I$ is first-class via multi-information, so we prove Cover and Thomas Theorem 2.8.1.}
+
 \include{_information/includes/data-processing-inequality.md}
 
 \include{_information/includes/relative-entropy-decay-grouping.md}
+
+\subsection{Information Bottleneck}
 
 \include{_information/includes/information-bottleneck.md}
 
@@ -190,87 +175,61 @@ mlai.write_figure('information-bottleneck-region.svg', directory='\writeDiagrams
 
 <!-- /SNIPPET: _information/includes/information-bottleneck-curve.md -->
 
+\newslides{IB as Gloss on the Good Regulator}
+
+\slides{Last week earned $H(A\mid S)=0$. IB is a reading after that theorem.}
+
+\slidesincremental{
+* $\min I(S;A)$ subject to $H(Z)\le\epsilon$ --- course gloss
+* Not Conant and Ashby's equation
+* DPI still forbids manufacturing missing $I$ on $D\to X\to T\to A$
+}
+
+\speakernotes{Callback to Week 6 GRT. Do not re-prove. IB spends $I$ on action-relevant distinctions; GRT supplies existence of a deterministic organiser.}
+
+\notes{Week 6 already earned the Good Regulator existence claim and named the IB-shaped gloss. Today IB is a first-class LO10 theorem (relevant compression under an $I$ budget). Keep the fence: the gloss is not the theorem.}
+
+\subsection{Optional: Fisher versus Shannon; MaxEnt as Projection (named)}
+
+\newslides{Vocabulary Only: Two ``Informations''}
+
+\slides{Same English word; different operational readings.}
+
+\slidesincremental{
+* Shannon $H$: uncertainty in an outcome
+* Fisher $I(\theta)$: sensitivity of $\log p$ to a parameter
+* MaxEnt as $m$-projection: geometric reading of Week 5 (named, not computed)
+* No Riemannian deep dive; no natural-gradient paths; no thermodynamic length
+}
+
+\speakernotes{Ten minutes maximum if ahead. LO8 / LO9 stay thin by design after the GRT replan. Do not open dual flatness, Crooks, or geodesic worksheets.}
+
+\notes{Optional vocabulary so students are not blindsided by the word ``information'' in estimation contexts. MaxEnt-as-$m$-projection is the geometric name for the Week 5 constrained problem; natural gradient and Crooks geodesics remain in `maxent-projection.md.deferred` / `fisher-metric.md.deferred`.}
+
 \subsection{The Inaccessible Game}
 
 \include{_information-game/includes/inaccessible-game-introduction.md}
 
-\notes{Optional depth, not lectured today: the two-bin Jaynes-world tour in the information-engines seminar notes. Students who followed natural gradient in week 6 already have the local geometry that game uses.}
+\notes{Optional depth, not required today: the two-bin Jaynes-world tour in the information-engines seminar notes.}
 
 \addreading{Information Engines seminar notes}{https://inverseprobability.com/talks/notes/information-engines.html — Jaynes' world and unified intelligence perspective}
 
-\subsection{Von Neumann Entropy}
-
-\include{_physics/includes/origin-paradox-shannon-von-neumann.md}
-
-\include{_information/includes/the-matrix-exponential-family.md}
-
-\include{_physics/includes/jaynes-density-matrices.md}
-
-<!-- SNIPPET: _physics/includes/von-neumann-bell-state.md -->
-
-\newslides{Von Neumann Entropy}
-
-\slides{Classically, $I=C$ forces $H=0$ — a delta joint. Quantum mechanics breaks that pattern.}
-
-\slidesincremental{
-* $S(\rho) = -\mathrm{Tr}(\rho\log\rho)$
-* Bell state: $S(\rho)=0$ but marginals have $S>0$
-* Matrix exponential family = quantum MaxEnt
-}
-
-\speakernotes{LO11. Run Bell-state cell. Worksheet 4: $S(\rho)=0$ with $S(\rho_A)>0$.}
-
-\notes{Classically, $I=C$ forces $H=0$ — a delta joint. A pure entangled state has von Neumann entropy $S(\rho)=0$ while marginals remain uncertain. The matrix exponential family is the quantum MaxEnt family; Jaynes applied the same Lagrange move to $\rho$ in 1963.}
-
-\setupcode{import numpy as np
-
-def bell_state():
-    v = np.array([1.0, 0.0, 0.0, 1.0]) / np.sqrt(2.0)
-    return np.outer(v, v.conj())
-
-def von_neumann(rho):
-    w = np.linalg.eigvalsh(rho)
-    w = w[w > 1e-12]
-    return -np.sum(w * np.log2(w))
-
-def partial_trace_A(rho):
-    rho = rho.reshape(2, 2, 2, 2)
-    return np.trace(rho, axis1=1, axis2=3)}
-
-\code{rho = bell_state()
-print('S(rho)=', von_neumann(rho))
-print('S(rho_A)=', von_neumann(partial_trace_A(rho)))}
-
-<!-- /SNIPPET: _physics/includes/von-neumann-bell-state.md -->
-
-\subsection{Purely Entropic Readings: First Attempt}
-
-\notes{Schottky and the Good Regulator get a first answer today in notes, not on slides. The second half of this session completes both --- with a short proof for the Good Regulator, not only a slogan.}
-
-\notes{Schottky connects back to week 3's heat-capacity peak and to week 6's Fisher reading: the peak of thermal response is a peak of distinguishability. The purely entropic interpretation waits for the limits block.}
-
-\notes{Do not conflate Ashby's law of requisite variety with the Good Regulator Theorem. Requisite variety asks how much regulatory information is required. In Shannon form, with disturbance $D$, response $R$, and essential variable $E$,
-$$
-H(E)\ge H(D)-I(D;R).
-$$
-Useless controller states appear as small $I(D;R)$. The Good Regulator Theorem [@Conant-Ashby70] is an existence claim about structure: among policies that minimise outcome entropy $H(Z)$ there is a simplest deterministic map $A=h(S)$, i.e.\ $H(A\mid S)=0$. The second half earns that claim from the concavity of Shannon entropy (and, for stochastic channels, extreme points of the policy polytope). Two caveats to keep in mind before any slogan: a constant action also has $H(A\mid S)=0$; low $H(Z)$ means predictable, not desirable. An information-bottleneck-shaped reading $\min I(S;A)$ subject to $H(Z)\le\epsilon$ may follow as a gloss after the theorem --- it is not the theorem itself, and it is not Conant and Ashby's equation.}
 \subsection{Define This Week}
 
 \slidesincremental{
 * Multi-information versus mutual information?
-* What is the data processing inequality?
+* Prove the data-processing inequality
 * What is the information bottleneck?
-* What is von Neumann entropy?
-* What is the matrix exponential family?
+* How does IB gloss the Good Regulator without replacing it?
 }
-
 
 \subsection{After This Lecture}
 
-\notes{Worksheet 4 was due at the start of this lecture, before Quiz 4. Limits on intelligence follow in the second hour.}
+\notes{No class test today. Quiz 4 is 1 December at the start of lecture 8. Week 8 applies Landauer, DPI, GRT, and human bandwidth to capability claims; von Neumann / $I=C$ if clock allows.}
 
 \slidesincremental{
-* Limits on intelligence follow
+* Quiz 4: 1 December, first ten minutes
+* Week 8: limits on intelligence; GRT as application
 }
 
 \reading

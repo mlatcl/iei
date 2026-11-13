@@ -16,10 +16,9 @@
   status: Draft
   status_modified: '2026-10-13 08:44:01.284173'
   status_created: '2026-10-13 08:44:01.284173'
-- sessionPath: _lamd/fisher-metric.md
+- sessionPath: _lamd/fisher-metric.md.deferred
+- sessionPath: _lamd/channels-dpi-good-regulator.md
   status: Draft
-  status_modified: '2026-10-13 08:44:47.528821'
-  status_created: '2026-10-13 08:44:47.528821'
 - sessionPath: _lamd/intro-history-entropy-shannon-practical.md
   status: Ready
   status_modified: '2026-10-13 08:44:58.127088'
@@ -31,10 +30,7 @@
   status_modified: '2026-10-13 08:44:53.944982'
   status_created: '2026-10-13 08:44:53.944982'
 - sessionPath: _lamd/maxent-exponential-family.md
-- sessionPath: _lamd/maxent-projection.md
-  status: Draft
-  status_modified: '2026-10-13 08:44:51.858816'
-  status_created: '2026-10-13 08:44:51.858816'
+- sessionPath: _lamd/maxent-projection.md.deferred
 - sessionPath: _lamd/grouping-maxwell-demon.md
   status: Draft
   status_modified: '2026-10-13 08:44:42.839111'

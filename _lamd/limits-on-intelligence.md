@@ -1,5 +1,5 @@
 ---
-title: "Probability Transport and Limits on Intelligence"
+title: "Limits on Intelligence"
 week: 8
 layout: lecture
 date: 2026-12-01
@@ -7,232 +7,207 @@ venue: FW26, William Gates Building
 room: FW26
 transition: None
 abstract: >
-  Second half of the final session: intelligent agency as transport of
-  probability mass. Three geometries of an optimal change of state —
-  Crooks / Fisher–Rao, Wasserstein, and the Schrödinger bridge — and
-  the evaluation of superintelligence claims with Landauer,
-  $\mathcal{L}^2/\tau$, and $I+H=C$.
+  Final session: Quiz 4, then the classical limit I=C and von Neumann
+  entropy if clock allows, and the LO13 close. Superintelligence claims
+  are evaluated with Landauer, I+H=C, the data-processing inequality,
+  the Good Regulator Theorem (already earned in Week 6), and human
+  bandwidth. Three-geometries / Schrödinger / Wasserstein transport are
+  not the live spine.
 author:
 - given: Neil D.
   family: Lawrence
   institution: University of Cambridge
   url: http://inverseprobability.com
-outcomes: [LO12, LO13]
-duration_hours: 1
+outcomes: [LO11, LO12, LO13]
+duration_hours: 2
 type: lecture
-in_class_test: null
+worksheet_due: W4
+in_class_test:
+  id: Q4
+  duration_minutes: 10
+  timing: start
 reading:
-  - title: "Measuring Thermodynamic Length"
-    author: "Crooks"
-    chapter: "whole paper"
-    estimated_hours: 1
   - title: "The Atomic Human"
     author: "Lawrence"
     chapter: "Chapter 1"
     estimated_hours: 1
     required: false
-  - title: "Sinkhorn Distances: Lightspeed Computation of Optimal Transportation Distances"
-    author: "Cuturi"
-    chapter: "§§3–4 (Sinkhorn distances and algorithm)"
-    estimated_hours: 1
+  - title: "Every Good Regulator of a System Must Be a Model of That System"
+    author: "Conant and Ashby"
+    chapter: "whole paper (1970)"
+    estimated_hours: 0.5
     required: false
-  - title: "Computational Optimal Transport"
-    author: "Peyré and Cuturi"
-    chapter: "Chapters 1–2; §4.2 (Sinkhorn, optional)"
-    estimated_hours: 2
+  - title: "Elements of Information Theory"
+    author: "Cover and Thomas"
+    chapter: "Theorem 2.8.1 (DPI); capacity"
+    estimated_hours: 0.5
     required: false
-  - title: "Generative AI and Stochastic Thermodynamics"
-    author: "Welling, Lu and Holdijk"
-    chapter: "Chapter 14; §§22.2–22.3"
+  - title: "Quantum Computation and Quantum Information"
+    author: "Nielsen and Chuang"
+    chapter: "Chapter 11"
     estimated_hours: 1
     required: false
 ---
 
-\notes{Worksheet 4 is due at the start of this session. Quiz 4 occupies the first ten minutes. Then 110 minutes to close the course. This is the interpret week for thermodynamic length, information and intelligence, and the two purely entropic readings.}
+\notes{Worksheet 4 is due at the start of this session (before Quiz 4). Quiz 4 occupies the first ten minutes. Then close the course: optional von Neumann / $I=C$, then LO13 synthesis. GRT was earned in Week 6 and deepened with IB in Week 7 --- today it is an *application* tool, not a first proof. Do not reopen Fisher length, natural gradient, or three geometries as primary content.}
 
 \subsection{This Session}
 
 \slidesincremental{
-* Probability transport; three geometries
-* Entropic Good Regulator: $H(A\mid S)=0$, with caveats
-* Superintelligence as perpetual motion; close Week 1
+* Quiz 4 (ten minutes); Worksheet 4 in
+* Classical limit $I=C$; von Neumann if clock allows
+* Apply Landauer, DPI, GRT, bandwidth to capability claims
+* Course close: entropy forbids; probability prescribes
 }
 
 \notes{
-**Time plan (60 minutes, second half of final session)**
+**Time plan.** The slot is 10:05--11:55 (110 minutes, not 120).
 
-| Minutes | Block |
-|--------:|-------|
-| 0–20 | Agency as transport; Wasserstein; Schrödinger bridge; Sinkhorn |
-| 20–40 | Crooks versus Wasserstein versus Schrödinger; $\mathcal{L}^2/\tau$ |
-| 40–52 | Entropic Good Regulator: concavity proof, $H(A\mid S)=0$, two caveats |
-| 52–60 | LO13 close: superintelligence as perpetual motion; Week 1 answer |
+| Clock | Block |
+|------:|-------|
+| 10:05--10:15 | Quiz 4 (paper); collect Worksheet 4 |
+| 10:15--10:45 | Classical $I=C\Rightarrow H=0$; von Neumann / Bell |
+| 10:45--10:55 | Break |
+| 10:55--11:40 | Limits synthesis: Landauer, $I+H=C$, DPI, GRT applied, bandwidth |
+| 11:40--11:55 | Superintelligence as perpetual motion; Week 1 answer |
 }
+
+\subsection{Quiz 4}
+
+\notes{Ten questions from the multi-information / DPI / GRT / limits bank. Invigilated paper test, no notes, no network, no LLMs. Covers Weeks 6--7 as delivered (Shannon capacity, DPI, GRT caveats, multi-information / $I+H=C$, IB) plus Landauer / bandwidth tools for LO13 --- not Fisher geometry, not thermodynamic length, not three transport geometries.}
+
+\slidesincremental{
+* Paper; no notes, no network, no LLMs
+* Ten minutes
+* Worksheet 4 in as you sit
+}
+
+\classtimertitled{10:05}{Quiz 4}
 
 \include{_iei/includes/iei-notebook-setup.md}
 
-\subsection{Agency as Transport}
+\classtimertitled{10:15}{Quiz 4}
 
-<!-- SNIPPET: _information-game/includes/schrodingers-bridge-perspective.md -->
+\subsection{Von Neumann Entropy}
 
-\subsection{Erwin Schrödinger}
+\include{_physics/includes/origin-paradox-shannon-von-neumann.md}
 
-\figure{\includejpg{\diagramsDir/physics/erwin-schrödinger_1933}{40%}}{Erwin Schrödinger, the Austrian physicist, photographed in 1933.}{erwin-schrodinger-1933}
+\include{_information/includes/the-matrix-exponential-family.md}
 
-\subsection{Schrödinger's Bridge and Optimal Information Transport}
+\include{_physics/includes/jaynes-density-matrices.md}
 
-\notes{Given an initial and a final probability distribution, what is the most likely stochastic process that connects them? This question was posed by Erwin Schrödinger in 1931. 
-}
+<!-- SNIPPET: _physics/includes/von-neumann-bell-state.md -->
 
-\slides{
-* Schrödinger's bridge problem:
-  * Find most likely stochastic process between two distributions
-  * Minimum relative entropy solution
-  * Optimal transport of probability mass
-  * Discrete MaxEnt coupling: Sinkhorn / IPF
-}
+\newslides{Von Neumann Entropy}
 
-<!-- TODO: Visualisation of initial probability and final probability with stochastic process moving between them. -->
-
-\comment{On the left have a Gaussian distribution 1D ploted with the vertical axis as its base. On the right, have a mixture of two Gaussians on the right. Do a discrete grid to solve the problems using Sinkhorn.}
-
-\comment{Show how the Wasserstein distance with entropic regularisation relates to the Schroedinger bridge problem.}
-
-
-\newslide{Intelligence as Optimal Control}
-
-
-\addreading{@Peyre-cuturi19}{Chapters 1--2; §4.2 (Sinkhorn, optional)}
-
-<!-- /SNIPPET _information-game/includes/schrodingers-bridge-perspective.md -->
-
-<!-- SNIPPET: _information-game/includes/agency-as-transport.md -->
-
-\newslides{Agency as Transport}
-
-\slides{Shannon abstracted a code as probability over symbols. The analogous move: an agent transports probability mass from $p$ to $q$.}
+\slides{Classically, $I=C$ forces $H=0$ — a delta joint. Quantum mechanics breaks that pattern.}
 
 \slidesincremental{
-* Wasserstein: minimum ground-cost transport
-* Schrödinger bridge: maximum-entropy stochastic interpolation
-* Sinkhorn: discrete algorithm; not a fourth geometry
+* $S(\rho) = -\mathrm{Tr}(\rho\log\rho)$
+* Bell state: $S(\rho)=0$ but marginals have $S>0$
+* Matrix exponential family = quantum MaxEnt
 }
 
-\speakernotes{LO12. One $2\times 2$ table is enough — week 4 moments, prescribed marginals. Worksheet 4 Part B.}
+\speakernotes{LO11. Run Bell-state cell. Worksheet 4 Part A3. Cut short if behind --- LO13 close is protected.}
 
-\notes{On a discrete grid, Schrödinger interpolation is entropy-regularised optimal transport. Sinkhorn is the discrete algorithm, not a fourth geometry.}
+\notes{Classically, $I=C$ forces $H=0$ --- a delta joint. A pure entangled state has von Neumann entropy $S(\rho)=0$ while marginals remain uncertain. The matrix exponential family is the quantum MaxEnt family; Jaynes applied the same Lagrange move to $\rho$ in 1963.}
 
-\setupplotcode{import numpy as np
-import matplotlib.pyplot as plt
-import mlai}
+\setupcode{import numpy as np
 
-\plotcode{# Toy 2x2 transport plan between marginals p and q
-p = np.array([0.6, 0.4])
-q = np.array([0.5, 0.5])
-C = np.array([[0., 1.], [1., 0.]])  # ground cost
-# Greedy illustration — not optimal, just visual
-P = np.array([[0.5, 0.1], [0.0, 0.4]])
-fig, ax = plt.subplots(figsize=(5, 4))
-im = ax.imshow(P, cmap='Blues')
-ax.set_xticks([0,1]); ax.set_yticks([0,1])
-ax.set_xlabel('target'); ax.set_ylabel('source')
-ax.set_title('Transport plan $P$ (illustrative)')
-plt.colorbar(im, ax=ax, fraction=0.046)
-mlai.write_figure('transport-plan-2x2.svg', directory='\writeDiagramsDir/ml')}
+def bell_state():
+    v = np.array([1.0, 0.0, 0.0, 1.0]) / np.sqrt(2.0)
+    return np.outer(v, v.conj())
 
-\figure{\includediagram{\diagramsDir/ml/transport-plan-2x2}{55%}}{Illustrative $2\times 2$ coupling — week 4 moments become week 8 marginals.}{transport-plan-2x2}
+def von_neumann(rho):
+    w = np.linalg.eigvalsh(rho)
+    w = w[w > 1e-12]
+    return -np.sum(w * np.log2(w))
 
-\slides{
-\includediagram{\diagramsDir/ml/transport-plan-2x2}{55%}
-}
+def partial_trace_A(rho):
+    rho = rho.reshape(2, 2, 2, 2)
+    return np.trace(rho, axis1=1, axis2=3)}
 
-<!-- /SNIPPET: _information-game/includes/agency-as-transport.md -->
+\code{rho = bell_state()
+print('S(rho)=', von_neumann(rho))
+print('S(rho_A)=', von_neumann(partial_trace_A(rho)))}
 
-\notes{The entropic constraint in Sinkhorn distances has a direct connection to the first half of this session: @Cuturi-sinkhorn13 shows that constraining $\mathrm{KL}(P \| rc^T) \le \alpha$ is equivalent to constraining the mutual information $I(X;Y) \le \alpha$ of the coupling. The identity $I + H = C$ relates mutual information to capacity; here we see mutual information serving as a budget on how deterministic the transport plan can be.}
+<!-- /SNIPPET: _physics/includes/von-neumann-bell-state.md -->
 
-\subsection{Three Geometries}
-
-<!-- SNIPPET: _information/includes/three-geometries-compared.md -->
-
-\newslides{Three Geometries — Do Not Collapse}
-
-\slides{Optimal intelligence, in this module's voice, is a protocol under an entropic budget.}
-
-\slidesincremental{
-* **Fisher–Rao / Crooks** — near-equilibrium; $\langle W_{\mathrm{ex}}\rangle\ge\mathcal{L}^2/\tau$
-* **Wasserstein** — minimum ground-cost on sample space
-* **Schrödinger bridge** — max-entropy interpolation; Sinkhorn computes it
-}
-
-\speakernotes{Three prescriptions — three answers to “what should I do?”. Crooks, Landauer, $I+H=C$ are the no-gos. Worksheet 4 Part B: where is perpetual motion tight?}
-
-\notes{Superintelligence at zero dissipation or infinite update rate is perpetual motion: it claims to repeal a no-go. Students must say where the analogy is tight and where it breaks.}
-
-\setupcode{geometries = {
-    'Crooks/Fisher-Rao': {'minimise': 'dissipation', 'no_go': 'L^2/tau'},
-    'Wasserstein': {'minimise': 'ground cost', 'no_go': 'mass conservation'},
-    'Schrodinger': {'minimise': 'relative entropy', 'no_go': 'fixed marginals'},
-}}
-
-<!-- /SNIPPET: _information/includes/three-geometries-compared.md -->
-
-\slidesincremental{
-* No-gos: Landauer, \(\mathcal{L}^2/\tau\), \(I+H=C\)
-* Prescriptions: Crooks geodesic; Wasserstein; Schrödinger
-* Do not collapse the three
-}
-
-\include{_information/includes/welling-three-geometries.md}
-
-\addreading{@Crooks-length07}{the whole paper}
-
-\addreading{@Cuturi-sinkhorn13}{§§3–4 (optional)}
+\classtimertitled{10:45}{Break}
 
 \subsection{Limits on Intelligence}
+
+\classtimertitled{10:55}{Limits}
 
 \include{_information/includes/information-limits-on-intelligence.md}
 
 \include{_information-game/includes/unified-intelligence-perspective.md}
 
-\include{_information/includes/entropic-good-regulator.md}
+\newslides{Agency, Named Without Transport Geometry}
 
-\addreading{@Lawrence-atomic24}{Chapter 1}
+\slides{Shannon abstracted a code as probability over symbols. An agent can be read as organising action given state.}
+
+\slidesincremental{
+* Live tools: channels, DPI, GRT, Landauer, bandwidth
+* Transport / Wasserstein / Schrödinger: deferred notes, not today's spine
+}
+
+\speakernotes{LO12 thin by design. Do not open three geometries.}
+
+\newslides{Tools Already Earned}
+
+\slides{Apply what Weeks 6--7 already proved. Do not re-derive.}
+
+\slidesincremental{
+* Shannon: $R\le C$
+* DPI: processing cannot create $I$
+* Requisite variety: $H(E)\ge H(D)-I(D;R)$
+* GRT: exists optimal $\pi$ with $H(A\mid S)=0$ (caveats stand)
+* IB: spend $I$ on action-relevant distinctions (gloss, not GRT)
+}
+
+\speakernotes{GRT is application today. Two caveats still: constant action; low $H(Z)$ is not desirable.}
+
+\notes{Data-processing inequality and the information bottleneck were taught under LO10 in Weeks 6--7. Today they are evaluation tools, not new outcomes: a claim that an intelligent system will just process more is a DPI violation; a system that keeps only what is relevant for action is an IB statement. Requisite variety supplies the quantity bound $H(E)\ge H(D)-I(D;R)$. The Good Regulator Theorem supplies an existence claim already earned from concavity: among $H(Z)$-minimisers there is a deterministic policy with $H(A\mid S)=0$. Caveats: constant $A=a_0$ also has $H(A\mid S)=0$; low $H(Z)$ is predictability, not desirability. The IB-shaped reading $\min I(S;A)$ subject to $H(Z)\le\epsilon$ remains a gloss after that theorem, not Conant and Ashby's statement and not the course punchline.}
 
 <!-- SNIPPET: _information/includes/limits-on-intelligence-synthesis.md -->
 
 \newslides{Evaluating Superintelligence Claims}
 
-\slides{Apply three no-gos and name which geometry you are using as the prescription.}
+\slides{Apply the no-gos. Name which tool you are using.}
 
 \slidesincremental{
 * Historical thread: Carnot $\to$ Clausius $\to$ Boltzmann $\to$ Shannon $\to$ Landauer $\to$ here
-* Landauer; Crooks $\mathcal{L}^2/\tau$; $I+H=C$; DPI
-* GRT: exists optimal $\pi$ with $H(A\mid S)=0$ (earned, with caveats)
+* Landauer; $I+H=C$; DPI; Shannon $R\le C$
+* GRT: exists optimal $\pi$ with $H(A\mid S)=0$ (earned Week 6, applied today)
 * Human bandwidth: $\sim 100$ bits/s — *The Atomic Human*
 }
 
-\speakernotes{LO13. Course punchline unchanged: entropy forbids; probability prescribes. GRT is an earned theorem inside that fence, not the fence. Weak model and $H(Z)\ne$ desirable are the two fences on the slogan.}
+\speakernotes{LO13. Course punchline unchanged: entropy forbids; probability prescribes. GRT is an earned theorem inside that fence, not the fence. Weak model and $H(Z)\ne$ desirable are the two fences on the slogan. Do not lean on $\mathcal{L}^2/\tau$ or three geometries --- those left the live spine.}
 
-\notes{Data-processing inequality and the information bottleneck were taught under LO10 earlier in this session. Today they are evaluation tools, not new outcomes: a claim that an intelligent system will just process more is a DPI violation; a system that keeps only what is relevant for action is an IB statement. Requisite variety supplies the quantity bound $H(E)\ge H(D)-I(D;R)$. The Good Regulator Theorem supplies an existence claim earned from concavity: among $H(Z)$-minimisers there is a deterministic policy with $H(A\mid S)=0$. Caveats: constant $A=a_0$ also has $H(A\mid S)=0$; low $H(Z)$ is predictability, not desirability. The IB-shaped reading $\min I(S;A)$ subject to $H(Z)\le\epsilon$ is a gloss after that theorem, not Conant and Ashby's statement and not the course punchline. Viable-system material is optional. Inaccessible-game material, if present, is colour only. Prescriptions operate inside fences set by physics and embodiment: whatever model is kept is not informationally free once Landauer prices sensing, storage, processing, and erasure.}
-\setupcode{no_gos = ['Landauer', 'Crooks L^2/tau', 'I+H=C', 'human bandwidth']
-prescriptions = ['Boltzmann/MaxEnt p', 'Crooks geodesic', 'Wasserstein plan', 'Schrodinger bridge']
+\notes{Prescriptions operate inside fences set by physics and embodiment: whatever model is kept is not informationally free once Landauer prices sensing, storage, processing, and erasure. Unbounded intelligence that processes without entropic cost has the shape of perpetual motion: it claims to repeal a no-go.}
+
+\setupcode{no_gos = ['Landauer', 'I+H=C', 'DPI', 'Shannon R<=C', 'human bandwidth']
+prescriptions = ['Boltzmann/MaxEnt p', 'capacity-achieving p(x)', 'IB compression', 'GRT deterministic policy']
+}
 
 <!-- /SNIPPET: _information/includes/limits-on-intelligence-synthesis.md -->
+
+\addreading{@Lawrence-atomic24}{Chapter 1}
+\addreading{@Conant-Ashby70}{the Good Regulator Theorem}
 
 \subsection{Interpret This Week}
 
 \slidesincremental{
-* Optimal trajectories and optimal intelligence?
-* Transport plan as an act; which geometry is Sinkhorn?
 * Why $H(A\mid S)=0$, and why that model is weak?
 * Why low $H(Z)$ is not the same as good?
-* Purely entropic Schottky; entropy today (last revision)
+* Where does ``just process more'' violate DPI?
+* Where is the perpetual-motion analogy tight, and where does it break?
 }
-
 
 \subsection{After This Lecture}
 
-\notes{Quiz 4 opened the session. No further assessed work after today. Feedback within the 21-day ACS window. The last LLM exercise: ask the model what thermodynamic length has to do with intelligence, then write down whether it offered a no-go, a prescription, or collapsed the two.}
+\notes{Quiz 4 opened the session. No further assessed work after today. Feedback within the 21-day ACS window. The last LLM exercise: ask the model what the Good Regulator Theorem has to do with intelligence, then write down whether it offered a no-go, a prescription, collapsed the caveats, or confused GRT with requisite variety.}
 
 \slidesincremental{
 * The Week 1 question should now have a precise answer

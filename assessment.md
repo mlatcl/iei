@@ -19,7 +19,7 @@ This module uses 8 assessment components totalling 100%.
 | W2 | Worksheet 2: Socratic Dialogue on Shannon H and Boltzmann S | mini-project | summative | 15% | 4 | take-home |
 | Q3 | In-Class Quiz 3: Grouping, Maxwell's Demon, and MaxEnt | in-class-quiz | summative | 10% | 6 | in-class |
 | W3 | Worksheet 3: Socratic Dialogue on Coarse-Graining Maxwell | mini-project | summative | 15% | 6 | take-home |
-| Q4 | In-Class Quiz 4: Geometry, Multi-Information, Limits on Intelligence | in-class-quiz | summative | 10% | 8 | in-class |
+| Q4 | In-Class Quiz 4: Multi-Information, DPI, GRT, and Limits | in-class-quiz | summative | 10% | 8 | in-class |
 | W4 | Worksheet 4: Multi-Information, Von Neumann Entropy, and Limits on Intelligence | mini-project | summative | 15% | 8 | take-home |
 
 ## Component Details
@@ -60,15 +60,15 @@ This module uses 8 assessment components totalling 100%.
 **Estimated workload**: 3.0h
 **AI robustness**: Students must pose curiosity and skepticism prompts as Socrates in exactly ten turns from one continuous conversation with a single LLM (model name and version declared); planning may use any tools, but only the final exchange is submitted. The reflection is handwritten on a scanned proforma.
 
-### Q4: In-Class Quiz 4: Geometry, Multi-Information, Limits on Intelligence
+### Q4: In-Class Quiz 4: Multi-Information, DPI, GRT, and Limits
 
 **Type**: in-class-quiz | **Weight**: 10% | **Due week**: 8 | **Delivery**: in-class
 **Estimated workload**: 0.2h
-**AI robustness**: Invigilated in-class paper test. No external resources. The yaml path is an LO8–LO13-tagged pool for drafting reuse, not the printed paper.
+**AI robustness**: Invigilated in-class paper test. No external resources. The yaml path is an LO10–LO13-tagged pool for drafting reuse, not the printed paper.
 
 ### W4: Worksheet 4: Multi-Information, Von Neumann Entropy, and Limits on Intelligence
 
 **Type**: mini-project | **Weight**: 15% | **Due week**: 8 | **Delivery**: take-home
 **Estimated workload**: 3.0h
-**AI robustness**: LLMs permitted. Authenticity verified by in-class Quiz 4 (Week 8), applying multi-information, geometry, and the perpetual motion analogy to a new example under invigilated conditions.
+**AI robustness**: LLMs permitted. Authenticity verified by in-class Quiz 4 (Week 8), applying multi-information, DPI, GRT caveats, and the perpetual motion analogy to a new example under invigilated conditions.
 
