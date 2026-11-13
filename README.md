@@ -28,7 +28,7 @@ Entropy appears in three apparently separate traditions — thermodynamics (Bolt
 
 Four ten-minute in-class quizzes sit at the start of lectures 2, 4, 6 and 8.
 
-Worksheets 1–3 are Socratic LLM dialogues (curiosity then skepticism) plus a handwritten reflection. Worksheet 4 is a short notebook plus written reflection. Due at the start of weeks 2, 4, 6 and 8. Moodle filenames use `L172_<CRSid>_worksheet…`; file contents are anonymous (candidate number, not CRSid or name).
+Worksheets 1–3 are Socratic LLM dialogues (curiosity then skepticism) plus a handwritten reflection. Worksheet 4 is a short notebook plus written reflection. Due at the start of weeks 2, 4, 6 and 8. Moodle filenames use `L172_<CRSid>_worksheet…`; identify work by CRSid, not by full name.
 
 ## Learning outcomes
 
