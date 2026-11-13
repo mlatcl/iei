@@ -46,25 +46,25 @@ reading:
     estimated_hours: 1
 ---
 
-\notes{Quiz 3 occupies the first ten minutes from 10:05 --- Weeks 4--5 as delivered (grouping, demon compartments and two ledgers, MaxEnt and the exponential family). Not Fisher: that starts after the quiz. Collect Worksheet 3 as they sit (due 10:00). Then Fisher's notion of information, geometry, and thermodynamic length (Crooks 2007). Worksheet 4 is released at the close; due 1 December (start of lecture 8).}
+\notes{Quiz 3 occupies the first ten minutes from 10:05 --- Weeks 4--5 as delivered (grouping, demon compartments and two ledgers, soft partitions / MI / KL, MaxEnt and the exponential family named). Continuous MaxEnt and $\log Z$ as CGF were unread in Week 5 and open after the quiz today. Not Fisher: that starts after the quiz. Collect Worksheet 3 as they sit (due 10:00). Then Fisher's notion of information, geometry, and thermodynamic length (Crooks 2007). Worksheet 4 is released at the close; due 1 December (start of lecture 8).}
 
 \subsection{This Session}
 
 \slidesincremental{
 * Quiz 3 (ten minutes); collect Worksheet 3
-* Legendre: $H=A-\theta\cdot\eta$ (Week 5 gave $A=\log Z$, $\eta=\nabla A$)
+* Week 5 overflow then Legendre: $A=\log Z$, $\eta=\nabla A$; $H=A-\theta\cdot\eta$
 * Fisher's information $\neq$ Shannon's $H$
 * Fisher metric; dual flatness
 * Thermodynamic length: define, do not interpret
 }
 
 \notes{
-**Time plan.** The slot is 10:05--11:55 (110 minutes, not 120). Quiz 3 is paper. Protect Fisher versus Shannon, dual flatness, and the length definition. Open with the Legendre transform (Week 5 already taught $A=\log Z$ as CGF and $\eta=\nabla A$).
+**Time plan.** The slot is 10:05--11:55 (110 minutes, not 120). Quiz 3 is paper. Protect Fisher versus Shannon, dual flatness, and the length definition. Week 5 named $\theta=-\lambda$ and left continuous MaxEnt / $\log Z$ as CGF unread --- open after the quiz by finishing that thread ($A=\log Z$, $\eta=\nabla A$), then Legendre.
 
 | Clock | Block |
 |------:|-------|
 | 10:05--10:15 | Quiz 3 (paper); collect Worksheet 3 |
-| 10:15--10:40 | Legendre $H=A-\theta\cdot\eta$; Fisher's notion |
+| 10:15--10:40 | Week 5 overflow: $A=\log Z$ as CGF; Legendre $H=A-\theta\cdot\eta$; Fisher's notion |
 | 10:40--11:00 | Fréchet–Rao–Cramér; Riemannian geometry; KL |
 | 11:00--11:10 | Break |
 | 11:10--11:30 | Dual flatness; Pythagorean theorem for KL |
@@ -74,7 +74,7 @@ reading:
 
 \subsection{Quiz 3}
 
-\notes{Invigilated paper test, no notes, no network, no LLMs. Ten questions on Weeks 4--5 as delivered: exclusive grouping $H=H(w)+\sum_i w_i H(p_i)$, soft partitions $H(I\mid X)$ / $I(X;I)$ / KL, the missing measure, Maxwell's demon as compartments and two ledgers, MaxEnt, exponential family, and $\log Z$ as CGF. Not Fisher, not Legendre, not Crooks (those start after the quiz). Worksheet 3 is collected as they sit.}
+\notes{Invigilated paper test, no notes, no network, no LLMs. Ten questions on Weeks 4--5 as delivered: exclusive grouping $H=H(w)+\sum_i w_i H(p_i)$, soft partitions $H(G\mid X)$ / $I(X;G)$ / KL, the missing measure, Maxwell's demon as compartments and two ledgers, MaxEnt (die / discrete proof), and the exponential family named ($\theta=-\lambda$). Not the unread Week 5 CGF / continuous MaxEnt blocks, not Fisher, not Legendre, not Crooks (those start after the quiz). Worksheet 3 is collected as they sit.}
 
 \slidesincremental{
 * Paper; no notes, no network, no LLMs

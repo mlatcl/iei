@@ -149,20 +149,41 @@ Building</p>
 <div>
 <ul>
 <li class="fragment">Quiz 2 feedback (cohort figures; <span
-class="math inline">\(\log Z\)</span> as free energy; heat thread)</li>
-<li class="fragment">Overlap: derive <span class="math inline">\(H(I\mid
-X)\)</span>; name mutual information</li>
+class="math inline">\(\log Z\)</span>; Clausius; intensive
+pressure)</li>
+<li class="fragment">Overlap: <span class="math inline">\(H(G\mid
+X)\)</span>; name mutual information; MI is a KL</li>
 <li class="fragment">Jaynes <span class="math inline">\(m\)</span> and
 Radon–Nikodym: relative entropy is KL</li>
-<li class="fragment">Mutual information is a KL; KL discrete or
-continuous</li>
-<li class="fragment">MaxEnt under energy constraint; Jaynes die;
-minimise KL to <span class="math inline">\(m\)</span></li>
-<li class="fragment">Exponential family: <span
-class="math inline">\(\theta=-\lambda\)</span>; <span
-class="math inline">\(\log Z\)</span> as CGF</li>
+<li class="fragment">Break, then MaxEnt: Lagrange; die; discrete proof
+<span class="math inline">\(\to\)</span> Boltzmann / <span
+class="math inline">\(Z\)</span></li>
+<li class="fragment">Exponential family named at the close (<span
+class="math inline">\(\theta=-\lambda\)</span>); CGF next week</li>
 </ul>
 </div>
+</section>
+<section id="how-this-course-uses-generative-ai" class="slide level2">
+<h2>How This Course Uses Generative AI</h2>
+</section>
+<section id="generative-ai-policy-in-plain-words" class="slide level2">
+<h2>Generative AI: Policy in Plain Words</h2>
+<p>Background tools are fine. In the room you sit the quizzes without a
+computer.</p>
+<div>
+<ul>
+<li class="fragment">Use generative AI as much as you like when
+preparing</li>
+<li class="fragment">In class: no laptop for the quiz; the
+authentication is you</li>
+<li class="fragment">Marking is Neil; the marking <em>framework</em> was
+built with generative AI so feedback is faster</li>
+</ul>
+</div>
+<aside class="notes">
+Keep this short. It is a policy aside, not the week’s content. Then into
+Quiz 2 feedback.
+</aside>
 </section>
 <section id="homework-from-weeks-34" class="slide level2">
 <h2>Homework from Weeks 3–4</h2>
@@ -180,7 +201,8 @@ class="math inline">\(6.3/10\)</span></li>
 </div>
 <aside class="notes">
 Quiz-only block for now. Add Worksheet 2 habits when that section is
-written. Keep names off the slides.
+written. Keep names off the slides. Worksheets are marking well; quizzes
+differentiate more.
 </aside>
 </section>
 <section id="quiz-2" class="slide level2">
@@ -239,11 +261,65 @@ become work</li>
 class="math inline">\(Q_\mathrm{h}/T_\mathrm{h}=Q_\mathrm{c}/T_\mathrm{c}\)</span></li>
 </ul>
 </div>
+</section>
+<section id="carnot-as-a-waterwheel" class="slide level2">
+<h2>Carnot as a Waterwheel</h2>
+<p>Entropy drops like water. <span class="math inline">\(T\times
+S\)</span> is in joules. Spill nothing if reversible.</p>
+<div>
+<ul>
+<li class="fragment">Carnot: caloric conserved <span
+class="math inline">\(\approx\)</span> entropy conserved through the
+cycle</li>
+<li class="fragment">Joule / Rumford: heat is inexhaustible; work can
+become heat entirely</li>
+<li class="fragment">Clausius keeps both: heat cannot all become
+work</li>
+</ul>
+</div>
 <aside class="notes">
 Bridge: Worksheet 2 pressed <span class="math inline">\(H\)</span>
 versus <span class="math inline">\(S\)</span>; this item pressed the
 physical thread that <span class="math inline">\(S\)</span> came from.
-Then into Laplace / MaxEnt.
+Contested narrative next, then into the KL arc.
+</aside>
+</section>
+<section id="a-contested-narrative" class="slide level2">
+<h2>A Contested Narrative</h2>
+<p>The heat story is a narrative to explore around, not a creed to
+recite.</p>
+<div>
+<ul>
+<li class="fragment">Worksheets: use an LLM to press the contested
+edges</li>
+<li class="fragment">Marks are on the quizzes and the understanding you
+defend in the room</li>
+<li class="fragment">Dinner colour: Blei, Rasmussen, Turner,
+Hernández-Lobato — narrative as scaffolding</li>
+</ul>
+</div>
+</section>
+<section id="as-taught" class="slide level2">
+<h2>As Taught</h2>
+<p>KL before the break. MaxEnt after. Exponential family named at the
+close.</p>
+<div>
+<ul>
+<li class="fragment">Soft partitions <span
+class="math inline">\(\to\)</span> mutual information; MI is a KL</li>
+<li class="fragment">Relative entropy to Jaynes’ <span
+class="math inline">\(m\)</span> is the same KL language</li>
+<li class="fragment">After the break: Lagrange; die; discrete MaxEnt
+proof <span class="math inline">\(\to\)</span> Boltzmann / <span
+class="math inline">\(Z\)</span></li>
+<li class="fragment">Continuous MaxEnt and <span
+class="math inline">\(\log Z\)</span> as CGF: next week</li>
+</ul>
+</div>
+<aside class="notes">
+Do not force continuous MaxEnt or the CGF slides if the discrete proof
+is still live. Name <span class="math inline">\(\theta=-\lambda\)</span>
+and stop. Quiz and worksheet next week.
 </aside>
 <!--setupplotcode{import seaborn as sns
 sns.set_style('darkgrid')
@@ -469,7 +545,9 @@ Asymmetry: <span class="math inline">\(\text{KL}\left( p\,\|\,q
 MaxEnt after the break maximises <span class="math inline">\(H\)</span>
 or, equivalently, minimises <span class="math inline">\(\text{KL}\left(
 \cdot\,\|\,m \right)\)</span>. Week 7: <span
-class="math inline">\(m\)</span>-projection.
+class="math inline">\(m\)</span>-projection. Optional colour: GANs /
+adversarial training pick a direction of the KL; tell the truth and the
+whole truth, not nothing but the truth.
 </aside>
 </section>
 <section id="differential-entropy-is-a-different-object"
@@ -1126,12 +1204,14 @@ f_k(x_i)}\)</span></li>
 </div>
 <aside class="notes">
 The stationarity condition is <span class="math inline">\(\partial
-L/\partial p_i=0\)</span>. Sign: we maximise <span
-class="math inline">\(H\)</span> so the Lagrangian uses <span
-class="math inline">\(+\log p_i\)</span> terms; Jaynes’ die and
-Boltzmann are special cases with one constraint <span
-class="math inline">\(f_1(x)=x\)</span> or <span
-class="math inline">\(f_1(x)=E_i\)</span>.
+L/\partial p_i=0\)</span>. Sign: Jaynes subtracts the constraints so the
+exponential comes out with a minus. Class preferred <span
+class="math inline">\(\mu\)</span> over <span
+class="math inline">\(\lambda_0\)</span> for the normalisation
+multiplier. One energy constraint <span
+class="math inline">\(\Rightarrow\lambda=\beta\)</span>. As taught:
+board derivation; name the exponential family and stop if the clock is
+gone.
 </aside>
 </section>
 <section id="minimise-kl-to-a-measure" class="slide level2">
@@ -1194,6 +1274,8 @@ class="math inline">\(v_x\)</span> gives a Gaussian component; Lebesgue
 on <span class="math inline">\(\mathbb{R}^3\)</span> (shell <span
 class="math inline">\(v^2\)</span> in speed) gives Maxwell–Boltzmann.
 The <span class="math inline">\(v^2\)</span> is the density of states.
+As taught 10 November: not walked as a dedicated block — Week 6 / unread
+continuous reading.
 </aside>
 </section>
 <section id="the-general-maximum-entropy-formalism"
@@ -1235,13 +1317,13 @@ Z(-\boldsymbol{\theta})\)</span></li>
 </ul>
 </div>
 <aside class="notes">
-LO6 punchline. Physics sign: Boltzmann uses <span
+LO6 punchline. As taught 10 November: name <span
+class="math inline">\(\theta=-\lambda\)</span> and that fitting the
+<span class="math inline">\(\lambda\)</span>s is maximum likelihood; do
+not develop the CGF slides. Physics sign: Boltzmann uses <span
 class="math inline">\(p_i\propto e^{-\beta E_i}\)</span> so <span
 class="math inline">\(\theta_1=-\beta\)</span> when <span
-class="math inline">\(T=E\)</span>. Bernoulli two-level: <span
-class="math inline">\(\theta=-\beta\varepsilon\)</span>. Next: <span
-class="math inline">\(\log Z\)</span> (equivalently <span
-class="math inline">\(A\)</span>) as cumulant generating function.
+class="math inline">\(T=E\)</span>. CGF next week.
 </aside>
 </section>
 <section id="log-z-as-cumulant-generating-function"
@@ -1472,8 +1554,9 @@ forbids, <span class="math inline">\(p\)</span> prescribes</li>
 </ul>
 </div>
 <aside class="notes">
-LO7 in brief. Full colour waits if the KL arc ran long. Intended answer
-to ``how is entropy understood today?’’ until week 8.
+LO7 in brief. As taught 10 November: not reached. Full colour waits for
+Week 6 / week 8. Intended answer to ``how is entropy understood today?’’
+until week 8.
 </aside>
 </section>
 <section id="define-this-week" class="slide level2">
@@ -1489,7 +1572,7 @@ KL?</li>
 class="math inline">\(\theta=-\lambda\)</span>?</li>
 <li class="fragment">Why is <span class="math inline">\(\log Z\)</span>
 (equivalently <span class="math inline">\(A\)</span>) a cumulant
-generating function?</li>
+generating function? (named; developed next week)</li>
 </ul>
 </div>
 </section>
@@ -1498,6 +1581,7 @@ generating function?</li>
 <div>
 <ul>
 <li class="fragment">Quiz 3: 17 November, first ten minutes</li>
+<li class="fragment">Worksheet due at the start of lecture 6</li>
 </ul>
 </div>
 </section>
