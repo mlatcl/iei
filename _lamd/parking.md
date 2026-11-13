@@ -9,6 +9,8 @@ abstract: >
   Material that fell off a live lecture clock. Not in the weekly sequence,
   not in the 16h contact-hour total, and not presented until sorted into a
   week. Compile with `maketalk parking.md` only to review the overflow.
+  After the Week 6–8 Good-Regulator replan (Nov 2026), capacity/DPI moved
+  live; Fisher / Crooks / CGF / Legendre paths are notes-only or dropped.
 outcomes: []
 author:
 - given: Neil D.
@@ -18,53 +20,54 @@ author:
 parked:
   - id: shannon-axioms
     from_week: 3
-    likely_home: "after the game, or drop — the counting argument is already live"
+    likely_home: "dropped — counting argument already live in Weeks 2–3"
   - id: partition-Z
     from_week: 3
-    likely_home: "Sorted into Week 5 (maxent-exponential-family.md) — log Z as CGF after θ=-λ"
+    likely_home: "notes-only in Week 5 file (unread); not live Week 6 after GRT replan"
   - id: hmc
     from_week: 3
-    likely_home: "named callback from Week 1 scores, or drop"
+    likely_home: "dropped — named callback from Week 1 scores only if needed"
   - id: dasher
     from_week: 3
-    likely_home: "optional colour; bandwidth already in Week 2"
+    likely_home: "dropped — optional colour; bandwidth already in Week 2"
   - id: kl-differential
     from_week: 3
-    likely_home: "Sorted into Week 5 (maxent-exponential-family.md) KL arc"
+    likely_home: "notes-only in Week 5 file (unread); not live Week 6 after GRT replan"
   - id: capacity-dpi
     from_week: 3
-    likely_home: "scaffolding for LO2; proof is Week 8"
+    likely_home: "Sorted into Week 6 (channels-dpi-good-regulator.md) — Shannon C and DPI statement; DPI proof Week 7"
   - id: three-framings
     from_week: 3
-    likely_home: "LO7 is Week 5"
+    likely_home: "one-slide name in Week 7 or 8 close if clock allows; else notes"
   - id: schottky
     from_week: 3
-    likely_home: "named in a live lecture, or Week 8 for the entropic reading"
+    likely_home: "dropped from live spine — notes / optional named callback"
   - id: finite-time
     from_week: 3
-    likely_home: "Week 6 Crooks / thermodynamic length"
+    likely_home: "dropped — Crooks / thermodynamic-length path retired from live Weeks 6–8"
   - id: local-equilibrium-grouping
     from_week: 4
-    likely_home: "demon compartments already name kinetic layers; drop or a named callback"
+    likely_home: "dropped — demon compartments already name kinetic layers"
   - id: coarse-graining-intelligence
     from_week: 4
-    likely_home: "grouping-as-macrostate already pays the moral"
+    likely_home: "dropped — grouping-as-macrostate already pays the moral"
   - id: grouping-static-vs-ensemble
     from_week: 4
-    likely_home: "named on the fork / Worksheet 3"
+    likely_home: "dropped — named on the fork / Worksheet 3"
   - id: landauer-szilard-ellis
     from_week: 4
-    likely_home: "Worksheet 3 coarse-grains Maxwell; live lecture stops at the fork"
+    likely_home: "dropped from live — Worksheet 3 coarse-grains Maxwell"
   - id: legendre-transform
     from_week: 5
-    likely_home: "Sorted into Week 6 (fisher-metric.md) before dual flatness"
+    likely_home: "dropped from live — Fisher / dual-flatness path retired; keep in fisher-metric.md.deferred"
 ---
 
 \notes{This file is the module parking lot. It is not a week, not a contact
 hour, and not the demon lecture. Sort an item into a live `_lamd/*.md`
-week file before presenting it. KL / differential entropy and $\log Z$ as
-CGF both live in Week 5; Legendre is Week 6. Szilard, Landauer, Ellis, and
-local-equilibrium grouping sit here until Worksheet 3 needs them.}
+week file before presenting it. Capacity and DPI live in Week 6
+(`channels-dpi-good-regulator.md`); the DPI proof and $I+H=C$ deepen in
+Week 7. Fisher / Crooks / Legendre / CGF are notes-only after the
+Good-Regulator-first replan.}
 
 \speakernotes{Stop. This is the parking lot. Sort before presenting.}
 
@@ -73,18 +76,17 @@ local-equilibrium grouping sit here until Worksheet 3 needs them.}
 \slides{Overflow. Not a weekly lecture.}
 
 \slidesincremental{
-* Shannon axioms, HMC, Dasher, capacity (still parked)
-* $Z$ as CGF → Week 5; KL discrete/continuous → Week 5
-* Three framings, Schottky, finite time
-* Local equilibrium; Szilard / Landauer / Ellis
-* Legendre transform (from Week 5 → Week 6)
+* Capacity / DPI → Week 6 live (Good Regulator path)
+* $Z$ as CGF, KL continuous, Legendre → notes / deferred Fisher file
+* Shannon axioms, HMC, Dasher, Schottky, finite time → dropped
+* Local equilibrium; Szilard / Landauer / Ellis → Worksheet 3 / dropped
 }
 
 \subsection{Shannon axioms}
 
 \newslides{Parked: Shannon axioms}
 
-\slides{Overflow from Week 3. Not the live Week 4 lecture.}
+\slides{Overflow from Week 3. Dropped from the live spine.}
 
 \slidesincremental{
 * Derive $H$ and connect $S = kH$
@@ -93,7 +95,7 @@ local-equilibrium grouping sit here until Worksheet 3 needs them.}
 
 \speakernotes{Parking lot. Do not present until sorted.}
 
-\notes{Week 1--2 introduced Shannon's portrait and embodiment factors in bits per second. This block derives $H=-\sum_i p_i\log p_i$ and shows that Boltzmann entropy uses the same functional form. Parked from Week 3.}
+\notes{Week 1--2 introduced Shannon's portrait and embodiment factors in bits per second. This block derives $H=-\sum_i p_i\log p_i$ and shows that Boltzmann entropy uses the same functional form. Parked from Week 3; dropped from live Weeks 6--8.}
 
 \include{_ml/includes/from-loss-to-hamiltonian.md}
 
@@ -120,15 +122,15 @@ local-equilibrium grouping sit here until Worksheet 3 needs them.}
 
 \include{_information/includes/dasher.md}
 
-\notes{Dasher is the pair in one interface. Letter height is $p(\text{char}\mid\text{context})$; the information cost of a hit is $-\log p$. $H(\text{next})$ is the no-go on the remaining rate. The language model is the prescription: this is the next letter you should make easy to hit. The bits-per-second counter is the same unit as lecture 1's bandwidth bottleneck — here spent on a pointer, not on speech.}
+\notes{Dasher is the pair in one interface. Letter height is $p(\text{char}\mid\text{context})$; the information cost of a hit is $-\log p$. $H(\text{next})$ is the no-go on the remaining rate. The language model is the prescription: this is the next letter you should make easy to hit. The bits-per-second counter is the same unit as lecture 1's bandwidth bottleneck --- here spent on a pointer, not on speech. Dropped from live spine.}
 
-\notes{Sorted into Week 5 (`maxent-exponential-family.md`) after $\theta=-\lambda$: $\log Z$ as cumulant generating function, with $A(\theta)=\log Z(-\theta)$ and $\eta=\nabla A$. The include below remains here for overflow review only.}
+\notes{Notes-only after the GRT replan. The include below remains for overflow review only.}
 
 \include{_physics/includes/partition-function-generating.md}
 
 \include{_information/includes/welling-entropy-partition.md}
 
-\notes{Sorted into Week 5 (`maxent-exponential-family.md`) KL arc. GAIST §1.2.3 uses $-\int p\log p$ for Gaussians — that is *differential* entropy. It can be negative and is not bounded like discrete Shannon $H\in[0,\log n]$. $\KL{p}{q}$ is always $\ge 0$ discrete and continuous. That is why MaxEnt projections minimise $\KL{\cdot}{r}$, not raw $H$. The include below remains here for overflow review only.}
+\notes{Notes-only after the GRT replan. GAIST §1.2.3 uses $-\int p\log p$ for Gaussians --- that is *differential* entropy. It can be negative and is not bounded like discrete Shannon $H\in[0,\log n]$. $\KL{p}{q}$ is always $\ge 0$ discrete and continuous. That is why MaxEnt projections minimise $\KL{\cdot}{r}$, not raw $H$.}
 
 \addreading{@Callen-thermostatistics85}{Chapter 16}
 
@@ -140,6 +142,8 @@ local-equilibrium grouping sit here until Worksheet 3 needs them.}
 \include{_information/includes/differential-entropy-binning.md}
 \include{_information/includes/relative-entropy-reparametrisation.md}
 
+\notes{Capacity / DPI scaffolding moved into Week 6 live lecture. The include remains here only for overflow review; do not present from parking.}
+
 \include{_information/includes/channel-capacity-chain-rule.md}
 
 \newslide{}
@@ -150,20 +154,19 @@ local-equilibrium grouping sit here until Worksheet 3 needs them.}
 \slidesincremental{
 * No-go: $R \le C$; processing cannot create information
 * Prescription: the $p(x)$ that achieves $C$
-* Week 8: prove DPI; information bottleneck as the prescription on $I$
+* Live path: Week 6 states DPI; Week 7 proves; GRT uses both
 }
 
 \subsection{Three Framings, First Pass}
 
 \slidesincremental{
 * Same $H$; three operational assumptions
-* Week 4 live lecture: one bit $\leftrightarrow$ $k_B T \ln 2$ joules (Szilard, Landauer)
-* Full LO7 synthesis is week 5
+* One-slide name in Week 7 or 8 if clock allows
 }
 
-\speakernotes{Name only. LO7 synthesis is week 5; the bit-to-joule bridge is the live Week 4 lecture.}
+\speakernotes{Name only. Not a Week 6 block after the GRT replan.}
 
-\notes{Information, thermodynamic, and Bayesian readings of the same $H$ differ in what the probability is over and who is inferring. The intended comparison is LO7 in week 5.}
+\notes{Information, thermodynamic, and Bayesian readings of the same $H$ differ in what the probability is over and who is inferring. Optional one-slide later; otherwise notes.}
 
 \subsection{Thermodynamic Bath and Schottky's Anomaly}
 
@@ -171,7 +174,7 @@ local-equilibrium grouping sit here until Worksheet 3 needs them.}
 
 \newslides{The Bath and Schottky's Anomaly}
 
-\slides{A thermodynamic bath is the large system that justifies the canonical ensemble: it fixes $T$ and exchanges energy with a small system.}
+\slides{Dropped from the live Weeks 6--8 spine.}
 
 \slidesincremental{
 * Two-state system: $E\in\{0,\varepsilon\}$
@@ -179,93 +182,25 @@ local-equilibrium grouping sit here until Worksheet 3 needs them.}
 * Schottky's anomaly: both states populated; maximal thermal response
 }
 
-\speakernotes{Name the Schottky peak. Entropic reading waits for week 8.}
+\speakernotes{Parked / dropped. Do not present unless a named callback is needed.}
 
-\notes{A thermodynamic bath fixes $T$ and exchanges energy with a small system, justifying the canonical ensemble. Heat capacity $C=\partial U/\partial T$ peaks when both states are equally populated — Schottky's anomaly.}
-
-\setupplotcode{import numpy as np
-import matplotlib.pyplot as plt
-import mlai}
-
-\plotcode{epsilon = 1.0
-beta = np.linspace(0.05, 5.0, 400)
-p1 = 1.0 / (1.0 + np.exp(beta * epsilon))
-U = p1 * epsilon
-C = (epsilon ** 2) * p1 * (1 - p1) * beta ** 2
-T = 1.0 / beta
-fig, axes = plt.subplots(1, 2, figsize=(10, 4))
-axes[0].plot(T, U, 'C0', linewidth=2)
-axes[0].set_xlabel('$T$ ($k=1$)')
-axes[0].set_ylabel('$U$')
-axes[0].set_title('Mean energy')
-axes[1].plot(T, C, 'C1', linewidth=2)
-axes[1].set_xlabel('$T$')
-axes[1].set_ylabel('$C$')
-axes[1].set_title('Schottky heat-capacity peak')
-plt.tight_layout()
-mlai.write_figure('schottky-two-state.svg', directory='\writeDiagramsDir/ml')}
-
-\newslide{}
-
-\figure{\includediagram{\diagramsDir/ml/schottky-two-state}{85%}}{Mean energy and heat capacity of a two-state system. The Schottky peak appears when $p_0\approx p_1\approx\frac12$.}{schottky-two-state}
-
-\slides{
-\includediagram{\diagramsDir/ml/schottky-two-state}{85%}
-}
-
-<!-- /SNIPPET: _physics/includes/thermodynamic-bath-schottky.md -->
-
-\slidesincremental{
-* Bath: why the canonical ensemble exists
-* Two-state system: Schottky peak in heat capacity
-* Entropic reading of Schottky: not today
-}
+\notes{A thermodynamic bath fixes $T$ and exchanges energy with a small system, justifying the canonical ensemble. Heat capacity $C=\partial U/\partial T$ peaks when both states are equally populated --- Schottky's anomaly. Dropped from live after GRT replan.}
 
 \subsection{Finite Time Costs More Than $\Delta F$}
 
-<!-- SNIPPET: _physics/includes/finite-time-dissipation-intro.md -->
-
 \newslide{Quasi-Static versus Finite Time}
 
-\slides{Equilibrium thermodynamics gives a prescription for *reversible* work. Real protocols take time.}
+\slides{Dropped --- Crooks / thermodynamic-length path retired.}
 
-\speakernotes{Do not define thermodynamic length here. Name quasi-static $W=\Delta F$ versus finite-time excess. Tie to the die: grouping held $w$ fixed; finite time moves $w(t)$ while hoping groups stay near $\pi_i$. Crooks in weeks 6–7; intelligence in week 8.}
+\speakernotes{Do not present. Finite-time dissipation and thermodynamic length left the live spine with the Fisher pivot.}
 
-\notes{Quasi-static processes achieve reversible work $W=\Delta F$. Finite-time driving dissipates additional energy beyond the equilibrium bound. In the grouping language of the die: equilibrium paths keep within-group distributions at their conditional stationary laws and only the coarse weights (or bath parameter $\beta$) change; rushing that change is what costs extra.}
-
-\setupplotcode{import numpy as np
-import matplotlib.pyplot as plt
-import mlai}
-
-\plotcode{def two_state_F(beta, eps=1.0):
-    Z = 1.0 + np.exp(-beta * eps)
-    return -np.log(Z) / beta
-
-beta0, beta1 = 0.5, 2.0
-path = np.linspace(beta0, beta1, 80)
-F_path = two_state_F(path)
-fig, ax = plt.subplots(figsize=(7, 4))
-ax.plot(path, F_path, 'k-', linewidth=2, label='$F(\\beta)$')
-ax.annotate('', xy=(beta1, two_state_F(beta1)), xytext=(beta0, two_state_F(beta0)),
-            arrowprops=dict(arrowstyle='->', color='green', lw=2))
-ax.text(1.0, -0.55, 'quasi-static: $W=\\Delta F$', color='green')
-ax.annotate('', xy=(beta1, two_state_F(beta1) + 0.15), xytext=(beta0, two_state_F(beta0) + 0.15),
-            arrowprops=dict(arrowstyle='->', color='red', lw=2))
-ax.text(1.0, -0.35, 'finite time: $W > \\Delta F$', color='red')
-ax.set_xlabel(r'$\beta$')
-ax.set_ylabel('$F$')
-ax.legend()
-mlai.write_figure('finite-time-sketch.svg', directory='\writeDiagramsDir/ml')}
-
-\newslide{}
-
-\figure{\includediagram{\diagramsDir/ml/finite-time-sketch}{70%}}{Cartoon of quasi-static versus finite-time driving between two equilibrium states.}{finite-time-sketch}
+\notes{Quasi-static processes achieve reversible work $W=\Delta F$. Finite-time driving dissipates additional energy beyond the equilibrium bound. Overflow only.}
 
 \subsection{Local equilibrium as grouping}
 
 \newslides{Parked: local equilibrium}
 
-\slides{Overflow from Week 4. The live lecture already names kinetic layers; this is the grouping callback.}
+\slides{Overflow from Week 4. Dropped from live.}
 
 \include{_physics/includes/local-equilibrium-grouping.md}
 
@@ -281,17 +216,17 @@ mlai.write_figure('finite-time-sketch.svg', directory='\writeDiagramsDir/ml')}
 
 \newslides{Parked: Szilard / Landauer}
 
-\slides{Overflow from Week 4. The live lecture stops at the fork; Worksheet 3 is the resolution families.}
+\slides{Overflow from Week 4. Worksheet 3 is the resolution families.}
 
 \include{includes/landauer-resolution-overflow.md}
 
 \subsection{Legendre transform}
 
-\newslides{Parked: Legendre — sorted}
+\newslides{Parked: Legendre — dropped from live}
 
-\slides{Moved into Week 6 (`fisher-metric.md`) before dual flatness.}
+\slides{Was Week 6 before the GRT replan. Now notes in `fisher-metric.md.deferred`.}
 
-\notes{Originally overflow from Week 5 when the MaxEnt clock took soft partitions and $I(X;I)$. Now included live in week 6; keep this stub only as the trail.}
+\notes{Originally overflow from Week 5. Kept only as a trail; dual flatness is not on the live Weeks 6--8 path.}
 
 \reading
 

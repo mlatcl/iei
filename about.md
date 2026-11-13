@@ -25,9 +25,9 @@ Entropy appears in three apparently separate traditions — thermodynamics (Bolt
 1. probability and entropy review; Socratic LLM method; that theme via perpetual motion and the human–machine bandwidth gap of *The Atomic Human*; then the Boltzmann distribution and free energy,
 2. Shannon entropy and its formal equivalence to thermodynamic entropy; grouping / missing measure; MaxEnt and the exponential family,
 3. Maxwell's demon as compartments and two ledgers; Landauer's principle as the thermodynamic cost of decision-making,
-4. information geometry: the Fisher metric, Crooks' thermodynamic length, dually flat geometry, MaxEnt as projection, and natural gradient descent,
-5. multi-information, $I+H=C$, DPI and the information bottleneck, von Neumann entropy,
-6. probability transport, Schrödinger bridges, and information-theoretic limits on intelligent agency.
+4. Shannon's communication theorem / channel capacity, the data-processing inequality, and a full overview of the Good Regulator Theorem,
+5. multi-information, $I+H=C$, DPI proof, and the information bottleneck (including as a gloss after GRT),
+6. von Neumann entropy where clock allows, and information-theoretic limits on intelligent agency (Landauer, DPI, GRT applied, human bandwidth).
 
 Four ten-minute in-class quizzes sit at the start of lectures 2, 4, 6 and 8.
 
@@ -44,12 +44,12 @@ Worksheets 1–3 are Socratic LLM dialogues (curiosity then skepticism) plus a h
 | LO5 | Apply Jaynes' maximum entropy principle with Lagrange multipliers under moment constraints | 5 |
 | LO6 | Identify the exponential family as the MaxEnt family (canonical, Gaussian, Bernoulli, …) | 5 |
 | LO7 | Compare information-theoretic, thermodynamic, and Bayesian perspectives on entropy | 5 |
-| LO8 | Describe the manifold of distributions with the Fisher metric and the dually flat geometry of exponential families | 6 |
-| LO9 | Interpret MaxEnt as a projection and explain why natural gradient descent is the geometrically correct gradient | 7 |
-| LO10 | Define multi-information $I$, state $I+H=C$, and relate it to the DPI and information bottleneck | 8 |
+| LO8 | Name Fisher information versus Shannon $H$ (full Riemannian / Crooks path deferred) | 7 |
+| LO9 | MaxEnt as projection / natural gradient (deferred this term; MaxEnt remains Week 5) | — |
+| LO10 | Define multi-information $I$, state $I+H=C$, and relate it to the DPI and information bottleneck | 6–7 |
 | LO11 | Explain why classical $I=C$ forces $H=0$, and show von Neumann entropy resolves nontrivial marginals | 8 |
-| LO12 | Articulate probability transport as an abstraction of agency (Fisher–Rao / Wasserstein / Schrödinger bridge) | 8 |
-| LO13 | Evaluate capability claims with Landauer, $\mathcal{L}^2/\tau$, $I+H=C$, DPI, and human bandwidth | 8 |
+| LO12 | Agency abstraction (transport / three geometries deferred; evaluate via Shannon / DPI / GRT) | 8 |
+| LO13 | Evaluate capability claims with Landauer, $I+H=C$, DPI, GRT, and human bandwidth | 6+8 |
 
 ## Assessment
 
@@ -63,8 +63,8 @@ Four take-home worksheets (15% each, 60% total) and four short in-class quizzes 
 | Quiz 2 | Start of week 4 lecture | 10 min invigilated (paper) | LO1, LO2, LO3 |
 | Worksheet 3 | Start of week 6 | Socratic dialogue + handwritten reflection | LO4 |
 | Quiz 3 | Start of week 6 lecture | 10 min invigilated (paper) | LO4, LO5, LO6, LO7 |
-| Worksheet 4 | Start of week 8 | Notebook + written reflection | LO7–LO13 |
-| Quiz 4 | Start of week 8 lecture | 10 min invigilated (paper) | LO8–LO13 |
+| Worksheet 4 | Start of week 8 | Notebook + written reflection | LO7, LO10, LO11, LO13 |
+| Quiz 4 | Start of week 8 lecture | 10 min invigilated (paper) | LO10, LO11, LO13 |
 
 Details and marking guidance: [assessment]({{ "/assessment/" | relative_url }}).
 
@@ -78,4 +78,4 @@ Ask module questions on [GitHub Discussions](https://github.com/mlatcl/iei/discu
 
 ## Recommended Reading
 
-Shannon (1948), *Bell System Technical Journal*; Jaynes (1957), *Physical Review*; Landauer (1961), *IBM Journal*; Amari & Nagaoka (2000), *Methods of Information Geometry* (Chapters 1–3); Crooks (2007), *Physical Review Letters*. Cover & Thomas (2006) and MacKay (2003) as background. Welling, Lu and Holdijk (2026), *Generative AI and Stochastic Thermodynamics* (GAIST), is a supplementary monograph: Chapter 3 for free energy, Chapter 5 for the ELBO, Chapters 14 and 22 for the Wasserstein and Schrödinger-bridge geometries. It is not a substitute for Crooks (2007) or Amari.
+Shannon (1948), *Bell System Technical Journal*; Jaynes (1957), *Physical Review*; Landauer (1961), *IBM Journal*; Cover & Thomas (2006) and MacKay (2003) as background. Conant & Ashby (1970) for the Good Regulator. Amari & Nagaoka (2000) and Crooks (2007) remain useful for the deferred Fisher / thermodynamic-length path (`fisher-metric.md.deferred`). Welling, Lu and Holdijk (2026), *Generative AI and Stochastic Thermodynamics* (GAIST), is a supplementary monograph: Chapter 3 for free energy, Chapter 5 for the ELBO; Chapters 14 and 22 (Wasserstein / Schrödinger) are optional colour, not on the live Weeks 6–8 spine this term.

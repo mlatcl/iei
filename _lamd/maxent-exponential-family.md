@@ -11,9 +11,10 @@ abstract: >
   reference measure. Soft partitions name mutual information. After the break:
   Jaynes' maximum entropy under constraints, Lagrange on the board, the die,
   and the discrete MaxEnt proof that recovers Boltzmann. The exponential
-  family and $\log Z$ as CGF are named at the close and developed in Week 6.
-  Continuous MaxEnt / Maxwell--Boltzmann density of states stays in the notes
-  as the unread continuous reading.
+  family is named at the close ($\theta=-\lambda$). Continuous MaxEnt,
+  $\log Z$ as CGF, and the full exp-family tour stay in the notes as unread
+  continuous reading (not developed as a live Week 6 block after the
+  Good-Regulator-first replan).
 author:
 - given: Neil D.
   family: Lawrence
@@ -47,7 +48,7 @@ reading:
     required: false
 ---
 
-\notes{No class test today. Quiz 2 was last week (start of lecture 4). Worksheet 2 was due last week. As delivered 10 November 2026: open with a short generative-AI policy aside (MIT report), then Quiz 2 debrief, then KL (overlap, Radon--Nikodym / Jaynes $m$, mutual information, properties). Break *before* MaxEnt. After the break: MaxEnt problem, Lagrange on the board, Laplace / sunrise, Jaynes die, discrete MaxEnt proof. Exponential family and $\log Z$ as CGF named at the close --- developed in Week 6. Continuous MaxEnt / Maxwell--Boltzmann stays in the notes unread.}
+\notes{No class test today. Quiz 2 was last week (start of lecture 4). Worksheet 2 was due last week. As delivered 10 November 2026: open with a short generative-AI policy aside (MIT report), then Quiz 2 debrief, then KL (overlap, Radon--Nikodym / Jaynes $m$, mutual information, properties). Break *before* MaxEnt. After the break: MaxEnt problem, Lagrange on the board, Laplace / sunrise, Jaynes die, discrete MaxEnt proof. Exponential family named at the close ($\theta=-\lambda$). Continuous MaxEnt / $\log Z$ as CGF stay in the notes unread; Week 6 pivots to Shannon capacity, DPI, and the Good Regulator rather than developing CGF live.}
 
 \subsection{This Session}
 
@@ -60,7 +61,7 @@ reading:
 }
 
 \notes{
-**Time plan (as delivered 10 November 2026).** Clocks from the Whisper SRT on the Panopto capture (00:00 ≈ 10:00). The slot is 10:05--11:55 (110 minutes, not 120). Break was called *before* MaxEnt, not mid-MaxEnt. Continuous MaxEnt / $\log Z$ as CGF / full exponential-family tour were not walked as dedicated blocks --- named at the close and parked for Week 6. Legendre ($H=A-\theta\cdot\eta$, dual charts) remains Week 6.
+**Time plan (as delivered 10 November 2026).** Clocks from the Whisper SRT on the Panopto capture (00:00 ≈ 10:00). The slot is 10:05--11:55 (110 minutes, not 120). Break was called *before* MaxEnt, not mid-MaxEnt. Continuous MaxEnt / $\log Z$ as CGF / full exponential-family tour were not walked as dedicated blocks --- named at the close and left as unread notes. After the Good-Regulator-first replan, Week 6 does not develop CGF / Legendre / Fisher live.
 
 | Clock | Block |
 |------:|-------|
@@ -122,7 +123,7 @@ reading:
 
 \speakernotes{State the problem before Lagrange. Not ``entropy is maximised in nature'' as metaphysics: given what we know (the constraints), which distribution assumes least else?}
 
-\notes{If there were no constraints beyond normalisation, Shannon entropy on a finite alphabet is maximised by the uniform distribution. Thermodynamics adds constraints: mean energy fixed, or mean and variance, or a list of moments. The maximum entropy principle asks for the distribution of largest $H$ among those that meet the constraints. That is today's discrete calculation (Jaynes' die), done after the break on 10 November. Equivalently, one may minimise $\KL{p}{m}$ to a declared reference measure $m$ under the same constraints; that continuous ideal-gas reading stays in the notes unread and is developed in Week 6.}
+\notes{If there were no constraints beyond normalisation, Shannon entropy on a finite alphabet is maximised by the uniform distribution. Thermodynamics adds constraints: mean energy fixed, or mean and variance, or a list of moments. The maximum entropy principle asks for the distribution of largest $H$ among those that meet the constraints. That is today's discrete calculation (Jaynes' die), done after the break on 10 November. Equivalently, one may minimise $\KL{p}{m}$ to a declared reference measure $m$ under the same constraints; that continuous ideal-gas reading stays in the notes unread.}
 
 \include{_maths/includes/lagrange-multipliers.md}
 
@@ -240,9 +241,9 @@ This is the same calculation as Jaynes' die (one linear constraint on the face v
 
 \include{_physics/includes/maxent-reference-measure-density-of-states.md}
 
-\speakernotes{Same principle, continuous reading: minimise $\KL{f}{m}$ at fixed mean kinetic energy. Lebesgue on $v_x$ gives a Gaussian component; Lebesgue on $\mathbb{R}^3$ (shell $v^2$ in speed) gives Maxwell--Boltzmann. The $v^2$ is the density of states. As taught 10 November: not walked as a dedicated block --- Week 6 / unread continuous reading.}
+\speakernotes{Same principle, continuous reading: minimise $\KL{f}{m}$ at fixed mean kinetic energy. Lebesgue on $v_x$ gives a Gaussian component; Lebesgue on $\mathbb{R}^3$ (shell $v^2$ in speed) gives Maxwell--Boltzmann. The $v^2$ is the density of states. As taught 10 November: not walked as a dedicated block --- unread continuous reading.}
 
-\notes{As taught on 10 November the continuous MaxEnt / density-of-states reading was not reached after the discrete proof. Keep the include; develop it in Week 6 alongside $\log Z$ as CGF.}
+\notes{As taught on 10 November the continuous MaxEnt / density-of-states reading was not reached after the discrete proof. Keep the include as unread notes; Week 6 pivots to Shannon / DPI / GRT instead.}
 
 \addreading{@MacKay-information03}{Chapter 22}
 
@@ -293,7 +294,7 @@ We use the minus sign so that high-energy states are down-weighted when $\theta_
 
 \include{_physics/includes/partition-function-generating.md}
 
-\notes{The two-state plots recover $U=-\partial_\beta\log Z$ and $F=-\beta^{-1}\log Z$. In exponential-family coordinates the same object is $A(\boldsymbol{\theta})$: $\eta=\nabla A$ are the mean parameters conjugate to $\theta$, and $\nabla^2 A$ is the covariance of the sufficient statistics. Week 6 takes that Hessian as the Fisher metric and Legendre-dualises $(\theta,\eta)$.}
+\notes{The two-state plots recover $U=-\partial_\beta\log Z$ and $F=-\beta^{-1}\log Z$. In exponential-family coordinates the same object is $A(\boldsymbol{\theta})$: $\eta=\nabla A$ are the mean parameters conjugate to $\theta$, and $\nabla^2 A$ is the covariance of the sufficient statistics. The Fisher / Legendre reading of that Hessian is deferred (`fisher-metric.md.deferred`).}
 
 \include{_physics/includes/exponential-families.md}
 
@@ -313,7 +314,7 @@ We use the minus sign so that high-energy states are down-weighted when $\theta_
 * All layers: $H$ forbids, $p$ prescribes
 }
 
-\speakernotes{LO7 in brief. As taught 10 November: not reached. Full colour waits for Week 6 / week 8. Intended answer to ``how is entropy understood today?'' until week 8.}
+\speakernotes{LO7 in brief. As taught 10 November: not reached. Full colour waits for Worksheet 4 / week 8. Intended answer to ``how is entropy understood today?'' until week 8.}
 
 \notes{Clausius gives the macroscopic second law and names entropy. Shannon treats $H$ as a code bound; Szilard and Landauer tie one bit to $k_BT\ln 2$ of work and erasure; Boltzmann counts macrostates at equilibrium; Jaynes treats $p$ as least-committal inference under constraint. All agree: $H$ forbids, $p$ prescribes. As taught on 10 November this brief was not walked; keep it as unread continuous reading.}
 
@@ -329,7 +330,7 @@ We use the minus sign so that high-energy states are down-weighted when $\theta_
 
 \subsection{After This Lecture}
 
-\notes{No class test today. As closed on 10 November: quiz and worksheet next week. Quiz 3 is 17 November at the start of lecture 6, on Weeks 4--5 as delivered (grouping, soft partitions / MI, KL, MaxEnt, exponential family named). Continuous MaxEnt, $\log Z$ as CGF, and the exponential-family tour start after the quiz in Week 6.}
+\notes{No class test today. As closed on 10 November: quiz and worksheet next week. Quiz 3 is 17 November at the start of lecture 6, on Weeks 4--5 as delivered (grouping, soft partitions / MI, KL, MaxEnt, exponential family named). After the quiz, Week 6 closes $\theta=-\lambda$ briefly then pivots to Shannon capacity, DPI, and the Good Regulator --- not CGF / Fisher.}
 
 \slidesincremental{
 * Quiz 3: 17 November, first ten minutes

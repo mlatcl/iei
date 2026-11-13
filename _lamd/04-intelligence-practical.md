@@ -13,15 +13,15 @@ venue: FW26, William Gates Building
 abstract: >
   Compute multi-information and verify \(I+H=C\), then treat the Bell
   state as the quantum resolution of \(I=C\) with non-trivial marginals.
-  The reflection asks you to contrast three geometries of an optimal
-  change of state and to evaluate the perpetual-motion analogy with the
-  course's formal constraints.
+  The reflection asks you to apply the data-processing inequality and
+  the Good Regulator Theorem (with caveats), and to evaluate the
+  perpetual-motion analogy for unbounded intelligence.
 author:
 - given: Neil D.
   family: Lawrence
   institution: University of Cambridge
   url: http://inverseprobability.com
-outcomes: [LO7, LO8, LO9, LO10, LO11, LO12, LO13]
+outcomes: [LO7, LO10, LO11, LO13]
 duration_hours: 3
 type: practical
 assessment_id: W4
@@ -36,9 +36,9 @@ word_count: 500
 
 \notes{Released after lecture 6 (17 November). Due by 10:00 at the start of lecture 8 (1 December), *before* Quiz 4. Estimated three hours. This is the capstone worksheet, 15% of the module mark.
 
-**Builds on lectures 5–7.** Part A1–A2 use the $I+H=C$ family (`multi-information-rho` figure). Part A3 treats the Bell state. Part B contrasts three geometries (LO8, LO12), may invoke MaxEnt as an $m$-projection / natural gradient (LO9), and uses the three perspectives on entropy (LO7) when separating no-gos from prescriptions; DPI and the information bottleneck (LO10) sharpen that split.
+**Builds on lectures 5–7.** Part A1–A2 use the $I+H=C$ family (`multi-information-rho` figure). Part A3 treats the Bell state. Part B applies DPI and the Good Regulator Theorem (earned in lecture 6; IB gloss in lecture 7), uses the three perspectives on entropy (LO7) when separating no-gos from prescriptions, and evaluates capability claims with Landauer, $I+H=C$, DPI, and human bandwidth (LO13).}
 
-\notes{Submit `candidatenumber_worksheet4.ipynb` and `candidatenumber_worksheet4.md` on Moodle. LLMs are permitted. Use the Lecture 1 habit: curiosity first, then skeptical probes. Authenticity is checked by Quiz 4 at the start of lecture 8, on a *new* example (three independent coins; a GHZ state rather than a Bell state).}
+\notes{Submit `candidatenumber_worksheet4.ipynb` and `candidatenumber_worksheet4.md` on Moodle. LLMs are permitted. Use the Lecture 1 habit: curiosity first, then skeptical probes. Authenticity is checked by Quiz 4 at the start of lecture 8, on a *new* example that does not reuse this worksheet's setups.}
 
 \include{_iei/includes/iei-notebook-setup.md}
 
@@ -84,16 +84,16 @@ def partial_trace_B(rho):
 
 \section{Part B -- Reflection}
 
-\writeassignment{Three geometries (200 words). Shannon abstracted a code as probability over symbols. Write a short argument for why *probability transport* -- moving a distribution from \(p\) to \(q\) -- is a natural abstraction of agency. Then distinguish, in your own words, three notions of an optimal trajectory that this module has named: Crooks / Fisher--Rao thermodynamic length (the Fisher metric on the equilibrium manifold), Wasserstein optimal transport, and the Schrödinger bridge. Say briefly how MaxEnt as an $m$-projection (and, if useful, the natural gradient) sits with the Fisher--Rao picture. What would it mean to collapse the three geometries, and why must you not?}{25}{}
+\writeassignment{DPI and the Good Regulator (200 words). State the data-processing inequality in your own words and give one concrete intelligence-claim that would violate it. Then state the Good Regulator Theorem as an *existence* claim ($H(A\mid S)=0$ among $H(Z)$-minimisers). Distinguish it from Ashby's requisite variety. Name both caveats from lecture 6 (weak model; predictability versus desirability). Optionally, say how the information-bottleneck gloss $\min I(S;A)$ subject to $H(Z)\le\epsilon$ sits *after* the theorem without replacing it.}{25}{}
 
-\writeassignment{The perpetual motion analogy (300 words). Using at least two formal no-gos from the course (Landauer, \(\mathcal{L}^2/\tau\), \(I+H=C\), the data-processing inequality, human bandwidth), argue why unbounded intelligence -- a system that processes information without entropic cost -- has the same shape as perpetual motion. Say which of your constraints are no-gos and which of the three geometries (or the information bottleneck) are prescriptions. Use the three perspectives on entropy (thermodynamic, information-theoretic, Bayesian) where they clarify that split. Where is the analogy tight? Where does it break down? If you used an LLM, include the key responses as an appendix, not counted in the word limit.}{25}{}
+\writeassignment{The perpetual motion analogy (300 words). Using at least two formal no-gos from the course (Landauer, $I+H=C$, the data-processing inequality, Shannon's $R\le C$, human bandwidth), argue why unbounded intelligence -- a system that processes information without entropic cost -- has the same shape as perpetual motion. Say which of your constraints are no-gos and which tools (capacity-achieving $p(x)$, MaxEnt $p$, IB compression, a GRT deterministic policy) are prescriptions. Use the three perspectives on entropy (thermodynamic, information-theoretic, Bayesian) where they clarify that split. Where is the analogy tight? Where does it break down? If you used an LLM, include the key responses as an appendix, not counted in the word limit.}{25}{}
 
 \section{Marking}
 
 \notes{
 - 60--74: multi-information computed; Bell density matrix written out; perpetual-motion analogy addressed at a surface level.
-- 75--79: \(S(\rho)=0\) with \(S(\rho_A)>0\) is correctly linked to \(I=C\); the three geometries are distinguished, not collapsed; no-go versus prescription is named.
-- 80--89: the perpetual-motion argument is formal (not just an analogy) and uses Landauer or \(\mathcal{L}^2/\tau\) or $I+H=C$ / DPI tightly; Fisher--Rao length or MaxEnt-as-projection is used accurately; Part A2 extended (three variables, or a continuous family).
+- 75--79: \(S(\rho)=0\) with \(S(\rho_A)>0\) is correctly linked to \(I=C\); DPI versus GRT versus requisite variety are distinguished; no-go versus prescription is named; both GRT caveats appear.
+- 80--89: the perpetual-motion argument is formal (not just an analogy) and uses Landauer or $I+H=C$ / DPI / $R\le C$ tightly; IB is correctly treated as a gloss after GRT, not as the theorem; Part A2 extended (three variables, or a continuous family).
 - 90--100: original contribution -- a case where the analogy fails, and a proposal for what a stronger information-theoretic limit would require.
 }
 

@@ -4,25 +4,25 @@ outcomes:
     text: "Students will be able to decompose the Boltzmann distribution into contributions from internal energy, entropy, and Helmholtz free energy, and interpret each term's physical and informational meaning."
     bloom_level: analyse
     week: 2
-    notes: "p_i ∝ exp(-E_i/kT); Z; F = -kT log Z = U - TS. Available (free) energy is what remains after the entropic no-go. Seeded in week 1; Hydrodynamica / entropy / embodiment in week 2 as delivered; named and accounted in week 3 (Gibbs/Boltzmann form; Hopfield / Boltzmann-machine colour only). Free-energy reading of log Z returns in the Week 5 Quiz 2 debrief; log Z as cumulant generating function (A=log Z, η=∇A) is also Week 5 after MaxEnt / θ=−λ. Legendre dual is Week 6. MaxEnt derivation of the weights waits for week 5 (LO5). Theme: entropy forbids; probability prescribes. Historical thread: Carnot (1824, engines) → Clausius (1850s–1865, second law; entropy named) → Boltzmann/Gibbs (statistical count) → Shannon/Jaynes (information). Motivations: perpetual motion, and the human–machine bandwidth gap from The Atomic Human (Lawrence, 2024)."
+    notes: "p_i ∝ exp(-E_i/kT); Z; F = -kT log Z = U - TS. Available (free) energy is what remains after the entropic no-go. Seeded in week 1; Hydrodynamica / entropy / embodiment in week 2 as delivered; named and accounted in week 3 (Gibbs/Boltzmann form; Hopfield / Boltzmann-machine colour only). Free-energy reading of log Z returns in the Week 5 Quiz 2 debrief. CGF / Legendre dual / Fisher geometry are notes-only after the Good-Regulator-first replan. MaxEnt derivation of the weights waits for week 5 (LO5). Theme: entropy forbids; probability prescribes. Historical thread: Carnot (1824, engines) → Clausius (1850s–1865, second law; entropy named) → Boltzmann/Gibbs (statistical count) → Shannon/Jaynes (information). Motivations: perpetual motion, and the human–machine bandwidth gap from The Atomic Human (Lawrence, 2024)."
 
   - id: LO2
     text: "Students will be able to derive Shannon entropy as a measure of uncertainty and prove its formal equivalence to thermodynamic (Gibbs) entropy in equilibrium statistical mechanics."
     bloom_level: apply
     week: 3
-    notes: "Shannon H = -Σ p_i log p_i; Boltzmann S = k H. H bounds what a code cannot do; p is the code or the belief. The information game, MacKay's balance, and die grouping $H=H(w)+∑ w_i H(p_i)$ were named in week 3 and are taught at the start of week 4 as the setup for Maxwell's demon. Channel capacity (R ≤ C) remains scaffolding; the data-processing inequality is stated, not proved; proof and the information bottleneck wait for week 8 (LO10)."
+    notes: "Shannon H = -Σ p_i log p_i; Boltzmann S = k H. H bounds what a code cannot do; p is the code or the belief. The information game, MacKay's balance, and die grouping $H=H(w)+∑ w_i H(p_i)$ were named in week 3 and are taught at the start of week 4 as the setup for Maxwell's demon. Channel capacity (R ≤ C) and a DPI *statement* are live in week 6; the DPI proof and information bottleneck are week 7 (LO10)."
 
   - id: LO3
     text: "Students will be able to derive the canonical ensemble and use the partition function to compute mean energy, entropy, and free energy for simple systems."
     bloom_level: apply
     week: 3
-    notes: "Practical computation. Bridges thermodynamics formalism to Jaynes MaxEnt. Partition function Z for U, F, S in week 3; the cumulant generating function reading A(θ)=log Z(-θ) with η=∇A is Week 5 after MaxEnt."
+    notes: "Practical computation. Bridges thermodynamics formalism to Jaynes MaxEnt. Partition function Z for U, F, S in week 3. The cumulant generating function reading A(θ)=log Z(-θ) with η=∇A stays notes-only after the Good-Regulator-first replan (unread continuous material in the Week 5 file / fisher-metric.md.deferred)."
 
   - id: LO4
     text: "Students will be able to explain Maxwell's demon thought experiment, identify where the apparent violation of the second law arises, and apply Landauer's principle to show that information erasure restores thermodynamic consistency."
     bloom_level: analyse
     week: 4
-    notes: "Maxwell (1867); Landauer (1961): erasing one bit costs k_B T ln 2. Feedback work bounded by k_B T I(X;M) (Parrondo/Sagawa–Ueda). Macroscopic engines (car) cannot exploit demon-style feedback — thermal DOF/s dwarfs any bit memory; molecular machines (ATP synthase) operate at the scale where information thermodynamics applies. First rigorous link between decision-making and entropy; multi-information and I+H=C come later (week 8)."
+    notes: "Maxwell (1867); Landauer (1961): erasing one bit costs k_B T ln 2. Feedback work bounded by k_B T I(X;M) (Parrondo/Sagawa–Ueda). Macroscopic engines (car) cannot exploit demon-style feedback — thermal DOF/s dwarfs any bit memory; molecular machines (ATP synthase) operate at the scale where information thermodynamics applies. First rigorous link between decision-making and entropy; multi-information and I+H=C deepen in week 7 (LO10)."
 
   - id: LO5
     text: "Students will be able to apply Jaynes' maximum entropy principle, using Lagrange multipliers, to derive the least-committal probability distribution consistent with a set of moment constraints."
@@ -34,7 +34,7 @@ outcomes:
     text: "Students will be able to identify the exponential family as the MaxEnt family and explain why the canonical ensemble, Gaussian, and Bernoulli distributions all belong to it."
     bloom_level: analyse
     week: 5
-    notes: "p(x|θ) = exp(θ·T(x) - A(θ)) with θ = −λ. Unifies thermodynamics, Bayesian statistics and ML. Softmax / two-spin named if clock allows. Week 5 also returns to soft/overlapping coarse-graining: H(X)=H(w)+∑ w_i H(p_i)−H(I|X), with mutual information I(X;I)=H(w)−H(I|X)=KL{p(x,i)}{p(x)p(i)}. A as CGF (η=∇A, G=∇²A) closes Week 5; the Legendre conjugate H = A − θ·η is Week 6. Connects to variational inference and the natural gradient."
+    notes: "p(x|θ) = exp(θ·T(x) - A(θ)) with θ = −λ. Unifies thermodynamics, Bayesian statistics and ML. Softmax / two-spin named if clock allows. Week 5 also returns to soft/overlapping coarse-graining: H(X)=H(w)+∑ w_i H(p_i)−H(I|X), with mutual information I(X;I)=H(w)−H(I|X)=KL{p(x,i)}{p(x)p(i)}. θ=−λ is named at the Week 5 close and briefly recalled in Week 6; A as CGF / Legendre dual / Fisher geometry are notes-only after the Good-Regulator-first replan (see fisher-metric.md.deferred)."
 
   - id: LO7
     text: "Students will be able to compare and contrast the information-theoretic, thermodynamic, and Bayesian perspectives on entropy, articulating the distinct operational assumptions each makes and identifying what each perspective illuminates or obscures."
@@ -45,38 +45,38 @@ outcomes:
   - id: LO8
     text: "Students will be able to describe the manifold of probability distributions as a Riemannian space, define the Fisher information matrix as its metric, and explain the dually flat geometry of exponential families including the Pythagorean theorem for KL divergence."
     bloom_level: analyse
-    week: 6
-    notes: "Amari & Nagaoka (2000). g_ij = E[∂_i log p · ∂_j log p]. e-flat (natural parameters) and m-flat (mean parameters) coordinate systems — the Legendre pair (θ, η), using Week 5's A=log Z and η=∇A. Pythagorean theorem: KL(p||r) = KL(p||q) + KL(q||r) when q is the e/m projection. This metric is Crooks' thermodynamic length (2007): the Fisher–Rao length of a path of equilibrium states. In the slow-driving regime dissipation is bounded by L²/τ. Define length in week 6; interpret as a constraint on intelligence in week 8."
+    week: 7
+    notes: "Thin / vocabulary after the Good-Regulator-first replan. Week 7 names Fisher I(θ) ≠ Shannon H only. Full Riemannian / dual-flat / Crooks thermodynamic-length development lives in fisher-metric.md.deferred and is not on the live Weeks 6–8 spine this term."
 
   - id: LO9
     text: "Students will be able to apply information geometry to interpret maximum entropy inference as a projection onto a constraint manifold and to explain why natural gradient descent is the geometrically correct gradient for statistical models."
     bloom_level: apply
     week: 7
-    notes: "MaxEnt = m-projection of uniform onto the constraint surface. Natural gradient = F^{-1} ∇L where F is the Fisher matrix. Removes the arbitrary dependence on parameterisation. Geodesics of the same metric are Crooks' minimum-dissipation protocols. One computed geodesic on a two-parameter exponential family is enough in week 7."
+    notes: "Deferred with the projection / natural-gradient lecture (maxent-projection.md.deferred). Not assessed live after the GRT replan; MaxEnt remains the Week 5 discrete derivation."
 
   - id: LO10
     text: "Students will be able to define multi-information I, state the conservation law I + H = C, and explain the analogy between this structure and the kinetic/potential energy trade-off in classical mechanics."
     bloom_level: analyse
-    week: 8
-    notes: "Watanabe (1960). I = Σ h_i - H ≥ 0. Mutual information is the pairwise case. With fixed marginal entropies C = Σ h_i, conservation I + H = C. I ~ potential energy (stored correlation); H ~ kinetic energy (free uncertainty). Data-processing inequality (Cover & Thomas Thm 2.8.1): if X→Y→Z is Markov, I(X;Z)≤I(X;Y) — processing cannot create information. Information bottleneck (Tishby, Pereira, Bialek 1999): the prescription inside that fence — minimise I(X;T) subject to I(T;Y)≥R, or min I(X;T)−β I(T;Y). Named in week 3; taught this week; used later in the same session for LO13. Not separate outcomes. The inaccessible-game introduction may appear as light colour, not as a full axiomatic framework."
+    week: 7
+    notes: "Watanabe (1960). I = Σ h_i - H ≥ 0. Mutual information is the pairwise case. With fixed marginal entropies C = Σ h_i, conservation I + H = C. Week 6 states Shannon capacity and DPI; Week 7 proves DPI (Cover & Thomas Thm 2.8.1) and teaches the information bottleneck (Tishby, Pereira, Bialek 1999) as the prescription inside that fence — and as a gloss after the Good Regulator Theorem, not the theorem itself."
 
   - id: LO11
     text: "Students will be able to explain why the classical limit I = C requires H = 0, argue that sustaining high marginal entropies alongside I = C forces a move beyond classical probability, and show that von Neumann entropy S(ρ) = −Tr(ρ log ρ) satisfies S = 0 for a pure entangled state while its marginals carry positive entropy."
     bloom_level: analyse
     week: 8
-    notes: "Classically H = 0 ⟹ deterministic (delta distribution). Quantum: pure entangled state |ψ⟩ has S(ρ) = 0 but reduced states ρ_A, ρ_B have S > 0. Forced by asking for I = C with nontrivial marginals under classical probability. Algebraic quantum probability: outcomes no longer primitive."
+    notes: "Classically H = 0 ⟹ deterministic (delta distribution). Quantum: pure entangled state |ψ⟩ has S(ρ) = 0 but reduced states ρ_A, ρ_B have S > 0. Forced by asking for I = C with nontrivial marginals under classical probability. Taught in the Week 8 close after Quiz 4."
 
   - id: LO12
     text: "Students will be able to articulate how the movement of probability mass between distributions provides an abstraction of intelligent agency — analogous to Shannon's use of probability to abstract a communication code — and sketch the role of optimal transport and Schrödinger bridges in formalising this abstraction."
     bloom_level: evaluate
     week: 8
-    notes: "Shannon: probability over symbols abstracts a code. Analogy: probability transport abstracts an agent (an act as a coupling). Three geometries of an optimal change of state, which must not be collapsed: (1) Fisher–Rao / Crooks thermodynamic length — near-eq, minimum dissipation, bound L²/τ; (2) Wasserstein — minimum ground-cost of moving mass; (3) Schrödinger bridge — maximum-entropy interpolation between p and q. Sinkhorn / IPF is the discrete algorithm for (3), entropy-regularized OT; it is not a fourth geometry, and Wasserstein only as ε→0. Students need the intuition, not the technical details, and must say which geometry they are using."
+    notes: "Thin after the GRT replan. Agency-as-transport / three geometries / Schrödinger bridges are not the live Week 8 spine; notes remain in the deferred limits/transport material. Week 8 instead evaluates agency with Shannon / DPI / GRT / Landauer / bandwidth."
 
   - id: LO13
     text: "Students will be able to evaluate claims about the capabilities of intelligent systems using Landauer's principle, the perpetual motion analogy, and information-theoretic constraints including I + H = C, the data-processing inequality, and human bandwidth; and to sketch why an H(Z)-optimal regulator may be taken deterministic (H(A|S)=0), noting that this model condition is weak and that low H(Z) is predictability rather than desirability."
     bloom_level: evaluate
     week: 8
-    notes: "Closes the loop opened in Week 1. Superintelligence ~ perpetual motion: both promise to repeal a no-go. Evaluate with Landauer, L²/τ, I+H=C, DPI, and the human bandwidth constraint from The Atomic Human. The information bottleneck is a prescription (LO10), not a further no-go. Good Regulator (named tool, not a separate outcome and not the course punchline): among min-H(Z) policies there exists one with H(A|S)=0, earned from concavity of Shannon entropy (deterministic ψ: concentration lemma; stochastic channel: extreme points of the policy polytope). Caveats: constant A=a₀ also has H(A|S)=0; H(Z)=0 can be reliably bad. Requisite variety as H(E)≥H(D)−I(D;R). IB form min I(S;A) s.t. H(Z)≤ε is a course gloss after the theorem, not Conant–Ashby. The three geometries are prescriptions, not further no-gos. Inaccessible-game material, if present, is colour only."
+    notes: "Closes the loop opened in Week 1. Superintelligence ~ perpetual motion: both promise to repeal a no-go. Evaluate with Landauer, I+H=C, DPI, Shannon R≤C, and the human bandwidth constraint from The Atomic Human. Good Regulator is earned as a full overview in Week 6 (concavity / extreme points; two caveats) and applied in Week 8. IB form min I(S;A) s.t. H(Z)≤ε is a course gloss after the theorem, not Conant–Ashby. L²/τ and three geometries are not live no-gos/prescriptions this term."
 ---
 
 # Learning Outcomes
@@ -128,7 +128,7 @@ multi-perspective fluency required by LO7.
 
 ## Lecture map
 
-Eight Tuesdays, 13 October – 1 December 2026, 10:00–12:00, FW26, William Gates Building. Each slot is two hours (speech 10:05--11:55). Class tests take the first ten minutes of lectures 2, 4, 6 and 8 (weeks 2, 4, 6, 8). Week 8 splits the two-hour slot: multi-information / DPI / IB / von Neumann, then probability transport and limits.
+Eight Tuesdays, 13 October – 1 December 2026, 10:00–12:00, FW26, William Gates Building. Each slot is two hours (speech 10:05--11:55). Class tests take the first ten minutes of lectures 2, 4, 6 and 8 (weeks 2, 4, 6, 8). After the Good-Regulator-first replan: Week 6 earns Shannon capacity, DPI (statement), and a full GRT overview; Week 7 deepens $I+H=C$, proves DPI, and develops IB as gloss; Week 8 closes with Quiz 4 and LO13 synthesis (von Neumann / $I=C$ if clock allows).
 
 | Week | Date | Topic | Outcomes | In slot |
 |------|------|-------|----------|---------|
@@ -136,10 +136,10 @@ Eight Tuesdays, 13 October – 1 December 2026, 10:00–12:00, FW26, William Gat
 | 2 | 20 Oct | Gibbs--Boltzmann form; free energy $F=U-TS$; HMC; Schottky | LO1 | Q1 (10 min); W1 due |
 | 3 | 27 Oct | Heat thread; Helmholtz $F=U-TS$. Game / MacKay named, not reached | LO1, LO2, LO3 | |
 | 4 | 3 Nov | Quiz 2; questions / MacKay / grouping; missing measure; demon as compartments and two ledgers | LO2, LO4 | Q2 (10 min); W2 due; W3 released |
-| 5 | 10 Nov | KL + MI; MaxEnt; exponential family ($\theta=-\lambda$); $\log Z$ as CGF | LO5, LO6, LO7 | |
-| 6 | 17 Nov | Quiz 3; Legendre; Fisher metric; thermodynamic length (Crooks) | LO8 | Q3 (10 min); W3 due; W4 released |
-| 7 | 24 Nov | MaxEnt as projection; natural gradient; geodesics | LO9 | |
-| 8 | 1 Dec | Multi-information; DPI; IB; von Neumann; three geometries; limits on intelligence | LO10–LO13 | Q4 (10 min, LO8–LO13); W4 due (LO7–LO13) |
+| 5 | 10 Nov | KL + MI; MaxEnt; exponential family named ($\theta=-\lambda$) | LO5, LO6, LO7 | |
+| 6 | 17 Nov | Quiz 3; $\theta=-\lambda$ bridge; Shannon capacity; DPI statement; Good Regulator | LO10, LO13 | Q3 (10 min); W3 due; W4 released |
+| 7 | 24 Nov | Multi-information / $I+H=C$; DPI proof; IB as GRT gloss; Fisher named thinly | LO8, LO9, LO10 | |
+| 8 | 1 Dec | Quiz 4; von Neumann / $I=C$ (optional); LO13 synthesis (Landauer, DPI, GRT, bandwidth) | LO11–LO13 | Q4 (10 min, LO10–LO13); W4 due (LO7, LO10–LO11, LO13) |
 
 ## Outcome summary
 
@@ -152,9 +152,9 @@ Eight Tuesdays, 13 October – 1 December 2026, 10:00–12:00, FW26, William Gat
 | LO5  | Maximum entropy principle (Jaynes)                    | Apply       | 5    |
 | LO6  | Exponential family as MaxEnt family                   | Analyse     | 5    |
 | LO7  | Compare three perspectives on entropy                 | Evaluate    | 5    |
-| LO8  | Fisher metric and dually flat geometry                | Analyse     | 6    |
-| LO9  | MaxEnt as projection; natural gradient                | Apply       | 7    |
-| LO10 | Multi-information; DPI; information bottleneck       | Analyse     | 8    |
+| LO8  | Fisher metric (thin / vocabulary this term)           | Analyse     | 7    |
+| LO9  | MaxEnt as projection (deferred; MaxEnt remains W5)  | Apply       | 7    |
+| LO10 | Multi-information; DPI; information bottleneck       | Analyse     | 6–7  |
 | LO11 | I = C forces quantum: von Neumann entropy             | Analyse     | 8    |
-| LO12 | Probability transport as abstraction of agency        | Evaluate    | 8    |
-| LO13 | Limits on intelligence; entropic Good Regulator sketch | Evaluate    | 8    |
+| LO12 | Agency via Shannon / DPI / GRT (transport deferred)   | Evaluate    | 8    |
+| LO13 | Limits on intelligence; Good Regulator earned W6      | Evaluate    | 6, 8 |

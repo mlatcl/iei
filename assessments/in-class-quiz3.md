@@ -30,7 +30,7 @@ platform: paper
 
 **Administered**: Start of Week 6 lecture (first 10 minutes), 17 November 2026.  
 **Format**: 10-mark paper test (matching, T/F, fill-blank, selection). No notes, no internet, no LLMs.  
-**Covers**: Weeks 4–5 as delivered (LO4–LO7): grouping $H=H(w)+\sum_i w_i H(p_i)$; the missing measure; Maxwell's demon as compartments and two ledgers; MaxEnt and the exponential family. Not Fisher / Crooks (taught after the quiz).
+**Covers**: Weeks 4–5 as delivered (LO4–LO7): grouping $H=H(w)+\sum_i w_i H(p_i)$; the missing measure; Maxwell's demon as compartments and two ledgers; MaxEnt and the exponential family *named* ($\theta=-\lambda$). Not continuous MaxEnt / $\log Z$ as CGF (unread notes). Not Shannon capacity, DPI, or the Good Regulator (taught after the quiz in Week 6).
 
 The `question_bank` path points at the MaxEnt / demon pool for tooling reuse only (`quiz-banks/q2-maxent-landauer.yaml`; filename is historical); it is not the printed paper. LO7 also returns on Worksheet 4 as a second surface.
 
