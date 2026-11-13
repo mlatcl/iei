@@ -30,7 +30,7 @@ Released 17 November (lecture 6). Due Tuesday 1 December 2026, 10:00 (start of l
 
 **Builds on lectures 5–7.** Part B asks students to apply the data-processing inequality and the Good Regulator Theorem with both caveats (LO10 / LO13); to keep requisite variety distinct from GRT; to treat the information bottleneck as a gloss after GRT, not as the theorem; and to use the three perspectives on entropy (LO7) when separating no-gos from prescriptions alongside Landauer, $I+H=C$, DPI, Shannon $R\le C$, and human bandwidth.
 
-Submit: `candidatenumber_worksheet4.ipynb` and `candidatenumber_worksheet4.md`.
+Submit: `L172_<CRSid>_worksheet4.ipynb` and `L172_<CRSid>_worksheet4.md`.
 
 ## Marking Guidance
 

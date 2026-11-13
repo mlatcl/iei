@@ -38,7 +38,7 @@ word_count: 500
 
 **Builds on lectures 5–7.** Part A1–A2 use the $I+H=C$ family (`multi-information-rho` figure). Part A3 treats the Bell state. Part B applies DPI and the Good Regulator Theorem (earned in lecture 6; IB gloss in lecture 7), uses the three perspectives on entropy (LO7) when separating no-gos from prescriptions, and evaluates capability claims with Landauer, $I+H=C$, DPI, and human bandwidth (LO13).}
 
-\notes{Submit `candidatenumber_worksheet4.ipynb` and `candidatenumber_worksheet4.md` on Moodle. LLMs are permitted. Use the Lecture 1 habit: curiosity first, then skeptical probes. Authenticity is checked by Quiz 4 at the start of lecture 8, on a *new* example that does not reuse this worksheet's setups.}
+\notes{Submit `L172_<CRSid>_worksheet4.ipynb` and `L172_<CRSid>_worksheet4.md` on Moodle. Use your CRSid in the filenames, not your full name. LLMs are permitted. Use the Lecture 1 habit: curiosity first, then skeptical probes. Authenticity is checked by Quiz 4 at the start of lecture 8, on a *new* example that does not reuse this worksheet's setups.}
 
 \include{_iei/includes/iei-notebook-setup.md}
 
