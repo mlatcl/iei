@@ -30,7 +30,7 @@
 * What values are intensive: e.g. pressure as an intensive variable was a common miss.
 }
 
-\notes{Named matching (Black, Carnot, Rumford, Joule), the Joule blank on $k_BTH$, hurricane / grid coarse-graining, and $S=k_BH$ with units were mostly got when attempted. The two ideas worth looking at again are what $\log Z$ *is*, and what Clausius was *doing* in the heat thread (not naming uncertainty). Pressure as intensive was the third recurring miss: pressure and temperature are weather-map fields (isobars); molecule count and heat energy are extensive --- that is why you can draw fields of $P$ and $T$.}
+\notes{Named matching (Black, Carnot, Rumford, Joule), the Joule blank on $k_BTH$, hurricane / grid coarse-graining, and $S=k_BH$ with units were mostly got when attempted. The two ideas worth looking at again are what $\log Z$ *is*, and what Clausius was *doing* in the heat thread (not naming uncertainty). Pressure as intensive was the third recurring miss: pressure and temperature are weather-map fields (isobars); molecule count and heat energy are extensive --- that is why you can draw fields of $p$ and $T$.}
 
 \newslide{What $\log Z$ Is}
 
@@ -42,7 +42,9 @@
 * Up to $-k_BT$, that second piece is available energy (not $U$, and not $H$)
 }
 
-\notes{There were some confusions where people suggested that $\log Z=U$ and $\log Z=H$. The Zustandssumme etymology was often known on its own; the available-energy reading was the part that dropped. As a reminder inner energy is composed of an entropy term and an available-energy term in $\log Z$. Equivalently $F=U-TS=-k_BT\log Z$. Physical entropy versus Shannon: Boltzmann's constant carries joules per kelvin; $\log Z$ is dimensionless; physicists often omit $k_B$. We'll see some related ideas when we look at MaxEnt today. Honest aside as spoken: still looking for a better intuition why the partition function *is* available energy --- learning by teaching.}
+\notes{There were some confusions where people suggested that $\log Z=U$ and $\log Z=H$. The Zustandssumme etymology was often known on its own; the available-energy reading was the part that dropped. As a reminder inner energy is composed of an entropy term and an available-energy term in $\log Z$. Equivalently $F=U-TS=-k_BT\log Z$. Physical entropy versus Shannon: Boltzmann's constant carries joules per kelvin; $\log Z$ is dimensionless; physicists often omit $k_B$. We'll see some related ideas when we look at MaxEnt today. 
+
+We haven't provided a good intuition why the partition function *is* available energy.}
 
 \speakernotes{If the room needs the one-liner: $F=-k_BT\log Z$. Prefer the split story over listing wrong options. Do not derive MaxEnt here (that is the rest of the hour).}
 
@@ -68,7 +70,7 @@
 * Clausius keeps both: heat cannot all become work
 }
 
-\notes{Spoken colour on 10 November: Carnot as a waterwheel. Entropy enters the bucket at high $T$, drops through the engine, and leaves at low $T$; $T\times S$ is an energy in joules. A reversible engine spills no water. The Mill Works pub waterwheel is the inefficiency demo --- water that misses the wheel does no work. Kinetic waterwheels (no height drop) were named as a reminder that more is going on than the potential-drop analogy. Course-local: keep the pub name here, not in reusable snippets.}
+\notes{We can see Carnot's cycle as analogous to a waterwheel. Entropy enters the bucket at high $T$, drops through the engine, and leaves at low $T$; $T\times S$ is an energy in joules. A reversible engine spills no water.  Water that misses the wheel bucket does no work. (Note that kinetic waterwheels (no height drop)  remind us that more is going on in a water wheel.}
 
 \speakernotes{Bridge: Worksheet 2 pressed $H$ versus $S$; this item pressed the physical thread that $S$ came from. Contested narrative next, then into the KL arc.}
 
@@ -79,9 +81,8 @@
 \slidesincremental{
 * Worksheets: use an LLM to press the contested edges
 * Marks are on the quizzes and the understanding you defend in the room
-* Dinner colour: Blei, Rasmussen, Turner, Hernández-Lobato --- narrative as scaffolding
 }
 
-\notes{As spoken: not marking students on the narrative; giving a narrative and letting them explore around it with the LLM worksheets. The subjects students explore on the worksheets are feeding later lectures. Dinner with David Blei, Carl Rasmussen, Rich Turner and Miguel Hernández-Lobato named the same tension --- a contested story that scaffolds learning rather than a single correct history. Course-local names stay in this include.}
+\notes{Reminder: you are not being marked on the narrative, it provides structure for you to explore with the LLM worksheets. }
 
 \endif
