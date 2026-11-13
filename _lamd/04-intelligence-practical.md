@@ -21,7 +21,7 @@ author:
   family: Lawrence
   institution: University of Cambridge
   url: http://inverseprobability.com
-outcomes: [LO7, LO10, LO11, LO13]
+outcomes: [LO7, LO10, LO11, LO12, LO13]
 duration_hours: 3
 type: practical
 assessment_id: W4

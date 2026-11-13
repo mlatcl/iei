@@ -43,22 +43,22 @@ outcomes:
     notes: "Central synthesis outcome. Shannon: channel capacity / data compression. Boltzmann/Gibbs: macrostate counting / equilibrium. Jaynes/Bayes: rational inference under constraint. All are the same H; the difference is in what the probability is over and who is doing the inferring. All three agree that H forbids and p prescribes."
 
   - id: LO8
-    text: "Students will be able to describe the manifold of probability distributions as a Riemannian space, define the Fisher information matrix as its metric, and explain the dually flat geometry of exponential families including the Pythagorean theorem for KL divergence."
-    bloom_level: analyse
+    text: "Students will be able to distinguish Fisher information I(θ) from Shannon entropy H, stating that the former measures sensitivity of a parametric model to its parameters while the latter measures uncertainty in an outcome."
+    bloom_level: understand
     week: 7
-    notes: "Thin / vocabulary after the Good-Regulator-first replan. Week 7 names Fisher I(θ) ≠ Shannon H only. Full Riemannian / dual-flat / Crooks thermodynamic-length development lives in fisher-metric.md.deferred and is not on the live Weeks 6–8 spine this term."
+    notes: "Vocabulary outcome after the Good-Regulator-first replan. Named in Week 7 only if clock allows; not a Riemannian deep dive. Full Fisher metric / dual flatness / Crooks thermodynamic length remain in fisher-metric.md.deferred."
 
   - id: LO9
-    text: "Students will be able to apply information geometry to interpret maximum entropy inference as a projection onto a constraint manifold and to explain why natural gradient descent is the geometrically correct gradient for statistical models."
-    bloom_level: apply
+    text: "Students will be able to identify maximum-entropy inference as an m-projection onto a constraint set in the space of distributions, without computing natural gradients or geodesics."
+    bloom_level: remember
     week: 7
-    notes: "Deferred with the projection / natural-gradient lecture (maxent-projection.md.deferred). Not assessed live after the GRT replan; MaxEnt remains the Week 5 discrete derivation."
+    notes: "Thin naming only. Natural gradient, dual flatness, and geodesic / minimum-dissipation development stay in maxent-projection.md.deferred. Live MaxEnt derivation remains Week 5 (LO5)."
 
   - id: LO10
-    text: "Students will be able to define multi-information I, state the conservation law I + H = C, and explain the analogy between this structure and the kinetic/potential energy trade-off in classical mechanics."
+    text: "Students will be able to state Shannon's channel-capacity bound R ≤ C, define multi-information I and the conservation law I + H = C, prove or apply the data-processing inequality for a Markov chain, and explain the information bottleneck as a prescription for spending mutual information under a relevance constraint."
     bloom_level: analyse
     week: 7
-    notes: "Watanabe (1960). I = Σ h_i - H ≥ 0. Mutual information is the pairwise case. With fixed marginal entropies C = Σ h_i, conservation I + H = C. Week 6 states Shannon capacity and DPI; Week 7 proves DPI (Cover & Thomas Thm 2.8.1) and teaches the information bottleneck (Tishby, Pereira, Bialek 1999) as the prescription inside that fence — and as a gloss after the Good Regulator Theorem, not the theorem itself."
+    notes: "Live Weeks 6–7 information-theoretic toolkit. Week 6: Shannon capacity (no-go) and capacity-achieving p(x) (prescription); DPI as a statement. Week 7: multi-information / I+H=C (Watanabe); DPI proof (Cover & Thomas Thm 2.8.1); information bottleneck (Tishby, Pereira, Bialek 1999) as the prescription paired with DPI and as a gloss after GRT, not the theorem."
 
   - id: LO11
     text: "Students will be able to explain why the classical limit I = C requires H = 0, argue that sustaining high marginal entropies alongside I = C forces a move beyond classical probability, and show that von Neumann entropy S(ρ) = −Tr(ρ log ρ) satisfies S = 0 for a pure entangled state while its marginals carry positive entropy."
@@ -67,16 +67,16 @@ outcomes:
     notes: "Classically H = 0 ⟹ deterministic (delta distribution). Quantum: pure entangled state |ψ⟩ has S(ρ) = 0 but reduced states ρ_A, ρ_B have S > 0. Forced by asking for I = C with nontrivial marginals under classical probability. Taught in the Week 8 close after Quiz 4."
 
   - id: LO12
-    text: "Students will be able to articulate how the movement of probability mass between distributions provides an abstraction of intelligent agency — analogous to Shannon's use of probability to abstract a communication code — and sketch the role of optimal transport and Schrödinger bridges in formalising this abstraction."
+    text: "Students will be able to articulate intelligent agency in information-theoretic terms — analogous to Shannon's use of probability to abstract a communication code — using channel capacity, the data-processing inequality, and the Good Regulator Theorem, rather than transport geometry."
     bloom_level: evaluate
     week: 8
-    notes: "Thin after the GRT replan. Agency-as-transport / three geometries / Schrödinger bridges are not the live Week 8 spine; notes remain in the deferred limits/transport material. Week 8 instead evaluates agency with Shannon / DPI / GRT / Landauer / bandwidth."
+    notes: "Live Week 8 framing after the GRT replan. Shannon abstracted a code as probability over symbols; an agent organises action given state under the same no-go / prescription grammar. Optimal transport, Wasserstein, and Schrödinger bridges remain deferred colour, not assessed live this term."
 
   - id: LO13
-    text: "Students will be able to evaluate claims about the capabilities of intelligent systems using Landauer's principle, the perpetual motion analogy, and information-theoretic constraints including I + H = C, the data-processing inequality, and human bandwidth; and to sketch why an H(Z)-optimal regulator may be taken deterministic (H(A|S)=0), noting that this model condition is weak and that low H(Z) is predictability rather than desirability."
+    text: "Students will be able to evaluate claims about the capabilities of intelligent systems using Landauer's principle, the perpetual motion analogy, Shannon's R ≤ C, I + H = C, the data-processing inequality, and human bandwidth; and to state the Good Regulator Theorem as an existence claim (an H(Z)-optimal regulator may be taken with H(A|S)=0), distinguishing it from Ashby's requisite variety and naming both caveats (weak model; predictability versus desirability)."
     bloom_level: evaluate
     week: 8
-    notes: "Closes the loop opened in Week 1. Superintelligence ~ perpetual motion: both promise to repeal a no-go. Evaluate with Landauer, I+H=C, DPI, Shannon R≤C, and the human bandwidth constraint from The Atomic Human. Good Regulator is earned as a full overview in Week 6 (concavity / extreme points; two caveats) and applied in Week 8. IB form min I(S;A) s.t. H(Z)≤ε is a course gloss after the theorem, not Conant–Ashby. L²/τ and three geometries are not live no-gos/prescriptions this term."
+    notes: "Closes the Week 1 loop. GRT is earned as a full overview in Week 6 (requisite variety vs existence; concavity / extreme points; two caveats) and applied in Week 8. IB form min I(S;A) s.t. H(Z)≤ε is a course gloss after the theorem, not Conant–Ashby. L²/τ and three geometries are not live no-gos/prescriptions this term."
 ---
 
 # Learning Outcomes
@@ -93,29 +93,30 @@ thermodynamics. Today, billions are being invested in promises of superintellige
 an equivalent conservation law that makes *that* equally impossible?
 
 This module builds the mathematical machinery needed to answer that question rigorously:
-thermodynamics, information theory, maximum entropy, information geometry, and
-information-theoretic limits on intelligent agency.
+thermodynamics, information theory, maximum entropy, and information-theoretic limits on
+intelligent agency (including the Good Regulator Theorem).
 
 ## Central thread
 
 **Entropy** appears in three apparently separate traditions — thermodynamics (Boltzmann, Gibbs),
 information theory (Shannon), and Bayesian inference (Jaynes) — and turns out to be the same
-mathematical object viewed from different operational assumptions. **Information geometry**
-(Amari) provides the unifying geometric language. Multi-information, the data-processing
-inequality, and the information bottleneck make precise what processing can and cannot do;
-those tools, with Landauer and \(\mathcal{L}^2/\tau\), make the superintelligence promise
-analogous to perpetual motion and force the classical limit $I=C$ toward von Neumann entropy.
+mathematical object viewed from different operational assumptions. Channel capacity, the
+data-processing inequality, multi-information / $I+H=C$, and the information bottleneck make
+precise what processing can and cannot do. Those tools, with Landauer, the Good Regulator
+Theorem, and human bandwidth, make the superintelligence promise analogous to perpetual
+motion; the classical limit $I=C$ forces the story toward von Neumann entropy.
 
 **Entropy forbids; probability prescribes.** Entropy offers no-go theorems — the second
-law, Landauer, channel capacity, \(\mathcal{L}^2/\tau\), \(I+H=C\), the human bandwidth
-constraint of *The Atomic Human*. Probability tells us what to do inside that fence — the
-Boltzmann occupation, the capacity-achieving input, the MaxEnt distribution, the geodesic,
-the information bottleneck, the Schrödinger bridge.
+law, Landauer, channel capacity $R\le C$, the data-processing inequality, $I+H=C$, and the
+human bandwidth constraint of *The Atomic Human*. Probability tells us what to do inside that
+fence — the Boltzmann occupation, the capacity-achieving input, the MaxEnt distribution, a
+deterministic Good-Regulator policy where the caveats allow, and the information bottleneck
+as a way to spend mutual information on what is relevant for action.
 
 The closing abstraction echoes Shannon's founding move: just as Shannon abstracted
-communication as probability over symbols, we can abstract *intelligent agency* as the
-transport of probability mass between distributions — an idea formalised by optimal transport
-and Schrödinger bridges, with Sinkhorn as the discrete MaxEnt algorithm for the latter.
+communication as probability over symbols, we can read *intelligent agency* as organising
+action given state under the same no-go / prescription grammar — channels, DPI, and the Good
+Regulator — rather than as transport geometry.
 
 ## Pedagogy
 
@@ -139,7 +140,7 @@ Eight Tuesdays, 13 October – 1 December 2026, 10:00–12:00, FW26, William Gat
 | 5 | 10 Nov | KL + MI; MaxEnt; exponential family named ($\theta=-\lambda$) | LO5, LO6, LO7 | |
 | 6 | 17 Nov | Quiz 3; $\theta=-\lambda$ bridge; Shannon capacity; DPI statement; Good Regulator | LO10, LO13 | Q3 (10 min); W3 due; W4 released |
 | 7 | 24 Nov | Multi-information / $I+H=C$; DPI proof; IB as GRT gloss; Fisher named thinly | LO8, LO9, LO10 | |
-| 8 | 1 Dec | Quiz 4; von Neumann / $I=C$ (optional); LO13 synthesis (Landauer, DPI, GRT, bandwidth) | LO11–LO13 | Q4 (10 min, LO10–LO13); W4 due (LO7, LO10–LO11, LO13) |
+| 8 | 1 Dec | Quiz 4; von Neumann / $I=C$ (optional); LO13 synthesis (Landauer, DPI, GRT, bandwidth) | LO11–LO13 | Q4 (10 min, LO8–LO13); W4 due (LO7, LO10–LO13) |
 
 ## Outcome summary
 
@@ -152,9 +153,9 @@ Eight Tuesdays, 13 October – 1 December 2026, 10:00–12:00, FW26, William Gat
 | LO5  | Maximum entropy principle (Jaynes)                    | Apply       | 5    |
 | LO6  | Exponential family as MaxEnt family                   | Analyse     | 5    |
 | LO7  | Compare three perspectives on entropy                 | Evaluate    | 5    |
-| LO8  | Fisher metric (thin / vocabulary this term)           | Analyse     | 7    |
-| LO9  | MaxEnt as projection (deferred; MaxEnt remains W5)  | Apply       | 7    |
-| LO10 | Multi-information; DPI; information bottleneck       | Analyse     | 6–7  |
+| LO8  | Fisher $I(\theta)$ versus Shannon $H$ (vocabulary)    | Understand  | 7    |
+| LO9  | MaxEnt identified as $m$-projection (no gradients)    | Remember    | 7    |
+| LO10 | Capacity, $I+H=C$, DPI, information bottleneck        | Analyse     | 6–7  |
 | LO11 | I = C forces quantum: von Neumann entropy             | Analyse     | 8    |
-| LO12 | Agency via Shannon / DPI / GRT (transport deferred)   | Evaluate    | 8    |
-| LO13 | Limits on intelligence; Good Regulator earned W6      | Evaluate    | 6, 8 |
+| LO12 | Agency via Shannon / DPI / GRT                        | Evaluate    | 8    |
+| LO13 | Limits on intelligence; Good Regulator (earn W6)      | Evaluate    | 6, 8 |

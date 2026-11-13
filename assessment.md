@@ -64,11 +64,11 @@ This module uses 8 assessment components totalling 100%.
 
 **Type**: in-class-quiz | **Weight**: 10% | **Due week**: 8 | **Delivery**: in-class
 **Estimated workload**: 0.2h
-**AI robustness**: Invigilated in-class paper test. No external resources. The yaml path is an LO10–LO13-tagged pool for drafting reuse, not the printed paper.
+**AI robustness**: Invigilated in-class paper test. No external resources. The yaml path is an LO8–LO13-tagged pool for drafting reuse, not the printed paper.
 
 ### W4: Worksheet 4: Multi-Information, Von Neumann Entropy, and Limits on Intelligence
 
 **Type**: mini-project | **Weight**: 15% | **Due week**: 8 | **Delivery**: take-home
 **Estimated workload**: 3.0h
-**AI robustness**: LLMs permitted. Authenticity verified by in-class Quiz 4 (Week 8), applying multi-information, DPI, GRT caveats, and the perpetual motion analogy to a new example under invigilated conditions.
+**AI robustness**: LLMs permitted. Authenticity verified by in-class Quiz 4 (Week 8) under invigilated conditions on a new example that does not reuse this worksheet.
 
