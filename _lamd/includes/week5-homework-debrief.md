@@ -68,7 +68,7 @@
 * Clausius keeps both: heat cannot all become work
 }
 
-\notes{Spoken colour on 10 November: Carnot as a waterwheel. Entropy enters the bucket at high $T$, drops through the engine, and leaves at low $T$; $T\times S$ is an energy in joules. A reversible engine spills no water. The Mill Works pub waterwheel is the inefficiency demo --- water that misses the wheel does no work. Kinetic waterwheels (no height drop) were named as a reminder that more is going on than the potential-drop analogy. Course-local: keep the pub name here, not in reusable snippets.}
+\notes{We can see Carnot's cycle as analogous to a waterwheel. Entropy enters the bucket at high $T$, drops through the engine, and leaves at low $T$; $T\times S$ is an energy in joules. A reversible engine spills no water.  Water that misses the wheel bucket does no work. (Note that kinetic waterwheels (no height drop)  remind us that more is going on in a water wheel.}
 
 \speakernotes{Bridge: Worksheet 2 pressed $H$ versus $S$; this item pressed the physical thread that $S$ came from. Contested narrative next, then into the KL arc.}
 
