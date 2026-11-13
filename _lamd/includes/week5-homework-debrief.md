@@ -81,7 +81,6 @@ We haven't provided a good intuition why the partition function *is* available e
 \slidesincremental{
 * Worksheets: use an LLM to press the contested edges
 * Marks are on the quizzes and the understanding you defend in the room
-* Dinner colour: Blei, Rasmussen, Turner, Hernández-Lobato --- narrative as scaffolding
 }
 
 \notes{Reminder: you are not being marked on the narrative, it provides structure for you to explore with the LLM worksheets. }
