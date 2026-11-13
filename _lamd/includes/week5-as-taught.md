@@ -7,7 +7,7 @@
 
 \slidesincremental{
 * Soft partitions $\to$ mutual information; MI is a KL
-* Relative entropy to Jaynes' $m$ is the same KL language
+* Relative entropy to Jaynes' measure $m$ also expressed as a KL
 * After the break: Lagrange multipliers; Jaynes' die; 
 * End: discrete MaxEnt proof $\to$ Boltzmann / $Z$
 * Continuous MaxEnt and $\log Z$ as CGF: next week
