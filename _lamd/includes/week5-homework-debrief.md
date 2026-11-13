@@ -82,6 +82,6 @@
 * Dinner colour: Blei, Rasmussen, Turner, Hernández-Lobato --- narrative as scaffolding
 }
 
-\notes{As spoken: not marking students on the narrative; giving a narrative and letting them explore around it with the LLM worksheets. The subjects students explore on the worksheets are feeding later lectures. Dinner with David Blei, Carl Rasmussen, Rich Turner and Miguel Hernández-Lobato named the same tension --- a contested story that scaffolds learning rather than a single correct history. Course-local names stay in this include.}
+\notes{Reminder: you are not being marked on the narrative, it provides structure for you to explore with the LLM worksheets. }
 
 \endif
