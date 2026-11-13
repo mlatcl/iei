@@ -3,7 +3,7 @@
 
 \subsection{As Taught}
 
-\slides{KL before the break. MaxEnt after. Exponential family named at the close.}
+\slides{KL before the break. MaxEnt after. Exponential family mentioned at the close.}
 
 \slidesincremental{
 * Soft partitions $\to$ mutual information; MI is a KL
