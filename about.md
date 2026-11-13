@@ -44,12 +44,12 @@ Worksheets 1–3 are Socratic LLM dialogues (curiosity then skepticism) plus a h
 | LO5 | Apply Jaynes' maximum entropy principle with Lagrange multipliers under moment constraints | 5 |
 | LO6 | Identify the exponential family as the MaxEnt family (canonical, Gaussian, Bernoulli, …) | 5 |
 | LO7 | Compare information-theoretic, thermodynamic, and Bayesian perspectives on entropy | 5 |
-| LO8 | Name Fisher information versus Shannon $H$ (full Riemannian / Crooks path deferred) | 7 |
-| LO9 | MaxEnt as projection / natural gradient (deferred this term; MaxEnt remains Week 5) | — |
-| LO10 | Define multi-information $I$, state $I+H=C$, and relate it to the DPI and information bottleneck | 6–7 |
+| LO8 | Distinguish Fisher information $I(\theta)$ from Shannon entropy $H$ | 7 |
+| LO9 | Identify MaxEnt as an $m$-projection (no natural gradients this term) | 7 |
+| LO10 | State $R\le C$, define $I+H=C$, apply DPI, and explain the information bottleneck | 6–7 |
 | LO11 | Explain why classical $I=C$ forces $H=0$, and show von Neumann entropy resolves nontrivial marginals | 8 |
-| LO12 | Agency abstraction (transport / three geometries deferred; evaluate via Shannon / DPI / GRT) | 8 |
-| LO13 | Evaluate capability claims with Landauer, $I+H=C$, DPI, GRT, and human bandwidth | 6+8 |
+| LO12 | Articulate agency via Shannon / DPI / GRT (not transport geometry) | 8 |
+| LO13 | Evaluate capability claims with Landauer, $R\le C$, $I+H=C$, DPI, GRT, and human bandwidth | 6+8 |
 
 ## Assessment
 
@@ -63,8 +63,8 @@ Four take-home worksheets (15% each, 60% total) and four short in-class quizzes 
 | Quiz 2 | Start of week 4 lecture | 10 min invigilated (paper) | LO1, LO2, LO3 |
 | Worksheet 3 | Start of week 6 | Socratic dialogue + handwritten reflection | LO4 |
 | Quiz 3 | Start of week 6 lecture | 10 min invigilated (paper) | LO4, LO5, LO6, LO7 |
-| Worksheet 4 | Start of week 8 | Notebook + written reflection | LO7, LO10, LO11, LO13 |
-| Quiz 4 | Start of week 8 lecture | 10 min invigilated (paper) | LO10, LO11, LO13 |
+| Worksheet 4 | Start of week 8 | Notebook + written reflection | LO7, LO10–LO13 |
+| Quiz 4 | Start of week 8 lecture | 10 min invigilated (paper) | LO8–LO13 |
 
 Details and marking guidance: [assessment]({{ "/assessment/" | relative_url }}).
 
