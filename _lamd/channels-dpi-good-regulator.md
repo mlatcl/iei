@@ -63,7 +63,7 @@ reading:
 \slidesincremental{
 * Quiz 3 (ten minutes); collect Worksheet 3; release Worksheet 4
 * Exponential family: $\theta=-\lambda$; Week 1 families in $(\theta,\psi)$ form
-* $\psi(\boldsymbol{\theta})=\log Z$; entropy $H=\psi-\theta\cdot\eta$
+* $\psi(\boldsymbol{\theta})=\log Z$; entropy $H=\psi-\theta\cdot\eta$ (when $h_0=1$)
 * Fisher from the score: $G=\mathrm{Cov}[T]=\nabla^2\psi$; $I\neq H$
 * Shannon: $R\le C$; DPI; Good Regulator overview ($D,S,A,Z$)
 }
@@ -76,7 +76,7 @@ reading:
 | 10:05--10:15 | Quiz 3 (paper); collect Worksheet 3 |
 | 10:15--10:20 | Release Worksheet 4 (start Exchange 1 before GRT) |
 | 10:20--10:40 | Exponential family: $\theta=-\lambda$; three members; $\psi$ as CGF |
-| 10:40--11:00 | $H=\psi-\theta\cdot\eta$; Fisher from score; $I\neq H$; $\mathrm{d}s^2$; dual charts |
+| 10:40--11:00 | $H=\psi-\theta\cdot\eta$ ($h_0=1$); Fisher from score; $I\neq H$; $\mathrm{d}s^2$; dual charts |
 | 11:00--11:10 | Break |
 | 11:10--11:25 | Shannon communication theorem / channel capacity |
 | 11:25--11:35 | DPI statement; Markov moral |
@@ -132,13 +132,15 @@ where $h_0(x)=\mathbf{1}[x\in\mathcal{X}]$ (one on allowed labels, zero elsewher
 * Same role as Jaynes' $m$; not a new ``measure of uncertainty''
 }
 
-\speakernotes{Two minutes maximum. Counting measure is a *prior*: every label a priori as good as every other. The identity $H=\log N-\mathrm{KL}(P\|u)$ is the discrete case of the relative-entropy story from Weeks 4--5. Do not open Lebesgue singularity or mixed measures. Poisson $1/k!$ and binomial $\binom{n}{k}$ appear as $h_0$ on the next distribution slides --- name them there, do not derive. Move to the three members.}
+\speakernotes{Two minutes maximum. Counting measure is a *prior*: every label a priori as good as every other. The identity $H=\log N-\mathrm{KL}(P\|u)$ is the discrete case of the relative-entropy story from Weeks 4--5. Do not open Lebesgue singularity or mixed measures live --- those sit in the notes for the curious. Poisson $1/k!$ and binomial $\binom{n}{k}$ appear as $h_0$ on the next distribution slides --- name them there, do not derive. Move to the three members.}
 
 \notes{A probability is always a density with respect to some reference measure $\mu$: the Radon--Nikodym derivative ${\mathrm{d}}P/{\mathrm{d}}\mu$. Every entropy-like quantity in the course is the same expression,
 \begin{align}
 H_\mu(P)=-\int\log\frac{{\mathrm{d}}P}{{\mathrm{d}}\mu}\,{\mathrm{d}}P,
 \end{align}
-with a different $\mu$ each time. Lecture 4 already said that choosing a discretisation is choosing a measure; the counting measure $\#$ is the case so natural that nobody notices the choice has been made. Integrating against $\#$ is a sum, $\int f\,{\mathrm{d}}\#=\sum_x f(x)$, and the density of $P$ with respect to $\#$ is the probability mass function $p(x)=P(\{x\})$. Shannon entropy is exactly $H_\#(P)=-\sum_x p(x)\log p(x)$.
+with a different $\mu$ each time. Lecture 4 already said that choosing a discretisation is choosing a measure; the counting measure $\#$ is the case so natural that nobody notices the choice has been made.
+
+Separate two uses of the word Lebesgue. The *Lebesgue integral* $\int f\,{\mathrm{d}}\mu$ is a single integration machine that works for *any* measure $\mu$: a sum is a Lebesgue integral against $\#$, and the ordinary calculus integral is a Lebesgue integral against Lebesgue measure $\lambda$. *Lebesgue measure* $\lambda$ itself is one particular choice of $\mu$: length, area, or volume, so $\lambda([a,b])=b-a$. Integrating against $\#$ gives a sum, $\int f\,{\mathrm{d}}\#=\sum_x f(x)$, and the density of $P$ with respect to $\#$ is the probability mass function $p(x)=P(\{x\})$. Shannon entropy is exactly $H_\#(P)=-\sum_x p(x)\log p(x)$.
 
 Counting measure is a prior: every outcome gets weight 1. On a finite set of $N$ outcomes write $u=\#/N$ for the uniform distribution. Then
 \begin{align}
@@ -146,11 +148,13 @@ H(P)=\log N-\mathrm{KL}(P\|u).
 \end{align}
 So Shannon entropy *is* a negative KL divergence against the uniform that $\#$ defines. Three immediate consequences: (i) $H\ge 0$, because each atom has counting measure 1 so $p(x)\le 1$; (ii) $H$ is unchanged by any relabelling of the outcomes ($\#$ is invariant under bijections); (iii) on a countably infinite set $\#$ has infinite total mass, there is no uniform $u$, and entropy need not be finite.
 
-The same template covers the continuous and relative cases. Lebesgue measure $\lambda$ (length / area / volume) is the continuum counterpart: differential entropy is $H_\lambda$, can be negative, and changes under nonlinear reparametrisation because $\lambda$ does (the Jacobian is Lecture 4's density of states / $-\log\Delta$ when a grid of spacing $\Delta$ is refined toward $\lambda$). KL divergence uses a probability $Q$ as reference,
+The same template covers the continuous and relative cases. Lebesgue measure $\lambda$ is the continuum counterpart: differential entropy is $H_\lambda$, can be negative, and changes under nonlinear reparametrisation because $\lambda$ does. Two distinct effects meet here and should stay separate. Under a change of variable the Jacobian $|{\mathrm{d}}y/{\mathrm{d}}x|$ appears --- that is Lecture 4's density-of-states factor (for example $v^2$ in the speed coordinate). Separately, putting counting measure on a grid of spacing $\Delta$ and rescaling by $\Delta$ converges to $\lambda$ as $\Delta\to 0$; a binned Shannon entropy then carries an additive $-\log\Delta$, which is the log of that rescaling factor between $\#$ and $\lambda$, not a Jacobian. Why not just use counting measure on $\mathbb{R}$? Because $\#$ and $\lambda$ are mutually singular: $\lambda(\{x\})=0$ for every point, while a discrete law puts positive mass on points, so neither measure admits a density with respect to the other. A mixed law --- daily rainfall exactly zero with probability $0.3$, otherwise continuous --- has a density only with respect to something like $\delta_0+\lambda$. Keep that aside in the notes; do not board it live.
+
+KL divergence uses a probability $Q$ as reference,
 \begin{align}
-\mathrm{KL}(P\|Q)=\int\log\frac{{\mathrm{d}}P}{{\mathrm{d}}Q}\,{\mathrm{d}}P;
+\mathrm{KL}(P\|Q)=\int\log\frac{{\mathrm{d}}P}{{\mathrm{d}}Q}\,{\mathrm{d}}P,
 \end{align}
-any common base $\mu$ cancels in the ratio of densities, which is why KL (and mutual information) has no $-\log\Delta$ divergence and is unchanged when the same invertible map is applied to both arguments.
+provided $P$ is absolutely continuous with respect to $Q$ ($P\ll Q$). If $P$ puts mass anywhere $Q$ does not, the Radon--Nikodym derivative fails and $\mathrm{KL}(P\|Q)=+\infty$. When both densities are written against a common base $\mu$, the ratio of densities cancels $\mu$, which is why KL (and mutual information) has no $-\log\Delta$ divergence and is unchanged when the same invertible map is applied to both arguments.
 
 \begin{center}
 \begin{tabular}{llll}
@@ -206,12 +210,12 @@ Maximum entropy relative to $\mu$ gives ${\mathrm{d}}P/{\mathrm{d}}\mu=\exp(\the
 \slides{Same word; different mathematical definition.}
 
 \slidesincremental{
-* Shannon $H$: uncertainty in an outcome --- just earned as $H=\psi-\theta\cdot\eta$
+* Shannon $H$: uncertainty in an outcome --- just earned as $H=\psi-\theta\cdot\eta$ (when $h_0=1$)
 * Fisher $I(\theta)$: sensitivity of $\log p$ to $\theta$ --- just earned as $\mathrm{Cov}[T]=\nabla^2\psi$
 * $H$ is a state function of $p$; $I$ is a property of a *family* $p(\cdot\mid\theta)$
 }
 
-\speakernotes{LO8 vocabulary slide after the calculation. They have already done the algebra; name the distinction. Shannon after the break is channel capacity, a different use of the same $H$.}
+\speakernotes{LO8 vocabulary slide after the calculation. They have already done the algebra; name the distinction. Flag the $h_0=1$ caveat: after Poisson / binomial, the full form is $H=\psi-\theta\cdot\eta-\mathbb{E}[\log h_0]$. Shannon after the break is channel capacity, a different use of the same $H$.}
 
 \notes{Fisher (1925) called the expected squared score *information* about a parameter. For a scalar parameter,
 $$
@@ -263,9 +267,9 @@ $$
 * Full Legendre / Pythagorean development stays notes
 }
 
-\speakernotes{Name dual flatness. $H=\psi-\theta\cdot\eta$ is already on the board --- that *is* $-\psi^*(\eta)$. The pair $(\theta,\eta)$ is enough to see why MaxEnt looks like an $m$-projection later. Natural gradient is optional colour only.}
+\speakernotes{Name dual flatness. $H=\psi-\theta\cdot\eta$ (when $h_0=1$) is already on the board --- that *is* $-\psi^*(\eta)$. The pair $(\theta,\eta)$ is enough to see why MaxEnt looks like an $m$-projection later. Natural gradient is optional colour only.}
 
-\notes{Amari's dual flatness: exponential families admit affine coordinates in $\boldsymbol{\theta}$ and in $\boldsymbol{\eta}=\nabla\psi$, with dual potentials whose Hessians are inverse Fisher metrics. The Legendre dual is what they already computed for entropy: $\psi^*(\eta)=\theta\cdot\eta-\psi=-H$ (up to the base-measure term). The Pythagorean theorem for KL on dual flats stays thin today so Shannon and the Good Regulator keep their clock.}
+\notes{Amari's dual flatness: exponential families admit affine coordinates in $\boldsymbol{\theta}$ and in $\boldsymbol{\eta}=\nabla\psi$, with dual potentials whose Hessians are inverse Fisher metrics. The Legendre dual is what they already computed for entropy: $\psi^*(\eta)=\theta\cdot\eta-\psi=-H$ when $h_0=1$ (otherwise subtract $\mathbb{E}[\log h_0]$ from $H$). The Pythagorean theorem for KL on dual flats stays thin today so Shannon and the Good Regulator keep their clock.}
 
 \addreading{@Amari-information16}{Fisher metric; dual flatness}
 
@@ -334,7 +338,7 @@ $$
 
 \slidesincremental{
 * Why is the exponential family the MaxEnt family, and why $\theta=-\lambda$?
-* Why is $H=\psi-\theta\cdot\eta$, and why does that make $G=\nabla^2\psi=\mathrm{Cov}[T]$?
+* Why is $H=\psi-\theta\cdot\eta$ when $h_0=1$ (and what changes for Poisson), and why does that make $G=\nabla^2\psi=\mathrm{Cov}[T]$?
 * How does Fisher's $I(\theta)$ differ from Shannon's $H$?
 * What does $R\le C$ forbid, and what does DPI state?
 * Name $D$, $S$, $A$, $Z$ on the Good Regulator diagrams --- and why full GRT waits for Week 8

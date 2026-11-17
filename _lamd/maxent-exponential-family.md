@@ -267,9 +267,9 @@ This is the same calculation as Jaynes' die (one linear constraint on the face v
 
 \notes{The constrained MaxEnt distribution is not merely *like* an exponential family --- on a finite (or countable) state space it *is* one. Take sufficient statistics $T_k(x)=f_k(x)$. Then the MaxEnt assignment is
 \begin{align}
-p(x\mid\boldsymbol{\theta}) = \exp\bigl(\boldsymbol{\theta}\cdot T(x) - \psi(\boldsymbol{\theta})\bigr)\, h(x),
+p(x\mid\boldsymbol{\theta}) = \exp\bigl(\boldsymbol{\theta}\cdot T(x) - \psi(\boldsymbol{\theta})\bigr)\, h_0(x),
 \end{align}
-with $h(x)$ the counting measure on the allowed outcomes and
+with $h_0(x)=\mathbf{1}[x\in\mathcal{X}]$ the density of counting measure $\#$ on the allowed outcomes (Week 6 writes $h_0$ rather than $h$, to avoid colliding with differential entropy and the regulator map) and
 \begin{align}
 \psi(\boldsymbol{\theta}) = \log \sum_x \exp\bigl(\boldsymbol{\theta}\cdot T(x)\bigr).
 \end{align}

@@ -148,7 +148,7 @@
 <ul>
 <li class="fragment">Quiz 3 (ten minutes); collect Worksheet 3; release Worksheet 4</li>
 <li class="fragment">Exponential family: <span class="math inline">\(\theta=-\lambda\)</span>; Week 1 families in <span class="math inline">\((\theta,\psi)\)</span> form</li>
-<li class="fragment"><span class="math inline">\(\psi(\boldsymbol{\theta})=\log Z\)</span>; entropy <span class="math inline">\(H=\psi-\theta\cdot\eta\)</span></li>
+<li class="fragment"><span class="math inline">\(\psi(\boldsymbol{\theta})=\log Z\)</span>; entropy <span class="math inline">\(H=\psi-\theta\cdot\eta\)</span> (when <span class="math inline">\(h_0=1\)</span>)</li>
 <li class="fragment">Fisher from the score: <span class="math inline">\(G=\mathrm{Cov}[T]=\nabla^2\psi\)</span>; <span class="math inline">\(I\neq H\)</span></li>
 <li class="fragment">Shannon: <span class="math inline">\(R\le C\)</span>; DPI; Good Regulator overview (<span class="math inline">\(D,S,A,Z\)</span>)</li>
 </ul>
@@ -202,7 +202,7 @@ LO6. This is the block Week 5 only named. Physics sign: Boltzmann writes <span c
 </ul>
 </div>
 <aside class="notes">
-Two minutes maximum. Counting measure is a <em>prior</em>: every label a priori as good as every other. The identity <span class="math inline">\(H=\log N-\mathrm{KL}(P\|u)\)</span> is the discrete case of the relative-entropy story from Weeks 4–5. Do not open Lebesgue singularity or mixed measures. Poisson <span class="math inline">\(1/k!\)</span> and binomial <span class="math inline">\(\binom{n}{k}\)</span> appear as <span class="math inline">\(h_0\)</span> on the next distribution slides — name them there, do not derive. Move to the three members.
+Two minutes maximum. Counting measure is a <em>prior</em>: every label a priori as good as every other. The identity <span class="math inline">\(H=\log N-\mathrm{KL}(P\|u)\)</span> is the discrete case of the relative-entropy story from Weeks 4–5. Do not open Lebesgue singularity or mixed measures live — those sit in the notes for the curious. Poisson <span class="math inline">\(1/k!\)</span> and binomial <span class="math inline">\(\binom{n}{k}\)</span> appear as <span class="math inline">\(h_0\)</span> on the next distribution slides — name them there, do not derive. Move to the three members.
 </aside>
 </section>
 <section id="three-members-one-family" class="slide level2">
@@ -356,13 +356,13 @@ Board <span class="math inline">\(\eta=\nabla\psi\)</span> first. Do not yet cla
 \]</span></p>
 <div>
 <ul>
-<li class="fragment">Take <span class="math inline">\(-\mathbb{E}[\log p]\)</span>: <span class="math inline">\(H(\boldsymbol{\theta})=\psi(\boldsymbol{\theta})-\boldsymbol{\theta}\cdot\boldsymbol{\eta}\)</span></li>
+<li class="fragment">Take <span class="math inline">\(-\mathbb{E}[\log p]\)</span>: <span class="math inline">\(H=\psi-\boldsymbol{\theta}\cdot\boldsymbol{\eta}\)</span> when <span class="math inline">\(h_0=1\)</span></li>
 <li class="fragment">with <span class="math inline">\(\boldsymbol{\eta}=\nabla\psi=\langle T\rangle\)</span></li>
-<li class="fragment">No sum over <span class="math inline">\(x\)</span> left — only <span class="math inline">\(\psi\)</span> and its gradient</li>
+<li class="fragment">In general: <span class="math inline">\(H=\psi-\boldsymbol{\theta}\cdot\boldsymbol{\eta}-\mathbb{E}[\log h_0(X)]\)</span></li>
 </ul>
 </div>
 <aside class="notes">
-Board the two-line derivation. <span class="math inline">\(\log p=\theta\cdot T-\psi\)</span>; expectation kills <span class="math inline">\(T\)</span> to <span class="math inline">\(\eta\)</span>; <span class="math inline">\(H=\psi-\theta\cdot\eta\)</span>. If <span class="math inline">\(h_0\)</span> is not 1, add <span class="math inline">\(-\mathbb{E}[\log h_0]\)</span>; today <span class="math inline">\(h_0=1\)</span> on the allowed set. This is why MaxEnt distributions are nice to work with.
+Board the two-line derivation for <span class="math inline">\(h_0=1\)</span>. <span class="math inline">\(\log p=\theta\cdot T-\psi\)</span>; expectation kills <span class="math inline">\(T\)</span> to <span class="math inline">\(\eta\)</span>; <span class="math inline">\(H=\psi-\theta\cdot\eta\)</span>. After Poisson / binomial, state the general correction <span class="math inline">\(-\mathbb{E}[\log h_0]\)</span> once so nobody applies the short form to a Poisson. Today the boarded algebra uses <span class="math inline">\(h_0=1\)</span> on the allowed set.
 </aside>
 </section>
 <section id="fisher-from-the-same-log-p" class="slide level2">
@@ -389,13 +389,13 @@ LO8 punchline as a calculation, not a slogan. Score <span class="math inline">\(
 <p>Same word; different mathematical definition.</p>
 <div>
 <ul>
-<li class="fragment">Shannon <span class="math inline">\(H\)</span>: uncertainty in an outcome — just earned as <span class="math inline">\(H=\psi-\theta\cdot\eta\)</span></li>
+<li class="fragment">Shannon <span class="math inline">\(H\)</span>: uncertainty in an outcome — just earned as <span class="math inline">\(H=\psi-\theta\cdot\eta\)</span> (when <span class="math inline">\(h_0=1\)</span>)</li>
 <li class="fragment">Fisher <span class="math inline">\(I(\theta)\)</span>: sensitivity of <span class="math inline">\(\log p\)</span> to <span class="math inline">\(\theta\)</span> — just earned as <span class="math inline">\(\mathrm{Cov}[T]=\nabla^2\psi\)</span></li>
 <li class="fragment"><span class="math inline">\(H\)</span> is a state function of <span class="math inline">\(p\)</span>; <span class="math inline">\(I\)</span> is a property of a <em>family</em> <span class="math inline">\(p(\cdot\mid\theta)\)</span></li>
 </ul>
 </div>
 <aside class="notes">
-LO8 vocabulary slide after the calculation. They have already done the algebra; name the distinction. Shannon after the break is channel capacity, a different use of the same <span class="math inline">\(H\)</span>.
+LO8 vocabulary slide after the calculation. They have already done the algebra; name the distinction. Flag the <span class="math inline">\(h_0=1\)</span> caveat: after Poisson / binomial, the full form is <span class="math inline">\(H=\psi-\theta\cdot\eta-\mathbb{E}[\log h_0]\)</span>. Shannon after the break is channel capacity, a different use of the same <span class="math inline">\(H\)</span>.
 </aside>
 </section>
 <section id="same-matrix-three-names" class="slide level2">
@@ -441,7 +441,7 @@ State the line element. Do not integrate a path to get thermodynamic length <spa
 </ul>
 </div>
 <aside class="notes">
-Name dual flatness. <span class="math inline">\(H=\psi-\theta\cdot\eta\)</span> is already on the board — that <em>is</em> <span class="math inline">\(-\psi^*(\eta)\)</span>. The pair <span class="math inline">\((\theta,\eta)\)</span> is enough to see why MaxEnt looks like an <span class="math inline">\(m\)</span>-projection later. Natural gradient is optional colour only.
+Name dual flatness. <span class="math inline">\(H=\psi-\theta\cdot\eta\)</span> (when <span class="math inline">\(h_0=1\)</span>) is already on the board — that <em>is</em> <span class="math inline">\(-\psi^*(\eta)\)</span>. The pair <span class="math inline">\((\theta,\eta)\)</span> is enough to see why MaxEnt looks like an <span class="math inline">\(m\)</span>-projection later. Natural gradient is optional colour only.
 </aside>
 <section data-background-iframe="../scripts//timer/index.html?duration=10:55&amp;title=Break" data-background-interactive>
 </section>
@@ -592,7 +592,7 @@ One slide. Same <span class="math inline">\(A\)</span> and <span class="math inl
 <div>
 <ul>
 <li class="fragment">Why is the exponential family the MaxEnt family, and why <span class="math inline">\(\theta=-\lambda\)</span>?</li>
-<li class="fragment">Why is <span class="math inline">\(H=\psi-\theta\cdot\eta\)</span>, and why does that make <span class="math inline">\(G=\nabla^2\psi=\mathrm{Cov}[T]\)</span>?</li>
+<li class="fragment">Why is <span class="math inline">\(H=\psi-\theta\cdot\eta\)</span> when <span class="math inline">\(h_0=1\)</span> (and what changes for Poisson), and why does that make <span class="math inline">\(G=\nabla^2\psi=\mathrm{Cov}[T]\)</span>?</li>
 <li class="fragment">How does Fisher’s <span class="math inline">\(I(\theta)\)</span> differ from Shannon’s <span class="math inline">\(H\)</span>?</li>
 <li class="fragment">What does <span class="math inline">\(R\le C\)</span> forbid, and what does DPI state?</li>
 <li class="fragment">Name <span class="math inline">\(D\)</span>, <span class="math inline">\(S\)</span>, <span class="math inline">\(A\)</span>, <span class="math inline">\(Z\)</span> on the Good Regulator diagrams — and why full GRT waits for Week 8</li>
