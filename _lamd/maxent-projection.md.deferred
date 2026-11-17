@@ -1,24 +1,22 @@
 ---
-title: "Projection, Natural Gradient, and Optimal Protocols"
-week: 7
+title: "Projection and Natural Gradient (deferred; thermodynamic length dropped)"
 layout: lecture
 date: 2026-11-24
 venue: FW26, William Gates Building
 room: FW26
 transition: None
 abstract: >
-  Maximum entropy as an m-projection onto a constraint manifold, and
-  natural gradient descent as steepest descent in the Fisher metric.
-  Geodesics of that metric are Crooks' minimum-dissipation protocols.
-  One computed geodesic on a two-parameter exponential family is enough.
+  Deferred. Not a live lecture. Thermodynamic length and Crooks
+  minimum-dissipation geodesics are dropped. The live Week 7 lecture is
+  multi-information.md.
 author:
 - given: Neil D.
   family: Lawrence
   institution: University of Cambridge
   url: http://inverseprobability.com
 outcomes: [LO9]
-duration_hours: 2
-type: lecture
+duration_hours: 0
+type: deferred
 in_class_test: null
 reading:
   - title: "Information Geometry and Its Applications"
@@ -27,14 +25,14 @@ reading:
     estimated_hours: 2
 ---
 
-\notes{No class test today. Quiz 3 was last week (start of lecture 6). Worksheet 3 was due last week; Worksheet 4 is already out (due 1 December).}
+\notes{Do not present this file. Thermodynamic length and Crooks minimum-dissipation geodesics are dropped. The live Week 7 lecture is `multi-information.md`.}
 
 \subsection{This Session}
 
 \slidesincremental{
 * MaxEnt as m-projection
 * Natural gradient: $F^{-1}\nabla L$
-* Geodesics = minimum-dissipation protocols
+* Thermodynamic length: dropped; do not teach Crooks geodesics
 }
 
 \notes{
@@ -114,13 +112,12 @@ mlai.write_figure('m-projection-die.svg', directory='\writeDiagramsDir/ml')}
 
 \slidesincremental{
 * Steepest ascent in Fisher metric: $\theta \leftarrow \theta + \eta\, F^{-1}\nabla L$
-* Same $F$ as Crooks' $\mathcal{I}$
-* Worksheet 3 compares trajectories on the Gaussian plane
+* Unused deferred note; not this week's worksheet
 }
 
-\speakernotes{LO9 (second half). Demo vanilla vs natural paths — Worksheet 3 core task.}
+\speakernotes{Do not present. Thermodynamic length is dropped.}
 
-\notes{Natural gradient ascent $\theta\leftarrow\theta+\eta F^{-1}\nabla L$ is steepest ascent in the Fisher metric. It removes arbitrary parameterisation dependence. The same $F$ appears in Crooks' thermodynamic length.}
+\notes{Natural gradient ascent $\theta\leftarrow\theta+\eta F^{-1}\nabla L$ is steepest ascent in the Fisher metric. It removes arbitrary parameterisation dependence. This note is unused. Thermodynamic length is dropped.}
 
 \setupplotcode{import numpy as np
 import matplotlib.pyplot as plt
@@ -174,56 +171,9 @@ mlai.write_figure('natural-gradient-paths.svg', directory='\writeDiagramsDir/ml'
 \slidesincremental{
 * Vanilla gradient depends on coordinates
 * Natural gradient does not
-* Same $F$ as Crooks' $\mathcal{I}$
 }
 
-\subsection{Geodesics as Optimal Protocols}
-
-<!-- SNIPPET: _information/includes/geodesic-optimal-protocol.md -->
-
-\newslides{Geodesics as Optimal Protocols}
-
-\slides{Last week's no-go: $\langle W_{\mathrm{ex}}\rangle\ge\mathcal{L}^2/\tau$. This week's prescription: travel by the geodesic.}
-
-\slidesincremental{
-* Geodesic = shortest Fisher–Rao path between equilibria
-* Natural gradient = local steepest descent in the same metric
-* Wasserstein and Schrödinger bridges: week 8
-}
-
-\speakernotes{Sketch geodesic vs straight line. Worksheet 3 integrates the straight line; higher marks compare paths. Sinkhorn: week 8 only.}
-
-\notes{The geodesic is the prescription for minimum-dissipation protocols under Crooks' bound --- last week's near-equilibrium expansion of the fluctuation theorem, not an independent axiom. Natural gradient is the local form of the same instruction. A straight line in $(\mu,\sigma^2)$ is not generally a geodesic, but it gives a first length estimate.}
-\setupplotcode{import numpy as np
-import matplotlib.pyplot as plt
-import mlai}
-
-\plotcode{# Compare straight line vs a curved detour in (mu, sigma2)
-t = np.linspace(0, 1, 100)
-straight = np.column_stack([2*t, 1 + 3*t])
-detour = np.column_stack([2*t, 1 + 3*t**2])
-fig, ax = plt.subplots(figsize=(6, 5))
-ax.plot(straight[:,0], straight[:,1], 'k-', linewidth=2, label='straight (Worksheet 3)')
-ax.plot(detour[:,0], detour[:,1], 'C1--', linewidth=2, label='detour')
-ax.scatter([0,2],[1,4], s=60, c=['green','red'])
-ax.set_xlabel('$\\mu$'); ax.set_ylabel('$\\sigma^2$'); ax.legend()
-ax.set_title('Two paths — which is shorter in Fisher length?')
-mlai.write_figure('geodesic-vs-straight.svg', directory='\writeDiagramsDir/ml')}
-
-\figure{\includediagram{\diagramsDir/ml/geodesic-vs-straight}{65%}}{Worksheet 3 uses the straight line; higher marks compare a second path.}{geodesic-vs-straight}
-
-
-<!-- /SNIPPET: _information/includes/geodesic-optimal-protocol.md -->
-
-\slidesincremental{
-* No-go: $\mathcal{L}^2/\tau$ (last week)
-* Prescription: the geodesic; $F^{-1}\nabla L$
-* Other geometries: week 8
-}
-
-\include{_information/includes/welling-geodesics-and-work.md}
-
-\addreading{@Amari-information16}{Chapters 3--4}
+\notes{Thermodynamic length is dropped. There is no Crooks geodesic block in this file.}
 
 \subsection{Define This Week}
 

@@ -30,7 +30,7 @@ reading:
     year: 2016
     required: true
     estimated_hours: 6
-    notes: "Chapters 1-4 cover the Fisher metric, dually flat geometry, and exponential families. Primary text for weeks 6-7 (LO8, LO9)."
+    notes: "Chapters 1-4 cover the Fisher metric, dually flat geometry, and exponential families. Primary text for Week 6 Fisher bridge (LO8); LO9 thin naming in Week 7."
 
   # Supplementary texts
   - title: "The Atomic Human"
@@ -149,9 +149,9 @@ reading:
     authors: "Crooks, G. E."
     year: 2007
     url: "https://doi.org/10.1103/PhysRevLett.99.100602"
-    required: true
+    required: false
     estimated_hours: 1
-    notes: "Identifies thermodynamic length with Fisher–Rao length of a path of equilibrium states; dissipation bound L²/τ. Week 6 define (LO8); week 8 interpret (LO12)."
+    notes: "Dropped from the live module. Identifies thermodynamic length with Fisher–Rao path length; dissipation bound L²/τ. Week 6 teaches the Fisher metric from ∇²A without integrating path length."
 
   - title: "Sinkhorn Distances: Lightspeed Computation of Optimal Transportation Distances"
     authors: "Cuturi, M."
@@ -255,7 +255,7 @@ The original maximum entropy paper; very readable. Week 5 (LO5).
 Sections 1–6 for the entropy axioms. Week 3 (LO2).
 
 **Crooks (2007)** — "Measuring Thermodynamic Length," *Phys. Rev. Lett.* 99, 100602.
-Thermodynamic length as Fisher–Rao length; dissipation $\ge \mathcal{L}^2/\tau$. Define in week 6 (LO8); interpret in week 8 (LO12).
+Thermodynamic length as Fisher–Rao path length is dropped. Week 6 defines the Fisher metric from $\nabla^2 A$ (LO8) without integrating path cost.
 
 **Watanabe (1960)** — "Information Theoretical Analysis of Multivariate Correlation," *IBM J. Res. Dev.*
 The original multi-information paper. Week 8 (LO10).

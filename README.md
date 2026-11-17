@@ -28,7 +28,7 @@ Entropy appears in three apparently separate traditions — thermodynamics (Bolt
 
 Four ten-minute in-class quizzes sit at the start of lectures 2, 4, 6 and 8.
 
-Worksheets 1–3 are Socratic LLM dialogues (curiosity then skepticism) plus a handwritten reflection. Worksheet 4 is a short notebook plus written reflection. Due at the start of weeks 2, 4, 6 and 8. Moodle filenames use `L172_<CRSid>_worksheet…`; identify work by CRSid, not by full name.
+Worksheets 1–4 are Socratic LLM dialogues (curiosity then skepticism) plus a handwritten reflection. Due at the start of weeks 2, 4, 6 and 8. Moodle filenames use `L172_<CRSid>_worksheet…`; identify work by CRSid, not by full name.
 
 ## Learning outcomes
 
@@ -39,9 +39,9 @@ Worksheets 1–3 are Socratic LLM dialogues (curiosity then skepticism) plus a h
 | LO3 | Derive the canonical ensemble and use the partition function to compute mean energy, entropy, and free energy | 3 |
 | LO4 | Explain Maxwell's demon, locate the apparent second-law violation, and apply Landauer's principle | 4 |
 | LO5 | Apply Jaynes' maximum entropy principle with Lagrange multipliers under moment constraints | 5 |
-| LO6 | Identify the exponential family as the MaxEnt family (canonical, Gaussian, Bernoulli, …) | 5 |
+| LO6 | Identify the exponential family as the MaxEnt family (canonical, Gaussian, Bernoulli, …) | 6 |
 | LO7 | Compare information-theoretic, thermodynamic, and Bayesian perspectives on entropy | 5 |
-| LO8 | Distinguish Fisher information $I(\theta)$ from Shannon entropy $H$ | 7 |
+| LO8 | Distinguish Fisher information $I(\theta)$ from Shannon entropy $H$ | 6 |
 | LO9 | Identify MaxEnt as an $m$-projection (no natural gradients this term) | 7 |
 | LO10 | State $R\le C$, define $I+H=C$, apply DPI, and explain the information bottleneck | 6–7 |
 | LO11 | Explain why classical $I=C$ forces $H=0$, and show von Neumann entropy resolves nontrivial marginals | 8 |
@@ -60,7 +60,7 @@ Four take-home worksheets (15% each, 60% total) and four short in-class quizzes 
 | Quiz 2 | Start of week 4 lecture | 10 min invigilated (paper) | LO1, LO2, LO3 |
 | Worksheet 3 | Start of week 6 | Socratic dialogue + handwritten reflection | LO4 |
 | Quiz 3 | Start of week 6 lecture | 10 min invigilated (paper) | LO4, LO5, LO6, LO7 |
-| Worksheet 4 | Start of week 8 | Notebook + written reflection | LO7, LO10–LO13 |
+| Worksheet 4 | Start of week 8 | Socratic dialogue + handwritten reflection | LO12, LO13 |
 | Quiz 4 | Start of week 8 lecture | 10 min invigilated (paper) | LO8–LO13 |
 
 Details and marking guidance: [assessment]({{ "/assessment/" | relative_url }}).
@@ -75,4 +75,4 @@ Ask module questions on [GitHub Discussions](https://github.com/mlatcl/iei/discu
 
 ## Recommended Reading
 
-Shannon (1948), *Bell System Technical Journal*; Jaynes (1957), *Physical Review*; Landauer (1961), *IBM Journal*; Cover & Thomas (2006) and MacKay (2003) as background. Conant & Ashby (1970) for the Good Regulator. Amari & Nagaoka (2000) and Crooks (2007) remain useful for the deferred Fisher / thermodynamic-length path (`fisher-metric.md.deferred`). Welling, Lu and Holdijk (2026), *Generative AI and Stochastic Thermodynamics* (GAIST), is a supplementary monograph: Chapter 3 for free energy, Chapter 5 for the ELBO; Chapters 14 and 22 (Wasserstein / Schrödinger) are optional colour, not on the live Weeks 6–8 spine this term.
+Shannon (1948), *Bell System Technical Journal*; Jaynes (1957), *Physical Review*; Landauer (1961), *IBM Journal*; Cover & Thomas (2006) and MacKay (2003) as background. Conant & Ashby (1970) for the Good Regulator. The exponential family and its Fisher metric are live in Week 6. Thermodynamic length (Crooks 2007) is dropped. Welling, Lu and Holdijk (2026), *Generative AI and Stochastic Thermodynamics* (GAIST), is a supplementary monograph: Chapter 3 for free energy, Chapter 5 for the ELBO; Chapters 14 and 22 (Wasserstein / Schrödinger) are optional colour, not on the live Weeks 6–8 spine this term.

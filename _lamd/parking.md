@@ -9,8 +9,8 @@ abstract: >
   Material that fell off a live lecture clock. Not in the weekly sequence,
   not in the 16h contact-hour total, and not presented until sorted into a
   week. Compile with `maketalk parking.md` only to review the overflow.
-  After the Week 6–8 Good-Regulator replan (Nov 2026), capacity/DPI moved
-  live; Fisher / Crooks / CGF / Legendre paths are notes-only or dropped.
+  Capacity and DPI are live in Week 6, with the exponential family.
+  Thermodynamic length is dropped. Legendre stays off the live spine.
 outcomes: []
 author:
 - given: Neil D.
@@ -23,7 +23,7 @@ parked:
     likely_home: "dropped — counting argument already live in Weeks 2–3"
   - id: partition-Z
     from_week: 3
-    likely_home: "notes-only in Week 5 file (unread); not live Week 6 after GRT replan"
+    likely_home: "exponential-family CGF is live in Week 6; this overflow copy stays notes"
   - id: hmc
     from_week: 3
     likely_home: "dropped — named callback from Week 1 scores only if needed"
@@ -32,7 +32,7 @@ parked:
     likely_home: "dropped — optional colour; bandwidth already in Week 2"
   - id: kl-differential
     from_week: 3
-    likely_home: "notes-only in Week 5 file (unread); not live Week 6 after GRT replan"
+    likely_home: "notes-only in the Week 5 file (unread continuous KL)"
   - id: capacity-dpi
     from_week: 3
     likely_home: "Sorted into Week 6 (channels-dpi-good-regulator.md) — Shannon C and DPI statement; DPI proof Week 7"
@@ -44,7 +44,7 @@ parked:
     likely_home: "dropped from live spine — notes / optional named callback"
   - id: finite-time
     from_week: 3
-    likely_home: "dropped — Crooks / thermodynamic-length path retired from live Weeks 6–8"
+    likely_home: "dropped — thermodynamic length is not in the module"
   - id: local-equilibrium-grouping
     from_week: 4
     likely_home: "dropped — demon compartments already name kinetic layers"
@@ -66,8 +66,7 @@ parked:
 hour, and not the demon lecture. Sort an item into a live `_lamd/*.md`
 week file before presenting it. Capacity and DPI live in Week 6
 (`channels-dpi-good-regulator.md`); the DPI proof and $I+H=C$ deepen in
-Week 7. Fisher / Crooks / Legendre / CGF are notes-only after the
-Good-Regulator-first replan.}
+Week 7. The exponential family and $A$ as a cumulant generating function are live in Week 6. Thermodynamic length is dropped. Legendre duality stays off the live spine.}
 
 \speakernotes{Stop. This is the parking lot. Sort before presenting.}
 
@@ -77,7 +76,8 @@ Good-Regulator-first replan.}
 
 \slidesincremental{
 * Capacity / DPI → Week 6 live (Good Regulator path)
-* $Z$ as CGF, KL continuous, Legendre → notes / deferred Fisher file
+* Exponential family / $A$ as CGF → Week 6 live
+* Legendre → off the live spine; thermodynamic length dropped
 * Shannon axioms, HMC, Dasher, Schottky, finite time → dropped
 * Local equilibrium; Szilard / Landauer / Ellis → Worksheet 3 / dropped
 }
@@ -192,7 +192,7 @@ Good-Regulator-first replan.}
 
 \slides{Dropped --- Crooks / thermodynamic-length path retired.}
 
-\speakernotes{Do not present. Finite-time dissipation and thermodynamic length left the live spine with the Fisher pivot.}
+\speakernotes{Do not present. Thermodynamic length is dropped from the module.}
 
 \notes{Quasi-static processes achieve reversible work $W=\Delta F$. Finite-time driving dissipates additional energy beyond the equilibrium bound. Overflow only.}
 

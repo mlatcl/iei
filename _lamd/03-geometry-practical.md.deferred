@@ -1,9 +1,8 @@
 ---
-title: "Worksheet 3: Information Geometry and Thermodynamic Length"
+title: "Worksheet (deferred): thermodynamic length dropped"
 practical: 3
-week: 6
 layout: practical
-assignment: True
+assignment: False
 ipynb: True
 reveal: False
 transition: None
@@ -11,22 +10,17 @@ date: 2026-11-17
 released: 2026-11-03
 venue: FW26, William Gates Building
 abstract: >
-  Compute the Fisher information matrix of the Gaussian family, compare
-  vanilla and natural gradient, and estimate the thermodynamic length of
-  a path between two Gaussians. Then explain dual flatness and catch
-  what an LLM gets wrong about the natural gradient.
+  Deferred. Not the live worksheet. Thermodynamic length is dropped from
+  the module. Do not release this notebook.
 author:
 - given: Neil D.
   family: Lawrence
   institution: University of Cambridge
   url: http://inverseprobability.com
 outcomes: [LO8, LO9]
-duration_hours: 3
-type: practical
-assessment_id: W3
-weight: 15
-due_week: 6
-word_count: 400
+duration_hours: 0
+type: deferred
+word_count: 0
 ---
 
 \define{\incrementQuestionMarkCounter{marks}}{}
@@ -37,11 +31,11 @@ word_count: 400
 
 \notes{Released after lecture 4 (3 November). Due by 10:00 at the start of lecture 6 (17 November). Estimated three hours. This worksheet is 15% of the module mark.
 
-**Builds on lectures 4–5.** The Fisher matrix and natural-gradient trajectories press the MaxEnt / Landauer material into geometry (`gaussian-fisher-eigen`, `natural-gradient-paths`, `crooks-path-sketch`). Part A3 integrates Fisher–Rao length along the straight-line path $(0,1)\to(2,4)$.}
+**Do not release.** The Crooks length question has been removed. Live Worksheet 3 is `_lamd/grouping-maxwell-practical.md`.}
 
 \notes{Submit `candidatenumber_worksheet3.ipynb` and `candidatenumber_worksheet3.md` on Moodle. LLMs are permitted. Use the Lecture 1 habit: curiosity first, then skeptical probes. Authenticity is checked by the paired in-class quiz on a *new* parameterised family.}
 
-\notes{Lecture 5 defined Crooks' thermodynamic length as the Fisher--Rao length of a path of equilibrium states. You will compute that length for a straight-line path in \((\mu,\sigma^2)\). You do not yet need to say what this has to do with intelligence -- that is lecture 8.}
+\notes{Thermodynamic length is dropped. Do not set the Crooks integral or the bound \(\mathcal{L}^2/\tau\). This file is an archive, not a worksheet.}
 
 \include{_iei/includes/iei-notebook-setup.md}
 
@@ -76,20 +70,7 @@ def natural_ascent(theta0, data, eta=0.05, steps=200):
 # Plot trajectories and loss.
 }{20}{}
 
-\codeassignment{Thermodynamic length (Crooks). Using the Fisher matrix from the first question, estimate the length of the *straight-line* path in mean parameters from \(\theta_0=(0,1)\) to \(\theta_1=(2,4)\),
-$$
-\mathcal{L}=\int_0^1\sqrt{\dot\theta(t)^\top g(\theta(t))\,\dot\theta(t)}\,dt.
-$$
-A simple Riemann sum is enough. Report \(\mathcal{L}\) and the implied dissipation bound \(\mathcal{L}^2/\tau\) for \(\tau=1\). Optional: try a qualitatively different path (for example, change \(\sigma^2\) first, then \(\mu\)) and say which is shorter. Do not interpret this as a claim about intelligence; that is lecture 8.}{
-def thermodynamic_length(path, n=200):
-    # path(t) for t in [0,1] returns theta; integrate Fisher-Rao length
-    pass
-
-def straight_line(t):
-    return np.array([0.0, 1.0]) + t * np.array([2.0, 3.0])
-
-# Compute L and L**2 for tau=1.
-}{15}{}
+\notes{Thermodynamic length question removed. Do not assign \(\mathcal{L}\) or \(\mathcal{L}^2/\tau\).}
 
 \section{Part B -- Reflection}
 

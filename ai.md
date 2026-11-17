@@ -37,13 +37,13 @@ The student-facing rule is already in lecture 1 and on the [assessment]({{ "/ass
 | Setting | Generative AI |
 |--------|----------------|
 | Worksheets 1–3 | Required as the interlocutor. Plan with any tools you like. Submit one continuous ten-turn conversation with a single named model, plus a handwritten reflection. Marks are for the quality of the probe, not for the model's prose. |
-| Worksheet 4 | LLMs permitted. Short notebook plus written reflection; authenticity checked by Quiz 4. |
+| Worksheet 4 | Same Skepticus dialogue format as W1–W3 (GRT and general intelligence; Exchange 1 before the theorem is taught). Authenticity checked by Quiz 4. |
 | In-class quizzes | Forbidden. Paper submission, ten minutes, no notes, no network, no models. These sit at the start of lectures 2, 4, 6 and 8. |
 | Live lectures | No laptops. The room is conversation, notes, and the board. |
 
 You are responsible for every claim you submit, including anything a model fabricated, but the structure of the assignment is designed so that you can pick up those areas where it fabricated and challenge.
 
-Worksheets 1–3 have no AI-free variant, because the object of the exercise *is* the dialogue. Worksheet 4 permits models for the notebook and reflection. The quizzes are the AI-free demonstration of the learning outcomes under invigilation.
+Worksheets 1–4 have no AI-free variant, because the object of the exercise *is* the dialogue. The quizzes are the AI-free demonstration of the learning outcomes under invigilation.
 
 ## Why this split
 
