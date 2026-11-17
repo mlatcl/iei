@@ -101,7 +101,7 @@ reading:
 
 \subsection{Exponential Family}
 
-\newslides{Exponential Family: $\theta=-\lambda$}
+\newslide{Exponential Family: $\theta=-\lambda$}
 
 \slides{Week 5's discrete MaxEnt solution *is* an exponential family.}
 
@@ -121,7 +121,7 @@ A(\boldsymbol{\theta}) &= \log \sum_x \exp\bigl(\boldsymbol{\theta}\cdot T(x)\bi
 \end{align}
 and the Lagrange multipliers from the Week 5 proof are the negative natural parameters, $\theta_k=-\lambda_k$. The minus sign keeps high-energy states down-weighted when $\theta_1=-\beta<0$.}
 
-\newslides{Three Members, One Family}
+\newslide{Three Members, One Family}
 
 \slides{Canonical, Gaussian, and Bernoulli are the same theorem with different $T(x)$.}
 
@@ -137,7 +137,7 @@ and the Lagrange multipliers from the Week 5 proof are the negative natural para
 
 \subsection{$A(\theta)$ as Cumulant Generating Function}
 
-\newslides{$A(\theta)=\log Z$ Generates Cumulants}
+\newslide{$A(\theta)=\log Z$ Generates Cumulants}
 
 \slidesincremental{
 * Week 3: $F=-k_BT\log Z$ (available energy)
@@ -154,9 +154,9 @@ and the Lagrange multipliers from the Week 5 proof are the negative natural para
 
 \classtimertitled{10:35}{Fisher geometry}
 
-\newslides{Fisher's Information $\neq$ Shannon's Entropy}
+\newslide{Fisher's Information $\neq$ Shannon's Entropy}
 
-\slides{Same word; different operational reading.}
+\slides{Same word; different mathematical definition.}
 
 \slidesincremental{
 * Shannon $H$: uncertainty in an outcome
@@ -172,7 +172,7 @@ I(\theta)=\mathbb{E}_\theta\!\left[\left(\frac{\partial}{\partial\theta}\log p(x
 $$
 Shannon's $H$ measures uncertainty in a random variable; Fisher's $I$ measures how much a sample tells you about $\theta$. Conflating the two words is the first mistake to block.}
 
-\newslides{Hessian $=$ Fisher Metric}
+\newslide{Hessian $\equiv$ Fisher Metric}
 
 \slides{On an exponential family the CGF Hessian *is* the Fisher information.}
 
@@ -186,7 +186,7 @@ Shannon's $H$ measures uncertainty in a random variable; Fisher's $I$ measures h
 
 \notes{Three readings of one matrix: Fisher's expected squared score, Fréchet--Rao--Cramér identifiability ($\mathrm{cov}(\hat{\boldsymbol{\theta}})\succeq G^{-1}$), and --- for exponential families --- the Hessian of the cumulant generating function. That matrix is the Fisher information metric on the statistical manifold.}
 
-\newslides{Information Distance}
+\newslide{Information Distance}
 
 \slides{
 $$
@@ -204,7 +204,7 @@ $$
 
 \notes{The Fisher matrix defines infinitesimal information distance. Larger $G$ means a given parameter step is more distinguishable. Integrating $\mathrm{d}s$ along a path of equilibria would give Crooks' thermodynamic length; that development is dropped from the module. Today the metric itself is the object.}
 
-\newslides{Dual Charts $(\theta,\eta)$}
+\newslide{Dual Charts $(\theta,\eta)$}
 
 \slides{Exponential families are dually flat under two coordinate systems.}
 
@@ -227,7 +227,7 @@ $$
 
 \classtimertitled{11:05}{Shannon}
 
-\newslides{Shannon's Noisy Channel Coding Theorem}
+\newslide{Shannon's Noisy Channel Coding Theorem}
 
 \slides{A channel is a conditional $p(y\mid x)$. Rate cannot beat capacity.}
 
@@ -256,7 +256,7 @@ $$
 
 \classtimertitled{11:20}{DPI}
 
-\newslides{Data-Processing Inequality}
+\newslide{Data-Processing Inequality}
 
 \slides{If $X\to Y\to Z$ is Markov, processing cannot create information about $X$.}
 
