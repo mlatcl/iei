@@ -108,7 +108,7 @@ reading:
 * Matrix exponential family = quantum MaxEnt
 }
 
-\speakernotes{LO11. Run Bell-state cell. Worksheet 4 Part A3. Cut short if behind --- LO13 close is protected.}
+\speakernotes{LO11. Run Bell-state cell. Bell-state cell. Cut short if behind --- LO13 close is protected.}
 
 \notes{Classically, $I=C$ forces $H=0$ --- a delta joint. A pure entangled state has von Neumann entropy $S(\rho)=0$ while marginals remain uncertain. The matrix exponential family is the quantum MaxEnt family; Jaynes applied the same Lagrange move to $\rho$ in 1963.}
 

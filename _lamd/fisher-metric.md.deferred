@@ -1,29 +1,24 @@
 ---
-title: "Fisher Metric and Thermodynamic Length"
-week: 6
+title: "Fisher Metric (deferred; thermodynamic length dropped)"
 layout: lecture
 date: 2026-11-17
 venue: FW26, William Gates Building
 room: FW26
 transition: None
 abstract: >
-  Legendre duality $H=A-\theta\cdot\eta$ (using Week 5's $A=\log Z$ and
-  $\eta=\nabla A$), then Fisher's notion of information (sensitivity of the
-  score, not Shannon uncertainty), the Fréchet–Rao–Cramér reading as
-  identifiability, and the Fisher matrix as a Riemannian metric. A short
-  bridge from Crooks' fluctuation theorem (1999) and Jarzynski to the
-  near-equilibrium bound ⟨W_ex⟩ ≥ ℒ²/τ; thermodynamic length (Crooks 2007)
-  is then the Fisher–Rao length of a path of equilibrium states. Students
-  should be able to *define* thermodynamic length today; the Schottky peak
-  as a Fisher peak is named, not interpreted.
+  Deferred overflow. Live Week 6 teaches the exponential family and the
+  Fisher metric bridge (∇²A = G; I ≠ H; ds²; dual charts named) in
+  channels-dpi-good-regulator.md. This file keeps fuller dual-flatness /
+  KL-curvature notes. Thermodynamic length (Crooks 2007; ⟨W_ex⟩ ≥ ℒ²/τ)
+  remains dropped.
 author:
 - given: Neil D.
   family: Lawrence
   institution: University of Cambridge
   url: http://inverseprobability.com
 outcomes: [LO8]
-duration_hours: 2
-type: lecture
+duration_hours: 0
+type: deferred
 in_class_test:
   id: Q3
   duration_minutes: 10
@@ -36,17 +31,9 @@ reading:
     author: "Amari"
     chapter: "Chapters 1–2"
     estimated_hours: 2
-  - title: "Entropy Production Fluctuation Theorem..."
-    author: "Crooks"
-    chapter: "1999; statement of the theorem"
-    estimated_hours: 0.5
-  - title: "Measuring Thermodynamic Length"
-    author: "Crooks"
-    chapter: "whole paper (2007)"
-    estimated_hours: 1
 ---
 
-\notes{Quiz 3 occupies the first ten minutes from 10:05 --- Weeks 4--5 as delivered (grouping, demon compartments and two ledgers, soft partitions / MI / KL, MaxEnt and the exponential family named). Continuous MaxEnt and $\log Z$ as CGF were unread in Week 5 and open after the quiz today. Not Fisher: that starts after the quiz. Collect Worksheet 3 as they sit (due 10:00). Then Fisher's notion of information, geometry, and thermodynamic length (Crooks 2007). Worksheet 4 is released at the close; due 1 December (start of lecture 8).}
+\notes{Do not present this file as the live lecture. Week 6's live Fisher bridge is in `channels-dpi-good-regulator.md` (after the exponential-family CGF). Use this file only for overflow dual-flatness / KL notes. Thermodynamic length is dropped.}
 
 \subsection{This Session}
 
@@ -55,11 +42,11 @@ reading:
 * Week 5 overflow then Legendre: $A=\log Z$, $\eta=\nabla A$; $H=A-\theta\cdot\eta$
 * Fisher's information $\neq$ Shannon's $H$
 * Fisher metric; dual flatness
-* Thermodynamic length: define, do not interpret
+* Thermodynamic length: dropped; do not define $\mathcal{L}$
 }
 
 \notes{
-**Time plan.** The slot is 10:05--11:55 (110 minutes, not 120). Quiz 3 is paper. Protect Fisher versus Shannon, dual flatness, and the length definition. Week 5 named $\theta=-\lambda$ and left continuous MaxEnt / $\log Z$ as CGF unread --- open after the quiz by finishing that thread ($A=\log Z$, $\eta=\nabla A$), then Legendre.
+**Not a time plan.** This file is deferred. Do not use it on 17 November. Thermodynamic length is dropped. The exponential family is in the live Week 6 file.
 
 | Clock | Block |
 |------:|-------|
@@ -68,8 +55,7 @@ reading:
 | 10:40--11:00 | Fréchet–Rao–Cramér; Riemannian geometry; KL |
 | 11:00--11:10 | Break |
 | 11:10--11:30 | Dual flatness; Pythagorean theorem for KL |
-| 11:30--11:45 | Bridge: Crooks (1999) / Jarzynski $\to$ near-eq expansion |
-| 11:45--11:55 | Thermodynamic length; release Worksheet 4 |
+| --- | Thermodynamic length removed from this file |
 }
 
 \subsection{Quiz 3}
@@ -143,7 +129,7 @@ says: where Fisher information is large, unbiased estimators can be precise; whe
 
 \newslide{Named Link: Schottky Peak}
 
-\notes{For the canonical two-state system of week 3, the natural parameter is inverse temperature $\beta$. Then $G(\beta)$ is proportional to the heat capacity $C$. Schottky's anomaly --- the peak of $C$ when both states are populated --- is therefore a peak of Fisher information: maximal thermal response is maximal distinguishability of nearby $\beta$. Name that identity today. The purely entropic reading (what that peak means for information and intelligence) waits for week 8. Do not call $G$ ``the rate of entropy production''; that role belongs to path costs such as Crooks' $\langle W_{\mathrm{ex}}\rangle$, defined later this lecture.}
+\notes{For the canonical two-state system of week 3, the natural parameter is inverse temperature $\beta$. Then $G(\beta)$ is proportional to the heat capacity $C$. Schottky's anomaly --- the peak of $C$ when both states are populated --- is therefore a peak of Fisher information: maximal thermal response is maximal distinguishability of nearby $\beta$. Unused deferred note. Thermodynamic length is dropped; do not define a path cost from this peak.}
 
 \slides{
 **Week 3, revisited (name only):**
@@ -225,7 +211,7 @@ mlai.write_figure('euclidean-vs-riemannian.svg', directory='\writeDiagramsDir/ml
 $$
 \ell(\gamma) = \int_0^1 \sqrt{\dot{\gamma}(t)^\top g(\gamma(t))\, \dot{\gamma}(t)}\, \mathrm{d}t.
 $$
-The geodesic minimises this integral. When we later write thermodynamic length as an integral of $\sqrt{\dot{\lambda}^\top \mathcal{I}(\lambda)\dot{\lambda}}$, we are computing exactly this — but the manifold is the space of probability distributions and the metric is the Fisher information.}
+The geodesic minimises this integral. This is ordinary Riemannian length. It is not Crooks' thermodynamic length, which is dropped from the module.}
 
 \slides{
 $$
@@ -510,81 +496,15 @@ mlai.write_figure('gaussian-fisher-eigen.svg', directory='\writeDiagramsDir/ml')
 
 <!-- /SNIPPET: _information-game/includes/fisher-metric-worked.md -->
 
-\include{_information/includes/welling-crooks-fluctuation.md}
-
-<!-- SNIPPET: _information/includes/crooks-thermodynamic-length.md -->
-
-\newslide{Thermodynamic Length (Crooks 2007)}
-
-\slides{For a slow protocol $\lambda(t)$ on the equilibrium manifold, define length with the Fisher metric.}
-
-$$
-\mathcal{L} = \int_0^\tau \sqrt{\dot\lambda^\top \mathcal{I}(\lambda)\,\dot\lambda}\,dt
-$$
-
-\slidesincremental{
-* No-go: $\langle W_{\mathrm{ex}}\rangle \ge \mathcal{L}^2/\tau$ in linear response
-* Prescription: measure change of state with the Fisher metric
-* Intelligence question: week 8
-}
-
-\speakernotes{Define length today; do not interpret for intelligence until lecture 8. Straight-line path $(0,1)\to(2,4)$ is the worked sketch; the geometry notebook is deferred. The bound is the near-equilibrium expansion of the fluctuation theorem, not a separate axiom.}
-
-\notes{Crooks (2007) packages the near-equilibrium expansion as Fisher--Rao length on the equilibrium manifold [@Crooks-length07]. In linear response, $\langle W_{\mathrm{ex}}\rangle\ge\mathcal{L}^2/\tau$. The metric is the prescription for measuring a change of state; geodesics minimise the leading dissipative cost. The exact distributional statement underneath is Crooks (1999) / Jarzynski, above.}
-
-\include{_physics/includes/crooks-grouping-timescale.md}
-
-\setupplotcode{import numpy as np
-import matplotlib.pyplot as plt
-import mlai}
-
-\plotcode{def fisher_gaussian(mu, sigma2):
-    return np.array([[1.0 / sigma2, 0.0], [0.0, 0.5 / sigma2 ** 2]])
-
-def straight_line(t):
-    return np.array([0.0, 1.0]) + t * np.array([2.0, 3.0])
-
-ts = np.linspace(0, 1, 200)
-path = np.array([straight_line(t) for t in ts])
-speed = np.gradient(path, ts, axis=0)
-length_sq = 0.0
-for i in range(len(ts)):
-    g = fisher_gaussian(*path[i])
-    v = speed[i]
-    length_sq += np.sqrt(v @ g @ v) * (ts[1] - ts[0])
-fig, ax = plt.subplots(figsize=(6, 5))
-ax.plot(path[:, 0], path[:, 1], 'k-', linewidth=2)
-ax.scatter([0, 2], [1, 4], s=80, c=['green', 'red'])
-ax.set_xlabel('$\\mu$')
-ax.set_ylabel('$\\sigma^2$')
-ax.set_title('Straight-line path in mean parameters')
-mlai.write_figure('crooks-path-sketch.svg', directory='\writeDiagramsDir/ml')}
-
-\figure{\includediagram{\diagramsDir/ml/crooks-path-sketch}{65%}}{Straight-line path in $(\mu,\sigma^2)$ whose Fisher–Rao length is the worked sketch for thermodynamic length.}{crooks-path-sketch}
-
-
-<!-- /SNIPPET: _information/includes/crooks-thermodynamic-length.md -->
-
-\addreading{@Crooks-length07}{the whole paper}
-
-\slidesincremental{
-* No-go: $\langle W_{\mathrm{ex}}\rangle \ge \mathcal{L}^2/\tau$
-* Prescription: length is measured with the Fisher metric
-* Intelligence question: week 8
-}
+\notes{Thermodynamic length is dropped. The Crooks fluctuation bridge, the length $\mathcal{L}$, the bound $\langle W_{\mathrm{ex}}\rangle\ge\mathcal{L}^2/\tau$, and the path sketch are not in this file.}
 
 \subsection{Define This Week}
 
 \slidesincremental{
-* Fisher's $I(\theta)$ versus Shannon's $H$
-* Identifiability: Fréchet–Rao–Cramér / Cramér–Rao
-* Schottky peak as Fisher peak (named only)
-* Fisher metric as a Riemannian metric; dual charts
-* Crooks (1999) $\to$ Jarzynski $\to$ $\langle W\rangle\ge\Delta F$
-* What is thermodynamic length?
+* This file is not the live Week 6 lecture
+* Exponential family is in `channels-dpi-good-regulator.md`
+* Thermodynamic length is dropped
 }
-
-\notes{Interpret later: Schottky's entropic reading; optimal trajectories and intelligence (week 8). Natural gradient as descent in the same metric is week 7.}
 
 \subsection{After This Lecture}
 

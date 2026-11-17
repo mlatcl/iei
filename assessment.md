@@ -20,7 +20,7 @@ This module uses 8 assessment components totalling 100%.
 | Q3 | In-Class Quiz 3: Grouping, Maxwell's Demon, and MaxEnt | in-class-quiz | summative | 10% | 6 | in-class |
 | W3 | Worksheet 3: Socratic Dialogue on Coarse-Graining Maxwell | mini-project | summative | 15% | 6 | take-home |
 | Q4 | In-Class Quiz 4: Multi-Information, DPI, GRT, and Limits | in-class-quiz | summative | 10% | 8 | in-class |
-| W4 | Worksheet 4: Multi-Information, Von Neumann Entropy, and Limits on Intelligence | mini-project | summative | 15% | 8 | take-home |
+| W4 | Worksheet 4: Socratic Dialogue on the Good Regulator and General Intelligence | mini-project | summative | 15% | 8 | take-home |
 
 ## Component Details
 
@@ -66,9 +66,9 @@ This module uses 8 assessment components totalling 100%.
 **Estimated workload**: 0.2h
 **AI robustness**: Invigilated in-class paper test. No external resources. The yaml path is an LO8–LO13-tagged pool for drafting reuse, not the printed paper.
 
-### W4: Worksheet 4: Multi-Information, Von Neumann Entropy, and Limits on Intelligence
+### W4: Worksheet 4: Socratic Dialogue on the Good Regulator and General Intelligence
 
 **Type**: mini-project | **Weight**: 15% | **Due week**: 8 | **Delivery**: take-home
 **Estimated workload**: 3.0h
-**AI robustness**: LLMs permitted. Authenticity verified by in-class Quiz 4 (Week 8) under invigilated conditions on a new example that does not reuse this worksheet.
+**AI robustness**: Skepticus dialogue (curiosity then skepticism); Exchange 1 begins before the Good Regulator is taught. Authenticity verified by in-class Quiz 4 (Week 8) under invigilated conditions on a new example that does not reuse this worksheet.
 

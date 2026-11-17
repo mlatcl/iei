@@ -12,14 +12,15 @@ abstract: >
   data-processing inequality (Cover–Thomas 2.8.1) stated last week;
   develop the information bottleneck as the prescription paired with
   DPI and as a gloss after the Good Regulator Theorem (not the theorem
-  itself). Optional vocabulary: Fisher information ≠ Shannon H. Von
+  itself). Fisher I ≠ Shannon H was earned in Week 6 with the
+  exponential-family metric; today it is optional refresh only. Von
   Neumann / classical limit I=C waits for Week 8 if the clock is tight.
 author:
 - given: Neil D.
   family: Lawrence
   institution: University of Cambridge
   url: http://inverseprobability.com
-outcomes: [LO8, LO9, LO10]
+outcomes: [LO9, LO10]
 duration_hours: 2
 type: lecture
 in_class_test: null
@@ -41,7 +42,7 @@ reading:
     required: false
 ---
 
-\notes{No class test today. Quiz 3 was last week (start of lecture 6). Worksheet 3 was due last week; Worksheet 4 is already out (due 1 December, before Quiz 4). Last week earned Shannon capacity, stated DPI, and gave a full Good Regulator overview. Today: multi-information / $I+H=C$, prove DPI, information bottleneck as prescription and as GRT gloss.}
+\notes{No class test today. Quiz 3 was last week (start of lecture 6). Worksheet 3 was due last week; Worksheet 4 (Skepticus dialogue on GRT and general intelligence) is already out (due 1 December, before Quiz 4). Last week earned the exponential family, the Fisher metric from $\nabla^2 A$, Shannon capacity, stated DPI, and a full Good Regulator overview. Today: multi-information / $I+H=C$, prove DPI, information bottleneck as prescription and as GRT gloss.}
 
 \subsection{This Session}
 
@@ -89,7 +90,7 @@ reading:
 * $I$ = stored correlation; $H$ = free uncertainty
 }
 
-\speakernotes{LO10. Point back to velocity demos: same marginals, different joints. Worksheet 4 Part A. Inaccessible-game introduction is light colour only --- not a full axiomatic framework.}
+\speakernotes{LO10. Point back to velocity demos: same marginals, different joints. Inaccessible-game introduction is light colour only --- not a full axiomatic framework. (The parked notebook W4 Part A is not the live worksheet.)}
 
 \notes{Multi-information $I=\sum_i h_i-H\ge 0$ generalises mutual information. With fixed marginal entropies $C=\sum_i h_i$, conservation $I+H=C$ is a no-go: you cannot have both high stored correlation and high free uncertainty without bound. The mechanics analogy is enough: $I$ like potential (stored correlation), $H$ like kinetic (free uncertainty). A brief inaccessible-game introduction may follow as colour; do not expand it into a separate outcome.}
 
@@ -121,7 +122,7 @@ ax.plot(rhos, H_vals, label='$H(\\rho)$')
 ax.set_xlabel('$\\rho$')
 ax.set_ylabel('bits')
 ax.legend()
-ax.set_title('Worksheet 4 Part A2 family: $I+H=2$')
+ax.set_title('Correlated-pair family: $I+H=2$')
 mlai.write_figure('multi-information-rho.svg', directory='\writeDiagramsDir/ml')}
 
 \figure{\includediagram{\diagramsDir/ml/multi-information-rho}{75%}}{Multi-information and joint entropy for uniform-marginal binary pairs; $I+H=C$ with $C=2$.}{multi-information-rho}
@@ -189,22 +190,22 @@ mlai.write_figure('information-bottleneck-region.svg', directory='\writeDiagrams
 
 \notes{Week 6 already earned the Good Regulator existence claim and named the IB-shaped gloss. Today IB is a first-class LO10 theorem (relevant compression under an $I$ budget). Keep the fence: the gloss is not the theorem.}
 
-\subsection{Optional: Fisher versus Shannon; MaxEnt as Projection (named)}
+\subsection{Optional: Fisher Refresh; MaxEnt as Projection (named)}
 
-\newslides{Vocabulary Only: Two ``Informations''}
+\newslides{Refresh: Two ``Informations''}
 
-\slides{Same English word; different operational readings.}
+\slides{Week 6 already earned this; name MaxEnt as $m$-projection if ahead.}
 
 \slidesincremental{
 * Shannon $H$: uncertainty in an outcome
-* Fisher $I(\theta)$: sensitivity of $\log p$ to a parameter
+* Fisher $I(\theta)$: sensitivity of $\log p$ to a parameter; $G=\nabla^2 A$ on the exponential family
 * MaxEnt as $m$-projection: geometric reading of Week 5 (named, not computed)
-* No Riemannian deep dive; no natural-gradient paths; no thermodynamic length
+* No natural-gradient paths; no thermodynamic length
 }
 
-\speakernotes{Ten minutes maximum if ahead. LO8 / LO9 stay thin by design after the GRT replan. Do not open dual flatness, Crooks, or geodesic worksheets.}
+\speakernotes{Five minutes maximum if ahead. LO8 was Week 6; LO9 is the thin new name. Do not reopen dual flatness or Crooks.}
 
-\notes{Optional vocabulary so students are not blindsided by the word ``information'' in estimation contexts. MaxEnt-as-$m$-projection is the geometric name for the Week 5 constrained problem; natural gradient and Crooks geodesics remain in `maxent-projection.md.deferred` / `fisher-metric.md.deferred`.}
+\notes{Optional refresh of Week 6's Fisher-versus-Shannon distinction. MaxEnt-as-$m$-projection (LO9) is the geometric name for the Week 5 constrained problem. Thermodynamic length is dropped; do not open Crooks geodesics.}
 
 \subsection{The Inaccessible Game}
 
