@@ -9,15 +9,15 @@ transition: None
 abstract: >
   After Quiz 3, develop the exponential family that Week 5 only named:
   natural parameters θ=-λ, the canonical ensemble, the Gaussian, and the
-  Bernoulli as one MaxEnt family, and A(θ)=log Z(-θ) as a cumulant
-  generating function. The Hessian ∇²A is the Fisher information metric
+  Bernoulli as one MaxEnt family, and ψ(θ)=log Z(-θ) as a cumulant
+  generating function. The Hessian ∇²ψ is the Fisher information metric
   on that family: Fisher's I(θ) is not Shannon's H, and ds² = dθᵀ G dθ
-  measures distinguishability. Dual charts (θ, η=∇A) are named; Crooks
+  measures distinguishability. Dual charts (θ, η=∇ψ) are named; Crooks
   thermodynamic length is not. Then Shannon's noisy-channel coding
   theorem (R≤C), the data-processing inequality as a statement, and a
-  full overview of the Good Regulator Theorem: Ashby's requisite variety,
-  Conant–Ashby H(A|S)=0, two caveats, and the information-bottleneck
-  gloss after the theorem.
+  Good Regulator overview only: setup diagrams with disturbance D,
+  system S, action A (not R), reguland Z; the slogan and fences.
+  Full Conant–Ashby development is the Week 8 review.
 author:
 - given: Neil D.
   family: Lawrence
@@ -56,16 +56,16 @@ reading:
     estimated_hours: 0.5
 ---
 
-\notes{Quiz 3 occupies the first ten minutes from 10:05 --- Weeks 4--5 as delivered (grouping, demon compartments and two ledgers, soft partitions / MI / KL, MaxEnt and the exponential family *named*). After the quiz, teach the exponential family that was only named on 10 November: $\theta=-\lambda$, canonical / Gaussian / Bernoulli, and $A(\boldsymbol{\theta})=\log Z(-\boldsymbol{\theta})$ as a cumulant generating function. The Hessian of $A$ *is* the Fisher information metric --- that is today's information-geometry bridge (LO8). Thermodynamic length is still dropped: do not define $\mathcal{L}$, do not state $\langle W_{\mathrm{ex}}\rangle\ge\mathcal{L}^2/\tau$, and do not open Crooks (2007). Collect Worksheet 3 as they sit (due 10:00). Release Worksheet 4 *before* the Good Regulator block: it is another Skepticus dialogue; Exchange 1 asks what the Good Regulator Theorem is and how it relates to modern notions of general intelligence, begun before that theorem is taught. Then Shannon capacity, DPI as a statement, and a Good Regulator overview. W4 due 1 December (start of lecture 8).}
+\notes{Quiz 3 occupies the first ten minutes from 10:05 --- Weeks 4--5 as delivered (grouping, demon compartments and two ledgers, soft partitions / MI / KL, MaxEnt and the exponential family *named*). After the quiz, teach the exponential family that was only named on 10 November: $\theta=-\lambda$, canonical / Gaussian / Bernoulli, and $\psi(\boldsymbol{\theta})=\log Z(-\boldsymbol{\theta})$ as a cumulant generating function. The Hessian of $\psi$ *is* the Fisher information metric --- that is today's information-geometry bridge (LO8). Thermodynamic length is still dropped: do not define $\mathcal{L}$, do not state $\langle W_{\mathrm{ex}}\rangle\ge\mathcal{L}^2/\tau$, and do not open Crooks (2007). Collect Worksheet 3 as they sit (due 10:00). Release Worksheet 4 *before* the Good Regulator block: it is another Skepticus dialogue; Exchange 1 asks what the Good Regulator Theorem is and how it relates to modern notions of general intelligence, begun before that theorem is taught. Then Shannon capacity, DPI as a statement, and a Good Regulator overview. W4 due 1 December (start of lecture 8).}
 
 \subsection{This Session}
 
 \slidesincremental{
 * Quiz 3 (ten minutes); collect Worksheet 3; release Worksheet 4
-* Exponential family: $\theta=-\lambda$; canonical, Gaussian, Bernoulli
-* $A(\boldsymbol{\theta})=\log Z$ generates the mean and the covariance
-* Fisher metric: $\nabla^2 A = G$; Fisher's $I$ is not Shannon's $H$
-* Shannon: $R\le C$; DPI; Good Regulator $H(A\mid S)=0$
+* Exponential family: $\theta=-\lambda$; Week 1 families in $(\theta,\psi)$ form
+* $\psi(\boldsymbol{\theta})=\log Z$ generates the mean and the covariance
+* Fisher metric: $\nabla^2 \psi = G$; Fisher's $I$ is not Shannon's $H$
+* Shannon: $R\le C$; DPI; Good Regulator overview ($D,S,A,Z$)
 }
 
 \notes{
@@ -75,12 +75,12 @@ reading:
 |------:|-------|
 | 10:05--10:15 | Quiz 3 (paper); collect Worksheet 3 |
 | 10:15--10:20 | Release Worksheet 4 (start Exchange 1 before GRT) |
-| 10:20--10:40 | Exponential family: $\theta=-\lambda$; three members; $A$ as CGF |
-| 10:40--11:00 | Fisher geometry: $G=\nabla^2 A$; $I\neq H$; $\mathrm{d}s^2$; dual charts |
+| 10:20--10:40 | Exponential family: $\theta=-\lambda$; three members; $\psi$ as CGF |
+| 10:40--11:00 | Fisher geometry: $G=\nabla^2 \psi$; $I\neq H$; $\mathrm{d}s^2$; dual charts |
 | 11:00--11:10 | Break |
 | 11:10--11:25 | Shannon communication theorem / channel capacity |
 | 11:25--11:35 | DPI statement; Markov moral |
-| 11:35--11:55 | Good Regulator overview; preview Week 7 |
+| 11:35--11:55 | Good Regulator overview ($D,S,A,Z$ diagrams); preview Week 7 |
 }
 
 \subsection{Quiz 3}
@@ -108,18 +108,61 @@ reading:
 \slidesincremental{
 * Sufficient statistics: $T_k(x_i)=f_k(x_i)$, fixed by the constraints
 * MaxEnt: $p_i=\exp\bigl(-\sum_k \lambda_k T_k(x_i)\bigr)/Z$
-* Family: $p(x\mid\boldsymbol{\theta})\propto \exp\bigl(\boldsymbol{\theta}\!\cdot\! T(x)-A(\boldsymbol{\theta})\bigr)$
+* Family: $p(x\mid\boldsymbol{\theta})\propto \exp\bigl(\boldsymbol{\theta}\!\cdot\! T(x)-\psi(\boldsymbol{\theta})\bigr)$
 * Identification: $\boldsymbol{\theta}=-\boldsymbol{\lambda}$
 }
 
-\speakernotes{LO6. This is the block Week 5 only named. Physics sign: Boltzmann writes $p_i\propto e^{-\beta E_i}$, so $\theta_1=-\beta$ when $T=E$. Fitting the $\lambda$s is maximum likelihood; say that and move to the three members. Geometry comes after the CGF slide, not here.}
+\speakernotes{LO6. This is the block Week 5 only named. Physics sign: Boltzmann writes $p_i\propto e^{-\beta E_i}$, so $\theta_1=-\beta$ when $T=E$. Fitting the $\lambda$s is maximum likelihood. Next slide: the base measure $h_0$ is counting measure as a prior --- then three members. Geometry comes after the CGF slide, not here.}
 
-\notes{On a finite state space the constrained MaxEnt distribution is an exponential family. With sufficient statistics $T_k(x)=f_k(x)$ and counting measure $h(x)$,
+\notes{On a finite state space the constrained MaxEnt distribution is an exponential family. With sufficient statistics $T_k(x)=f_k(x)$ and base density $h_0$ of the counting measure $\#$ on the allowed outcomes,
 \begin{align}
-p(x\mid\boldsymbol{\theta}) &= \exp\bigl(\boldsymbol{\theta}\cdot T(x) - A(\boldsymbol{\theta})\bigr)\, h(x),\\
-A(\boldsymbol{\theta}) &= \log \sum_x \exp\bigl(\boldsymbol{\theta}\cdot T(x)\bigr),
+p(x\mid\boldsymbol{\theta}) &= \exp\bigl(\boldsymbol{\theta}\cdot T(x) - \psi(\boldsymbol{\theta})\bigr)\, h_0(x),\\
+\psi(\boldsymbol{\theta}) &= \log \sum_x \exp\bigl(\boldsymbol{\theta}\cdot T(x)\bigr),
 \end{align}
-and the Lagrange multipliers from the Week 5 proof are the negative natural parameters, $\theta_k=-\lambda_k$. The minus sign keeps high-energy states down-weighted when $\theta_1=-\beta<0$.}
+where $h_0(x)=\mathbf{1}[x\in\mathcal{X}]$ (one on allowed labels, zero elsewhere). The Lagrange multipliers from the Week 5 proof are the negative natural parameters, $\theta_k=-\lambda_k$. The minus sign keeps high-energy states down-weighted when $\theta_1=-\beta<0$.}
+
+\newslide{Counting Measure Is a Prior}
+
+\slides{Weeks 4--5: every density is ${\mathrm{d}}P/{\mathrm{d}}\mu$. On a finite alphabet the unnoticed $\mu$ is counting measure.}
+
+\slidesincremental{
+* Counting $\#$: each allowed label weight 1; $\int f\,{\mathrm{d}}\#=\sum_x f(x)$
+* Shannon: $H(P)=\log N-\mathrm{KL}(P\|u)$ with $u=\#/N$
+* Exponential family: $p=\exp(\theta\cdot T-\psi)\,h_0$, today $h_0=\mathbf{1}[x\in\mathcal{X}]$
+* Same role as Jaynes' $m$; not a new ``measure of uncertainty''
+}
+
+\speakernotes{Two minutes maximum. Counting measure is a *prior*: every label a priori as good as every other. The identity $H=\log N-\mathrm{KL}(P\|u)$ is the discrete case of the relative-entropy story from Weeks 4--5. Do not open Lebesgue singularity or mixed measures. Poisson $1/k!$ and binomial $\binom{n}{k}$ appear as $h_0$ on the next distribution slides --- name them there, do not derive. Move to the three members.}
+
+\notes{A probability is always a density with respect to some reference measure $\mu$: the Radon--Nikodym derivative ${\mathrm{d}}P/{\mathrm{d}}\mu$. Every entropy-like quantity in the course is the same expression,
+\begin{align}
+H_\mu(P)=-\int\log\frac{{\mathrm{d}}P}{{\mathrm{d}}\mu}\,{\mathrm{d}}P,
+\end{align}
+with a different $\mu$ each time. Lecture 4 already said that choosing a discretisation is choosing a measure; the counting measure $\#$ is the case so natural that nobody notices the choice has been made. Integrating against $\#$ is a sum, $\int f\,{\mathrm{d}}\#=\sum_x f(x)$, and the density of $P$ with respect to $\#$ is the probability mass function $p(x)=P(\{x\})$. Shannon entropy is exactly $H_\#(P)=-\sum_x p(x)\log p(x)$.
+
+Counting measure is a prior: every outcome gets weight 1. On a finite set of $N$ outcomes write $u=\#/N$ for the uniform distribution. Then
+\begin{align}
+H(P)=\log N-\mathrm{KL}(P\|u).
+\end{align}
+So Shannon entropy *is* a negative KL divergence against the uniform that $\#$ defines. Three immediate consequences: (i) $H\ge 0$, because each atom has counting measure 1 so $p(x)\le 1$; (ii) $H$ is unchanged by any relabelling of the outcomes ($\#$ is invariant under bijections); (iii) on a countably infinite set $\#$ has infinite total mass, there is no uniform $u$, and entropy need not be finite.
+
+The same template covers the continuous and relative cases. Lebesgue measure $\lambda$ (length / area / volume) is the continuum counterpart: differential entropy is $H_\lambda$, can be negative, and changes under nonlinear reparametrisation because $\lambda$ does (the Jacobian is Lecture 4's density of states / $-\log\Delta$ when a grid of spacing $\Delta$ is refined toward $\lambda$). KL divergence uses a probability $Q$ as reference,
+\begin{align}
+\mathrm{KL}(P\|Q)=\int\log\frac{{\mathrm{d}}P}{{\mathrm{d}}Q}\,{\mathrm{d}}P;
+\end{align}
+any common base $\mu$ cancels in the ratio of densities, which is why KL (and mutual information) has no $-\log\Delta$ divergence and is unchanged when the same invertible map is applied to both arguments.
+
+\begin{center}
+\begin{tabular}{llll}
+Reference $\mu$ & $H_\mu(P)$ & Sign & Implicit prior\\
+\hline
+Counting $\#$ & $-\sum p\log p$ (Shannon) & $\ge 0$ & each *label* equally likely\\
+Lebesgue $\lambda$ & $-\int f\log f\,{\mathrm{d}}x$ (differential) & either & each unit of *volume* equally likely\\
+Probability $Q$ & $-\mathrm{KL}(P\|Q)$ & $\le 0$ & $Q$, stated explicitly
+\end{tabular}
+\end{center}
+
+Maximum entropy relative to $\mu$ gives ${\mathrm{d}}P/{\mathrm{d}}\mu=\exp(\theta\cdot T-\psi)$. The factor $h_0$ in the exponential family is the density of that base measure when sums or integrals are written against a default chart. Today $\nu=\#$ on the allowed set and $h_0={\mathrm{d}}\nu/{\mathrm{d}}\#=\mathbf{1}[x\in\mathcal{X}]$, so $\psi$ is a log-sum. Even in discrete cases the base need not be plain counting: Poisson uses $h_0(x)=1/x!$ on $\mathbb{N}$, binomial uses $\binom{n}{x}$ --- combinatorial multiplicity as the discrete counterpart of the $v^2$ density of states. We write $h_0$ rather than $h$ to avoid colliding with differential entropy and with the regulator map $A=h(S)$ later in the module.}
 
 \newslide{Three Members, One Family}
 
@@ -131,24 +174,26 @@ and the Lagrange multipliers from the Week 5 proof are the negative natural para
 * Bernoulli / two-level: $T\in\{0,1\}$, $\theta=-\beta\varepsilon$
 }
 
-\speakernotes{LO6 punchline. Two-level system is a Bernoulli. Softmax is the same calculation with a richer feature map; name it only if the clock is ahead. Do not start the matrix exponential family; that waits for the Week 8 quantum close if at all.}
+\speakernotes{LO6 punchline. Two-level system is a Bernoulli. Softmax is the same calculation with a richer feature map; name it only if the clock is ahead. The next block writes $\theta$ and $\psi$ for every Week 1 named family --- walk Bernoulli and Gaussian live; binomial / Poisson / multinomial are the same grammar if clock allows. Do not start the matrix exponential family; that waits for the Week 8 quantum close if at all.}
 
 \notes{Each of these is MaxEnt for its moment constraints, so each belongs to the exponential family. The canonical ensemble is the mean-energy case already recovered in Week 5. A Gaussian is MaxEnt for a fixed mean and variance. A two-level system with energies $0$ and $\varepsilon$ is a Bernoulli with natural parameter $\theta=-\beta\varepsilon$.}
 
-\subsection{$A(\theta)$ as Cumulant Generating Function}
+\include{_statistics/includes/common-distributions-exponential-family.md}
 
-\newslide{$A(\theta)=\log Z$ Generates Cumulants}
+\subsection{$\psi(\theta)$ as Cumulant Generating Function}
+
+\newslide{$\psi(\theta)=\log Z$ Generates Cumulants}
 
 \slidesincremental{
 * Week 3: $F=-k_BT\log Z$ (available energy)
-* Same object: $A(\boldsymbol{\theta})=\log Z(-\boldsymbol{\theta})$
-* Mean parameters: $\boldsymbol{\eta}=\nabla A=\langle T\rangle$
-* Hessian: $\nabla^2 A=\mathrm{Cov}[T]$
+* Same object: $\psi(\boldsymbol{\theta})=\log Z(-\boldsymbol{\theta})$
+* Mean parameters: $\boldsymbol{\eta}=\nabla \psi=\langle T\rangle$
+* Hessian: $\nabla^2 \psi=\mathrm{Cov}[T]$
 }
 
-\speakernotes{Board $\eta=\nabla A$ and $\nabla^2 A=\mathrm{Cov}[T]$. The next slides read that Hessian as Fisher information. Do not write $\mathcal{L}$ or $\langle W_{\mathrm{ex}}\rangle\ge\mathcal{L}^2/\tau$.}
+\speakernotes{Board $\eta=\nabla\psi$ and $\nabla^2\psi=\mathrm{Cov}[T]$. The next slides read that Hessian as Fisher information. Do not write $\mathcal{L}$ or $\langle W_{\mathrm{ex}}\rangle\ge\mathcal{L}^2/\tau$.}
 
-\notes{The Quiz 2 debrief already read $\log Z$ as available energy, $F=-k_BT\log Z$. In exponential-family coordinates the same function is $A(\boldsymbol{\theta})=\log Z(-\boldsymbol{\theta})$. Its first derivative is the mean of $T$; its second derivative is the covariance of $T$. That is the cumulant-generating property. The next section is the geometric reading of the same Hessian.}
+\notes{The Quiz 2 debrief already read $\log Z$ as available energy, $F=-k_BT\log Z$. In exponential-family coordinates the same function is $\psi(\boldsymbol{\theta})=\log Z(-\boldsymbol{\theta})$. Its first derivative is the mean of $T$; its second derivative is the covariance of $T$. That is the cumulant-generating property. The next section is the geometric reading of the same Hessian.}
 
 \subsection{Fisher Metric from the Exponential Family}
 
@@ -164,7 +209,7 @@ and the Lagrange multipliers from the Week 5 proof are the negative natural para
 * $H$ is a state function of $p$; $I$ is a property of a *family* $p(\cdot\mid\theta)$
 }
 
-\speakernotes{LO8. Hold this distinction for the rest of the module. Shannon is coming after the break as channel capacity; Fisher is already on the board as $\nabla^2 A$.}
+\speakernotes{LO8. Hold this distinction for the rest of the module. Shannon is coming after the break as channel capacity; Fisher is already on the board as $\nabla^2\psi$.}
 
 \notes{Fisher (1925) called the expected squared score *information* about a parameter. For a scalar parameter,
 $$
@@ -178,7 +223,7 @@ Shannon's $H$ measures uncertainty in a random variable; Fisher's $I$ measures h
 
 \slidesincremental{
 * Score definition: $G_{ij}=\mathbb{E}[\partial_i\log p\,\partial_j\log p]$
-* Exponential family: $G(\boldsymbol{\theta})=\nabla^2 A(\boldsymbol{\theta})=\mathrm{Cov}[T]$
+* Exponential family: $G(\boldsymbol{\theta})=\nabla^2 \psi(\boldsymbol{\theta})=\mathrm{Cov}[T]$
 * Same matrix: estimation, identifiability, geometry
 }
 
@@ -210,14 +255,14 @@ $$
 
 \slidesincremental{
 * Natural parameters $\boldsymbol{\theta}$ (e-coordinates)
-* Mean parameters $\boldsymbol{\eta}=\nabla A=\langle T\rangle$ (m-coordinates)
+* Mean parameters $\boldsymbol{\eta}=\nabla \psi=\langle T\rangle$ (m-coordinates)
 * Hessians of the dual potentials are inverse metrics
 * Full Legendre / Pythagorean development stays notes
 }
 
-\speakernotes{Name dual flatness; do not board $H=A-\theta\cdot\eta$ unless ahead. The pair $(\theta,\eta)$ is enough to see why MaxEnt looks like an $m$-projection later. Natural gradient is optional colour only.}
+\speakernotes{Name dual flatness; do not board $H=\psi-\theta\cdot\eta$ unless ahead. The pair $(\theta,\eta)$ is enough to see why MaxEnt looks like an $m$-projection later. Natural gradient is optional colour only.}
 
-\notes{Amari's dual flatness: exponential families admit affine coordinates in $\boldsymbol{\theta}$ and in $\boldsymbol{\eta}=\nabla A$, with dual potentials whose Hessians are inverse Fisher metrics. The Legendre dual $A^*(\eta)=A-\theta\cdot\eta$ and the Pythagorean theorem for KL on dual flats are the natural next theorem; they stay thin today so Shannon and the Good Regulator keep their clock.}
+\notes{Amari's dual flatness: exponential families admit affine coordinates in $\boldsymbol{\theta}$ and in $\boldsymbol{\eta}=\nabla\psi$, with dual potentials whose Hessians are inverse Fisher metrics. The Legendre dual $\psi^*(\eta)=\psi-\theta\cdot\eta$ and the Pythagorean theorem for KL on dual flats are the natural next theorem; they stay thin today so Shannon and the Good Regulator keep their clock.}
 
 \addreading{@Amari-information16}{Fisher metric; dual flatness}
 
@@ -278,30 +323,28 @@ $$
 
 \subsection{Good Regulator}
 
-\classtimertitled{11:30}{Good Regulator}
+\classtimertitled{11:35}{Good Regulator}
 
-\include{_information/includes/entropic-good-regulator.md}
-
-\addreading{@Conant-Ashby70}{the Good Regulator Theorem}
-\addreading{@Ashby-introduction56}{requisite variety; Shannon form}
+\include{_information/includes/good-regulator-overview.md}
 
 \subsection{Define This Week}
 
 \slidesincremental{
 * Why is the exponential family the MaxEnt family, and why $\theta=-\lambda$?
-* Why is $\nabla^2 A$ both $\mathrm{Cov}[T]$ and the Fisher metric $G$?
+* Why is $\nabla^2 \psi$ both $\mathrm{Cov}[T]$ and the Fisher metric $G$?
 * How does Fisher's $I(\theta)$ differ from Shannon's $H$?
 * What does $R\le C$ forbid, and what does DPI state?
-* Why $H(A\mid S)=0$, and why that model is weak?
+* Name $D$, $S$, $A$, $Z$ on the Good Regulator diagrams --- and why full GRT waits for Week 8
 }
 
 \subsection{After This Lecture}
 
-\notes{Quiz 3 opened the session, before the exponential family and Fisher geometry were developed. Worksheet 4 was released early in the session so Exchange 1 could begin before the Good Regulator overview (due 1 December, before Quiz 4). It is a Skepticus dialogue on GRT and general intelligence, not the parked notebook brief. Week 7 deepens multi-information, proves DPI, and develops the information bottleneck as the prescription paired with DPI --- and as a gloss after GRT, not the theorem. Week 7 does not restore thermodynamic length; dual-flatness colour may return only if clock allows.}
+\notes{Quiz 3 opened the session, before the exponential family and Fisher geometry were developed. Worksheet 4 was released early in the session so Exchange 1 could begin before the Good Regulator overview (due 1 December, before Quiz 4). It is a Skepticus dialogue on GRT and general intelligence, not the parked notebook brief. Today's GRT block is setup and diagrams only; the full Conant--Ashby argument is the Week 8 review. Week 7 deepens multi-information, proves DPI, and develops the information bottleneck as the prescription paired with DPI --- and as a gloss after GRT, not the theorem. Week 7 does not restore thermodynamic length; dual-flatness colour may return only if clock allows.}
 
 \slidesincremental{
 * Worksheet 4 out (dialogue; Exchange 1 before GRT); due 1 December before Quiz 4
 * Week 7: $I+H=C$, DPI proof, information bottleneck
+* Week 8: full Good Regulator review, then limits synthesis
 }
 
 \reading
