@@ -16,7 +16,7 @@ outcomes:
     text: "Students will be able to derive the canonical ensemble and use the partition function to compute mean energy, entropy, and free energy for simple systems."
     bloom_level: apply
     week: 3
-    notes: "Practical computation. Bridges thermodynamics formalism to Jaynes MaxEnt. Partition function Z for U, F, S in week 3. The cumulant generating function reading A(θ)=log Z(-θ) with η=∇A is live in Week 6 with the exponential family. Legendre duality stays off the live spine. Thermodynamic length is dropped."
+    notes: "Practical computation. Bridges thermodynamics formalism to Jaynes MaxEnt. Partition function Z for U, F, S in week 3. The cumulant generating function reading ψ(θ)=log Z(-θ) with η=∇ψ is live in Week 6 with the exponential family. Legendre duality stays off the live spine. Thermodynamic length is dropped."
 
   - id: LO4
     text: "Students will be able to explain Maxwell's demon thought experiment, identify where the apparent violation of the second law arises, and apply Landauer's principle to show that information erasure restores thermodynamic consistency."
@@ -34,7 +34,7 @@ outcomes:
     text: "Students will be able to identify the exponential family as the MaxEnt family and explain why the canonical ensemble, Gaussian, and Bernoulli distributions all belong to it."
     bloom_level: analyse
     week: 6
-    notes: "p(x|θ) = exp(θ·T(x) - A(θ)) with θ = −λ. Unifies thermodynamics, Bayesian statistics and ML. Named at the Week 5 close (θ=−λ only). Developed in Week 6 after Quiz 3: canonical (T=E, θ=−β), Gaussian (mean and variance), Bernoulli / two-level (θ=−βε), and A(θ)=log Z(−θ) with η=∇A and ∇²A=Cov[T]. Softmax only if the clock is ahead. Thermodynamic length is dropped; the Hessian is not ℒ."
+    notes: "p(x|θ) = exp(θ·T(x) - ψ(θ)) with θ = −λ. Unifies thermodynamics, Bayesian statistics and ML. Named at the Week 5 close (θ=−λ only). Developed in Week 6 after Quiz 3: canonical (T=E, θ=−β), Gaussian (mean and variance), Bernoulli / two-level (θ=−βε), and ψ(θ)=log Z(−θ) with η=∇ψ and ∇²ψ=Cov[T]. Softmax only if the clock is ahead. Thermodynamic length is dropped; the Hessian is not ℒ. CGF is ψ so Week 6 action A has no clash."
 
   - id: LO7
     text: "Students will be able to compare and contrast the information-theoretic, thermodynamic, and Bayesian perspectives on entropy, articulating the distinct operational assumptions each makes and identifying what each perspective illuminates or obscures."
@@ -46,7 +46,7 @@ outcomes:
     text: "Students will be able to distinguish Fisher information I(θ) from Shannon entropy H, stating that the former measures sensitivity of a parametric model to its parameters while the latter measures uncertainty in an outcome."
     bloom_level: understand
     week: 6
-    notes: "Live in Week 6 immediately after the exponential-family CGF: ∇²A = Cov[T] = Fisher metric G; Fisher's I ≠ Shannon H; ds² = dθᵀ G dθ; dual charts (θ, η=∇A) named thinly. Crooks thermodynamic length is dropped — do not integrate path length. Fuller dual-flatness / Pythagorean development stays in fisher-metric.md.deferred."
+    notes: "Live in Week 6 after the CGF: derive H=ψ−θ·η from log p=θ·T−ψ, then Fisher from the score T−η so G=Cov[T]=∇²ψ. Vocabulary: Fisher's I ≠ Shannon H; ds² = dθᵀ G dθ; dual charts (θ, η=∇ψ) named thinly. CGF letter is ψ (not A) so action A later the same day is free. Crooks thermodynamic length is dropped — do not integrate path length. Fuller dual-flatness / Pythagorean development stays in fisher-metric.md.deferred."
 
   - id: LO9
     text: "Students will be able to identify maximum-entropy inference as an m-projection onto a constraint set in the space of distributions, without computing natural gradients or geodesics."
@@ -76,7 +76,7 @@ outcomes:
     text: "Students will be able to evaluate claims about the capabilities of intelligent systems using Landauer's principle, the perpetual motion analogy, Shannon's R ≤ C, I + H = C, the data-processing inequality, and human bandwidth; and to state the Good Regulator Theorem as an existence claim (an H(Z)-optimal regulator may be taken with H(A|S)=0), distinguishing it from Ashby's requisite variety and naming both caveats (weak model; predictability versus desirability)."
     bloom_level: evaluate
     week: 8
-    notes: "Closes the Week 1 loop. GRT is earned as an overview in Week 6, after the exponential family, and applied in Week 8. IB form min I(S;A) s.t. H(Z)≤ε is a course gloss after the theorem, not Conant–Ashby. Thermodynamic length ℒ²/τ is dropped. Three transport geometries are not live this term."
+    notes: "Closes the Week 1 loop. GRT overview in Week 6 (D, S, A=action not R, Z=reguland diagrams; slogan and fences). Full Conant–Ashby review in Week 8, then applied to capability claims. IB form min I(S;A) s.t. H(Z)≤ε is a course gloss after the theorem, not Conant–Ashby. Thermodynamic length ℒ²/τ is dropped. Three transport geometries are not live this term."
 ---
 
 # Learning Outcomes
@@ -129,7 +129,7 @@ multi-perspective fluency required by LO7.
 
 ## Lecture map
 
-Eight Tuesdays, 13 October – 1 December 2026, 10:00–12:00, FW26, William Gates Building. Each slot is two hours (speech 10:05--11:55). Class tests take the first ten minutes of lectures 2, 4, 6 and 8 (weeks 2, 4, 6, 8). Week 6, after Quiz 3, develops the exponential family (canonical, Gaussian, Bernoulli; $A$ as a cumulant generating function), reads $\nabla^2 A$ as the Fisher information metric (Fisher $I$ versus Shannon $H$), and then Shannon capacity, a DPI statement, and a Good Regulator overview. Thermodynamic length is dropped. Week 7 deepens $I+H=C$, proves DPI, and develops IB as gloss; Week 8 closes with Quiz 4 and LO13 synthesis (von Neumann / $I=C$ if clock allows).
+Eight Tuesdays, 13 October – 1 December 2026, 10:00–12:00, FW26, William Gates Building. Each slot is two hours (speech 10:05--11:55). Class tests take the first ten minutes of lectures 2, 4, 6 and 8 (weeks 2, 4, 6, 8). Week 6, after Quiz 3, develops the exponential family (canonical, Gaussian, Bernoulli; $\psi$ as a cumulant generating function), reads $\nabla^2\psi$ as the Fisher information metric (Fisher $I$ versus Shannon $H$), then Shannon capacity, a DPI statement, and a Good Regulator *overview* ($D,S,A,Z$ diagrams; slogan and fences). Thermodynamic length is dropped. Week 7 deepens $I+H=C$, proves DPI, and develops IB as gloss; Week 8 reviews GRT in full, then closes with Quiz 4 and LO13 synthesis (von Neumann / $I=C$ if clock allows).
 
 | Week | Date | Topic | Outcomes | In slot |
 |------|------|-------|----------|---------|
@@ -138,9 +138,9 @@ Eight Tuesdays, 13 October – 1 December 2026, 10:00–12:00, FW26, William Gat
 | 3 | 27 Oct | Heat thread; Helmholtz $F=U-TS$. Game / MacKay named, not reached | LO1, LO2, LO3 | |
 | 4 | 3 Nov | Quiz 2; questions / MacKay / grouping; missing measure; demon as compartments and two ledgers | LO2, LO4 | Q2 (10 min); W2 due; W3 released |
 | 5 | 10 Nov | KL + MI; MaxEnt; exponential family named ($\theta=-\lambda$) | LO5, LO6 (named), LO7 | |
-| 6 | 17 Nov | Quiz 3; exponential family; Fisher metric from $\nabla^2 A$; Shannon; DPI; Good Regulator | LO6, LO8, LO10, LO13 | Q3 (10 min); W3 due; W4 released (dialogue; Exchange 1 before GRT) |
+| 6 | 17 Nov | Quiz 3; exponential family; Fisher metric; Shannon; DPI; GRT overview ($D,S,A,Z$) | LO6, LO8, LO10, LO13 | Q3 (10 min); W3 due; W4 released (dialogue; Exchange 1 before GRT) |
 | 7 | 24 Nov | Multi-information / $I+H=C$; DPI proof; IB as GRT gloss | LO9, LO10 | |
-| 8 | 1 Dec | Quiz 4; von Neumann / $I=C$ (optional); LO13 synthesis (Landauer, DPI, GRT, bandwidth) | LO11–LO13 | Q4 (10 min, LO8–LO13); W4 due (LO12, LO13) |
+| 8 | 1 Dec | Quiz 4; full GRT review; von Neumann / $I=C$ (optional); LO13 synthesis | LO11–LO13 | Q4 (10 min, LO8–LO13); W4 due (LO12, LO13) |
 
 ## Outcome summary
 
@@ -158,4 +158,4 @@ Eight Tuesdays, 13 October – 1 December 2026, 10:00–12:00, FW26, William Gat
 | LO10 | Capacity, $I+H=C$, DPI, information bottleneck        | Analyse     | 6–7  |
 | LO11 | I = C forces quantum: von Neumann entropy             | Analyse     | 8    |
 | LO12 | Agency via Shannon / DPI / GRT                        | Evaluate    | 8    |
-| LO13 | Limits on intelligence; Good Regulator (earn W6)      | Evaluate    | 6, 8 |
+| LO13 | Limits on intelligence; Good Regulator (overview W6; earn W8) | Evaluate | 6, 8 |

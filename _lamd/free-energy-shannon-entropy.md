@@ -100,7 +100,7 @@ The destination of the thread is
 $$
 U = F + TS
 $$
-where $U=\expSamp{E}$ is inner energy, $F$ is Helmholtz free energy, $T$ is temperature and $S$ is physical entropy. Physical entropy is the dimensionless functional $H=-\sum_i p_i\log p_i$ converted into joules per degree by Boltzmann's constant, $S=k_B H$. Helmholtz wrote $A=U-TS$ ($A$ for *Arbeit*); we use $F$ for the same quantity because week 5 needs $A(\boldsymbol{\theta})$ for the log-partition.}
+where $U=\expSamp{E}$ is inner energy, $F$ is Helmholtz free energy, $T$ is temperature and $S$ is physical entropy. Physical entropy is the dimensionless functional $H=-\sum_i p_i\log p_i$ converted into joules per degree by Boltzmann's constant, $S=k_B H$. Helmholtz wrote $A=U-TS$ ($A$ for *Arbeit*); we use $F$ for the same quantity. Week 6's log-partition / CGF is $\psi(\boldsymbol{\theta})$, and action in the Good Regulator is $A$, so Helmholtz keeps $F$.}
 
 \newslide{The Story of the Lecture}
 

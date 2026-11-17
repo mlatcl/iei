@@ -147,10 +147,10 @@
 <div>
 <ul>
 <li class="fragment">Quiz 3 (ten minutes); collect Worksheet 3; release Worksheet 4</li>
-<li class="fragment">Exponential family: <span class="math inline">\(\theta=-\lambda\)</span>; canonical, Gaussian, Bernoulli</li>
-<li class="fragment"><span class="math inline">\(A(\boldsymbol{\theta})=\log Z\)</span> generates the mean and the covariance</li>
-<li class="fragment">Fisher metric: <span class="math inline">\(\nabla^2 A = G\)</span>; Fisher’s <span class="math inline">\(I\)</span> is not Shannon’s <span class="math inline">\(H\)</span></li>
-<li class="fragment">Shannon: <span class="math inline">\(R\le C\)</span>; DPI; Good Regulator <span class="math inline">\(H(A\mid S)=0\)</span></li>
+<li class="fragment">Exponential family: <span class="math inline">\(\theta=-\lambda\)</span>; Week 1 families in <span class="math inline">\((\theta,\psi)\)</span> form</li>
+<li class="fragment"><span class="math inline">\(\psi(\boldsymbol{\theta})=\log Z\)</span>; entropy <span class="math inline">\(H=\psi-\theta\cdot\eta\)</span></li>
+<li class="fragment">Fisher from the score: <span class="math inline">\(G=\mathrm{Cov}[T]=\nabla^2\psi\)</span>; <span class="math inline">\(I\neq H\)</span></li>
+<li class="fragment">Shannon: <span class="math inline">\(R\le C\)</span>; DPI; Good Regulator overview (<span class="math inline">\(D,S,A,Z\)</span>)</li>
 </ul>
 </div>
 </section>
@@ -182,12 +182,27 @@ sns.set_palette('colorblind')}-->
 <ul>
 <li class="fragment">Sufficient statistics: <span class="math inline">\(T_k(x_i)=f_k(x_i)\)</span>, fixed by the constraints</li>
 <li class="fragment">MaxEnt: <span class="math inline">\(p_i=\exp\bigl(-\sum_k \lambda_k T_k(x_i)\bigr)/Z\)</span></li>
-<li class="fragment">Family: <span class="math inline">\(p(x\mid\boldsymbol{\theta})\propto \exp\bigl(\boldsymbol{\theta}\!\cdot\! T(x)-A(\boldsymbol{\theta})\bigr)\)</span></li>
+<li class="fragment">Family: <span class="math inline">\(p(x\mid\boldsymbol{\theta})\propto \exp\bigl(\boldsymbol{\theta}\!\cdot\! T(x)-\psi(\boldsymbol{\theta})\bigr)\)</span></li>
 <li class="fragment">Identification: <span class="math inline">\(\boldsymbol{\theta}=-\boldsymbol{\lambda}\)</span></li>
 </ul>
 </div>
 <aside class="notes">
-LO6. This is the block Week 5 only named. Physics sign: Boltzmann writes <span class="math inline">\(p_i\propto e^{-\beta E_i}\)</span>, so <span class="math inline">\(\theta_1=-\beta\)</span> when <span class="math inline">\(T=E\)</span>. Fitting the <span class="math inline">\(\lambda\)</span>s is maximum likelihood; say that and move to the three members. Geometry comes after the CGF slide, not here.
+LO6. This is the block Week 5 only named. Physics sign: Boltzmann writes <span class="math inline">\(p_i\propto e^{-\beta E_i}\)</span>, so <span class="math inline">\(\theta_1=-\beta\)</span> when <span class="math inline">\(T=E\)</span>. Fitting the <span class="math inline">\(\lambda\)</span>s is maximum likelihood. Next slide: the base measure <span class="math inline">\(h_0\)</span> is counting measure as a prior — then three members. Geometry comes after the CGF slide, not here.
+</aside>
+</section>
+<section id="counting-measure-is-a-prior" class="slide level2">
+<h2>Counting Measure Is a Prior</h2>
+<p>Weeks 4–5: every density is <span class="math inline">\({\mathrm{d}}P/{\mathrm{d}}\mu\)</span>. On a finite alphabet the unnoticed <span class="math inline">\(\mu\)</span> is counting measure.</p>
+<div>
+<ul>
+<li class="fragment">Counting <span class="math inline">\(\#\)</span>: each allowed label weight 1; <span class="math inline">\(\int f\,{\mathrm{d}}\#=\sum_x f(x)\)</span></li>
+<li class="fragment">Shannon: <span class="math inline">\(H(P)=\log N-\mathrm{KL}(P\|u)\)</span> with <span class="math inline">\(u=\#/N\)</span></li>
+<li class="fragment">Exponential family: <span class="math inline">\(p=\exp(\theta\cdot T-\psi)\,h_0\)</span>, today <span class="math inline">\(h_0=\mathbf{1}[x\in\mathcal{X}]\)</span></li>
+<li class="fragment">Same role as Jaynes’ <span class="math inline">\(m\)</span>; not a new ``measure of uncertainty’’</li>
+</ul>
+</div>
+<aside class="notes">
+Two minutes maximum. Counting measure is a <em>prior</em>: every label a priori as good as every other. The identity <span class="math inline">\(H=\log N-\mathrm{KL}(P\|u)\)</span> is the discrete case of the relative-entropy story from Weeks 4–5. Do not open Lebesgue singularity or mixed measures. Poisson <span class="math inline">\(1/k!\)</span> and binomial <span class="math inline">\(\binom{n}{k}\)</span> appear as <span class="math inline">\(h_0\)</span> on the next distribution slides — name them there, do not derive. Move to the three members.
 </aside>
 </section>
 <section id="three-members-one-family" class="slide level2">
@@ -201,24 +216,167 @@ LO6. This is the block Week 5 only named. Physics sign: Boltzmann writes <span c
 </ul>
 </div>
 <aside class="notes">
-LO6 punchline. Two-level system is a Bernoulli. Softmax is the same calculation with a richer feature map; name it only if the clock is ahead. Do not start the matrix exponential family; that waits for the Week 8 quantum close if at all.
+LO6 punchline. Two-level system is a Bernoulli. Softmax is the same calculation with a richer feature map; name it only if the clock is ahead. The next block rewrites the Week 1 families: protect Bernoulli (<span class="math inline">\(h_0=1\)</span>, counting prior) then Poisson or binomial (<span class="math inline">\(h_0=1/k!\)</span> or <span class="math inline">\(\binom{n}{k}\)</span>, discrete density of states). Gaussian names Lebesgue. Do not start the matrix exponential family; that waits for the Week 8 quantum close if at all.
 </aside>
 </section>
-<section id="atheta-as-cumulant-generating-function" class="slide level2">
-<h2><span class="math inline">\(A(\theta)\)</span> as Cumulant Generating Function</h2>
+<section id="common-distributions-as-exponential-families" class="slide level2">
+<h2>Common Distributions as Exponential Families</h2>
 </section>
-<section id="athetalog-z-generates-cumulants" class="slide level2">
-<h2><span class="math inline">\(A(\theta)=\log Z\)</span> Generates Cumulants</h2>
+<section id="week-1-families-exponential-family-form" class="slide level2">
+<h2>Week 1 Families, Exponential-Family Form</h2>
+<p>Each named distribution from the probability review is an exponential family — and each carries a base measure <span class="math inline">\(h_0\)</span>.</p>
 <div>
 <ul>
-<li class="fragment">Week 3: <span class="math inline">\(F=-k_BT\log Z\)</span> (available energy)</li>
-<li class="fragment">Same object: <span class="math inline">\(A(\boldsymbol{\theta})=\log Z(-\boldsymbol{\theta})\)</span></li>
-<li class="fragment">Mean parameters: <span class="math inline">\(\boldsymbol{\eta}=\nabla A=\langle T\rangle\)</span></li>
-<li class="fragment">Hessian: <span class="math inline">\(\nabla^2 A=\mathrm{Cov}[T]\)</span></li>
+<li class="fragment">Form: <span class="math inline">\(p=\exp\bigl(\boldsymbol{\theta}\!\cdot\! T-\psi\bigr)\,h_0\)</span></li>
+<li class="fragment">Two stories for <span class="math inline">\(h_0\)</span>: counting prior (<span class="math inline">\(h_0=1\)</span>) versus combinatorial / continuum measure</li>
+<li class="fragment">Bernoulli, categorical: plain counting on the labels</li>
+<li class="fragment">Binomial, Poisson, multinomial: <span class="math inline">\(h_0=\binom{n}{k}\)</span>, <span class="math inline">\(1/k!\)</span>, <span class="math inline">\(n!/\prod x_j!\)</span> — discrete density of states</li>
+<li class="fragment">Gaussian: Lebesgue (continuous counterpart of <span class="math inline">\(\#\)</span>)</li>
 </ul>
 </div>
 <aside class="notes">
-Board <span class="math inline">\(\eta=\nabla A\)</span> and <span class="math inline">\(\nabla^2 A=\mathrm{Cov}[T]\)</span>. The next slides read that Hessian as Fisher information. Do not write <span class="math inline">\(\mathcal{L}\)</span> or <span class="math inline">\(\langle W_{\mathrm{ex}}\rangle\ge\mathcal{L}^2/\tau\)</span>.
+Callback to the Week 1 named list. Protect two sentences: (1) Bernoulli <span class="math inline">\(h_0=1\)</span> <em>is</em> counting measure as prior; (2) Poisson <span class="math inline">\(1/k!\)</span> / binomial <span class="math inline">\(\binom{n}{k}\)</span> show why the family carries an <span class="math inline">\(h_0\)</span> at all. Live spine: Bernoulli then Poisson (or binomial) for the contrast; Gaussian for Lebesgue. Multinomial if clock allows.
+</aside>
+</section>
+<section id="bernoulli-and-binomial" class="slide level2">
+<h2>Bernoulli and Binomial</h2>
+<p>Same <span class="math inline">\(\theta\)</span>; different <span class="math inline">\(h_0\)</span>. That is the measure story in one pair.</p>
+<div>
+<ul>
+<li class="fragment">Bernoulli: <span class="math inline">\(\theta=\mathrm{logit}(\pi)\)</span>, <span class="math inline">\(\psi=\log(1+e^{\theta})\)</span>, <span class="math inline">\(h_0=1\)</span> (counting)</li>
+<li class="fragment">Binomial: same <span class="math inline">\(\theta\)</span>; <span class="math inline">\(\psi=n\log(1+e^{\theta})\)</span>; <span class="math inline">\(h_0=\binom{n}{k}\)</span> (multiplicity)</li>
+</ul>
+</div>
+</section>
+<section id="bernoulli-as-exponential-family" class="slide level2">
+<h2>Bernoulli as Exponential Family</h2>
+</section>
+<section id="bernoulli-natural-parameter-and-psi" class="slide level2">
+<h2>Bernoulli: Natural Parameter and <span class="math inline">\(\psi\)</span></h2>
+<p><span class="math display">\[
+P(x\mid\theta)=\exp\bigl(x\,\theta-\psi(\theta)\bigr)\,h_0(x),\qquad x\in\{0,1\}
+\]</span> * <span class="math inline">\(\theta=\log\dfrac{\pi}{1-\pi}\)</span>,<span class="math inline">\(T(x)=x\)</span> * <span class="math inline">\(\psi(\theta)=\log(1+e^{\theta})\)</span>,<span class="math inline">\(h_0(x)=1\)</span> (counting on <span class="math inline">\(\{0,1\}\)</span>)</p>
+<aside class="notes">
+Point one of two. Write <span class="math inline">\(h_0=1\)</span> on the board: Bernoulli <em>is</em> MaxEnt relative to counting measure. Logit is <span class="math inline">\(\theta\)</span>; softplus is <span class="math inline">\(\psi\)</span>. Same object as the two-level system. Binomial / Poisson next flip <span class="math inline">\(h_0\)</span> away from 1.
+</aside>
+</section>
+<section id="binomial-as-exponential-family" class="slide level2">
+<h2>Binomial as Exponential Family</h2>
+</section>
+<section id="binomial-natural-parameter-and-psi" class="slide level2">
+<h2>Binomial: Natural Parameter and <span class="math inline">\(\psi\)</span></h2>
+<p><span class="math display">\[
+P(k\mid\theta)=\exp\bigl(k\,\theta-\psi(\theta)\bigr)\,h_0(k),\qquad k=0,\ldots,n
+\]</span> * <span class="math inline">\(\theta=\log\dfrac{\pi}{1-\pi}\)</span>,<span class="math inline">\(T(k)=k\)</span> * <span class="math inline">\(\psi(\theta)=n\log(1+e^{\theta})\)</span>,<span class="math inline">\(h_0(k)=\binom{n}{k}\)</span></p>
+<aside class="notes">
+Point two begins here. Same <span class="math inline">\(\theta\)</span> as Bernoulli; <span class="math inline">\(\psi\)</span> is <span class="math inline">\(n\)</span> times the softplus. The new object is <span class="math inline">\(h_0=\binom{n}{k}\)</span>: without that multiplicity you are not looking at the binomial. Say ``discrete density of states’’ and move on — Poisson repeats the lesson with <span class="math inline">\(1/k!\)</span>.
+</aside>
+</section>
+<section id="poisson-and-multinomial" class="slide level2">
+<h2>Poisson and Multinomial</h2>
+<p>Poisson makes the non-constant <span class="math inline">\(h_0\)</span> unavoidable: without <span class="math inline">\(1/k!\)</span> you do not get Poisson.</p>
+<div>
+<ul>
+<li class="fragment">Poisson: <span class="math inline">\(\theta=\log\lambda\)</span>, <span class="math inline">\(\psi=e^{\theta}\)</span>, <span class="math inline">\(h_0=1/k!\)</span></li>
+<li class="fragment">Categorical: <span class="math inline">\(h_0=1\)</span> (counting again); multinomial: <span class="math inline">\(h_0=n!/\prod_j x_j!\)</span></li>
+</ul>
+</div>
+</section>
+<section id="poisson-as-exponential-family" class="slide level2">
+<h2>Poisson as Exponential Family</h2>
+</section>
+<section id="poisson-why-h_0-is-not-optional" class="slide level2">
+<h2>Poisson: Why <span class="math inline">\(h_0\)</span> Is Not Optional</h2>
+<p><span class="math display">\[
+P(k\mid\theta)=\exp\bigl(k\,\theta-\psi(\theta)\bigr)\,h_0(k),\qquad k\in\mathbb{N}_0
+\]</span> * <span class="math inline">\(\theta=\log\lambda\)</span>,<span class="math inline">\(T(k)=k\)</span>,<span class="math inline">\(\psi(\theta)=e^{\theta}\)</span> * <span class="math inline">\(h_0(k)=1/k!\)</span> — without it, mean-count MaxEnt is <em>geometric</em>, not Poisson</p>
+<aside class="notes">
+Point two, sharpened. Board <span class="math inline">\(h_0=1/k!\)</span> beside Bernoulli’s <span class="math inline">\(h_0=1\)</span>. One sentence: counting prior gave Bernoulli; combinatorial measure gives Poisson. Do not derive the geometric MaxEnt unless asked — naming the contrast is enough.
+</aside>
+</section>
+<section id="multinomial-as-exponential-family" class="slide level2">
+<h2>Multinomial as Exponential Family</h2>
+</section>
+<section id="multinomial-categorical-natural-parameters-and-psi" class="slide level2">
+<h2>Multinomial / Categorical: Natural Parameters and <span class="math inline">\(\psi\)</span></h2>
+<p><span class="math display">\[
+P(\mathbf{x}\mid\boldsymbol{\theta})=\exp\bigl(\boldsymbol{\theta}\!\cdot\! T(\mathbf{x})-\psi(\boldsymbol{\theta})\bigr)\,h_0(\mathbf{x})
+\]</span> * <span class="math inline">\(\theta_j=\log\dfrac{\pi_j}{\pi_K}\)</span>,<span class="math inline">\(T=(x_1,\ldots,x_{K-1})\)</span> * <span class="math inline">\(\psi(\boldsymbol{\theta})=n\log\bigl(1+\sum_{j=1}^{K-1}e^{\theta_j}\bigr)\)</span> * Categorical: <span class="math inline">\(n=1\)</span>, <span class="math inline">\(h_0=1\)</span>; multinomial: <span class="math inline">\(h_0=\dfrac{n!}{x_1!\cdots x_K!}\)</span></p>
+<aside class="notes">
+Same two-point moral: categorical <span class="math inline">\(h_0=1\)</span> is counting on the labels; multinomial multiplicity is density of states again. Categorical is <span class="math inline">\(n=1\)</span>. Same log-sum-exp <span class="math inline">\(\psi\)</span> as softmax. Do not open the unconstrained <span class="math inline">\(K\)</span>-parameter chart live.
+</aside>
+</section>
+<section id="gaussian" class="slide level2">
+<h2>Gaussian</h2>
+<p>Continuous close: <span class="math inline">\(h_0\)</span> is Lebesgue — the continuum counterpart of <span class="math inline">\(\#\)</span>.</p>
+<div>
+<ul>
+<li class="fragment"><span class="math inline">\(T=(y,y^2)\)</span>; <span class="math inline">\(\theta_1=\mu/\sigma^2\)</span>, <span class="math inline">\(\theta_2=-1/(2\sigma^2)\)</span></li>
+<li class="fragment"><span class="math inline">\(h_0\)</span>: Lebesgue (not counting; not <span class="math inline">\(1/k!\)</span>)</li>
+<li class="fragment"><span class="math inline">\(\psi\)</span> is quadratic in <span class="math inline">\(\theta_1\)</span> and logarithmic in <span class="math inline">\(\theta_2\)</span></li>
+</ul>
+</div>
+</section>
+<section id="gaussian-as-exponential-family" class="slide level2">
+<h2>Gaussian as Exponential Family</h2>
+</section>
+<section id="gaussian-natural-parameters-and-psi" class="slide level2">
+<h2>Gaussian: Natural Parameters and <span class="math inline">\(\psi\)</span></h2>
+<p><span class="math display">\[
+p(y\mid\boldsymbol{\theta})=\exp\bigl(\theta_1 y+\theta_2 y^2-\psi(\boldsymbol{\theta})\bigr)\,h_0(y)
+\]</span> * <span class="math inline">\(\theta_1=\dfrac{\mu}{\sigma^2}\)</span>,<span class="math inline">\(\theta_2=-\dfrac{1}{2\sigma^2}\)</span>,<span class="math inline">\(T(y)=(y,y^2)\)</span> * <span class="math inline">\(h_0\)</span>: Lebesgue (continuum counterpart of counting <span class="math inline">\(\#\)</span>) * <span class="math inline">\(\psi(\theta_1,\theta_2)=-\dfrac{\theta_1^2}{4\theta_2}-\dfrac12\log(-2\theta_2)-\dfrac12\log(2\pi)\)</span></p>
+<aside class="notes">
+Name Lebesgue as <span class="math inline">\(h_0\)</span> so the discrete tour closes: <span class="math inline">\(\#\)</span> / combinatorial <span class="math inline">\(h_0\)</span> / <span class="math inline">\(\lambda\)</span>. Two numbers on the slide: precision-weighted mean and minus half precision. <span class="math inline">\(\psi\)</span> is the ugly formula; board only <span class="math inline">\(\eta=\nabla\psi\)</span> if asked.
+</aside>
+</section>
+<section id="psitheta-as-cumulant-generating-function" class="slide level2">
+<h2><span class="math inline">\(\psi(\theta)\)</span> as Cumulant Generating Function</h2>
+</section>
+<section id="psithetalog-z-generates-cumulants" class="slide level2">
+<h2><span class="math inline">\(\psi(\theta)=\log Z\)</span> Generates Cumulants</h2>
+<div>
+<ul>
+<li class="fragment">Week 3: <span class="math inline">\(F=-k_BT\log Z\)</span> (available energy)</li>
+<li class="fragment">Same object: <span class="math inline">\(\psi(\boldsymbol{\theta})=\log Z(-\boldsymbol{\theta})\)</span></li>
+<li class="fragment">Mean parameters: <span class="math inline">\(\boldsymbol{\eta}=\nabla\psi=\langle T\rangle\)</span></li>
+<li class="fragment">Next: entropy from <span class="math inline">\(\log p\)</span>, then Fisher from the score</li>
+</ul>
+</div>
+<aside class="notes">
+Board <span class="math inline">\(\eta=\nabla\psi\)</span> first. Do not yet claim the Hessian is Fisher — that calculation is the next two slides. Do not write <span class="math inline">\(\mathcal{L}\)</span> or <span class="math inline">\(\langle W_{\mathrm{ex}}\rangle\ge\mathcal{L}^2/\tau\)</span>.
+</aside>
+</section>
+<section id="entropy-of-an-exponential-family" class="slide level2">
+<h2>Entropy of an Exponential Family</h2>
+</section>
+<section id="entropy-the-lovely-form" class="slide level2">
+<h2>Entropy: the Lovely Form</h2>
+<p><span class="math display">\[
+\log p(x\mid\boldsymbol{\theta})=\boldsymbol{\theta}\cdot T(x)-\psi(\boldsymbol{\theta})
+\]</span></p>
+<div>
+<ul>
+<li class="fragment">Take <span class="math inline">\(-\mathbb{E}[\log p]\)</span>: <span class="math inline">\(H(\boldsymbol{\theta})=\psi(\boldsymbol{\theta})-\boldsymbol{\theta}\cdot\boldsymbol{\eta}\)</span></li>
+<li class="fragment">with <span class="math inline">\(\boldsymbol{\eta}=\nabla\psi=\langle T\rangle\)</span></li>
+<li class="fragment">No sum over <span class="math inline">\(x\)</span> left — only <span class="math inline">\(\psi\)</span> and its gradient</li>
+</ul>
+</div>
+<aside class="notes">
+Board the two-line derivation. <span class="math inline">\(\log p=\theta\cdot T-\psi\)</span>; expectation kills <span class="math inline">\(T\)</span> to <span class="math inline">\(\eta\)</span>; <span class="math inline">\(H=\psi-\theta\cdot\eta\)</span>. If <span class="math inline">\(h_0\)</span> is not 1, add <span class="math inline">\(-\mathbb{E}[\log h_0]\)</span>; today <span class="math inline">\(h_0=1\)</span> on the allowed set. This is why MaxEnt distributions are nice to work with.
+</aside>
+</section>
+<section id="fisher-from-the-same-log-p" class="slide level2">
+<h2>Fisher from the Same <span class="math inline">\(\log p\)</span></h2>
+<p>Differentiate once; take a second moment.</p>
+<div>
+<ul>
+<li class="fragment">Score: <span class="math inline">\(\nabla_{\boldsymbol{\theta}}\log p = T-\boldsymbol{\eta}\)</span></li>
+<li class="fragment"><span class="math inline">\(\mathbb{E}[\mathrm{score}]=0\)</span>; <span class="math inline">\(G=\mathbb{E}[\mathrm{score}\,\mathrm{score}^\top]=\mathrm{Cov}[T]\)</span></li>
+<li class="fragment">But <span class="math inline">\(\boldsymbol{\eta}=\nabla\psi\)</span>, so <span class="math inline">\(G=\nabla^2\psi\)</span></li>
+</ul>
+</div>
+<aside class="notes">
+LO8 punchline as a calculation, not a slogan. Score <span class="math inline">\(=T-\eta\)</span> is immediate from <span class="math inline">\(\log p=\theta\cdot T-\psi\)</span>. Squaring and taking expectation is Fisher. Differentiating <span class="math inline">\(\eta=\nabla\psi\)</span> again is the Hessian. Same matrix three ways: Cov, Fisher, <span class="math inline">\(\nabla^2\psi\)</span>.
 </aside>
 </section>
 <section id="fisher-metric-from-the-exponential-family" class="slide level2">
@@ -231,27 +389,28 @@ Board <span class="math inline">\(\eta=\nabla A\)</span> and <span class="math i
 <p>Same word; different mathematical definition.</p>
 <div>
 <ul>
-<li class="fragment">Shannon <span class="math inline">\(H\)</span>: uncertainty in an outcome</li>
-<li class="fragment">Fisher <span class="math inline">\(I(\theta)\)</span>: sensitivity of <span class="math inline">\(\log p\)</span> to <span class="math inline">\(\theta\)</span></li>
+<li class="fragment">Shannon <span class="math inline">\(H\)</span>: uncertainty in an outcome — just earned as <span class="math inline">\(H=\psi-\theta\cdot\eta\)</span></li>
+<li class="fragment">Fisher <span class="math inline">\(I(\theta)\)</span>: sensitivity of <span class="math inline">\(\log p\)</span> to <span class="math inline">\(\theta\)</span> — just earned as <span class="math inline">\(\mathrm{Cov}[T]=\nabla^2\psi\)</span></li>
 <li class="fragment"><span class="math inline">\(H\)</span> is a state function of <span class="math inline">\(p\)</span>; <span class="math inline">\(I\)</span> is a property of a <em>family</em> <span class="math inline">\(p(\cdot\mid\theta)\)</span></li>
 </ul>
 </div>
 <aside class="notes">
-LO8. Hold this distinction for the rest of the module. Shannon is coming after the break as channel capacity; Fisher is already on the board as <span class="math inline">\(\nabla^2 A\)</span>.
+LO8 vocabulary slide after the calculation. They have already done the algebra; name the distinction. Shannon after the break is channel capacity, a different use of the same <span class="math inline">\(H\)</span>.
 </aside>
 </section>
-<section id="hessian-equiv-fisher-metric" class="slide level2">
-<h2>Hessian <span class="math inline">\(\equiv\)</span> Fisher Metric</h2>
-<p>On an exponential family the CGF Hessian <em>is</em> the Fisher information.</p>
+<section id="same-matrix-three-names" class="slide level2">
+<h2>Same Matrix, Three Names</h2>
+<p>You already have <span class="math inline">\(G\)</span>; you are naming it.</p>
 <div>
 <ul>
-<li class="fragment">Score definition: <span class="math inline">\(G_{ij}=\mathbb{E}[\partial_i\log p\,\partial_j\log p]\)</span></li>
-<li class="fragment">Exponential family: <span class="math inline">\(G(\boldsymbol{\theta})=\nabla^2 A(\boldsymbol{\theta})=\mathrm{Cov}[T]\)</span></li>
-<li class="fragment">Same matrix: estimation, identifiability, geometry</li>
+<li class="fragment"><span class="math inline">\(\mathrm{Cov}[T]\)</span> from cumulants</li>
+<li class="fragment">Fisher <span class="math inline">\(G\)</span> from the score <span class="math inline">\(T-\eta\)</span></li>
+<li class="fragment"><span class="math inline">\(\nabla^2\psi\)</span> from differentiating <span class="math inline">\(\eta=\nabla\psi\)</span></li>
+<li class="fragment">Cramér–Rao: <span class="math inline">\(\mathrm{cov}(\hat{\boldsymbol{\theta}})\succeq G^{-1}\)</span> (name only)</li>
 </ul>
 </div>
 <aside class="notes">
-This is why information geometry follows the exponential family. You already have <span class="math inline">\(G\)</span>; you are naming it. Cramér–Rao <span class="math inline">\(\mathrm{cov}(\hat\theta)\succeq G^{-1}\)</span> in one sentence if asked; do not board a proof.
+One sentence on Cramér–Rao if asked; do not board a proof. Information geometry follows because the metric is already on the board.
 </aside>
 </section>
 <section id="information-distance" class="slide level2">
@@ -276,13 +435,13 @@ State the line element. Do not integrate a path to get thermodynamic length <spa
 <div>
 <ul>
 <li class="fragment">Natural parameters <span class="math inline">\(\boldsymbol{\theta}\)</span> (e-coordinates)</li>
-<li class="fragment">Mean parameters <span class="math inline">\(\boldsymbol{\eta}=\nabla A=\langle T\rangle\)</span> (m-coordinates)</li>
+<li class="fragment">Mean parameters <span class="math inline">\(\boldsymbol{\eta}=\nabla \psi=\langle T\rangle\)</span> (m-coordinates)</li>
 <li class="fragment">Hessians of the dual potentials are inverse metrics</li>
 <li class="fragment">Full Legendre / Pythagorean development stays notes</li>
 </ul>
 </div>
 <aside class="notes">
-Name dual flatness; do not board <span class="math inline">\(H=A-\theta\cdot\eta\)</span> unless ahead. The pair <span class="math inline">\((\theta,\eta)\)</span> is enough to see why MaxEnt looks like an <span class="math inline">\(m\)</span>-projection later. Natural gradient is optional colour only.
+Name dual flatness. <span class="math inline">\(H=\psi-\theta\cdot\eta\)</span> is already on the board — that <em>is</em> <span class="math inline">\(-\psi^*(\eta)\)</span>. The pair <span class="math inline">\((\theta,\eta)\)</span> is enough to see why MaxEnt looks like an <span class="math inline">\(m\)</span>-projection later. Natural gradient is optional colour only.
 </aside>
 <section data-background-iframe="../scripts//timer/index.html?duration=10:55&amp;title=Break" data-background-interactive>
 </section>
@@ -364,94 +523,68 @@ State DPI; do not board the two expansions unless ahead of clock. Moral only: yo
 </section>
 <section id="good-regulator" class="slide level2">
 <h2>Good Regulator</h2>
-<section data-background-iframe="../scripts//timer/index.html?duration=11:30&amp;title=Good Regulator" data-background-interactive>
+<section data-background-iframe="../scripts//timer/index.html?duration=11:35&amp;title=Good Regulator" data-background-interactive>
 </section>
 </section>
-<section id="purely-entropic-good-regulator" class="slide level2">
-<h2>Purely Entropic Good Regulator</h2>
+<section id="good-regulator-overview" class="slide level2">
+<h2>Good Regulator Overview</h2>
 </section>
-<section id="requisite-variety-entropically" class="slide level2">
-<h2>Requisite Variety, Entropically</h2>
-<p>Residual outcome uncertainty is disturbance entropy minus information the regulator has about the disturbance.</p>
+<section id="notation-d-s-a-z" class="slide level2">
+<h2>Notation: <span class="math inline">\(D\)</span>, <span class="math inline">\(S\)</span>, <span class="math inline">\(A\)</span>, <span class="math inline">\(Z\)</span></h2>
+<p>The CGF was <span class="math inline">\(\psi(\boldsymbol{\theta})\)</span>. After the break, <span class="math inline">\(A\)</span> is <em>action</em>.</p>
 <div>
 <ul>
-<li class="fragment">Disturbance <span class="math inline">\(D\)</span>, response <span class="math inline">\(R\)</span>, essential variable <span class="math inline">\(E\)</span></li>
-<li class="fragment"><span class="math inline">\(H(E)\ge H(D)-I(D;R)\)</span></li>
-<li class="fragment">Useless variety appears as small <span class="math inline">\(I(D;R)\)</span></li>
+<li class="fragment"><span class="math inline">\(D\)</span>: disturbance</li>
+<li class="fragment"><span class="math inline">\(S\)</span>: system state</li>
+<li class="fragment"><span class="math inline">\(A\)</span>: action (the regulator’s response; Conant–Ashby often write <span class="math inline">\(R\)</span>)</li>
+<li class="fragment"><span class="math inline">\(Z\)</span>: reguland / outcome (Ashby’s essential variable)</li>
 </ul>
 </div>
 <aside class="notes">
-Named tool for LO13, not a new outcome. Ashby’s requisite variety in Shannon form <span class="citation" data-cites="Ashby-introduction56">(Ashby, 1956)</span>. Quantity, not structure. Perfect regulation <span class="math inline">\(H(E)=0\)</span> forces <span class="math inline">\(I(D;R)=H(D)\)</span>.
+Board the four letters once. Classic cybernetics used <span class="math inline">\(R\)</span> for the regulator; we use <span class="math inline">\(A\)</span> for action so the policy language matches Weeks 7–8. The log-partition / CGF is <span class="math inline">\(\psi\)</span>, so there is no clash with action. Do not prove anything yet.
 </aside>
 </section>
-<section id="setup-regulate-by-minimising-hz" class="slide level2">
-<h2>Setup: Regulate by Minimising <span class="math inline">\(H(Z)\)</span></h2>
-<p>One shot, not an MDP: choose a policy <span class="math inline">\(\pi(a\mid s)\)</span> to minimise outcome entropy.</p>
+<section id="two-setups" class="slide level2">
+<h2>Two Setups</h2>
 <div>
 <ul>
-<li class="fragment">State <span class="math inline">\(S\)</span>, action <span class="math inline">\(A\)</span>, outcome <span class="math inline">\(Z\sim p(z\mid s,a)\)</span></li>
-<li class="fragment">Objective: <span class="math inline">\(\min_\pi H(Z)\)</span></li>
-<li class="fragment">Model (weak): <span class="math inline">\(H(A\mid S)=0\)</span>, i.e. <span class="math inline">\(A=h(S)\)</span></li>
+<li class="fragment">Cause-controlled: act on <span class="math inline">\(D\)</span> (or on a model of <span class="math inline">\(D\)</span>)</li>
+<li class="fragment">Error-controlled: act on the state <span class="math inline">\(S\)</span> that <span class="math inline">\(D\)</span> caused</li>
+<li class="fragment">DPI: <span class="math inline">\(I(A;D)\le I(S;D)\)</span> when <span class="math inline">\(A\)</span> only sees <span class="math inline">\(S\)</span></li>
 </ul>
 </div>
 <aside class="notes">
-LO13. Board this setup. Not Bellman, not reward. Entropy of <span class="math inline">\(Z\)</span> is Conant and Ashby’s success criterion. Ten to twelve minutes for the proof block.
+Spend the clock on the diagrams. Cause control reads the disturbance before it enters the essential variable; error control corrects after the fact. Most modern RL policies are error-controlled on the observed state. Week 8 returns to why the simplest optimum factors as a model.
 </aside>
 </section>
-<section id="concentration-concavity-of-entropy" class="slide level2">
-<h2>Concentration: Concavity of Entropy</h2>
-<p>Randomising between outcome-distinct actions cannot minimise <span class="math inline">\(H(Z)\)</span>.</p>
+<section id="what-good-means-today" class="slide level2">
+<h2>What ``Good’’ Means Today</h2>
+<p>Success is low entropy in the reguland — with fences.</p>
 <div>
 <ul>
-<li class="fragment">At state <span class="math inline">\(s\)</span>, mix <span class="math inline">\(a_1,a_2\)</span> with <span class="math inline">\(\psi(s,a_1)=z_1\ne z_2=\psi(s,a_2)\)</span></li>
-<li class="fragment">Transfer mass <span class="math inline">\(\alpha\)</span>: <span class="math inline">\((u,v)\mapsto(u-\alpha,v+\alpha)\)</span></li>
-<li class="fragment"><span class="math inline">\(g&#39;&#39;(\alpha)&lt;0\)</span>: interior mixture is not a minimum</li>
+<li class="fragment">Objective sketch: <span class="math inline">\(\min_{\pi(a\mid s)} H(Z)\)</span></li>
+<li class="fragment">Slogan: every good regulator must be a model of the system</li>
+<li class="fragment">Weak reading of ``model’’: <span class="math inline">\(H(A\mid S)=0\)</span>, i.e. <span class="math inline">\(A=h(S)\)</span></li>
+<li class="fragment">Full theorem and caveats: Week 8 review</li>
 </ul>
 </div>
 <aside class="notes">
-Board <span class="math inline">\(g(\alpha)=-(u-\alpha)\log(u-\alpha)-(v+\alpha)\log(v+\alpha)\)</span>. Strict concavity is the engine. Deterministic <span class="math inline">\(\psi\)</span> for this lemma.
+Name the objective and the slogan. Do not board the concavity transfer <span class="math inline">\(g(\alpha)\)</span>. Two fences only: constant <span class="math inline">\(A=a_0\)</span> also has <span class="math inline">\(H(A\mid S)=0\)</span>; low <span class="math inline">\(H(Z)\)</span> is predictable, not desirable. Worksheet 4 Exchange 1 has already asked them what GRT has to do with general intelligence — leave the depth for Week 8.
 </aside>
 </section>
-<section id="good-regulator-theorem" class="slide level2">
-<h2>Good Regulator Theorem</h2>
-<p>Among <span class="math inline">\(H(Z)\)</span>-minimisers there exists a deterministic policy: <span class="math inline">\(H(A\mid S)=0\)</span>.</p>
+<section id="requisite-variety" class="slide level2">
+<h2>Requisite Variety</h2>
+<p>Quantity bound, not the structure theorem.</p>
 <div>
 <ul>
-<li class="fragment">Pick one action per <span class="math inline">\(s\)</span> among those sharing <span class="math inline">\(z^\ast(s)\)</span></li>
-<li class="fragment"><span class="math inline">\(A=h(S)\)</span> leaves <span class="math inline">\(p(z)\)</span>, hence <span class="math inline">\(H(Z)\)</span>, unchanged</li>
-<li class="fragment">Stochastic channel: same existence via extreme points</li>
+<li class="fragment"><span class="math inline">\(H(Z)\ge H(D)-I(D;A)\)</span></li>
+<li class="fragment">Useless variety: large <span class="math inline">\(H(A)\)</span> with small <span class="math inline">\(I(D;A)\)</span></li>
+<li class="fragment">Ashby: how much regulatory information is required</li>
+<li class="fragment">GRT (Week 8): how that information may be structured</li>
 </ul>
 </div>
 <aside class="notes">
-Theorem: exists optimal <span class="math inline">\(\pi\)</span> with <span class="math inline">\(H(A\mid S)=0\)</span>. Not every optimal policy is deterministic — only that a simplest one is. Course close remains: entropy forbids; probability prescribes.
-</aside>
-</section>
-<section id="two-caveats" class="slide level2">
-<h2>Two Caveats</h2>
-<p>The theorem is weaker than the popular slogan.</p>
-<div>
-<ul>
-<li class="fragment">Weak model: constant <span class="math inline">\(A=a_0\)</span> also has <span class="math inline">\(H(A\mid S)=0\)</span></li>
-<li class="fragment">Low <span class="math inline">\(H(Z)\)</span> means predictable, not desirable</li>
-<li class="fragment">Catastrophe with <span class="math inline">\(H(Z)=0\)</span> is ``optimal’’ under entropy alone</li>
-</ul>
-</div>
-<aside class="notes">
-Do not collapse <span class="math inline">\(H(A\mid S)=0\)</span> into ``<span class="math inline">\(A\)</span> contains a rich model of <span class="math inline">\(S\)</span>.’’ Faithful models need <span class="math inline">\(H(S\mid A)=0\)</span> as well. Desirability needs a goal set <span class="math inline">\(G\)</span>, not entropy alone.
-</aside>
-</section>
-<section id="after-the-theorem-ib-gloss" class="slide level2">
-<h2>After the Theorem: IB Gloss</h2>
-<p>IB gloss, not the theorem: keep only distinctions that matter for action.</p>
-<div>
-<ul>
-<li class="fragment"><span class="math inline">\(\min I(S;A)\)</span> subject to <span class="math inline">\(H(Z)\le\epsilon\)</span> — course reading</li>
-<li class="fragment">Deterministic <span class="math inline">\(A=h(S)\)</span> gives <span class="math inline">\(I(S;A)=H(A)\)</span></li>
-<li class="fragment">Do not attribute that optimisation to Conant and Ashby</li>
-</ul>
-</div>
-<aside class="notes">
-IB was LO10. This gloss sits after the earned theorem. Course punchline remains Week 1: entropy forbids; probability prescribes.
+One slide. Same <span class="math inline">\(A\)</span> and <span class="math inline">\(Z\)</span> as the diagrams. Perfect regulation <span class="math inline">\(H(Z)=0\)</span> forces <span class="math inline">\(I(D;A)=H(D)\)</span> under the usual bound.
 </aside>
 </section>
 <section id="define-this-week" class="slide level2">
@@ -459,10 +592,10 @@ IB was LO10. This gloss sits after the earned theorem. Course punchline remains 
 <div>
 <ul>
 <li class="fragment">Why is the exponential family the MaxEnt family, and why <span class="math inline">\(\theta=-\lambda\)</span>?</li>
-<li class="fragment">Why is <span class="math inline">\(\nabla^2 A\)</span> both <span class="math inline">\(\mathrm{Cov}[T]\)</span> and the Fisher metric <span class="math inline">\(G\)</span>?</li>
+<li class="fragment">Why is <span class="math inline">\(H=\psi-\theta\cdot\eta\)</span>, and why does that make <span class="math inline">\(G=\nabla^2\psi=\mathrm{Cov}[T]\)</span>?</li>
 <li class="fragment">How does Fisher’s <span class="math inline">\(I(\theta)\)</span> differ from Shannon’s <span class="math inline">\(H\)</span>?</li>
 <li class="fragment">What does <span class="math inline">\(R\le C\)</span> forbid, and what does DPI state?</li>
-<li class="fragment">Why <span class="math inline">\(H(A\mid S)=0\)</span>, and why that model is weak?</li>
+<li class="fragment">Name <span class="math inline">\(D\)</span>, <span class="math inline">\(S\)</span>, <span class="math inline">\(A\)</span>, <span class="math inline">\(Z\)</span> on the Good Regulator diagrams — and why full GRT waits for Week 8</li>
 </ul>
 </div>
 </section>
@@ -472,6 +605,7 @@ IB was LO10. This gloss sits after the earned theorem. Course punchline remains 
 <ul>
 <li class="fragment">Worksheet 4 out (dialogue; Exchange 1 before GRT); due 1 December before Quiz 4</li>
 <li class="fragment">Week 7: <span class="math inline">\(I+H=C\)</span>, DPI proof, information bottleneck</li>
+<li class="fragment">Week 8: full Good Regulator review, then limits synthesis</li>
 </ul>
 </div>
 </section>
@@ -482,8 +616,6 @@ IB was LO10. This gloss sits after the earned theorem. Course punchline remains 
 <li><p>noisy channel coding / capacity of <span class="citation" data-cites="Shannon-mathematical48">Shannon (1948)</span></p></li>
 <li><p>Chapter 7 of <span class="citation" data-cites="Cover:elements91">Cover and Thomas (1991)</span></p></li>
 <li><p>Chapters 8–10 of <span class="citation" data-cites="MacKay-information03">MacKay (2003)</span></p></li>
-<li><p>the Good Regulator Theorem of <span class="citation" data-cites="Conant-Ashby70">Conant and Ashby (1970)</span></p></li>
-<li><p>requisite variety; Shannon form of <span class="citation" data-cites="Ashby-introduction56">Ashby (1956)</span></p></li>
 <li><p>the Good Regulator Theorem of <span class="citation" data-cites="Conant-Ashby70">Conant and Ashby (1970)</span></p></li>
 <li><p>requisite variety; Shannon form of <span class="citation" data-cites="Ashby-introduction56">Ashby (1956)</span></p></li>
 </ul>

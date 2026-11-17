@@ -63,8 +63,8 @@ reading:
 \slidesincremental{
 * Quiz 3 (ten minutes); collect Worksheet 3; release Worksheet 4
 * Exponential family: $\theta=-\lambda$; Week 1 families in $(\theta,\psi)$ form
-* $\psi(\boldsymbol{\theta})=\log Z$ generates the mean and the covariance
-* Fisher metric: $\nabla^2 \psi = G$; Fisher's $I$ is not Shannon's $H$
+* $\psi(\boldsymbol{\theta})=\log Z$; entropy $H=\psi-\theta\cdot\eta$
+* Fisher from the score: $G=\mathrm{Cov}[T]=\nabla^2\psi$; $I\neq H$
 * Shannon: $R\le C$; DPI; Good Regulator overview ($D,S,A,Z$)
 }
 
@@ -76,7 +76,7 @@ reading:
 | 10:05--10:15 | Quiz 3 (paper); collect Worksheet 3 |
 | 10:15--10:20 | Release Worksheet 4 (start Exchange 1 before GRT) |
 | 10:20--10:40 | Exponential family: $\theta=-\lambda$; three members; $\psi$ as CGF |
-| 10:40--11:00 | Fisher geometry: $G=\nabla^2 \psi$; $I\neq H$; $\mathrm{d}s^2$; dual charts |
+| 10:40--11:00 | $H=\psi-\theta\cdot\eta$; Fisher from score; $I\neq H$; $\mathrm{d}s^2$; dual charts |
 | 11:00--11:10 | Break |
 | 11:10--11:25 | Shannon communication theorem / channel capacity |
 | 11:25--11:35 | DPI statement; Markov moral |
@@ -174,9 +174,9 @@ Maximum entropy relative to $\mu$ gives ${\mathrm{d}}P/{\mathrm{d}}\mu=\exp(\the
 * Bernoulli / two-level: $T\in\{0,1\}$, $\theta=-\beta\varepsilon$
 }
 
-\speakernotes{LO6 punchline. Two-level system is a Bernoulli. Softmax is the same calculation with a richer feature map; name it only if the clock is ahead. The next block writes $\theta$ and $\psi$ for every Week 1 named family --- walk Bernoulli and Gaussian live; binomial / Poisson / multinomial are the same grammar if clock allows. Do not start the matrix exponential family; that waits for the Week 8 quantum close if at all.}
+\speakernotes{LO6 punchline. Two-level system is a Bernoulli. Softmax is the same calculation with a richer feature map; name it only if the clock is ahead. The next block rewrites the Week 1 families: protect Bernoulli ($h_0=1$, counting prior) then Poisson or binomial ($h_0=1/k!$ or $\binom{n}{k}$, discrete density of states). Gaussian names Lebesgue. Do not start the matrix exponential family; that waits for the Week 8 quantum close if at all.}
 
-\notes{Each of these is MaxEnt for its moment constraints, so each belongs to the exponential family. The canonical ensemble is the mean-energy case already recovered in Week 5. A Gaussian is MaxEnt for a fixed mean and variance. A two-level system with energies $0$ and $\varepsilon$ is a Bernoulli with natural parameter $\theta=-\beta\varepsilon$.}
+\notes{Each of these is MaxEnt for its moment constraints, so each belongs to the exponential family. The canonical ensemble is the mean-energy case already recovered in Week 5. A Gaussian is MaxEnt for a fixed mean and variance. A two-level system with energies $0$ and $\varepsilon$ is a Bernoulli with natural parameter $\theta=-\beta\varepsilon$. The distribution bank that follows is where both measure morals land: Bernoulli / categorical use plain counting ($h_0=1$); binomial / Poisson / multinomial use combinatorial $h_0$ as discrete density of states.}
 
 \include{_statistics/includes/common-distributions-exponential-family.md}
 
@@ -187,13 +187,15 @@ Maximum entropy relative to $\mu$ gives ${\mathrm{d}}P/{\mathrm{d}}\mu=\exp(\the
 \slidesincremental{
 * Week 3: $F=-k_BT\log Z$ (available energy)
 * Same object: $\psi(\boldsymbol{\theta})=\log Z(-\boldsymbol{\theta})$
-* Mean parameters: $\boldsymbol{\eta}=\nabla \psi=\langle T\rangle$
-* Hessian: $\nabla^2 \psi=\mathrm{Cov}[T]$
+* Mean parameters: $\boldsymbol{\eta}=\nabla\psi=\langle T\rangle$
+* Next: entropy from $\log p$, then Fisher from the score
 }
 
-\speakernotes{Board $\eta=\nabla\psi$ and $\nabla^2\psi=\mathrm{Cov}[T]$. The next slides read that Hessian as Fisher information. Do not write $\mathcal{L}$ or $\langle W_{\mathrm{ex}}\rangle\ge\mathcal{L}^2/\tau$.}
+\speakernotes{Board $\eta=\nabla\psi$ first. Do not yet claim the Hessian is Fisher --- that calculation is the next two slides. Do not write $\mathcal{L}$ or $\langle W_{\mathrm{ex}}\rangle\ge\mathcal{L}^2/\tau$.}
 
-\notes{The Quiz 2 debrief already read $\log Z$ as available energy, $F=-k_BT\log Z$. In exponential-family coordinates the same function is $\psi(\boldsymbol{\theta})=\log Z(-\boldsymbol{\theta})$. Its first derivative is the mean of $T$; its second derivative is the covariance of $T$. That is the cumulant-generating property. The next section is the geometric reading of the same Hessian.}
+\notes{The Quiz 2 debrief already read $\log Z$ as available energy, $F=-k_BT\log Z$. In exponential-family coordinates the same function is $\psi(\boldsymbol{\theta})=\log Z(-\boldsymbol{\theta})$. Its first derivative is the mean of $T$. Differentiating again will give $\mathrm{Cov}[T]$, but that identity is earned after the entropy form, not asserted here.}
+
+\include{_information/includes/exponential-family-entropy-fisher.md}
 
 \subsection{Fisher Metric from the Exponential Family}
 
@@ -204,32 +206,33 @@ Maximum entropy relative to $\mu$ gives ${\mathrm{d}}P/{\mathrm{d}}\mu=\exp(\the
 \slides{Same word; different mathematical definition.}
 
 \slidesincremental{
-* Shannon $H$: uncertainty in an outcome
-* Fisher $I(\theta)$: sensitivity of $\log p$ to $\theta$
+* Shannon $H$: uncertainty in an outcome --- just earned as $H=\psi-\theta\cdot\eta$
+* Fisher $I(\theta)$: sensitivity of $\log p$ to $\theta$ --- just earned as $\mathrm{Cov}[T]=\nabla^2\psi$
 * $H$ is a state function of $p$; $I$ is a property of a *family* $p(\cdot\mid\theta)$
 }
 
-\speakernotes{LO8. Hold this distinction for the rest of the module. Shannon is coming after the break as channel capacity; Fisher is already on the board as $\nabla^2\psi$.}
+\speakernotes{LO8 vocabulary slide after the calculation. They have already done the algebra; name the distinction. Shannon after the break is channel capacity, a different use of the same $H$.}
 
 \notes{Fisher (1925) called the expected squared score *information* about a parameter. For a scalar parameter,
 $$
 I(\theta)=\mathbb{E}_\theta\!\left[\left(\frac{\partial}{\partial\theta}\log p(x\mid\theta)\right)^2\right].
 $$
-Shannon's $H$ measures uncertainty in a random variable; Fisher's $I$ measures how much a sample tells you about $\theta$. Conflating the two words is the first mistake to block.}
+On an exponential family that is exactly $\nabla^2\psi=\mathrm{Cov}[T]$, already boarded. Shannon's $H$ measures uncertainty in a random variable; Fisher's $I$ measures how much a sample tells you about $\theta$. Conflating the two words is the first mistake to block --- and the exponential family is where both appear from one $\log p$.}
 
-\newslide{Hessian $\equiv$ Fisher Metric}
+\newslide{Same Matrix, Three Names}
 
-\slides{On an exponential family the CGF Hessian *is* the Fisher information.}
+\slides{You already have $G$; you are naming it.}
 
 \slidesincremental{
-* Score definition: $G_{ij}=\mathbb{E}[\partial_i\log p\,\partial_j\log p]$
-* Exponential family: $G(\boldsymbol{\theta})=\nabla^2 \psi(\boldsymbol{\theta})=\mathrm{Cov}[T]$
-* Same matrix: estimation, identifiability, geometry
+* $\mathrm{Cov}[T]$ from cumulants
+* Fisher $G$ from the score $T-\eta$
+* $\nabla^2\psi$ from differentiating $\eta=\nabla\psi$
+* Cramér--Rao: $\mathrm{cov}(\hat{\boldsymbol{\theta}})\succeq G^{-1}$ (name only)
 }
 
-\speakernotes{This is why information geometry follows the exponential family. You already have $G$; you are naming it. Cramér--Rao $\mathrm{cov}(\hat\theta)\succeq G^{-1}$ in one sentence if asked; do not board a proof.}
+\speakernotes{One sentence on Cramér--Rao if asked; do not board a proof. Information geometry follows because the metric is already on the board.}
 
-\notes{Three readings of one matrix: Fisher's expected squared score, Fréchet--Rao--Cramér identifiability ($\mathrm{cov}(\hat{\boldsymbol{\theta}})\succeq G^{-1}$), and --- for exponential families --- the Hessian of the cumulant generating function. That matrix is the Fisher information metric on the statistical manifold.}
+\notes{Three readings of one matrix: covariance of the sufficient statistics, Fisher's expected squared score, and the Hessian of the cumulant generating function. Fréchet--Rao--Cramér identifiability ($\mathrm{cov}(\hat{\boldsymbol{\theta}})\succeq G^{-1}$) is the estimation reading. That matrix is the Fisher information metric on the statistical manifold.}
 
 \newslide{Information Distance}
 
@@ -260,9 +263,9 @@ $$
 * Full Legendre / Pythagorean development stays notes
 }
 
-\speakernotes{Name dual flatness; do not board $H=\psi-\theta\cdot\eta$ unless ahead. The pair $(\theta,\eta)$ is enough to see why MaxEnt looks like an $m$-projection later. Natural gradient is optional colour only.}
+\speakernotes{Name dual flatness. $H=\psi-\theta\cdot\eta$ is already on the board --- that *is* $-\psi^*(\eta)$. The pair $(\theta,\eta)$ is enough to see why MaxEnt looks like an $m$-projection later. Natural gradient is optional colour only.}
 
-\notes{Amari's dual flatness: exponential families admit affine coordinates in $\boldsymbol{\theta}$ and in $\boldsymbol{\eta}=\nabla\psi$, with dual potentials whose Hessians are inverse Fisher metrics. The Legendre dual $\psi^*(\eta)=\psi-\theta\cdot\eta$ and the Pythagorean theorem for KL on dual flats are the natural next theorem; they stay thin today so Shannon and the Good Regulator keep their clock.}
+\notes{Amari's dual flatness: exponential families admit affine coordinates in $\boldsymbol{\theta}$ and in $\boldsymbol{\eta}=\nabla\psi$, with dual potentials whose Hessians are inverse Fisher metrics. The Legendre dual is what they already computed for entropy: $\psi^*(\eta)=\theta\cdot\eta-\psi=-H$ (up to the base-measure term). The Pythagorean theorem for KL on dual flats stays thin today so Shannon and the Good Regulator keep their clock.}
 
 \addreading{@Amari-information16}{Fisher metric; dual flatness}
 
@@ -331,7 +334,7 @@ $$
 
 \slidesincremental{
 * Why is the exponential family the MaxEnt family, and why $\theta=-\lambda$?
-* Why is $\nabla^2 \psi$ both $\mathrm{Cov}[T]$ and the Fisher metric $G$?
+* Why is $H=\psi-\theta\cdot\eta$, and why does that make $G=\nabla^2\psi=\mathrm{Cov}[T]$?
 * How does Fisher's $I(\theta)$ differ from Shannon's $H$?
 * What does $R\le C$ forbid, and what does DPI state?
 * Name $D$, $S$, $A$, $Z$ on the Good Regulator diagrams --- and why full GRT waits for Week 8

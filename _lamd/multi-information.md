@@ -42,7 +42,7 @@ reading:
     required: false
 ---
 
-\notes{No class test today. Quiz 3 was last week (start of lecture 6). Worksheet 3 was due last week; Worksheet 4 (Skepticus dialogue on GRT and general intelligence) is already out (due 1 December, before Quiz 4). Last week earned the exponential family, the Fisher metric from $\nabla^2 A$, Shannon capacity, stated DPI, and a full Good Regulator overview. Today: multi-information / $I+H=C$, prove DPI, information bottleneck as prescription and as GRT gloss.}
+\notes{No class test today. Quiz 3 was last week (start of lecture 6). Worksheet 3 was due last week; Worksheet 4 (Skepticus dialogue on GRT and general intelligence) is already out (due 1 December, before Quiz 4). Last week earned the exponential family, the Fisher metric from $\nabla^2\psi$, Shannon capacity, stated DPI, and a Good Regulator overview. Today: multi-information / $I+H=C$, prove DPI, information bottleneck as prescription and as GRT gloss.}
 
 \subsection{This Session}
 
@@ -198,7 +198,7 @@ mlai.write_figure('information-bottleneck-region.svg', directory='\writeDiagrams
 
 \slidesincremental{
 * Shannon $H$: uncertainty in an outcome
-* Fisher $I(\theta)$: sensitivity of $\log p$ to a parameter; $G=\nabla^2 A$ on the exponential family
+* Fisher $I(\theta)$: sensitivity of $\log p$ to a parameter; $G=\nabla^2\psi$ on the exponential family
 * MaxEnt as $m$-projection: geometric reading of Week 5 (named, not computed)
 * No natural-gradient paths; no thermodynamic length
 }
@@ -226,11 +226,11 @@ mlai.write_figure('information-bottleneck-region.svg', directory='\writeDiagrams
 
 \subsection{After This Lecture}
 
-\notes{No class test today. Quiz 4 is 1 December at the start of lecture 8. Week 8 applies Landauer, DPI, GRT, and human bandwidth to capability claims; von Neumann / $I=C$ if clock allows.}
+\notes{No class test today. Quiz 4 is 1 December at the start of lecture 8. Week 8 reviews the Good Regulator Theorem in full (Week 6 was overview only), then applies Landauer, DPI, GRT, and human bandwidth to capability claims; von Neumann / $I=C$ if clock allows.}
 
 \slidesincremental{
 * Quiz 4: 1 December, first ten minutes
-* Week 8: limits on intelligence; GRT as application
+* Week 8: full GRT review; then limits on intelligence
 }
 
 \reading

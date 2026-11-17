@@ -66,7 +66,7 @@ parked:
 hour, and not the demon lecture. Sort an item into a live `_lamd/*.md`
 week file before presenting it. Capacity and DPI live in Week 6
 (`channels-dpi-good-regulator.md`); the DPI proof and $I+H=C$ deepen in
-Week 7. The exponential family and $A$ as a cumulant generating function are live in Week 6. Thermodynamic length is dropped. Legendre duality stays off the live spine.}
+Week 7. The exponential family and $\psi$ as a cumulant generating function are live in Week 6. Thermodynamic length is dropped. Legendre duality stays off the live spine.}
 
 \speakernotes{Stop. This is the parking lot. Sort before presenting.}
 

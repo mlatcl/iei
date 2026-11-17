@@ -12,7 +12,7 @@ abstract: >
   Jaynes' maximum entropy under constraints, Lagrange on the board, the die,
   and the discrete MaxEnt proof that recovers Boltzmann. The exponential
   family is named at the close ($\theta=-\lambda$). Continuous MaxEnt
-  stays unread. The exponential-family tour ($A$ as a cumulant generating
+  stays unread. The exponential-family tour ($\psi$ as a cumulant generating
   function; canonical, Gaussian, Bernoulli) is taught live in Week 6.
   Thermodynamic length is dropped.
 author:
@@ -251,27 +251,27 @@ This is the same calculation as Jaynes' die (one linear constraint on the face v
 
 \section{The Exponential Family}
 
-\notes{As taught on 10 November the exponential family was *named* in the last minute --- natural parameters $\theta=-\lambda$, fit the $\lambda$s by maximum likelihood --- and not developed. The slides below are that unread record. The live version is Week 6, after Quiz 3: $\theta=-\lambda$, canonical / Gaussian / Bernoulli, and $A$ as a cumulant generating function. Do not present thermodynamic length from the partition-function include.}
+\notes{As taught on 10 November the exponential family was *named* in the last minute --- natural parameters $\theta=-\lambda$, fit the $\lambda$s by maximum likelihood --- and not developed. The slides below are that unread record. The live version is Week 6, after Quiz 3: $\theta=-\lambda$, canonical / Gaussian / Bernoulli, and $\psi$ as a cumulant generating function. Do not present thermodynamic length from the partition-function include.}
 
 \newslides{Exponential Family: $\theta=-\lambda$}
 
 \slidesincremental{
 * Write $T_k(x_i)=f_k(x_i)$: sufficient statistics fixed by the constraints
 * MaxEnt solution: $p_i=\dfrac{e^{-\sum_k \lambda_k T_k(x_i)}}{Z}$ on the discrete support
-* Exponential family: $p(x\mid\boldsymbol{\theta})\propto \exp\bigl(\boldsymbol{\theta}\!\cdot\! T(x)-A(\boldsymbol{\theta})\bigr)$
+* Exponential family: $p(x\mid\boldsymbol{\theta})\propto \exp\bigl(\boldsymbol{\theta}\!\cdot\! T(x)-\psi(\boldsymbol{\theta})\bigr)$
 * Identification: $\boldsymbol{\theta} = -\boldsymbol{\lambda}$ (natural parameters $=$ minus Lagrange multipliers)
-* Same object: $A(\boldsymbol{\theta})=\log Z(-\boldsymbol{\theta})$
+* Same object: $\psi(\boldsymbol{\theta})=\log Z(-\boldsymbol{\theta})$
 }
 
 \speakernotes{LO6 punchline. As taught 10 November: name $\theta=-\lambda$ and that fitting the $\lambda$s is maximum likelihood. The CGF and the three members are Week 6. Physics sign: Boltzmann uses $p_i\propto e^{-\beta E_i}$ so $\theta_1=-\beta$ when $T=E$.}
 
 \notes{The constrained MaxEnt distribution is not merely *like* an exponential family --- on a finite (or countable) state space it *is* one. Take sufficient statistics $T_k(x)=f_k(x)$. Then the MaxEnt assignment is
 \begin{align}
-p(x\mid\boldsymbol{\theta}) = \exp\bigl(\boldsymbol{\theta}\cdot T(x) - A(\boldsymbol{\theta})\bigr)\, h(x),
+p(x\mid\boldsymbol{\theta}) = \exp\bigl(\boldsymbol{\theta}\cdot T(x) - \psi(\boldsymbol{\theta})\bigr)\, h(x),
 \end{align}
 with $h(x)$ the counting measure on the allowed outcomes and
 \begin{align}
-A(\boldsymbol{\theta}) = \log \sum_x \exp\bigl(\boldsymbol{\theta}\cdot T(x)\bigr).
+\psi(\boldsymbol{\theta}) = \log \sum_x \exp\bigl(\boldsymbol{\theta}\cdot T(x)\bigr).
 \end{align}
 The Lagrange multipliers from the proof are the *negative* natural parameters:
 \begin{align}
@@ -281,26 +281,26 @@ We use the minus sign so that high-energy states are down-weighted when $\theta_
 
 \subsection{$\log Z$ as Cumulant Generating Function}
 
-\newslides{$A(\theta)=\log Z$ Generates Cumulants}
+\newslides{$\psi(\theta)=\log Z$ Generates Cumulants}
 
 \slidesincremental{
 * Debrief: $F=-k_BT\log Z$ (available energy)
-* MaxEnt / exponential family: $A(\boldsymbol{\theta})=\log Z(-\boldsymbol{\theta})$
+* MaxEnt / exponential family: $\psi(\boldsymbol{\theta})=\log Z(-\boldsymbol{\theta})$
 * Mean parameters: $\boldsymbol{\eta}=\nabla A=\langle T\rangle$
-* Hessian: $\nabla^2 A=\mathrm{Cov}[T]$ (covariance; not thermodynamic length)
+* Hessian: $\nabla^2 \psi=\mathrm{Cov}[T]$ (covariance; not thermodynamic length)
 }
 
-\speakernotes{Unread on 10 November. Week 6 teaches $A$ as a cumulant generating function and stops at the covariance. Do not derive the Legendre transform, and do not follow the include into Crooks or thermodynamic length.}
+\speakernotes{Unread on 10 November. Week 6 teaches $\psi$ as a cumulant generating function and stops at the covariance. Do not derive the Legendre transform, and do not follow the include into Crooks or thermodynamic length.}
 
 \include{_physics/includes/partition-function-generating.md}
 
-\notes{The two-state plots recover $U=-\partial_\beta\log Z$ and $F=-\beta^{-1}\log Z$. In exponential-family coordinates the same object is $A(\boldsymbol{\theta})$: $\eta=\nabla A$ are the mean parameters conjugate to $\theta$, and $\nabla^2 A$ is the covariance of the sufficient statistics. Week 6 teaches that cumulant reading and stops there. Thermodynamic length is dropped. Legendre duality stays off the live spine.}
+\notes{The two-state plots recover $U=-\partial_\beta\log Z$ and $F=-\beta^{-1}\log Z$. In exponential-family coordinates the same object is $\psi(\boldsymbol{\theta})$: $\eta=\nabla\psi$ are the mean parameters conjugate to $\theta$, and $\nabla^2\psi$ is the covariance of the sufficient statistics. Week 6 teaches that cumulant reading and stops there. Thermodynamic length is dropped. Legendre duality stays off the live spine.}
 
 \include{_physics/includes/exponential-families.md}
 
 \speakernotes{LO6. Two-level system = Bernoulli with $\theta=-\beta\varepsilon$. Softmax and two-spin are the same theorem with richer $T(x)$; name them if the clock is tight. Flag matrix exponential family for week 8.}
 
-\notes{The definition $p(x\mid\boldsymbol{\theta})=\exp(\boldsymbol{\theta}\cdot T(x)-A(\boldsymbol{\theta}))$ is the notation for what we have just derived. Canonical, Gaussian, and Bernoulli belong because each is MaxEnt for its moments. Softmax is the same calculation with a feature map. The two-spin example is the first sufficient statistic that is a product --- named for later if needed.}
+\notes{The definition $p(x\mid\boldsymbol{\theta})=\exp(\boldsymbol{\theta}\cdot T(x)-\psi(\boldsymbol{\theta}))$ is the notation for what we have just derived. Canonical, Gaussian, and Bernoulli belong because each is MaxEnt for its moments. Softmax is the same calculation with a feature map. The two-spin example is the first sufficient statistic that is a product --- named for later if needed.}
 
 \subsection{Three Perspectives (Brief)}
 

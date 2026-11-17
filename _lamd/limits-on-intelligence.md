@@ -7,12 +7,12 @@ venue: FW26, William Gates Building
 room: FW26
 transition: None
 abstract: >
-  Final session: Quiz 4, then the classical limit I=C and von Neumann
-  entropy if clock allows, and the LO13 close. Superintelligence claims
-  are evaluated with Landauer, I+H=C, the data-processing inequality,
-  the Good Regulator Theorem (already earned in Week 6), and human
-  bandwidth. Three-geometries / Schrödinger / Wasserstein transport are
-  not the live spine.
+  Final session: Quiz 4, then a full Good Regulator review (Conant–Ashby
+  with D, S, A, Z; concavity; H(A|S)=0; two caveats), the classical
+  limit I=C and von Neumann entropy if clock allows, and the LO13 close.
+  Superintelligence claims are evaluated with Landauer, I+H=C, DPI, GRT,
+  and human bandwidth. Three-geometries / Schrödinger / Wasserstein
+  transport are not the live spine.
 author:
 - given: Neil D.
   family: Lawrence
@@ -49,12 +49,13 @@ reading:
     required: false
 ---
 
-\notes{Worksheet 4 is due at the start of this session (before Quiz 4). Quiz 4 occupies the first ten minutes. Then close the course: optional von Neumann / $I=C$, then LO13 synthesis. GRT was earned in Week 6 and deepened with IB in Week 7 --- today it is an *application* tool, not a first proof. Do not reopen Fisher length, natural gradient, or three geometries as primary content.}
+\notes{Worksheet 4 is due at the start of this session (before Quiz 4). Quiz 4 occupies the first ten minutes. Then the full Good Regulator review (Week 6 gave only the $D,S,A,Z$ overview), optional von Neumann / $I=C$, then LO13 synthesis applying the earned tools. Do not reopen Fisher length, natural gradient, or three geometries as primary content.}
 
 \subsection{This Session}
 
 \slidesincremental{
 * Quiz 4 (ten minutes); Worksheet 4 in
+* Full Good Regulator review: $D,S,A,Z$; $H(A\mid S)=0$; caveats
 * Classical limit $I=C$; von Neumann if clock allows
 * Apply Landauer, DPI, GRT, bandwidth to capability claims
 * Course close: entropy forbids; probability prescribes
@@ -66,15 +67,16 @@ reading:
 | Clock | Block |
 |------:|-------|
 | 10:05--10:15 | Quiz 4 (paper); collect Worksheet 4 |
-| 10:15--10:45 | Classical $I=C\Rightarrow H=0$; von Neumann / Bell |
+| 10:15--10:45 | Good Regulator review (full Conant--Ashby; diagrams already from Week 6) |
 | 10:45--10:55 | Break |
-| 10:55--11:40 | Limits synthesis: Landauer, $I+H=C$, DPI, GRT applied, bandwidth |
+| 10:55--11:15 | Classical $I=C\Rightarrow H=0$; von Neumann / Bell if clock |
+| 11:15--11:40 | Limits synthesis: Landauer, $I+H=C$, DPI, GRT applied, bandwidth |
 | 11:40--11:55 | Superintelligence as perpetual motion; Week 1 answer |
 }
 
 \subsection{Quiz 4}
 
-\notes{Ten questions from the multi-information / DPI / GRT / limits bank. Invigilated paper test, no notes, no network, no LLMs. Covers Weeks 6--7 as delivered (Shannon capacity, DPI, GRT caveats, multi-information / $I+H=C$, IB) plus Landauer / bandwidth tools for LO13 --- not Fisher geometry, not thermodynamic length, not three transport geometries.}
+\notes{Ten questions from the multi-information / DPI / GRT / limits bank. Invigilated paper test, no notes, no network, no LLMs. Covers Weeks 6--7 as delivered (Shannon capacity, DPI, GRT *overview* / notation, multi-information / $I+H=C$, IB) plus Landauer / bandwidth tools for LO13 --- not the Week 8 GRT proof depth, not Fisher geometry, not thermodynamic length, not three transport geometries.}
 
 \slidesincremental{
 * Paper; no notes, no network, no LLMs
@@ -86,9 +88,17 @@ reading:
 
 \include{_iei/includes/iei-notebook-setup.md}
 
-\classtimertitled{10:15}{Quiz 4}
+\subsection{Good Regulator Review}
+
+\classtimertitled{10:15}{Good Regulator}
+
+\notes{Week 6 gave the overview and the $D,S,A,Z$ diagrams. Today earn the theorem: requisite variety in those letters, the concavity argument, existence of a deterministic $H(Z)$-minimiser with $H(A\mid S)=0$, and both caveats. Then apply.}
+
+\include{_information/includes/entropic-good-regulator.md}
 
 \subsection{Von Neumann Entropy}
+
+\classtimertitled{10:55}{Von Neumann}
 
 \include{_physics/includes/origin-paradox-shannon-von-neumann.md}
 
@@ -137,7 +147,7 @@ print('S(rho_A)=', von_neumann(partial_trace_A(rho)))}
 
 \subsection{Limits on Intelligence}
 
-\classtimertitled{10:55}{Limits}
+\classtimertitled{11:15}{Limits}
 
 \include{_information/includes/information-limits-on-intelligence.md}
 
@@ -154,21 +164,21 @@ print('S(rho_A)=', von_neumann(partial_trace_A(rho)))}
 
 \speakernotes{LO12 thin by design. Do not open three geometries.}
 
-\newslides{Tools Already Earned}
+\newslides{Tools Just Reviewed}
 
-\slides{Apply what Weeks 6--7 already proved. Do not re-derive.}
+\slides{Apply what Weeks 6--7 taught and what today's GRT review earned.}
 
 \slidesincremental{
 * Shannon: $R\le C$
 * DPI: processing cannot create $I$
-* Requisite variety: $H(E)\ge H(D)-I(D;R)$
+* Requisite variety: $H(Z)\ge H(D)-I(D;A)$
 * GRT: exists optimal $\pi$ with $H(A\mid S)=0$ (caveats stand)
 * IB: spend $I$ on action-relevant distinctions (gloss, not GRT)
 }
 
-\speakernotes{GRT is application today. Two caveats still: constant action; low $H(Z)$ is not desirable.}
+\speakernotes{GRT was overview in Week 6; the existence claim is earned in this session's review. Two caveats still: constant action; low $H(Z)$ is not desirable.}
 
-\notes{Data-processing inequality and the information bottleneck were taught under LO10 in Weeks 6--7. Today they are evaluation tools, not new outcomes: a claim that an intelligent system will just process more is a DPI violation; a system that keeps only what is relevant for action is an IB statement. Requisite variety supplies the quantity bound $H(E)\ge H(D)-I(D;R)$. The Good Regulator Theorem supplies an existence claim already earned from concavity: among $H(Z)$-minimisers there is a deterministic policy with $H(A\mid S)=0$. Caveats: constant $A=a_0$ also has $H(A\mid S)=0$; low $H(Z)$ is predictability, not desirability. The IB-shaped reading $\min I(S;A)$ subject to $H(Z)\le\epsilon$ remains a gloss after that theorem, not Conant and Ashby's statement and not the course punchline.}
+\notes{Data-processing inequality and the information bottleneck were taught under LO10 in Weeks 6--7. The Good Regulator Theorem was overviewed in Week 6 ($D,S,A,Z$ diagrams) and reviewed in full earlier this session. Today they are evaluation tools: a claim that an intelligent system will just process more is a DPI violation; a system that keeps only what is relevant for action is an IB statement. Requisite variety supplies the quantity bound $H(Z)\ge H(D)-I(D;A)$. The Good Regulator Theorem supplies an existence claim from concavity: among $H(Z)$-minimisers there is a deterministic policy with $H(A\mid S)=0$. Caveats: constant $A=a_0$ also has $H(A\mid S)=0$; low $H(Z)$ is predictability, not desirability. The IB-shaped reading $\min I(S;A)$ subject to $H(Z)\le\epsilon$ remains a gloss after that theorem, not Conant and Ashby's statement and not the course punchline.}
 
 <!-- SNIPPET: _information/includes/limits-on-intelligence-synthesis.md -->
 
@@ -179,11 +189,11 @@ print('S(rho_A)=', von_neumann(partial_trace_A(rho)))}
 \slidesincremental{
 * Historical thread: Carnot $\to$ Clausius $\to$ Boltzmann $\to$ Shannon $\to$ Landauer $\to$ here
 * Landauer; $I+H=C$; DPI; Shannon $R\le C$
-* GRT: exists optimal $\pi$ with $H(A\mid S)=0$ (earned Week 6, applied today)
+* GRT: exists optimal $\pi$ with $H(A\mid S)=0$ (overview Week 6; earned today)
 * Human bandwidth: $\sim 100$ bits/s — *The Atomic Human*
 }
 
-\speakernotes{LO13. Course punchline unchanged: entropy forbids; probability prescribes. GRT is an earned theorem inside that fence, not the fence. Weak model and $H(Z)\ne$ desirable are the two fences on the slogan. Do not lean on $\mathcal{L}^2/\tau$ or three geometries --- those left the live spine.}
+\speakernotes{LO13. Course punchline unchanged: entropy forbids; probability prescribes. GRT is earned in today's review inside that fence, not the fence. Weak model and $H(Z)\ne$ desirable are the two fences on the slogan. Do not lean on $\mathcal{L}^2/\tau$ or three geometries --- those left the live spine.}
 
 \notes{Prescriptions operate inside fences set by physics and embodiment: whatever model is kept is not informationally free once Landauer prices sensing, storage, processing, and erasure. Unbounded intelligence that processes without entropic cost has the shape of perpetual motion: it claims to repeal a no-go.}
 

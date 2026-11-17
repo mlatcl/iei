@@ -255,7 +255,7 @@ The original maximum entropy paper; very readable. Week 5 (LO5).
 Sections 1–6 for the entropy axioms. Week 3 (LO2).
 
 **Crooks (2007)** — "Measuring Thermodynamic Length," *Phys. Rev. Lett.* 99, 100602.
-Thermodynamic length as Fisher–Rao path length is dropped. Week 6 defines the Fisher metric from $\nabla^2 A$ (LO8) without integrating path cost.
+Thermodynamic length as Fisher–Rao path length is dropped. Week 6 defines the Fisher metric from $\nabla^2\psi$ (LO8) without integrating path cost.
 
 **Watanabe (1960)** — "Information Theoretical Analysis of Multivariate Correlation," *IBM J. Res. Dev.*
 The original multi-information paper. Week 8 (LO10).

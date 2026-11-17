@@ -22,9 +22,9 @@ Entropy appears in three apparently separate traditions — thermodynamics (Bolt
 1. probability and entropy review; Socratic LLM method; that theme via perpetual motion and the human–machine bandwidth gap of *The Atomic Human*; then the Boltzmann distribution and free energy,
 2. Shannon entropy and its formal equivalence to thermodynamic entropy; grouping / missing measure; MaxEnt and the exponential family,
 3. Maxwell's demon as compartments and two ledgers; Landauer's principle as the thermodynamic cost of decision-making,
-4. Shannon's communication theorem / channel capacity, the data-processing inequality, and a full overview of the Good Regulator Theorem,
+4. Shannon's communication theorem / channel capacity, the data-processing inequality, and a Good Regulator overview ($D,S,A,Z$ diagrams),
 5. multi-information, $I+H=C$, DPI proof, and the information bottleneck (including as a gloss after GRT),
-6. von Neumann entropy where clock allows, and information-theoretic limits on intelligent agency (Landauer, DPI, GRT applied, human bandwidth).
+6. full Good Regulator review, von Neumann entropy where clock allows, and information-theoretic limits on intelligent agency (Landauer, DPI, GRT applied, human bandwidth).
 
 Four ten-minute in-class quizzes sit at the start of lectures 2, 4, 6 and 8.
 
