@@ -292,10 +292,6 @@ $$
 \addreading{@Cover:elements91}{Chapter 7}
 \addreading{@MacKay-information03}{Chapters 8--10}
 
-\slides{
-\includediagram{\diagramsDir/ml/bsc-capacity}{70%}
-}
-
 \subsection{Data-Processing Inequality}
 
 \newslide{Data-Processing Inequality}
