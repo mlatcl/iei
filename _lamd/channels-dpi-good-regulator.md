@@ -93,11 +93,7 @@ reading:
 * Worksheet 3 in as you sit
 }
 
-\classtimertitled{10:05}{Quiz 3}
-
 \include{_iei/includes/iei-notebook-setup.md}
-
-\classtimertitled{10:15}{Quiz 3}
 
 \subsection{Exponential Family}
 
@@ -166,7 +162,9 @@ Probability $Q$ & $-\mathrm{KL}(P\|Q)$ & $\le 0$ & $Q$, stated explicitly
 \end{tabular}
 \end{center}
 
-Maximum entropy relative to $\mu$ gives ${\mathrm{d}}P/{\mathrm{d}}\mu=\exp(\theta\cdot T-\psi)$. The factor $h_0$ in the exponential family is the density of that base measure when sums or integrals are written against a default chart. Today $\nu=\#$ on the allowed set and $h_0={\mathrm{d}}\nu/{\mathrm{d}}\#=\mathbf{1}[x\in\mathcal{X}]$, so $\psi$ is a log-sum. Even in discrete cases the base need not be plain counting: Poisson uses $h_0(x)=1/x!$ on $\mathbb{N}$, binomial uses $\binom{n}{x}$ --- combinatorial multiplicity as the discrete counterpart of the $v^2$ density of states. We write $h_0$ rather than $h$ to avoid colliding with differential entropy and with the regulator map $A=h(S)$ later in the module.}
+Maximum entropy relative to $\mu$ gives ${\mathrm{d}}P/{\mathrm{d}}\mu=\exp(\theta\cdot T-\psi)$. The factor $h_0$ in the exponential family is the density of that base measure when sums or integrals are written against a default chart. Today $\nu=\#$ on the allowed set and $h_0={\mathrm{d}}\nu/{\mathrm{d}}\#=\mathbf{1}[x\in\mathcal{X}]$, so $\psi$ is a log-sum. Even in discrete cases the base need not be plain counting: Poisson uses $h_0(x)=1/x!$ on $\mathbb{N}$, binomial uses $\binom{n}{x}$ --- combinatorial multiplicity as the discrete counterpart of the $v^2$ density of states. We write $h_0$ rather than $h$ to avoid colliding with differential entropy and with the regulator map $A=h(S)$ later in the module.
+
+*Extension: where does $h_0$ come from?* Often $x$ is a coarse summary of a finer description. For example, $k$ = number of successes in $n$ binary trials. Put the uniform (counting) measure on the micro states and push it forward through the summary: $h_0(k)=\#\{\text{micro states with summary }k\}=\binom{n}{k}$. Because the tilt $\exp(\theta k-\psi(\theta))$ depends only on $k$, the distribution stays uniform within each group of micro states. So $h_0$ is the *density of states*, Boltzmann's $W$, and $\mathbb{E}[\log h_0(K)]$ is the entropy lost by recording only $k$. *(For the Poisson, the micro states are unordered event times in $[0,1]$, and $h_0(k)=1/k!$ is a volume rather than a count.)* Coarse-graining by $T$ is a deterministic channel, so $H(K)\le H_{\mathrm{micro}}$ --- a small DPI-style fact that the Data-Processing Inequality later makes precise.}
 
 \newslide{Three Members, One Family}
 
@@ -201,9 +199,7 @@ Maximum entropy relative to $\mu$ gives ${\mathrm{d}}P/{\mathrm{d}}\mu=\exp(\the
 
 \include{_information/includes/exponential-family-entropy-fisher.md}
 
-\subsection{Fisher Metric from the Exponential Family}
-
-\classtimertitled{10:35}{Fisher geometry}
+###{Fisher Metric from the Exponential Family}
 
 \newslide{Fisher's Information $\neq$ Shannon's Entropy}
 
@@ -273,11 +269,7 @@ $$
 
 \addreading{@Amari-information16}{Fisher metric; dual flatness}
 
-\classtimertitled{10:55}{Break}
-
 \subsection{Shannon's Communication Theorem}
-
-\classtimertitled{11:05}{Shannon}
 
 \newslide{Shannon's Noisy Channel Coding Theorem}
 
@@ -306,8 +298,6 @@ $$
 
 \subsection{Data-Processing Inequality}
 
-\classtimertitled{11:20}{DPI}
-
 \newslide{Data-Processing Inequality}
 
 \slides{If $X\to Y\to Z$ is Markov, processing cannot create information about $X$.}
@@ -329,8 +319,6 @@ $$
 }
 
 \subsection{Good Regulator}
-
-\classtimertitled{11:35}{Good Regulator}
 
 \include{_information/includes/good-regulator-overview.md}
 

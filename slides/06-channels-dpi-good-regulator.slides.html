@@ -163,14 +163,10 @@
 <li class="fragment">Worksheet 3 in as you sit</li>
 </ul>
 </div>
-<section data-background-iframe="../scripts//timer/index.html?duration=10:05&amp;title=Quiz 3" data-background-interactive>
-</section>
 <!--setupplotcode{import seaborn as sns
 sns.set_style('darkgrid')
 sns.set_context('paper')
 sns.set_palette('colorblind')}-->
-<section data-background-iframe="../scripts//timer/index.html?duration=10:15&amp;title=Quiz 3" data-background-interactive>
-</section>
 </section>
 <section id="exponential-family" class="slide level2">
 <h2>Exponential Family</h2>
@@ -230,8 +226,8 @@ LO6 punchline. Two-level system is a Bernoulli. Softmax is the same calculation 
 <li class="fragment">Form: <span class="math inline">\(p=\exp\bigl(\boldsymbol{\theta}\!\cdot\! T-\psi\bigr)\,h_0\)</span></li>
 <li class="fragment">Two stories for <span class="math inline">\(h_0\)</span>: counting prior (<span class="math inline">\(h_0=1\)</span>) versus combinatorial / continuum measure</li>
 <li class="fragment">Bernoulli, categorical: plain counting on the labels</li>
-<li class="fragment">Binomial, Poisson, multinomial: <span class="math inline">\(h_0=\binom{n}{k}\)</span>, <span class="math inline">\(1/k!\)</span>, <span class="math inline">\(n!/\prod x_j!\)</span> — discrete density of states</li>
-<li class="fragment">Gaussian: Lebesgue (continuous counterpart of <span class="math inline">\(\#\)</span>)</li>
+<li class="fragment">Binomial, Poisson, multinomial: result is a macroscopic of a microscopic sum</li>
+<li class="fragment">Gaussian: Lebesgue (continuous counterpart of #)</li>
 </ul>
 </div>
 <aside class="notes">
@@ -255,7 +251,11 @@ Callback to the Week 1 named list. Protect two sentences: (1) Bernoulli <span cl
 <h2>Bernoulli: Natural Parameter and <span class="math inline">\(\psi\)</span></h2>
 <p><span class="math display">\[
 P(x\mid\theta)=\exp\bigl(x\,\theta-\psi(\theta)\bigr)\,h_0(x),\qquad x\in\{0,1\}
-\]</span> * <span class="math inline">\(\theta=\log\dfrac{\pi}{1-\pi}\)</span>,<span class="math inline">\(T(x)=x\)</span> * <span class="math inline">\(\psi(\theta)=\log(1+e^{\theta})\)</span>,<span class="math inline">\(h_0(x)=1\)</span> (counting on <span class="math inline">\(\{0,1\}\)</span>)</p>
+\]</span></p>
+<ul>
+<li><span class="math inline">\(\theta=\log\dfrac{\pi}{1-\pi}\)</span>,<span class="math inline">\(T(x)=x\)</span></li>
+<li><span class="math inline">\(\psi(\theta)=\log(1+e^{\theta})\)</span>,<span class="math inline">\(h_0(x)=1\)</span> (counting on <span class="math inline">\(\{0,1\}\)</span>)</li>
+</ul>
 <aside class="notes">
 Point one of two. Write <span class="math inline">\(h_0=1\)</span> on the board: Bernoulli <em>is</em> MaxEnt relative to counting measure. Logit is <span class="math inline">\(\theta\)</span>; softplus is <span class="math inline">\(\psi\)</span>. Same object as the two-level system. Binomial / Poisson next flip <span class="math inline">\(h_0\)</span> away from 1.
 </aside>
@@ -267,7 +267,11 @@ Point one of two. Write <span class="math inline">\(h_0=1\)</span> on the board:
 <h2>Binomial: Natural Parameter and <span class="math inline">\(\psi\)</span></h2>
 <p><span class="math display">\[
 P(k\mid\theta)=\exp\bigl(k\,\theta-\psi(\theta)\bigr)\,h_0(k),\qquad k=0,\ldots,n
-\]</span> * <span class="math inline">\(\theta=\log\dfrac{\pi}{1-\pi}\)</span>,<span class="math inline">\(T(k)=k\)</span> * <span class="math inline">\(\psi(\theta)=n\log(1+e^{\theta})\)</span>,<span class="math inline">\(h_0(k)=\binom{n}{k}\)</span></p>
+\]</span></p>
+<ul>
+<li><span class="math inline">\(\theta=\log\dfrac{\pi}{1-\pi}\)</span>,<span class="math inline">\(T(k)=k\)</span></li>
+<li><span class="math inline">\(\psi(\theta)=n\log(1+e^{\theta})\)</span>,<span class="math inline">\(h_0(k)=\binom{n}{k}\)</span></li>
+</ul>
 <aside class="notes">
 Point two begins here. Same <span class="math inline">\(\theta\)</span> as Bernoulli; <span class="math inline">\(\psi\)</span> is <span class="math inline">\(n\)</span> times the softplus. The new object is <span class="math inline">\(h_0=\binom{n}{k}\)</span>: without that multiplicity you are not looking at the binomial. Say ``discrete density of states’’ and move on — Poisson repeats the lesson with <span class="math inline">\(1/k!\)</span>.
 </aside>
@@ -289,7 +293,11 @@ Point two begins here. Same <span class="math inline">\(\theta\)</span> as Berno
 <h2>Poisson: Why <span class="math inline">\(h_0\)</span> Is Not Optional</h2>
 <p><span class="math display">\[
 P(k\mid\theta)=\exp\bigl(k\,\theta-\psi(\theta)\bigr)\,h_0(k),\qquad k\in\mathbb{N}_0
-\]</span> * <span class="math inline">\(\theta=\log\lambda\)</span>,<span class="math inline">\(T(k)=k\)</span>,<span class="math inline">\(\psi(\theta)=e^{\theta}\)</span> * <span class="math inline">\(h_0(k)=1/k!\)</span> — without it, mean-count MaxEnt is <em>geometric</em>, not Poisson</p>
+\]</span></p>
+<ul>
+<li><span class="math inline">\(\theta=\log\lambda\)</span>,<span class="math inline">\(T(k)=k\)</span>,<span class="math inline">\(\psi(\theta)=e^{\theta}\)</span></li>
+<li><span class="math inline">\(h_0(k)=1/k!\)</span> — without it, mean-count MaxEnt is <em>geometric</em>, not Poisson</li>
+</ul>
 <aside class="notes">
 Point two, sharpened. Board <span class="math inline">\(h_0=1/k!\)</span> beside Bernoulli’s <span class="math inline">\(h_0=1\)</span>. One sentence: counting prior gave Bernoulli; combinatorial measure gives Poisson. Do not derive the geometric MaxEnt unless asked — naming the contrast is enough.
 </aside>
@@ -301,7 +309,12 @@ Point two, sharpened. Board <span class="math inline">\(h_0=1/k!\)</span> beside
 <h2>Multinomial / Categorical: Natural Parameters and <span class="math inline">\(\psi\)</span></h2>
 <p><span class="math display">\[
 P(\mathbf{x}\mid\boldsymbol{\theta})=\exp\bigl(\boldsymbol{\theta}\!\cdot\! T(\mathbf{x})-\psi(\boldsymbol{\theta})\bigr)\,h_0(\mathbf{x})
-\]</span> * <span class="math inline">\(\theta_j=\log\dfrac{\pi_j}{\pi_K}\)</span>,<span class="math inline">\(T=(x_1,\ldots,x_{K-1})\)</span> * <span class="math inline">\(\psi(\boldsymbol{\theta})=n\log\bigl(1+\sum_{j=1}^{K-1}e^{\theta_j}\bigr)\)</span> * Categorical: <span class="math inline">\(n=1\)</span>, <span class="math inline">\(h_0=1\)</span>; multinomial: <span class="math inline">\(h_0=\dfrac{n!}{x_1!\cdots x_K!}\)</span></p>
+\]</span></p>
+<ul>
+<li><span class="math inline">\(\theta_j=\log\dfrac{\pi_j}{\pi_K}\)</span>,<span class="math inline">\(T=(x_1,\ldots,x_{K-1})\)</span></li>
+<li><span class="math inline">\(\psi(\boldsymbol{\theta})=n\log\bigl(1+\sum_{j=1}^{K-1}e^{\theta_j}\bigr)\)</span></li>
+<li>Categorical: <span class="math inline">\(n=1\)</span>, <span class="math inline">\(h_0=1\)</span>; multinomial: <span class="math inline">\(h_0=\dfrac{n!}{x_1!\cdots x_K!}\)</span></li>
+</ul>
 <aside class="notes">
 Same two-point moral: categorical <span class="math inline">\(h_0=1\)</span> is counting on the labels; multinomial multiplicity is density of states again. Categorical is <span class="math inline">\(n=1\)</span>. Same log-sum-exp <span class="math inline">\(\psi\)</span> as softmax. Do not open the unconstrained <span class="math inline">\(K\)</span>-parameter chart live.
 </aside>
@@ -324,7 +337,12 @@ Same two-point moral: categorical <span class="math inline">\(h_0=1\)</span> is 
 <h2>Gaussian: Natural Parameters and <span class="math inline">\(\psi\)</span></h2>
 <p><span class="math display">\[
 p(y\mid\boldsymbol{\theta})=\exp\bigl(\theta_1 y+\theta_2 y^2-\psi(\boldsymbol{\theta})\bigr)\,h_0(y)
-\]</span> * <span class="math inline">\(\theta_1=\dfrac{\mu}{\sigma^2}\)</span>,<span class="math inline">\(\theta_2=-\dfrac{1}{2\sigma^2}\)</span>,<span class="math inline">\(T(y)=(y,y^2)\)</span> * <span class="math inline">\(h_0\)</span>: Lebesgue (continuum counterpart of counting <span class="math inline">\(\#\)</span>) * <span class="math inline">\(\psi(\theta_1,\theta_2)=-\dfrac{\theta_1^2}{4\theta_2}-\dfrac12\log(-2\theta_2)-\dfrac12\log(2\pi)\)</span></p>
+\]</span></p>
+<ul>
+<li><span class="math inline">\(\theta_1=\dfrac{\mu}{\sigma^2}\)</span>,<span class="math inline">\(\theta_2=-\dfrac{1}{2\sigma^2}\)</span>,<span class="math inline">\(T(y)=(y,y^2)\)</span></li>
+<li><span class="math inline">\(h_0\)</span>: Lebesgue (continuum counterpart of counting <span class="math inline">\(\#\)</span>)</li>
+<li><span class="math inline">\(\psi(\theta_1,\theta_2)=-\dfrac{\theta_1^2}{4\theta_2}-\dfrac12\log(-2\theta_2)-\dfrac12\log(2\pi)\)</span></li>
+</ul>
 <aside class="notes">
 Name Lebesgue as <span class="math inline">\(h_0\)</span> so the discrete tour closes: <span class="math inline">\(\#\)</span> / combinatorial <span class="math inline">\(h_0\)</span> / <span class="math inline">\(\lambda\)</span>. Two numbers on the slide: precision-weighted mean and minus half precision. <span class="math inline">\(\psi\)</span> is the ugly formula; board only <span class="math inline">\(\eta=\nabla\psi\)</span> if asked.
 </aside>
@@ -378,11 +396,7 @@ Board the two-line derivation for <span class="math inline">\(h_0=1\)</span>. <s
 <aside class="notes">
 LO8 punchline as a calculation, not a slogan. Score <span class="math inline">\(=T-\eta\)</span> is immediate from <span class="math inline">\(\log p=\theta\cdot T-\psi\)</span>. Squaring and taking expectation is Fisher. Differentiating <span class="math inline">\(\eta=\nabla\psi\)</span> again is the Hessian. Same matrix three ways: Cov, Fisher, <span class="math inline">\(\nabla^2\psi\)</span>.
 </aside>
-</section>
-<section id="fisher-metric-from-the-exponential-family" class="slide level2">
-<h2>Fisher Metric from the Exponential Family</h2>
-<section data-background-iframe="../scripts//timer/index.html?duration=10:35&amp;title=Fisher geometry" data-background-interactive>
-</section>
+<p>###{Fisher Metric from the Exponential Family}</p>
 </section>
 <section id="fishers-information-neq-shannons-entropy" class="slide level2">
 <h2>Fisher’s Information <span class="math inline">\(\neq\)</span> Shannon’s Entropy</h2>
@@ -443,13 +457,9 @@ State the line element. Do not integrate a path to get thermodynamic length <spa
 <aside class="notes">
 Name dual flatness. <span class="math inline">\(H=\psi-\theta\cdot\eta\)</span> (when <span class="math inline">\(h_0=1\)</span>) is already on the board — that <em>is</em> <span class="math inline">\(-\psi^*(\eta)\)</span>. The pair <span class="math inline">\((\theta,\eta)\)</span> is enough to see why MaxEnt looks like an <span class="math inline">\(m\)</span>-projection later. Natural gradient is optional colour only.
 </aside>
-<section data-background-iframe="../scripts//timer/index.html?duration=10:55&amp;title=Break" data-background-interactive>
-</section>
 </section>
 <section id="shannons-communication-theorem" class="slide level2">
 <h2>Shannon’s Communication Theorem</h2>
-<section data-background-iframe="../scripts//timer/index.html?duration=11:05&amp;title=Shannon" data-background-interactive>
-</section>
 </section>
 <section id="shannons-noisy-channel-coding-theorem" class="slide level2">
 <h2>Shannon’s Noisy Channel Coding Theorem</h2>
@@ -497,8 +507,6 @@ Mutual information for a binary symmetric channel; capacity is achieved at unifo
 </section>
 <section id="data-processing-inequality" class="slide level2">
 <h2>Data-Processing Inequality</h2>
-<section data-background-iframe="../scripts//timer/index.html?duration=11:20&amp;title=DPI" data-background-interactive>
-</section>
 </section>
 <section id="data-processing-inequality-1" class="slide level2">
 <h2>Data-Processing Inequality</h2>
@@ -523,8 +531,6 @@ State DPI; do not board the two expansions unless ahead of clock. Moral only: yo
 </section>
 <section id="good-regulator" class="slide level2">
 <h2>Good Regulator</h2>
-<section data-background-iframe="../scripts//timer/index.html?duration=11:35&amp;title=Good Regulator" data-background-interactive>
-</section>
 </section>
 <section id="good-regulator-overview" class="slide level2">
 <h2>Good Regulator Overview</h2>
@@ -546,6 +552,23 @@ Board the four letters once. Classic cybernetics used <span class="math inline">
 </section>
 <section id="two-setups" class="slide level2">
 <h2>Two Setups</h2>
+<div class="figure">
+<div id="good-regulator-two-setups-figure" class="figure-frame">
+<div class="lamd-columns" style="display:flex; width:100%; justify-content:center; align-items:center; column-gap:1em;">
+<div style="flex:0 0 50%; max-width:50%;">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/information/good-regulator-cause-controlled.svg" width="100%" style=" ">
+</object>
+</div>
+<div style="flex:0 0 50%; max-width:50%;">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/information/good-regulator-error-controlled.svg" width="100%" style=" ">
+</object>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes">
+Cause-controlled regulation (left) acts on the disturbance <span class="math inline">\(D\)</span>; error-controlled regulation (right) acts on the state <span class="math inline">\(S\)</span> that <span class="math inline">\(D\)</span> caused.
+</aside>
 <div>
 <ul>
 <li class="fragment">Cause-controlled: act on <span class="math inline">\(D\)</span> (or on a model of <span class="math inline">\(D\)</span>)</li>
