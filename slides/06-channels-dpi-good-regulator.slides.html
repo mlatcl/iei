@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="dcterms.date" content="2026-11-17">
+  <title>Channels, DPI, and the Good Regulator</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@3.9.2/css/reveal.css">
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+      /* scrollable slides: start content at top, left-align text */
+      .reveal section.scrollable {
+          overflow-y: auto !important;
+          height: 100% !important;
+          top: 0 !important;
+          text-align: left;
+      }
+      .reveal section.scrollable > h2:first-child,
+      .reveal section.scrollable > h2.scrollable:first-child {
+          margin-top: 0.2em;
+      }
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@3.9.2/css/theme/white.css" id="theme">
+  <link rel="stylesheet" href="mlatcl.css"/>
+  <link rel="stylesheet" href="slide-fonts.css"/>
+  <link rel="stylesheet" href="slide-fontsize-xs.css"/>
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'https://unpkg.com/reveal.js@3.9.2/css/print/pdf.css' : 'https://unpkg.com/reveal.js@3.9.2/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="https://unpkg.com/reveal.js@3.9.2/lib/js/html5shiv.js"></script>
+  <![endif]-->
+   <!-- Mermaid -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.6.1/mermaid.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_SVG" type="text/javascript"></script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    TeX: {
+         extensions: ["color.js"]
+      }
+    });
+  </script>
+  <script src="https://inverseprobability.com/assets/js/figure-animate.js"></script>
+  <script>
+  /* Map range slider values (min..max, often 0-based in LaMD content) to the
+     1-based frame index expected by figure-animate.js showDivs(). */
+  function lamdFrameIndex(group) {
+    var range = document.getElementById("range-" + group);
+    var val = parseInt(range.value, 10);
+    var min = parseInt(range.min, 10);
+    return val - min + 1;
+  }
+  function lamdSetDivs(group) {
+    if (typeof showDivs !== "function") return;
+    slideIndex = lamdFrameIndex(group);
+    showDivs(slideIndex, group);
+  }
+  function lamdPlusDivs(n, group) {
+    if (typeof showDivs !== "function") return;
+    var range = document.getElementById("range-" + group);
+    var min = parseInt(range.min, 10);
+    var max = parseInt(range.max, 10);
+    var val = parseInt(range.value, 10) + n;
+    if (val < min) val = max;
+    if (val > max) val = min;
+    range.value = val;
+    range.setAttribute("aria-valuenow", val);
+    slideIndex = val - min + 1;
+    showDivs(slideIndex, group);
+  }
+  </script>
+  <script>
+  /* Theme chrome (logos) sits on Reveal's full-viewport .slide-background,
+     which does not receive the deck transform. Sync --slide-scale so CSS can
+     size that chrome with the slides (see ai-cam.css / mlatcl.css / trent.css). */
+  (function () {
+    var bound = false;
+    function syncSlideScale() {
+      if (typeof Reveal === "undefined" || typeof Reveal.getScale !== "function") return false;
+      try {
+        var s = Reveal.getScale();
+        if (!s || !isFinite(s)) return false;
+        document.documentElement.style.setProperty("--slide-scale", String(s));
+        return true;
+      } catch (e) {
+        return false;
+      }
+    }
+    function bind() {
+      if (bound) return typeof Reveal !== "undefined";
+      if (typeof Reveal === "undefined" || typeof Reveal.addEventListener !== "function") return false;
+      Reveal.addEventListener("ready", syncSlideScale);
+      window.addEventListener("resize", function () {
+        setTimeout(syncSlideScale, 0);
+        setTimeout(syncSlideScale, 50);
+      });
+      bound = true;
+      return true;
+    }
+    var n = 0;
+    var t = setInterval(function () {
+      bind();
+      /* Keep polling until getScale() works — Reveal exists before initialize. */
+      if (syncSlideScale() || ++n > 200) clearInterval(t);
+    }, 50);
+  })();
+  </script>
+      
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Channels, DPI, and the Good Regulator</h1>
+  <p class="author" style="text-align:center"><a href="http://inverseprobability.com">Neil D. Lawrence</a></p>
+  <p class="date" style="text-align:center"><time>2026-11-17</time></p>
+  <p class="venue" style="text-align:center">FW26, William Gates Building</p>
+</section>
+
+<section class="slide level2">
+
+<!-- CIP-0012 Track A: no-op outside HTML (overridden in talk-macros-html.gpp). -->
+<!-- Class-test timer: no-op outside slides HTML (overridden in talk-macros-slides-html.gpp). -->
+<!-- CIP-0016: mdpp expands \diagramcredit before gpp; leftover calls are empty. -->
+<!-- Do not edit this file locally. -->
+<!---->
+<!-- CIP-0012 Track A: content script load. Once-guard with alphanumeric
+     names stays in the surrounding ifndef wrapper (GPP ifndef limitation). -->
+<!-- Do not edit this file locally. -->
+<!-- The last names to be defined. Should be defined entirely in terms of macros from above-->
+</section>
+<section id="this-session" class="slide level2">
+<h2>This Session</h2>
+<div>
+<ul>
+<li class="fragment">Quiz 3 (ten minutes); collect Worksheet 3; release Worksheet 4</li>
+<li class="fragment">Exponential family: <span class="math inline">\(\theta=-\lambda\)</span>; canonical, Gaussian, Bernoulli</li>
+<li class="fragment"><span class="math inline">\(A(\boldsymbol{\theta})=\log Z\)</span> generates the mean and the covariance</li>
+<li class="fragment">Fisher metric: <span class="math inline">\(\nabla^2 A = G\)</span>; Fisher’s <span class="math inline">\(I\)</span> is not Shannon’s <span class="math inline">\(H\)</span></li>
+<li class="fragment">Shannon: <span class="math inline">\(R\le C\)</span>; DPI; Good Regulator <span class="math inline">\(H(A\mid S)=0\)</span></li>
+</ul>
+</div>
+</section>
+<section id="quiz-3" class="slide level2">
+<h2>Quiz 3</h2>
+<div>
+<ul>
+<li class="fragment">Paper; no notes, no network, no LLMs</li>
+<li class="fragment">Ten minutes</li>
+<li class="fragment">Worksheet 3 in as you sit</li>
+</ul>
+</div>
+<section data-background-iframe="../scripts//timer/index.html?duration=10:05&amp;title=Quiz 3" data-background-interactive>
+</section>
+<!--setupplotcode{import seaborn as sns
+sns.set_style('darkgrid')
+sns.set_context('paper')
+sns.set_palette('colorblind')}-->
+<section data-background-iframe="../scripts//timer/index.html?duration=10:15&amp;title=Quiz 3" data-background-interactive>
+</section>
+</section>
+<section id="exponential-family" class="slide level2">
+<h2>Exponential Family</h2>
+<p>Week 5’s discrete MaxEnt solution <em>is</em> an exponential family.</p>
+<div>
+<ul>
+<li class="fragment">Sufficient statistics: <span class="math inline">\(T_k(x_i)=f_k(x_i)\)</span>, fixed by the constraints</li>
+<li class="fragment">MaxEnt: <span class="math inline">\(p_i=\exp\bigl(-\sum_k \lambda_k T_k(x_i)\bigr)/Z\)</span></li>
+<li class="fragment">Family: <span class="math inline">\(p(x\mid\boldsymbol{\theta})\propto \exp\bigl(\boldsymbol{\theta}\!\cdot\! T(x)-A(\boldsymbol{\theta})\bigr)\)</span></li>
+<li class="fragment">Identification: <span class="math inline">\(\boldsymbol{\theta}=-\boldsymbol{\lambda}\)</span></li>
+</ul>
+</div>
+<aside class="notes">
+LO6. This is the block Week 5 only named. Physics sign: Boltzmann writes <span class="math inline">\(p_i\propto e^{-\beta E_i}\)</span>, so <span class="math inline">\(\theta_1=-\beta\)</span> when <span class="math inline">\(T=E\)</span>. Fitting the <span class="math inline">\(\lambda\)</span>s is maximum likelihood; say that and move to the three members. Geometry comes after the CGF slide, not here.
+</aside>
+<p>Canonical, Gaussian, and Bernoulli are the same theorem with different <span class="math inline">\(T(x)\)</span>.</p>
+<div>
+<ul>
+<li class="fragment">Canonical: one energy constraint, <span class="math inline">\(T=E\)</span>, <span class="math inline">\(\theta=-\beta\)</span></li>
+<li class="fragment">Gaussian: mean and variance constraints</li>
+<li class="fragment">Bernoulli / two-level: <span class="math inline">\(T\in\{0,1\}\)</span>, <span class="math inline">\(\theta=-\beta\varepsilon\)</span></li>
+</ul>
+</div>
+<aside class="notes">
+LO6 punchline. Two-level system is a Bernoulli. Softmax is the same calculation with a richer feature map; name it only if the clock is ahead. Do not start the matrix exponential family; that waits for the Week 8 quantum close if at all.
+</aside>
+</section>
+<section id="atheta-as-cumulant-generating-function" class="slide level2">
+<h2><span class="math inline">\(A(\theta)\)</span> as Cumulant Generating Function</h2>
+<div>
+<ul>
+<li class="fragment">Week 3: <span class="math inline">\(F=-k_BT\log Z\)</span> (available energy)</li>
+<li class="fragment">Same object: <span class="math inline">\(A(\boldsymbol{\theta})=\log Z(-\boldsymbol{\theta})\)</span></li>
+<li class="fragment">Mean parameters: <span class="math inline">\(\boldsymbol{\eta}=\nabla A=\langle T\rangle\)</span></li>
+<li class="fragment">Hessian: <span class="math inline">\(\nabla^2 A=\mathrm{Cov}[T]\)</span></li>
+</ul>
+</div>
+<aside class="notes">
+Board <span class="math inline">\(\eta=\nabla A\)</span> and <span class="math inline">\(\nabla^2 A=\mathrm{Cov}[T]\)</span>. The next slides read that Hessian as Fisher information. Do not write <span class="math inline">\(\mathcal{L}\)</span> or <span class="math inline">\(\langle W_{\mathrm{ex}}\rangle\ge\mathcal{L}^2/\tau\)</span>.
+</aside>
+</section>
+<section id="fisher-metric-from-the-exponential-family" class="slide level2">
+<h2>Fisher Metric from the Exponential Family</h2>
+<section data-background-iframe="../scripts//timer/index.html?duration=10:35&amp;title=Fisher geometry" data-background-interactive>
+</section>
+<p>Same word; different operational reading.</p>
+<div>
+<ul>
+<li class="fragment">Shannon <span class="math inline">\(H\)</span>: uncertainty in an outcome</li>
+<li class="fragment">Fisher <span class="math inline">\(I(\theta)\)</span>: sensitivity of <span class="math inline">\(\log p\)</span> to <span class="math inline">\(\theta\)</span></li>
+<li class="fragment"><span class="math inline">\(H\)</span> is a state function of <span class="math inline">\(p\)</span>; <span class="math inline">\(I\)</span> is a property of a <em>family</em> <span class="math inline">\(p(\cdot\mid\theta)\)</span></li>
+</ul>
+</div>
+<aside class="notes">
+LO8. Hold this distinction for the rest of the module. Shannon is coming after the break as channel capacity; Fisher is already on the board as <span class="math inline">\(\nabla^2 A\)</span>.
+</aside>
+<p>On an exponential family the CGF Hessian <em>is</em> the Fisher information.</p>
+<div>
+<ul>
+<li class="fragment">Score definition: <span class="math inline">\(G_{ij}=\mathbb{E}[\partial_i\log p\,\partial_j\log p]\)</span></li>
+<li class="fragment">Exponential family: <span class="math inline">\(G(\boldsymbol{\theta})=\nabla^2 A(\boldsymbol{\theta})=\mathrm{Cov}[T]\)</span></li>
+<li class="fragment">Same matrix: estimation, identifiability, geometry</li>
+</ul>
+</div>
+<aside class="notes">
+This is why information geometry follows the exponential family. You already have <span class="math inline">\(G\)</span>; you are naming it. Cramér–Rao <span class="math inline">\(\mathrm{cov}(\hat\theta)\succeq G^{-1}\)</span> in one sentence if asked; do not board a proof.
+</aside>
+<p><span class="math display">\[
+\mathrm{d}s^2 = \mathrm{d}\boldsymbol{\theta}^\top G(\boldsymbol{\theta})\,\mathrm{d}\boldsymbol{\theta}
+\]</span></p>
+<div>
+<ul>
+<li class="fragment"><span class="math inline">\(G\)</span> is a Riemannian metric on the manifold of distributions</li>
+<li class="fragment">Large <span class="math inline">\(G\)</span>: nearby <span class="math inline">\(\theta\)</span> are easy to tell apart from data</li>
+<li class="fragment">Small <span class="math inline">\(G\)</span>: the parameter is almost invisible in samples</li>
+</ul>
+</div>
+<aside class="notes">
+State the line element. Do not integrate a path to get thermodynamic length <span class="math inline">\(\mathcal{L}\)</span>. Distinguishability of nearby points is enough; Crooks path cost is dropped.
+</aside>
+<p>Exponential families are dually flat under two coordinate systems.</p>
+<div>
+<ul>
+<li class="fragment">Natural parameters <span class="math inline">\(\boldsymbol{\theta}\)</span> (e-coordinates)</li>
+<li class="fragment">Mean parameters <span class="math inline">\(\boldsymbol{\eta}=\nabla A=\langle T\rangle\)</span> (m-coordinates)</li>
+<li class="fragment">Hessians of the dual potentials are inverse metrics</li>
+<li class="fragment">Full Legendre / Pythagorean development stays notes</li>
+</ul>
+</div>
+<aside class="notes">
+Name dual flatness; do not board <span class="math inline">\(H=A-\theta\cdot\eta\)</span> unless ahead. The pair <span class="math inline">\((\theta,\eta)\)</span> is enough to see why MaxEnt looks like an <span class="math inline">\(m\)</span>-projection later. Natural gradient is optional colour only.
+</aside>
+<section data-background-iframe="../scripts//timer/index.html?duration=10:55&amp;title=Break" data-background-interactive>
+</section>
+</section>
+<section id="shannons-communication-theorem" class="slide level2">
+<h2>Shannon’s Communication Theorem</h2>
+<section data-background-iframe="../scripts//timer/index.html?duration=11:05&amp;title=Shannon" data-background-interactive>
+</section>
+<p>A channel is a conditional <span class="math inline">\(p(y\mid x)\)</span>. Rate cannot beat capacity.</p>
+<div>
+<ul>
+<li class="fragment">Mutual information <span class="math inline">\(I(X;Y)\)</span> is the channel currency</li>
+<li class="fragment">Capacity <span class="math inline">\(C = \max_{p(x)} I(X;Y)\)</span></li>
+<li class="fragment">No-go: reliable communication requires <span class="math inline">\(R \le C\)</span></li>
+<li class="fragment">Prescription: the input <span class="math inline">\(p(x)\)</span> that achieves <span class="math inline">\(C\)</span></li>
+</ul>
+</div>
+<aside class="notes">
+Name Shannon’s noisy-channel coding / communication theorem. Do not prove the coding theorems. The BSC plot from the capacity include is enough geometry for today.
+</aside>
+</section>
+<section id="scaffolding-not-outcomes" class="slide level2">
+<h2>Scaffolding, Not Outcomes</h2>
+</section>
+<section id="chain-rule-mutual-information-capacity" class="slide level2">
+<h2>Chain Rule, Mutual Information, Capacity</h2>
+<p>Four results we will need later — stated, not proved today.</p>
+<div>
+<ul>
+<li class="fragment">Chain rule: <span class="math inline">\(H(X,Y) = H(X) + H(Y|X)\)</span></li>
+<li class="fragment">Mutual information: <span class="math inline">\(I(X;Y) = H(X)-H(X|Y) = H(X)+H(Y)-H(X,Y)\)</span></li>
+<li class="fragment">Capacity: no rate above <span class="math inline">\(C\)</span>; achieving <span class="math inline">\(C\)</span> requires the capacity-achieving <span class="math inline">\(p(x)\)</span></li>
+<li class="fragment">Data processing: if <span class="math inline">\(X\to Y\to Z\)</span> is Markov, <span class="math inline">\(I(X;Z)\le I(X;Y)\)</span></li>
+</ul>
+</div>
+<aside class="notes">
+Define <span class="math inline">\(I\)</span> from the chain rule. State DPI; do not prove. Proof and the information bottleneck are week 8 (LO10). Capacity remains this week’s no-go/prescription pair.
+</aside>
+<div class="figure">
+<div id="bsc-capacity-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/bsc-capacity.svg" width="70%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+Mutual information for a binary symmetric channel; capacity is achieved at uniform input.
+</aside>
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/bsc-capacity.svg" width="70%" style=" ">
+</object>
+</section>
+<section id="data-processing-inequality" class="slide level2">
+<h2>Data-Processing Inequality</h2>
+<section data-background-iframe="../scripts//timer/index.html?duration=11:20&amp;title=DPI" data-background-interactive>
+</section>
+<p>If <span class="math inline">\(X\to Y\to Z\)</span> is Markov, processing cannot create information about <span class="math inline">\(X\)</span>.</p>
+<div>
+<ul>
+<li class="fragment">Markov: <span class="math inline">\(p(z\mid x,y)=p(z\mid y)\)</span></li>
+<li class="fragment">Statement: <span class="math inline">\(I(X;Z)\le I(X;Y)\)</span></li>
+<li class="fragment">Soft partitions: leftover <span class="math inline">\(H(G\mid X)\)</span> already spent information</li>
+<li class="fragment">Proof: Week 7 (Cover–Thomas 2.8.1)</li>
+</ul>
+</div>
+<aside class="notes">
+State DPI; do not board the two expansions unless ahead of clock. Moral only: you cannot process your way to more <span class="math inline">\(I\)</span>. Week 7 proves it when multi-information is the object.
+</aside>
+<div>
+<ul>
+<li class="fragment">No-go: processing cannot create <span class="math inline">\(I\)</span></li>
+<li class="fragment">Week 7: prove DPI; information bottleneck as prescription</li>
+</ul>
+</div>
+</section>
+<section id="good-regulator" class="slide level2">
+<h2>Good Regulator</h2>
+<section data-background-iframe="../scripts//timer/index.html?duration=11:30&amp;title=Good Regulator" data-background-interactive>
+</section>
+</section>
+<section id="purely-entropic-good-regulator" class="slide level2">
+<h2>Purely Entropic Good Regulator</h2>
+</section>
+<section id="requisite-variety-entropically" class="slide level2">
+<h2>Requisite Variety, Entropically</h2>
+<p>Residual outcome uncertainty is disturbance entropy minus information the regulator has about the disturbance.</p>
+<div>
+<ul>
+<li class="fragment">Disturbance <span class="math inline">\(D\)</span>, response <span class="math inline">\(R\)</span>, essential variable <span class="math inline">\(E\)</span></li>
+<li class="fragment"><span class="math inline">\(H(E)\ge H(D)-I(D;R)\)</span></li>
+<li class="fragment">Useless variety appears as small <span class="math inline">\(I(D;R)\)</span></li>
+</ul>
+</div>
+<aside class="notes">
+Named tool for LO13, not a new outcome. Ashby’s requisite variety in Shannon form <span class="citation" data-cites="Ashby-introduction56">(Ashby, 1956)</span>. Quantity, not structure. Perfect regulation <span class="math inline">\(H(E)=0\)</span> forces <span class="math inline">\(I(D;R)=H(D)\)</span>.
+</aside>
+</section>
+<section id="setup-regulate-by-minimising-hz" class="slide level2">
+<h2>Setup: Regulate by Minimising <span class="math inline">\(H(Z)\)</span></h2>
+<p>One shot, not an MDP: choose a policy <span class="math inline">\(\pi(a\mid s)\)</span> to minimise outcome entropy.</p>
+<div>
+<ul>
+<li class="fragment">State <span class="math inline">\(S\)</span>, action <span class="math inline">\(A\)</span>, outcome <span class="math inline">\(Z\sim p(z\mid s,a)\)</span></li>
+<li class="fragment">Objective: <span class="math inline">\(\min_\pi H(Z)\)</span></li>
+<li class="fragment">Model (weak): <span class="math inline">\(H(A\mid S)=0\)</span>, i.e. <span class="math inline">\(A=h(S)\)</span></li>
+</ul>
+</div>
+<aside class="notes">
+LO13. Board this setup. Not Bellman, not reward. Entropy of <span class="math inline">\(Z\)</span> is Conant and Ashby’s success criterion. Ten to twelve minutes for the proof block.
+</aside>
+</section>
+<section id="concentration-concavity-of-entropy" class="slide level2">
+<h2>Concentration: Concavity of Entropy</h2>
+<p>Randomising between outcome-distinct actions cannot minimise <span class="math inline">\(H(Z)\)</span>.</p>
+<div>
+<ul>
+<li class="fragment">At state <span class="math inline">\(s\)</span>, mix <span class="math inline">\(a_1,a_2\)</span> with <span class="math inline">\(\psi(s,a_1)=z_1\ne z_2=\psi(s,a_2)\)</span></li>
+<li class="fragment">Transfer mass <span class="math inline">\(\alpha\)</span>: <span class="math inline">\((u,v)\mapsto(u-\alpha,v+\alpha)\)</span></li>
+<li class="fragment"><span class="math inline">\(g&#39;&#39;(\alpha)&lt;0\)</span>: interior mixture is not a minimum</li>
+</ul>
+</div>
+<aside class="notes">
+Board <span class="math inline">\(g(\alpha)=-(u-\alpha)\log(u-\alpha)-(v+\alpha)\log(v+\alpha)\)</span>. Strict concavity is the engine. Deterministic <span class="math inline">\(\psi\)</span> for this lemma.
+</aside>
+</section>
+<section id="good-regulator-theorem" class="slide level2">
+<h2>Good Regulator Theorem</h2>
+<p>Among <span class="math inline">\(H(Z)\)</span>-minimisers there exists a deterministic policy: <span class="math inline">\(H(A\mid S)=0\)</span>.</p>
+<div>
+<ul>
+<li class="fragment">Pick one action per <span class="math inline">\(s\)</span> among those sharing <span class="math inline">\(z^\ast(s)\)</span></li>
+<li class="fragment"><span class="math inline">\(A=h(S)\)</span> leaves <span class="math inline">\(p(z)\)</span>, hence <span class="math inline">\(H(Z)\)</span>, unchanged</li>
+<li class="fragment">Stochastic channel: same existence via extreme points</li>
+</ul>
+</div>
+<aside class="notes">
+Theorem: exists optimal <span class="math inline">\(\pi\)</span> with <span class="math inline">\(H(A\mid S)=0\)</span>. Not every optimal policy is deterministic — only that a simplest one is. Course close remains: entropy forbids; probability prescribes.
+</aside>
+</section>
+<section id="two-caveats" class="slide level2">
+<h2>Two Caveats</h2>
+<p>The theorem is weaker than the popular slogan.</p>
+<div>
+<ul>
+<li class="fragment">Weak model: constant <span class="math inline">\(A=a_0\)</span> also has <span class="math inline">\(H(A\mid S)=0\)</span></li>
+<li class="fragment">Low <span class="math inline">\(H(Z)\)</span> means predictable, not desirable</li>
+<li class="fragment">Catastrophe with <span class="math inline">\(H(Z)=0\)</span> is ``optimal’’ under entropy alone</li>
+</ul>
+</div>
+<aside class="notes">
+Do not collapse <span class="math inline">\(H(A\mid S)=0\)</span> into ``<span class="math inline">\(A\)</span> contains a rich model of <span class="math inline">\(S\)</span>.’’ Faithful models need <span class="math inline">\(H(S\mid A)=0\)</span> as well. Desirability needs a goal set <span class="math inline">\(G\)</span>, not entropy alone.
+</aside>
+</section>
+<section id="after-the-theorem-ib-gloss" class="slide level2">
+<h2>After the Theorem: IB Gloss</h2>
+<p>IB gloss, not the theorem: keep only distinctions that matter for action.</p>
+<div>
+<ul>
+<li class="fragment"><span class="math inline">\(\min I(S;A)\)</span> subject to <span class="math inline">\(H(Z)\le\epsilon\)</span> — course reading</li>
+<li class="fragment">Deterministic <span class="math inline">\(A=h(S)\)</span> gives <span class="math inline">\(I(S;A)=H(A)\)</span></li>
+<li class="fragment">Do not attribute that optimisation to Conant and Ashby</li>
+</ul>
+</div>
+<aside class="notes">
+IB was LO10. This gloss sits after the earned theorem. Course punchline remains Week 1: entropy forbids; probability prescribes.
+</aside>
+</section>
+<section id="define-this-week" class="slide level2">
+<h2>Define This Week</h2>
+<div>
+<ul>
+<li class="fragment">Why is the exponential family the MaxEnt family, and why <span class="math inline">\(\theta=-\lambda\)</span>?</li>
+<li class="fragment">Why is <span class="math inline">\(\nabla^2 A\)</span> both <span class="math inline">\(\mathrm{Cov}[T]\)</span> and the Fisher metric <span class="math inline">\(G\)</span>?</li>
+<li class="fragment">How does Fisher’s <span class="math inline">\(I(\theta)\)</span> differ from Shannon’s <span class="math inline">\(H\)</span>?</li>
+<li class="fragment">What does <span class="math inline">\(R\le C\)</span> forbid, and what does DPI state?</li>
+<li class="fragment">Why <span class="math inline">\(H(A\mid S)=0\)</span>, and why that model is weak?</li>
+</ul>
+</div>
+</section>
+<section id="after-this-lecture" class="slide level2">
+<h2>After This Lecture</h2>
+<div>
+<ul>
+<li class="fragment">Worksheet 4 out (dialogue; Exchange 1 before GRT); due 1 December before Quiz 4</li>
+<li class="fragment">Week 7: <span class="math inline">\(I+H=C\)</span>, DPI proof, information bottleneck</li>
+</ul>
+</div>
+</section>
+<section id="further-reading" class="slide level2 scrollable">
+<h2 class="scrollable">Further Reading</h2>
+<ul>
+<li><p>Fisher metric; dual flatness of <span class="citation" data-cites="Amari-information16">Amari (2016)</span></p></li>
+<li><p>noisy channel coding / capacity of <span class="citation" data-cites="Shannon-mathematical48">Shannon (1948)</span></p></li>
+<li><p>Chapter 7 of <span class="citation" data-cites="Cover:elements91">Cover and Thomas (1991)</span></p></li>
+<li><p>Chapters 8–10 of <span class="citation" data-cites="MacKay-information03">MacKay (2003)</span></p></li>
+<li><p>the Good Regulator Theorem of <span class="citation" data-cites="Conant-Ashby70">Conant and Ashby (1970)</span></p></li>
+<li><p>requisite variety; Shannon form of <span class="citation" data-cites="Ashby-introduction56">Ashby (1956)</span></p></li>
+<li><p>the Good Regulator Theorem of <span class="citation" data-cites="Conant-Ashby70">Conant and Ashby (1970)</span></p></li>
+<li><p>requisite variety; Shannon form of <span class="citation" data-cites="Ashby-introduction56">Ashby (1956)</span></p></li>
+</ul>
+</section>
+<section id="thanks" class="slide level2 scrollable">
+<h2 class="scrollable">Thanks!</h2>
+<ul>
+<li>company: <a href="https://trent.ai">Trent AI</a></li>
+<li>book: <a href="https://www.penguin.co.uk/books/455130/the-atomic-human-by-lawrence-neil-d/9780241625248">The Atomic Human</a></li>
+<li>twitter: <a href="https://twitter.com/lawrennd">@lawrennd</a></li>
+<li><a href="https://the-atomic-human.ai">The Atomic Human</a></li>
+<li>newspaper: <a href="http://www.theguardian.com/profile/neil-lawrence">Guardian Profile Page</a></li>
+<li>blog: <a href="http://inverseprobability.com/blog.html">http://inverseprobability.com</a></li>
+</ul>
+</section>
+<section id="references" class="slide level2 unnumbered scrollable">
+<h2 class="unnumbered scrollable">References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-Amari-information16" class="csl-entry" role="doc-biblioentry">
+Amari, S., 2016. Information geometry and its applications, Applied mathematical sciences. Springer, Tokyo. <a href="https://doi.org/10.1007/978-4-431-55978-8">https://doi.org/10.1007/978-4-431-55978-8</a>
+</div>
+<div id="ref-Ashby-introduction56" class="csl-entry" role="doc-biblioentry">
+Ashby, W.R., 1956. An introduction to cybernetics. Chapman &amp; Hall, London.
+</div>
+<div id="ref-Conant-Ashby70" class="csl-entry" role="doc-biblioentry">
+Conant, R.C., Ashby, W.R., 1970. Every good regulator of a system must be a model of that system. International Journal of Systems Science 1, 89–97.
+</div>
+<div id="ref-Cover:elements91" class="csl-entry" role="doc-biblioentry">
+Cover, T.M., Thomas, J.A., 1991. Elements of information theory. Wiley, New York.
+</div>
+<div id="ref-MacKay-information03" class="csl-entry" role="doc-biblioentry">
+MacKay, D.J.C., 2003. Information theory, inference and learning algorithms. Cambridge University Press, Cambridge, U.K.
+</div>
+<div id="ref-Shannon-mathematical48" class="csl-entry" role="doc-biblioentry">
+Shannon, C.E., 1948. A mathematical theory of communication. The Bell System Technical Journal 27, 379–423. <a href="https://doi.org/10.1002/j.1538-7305.1948.tb01338.x">https://doi.org/10.1002/j.1538-7305.1948.tb01338.x</a>
+</div>
+</div>
+</section>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/reveal.js@3.9.2/lib/js/head.min.js"></script>
+  <script src="https://unpkg.com/reveal.js@3.9.2/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+        // Transition style
+        transition: 'none', // none/fade/slide/convex/concave/zoom
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'https://unpkg.com/reveal.js@3.9.2/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'https://unpkg.com/reveal.js@3.9.2/plugin/zoom-js/zoom.js', async: true },
+          { src: 'https://unpkg.com/reveal.js@3.9.2/plugin/math/math.js', async: true },
+          { src: 'https://unpkg.com/reveal.js@3.9.2/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+  <!-- Mermaid: after Reveal.initialize (CIP-0012 template hygiene) -->
+  <script>
+    if (typeof Reveal !== 'undefined' && Reveal.addEventListener) {
+      Reveal.addEventListener('ready', function () {
+        if (typeof mermaid === 'undefined') return;
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: 'base',
+          themeVariables: {
+            primaryColor: '#4a90e2',
+            primaryTextColor: '#fff',
+            primaryBorderColor: '#357abd',
+            lineColor: '#67b246',
+            fontSize: '30px',
+            fontFamily: 'arial',
+            edgeLabelBackground: 'transparent',
+            tertiaryColor: 'transparent'
+          }
+        });
+      });
+    }
+  </script>
+    </body>
+</html>
