@@ -91,7 +91,7 @@ reading:
 
 \classtimertitled{10:15}{Good Regulator}
 
-\notes{Week 6 gave the overview and the $D,S,A,Z$ diagrams. Today earn the theorem: requisite variety in those letters, the concavity argument, existence of a deterministic $H(Z)$-minimiser with $H(A\mid S)=0$, and both caveats. Then apply.}
+\notes{Week 6 gave the overview and the $D,S,A,Z$ diagrams. Today prove the theorem: requisite variety in those letters, the concavity argument, existence of a deterministic $H(Z)$-minimiser with $H(A\mid S)=0$, and both caveats. Then apply.}
 
 \include{_information/includes/entropic-good-regulator.md}
 
@@ -194,7 +194,7 @@ print('S(rho_A)=', von_neumann(partial_trace_A(rho)))}
 
 \speakernotes{LO13. Course punchline unchanged: entropy forbids; probability prescribes. GRT is proved in today's review inside that caveat, not the caveat. Weak model and $H(Z)\ne$ desirable are the two caveats on the slogan.}
 
-\notes{Prescriptions operate inside fences set by physics and embodiment: whatever model is kept is not informationally free once Landauer prices sensing, storage, processing, and erasure. Unbounded intelligence that processes without entropic cost has the shape of perpetual motion: it claims to repeal a no-go.}
+\notes{Prescriptions operate inside limits set by physics and embodiment: whatever model is kept is not informationally free once Landauer prices sensing, storage, processing, and erasure. Unbounded intelligence that processes without entropic cost has the shape of perpetual motion: it claims to repeal a no-go.}
 
 \setupcode{no_gos = ['Landauer', 'I+H=C', 'DPI', 'Shannon R<=C', 'human bandwidth']
 prescriptions = ['Boltzmann/MaxEnt p', 'capacity-achieving p(x)', 'IB compression', 'GRT deterministic policy']

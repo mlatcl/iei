@@ -190,16 +190,16 @@ mlai.write_figure('information-bottleneck-region.svg', directory='\writeDiagrams
 
 \notes{Week 6 already proved the Good Regulator existence claim and introduced the IB-shaped interpretation. Today IB is a first-class theorem (relevant compression under an $I$ budget). Keep the caveat: the interpretation is not the theorem.}
 
-\subsection{Optional: Fisher Refresh; MaxEnt as Projection (named)}
+\subsection{Optional: Fisher Refresh; MaxEnt as Projection}
 
 \newslides{Refresh: Two ``Informations''}
 
-\slides{Week 6 already earned this; name MaxEnt as $m$-projection if ahead.}
+\slides{Week 6 already proved this; MaxEnt as $m$-projection if ahead.}
 
 \slidesincremental{
 * Shannon $H$: uncertainty in an outcome
 * Fisher $I(\theta)$: sensitivity of $\log p$ to a parameter; $G=\nabla^2\psi$ on the exponential family
-* MaxEnt as $m$-projection: geometric reading of Week 5 (named, not computed)
+* MaxEnt as $m$-projection: geometric reading of Week 5 (stated, not computed)
 * No natural-gradient paths; no thermodynamic length
 }
 
@@ -226,7 +226,7 @@ mlai.write_figure('information-bottleneck-region.svg', directory='\writeDiagrams
 
 \subsection{After This Lecture}
 
-\notes{No class test today. Quiz 4 is 1 December at the start of lecture 8. Week 8 reviews the Good Regulator Theorem in full (Week 6 was overview only), then applies Landauer, DPI, GRT, and human bandwidth to capability claims; von Neumann / $I=C$ if clock allows.}
+\notes{No class test today. Quiz 4 is 1 December at the start of lecture 8. Week 8 reviews the Good Regulator Theorem in full (Week 6 was overview only), then applies Landauer, DPI, GRT, and human bandwidth to capability claims; von Neumann / $I=C$ if time allows.}
 
 \slidesincremental{
 * Quiz 4: 1 December, first ten minutes

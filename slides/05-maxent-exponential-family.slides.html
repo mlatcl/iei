@@ -125,11 +125,9 @@
 
 <section id="title-slide">
   <h1 class="title">Maximum Entropy and the Exponential Family</h1>
-  <p class="author" style="text-align:center"><a href="http://inverseprobability.com">Neil
-D. Lawrence</a></p>
+  <p class="author" style="text-align:center"><a href="http://inverseprobability.com">Neil D. Lawrence</a></p>
   <p class="date" style="text-align:center"><time>2026-11-10</time></p>
-  <p class="venue" style="text-align:center">FW26, William Gates
-Building</p>
+  <p class="venue" style="text-align:center">FW26, William Gates Building</p>
 </section>
 
 <section class="slide level2">
@@ -148,18 +146,11 @@ Building</p>
 <h2>This Session</h2>
 <div>
 <ul>
-<li class="fragment">Quiz 2 feedback (cohort figures; <span
-class="math inline">\(\log Z\)</span>; Clausius; intensive
-pressure)</li>
-<li class="fragment">Overlap: <span class="math inline">\(H(G\mid
-X)\)</span>; name mutual information; MI is a KL</li>
-<li class="fragment">Jaynes <span class="math inline">\(m\)</span> and
-Radon–Nikodym: relative entropy is KL</li>
-<li class="fragment">Break, then MaxEnt: Lagrange; die; discrete proof
-<span class="math inline">\(\to\)</span> Boltzmann / <span
-class="math inline">\(Z\)</span></li>
-<li class="fragment">Exponential family named at the close (<span
-class="math inline">\(\theta=-\lambda\)</span>); CGF next week</li>
+<li class="fragment">Quiz 2 feedback (cohort figures; <span class="math inline">\(\log Z\)</span>; Clausius; intensive pressure)</li>
+<li class="fragment">Overlap: <span class="math inline">\(H(G\mid X)\)</span>; name mutual information; MI is a KL</li>
+<li class="fragment">Jaynes <span class="math inline">\(m\)</span> and Radon–Nikodym: relative entropy is KL</li>
+<li class="fragment">Break, then MaxEnt: Lagrange; die; discrete proof <span class="math inline">\(\to\)</span> Boltzmann / <span class="math inline">\(Z\)</span></li>
+<li class="fragment">Exponential family introduced at the end (<span class="math inline">\(\theta=-\lambda\)</span>); developed in Week 6</li>
 </ul>
 </div>
 </section>
@@ -168,21 +159,16 @@ class="math inline">\(\theta=-\lambda\)</span>); CGF next week</li>
 </section>
 <section id="generative-ai-policy-in-plain-words" class="slide level2">
 <h2>Generative AI: Policy in Plain Words</h2>
-<p>Background tools are fine. In the room you sit the quizzes without a
-computer.</p>
+<p>Background tools are fine. In the room you sit the quizzes without a computer.</p>
 <div>
 <ul>
-<li class="fragment">Use generative AI as much as you like when
-preparing</li>
-<li class="fragment">In class: no laptop for the quiz; the
-authentication is you</li>
-<li class="fragment">Marking is Neil; the marking <em>framework</em> was
-built with generative AI so feedback is faster</li>
+<li class="fragment">Use generative AI as much as you like when preparing</li>
+<li class="fragment">In class: no laptop for the quiz; the authentication is you</li>
+<li class="fragment">Marking is Neil; the marking <em>framework</em> was built with generative AI so feedback is faster</li>
 </ul>
 </div>
 <aside class="notes">
-Keep this short. It is a policy aside, not the week’s content. Then into
-Quiz 2 feedback.
+Keep this short. It is a policy aside, not the week’s content. Then into Quiz 2 feedback.
 </aside>
 </section>
 <section id="homework-from-weeks-34" class="slide level2">
@@ -193,16 +179,12 @@ Quiz 2 feedback.
 <p>Fifteen papers. A few minutes on matters arising, then MaxEnt.</p>
 <div>
 <ul>
-<li class="fragment">Quiz 1: mean <span
-class="math inline">\(8.2/10\)</span></li>
-<li class="fragment">Quiz 2: mean <span
-class="math inline">\(6.3/10\)</span></li>
+<li class="fragment">Quiz 1: mean <span class="math inline">\(8.2/10\)</span></li>
+<li class="fragment">Quiz 2: mean <span class="math inline">\(6.3/10\)</span></li>
 </ul>
 </div>
 <aside class="notes">
-Quiz-only block for now. Add Worksheet 2 habits when that section is
-written. Keep names off the slides. Worksheets are marking well; quizzes
-differentiate more.
+Quiz-only block for now. Add Worksheet 2 habits when that section is written. Keep names off the slides. Worksheets are marking well; quizzes differentiate more.
 </aside>
 </section>
 <section id="quiz-2" class="slide level2">
@@ -210,154 +192,100 @@ differentiate more.
 </section>
 <section id="quiz-2-where-marks-were-lost" class="slide level2">
 <h2>Quiz 2: Where Marks Were Lost</h2>
-<p>Mean <span class="math inline">\(6.3/10\)</span>, down from Quiz 1’s
-<span class="math inline">\(8.2\)</span>. Two ideas were responsible for
-most of the reduction.</p>
+<p>Mean <span class="math inline">\(6.3/10\)</span>, down from Quiz 1’s <span class="math inline">\(8.2\)</span>. Two ideas were responsible for most of the reduction.</p>
 <div>
 <ul>
-<li class="fragment">What <span class="math inline">\(\log Z\)</span>
-<em>is</em> (about three in five)</li>
-<li class="fragment">What Clausius kept and dropped in the story of heat
-(about two in three)</li>
-<li class="fragment">What values are intensive: e.g. pressure as an
-intensive variable was a common miss.</li>
+<li class="fragment">What <span class="math inline">\(\log Z\)</span> <em>is</em> (about three in five)</li>
+<li class="fragment">What Clausius kept and dropped in the story of heat (about two in three)</li>
+<li class="fragment">What values are intensive: e.g. pressure as an intensive variable was a common miss.</li>
 </ul>
 </div>
 </section>
 <section id="what-log-z-is" class="slide level2">
 <h2>What <span class="math inline">\(\log Z\)</span> Is</h2>
-<p>From the occupation: take <span class="math inline">\(\log\)</span>,
-take the expectation. <span class="math inline">\(U\)</span> splits.</p>
+<p>From the occupation: take <span class="math inline">\(\log\)</span>, take the expectation. <span class="math inline">\(U\)</span> splits.</p>
 <div>
 <ul>
-<li class="fragment"><span class="math inline">\(p_i = e^{-\beta
-E_i}/Z\)</span>; <span class="math inline">\(Z\)</span> sums the
-states</li>
-<li class="fragment">One piece of the split is entropy; the other sits
-in <span class="math inline">\(\log Z\)</span></li>
-<li class="fragment">Up to <span class="math inline">\(-k_BT\)</span>,
-that second piece is available energy (not <span
-class="math inline">\(U\)</span>, and not <span
-class="math inline">\(H\)</span>)</li>
+<li class="fragment"><span class="math inline">\(p_i = e^{-\beta E_i}/Z\)</span>; <span class="math inline">\(Z\)</span> sums the states</li>
+<li class="fragment">One piece of the split is entropy; the other sits in <span class="math inline">\(\log Z\)</span></li>
+<li class="fragment">Up to <span class="math inline">\(-k_BT\)</span>, that second piece is available energy (not <span class="math inline">\(U\)</span>, and not <span class="math inline">\(H\)</span>)</li>
 </ul>
 </div>
 <aside class="notes">
-If the room needs the one-liner: <span class="math inline">\(F=-k_BT\log
-Z\)</span>. Prefer the split story over listing wrong options. Do not
-derive MaxEnt here (that is the rest of the hour).
+If the room needs the one-liner: <span class="math inline">\(F=-k_BT\log Z\)</span>. Prefer the split story over listing wrong options. Do not derive MaxEnt here (that is the rest of the hour).
 </aside>
 </section>
 <section id="clausius-did-not-name-uncertainty" class="slide level2">
 <h2>Clausius Did Not Name Uncertainty</h2>
-<p>Clausius is bookkeeping after Joule and Carnot (not a Shannon
-preamble).</p>
+<p>Clausius is bookkeeping after Joule and Carnot (not a Shannon preamble).</p>
 <div>
 <ul>
-<li class="fragment">Kept the mechanical equivalent of heat and Carnot’s
-limit; dropped conserved caloric</li>
-<li class="fragment">Work can become heat entirely; heat cannot all
-become work</li>
-<li class="fragment">For a reversible engine, <span
-class="math inline">\(Q_\mathrm{h}/T_\mathrm{h}=Q_\mathrm{c}/T_\mathrm{c}\)</span></li>
+<li class="fragment">Kept the mechanical equivalent of heat and Carnot’s limit; dropped conserved caloric</li>
+<li class="fragment">Work can become heat entirely; heat cannot all become work</li>
+<li class="fragment">For a reversible engine, <span class="math inline">\(Q_\mathrm{h}/T_\mathrm{h}=Q_\mathrm{c}/T_\mathrm{c}\)</span></li>
 </ul>
 </div>
 </section>
 <section id="carnot-as-a-waterwheel" class="slide level2">
 <h2>Carnot as a Waterwheel</h2>
-<p>Entropy drops like water. <span class="math inline">\(T\times
-S\)</span> is in joules. Spill nothing if reversible.</p>
+<p>Entropy drops like water. <span class="math inline">\(T\times S\)</span> is in joules. Spill nothing if reversible.</p>
 <div>
 <ul>
-<li class="fragment">Carnot: caloric conserved <span
-class="math inline">\(\approx\)</span> entropy conserved through the
-cycle</li>
-<li class="fragment">Joule / Rumford: heat is inexhaustible; work can
-become heat entirely</li>
-<li class="fragment">Clausius keeps both: heat cannot all become
-work</li>
+<li class="fragment">Carnot: caloric conserved <span class="math inline">\(\approx\)</span> entropy conserved through the cycle</li>
+<li class="fragment">Joule / Rumford: heat is inexhaustible; work can become heat entirely</li>
+<li class="fragment">Clausius keeps both: heat cannot all become work</li>
 </ul>
 </div>
 <aside class="notes">
-Bridge: Worksheet 2 pressed <span class="math inline">\(H\)</span>
-versus <span class="math inline">\(S\)</span>; this item pressed the
-physical thread that <span class="math inline">\(S\)</span> came from.
-Contested narrative next, then into the KL arc.
+Bridge: Worksheet 2 pressed <span class="math inline">\(H\)</span> versus <span class="math inline">\(S\)</span>; this item pressed the physical thread that <span class="math inline">\(S\)</span> came from. Contested narrative next, then into the KL arc.
 </aside>
 </section>
 <section id="a-contested-narrative" class="slide level2">
 <h2>A Contested Narrative</h2>
-<p>The heat story is a narrative to explore around, not a creed to
-recite.</p>
+<p>The heat story is a narrative to explore around, not a creed to recite.</p>
 <div>
 <ul>
-<li class="fragment">Worksheets: use an LLM to press the contested
-edges</li>
-<li class="fragment">Marks are on the quizzes and the understanding you
-defend in the room</li>
-<li class="fragment">Dinner colour: Blei, Rasmussen, Turner,
-Hernández-Lobato — narrative as scaffolding</li>
+<li class="fragment">Worksheets: use an LLM to press the contested edges</li>
+<li class="fragment">Marks are on the quizzes and the understanding you defend in the room</li>
 </ul>
 </div>
 </section>
 <section id="as-taught" class="slide level2">
 <h2>As Taught</h2>
-<p>KL before the break. MaxEnt after. Exponential family named at the
-close.</p>
+<p>KL before the break. MaxEnt after. Exponential family mentioned at the close.</p>
 <div>
 <ul>
-<li class="fragment">Soft partitions <span
-class="math inline">\(\to\)</span> mutual information; MI is a KL</li>
-<li class="fragment">Relative entropy to Jaynes’ <span
-class="math inline">\(m\)</span> is the same KL language</li>
-<li class="fragment">After the break: Lagrange; die; discrete MaxEnt
-proof <span class="math inline">\(\to\)</span> Boltzmann / <span
-class="math inline">\(Z\)</span></li>
-<li class="fragment">Continuous MaxEnt and <span
-class="math inline">\(\log Z\)</span> as CGF: next week</li>
+<li class="fragment">Soft partitions <span class="math inline">\(\to\)</span> mutual information; MI is a KL</li>
+<li class="fragment">Relative entropy to Jaynes’ measure <span class="math inline">\(m\)</span> also expressed as a KL</li>
+<li class="fragment">After the break: Lagrange multipliers; Jaynes’ die;</li>
+<li class="fragment">End: discrete MaxEnt proof <span class="math inline">\(\to\)</span> Boltzmann / <span class="math inline">\(Z\)</span></li>
+<li class="fragment">Continuous MaxEnt and <span class="math inline">\(\log Z\)</span> as CGF: next week</li>
 </ul>
 </div>
 <aside class="notes">
-Do not force continuous MaxEnt or the CGF slides if the discrete proof
-is still live. Name <span class="math inline">\(\theta=-\lambda\)</span>
-and stop. Quiz and worksheet next week.
+Do not force continuous MaxEnt if the discrete proof is still live. Name <span class="math inline">\(\theta=-\lambda\)</span> and stop. Week 6 develops the family and <span class="math inline">\(\psi\)</span> as a cumulant generating function, then channels, DPI, and the Good Regulator. Do not teach thermodynamic length.
 </aside>
 <!--setupplotcode{import seaborn as sns
 sns.set_style('darkgrid')
 sns.set_context('paper')
 sns.set_palette('colorblind')}-->
 </section>
-<section id="kl-overlap-measure-mutual-information"
-class="slide level2">
+<section id="kl-overlap-measure-mutual-information" class="slide level2">
 <h2>KL: Overlap, Measure, Mutual Information</h2>
 </section>
 <section id="when-coarse-graining-overlaps" class="slide level2">
 <h2>When Coarse Graining Overlaps</h2>
-<p>Revisit week 4’s exclusive case. Soft mixtures leave leftover
-uncertainty about the label.</p>
+<p>Revisit week 4’s exclusive case. Soft mixtures leave leftover uncertainty about the label.</p>
 <div>
 <ul>
-<li class="fragment">Exclusive: <span
-class="math inline">\(G=g(x)\)</span> forced <span
-class="math inline">\(H(G\mid X)=0\)</span> and <span
-class="math inline">\(H(X)=H(w)+\sum_g w_g H(p_g)\)</span></li>
-<li class="fragment">Soft label <span
-class="math inline">\(G=g(x)\)</span> with joint <span
-class="math inline">\(p(x,g)\)</span> (several <span
-class="math inline">\(g\)</span> can share the same <span
-class="math inline">\(x\)</span>)</li>
-<li class="fragment">Chain rule always: <span
-class="math inline">\(H(X,G)=H(G)+H(X\mid G)=H(X)+H(G\mid
-X)\)</span></li>
-<li class="fragment">Rearrange: <span
-class="math inline">\(H(X)=H(w)+\sum_g w_g H(p_g)-H(G\mid
-X)\)</span></li>
+<li class="fragment">Exclusive: <span class="math inline">\(G=g(x)\)</span> forced <span class="math inline">\(H(G\mid X)=0\)</span> and <span class="math inline">\(H(X)=H(w)+\sum_g w_g H(p_g)\)</span></li>
+<li class="fragment">Soft label <span class="math inline">\(G=g(x)\)</span> with joint <span class="math inline">\(p(x,g)\)</span> (several <span class="math inline">\(g\)</span> can share the same <span class="math inline">\(x\)</span>)</li>
+<li class="fragment">Chain rule always: <span class="math inline">\(H(X,G)=H(G)+H(X\mid G)=H(X)+H(G\mid X)\)</span></li>
+<li class="fragment">Rearrange: <span class="math inline">\(H(X)=H(w)+\sum_g w_g H(p_g)-H(G\mid X)\)</span></li>
 </ul>
 </div>
 <aside class="notes">
-Week 4: the log-sum collapsed only because non-overlap forced every face
-into one cell. Keep <span class="math inline">\(H(G\mid X)\)</span>:
-leftover uncertainty about which component, given the face. That
-leftover is mutual information next.
+Week 4: the log-sum collapsed only because non-overlap forced every face into one cell. Keep <span class="math inline">\(H(G\mid X)\)</span>: leftover uncertainty about which component, given the face. That leftover is mutual information next.
 </aside>
 </section>
 <section id="mutual-information" class="slide level2">
@@ -368,198 +296,117 @@ I(X;G)=H(G)-H(G\mid X)=H(X)-H(X\mid G)
 \]</span> </small></p>
 <div>
 <ul>
-<li class="fragment">Exclusive: <span class="math inline">\(H(G\mid
-X)=0\)</span> <span class="math inline">\(\Rightarrow\)</span> <span
-class="math inline">\(I(X;G)=H(G)=H(w)\)</span></li>
-<li class="fragment">Overlap: <span
-class="math inline">\(0&lt;I(X;G)&lt;H(w)\)</span> (the coarse label is
-no longer free given <span class="math inline">\(X\)</span>)</li>
-<li class="fragment">Same algebra: <span
-class="math inline">\(H(X)=H(X\mid G)+I(X;G)\)</span></li>
+<li class="fragment">Exclusive: <span class="math inline">\(H(G\mid X)=0\)</span> <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(I(X;G)=H(G)=H(w)\)</span></li>
+<li class="fragment">Overlap: <span class="math inline">\(0&lt;I(X;G)&lt;H(w)\)</span> (the coarse label is no longer free given <span class="math inline">\(X\)</span>)</li>
+<li class="fragment">Same algebra: <span class="math inline">\(H(X)=H(X\mid G)+I(X;G)\)</span></li>
 </ul>
 </div>
 <aside class="notes">
-From the two chain-rule expansions, <span
-class="math inline">\(I(X;G)=H(G)-H(G\mid X)\)</span>. Exclusive case
-recovers week 4: <span class="math inline">\(I(X;G)=H(G)\)</span>. Soft
-case keeps a positive <span class="math inline">\(H(G\mid X)\)</span>.
-Next: the same <span class="math inline">\(I\)</span> is a KL.
+From the two chain-rule expansions, <span class="math inline">\(I(X;G)=H(G)-H(G\mid X)\)</span>. Exclusive case recovers week 4: <span class="math inline">\(I(X;G)=H(G)\)</span>. Soft case keeps a positive <span class="math inline">\(H(G\mid X)\)</span>. Next: the same <span class="math inline">\(I\)</span> is a KL.
 </aside>
 </section>
-<section id="mutual-information-is-a-kl-divergence"
-class="slide level2">
+<section id="mutual-information-is-a-kl-divergence" class="slide level2">
 <h2>Mutual information is a KL divergence</h2>
-<p>This <span class="math inline">\(I\)</span> is KL between the joint
-and the product of marginals.</p>
+<p>This <span class="math inline">\(I\)</span> is KL between the joint and the product of marginals.</p>
 <p><small> <span class="math display">\[
 I(X;G)=\text{KL}\left( p(x,g)\,\|\,p(x)\,p(g) \right)
 \]</span> </small></p>
 <div>
 <ul>
-<li class="fragment">Write <span class="math inline">\(I=\sum_{x,g}
-p(x,g)\log\dfrac{p(x,g)}{p(x)p(g)}\)</span></li>
-<li class="fragment">Independence: <span
-class="math inline">\(I=0\)</span>; exclusive labelling: <span
-class="math inline">\(I=H(G)\)</span></li>
-<li class="fragment">Soft partitions are bookkeeping; MaxEnt still
-maximises <span class="math inline">\(H\)</span> under constraints</li>
+<li class="fragment">Write <span class="math inline">\(I=\sum_{x,g} p(x,g)\log\dfrac{p(x,g)}{p(x)p(g)}\)</span></li>
+<li class="fragment">Independence: <span class="math inline">\(I=0\)</span>; exclusive labelling: <span class="math inline">\(I=H(G)\)</span></li>
+<li class="fragment">Soft partitions are bookkeeping; MaxEnt still maximises <span class="math inline">\(H\)</span> under constraints</li>
 </ul>
 </div>
 <aside class="notes">
-Step (3) of today’s KL arc: mutual information <em>is</em> a KL.
-Relative entropy to Jaynes’ <span class="math inline">\(m\)</span> is
-next; then KL properties. Fisher geometry waits for week 6.
+Step (3) of today’s KL arc: mutual information <em>is</em> a KL. Relative entropy to Jaynes’ <span class="math inline">\(m\)</span> is next; then KL properties. Fisher geometry waits for week 6.
 </aside>
 </section>
 <section id="relative-entropy-is-kl" class="slide level2">
 <h2>Relative Entropy Is KL</h2>
-<p>Week 4’s undeclared <span class="math inline">\(m\)</span> was
-already a KL. Name it.</p>
+<p>Week 4’s undeclared <span class="math inline">\(m\)</span> was already a KL.</p>
 <div>
 <ul>
-<li class="fragment">Densities <span class="math inline">\(f\)</span>
-and <span class="math inline">\(m\)</span>: <span
-class="math inline">\({\mathrm{d}}F/{\mathrm{d}}m=f/m\)</span></li>
-<li class="fragment">Relative entropy <span class="math inline">\(\int
-f\log(f/m)\,dx\)</span> is <span class="math inline">\(\text{KL}\left(
-f\,\|\,m \right)\)</span></li>
-<li class="fragment">Jaynes’ limiting density of states is that
-reference <span class="math inline">\(m\)</span></li>
+<li class="fragment">Densities <span class="math inline">\(f\)</span> and <span class="math inline">\(m\)</span>: <span class="math inline">\({\mathrm{d}}F/{\mathrm{d}}m=f/m\)</span></li>
+<li class="fragment">Relative entropy <span class="math inline">\(\int f\log(f/m)\,dx\)</span> is <span class="math inline">\(\text{KL}\left( f\,\|\,m \right)\)</span></li>
+<li class="fragment">Jaynes’ limiting density of states is that reference <span class="math inline">\(m\)</span></li>
 </ul>
 </div>
 <aside class="notes">
-Week 4 wrote the ratio and the Jacobian. Relative entropy to <span
-class="math inline">\(m\)</span> is KL; undeclared <span
-class="math inline">\(m\)</span> was the missing measure. Mutual
-information was already written as a KL on the previous slides.
+Week 4 wrote the ratio and the Jacobian. Relative entropy to <span class="math inline">\(m\)</span> is KL; undeclared <span class="math inline">\(m\)</span> was the missing measure. Mutual information was already written as a KL on the previous slides.
 </aside>
 </section>
 <section id="radon-nikodym-derivative" class="slide level2">
 <h2>Radon-Nikodym Derivative</h2>
 <p>Recall RN derivative between measures.</p>
 </section>
-<section id="the-form-of-the-radon-nikodym-derivative"
-class="slide level2">
+<section id="the-form-of-the-radon-nikodym-derivative" class="slide level2">
 <h2>The Form of the Radon-Nikodym Derivative</h2>
-<p>If <span class="math inline">\(\mu\)</span> is absolutely continuous
-with respect to <span class="math inline">\(\nu\)</span>, there is a
-density <span
-class="math inline">\(\mathrm{d}\mu/\mathrm{d}\nu\)</span>.</p>
+<p>If <span class="math inline">\(\mu\)</span> is absolutely continuous with respect to <span class="math inline">\(\nu\)</span>, there is a density <span class="math inline">\(\mathrm{d}\mu/\mathrm{d}\nu\)</span>.</p>
 <p><small> <span class="math display">\[
 \mu(A)=\int_A \frac{\mathrm{d}\mu}{\mathrm{d}\nu}\,\mathrm{d}\nu
 \]</span> </small></p>
 <div>
 <ul>
-<li class="fragment"><span class="math inline">\(M\)</span> has density
-<span class="math inline">\(m\)</span>: <span
-class="math inline">\(\mathrm{d}F/\mathrm{d}M=f/m\)</span></li>
-<li class="fragment">That ratio is what sits inside <span
-class="math inline">\(\text{KL}\left( f\,\|\,m \right)\)</span></li>
-<li class="fragment">The width ratio <span class="math inline">\(\Delta
-s_i/\Delta u_i\)</span> was the same object on a partition</li>
+<li class="fragment"><span class="math inline">\(M\)</span> has density <span class="math inline">\(m\)</span>: <span class="math inline">\(\mathrm{d}F/\mathrm{d}M=f/m\)</span></li>
+<li class="fragment">That ratio is what sits inside <span class="math inline">\(\text{KL}\left( f\,\|\,m \right)\)</span></li>
+<li class="fragment">The width ratio <span class="math inline">\(\Delta s_i/\Delta u_i\)</span> was the same object on a partition</li>
 </ul>
 </div>
 <aside class="notes">
-One slide. Write <span
-class="math inline">\(\mathrm{d}F/\mathrm{d}M=f/m\)</span> on the board:
-<span class="math inline">\(M\)</span> is the measure with density <span
-class="math inline">\(m\)</span>, not <span
-class="math inline">\(m\)</span> itself. Point back at <span
-class="math inline">\(\Delta s_i/\Delta u_i\)</span> and forward at
-Jaynes’ <span class="math inline">\(m\)</span>. No <span
-class="math inline">\(\sigma\)</span>-algebras.
+One slide. Write <span class="math inline">\(\mathrm{d}F/\mathrm{d}M=f/m\)</span> on the board: <span class="math inline">\(M\)</span> is the measure with density <span class="math inline">\(m\)</span>, not <span class="math inline">\(m\)</span> itself. Point back at <span class="math inline">\(\Delta s_i/\Delta u_i\)</span> and forward at Jaynes’ <span class="math inline">\(m\)</span>. No <span class="math inline">\(\sigma\)</span>-algebras.
 </aside>
 </section>
 <section id="jaynes-promote-the-bins-to-a-measure" class="slide level2">
 <h2>Jaynes: Promote the Bins to a Measure</h2>
-<p>The well-defined continuum object is relative entropy against a
-declared <span class="math inline">\(m\)</span>.</p>
+<p>The well-defined continuum object is relative entropy against a declared <span class="math inline">\(m\)</span>.</p>
 <p><small> <span class="math display">\[
-h_m(f)=-\int f\log\frac{f}{m}\,{\mathrm{d}}x=-\text{KL}\left( f\,\|\,m
-\right)
+h_m(f)=-\int f\log\frac{f}{m}\,{\mathrm{d}}x=-\text{KL}\left( f\,\|\,m \right)
 \]</span> </small></p>
 <div>
 <ul>
-<li class="fragment"><span class="math inline">\(m\)</span> is Jaynes’
-limiting density of discrete points — the binning, written as a
-density</li>
-<li class="fragment"><span class="math inline">\(m\)</span> = density of
-bins: Gaussian <span class="math inline">\(m\)</span> means fine bins in
-the centre</li>
-<li class="fragment">Uniform <span class="math inline">\(m\)</span> in
-<span class="math inline">\(v_x\)</span> recovers ordinary <span
-class="math inline">\(h(v_x)\)</span></li>
-<li class="fragment">Uniform <span class="math inline">\(m\)</span> in
-3D velocity is <span class="math inline">\(m(s)\propto s^2\)</span> in
-speed</li>
+<li class="fragment"><span class="math inline">\(m\)</span> is Jaynes’ limiting density of discrete points — the binning, written as a density</li>
+<li class="fragment"><span class="math inline">\(m\)</span> = density of bins: Gaussian <span class="math inline">\(m\)</span> means fine bins in the centre</li>
+<li class="fragment">Uniform <span class="math inline">\(m\)</span> in <span class="math inline">\(v_x\)</span> recovers ordinary <span class="math inline">\(h(v_x)\)</span></li>
+<li class="fragment">Uniform <span class="math inline">\(m\)</span> in 3D velocity is <span class="math inline">\(m(s)\propto s^2\)</span> in speed</li>
 </ul>
 </div>
 <aside class="notes">
-Name <span class="math inline">\(m\)</span> as the density of the bins.
-A Gaussian <span class="math inline">\(m\)</span> crowds points at the
-centre and thins them in the tails. Do not do Lagrange, the die, or
-MaxEnt — those snippets already exist. The Gaussian versus Maxwell
-disagreement was an undeclared change of <span
-class="math inline">\(m\)</span>. KL against a common <span
-class="math inline">\(m\)</span> is invariant; see
-relative-entropy-reparametrisation.
+Name <span class="math inline">\(m\)</span> as the density of the bins. A Gaussian <span class="math inline">\(m\)</span> crowds points at the centre and thins them in the tails. Do not do Lagrange, the die, or MaxEnt — those snippets already exist. The Gaussian versus Maxwell disagreement was an undeclared change of <span class="math inline">\(m\)</span>. KL against a common <span class="math inline">\(m\)</span> is invariant; see relative-entropy-reparametrisation.
 </aside>
 </section>
 <section id="discrete-shannon-entropy-is-bounded" class="slide level2">
 <h2>Discrete Shannon Entropy Is Bounded</h2>
-<p>Week 3 derived Shannon entropy for discrete <span
-class="math inline">\(p=(p_1,\ldots,p_n)\)</span>.</p>
+<p>Week 3 derived Shannon entropy for discrete <span class="math inline">\(p=(p_1,\ldots,p_n)\)</span>.</p>
 <div>
 <ul>
-<li class="fragment"><span class="math inline">\(0 \le H(p) \le \log
-n\)</span> on <span class="math inline">\(n\)</span> outcomes</li>
+<li class="fragment"><span class="math inline">\(0 \le H(p) \le \log n\)</span> on <span class="math inline">\(n\)</span> outcomes</li>
 <li class="fragment">Maximum at uniform; zero on a delta</li>
-<li class="fragment">Code interpretation: average length cannot beat
-<span class="math inline">\(H\)</span></li>
+<li class="fragment">Code interpretation: average length cannot beat <span class="math inline">\(H\)</span></li>
 </ul>
 </div>
 </section>
 <section id="kl-divergence" class="slide level2">
 <h2>KL Divergence</h2>
-<p>Comparing two distributions needs a functional that is always
-sensible.</p>
+<p>Comparing two distributions needs a functional that is always sensible.</p>
 <div>
 <ul>
-<li class="fragment"><span class="math inline">\(\text{KL}\left(
-p\,\|\,q \right) = \sum_i p_i \log(p_i/q_i)\)</span> discrete; <span
-class="math inline">\(\int p\log(p/q)\,dx\)</span> continuous</li>
-<li class="fragment">Always <span class="math inline">\(\text{KL}\left(
-p\,\|\,q \right) \ge 0\)</span>; zero iff <span class="math inline">\(p
-= q\)</span> (same support)</li>
-<li class="fragment">Extra surprise when <span
-class="math inline">\(q\)</span> stands in for <span
-class="math inline">\(p\)</span> — not a metric, but a directed
-cost</li>
+<li class="fragment"><span class="math inline">\(\text{KL}\left( p\,\|\,q \right) = \sum_i p_i \log(p_i/q_i)\)</span> discrete; <span class="math inline">\(\int p\log(p/q)\,dx\)</span> continuous</li>
+<li class="fragment">Always <span class="math inline">\(\text{KL}\left( p\,\|\,q \right) \ge 0\)</span>; zero iff <span class="math inline">\(p = q\)</span> (same support)</li>
+<li class="fragment">Extra surprise when <span class="math inline">\(q\)</span> stands in for <span class="math inline">\(p\)</span> — not a metric, but a directed cost</li>
 </ul>
 </div>
 <aside class="notes">
-Week 5 KL arc, step (4). Use <span class="math inline">\(\text{KL}\left(
-p\,\|\,q \right)\)</span> throughout. Physics synonym: relative entropy.
-Asymmetry: <span class="math inline">\(\text{KL}\left( p\,\|\,q
-\right)\neq\text{KL}\left( q\,\|\,p \right)\)</span> — not a metric.
-MaxEnt after the break maximises <span class="math inline">\(H\)</span>
-or, equivalently, minimises <span class="math inline">\(\text{KL}\left(
-\cdot\,\|\,m \right)\)</span>. Week 7: <span
-class="math inline">\(m\)</span>-projection. Optional colour: GANs /
-adversarial training pick a direction of the KL; tell the truth and the
-whole truth, not nothing but the truth.
+Week 5 KL arc, step (4). Use <span class="math inline">\(\text{KL}\left( p\,\|\,q \right)\)</span> throughout. Physics synonym: relative entropy. Asymmetry: <span class="math inline">\(\text{KL}\left( p\,\|\,q \right)\neq\text{KL}\left( q\,\|\,p \right)\)</span> — not a metric. MaxEnt after the break maximises <span class="math inline">\(H\)</span> or, equivalently, minimises <span class="math inline">\(\text{KL}\left( \cdot\,\|\,m \right)\)</span>. Week 7: <span class="math inline">\(m\)</span>-projection. Optional colour: GANs / adversarial training pick a direction of the KL; tell the truth and the whole truth, not nothing but the truth.
 </aside>
 </section>
-<section id="differential-entropy-is-a-different-object"
-class="slide level2">
+<section id="differential-entropy-is-a-different-object" class="slide level2">
 <h2>Differential Entropy Is a Different Object</h2>
-<p>Gaussian channel uses <span class="math inline">\(-\int p\log
-p\)</span> — differential entropy.</p>
+<p>Gaussian channel uses <span class="math inline">\(-\int p\log p\)</span> — differential entropy.</p>
 <div>
 <ul>
 <li class="fragment">Can be <em>negative</em>; not bounded below</li>
-<li class="fragment">Not a code-length bound — compare distributions
-with KL.</li>
+<li class="fragment">Not a code-length bound — compare distributions with KL.</li>
 </ul>
 </div>
 </section>
@@ -572,47 +419,35 @@ with KL.</li>
 </div>
 </div>
 <aside class="notes">
-Left: binary Shannon entropy is bounded. Right: Gaussian differential
-entropy can be negative.
+Left: binary Shannon entropy is bounded. Right: Gaussian differential entropy can be negative.
 </aside>
 </section>
 <section id="maximum-entropy" class="slide level2">
 <h2>Maximum Entropy</h2>
-<p>Entropy tends to increase. Energy is constrained. Which <span
-class="math inline">\(p\)</span>?</p>
+<p>Entropy tends to increase. Energy is constrained. Which <span class="math inline">\(p\)</span>?</p>
 <div>
 <ul>
-<li class="fragment">Second law: unconstrained, <span
-class="math inline">\(H\)</span> grows</li>
-<li class="fragment">Fixed mean energy (or other moments): not every
-<span class="math inline">\(p\)</span> is allowed</li>
-<li class="fragment">MaxEnt: among distributions that meet the
-constraints, take the largest <span
-class="math inline">\(H\)</span></li>
+<li class="fragment">Second law: unconstrained, <span class="math inline">\(H\)</span> grows</li>
+<li class="fragment">Fixed mean energy (or other moments): not every <span class="math inline">\(p\)</span> is allowed</li>
+<li class="fragment">MaxEnt: among distributions that meet the constraints, take the largest <span class="math inline">\(H\)</span></li>
 </ul>
 </div>
 <aside class="notes">
-State the problem before Lagrange. Not ``entropy is maximised in
-nature’’ as metaphysics: given what we know (the constraints), which
-distribution assumes least else?
+State the problem before Lagrange. Not ``entropy is maximised in nature’’ as metaphysics: given what we know (the constraints), which distribution assumes least else?
 </aside>
 </section>
 <section id="lagrange-multipliers" class="slide level2">
 <h2>Lagrange Multipliers</h2>
 <ul>
-<li>Constrained optimisation appears throughout physics, engineering and
-machine learning.</li>
-<li>Lagrange multipliers convert constraints into terms in an auxiliary
-function</li>
-<li>At the optimum, the objective gradient is normal to the constraint
-surface</li>
+<li>Constrained optimisation appears throughout physics, engineering and machine learning.</li>
+<li>Lagrange multipliers convert constraints into terms in an auxiliary function</li>
+<li>At the optimum, the objective gradient is normal to the constraint surface</li>
 </ul>
 </section>
 <section id="one-equality-constraint" class="slide level2">
 <h2>One Equality Constraint</h2>
 <p><strong>Single constraint:</strong> <span class="math display">\[
-\mathscr{L}(\mathbf{x}, \lambda) = f(\mathbf{x}) +
-\lambda\left(g(\mathbf{x}) - c\right)
+\mathscr{L}(\mathbf{x}, \lambda) = f(\mathbf{x}) + \lambda\left(g(\mathbf{x}) - c\right)
 \]</span></p>
 <p><strong>Stationarity:</strong> <span class="math display">\[
 \nabla f + \lambda \nabla g = 0, \qquad g(\mathbf{x}) = c
@@ -620,17 +455,12 @@ surface</li>
 </section>
 <section id="stationarity-parallel-gradients" class="slide level2">
 <h2>Stationarity: parallel gradients</h2>
-<div id="animation-lagrange-parallel-vectors" class="lamd-animation"
-role="region" aria-label=""
-data-animation-group="lagrange-parallel-vectors">
+<div id="animation-lagrange-parallel-vectors" class="lamd-animation" role="region" aria-label="" data-animation-group="lagrange-parallel-vectors">
 <noscript>
 <style>#animation-lagrange-parallel-vectors .animation-controls{display:none}#animation-lagrange-parallel-vectors .lagrange-parallel-vectors~.lagrange-parallel-vectors{display:none}</style>
 </noscript>
 <div class="animation-controls">
-<p><small></small>
-<input id="range-lagrange-parallel-vectors" type="range" min="0" max="13" value="0" aria-label="Frame slider for " aria-valuemin="0" aria-valuemax="13" aria-valuenow="0" onchange="typeof lamdSetDivs==='function'&&lamdSetDivs('lagrange-parallel-vectors')" oninput="typeof lamdSetDivs==='function'&&lamdSetDivs('lagrange-parallel-vectors')">
-<button type="button" onclick="typeof lamdPlusDivs==='function'&&lamdPlusDivs(-1,'lagrange-parallel-vectors');" aria-label="Previous frame">❮</button>
-<button type="button" onclick="typeof lamdPlusDivs==='function'&&lamdPlusDivs(1,'lagrange-parallel-vectors');" aria-label="Next frame">❯</button></p>
+<p><small></small> <input id="range-lagrange-parallel-vectors" type="range" min="0" max="13" value="0" aria-label="Frame slider for " aria-valuemin="0" aria-valuemax="13" aria-valuenow="0" onchange="typeof lamdSetDivs==='function'&&lamdSetDivs('lagrange-parallel-vectors')" oninput="typeof lamdSetDivs==='function'&&lamdSetDivs('lagrange-parallel-vectors')"> <button type="button" onclick="typeof lamdPlusDivs==='function'&&lamdPlusDivs(-1,'lagrange-parallel-vectors');" aria-label="Previous frame">❮</button> <button type="button" onclick="typeof lamdPlusDivs==='function'&&lamdPlusDivs(1,'lagrange-parallel-vectors');" aria-label="Next frame">❯</button></p>
 </div>
 <script>
 document.addEventListener('DOMContentLoaded',function(){
@@ -647,81 +477,55 @@ if(f.length>0){f[0].style.display='block';}
 }catch(e){console.warn('[lamd] Animation "'+'lagrange-parallel-vectors'+'" failed to initialize:',e);}
 });
 </script>
-<div class="lagrange-parallel-vectors" style="text-align:center;"
-role="img" aria-label="lagrange-parallel-vectors"
-data-animation-frame="lagrange-parallel-vectors">
+<div class="lagrange-parallel-vectors" style="text-align:center;" role="img" aria-label="lagrange-parallel-vectors" data-animation-frame="lagrange-parallel-vectors">
 <object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/physics/lagrange-parallel-vectors000.svg" width="70%" style=" ">
 </object>
 </div>
-<div class="lagrange-parallel-vectors" style="text-align:center;"
-role="img" aria-label="lagrange-parallel-vectors"
-data-animation-frame="lagrange-parallel-vectors">
+<div class="lagrange-parallel-vectors" style="text-align:center;" role="img" aria-label="lagrange-parallel-vectors" data-animation-frame="lagrange-parallel-vectors">
 <object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/physics/lagrange-parallel-vectors001.svg" width="70%" style=" ">
 </object>
 </div>
-<div class="lagrange-parallel-vectors" style="text-align:center;"
-role="img" aria-label="lagrange-parallel-vectors"
-data-animation-frame="lagrange-parallel-vectors">
+<div class="lagrange-parallel-vectors" style="text-align:center;" role="img" aria-label="lagrange-parallel-vectors" data-animation-frame="lagrange-parallel-vectors">
 <object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/physics/lagrange-parallel-vectors002.svg" width="70%" style=" ">
 </object>
 </div>
-<div class="lagrange-parallel-vectors" style="text-align:center;"
-role="img" aria-label="lagrange-parallel-vectors"
-data-animation-frame="lagrange-parallel-vectors">
+<div class="lagrange-parallel-vectors" style="text-align:center;" role="img" aria-label="lagrange-parallel-vectors" data-animation-frame="lagrange-parallel-vectors">
 <object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/physics/lagrange-parallel-vectors003.svg" width="70%" style=" ">
 </object>
 </div>
-<div class="lagrange-parallel-vectors" style="text-align:center;"
-role="img" aria-label="lagrange-parallel-vectors"
-data-animation-frame="lagrange-parallel-vectors">
+<div class="lagrange-parallel-vectors" style="text-align:center;" role="img" aria-label="lagrange-parallel-vectors" data-animation-frame="lagrange-parallel-vectors">
 <object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/physics/lagrange-parallel-vectors004.svg" width="70%" style=" ">
 </object>
 </div>
-<div class="lagrange-parallel-vectors" style="text-align:center;"
-role="img" aria-label="lagrange-parallel-vectors"
-data-animation-frame="lagrange-parallel-vectors">
+<div class="lagrange-parallel-vectors" style="text-align:center;" role="img" aria-label="lagrange-parallel-vectors" data-animation-frame="lagrange-parallel-vectors">
 <object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/physics/lagrange-parallel-vectors005.svg" width="70%" style=" ">
 </object>
 </div>
-<div class="lagrange-parallel-vectors" style="text-align:center;"
-role="img" aria-label="lagrange-parallel-vectors"
-data-animation-frame="lagrange-parallel-vectors">
+<div class="lagrange-parallel-vectors" style="text-align:center;" role="img" aria-label="lagrange-parallel-vectors" data-animation-frame="lagrange-parallel-vectors">
 <object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/physics/lagrange-parallel-vectors006.svg" width="70%" style=" ">
 </object>
 </div>
-<div class="lagrange-parallel-vectors" style="text-align:center;"
-role="img" aria-label="lagrange-parallel-vectors"
-data-animation-frame="lagrange-parallel-vectors">
+<div class="lagrange-parallel-vectors" style="text-align:center;" role="img" aria-label="lagrange-parallel-vectors" data-animation-frame="lagrange-parallel-vectors">
 <object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/physics/lagrange-parallel-vectors007.svg" width="70%" style=" ">
 </object>
 </div>
-<div class="lagrange-parallel-vectors" style="text-align:center;"
-role="img" aria-label="lagrange-parallel-vectors"
-data-animation-frame="lagrange-parallel-vectors">
+<div class="lagrange-parallel-vectors" style="text-align:center;" role="img" aria-label="lagrange-parallel-vectors" data-animation-frame="lagrange-parallel-vectors">
 <object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/physics/lagrange-parallel-vectors008.svg" width="70%" style=" ">
 </object>
 </div>
-<div class="lagrange-parallel-vectors" style="text-align:center;"
-role="img" aria-label="lagrange-parallel-vectors"
-data-animation-frame="lagrange-parallel-vectors">
+<div class="lagrange-parallel-vectors" style="text-align:center;" role="img" aria-label="lagrange-parallel-vectors" data-animation-frame="lagrange-parallel-vectors">
 <object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/physics/lagrange-parallel-vectors009.svg" width="70%" style=" ">
 </object>
 </div>
-<div class="lagrange-parallel-vectors" style="text-align:center;"
-role="img" aria-label="lagrange-parallel-vectors"
-data-animation-frame="lagrange-parallel-vectors">
+<div class="lagrange-parallel-vectors" style="text-align:center;" role="img" aria-label="lagrange-parallel-vectors" data-animation-frame="lagrange-parallel-vectors">
 <object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/physics/lagrange-parallel-vectors010.svg" width="70%" style=" ">
 </object>
 </div>
-<div class="lagrange-parallel-vectors" style="text-align:center;"
-role="img" aria-label="lagrange-parallel-vectors"
-data-animation-frame="lagrange-parallel-vectors">
+<div class="lagrange-parallel-vectors" style="text-align:center;" role="img" aria-label="lagrange-parallel-vectors" data-animation-frame="lagrange-parallel-vectors">
 <object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/physics/lagrange-parallel-vectors011.svg" width="70%" style=" ">
 </object>
 </div>
-<div class="lagrange-parallel-vectors" style="text-align:center;"
-role="img" aria-label="lagrange-parallel-vectors"
-data-animation-frame="lagrange-parallel-vectors">
+<div class="lagrange-parallel-vectors" style="text-align:center;" role="img" aria-label="lagrange-parallel-vectors" data-animation-frame="lagrange-parallel-vectors">
 <object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/physics/lagrange-parallel-vectors012.svg" width="70%" style=" ">
 </object>
 </div>
@@ -730,20 +534,15 @@ data-animation-frame="lagrange-parallel-vectors">
 <section id="geometric-picture" class="slide level2">
 <h2>Geometric picture</h2>
 <ul>
-<li>At a constrained optimum, <span class="math inline">\(\nabla
-f\)</span> is normal to the constraint surface</li>
-<li>If <span class="math inline">\(\nabla f\)</span> had a component
-tangent to the surface, we could improve <span
-class="math inline">\(f\)</span> without leaving it</li>
-<li><span class="math inline">\(\lambda\)</span> is the strength of the
-constraint force</li>
+<li>At a constrained optimum, <span class="math inline">\(\nabla f\)</span> is normal to the constraint surface</li>
+<li>If <span class="math inline">\(\nabla f\)</span> had a component tangent to the surface, we could improve <span class="math inline">\(f\)</span> without leaving it</li>
+<li><span class="math inline">\(\lambda\)</span> is the strength of the constraint force</li>
 </ul>
 </section>
 <section id="several-equality-constraints" class="slide level2">
 <h2>Several Equality Constraints</h2>
 <p><strong>Several constraints:</strong> <span class="math display">\[
-\mathscr{L} = f(\mathbf{x}) + \sum_k \lambda_k \bigl(g_k(\mathbf{x}) -
-c_k\bigr)
+\mathscr{L} = f(\mathbf{x}) + \sum_k \lambda_k \bigl(g_k(\mathbf{x}) - c_k\bigr)
 \]</span></p>
 <p><strong>Stationarity:</strong> <span class="math display">\[
 \nabla f + \sum_k \lambda_k \nabla g_k = 0, \qquad g_k(\mathbf{x}) = c_k
@@ -751,18 +550,12 @@ c_k\bigr)
 </section>
 <section id="a-worked-example" class="slide level2">
 <h2>A Worked Example</h2>
-<p><strong>Example:</strong> minimise <span
-class="math inline">\(\frac{1}{2}(x^2+y^2)\)</span> subject to <span
-class="math inline">\(x+y=1\)</span></p>
+<p><strong>Example:</strong> minimise <span class="math inline">\(\frac{1}{2}(x^2+y^2)\)</span> subject to <span class="math inline">\(x+y=1\)</span></p>
 <p><span class="math display">\[
 \mathscr{L} = \frac{1}{2}(x^2+y^2) + \lambda(x+y-1)
 \]</span></p>
-<p><strong>Solution:</strong> <span class="math inline">\(x = y =
-\frac{1}{2}\)</span>, <span class="math inline">\(\lambda =
--\frac{1}{2}\)</span></p>
-<p><em>Closest point on a line; same pattern as constrained energy or
-<span class="math inline">\(\|\mathbf{w}\|^2\)</span> with a linear
-constraint</em></p>
+<p><strong>Solution:</strong> <span class="math inline">\(x = y = \frac{1}{2}\)</span>, <span class="math inline">\(\lambda = -\frac{1}{2}\)</span></p>
+<p><em>Closest point on a line; same pattern as constrained energy or <span class="math inline">\(\|\mathbf{w}\|^2\)</span> with a linear constraint</em></p>
 </section>
 <section id="principle-of-insufficient-reason" class="slide level2">
 <h2>Principle of Insufficient Reason</h2>
@@ -785,61 +578,38 @@ Pierre-Simon Laplace 1749-1827.
 <div>
 <ul>
 <li class="fragment">How to assign probability?</li>
-<li class="fragment"><span class="math inline">\(n\)</span> mutually
-exclusive, exhaustive outcomes</li>
+<li class="fragment"><span class="math inline">\(n\)</span> mutually exclusive, exhaustive outcomes</li>
 <li class="fragment">Nothing distinguishes one from another</li>
-<li class="fragment">Assign equal probability: <span
-class="math inline">\(p_i = 1/n\)</span></li>
+<li class="fragment">Assign equal probability: <span class="math inline">\(p_i = 1/n\)</span></li>
 </ul>
 </div>
 </section>
 <section id="example-will-the-sun-rise-tomorrow" class="slide level2">
 <h2>Example: Will the sun rise tomorrow?</h2>
 <div class="centered" style="">
-<a
-href="https://play.google.com/books/reader?id=1YQPAAAAQAAJ&amp;pg=PA16"><img
-data-src="https://mlatcl.github.io/iei/slides/diagrams/books/1YQPAAAAQAAJ-PA16.png" /></a>
+<a href="https://play.google.com/books/reader?id=1YQPAAAAQAAJ&amp;pg=PA16"><img data-src="https://mlatcl.github.io/iei/slides/diagrams/books/1YQPAAAAQAAJ-PA16.png" /></a>
 </div>
 <div>
 <ul>
-<li class="fragment">Unknown daily rate <span
-class="math inline">\(\theta\in[0,1]\)</span>; insufficient reason <span
-class="math inline">\(\Rightarrow\)</span> uniform prior on <span
-class="math inline">\(\theta\)</span></li>
-<li class="fragment">Every day is a success: after <span
-class="math inline">\(n\)</span> rises, belief <span
-class="math inline">\(\propto\theta^{n}\)</span></li>
-<li class="fragment">Predictive: <span
-class="math inline">\(P(\text{rises
-tomorrow})=\dfrac{n+1}{n+2}\)</span></li>
-<li class="fragment">Sunrise for <span
-class="math inline">\(n=1{,}826{,}213\)</span> days: odds <span
-class="math inline">\(1{,}826{,}214\)</span> to one</li>
-<li class="fragment">Laplace’s caveat: astronomy makes the true odds
-<em>incomparably greater</em></li>
+<li class="fragment">Unknown daily rate <span class="math inline">\(\theta\in[0,1]\)</span>; insufficient reason <span class="math inline">\(\Rightarrow\)</span> uniform prior on <span class="math inline">\(\theta\)</span></li>
+<li class="fragment">Every day is a success: after <span class="math inline">\(n\)</span> rises, belief <span class="math inline">\(\propto\theta^{n}\)</span></li>
+<li class="fragment">Predictive: <span class="math inline">\(P(\text{rises tomorrow})=\dfrac{n+1}{n+2}\)</span></li>
+<li class="fragment">Sunrise for <span class="math inline">\(n=1{,}826{,}213\)</span> days: odds <span class="math inline">\(1{,}826{,}214\)</span> to one</li>
+<li class="fragment">Laplace’s caveat: astronomy makes the true odds <em>incomparably greater</em></li>
 </ul>
 </div>
 <aside class="notes">
-Board the short derivation. Emphasise: (i) the example is genuine; (ii)
-Laplace applies insufficient reason to <span
-class="math inline">\(\theta\)</span>, not to tomorrow’s binary outcome
-alone; (iii) every observation is a success — the sun always rises in
-the data; (iv) he immediately rejects treating the numerical answer as
-the scientific probability of sunrise.
+Board the short derivation. Emphasise: (i) the example is genuine; (ii) Laplace applies insufficient reason to <span class="math inline">\(\theta\)</span>, not to tomorrow’s binary outcome alone; (iii) every observation is a success — the sun always rises in the data; (iv) he immediately rejects treating the numerical answer as the scientific probability of sunrise.
 </aside>
 </section>
 <section id="example-will-the-sun-rise-tomorrow-1" class="slide level2">
 <h2>Example: Will the sun rise tomorrow?</h2>
-<div id="animation-laplace-succession" class="lamd-animation"
-role="region" aria-label="" data-animation-group="laplace-succession">
+<div id="animation-laplace-succession" class="lamd-animation" role="region" aria-label="" data-animation-group="laplace-succession">
 <noscript>
 <style>#animation-laplace-succession .animation-controls{display:none}#animation-laplace-succession .laplace-succession~.laplace-succession{display:none}</style>
 </noscript>
 <div class="animation-controls">
-<p><small></small>
-<input id="range-laplace-succession" type="range" min="1" max="12" value="1" aria-label="Frame slider for " aria-valuemin="1" aria-valuemax="12" aria-valuenow="1" onchange="typeof lamdSetDivs==='function'&&lamdSetDivs('laplace-succession')" oninput="typeof lamdSetDivs==='function'&&lamdSetDivs('laplace-succession')">
-<button type="button" onclick="typeof lamdPlusDivs==='function'&&lamdPlusDivs(-1,'laplace-succession');" aria-label="Previous frame">❮</button>
-<button type="button" onclick="typeof lamdPlusDivs==='function'&&lamdPlusDivs(1,'laplace-succession');" aria-label="Next frame">❯</button></p>
+<p><small></small> <input id="range-laplace-succession" type="range" min="1" max="12" value="1" aria-label="Frame slider for " aria-valuemin="1" aria-valuemax="12" aria-valuenow="1" onchange="typeof lamdSetDivs==='function'&&lamdSetDivs('laplace-succession')" oninput="typeof lamdSetDivs==='function'&&lamdSetDivs('laplace-succession')"> <button type="button" onclick="typeof lamdPlusDivs==='function'&&lamdPlusDivs(-1,'laplace-succession');" aria-label="Previous frame">❮</button> <button type="button" onclick="typeof lamdPlusDivs==='function'&&lamdPlusDivs(1,'laplace-succession');" aria-label="Next frame">❯</button></p>
 </div>
 <script>
 document.addEventListener('DOMContentLoaded',function(){
@@ -856,75 +626,51 @@ if(f.length>0){f[0].style.display='block';}
 }catch(e){console.warn('[lamd] Animation "'+'laplace-succession'+'" failed to initialize:',e);}
 });
 </script>
-<div class="laplace-succession" style="text-align:center;" role="img"
-aria-label="laplace-succession"
-data-animation-frame="laplace-succession">
+<div class="laplace-succession" style="text-align:center;" role="img" aria-label="laplace-succession" data-animation-frame="laplace-succession">
 <object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/laplace-succession001.svg" width="70%" style=" ">
 </object>
 </div>
-<div class="laplace-succession" style="text-align:center;" role="img"
-aria-label="laplace-succession"
-data-animation-frame="laplace-succession">
+<div class="laplace-succession" style="text-align:center;" role="img" aria-label="laplace-succession" data-animation-frame="laplace-succession">
 <object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/laplace-succession002.svg" width="70%" style=" ">
 </object>
 </div>
-<div class="laplace-succession" style="text-align:center;" role="img"
-aria-label="laplace-succession"
-data-animation-frame="laplace-succession">
+<div class="laplace-succession" style="text-align:center;" role="img" aria-label="laplace-succession" data-animation-frame="laplace-succession">
 <object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/laplace-succession003.svg" width="70%" style=" ">
 </object>
 </div>
-<div class="laplace-succession" style="text-align:center;" role="img"
-aria-label="laplace-succession"
-data-animation-frame="laplace-succession">
+<div class="laplace-succession" style="text-align:center;" role="img" aria-label="laplace-succession" data-animation-frame="laplace-succession">
 <object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/laplace-succession004.svg" width="70%" style=" ">
 </object>
 </div>
-<div class="laplace-succession" style="text-align:center;" role="img"
-aria-label="laplace-succession"
-data-animation-frame="laplace-succession">
+<div class="laplace-succession" style="text-align:center;" role="img" aria-label="laplace-succession" data-animation-frame="laplace-succession">
 <object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/laplace-succession005.svg" width="70%" style=" ">
 </object>
 </div>
-<div class="laplace-succession" style="text-align:center;" role="img"
-aria-label="laplace-succession"
-data-animation-frame="laplace-succession">
+<div class="laplace-succession" style="text-align:center;" role="img" aria-label="laplace-succession" data-animation-frame="laplace-succession">
 <object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/laplace-succession006.svg" width="70%" style=" ">
 </object>
 </div>
-<div class="laplace-succession" style="text-align:center;" role="img"
-aria-label="laplace-succession"
-data-animation-frame="laplace-succession">
+<div class="laplace-succession" style="text-align:center;" role="img" aria-label="laplace-succession" data-animation-frame="laplace-succession">
 <object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/laplace-succession007.svg" width="70%" style=" ">
 </object>
 </div>
-<div class="laplace-succession" style="text-align:center;" role="img"
-aria-label="laplace-succession"
-data-animation-frame="laplace-succession">
+<div class="laplace-succession" style="text-align:center;" role="img" aria-label="laplace-succession" data-animation-frame="laplace-succession">
 <object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/laplace-succession008.svg" width="70%" style=" ">
 </object>
 </div>
-<div class="laplace-succession" style="text-align:center;" role="img"
-aria-label="laplace-succession"
-data-animation-frame="laplace-succession">
+<div class="laplace-succession" style="text-align:center;" role="img" aria-label="laplace-succession" data-animation-frame="laplace-succession">
 <object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/laplace-succession009.svg" width="70%" style=" ">
 </object>
 </div>
-<div class="laplace-succession" style="text-align:center;" role="img"
-aria-label="laplace-succession"
-data-animation-frame="laplace-succession">
+<div class="laplace-succession" style="text-align:center;" role="img" aria-label="laplace-succession" data-animation-frame="laplace-succession">
 <object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/laplace-succession010.svg" width="70%" style=" ">
 </object>
 </div>
-<div class="laplace-succession" style="text-align:center;" role="img"
-aria-label="laplace-succession"
-data-animation-frame="laplace-succession">
+<div class="laplace-succession" style="text-align:center;" role="img" aria-label="laplace-succession" data-animation-frame="laplace-succession">
 <object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/laplace-succession011.svg" width="70%" style=" ">
 </object>
 </div>
-<div class="laplace-succession" style="text-align:center;" role="img"
-aria-label="laplace-succession"
-data-animation-frame="laplace-succession">
+<div class="laplace-succession" style="text-align:center;" role="img" aria-label="laplace-succession" data-animation-frame="laplace-succession">
 <object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/laplace-succession012.svg" width="70%" style=" ">
 </object>
 </div>
@@ -932,32 +678,17 @@ data-animation-frame="laplace-succession">
 </section>
 <section id="entropy-day-by-day" class="slide level2">
 <h2>Entropy Day by Day</h2>
-<p>Track differential entropy of the belief <span
-class="math inline">\(p(\theta)\)</span> as sunrises arrive.</p>
+<p>Track differential entropy of the belief <span class="math inline">\(p(\theta)\)</span> as sunrises arrive.</p>
 <div>
 <ul>
-<li class="fragment">Prior: <span
-class="math inline">\(p(\theta)=1\)</span> on <span
-class="math inline">\([0,1]\)</span> <span
-class="math inline">\(\Rightarrow\)</span> <span
-class="math inline">\(H_0=0\)</span></li>
-<li class="fragment">After <span class="math inline">\(n\)</span> rises:
-<span class="math inline">\(p(\theta)=(n+1)\theta^{n}\)</span></li>
-<li class="fragment"><span
-class="math inline">\(H_n=\dfrac{n}{n+1}-\log(n+1)\)</span> (nats)</li>
-<li class="fragment">Day <span class="math inline">\(n\)</span>
-information gain: <span
-class="math inline">\(I_n=H_{n-1}-H_n=\log\!\left(1+\dfrac{1}{n}\right)-\dfrac{1}{n(n+1)}\)</span></li>
+<li class="fragment">Prior: <span class="math inline">\(p(\theta)=1\)</span> on <span class="math inline">\([0,1]\)</span> <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(H_0=0\)</span></li>
+<li class="fragment">After <span class="math inline">\(n\)</span> rises: <span class="math inline">\(p(\theta)=(n+1)\theta^{n}\)</span></li>
+<li class="fragment"><span class="math inline">\(H_n=\dfrac{n}{n+1}-\log(n+1)\)</span> (nats)</li>
+<li class="fragment">Day <span class="math inline">\(n\)</span> information gain: <span class="math inline">\(I_n=H_{n-1}-H_n=\log\!\left(1+\dfrac{1}{n}\right)-\dfrac{1}{n(n+1)}\)</span></li>
 </ul>
 </div>
 <aside class="notes">
-Board the one-line integral for <span
-class="math inline">\(H_n\)</span>. Emphasise: entropy of the <em>belief
-about</em> <span class="math inline">\(\theta\)</span> falls (becomes
-more negative); that fall is the information gained. Uniform<span
-class="math inline">\([0,1]\)</span> has <span
-class="math inline">\(H=0\)</span> by convention of differential entropy
-— not ``zero uncertainty’’ in the Shannon discrete sense.
+Board the one-line integral for <span class="math inline">\(H_n\)</span>. Emphasise: entropy of the <em>belief about</em> <span class="math inline">\(\theta\)</span> falls (becomes more negative); that fall is the information gained. Uniform<span class="math inline">\([0,1]\)</span> has <span class="math inline">\(H=0\)</span> by convention of differential entropy — not ``zero uncertainty’’ in the Shannon discrete sense.
 </aside>
 </section>
 <section id="section-2" class="slide level2">
@@ -969,32 +700,22 @@ class="math inline">\(H=0\)</span> by convention of differential entropy
 <h2>From Insufficient Reason to MaxEnt</h2>
 <div>
 <ul>
-<li class="fragment">Insufficient reason: uniform when we know only the
-outcomes (or only <span
-class="math inline">\(\theta\in[0,1]\)</span>)</li>
-<li class="fragment">Rule of succession: same idea, after observing
-counts</li>
-<li class="fragment">Jaynes: maximise <span
-class="math inline">\(H(p)\)</span> subject to whatever we <em>do</em>
-know</li>
-<li class="fragment">No extra constraints <span
-class="math inline">\(\Rightarrow\)</span> MaxEnt recovers <span
-class="math inline">\(p_i = 1/n\)</span></li>
-<li class="fragment">Mean energy (or other moments) <span
-class="math inline">\(\Rightarrow\)</span> exponential family</li>
+<li class="fragment">Insufficient reason: uniform when we know only the outcomes (or only <span class="math inline">\(\theta\in[0,1]\)</span>)</li>
+<li class="fragment">Rule of succession: same idea, after observing counts</li>
+<li class="fragment">Jaynes: maximise <span class="math inline">\(H(p)\)</span> subject to whatever we <em>do</em> know</li>
+<li class="fragment">No extra constraints <span class="math inline">\(\Rightarrow\)</span> MaxEnt recovers <span class="math inline">\(p_i = 1/n\)</span></li>
+<li class="fragment">Mean energy (or other moments) <span class="math inline">\(\Rightarrow\)</span> exponential family</li>
 </ul>
 </div>
 <aside class="notes">
-The punchline: MaxEnt is Laplace’s principle with constraints. Uniform /
-rule of succession are the empty-moment cases; Boltzmann and the
-Gaussian arrive when we add moment constraints.
+The punchline: MaxEnt is Laplace’s principle with constraints. Uniform / rule of succession are the empty-moment cases; Boltzmann and the Gaussian arrive when we add moment constraints.
 </aside>
 </section>
 <section id="edwin-jaynes" class="slide level2">
 <h2>Edwin Jaynes</h2>
 <div class="figure">
 <div id="e-t-jaynes-figure" class="figure-frame">
-<div class="centered" style="">
+<div class="centered centered" style="">
 <img class="" src="https://mlatcl.github.io/iei/slides/diagrams/physics/e-t-jaynes.jpg" width="40%" height="auto" align="center" style="background:none; border:none; box-shadow:none; display:block; margin-left:auto; margin-right:auto;vertical-align:middle">
 </div>
 </div>
@@ -1006,11 +727,8 @@ Ed Jaynes who developed the maximum entropy principle
 <section id="maximum-entropy-motivation" class="slide level2">
 <h2>Maximum Entropy Motivation</h2>
 <ul>
-<li><span class="citation" data-cites="Jaynes-information57">Jaynes
-(1957)</span>: Statistical mechanics as inference with incomplete
-information</li>
-<li>Maximum entropy principle: maximise uncertainty given
-constraints</li>
+<li><span class="citation" data-cites="Jaynes-information57">Jaynes (1957)</span>: Statistical mechanics as inference with incomplete information</li>
+<li>Maximum entropy principle: maximise uncertainty given constraints</li>
 <li>Avoids unwarranted assumptions beyond available data</li>
 </ul>
 </section>
@@ -1018,14 +736,11 @@ constraints</li>
 <h2>Dice Example</h2>
 <div>
 <ul>
-<li class="fragment">Dice example: Average result 4.5 instead of
-3.5</li>
+<li class="fragment">Dice example: Average result 4.5 instead of 3.5</li>
 <li class="fragment">Constraints:
 <ul>
-<li class="fragment"><span class="math inline">\(\sum_{n=1}^6 P_n =
-1\)</span> (normalization)</li>
-<li class="fragment"><span class="math inline">\(\sum_{n=1}^6 nP_n =
-4.5\)</span> (observed average)</li>
+<li class="fragment"><span class="math inline">\(\sum_{n=1}^6 P_n = 1\)</span> (normalization)</li>
+<li class="fragment"><span class="math inline">\(\sum_{n=1}^6 nP_n = 4.5\)</span> (observed average)</li>
 </ul></li>
 </ul>
 </div>
@@ -1056,9 +771,7 @@ Roll ×100
 </button>
 </div>
 <div style="text-align:center;line-height:1.6;font-size:0.85em">
-<p>Rolls: <strong id="dieroll-count">0</strong><br> Sample mean: <span
-id="dieroll-mean">—</span><br> H(p): <span id="dieroll-entropy"
-style="color:#2ecc71">—</span></p>
+<p>Rolls: <strong id="dieroll-count">0</strong><br> Sample mean: <span id="dieroll-mean">—</span><br> H(p): <span id="dieroll-entropy" style="color:#2ecc71">—</span></p>
 </div>
 <button id="dieroll-reset">
 Reset history
@@ -1097,35 +810,21 @@ Low-biased: mean 2
 </div>
 </div>
 <aside class="notes">
-Interactive die-roll simulation. Click the die or press Roll to sample
-from the configured distribution. The histogram shows empirical relative
-frequencies (coloured bars) overlaid on the theoretical probabilities
-(dashed outlines). Use the sliders to set arbitrary outcome weights, or
-click a preset to load the uniform distribution (mean 3.5), the Jaynes
-maximum-entropy distribution (mean 4.5), the simple 50/50 distribution
-(faces 4 and 5 equally, mean 4.5 with minimal entropy), or a low-biased
-distribution (mean 2).
+Interactive die-roll simulation. Click the die or press Roll to sample from the configured distribution. The histogram shows empirical relative frequencies (coloured bars) overlaid on the theoretical probabilities (dashed outlines). Use the sliders to set arbitrary outcome weights, or click a preset to load the uniform distribution (mean 3.5), the Jaynes maximum-entropy distribution (mean 4.5), the simple 50/50 distribution (faces 4 and 5 equally, mean 4.5 with minimal entropy), or a low-biased distribution (mean 2).
 </aside>
 </section>
-<section id="maxent-recovers-boltzmann-and-gaussian"
-class="slide level2">
+<section id="maxent-recovers-boltzmann-and-gaussian" class="slide level2">
 <h2>MaxEnt Recovers Boltzmann and Gaussian</h2>
-<p>Jaynes’ die (mean 4.5, not 3.5) is the running example. The same
-Lagrange move recovers physics and statistics.</p>
+<p>Jaynes’ die (mean 4.5, not 3.5) is the running example. The same Lagrange move recovers physics and statistics.</p>
 <div>
 <ul>
-<li class="fragment">One constraint: mean energy <span
-class="math inline">\(\Rightarrow\)</span> <span
-class="math inline">\(p_i \propto e^{-\beta E_i}\)</span></li>
-<li class="fragment">Two constraints: mean and variance <span
-class="math inline">\(\Rightarrow\)</span> Gaussian</li>
-<li class="fragment">Lagrange multiplier on energy is coldness <span
-class="math inline">\(\beta\)</span> from week 1</li>
+<li class="fragment">One constraint: mean energy <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(p_i \propto e^{-\beta E_i}\)</span></li>
+<li class="fragment">Two constraints: mean and variance <span class="math inline">\(\Rightarrow\)</span> Gaussian</li>
+<li class="fragment">Lagrange multiplier on energy is coldness <span class="math inline">\(\beta\)</span> from week 1</li>
 </ul>
 </div>
 <aside class="notes">
-LO5. After the die demo, the canonical ensemble and the Gaussian are the
-same MaxEnt pattern. Worksheet 2 implements the die.
+LO5. After the die demo, the canonical ensemble and the Gaussian are the same MaxEnt pattern. Worksheet 2 implements the die.
 </aside>
 </section>
 <section id="section-4" class="slide level2">
@@ -1140,28 +839,19 @@ same MaxEnt pattern. Worksheet 2 implements the die.
 Jaynes’ die: MaxEnt subject to mean 4.5 versus the uniform distribution.
 </aside>
 </section>
-<section id="derivation-of-the-boltzmann-distribution"
-class="slide level2">
+<section id="derivation-of-the-boltzmann-distribution" class="slide level2">
 <h2>Derivation of the Boltzmann Distribution</h2>
-<p>For fixed mean energy <span class="math inline">\(U\)</span>, maximum
-entropy recovers Boltzmann weights.</p>
+<p>For fixed mean energy <span class="math inline">\(U\)</span>, maximum entropy recovers Boltzmann weights.</p>
 <div>
 <ul>
-<li class="fragment">Constraints: <span class="math inline">\(\sum_i p_i
-= 1\)</span> and <span class="math inline">\(\sum_i p_i E_i =
-U\)</span></li>
-<li class="fragment">MaxEnt: <span class="math inline">\(p_i \propto
-e^{-\beta E_i}\)</span> with coldness <span class="math inline">\(\beta
-= 1/k_B T\)</span></li>
-<li class="fragment">Normalise: <span
-class="math inline">\(Z(\beta)=\sum_i e^{-\beta E_i}\)</span>, so <span
-class="math inline">\(p_i = e^{-\beta E_i}/Z\)</span></li>
+<li class="fragment">Constraints: <span class="math inline">\(\sum_i p_i = 1\)</span> and <span class="math inline">\(\sum_i p_i E_i = U\)</span></li>
+<li class="fragment">MaxEnt: <span class="math inline">\(p_i \propto e^{-\beta E_i}\)</span> with coldness <span class="math inline">\(\beta = 1/k_B T\)</span></li>
+<li class="fragment">Normalise: <span class="math inline">\(Z(\beta)=\sum_i e^{-\beta E_i}\)</span>, so <span class="math inline">\(p_i = e^{-\beta E_i}/Z\)</span></li>
 </ul>
 </div>
 <!-- Board derivation: Lagrange multipliers → Boltzmann. Coldness $\beta$ is the multiplier on mean energy; $T$ is the bath reading. Two-state occupations for intuition. -->
 <aside class="notes">
-LO5. This is the derivation postponed from week 2. Board the Lagrange
-multipliers; do not treat the formula as new.
+LO5. This is the derivation postponed from week 2. Board the Lagrange multipliers; do not treat the formula as new.
 </aside>
 </section>
 <section id="section-5" class="slide level2">
@@ -1173,75 +863,37 @@ multipliers; do not treat the formula as new.
 </div>
 </div>
 <aside class="notes">
-Occupation of a two-state system as coldness increases. At low <span
-class="math inline">\(\beta\)</span> both states are populated; at high
-<span class="math inline">\(\beta\)</span> the ground state dominates.
+Occupation of a two-state system as coldness increases. At low <span class="math inline">\(\beta\)</span> both states are populated; at high <span class="math inline">\(\beta\)</span> the ground state dominates.
 </aside>
 </section>
 <section id="maxent-under-constraints-the-proof" class="slide level2">
 <h2>MaxEnt Under Constraints: the Proof</h2>
-<p>Constrained MaxEnt on a discrete support gives an exponential
-family.</p>
+<p>Constrained MaxEnt on a discrete support gives an exponential family.</p>
 <div>
 <ul>
-<li class="fragment">Discrete <span class="math inline">\(x_i\)</span>;
-maximise <span class="math inline">\(H(p)=-\sum_i p_i\log
-p_i\)</span></li>
-<li class="fragment">Constraints: <span class="math inline">\(\sum_i
-p_i=1\)</span> and <span class="math inline">\(\sum_i p_i
-f_k(x_i)=\langle f_k\rangle\)</span> for <span
-class="math inline">\(k=1,\ldots,m\)</span></li>
-<li class="fragment">Lagrangian: <span
-class="math inline">\(\mathscr{L}=\sum_i p_i\log p_i +
-\lambda_0\bigl(\sum_i p_i-1\bigr)+\sum_k \lambda_k\bigl(\sum_i p_i
-f_k(x_i)-\langle f_k\rangle\bigr)\)</span></li>
-<li class="fragment">Stationarity: <span
-class="math inline">\(\partial\mathscr{L}/\partial p_i=0\)</span> <span
-class="math inline">\(\Rightarrow\)</span> <span
-class="math inline">\(p_i\propto e^{-\sum_k \lambda_k
-f_k(x_i)}\)</span></li>
+<li class="fragment">Discrete <span class="math inline">\(x_i\)</span>; maximise <span class="math inline">\(H(p)=-\sum_i p_i\log p_i\)</span></li>
+<li class="fragment">Constraints: <span class="math inline">\(\sum_i p_i=1\)</span> and <span class="math inline">\(\sum_i p_i f_k(x_i)=\langle f_k\rangle\)</span> for <span class="math inline">\(k=1,\ldots,m\)</span></li>
+<li class="fragment">Lagrangian: <span class="math inline">\(\mathscr{L}=\sum_i p_i\log p_i + \lambda_0\bigl(\sum_i p_i-1\bigr)+\sum_k \lambda_k\bigl(\sum_i p_i f_k(x_i)-\langle f_k\rangle\bigr)\)</span></li>
+<li class="fragment">Stationarity: <span class="math inline">\(\partial\mathscr{L}/\partial p_i=0\)</span> <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(p_i\propto e^{-\sum_k \lambda_k f_k(x_i)}\)</span></li>
 </ul>
 </div>
 <aside class="notes">
-The stationarity condition is <span class="math inline">\(\partial
-L/\partial p_i=0\)</span>. Sign: Jaynes subtracts the constraints so the
-exponential comes out with a minus. Class preferred <span
-class="math inline">\(\mu\)</span> over <span
-class="math inline">\(\lambda_0\)</span> for the normalisation
-multiplier. One energy constraint <span
-class="math inline">\(\Rightarrow\lambda=\beta\)</span>. As taught:
-board derivation; name the exponential family and stop if the clock is
-gone.
+The stationarity condition is <span class="math inline">\(\partial L/\partial p_i=0\)</span>. Sign: Jaynes subtracts the constraints so the exponential comes out with a minus. Class preferred <span class="math inline">\(\mu\)</span> over <span class="math inline">\(\lambda_0\)</span> for the normalisation multiplier. One energy constraint <span class="math inline">\(\Rightarrow\lambda=\beta\)</span>. As taught: board derivation; name the exponential family and stop if the clock is gone.
 </aside>
 </section>
 <section id="minimise-kl-to-a-measure" class="slide level2">
 <h2>Minimise KL to a Measure</h2>
-<p>Equivalently minimise <span class="math inline">\(\text{KL}\left(
-f\,\|\,m \right)\)</span> under a kinetic constraint. The answer depends
-on <span class="math inline">\(m\)</span>.</p>
+<p>Equivalently minimise <span class="math inline">\(\text{KL}\left( f\,\|\,m \right)\)</span> under a kinetic constraint. The answer depends on <span class="math inline">\(m\)</span>.</p>
 <div>
 <ul>
-<li class="fragment">Same constraint: <span
-class="math inline">\(\langle\tfrac12
-m_{\mathrm{mass}}v^2\rangle\)</span> fixed</li>
-<li class="fragment">Minimise <span
-class="math inline">\(\text{KL}\left( f\,\|\,m \right)\)</span> (or
-maximise <span class="math inline">\(-D(f\|m)\)</span>)</li>
-<li class="fragment"><span class="math inline">\(m\)</span> Lebesgue on
-component <span class="math inline">\(v_x\)</span> <span
-class="math inline">\(\Rightarrow\)</span> Gaussian</li>
-<li class="fragment"><span class="math inline">\(m\)</span> Lebesgue on
-3D velocity (<span class="math inline">\(m(v)\propto v^2\)</span> in
-speed) <span class="math inline">\(\Rightarrow\)</span>
-Maxwell–Boltzmann</li>
+<li class="fragment">Same constraint: <span class="math inline">\(\langle\tfrac12 m_{\mathrm{mass}}v^2\rangle\)</span> fixed</li>
+<li class="fragment">Minimise <span class="math inline">\(\text{KL}\left( f\,\|\,m \right)\)</span> (or maximise <span class="math inline">\(-D(f\|m)\)</span>)</li>
+<li class="fragment"><span class="math inline">\(m\)</span> Lebesgue on component <span class="math inline">\(v_x\)</span> <span class="math inline">\(\Rightarrow\)</span> Gaussian</li>
+<li class="fragment"><span class="math inline">\(m\)</span> Lebesgue on 3D velocity (<span class="math inline">\(m(v)\propto v^2\)</span> in speed) <span class="math inline">\(\Rightarrow\)</span> Maxwell–Boltzmann</li>
 </ul>
 </div>
 <aside class="notes">
-Continuous MaxEnt example after the discrete die. Relative entropy to
-<span class="math inline">\(m\)</span> is the KL we named earlier. The
-<span class="math inline">\(v^2\)</span> that looked like a Jacobian is
-the density of states — the reference measure in the speed coordinate.
-Same principle; declared prior.
+Continuous MaxEnt example after the discrete die. Relative entropy to <span class="math inline">\(m\)</span> is the KL we named earlier. The <span class="math inline">\(v^2\)</span> that looked like a Jacobian is the density of states — the reference measure in the speed coordinate. Same principle; declared prior.
 </aside>
 </section>
 <section id="same-principle-declared-prior" class="slide level2">
@@ -1256,40 +908,23 @@ m\sim v^2\,dv &amp; \Rightarrow\text{Maxwell--Boltzmann}
 \]</span> </small></p>
 <div>
 <ul>
-<li class="fragment">Exponential family always carries a base
-measure</li>
-<li class="fragment">For the ideal gas, that base measure is the density
-of states</li>
-<li class="fragment">Coordinate dependence of <span
-class="math inline">\(h\)</span> was a symptom; <span
-class="math inline">\(\text{KL}\left( f\,\|\,m \right)\)</span> is the
-cure</li>
+<li class="fragment">Exponential family always carries a base measure</li>
+<li class="fragment">For the ideal gas, that base measure is the density of states</li>
+<li class="fragment">Coordinate dependence of <span class="math inline">\(h\)</span> was a symptom; <span class="math inline">\(\text{KL}\left( f\,\|\,m \right)\)</span> is the cure</li>
 </ul>
 </div>
 <aside class="notes">
-Same principle, continuous reading: minimise <span
-class="math inline">\(\text{KL}\left( f\,\|\,m \right)\)</span> at fixed
-mean kinetic energy. Lebesgue on <span
-class="math inline">\(v_x\)</span> gives a Gaussian component; Lebesgue
-on <span class="math inline">\(\mathbb{R}^3\)</span> (shell <span
-class="math inline">\(v^2\)</span> in speed) gives Maxwell–Boltzmann.
-The <span class="math inline">\(v^2\)</span> is the density of states.
-As taught 10 November: not walked as a dedicated block — Week 6 / unread
-continuous reading.
+Same principle, continuous reading: minimise <span class="math inline">\(\text{KL}\left( f\,\|\,m \right)\)</span> at fixed mean kinetic energy. Lebesgue on <span class="math inline">\(v_x\)</span> gives a Gaussian component; Lebesgue on <span class="math inline">\(\mathbb{R}^3\)</span> (shell <span class="math inline">\(v^2\)</span> in speed) gives Maxwell–Boltzmann. The <span class="math inline">\(v^2\)</span> is the density of states. As taught 10 November: not walked as a dedicated block.
 </aside>
 </section>
-<section id="the-general-maximum-entropy-formalism"
-class="slide level2">
+<section id="the-general-maximum-entropy-formalism" class="slide level2">
 <h2>The General Maximum-Entropy Formalism</h2>
 <p><small> <span class="math display">\[
-p_i = \frac{\exp(-\lambda_1 f_1(x_i) - \ldots - \lambda_m
-f_m(x_i))}{Z(\lambda_1,\ldots,\lambda_m)}
+p_i = \frac{\exp(-\lambda_1 f_1(x_i) - \ldots - \lambda_m f_m(x_i))}{Z(\lambda_1,\ldots,\lambda_m)}
 \]</span> <span class="math display">\[
-Z(\ldots) = \sum_{i=1}^n \exp(-\lambda_1 f_1(x_i) - \ldots - \lambda_m
-f_m(x_i))
+Z(\ldots) = \sum_{i=1}^n \exp(-\lambda_1 f_1(x_i) - \ldots - \lambda_m f_m(x_i))
 \]</span> <span class="math display">\[
-\langle f_k \rangle = -\frac{\partial}{\partial \lambda_k}\log
-Z(\lambda_1,\ldots,\lambda_m) \quad k=1,2,\ldots,m.
+\langle f_k \rangle = -\frac{\partial}{\partial \lambda_k}\log Z(\lambda_1,\ldots,\lambda_m) \quad k=1,2,\ldots,m.
 \]</span></small></p>
 <!-- SECTION The Exponential Family -->
 </section>
@@ -1297,57 +932,29 @@ Z(\lambda_1,\ldots,\lambda_m) \quad k=1,2,\ldots,m.
 <h2>The Exponential Family</h2>
 <div>
 <ul>
-<li class="fragment">Write <span
-class="math inline">\(T_k(x_i)=f_k(x_i)\)</span>: sufficient statistics
-fixed by the constraints</li>
-<li class="fragment">MaxEnt solution: <span
-class="math inline">\(p_i=\dfrac{e^{-\sum_k \lambda_k
-T_k(x_i)}}{Z}\)</span> on the discrete support</li>
-<li class="fragment">Exponential family: <span
-class="math inline">\(p(x\mid\boldsymbol{\theta})\propto
-\exp\bigl(\boldsymbol{\theta}\!\cdot\!
-T(x)-A(\boldsymbol{\theta})\bigr)\)</span></li>
-<li class="fragment">Identification: <span
-class="math inline">\(\boldsymbol{\theta} =
--\boldsymbol{\lambda}\)</span> (natural parameters <span
-class="math inline">\(=\)</span> minus Lagrange multipliers)</li>
-<li class="fragment">Same object: <span
-class="math inline">\(A(\boldsymbol{\theta})=\log
-Z(-\boldsymbol{\theta})\)</span></li>
+<li class="fragment">Write <span class="math inline">\(T_k(x_i)=f_k(x_i)\)</span>: sufficient statistics fixed by the constraints</li>
+<li class="fragment">MaxEnt solution: <span class="math inline">\(p_i=\dfrac{e^{-\sum_k \lambda_k T_k(x_i)}}{Z}\)</span> on the discrete support</li>
+<li class="fragment">Exponential family: <span class="math inline">\(p(x\mid\boldsymbol{\theta})\propto \exp\bigl(\boldsymbol{\theta}\!\cdot\! T(x)-\psi(\boldsymbol{\theta})\bigr)\)</span></li>
+<li class="fragment">Identification: <span class="math inline">\(\boldsymbol{\theta} = -\boldsymbol{\lambda}\)</span> (natural parameters <span class="math inline">\(=\)</span> minus Lagrange multipliers)</li>
+<li class="fragment">Same object: <span class="math inline">\(\psi(\boldsymbol{\theta})=\log Z(-\boldsymbol{\theta})\)</span></li>
 </ul>
 </div>
 <aside class="notes">
-LO6 punchline. As taught 10 November: name <span
-class="math inline">\(\theta=-\lambda\)</span> and that fitting the
-<span class="math inline">\(\lambda\)</span>s is maximum likelihood; do
-not develop the CGF slides. Physics sign: Boltzmann uses <span
-class="math inline">\(p_i\propto e^{-\beta E_i}\)</span> so <span
-class="math inline">\(\theta_1=-\beta\)</span> when <span
-class="math inline">\(T=E\)</span>. CGF next week.
+LO6 punchline. As taught 10 November: name <span class="math inline">\(\theta=-\lambda\)</span> and that fitting the <span class="math inline">\(\lambda\)</span>s is maximum likelihood. The CGF and the three members are Week 6. Physics sign: Boltzmann uses <span class="math inline">\(p_i\propto e^{-\beta E_i}\)</span> so <span class="math inline">\(\theta_1=-\beta\)</span> when <span class="math inline">\(T=E\)</span>.
 </aside>
 </section>
-<section id="log-z-as-cumulant-generating-function"
-class="slide level2">
-<h2><span class="math inline">\(\log Z\)</span> as Cumulant Generating
-Function</h2>
+<section id="log-z-as-cumulant-generating-function" class="slide level2">
+<h2><span class="math inline">\(\log Z\)</span> as Cumulant Generating Function</h2>
 <div>
 <ul>
-<li class="fragment">Debrief: <span class="math inline">\(F=-k_BT\log
-Z\)</span> (available energy)</li>
-<li class="fragment">MaxEnt / exponential family: <span
-class="math inline">\(A(\boldsymbol{\theta})=\log
-Z(-\boldsymbol{\theta})\)</span></li>
-<li class="fragment">Mean parameters: <span
-class="math inline">\(\boldsymbol{\eta}=\nabla A=\langle
-T\rangle\)</span></li>
-<li class="fragment">Hessian: <span class="math inline">\(G=\nabla^2
-A=\mathrm{Cov}[T]\)</span> (Fisher metric in week 6)</li>
+<li class="fragment">Debrief: <span class="math inline">\(F=-k_BT\log Z\)</span> (available energy)</li>
+<li class="fragment">MaxEnt / exponential family: <span class="math inline">\(\psi(\boldsymbol{\theta})=\log Z(-\boldsymbol{\theta})\)</span></li>
+<li class="fragment">Mean parameters: <span class="math inline">\(\boldsymbol{\eta}=\nabla\psi=\langle T\rangle\)</span></li>
+<li class="fragment">Hessian: <span class="math inline">\(\nabla^2 \psi=\mathrm{Cov}[T]\)</span> (covariance; not thermodynamic length)</li>
 </ul>
 </div>
 <aside class="notes">
-Solid CGF review today. Legendre dual <span
-class="math inline">\(H=A-\theta\cdot\eta\)</span> waits for week 6; do
-not derive the transform now.
+Unread on 10 November. Week 6 teaches <span class="math inline">\(\psi\)</span> as a cumulant generating function and stops at the covariance. Do not derive the Legendre transform, and do not follow the include into Crooks or thermodynamic length.
 </aside>
 </section>
 <section id="the-partition-function" class="slide level2">
@@ -1355,24 +962,16 @@ not derive the transform now.
 </section>
 <section id="z-as-generating-function" class="slide level2">
 <h2><span class="math inline">\(Z\)</span> as Generating Function</h2>
-<p>The canonical ensemble from the bath: fix <span
-class="math inline">\(\beta\)</span> and let the small system
-fluctuate.</p>
+<p>The canonical ensemble from the bath: fix <span class="math inline">\(\beta\)</span> and let the small system fluctuate.</p>
 <div>
 <ul>
-<li class="fragment"><span class="math inline">\(Z(\beta) = \sum_i
-e^{-\beta E_i}\)</span></li>
-<li class="fragment"><span class="math inline">\(U = -\partial_\beta
-\log Z\)</span>, <span class="math inline">\(F = -\beta^{-1}\log
-Z\)</span>, <span class="math inline">\(S = \beta(U-F)\)</span></li>
-<li class="fragment">Equilibrium = on the <span
-class="math inline">\(\beta\)</span>-manifold; finite-time driving
-leaves it</li>
+<li class="fragment"><span class="math inline">\(Z(\beta) = \sum_i e^{-\beta E_i}\)</span></li>
+<li class="fragment"><span class="math inline">\(U = -\partial_\beta \log Z\)</span>, <span class="math inline">\(F = -\beta^{-1}\log Z\)</span>, <span class="math inline">\(S = \beta(U-F)\)</span></li>
+<li class="fragment">Equilibrium identities on the <span class="math inline">\(\beta\)</span>-manifold</li>
 </ul>
 </div>
 <aside class="notes">
-LO3. Work the two-state example on the board. Finite-time cost: named
-lecture 2, Crooks week 6.
+LO3. Work the two-state example on the board. These are equilibrium identities. Do not open finite-time dissipation or thermodynamic length from this slide.
 </aside>
 </section>
 <section id="section-6" class="slide level2">
@@ -1384,19 +983,15 @@ lecture 2, Crooks week 6.
 </div>
 </div>
 <aside class="notes">
-Thermodynamic quantities from <span
-class="math inline">\(Z(\beta)\)</span> for the two-state system used as
-a running example.
+Thermodynamic quantities from <span class="math inline">\(Z(\beta)\)</span> for the two-state system used as a running example.
 </aside>
 </section>
 <section id="section-7" class="slide level2">
 <h2></h2>
 <div>
 <ul>
-<li class="fragment"><span class="math inline">\(U = -\partial_\beta
-\log Z\)</span></li>
-<li class="fragment"><span class="math inline">\(F = -\beta^{-1}\log
-Z\)</span></li>
+<li class="fragment"><span class="math inline">\(U = -\partial_\beta \log Z\)</span></li>
+<li class="fragment"><span class="math inline">\(F = -\beta^{-1}\log Z\)</span></li>
 <li class="fragment">Bath justifies the canonical ensemble</li>
 </ul>
 </div>
@@ -1412,14 +1007,8 @@ Z\)</span></li>
 <section id="definition" class="slide level2">
 <h2>Definition</h2>
 <p><span class="math display">\[
-p(\mathbf{x} | \boldsymbol{\theta}) = \exp\left(\boldsymbol{\theta}^\top
-T(\mathbf{x}) - \mathcal{A}(\boldsymbol{\theta})\right) h(\mathbf{x})
-\]</span> * <span class="math inline">\(\boldsymbol{\theta}\)</span>:
-natural parameters * <span class="math inline">\(T(\mathbf{x})\)</span>:
-sufficient statistics * <span
-class="math inline">\(\mathcal{A}(\boldsymbol{\theta})\)</span>: log
-partition function * <span class="math inline">\(h(\mathbf{x})\)</span>:
-base measure</p>
+p(\mathbf{x} | \boldsymbol{\theta}) = \exp\left(\boldsymbol{\theta}^\top T(\mathbf{x}) - \mathcal{A}(\boldsymbol{\theta})\right) h(\mathbf{x})
+\]</span> * <span class="math inline">\(\boldsymbol{\theta}\)</span>: natural parameters * <span class="math inline">\(T(\mathbf{x})\)</span>: sufficient statistics * <span class="math inline">\(\mathcal{A}(\boldsymbol{\theta})\)</span>: log partition function * <span class="math inline">\(h(\mathbf{x})\)</span>: base measure</p>
 </section>
 <section id="why-natural-parameters" class="slide level2">
 <h2>Why “Natural” Parameters?</h2>
@@ -1430,89 +1019,57 @@ base measure</p>
 <li>Simplifies entropy calculations</li>
 </ul>
 </section>
-<section id="the-log-partition-function-as-cumulant-generator"
-class="slide level2">
+<section id="the-log-partition-function-as-cumulant-generator" class="slide level2">
 <h2>The Log Partition Function as Cumulant Generator</h2>
 <p><span class="math display">\[
-\mathcal{A}(\boldsymbol{\theta}) = \log \int
-\exp\left(\boldsymbol{\theta}^\top T(\mathbf{x})\right) h(\mathbf{x}) \,
-d\mathbf{x}
+\mathcal{A}(\boldsymbol{\theta}) = \log \int \exp\left(\boldsymbol{\theta}^\top T(\mathbf{x})\right) h(\mathbf{x}) \, d\mathbf{x}
 \]</span>}</p>
 </section>
 <section id="cumulants-from-derivatives" class="slide level2">
 <h2>Cumulants from Derivatives</h2>
 <ul>
-<li><span class="math inline">\(\nabla \mathcal{A}(\boldsymbol{\theta})
-= \mathbb{E}[T(\mathbf{x})]\)</span> (mean)</li>
-<li><span class="math inline">\(\nabla^2
-\mathcal{A}(\boldsymbol{\theta}) = \mathrm{Cov}[T(\mathbf{x})]\)</span>
-(covariance)</li>
+<li><span class="math inline">\(\nabla \mathcal{A}(\boldsymbol{\theta}) = \mathbb{E}[T(\mathbf{x})]\)</span> (mean)</li>
+<li><span class="math inline">\(\nabla^2 \mathcal{A}(\boldsymbol{\theta}) = \mathrm{Cov}[T(\mathbf{x})]\)</span> (covariance)</li>
 <li>Higher derivatives give higher cumulants</li>
 </ul>
 </section>
 <section id="connection-to-fisher-information" class="slide level2">
 <h2>Connection to Fisher Information</h2>
 <p><span class="math display">\[
-G(\boldsymbol{\theta}) = \nabla^2 \mathcal{A}(\boldsymbol{\theta}) =
-\mathrm{Cov}_{\boldsymbol{\theta}}[T(\mathbf{x})]
-\]</span> * R.A. Fisher: bounds estimation accuracy (Cramér-Rao) *
-Fisher information = Hessian of <span
-class="math inline">\(\mathcal{A}\)</span> * Fisher information =
-Covariance of sufficient statistics * Defines geometry of information
-space * <em>More details in next section</em></p>
+G(\boldsymbol{\theta}) = \nabla^2 \mathcal{A}(\boldsymbol{\theta}) = \mathrm{Cov}_{\boldsymbol{\theta}}[T(\mathbf{x})]
+\]</span> * R.A. Fisher: bounds estimation accuracy (Cramér-Rao) * Fisher information = Hessian of <span class="math inline">\(\mathcal{A}\)</span> * Fisher information = Covariance of sufficient statistics * Defines geometry of information space * <em>More details in next section</em></p>
 </section>
 <section id="entropy-in-natural-coordinates" class="slide level2">
 <h2>Entropy in Natural Coordinates</h2>
 <p><span class="math display">\[
-H(\boldsymbol{\theta}) = \mathcal{A}(\boldsymbol{\theta}) -
-\boldsymbol{\theta}^\top \boldsymbol{\mu}
-\]</span> where <span class="math inline">\(\boldsymbol{\mu} = \nabla
-\mathcal{A}(\boldsymbol{\theta})\)</span></p>
+H(\boldsymbol{\theta}) = \mathcal{A}(\boldsymbol{\theta}) - \boldsymbol{\theta}^\top \boldsymbol{\mu}
+\]</span> where <span class="math inline">\(\boldsymbol{\mu} = \nabla \mathcal{A}(\boldsymbol{\theta})\)</span></p>
 </section>
 <section id="why-natural-parameters-1" class="slide level2">
 <h2>Why Natural Parameters?</h2>
 <p><span class="math display">\[
-\nabla_{\boldsymbol{\theta}} H =
--G(\boldsymbol{\theta})\boldsymbol{\theta}
-\]</span> * <strong>Key result</strong> for information dynamics * Terms
-involving <span class="math inline">\(\nabla \mathcal{A}\)</span> cancel
-* Fisher information connects geometry to dynamics</p>
+\nabla_{\boldsymbol{\theta}} H = -G(\boldsymbol{\theta})\boldsymbol{\theta}
+\]</span> * <strong>Key result</strong> for information dynamics * Terms involving <span class="math inline">\(\nabla \mathcal{A}\)</span> cancel * Fisher information connects geometry to dynamics</p>
 </section>
 <section id="example-multivariate-gaussian" class="slide level2">
 <h2>Example: Multivariate Gaussian</h2>
 </section>
 <section id="gaussian-in-exponential-family-form" class="slide level2">
 <h2>Gaussian in Exponential Family Form</h2>
-<p><strong>Gaussian as exponential family:</strong> * <span
-class="math inline">\(\boldsymbol{\theta} =
-\Sigma^{-1}\boldsymbol{\mu}\)</span> (natural parameters) * <span
-class="math inline">\(T(\mathbf{x}) = \mathbf{x}\)</span> (sufficient
-statistics) * <span
-class="math inline">\(\mathcal{A}(\boldsymbol{\theta}) =
-\frac{1}{2}\boldsymbol{\theta}^\top\Sigma\boldsymbol{\theta} +
-\frac{1}{2}\log|\Sigma|\)</span></p>
+<p><strong>Gaussian as exponential family:</strong> * <span class="math inline">\(\boldsymbol{\theta} = \Sigma^{-1}\boldsymbol{\mu}\)</span> (natural parameters) * <span class="math inline">\(T(\mathbf{x}) = \mathbf{x}\)</span> (sufficient statistics) * <span class="math inline">\(\mathcal{A}(\boldsymbol{\theta}) = \frac{1}{2}\boldsymbol{\theta}^\top\Sigma\boldsymbol{\theta} + \frac{1}{2}\log|\Sigma|\)</span></p>
 </section>
 <section id="fisher-information-for-gaussian" class="slide level2">
 <h2>Fisher Information for Gaussian</h2>
 <p><span class="math display">\[
 G(\boldsymbol{\theta}) = \Sigma
-\]</span> * Fisher information = covariance * <span
-class="math inline">\(G^{-1} = \Sigma^{-1}\)</span> = precision * High
-variance → low Fisher info → harder estimation (looser Cramér-Rao) * Low
-variance → high Fisher info → easier estimation (tighter Cramér-Rao)</p>
+\]</span> * Fisher information = covariance * <span class="math inline">\(G^{-1} = \Sigma^{-1}\)</span> = precision * High variance → low Fisher info → harder estimation (looser Cramér-Rao) * Low variance → high Fisher info → easier estimation (tighter Cramér-Rao)</p>
 </section>
 <section id="example-categorical-distribution" class="slide level2">
 <h2>Example: Categorical Distribution</h2>
 </section>
-<section id="categorical-in-exponential-family-form"
-class="slide level2">
+<section id="categorical-in-exponential-family-form" class="slide level2">
 <h2>Categorical in Exponential Family Form</h2>
-<p><strong>Categorical distribution:</strong> * <span
-class="math inline">\(\boldsymbol{\theta} = (\log \pi_1, \ldots, \log
-\pi_{K-1})\)</span> * <span class="math inline">\(T(\mathbf{x}) = (x_1,
-\ldots, x_{K-1})\)</span> (one-hot) * <span
-class="math inline">\(\mathcal{A}(\boldsymbol{\theta}) =
-\log\left(\sum_{k=1}^{K-1} e^{\theta_k} + 1\right)\)</span></p>
+<p><strong>Categorical distribution:</strong> * <span class="math inline">\(\boldsymbol{\theta} = (\log \pi_1, \ldots, \log \pi_{K-1})\)</span> * <span class="math inline">\(T(\mathbf{x}) = (x_1, \ldots, x_{K-1})\)</span> (one-hot) * <span class="math inline">\(\mathcal{A}(\boldsymbol{\theta}) = \log\left(\sum_{k=1}^{K-1} e^{\theta_k} + 1\right)\)</span></p>
 </section>
 <section id="fisher-information-for-categorical" class="slide level2">
 <h2>Fisher Information for Categorical</h2>
@@ -1521,58 +1078,40 @@ G_{ij} = \begin{cases}
 \pi_i(1-\pi_i) &amp; i=j \\
 -\pi_i\pi_j &amp; i \neq j
 \end{cases}
-\]</span> * Rare categories → low Fisher info * Uniform distribution →
-balanced information</p>
+\]</span> * Rare categories → low Fisher info * Uniform distribution → balanced information</p>
 </section>
 <section id="why-exponential-families-matter" class="slide level2">
 <h2>Why Exponential Families Matter</h2>
-<p><strong>Why exponential families matter:</strong> * Emerge from
-maximum entropy principles * Define information geometry * Sufficient
-statistics capture all information * Computationally tractable *
-<strong>Clean form for information dynamics</strong></p>
+<p><strong>Why exponential families matter:</strong> * Emerge from maximum entropy principles * Define information geometry * Sufficient statistics capture all information * Computationally tractable * <strong>Clean form for information dynamics</strong></p>
 <aside class="notes">
-LO6. Two-level system = Bernoulli with <span
-class="math inline">\(\theta=-\beta\varepsilon\)</span>. Softmax and
-two-spin are the same theorem with richer <span
-class="math inline">\(T(x)\)</span>; name them if the clock is tight.
-Flag matrix exponential family for week 8.
+LO6. Two-level system = Bernoulli with <span class="math inline">\(\theta=-\beta\varepsilon\)</span>. Softmax and two-spin are the same theorem with richer <span class="math inline">\(T(x)\)</span>; name them if the clock is tight. Flag matrix exponential family for week 8.
 </aside>
 </section>
 <section id="three-perspectives-brief" class="slide level2">
 <h2>Three Perspectives (Brief)</h2>
-<p>Same <span class="math inline">\(H\)</span>; different operational
-assumptions about what probability is over.</p>
+<p>Same <span class="math inline">\(H\)</span>; different operational assumptions about what probability is over.</p>
 <div>
 <ul>
 <li class="fragment">Carnot/Clausius: engines and the second law</li>
 <li class="fragment">Shannon: a code</li>
 <li class="fragment">Szilard/Landauer: a bit in memory</li>
-<li class="fragment">Boltzmann: a macrostate; Jaynes: a state of
-knowledge</li>
-<li class="fragment">All layers: <span class="math inline">\(H\)</span>
-forbids, <span class="math inline">\(p\)</span> prescribes</li>
+<li class="fragment">Boltzmann: a macrostate; Jaynes: a state of knowledge</li>
+<li class="fragment">All layers: <span class="math inline">\(H\)</span> forbids, <span class="math inline">\(p\)</span> prescribes</li>
 </ul>
 </div>
 <aside class="notes">
-LO7 in brief. As taught 10 November: not reached. Full colour waits for
-Week 6 / week 8. Intended answer to ``how is entropy understood today?’’
-until week 8.
+LO7 in brief. As taught 10 November: not reached. Full colour waits for Worksheet 4 / week 8. Intended answer to ``how is entropy understood today?’’ until week 8.
 </aside>
 </section>
 <section id="define-this-week" class="slide level2">
 <h2>Define This Week</h2>
 <div>
 <ul>
-<li class="fragment">What is KL divergence (discrete and
-continuous)?</li>
-<li class="fragment">What is mutual information, and why is it a
-KL?</li>
+<li class="fragment">What is KL divergence (discrete and continuous)?</li>
+<li class="fragment">What is mutual information, and why is it a KL?</li>
 <li class="fragment">What is the maximum entropy principle?</li>
-<li class="fragment">What is the exponential family, and why <span
-class="math inline">\(\theta=-\lambda\)</span>?</li>
-<li class="fragment">Why is <span class="math inline">\(\log Z\)</span>
-(equivalently <span class="math inline">\(A\)</span>) a cumulant
-generating function? (named; developed next week)</li>
+<li class="fragment">What is the exponential family, and why <span class="math inline">\(\theta=-\lambda\)</span>?</li>
+<li class="fragment">Why is <span class="math inline">\(\log Z\)</span> a cumulant generating function? (developed in Week 6)</li>
 </ul>
 </div>
 </section>
@@ -1588,60 +1127,41 @@ generating function? (named; developed next week)</li>
 <section id="further-reading" class="slide level2 scrollable">
 <h2 class="scrollable">Further Reading</h2>
 <ul>
-<li><p>limiting density of discrete points of <span class="citation"
-data-cites="Jaynes-information63">Jaynes (1963)</span></p></li>
-<li><p>Chapter 12 of <span class="citation"
-data-cites="Cover:elements91">Cover and Thomas (1991)</span></p></li>
-<li><p>the whole paper of <span class="citation"
-data-cites="Jaynes-information57">Jaynes (1957)</span></p></li>
-<li><p>Chapter 22 of <span class="citation"
-data-cites="MacKay-information03">MacKay (2003)</span></p></li>
-<li><p>Chapters 11–12 of <span class="citation"
-data-cites="Jaynes-probability03">Jaynes (2003)</span></p></li>
+<li><p>limiting density of discrete points of <span class="citation" data-cites="Jaynes-information63">Jaynes (1963)</span></p></li>
+<li><p>Chapter 12 of <span class="citation" data-cites="Cover:elements91">Cover and Thomas (1991)</span></p></li>
+<li><p>the whole paper of <span class="citation" data-cites="Jaynes-information57">Jaynes (1957)</span></p></li>
+<li><p>Chapter 22 of <span class="citation" data-cites="MacKay-information03">MacKay (2003)</span></p></li>
+<li><p>Chapters 11–12 of <span class="citation" data-cites="Jaynes-probability03">Jaynes (2003)</span></p></li>
 </ul>
 </section>
 <section id="thanks" class="slide level2 scrollable">
 <h2 class="scrollable">Thanks!</h2>
 <ul>
 <li>company: <a href="https://trent.ai">Trent AI</a></li>
-<li>book: <a
-href="https://www.penguin.co.uk/books/455130/the-atomic-human-by-lawrence-neil-d/9780241625248">The
-Atomic Human</a></li>
+<li>book: <a href="https://www.penguin.co.uk/books/455130/the-atomic-human-by-lawrence-neil-d/9780241625248">The Atomic Human</a></li>
 <li>twitter: <a href="https://twitter.com/lawrennd">@lawrennd</a></li>
 <li><a href="https://the-atomic-human.ai">The Atomic Human</a></li>
-<li>newspaper: <a
-href="http://www.theguardian.com/profile/neil-lawrence">Guardian Profile
-Page</a></li>
-<li>blog: <a
-href="http://inverseprobability.com/blog.html">http://inverseprobability.com</a></li>
+<li>newspaper: <a href="http://www.theguardian.com/profile/neil-lawrence">Guardian Profile Page</a></li>
+<li>blog: <a href="http://inverseprobability.com/blog.html">http://inverseprobability.com</a></li>
 </ul>
 </section>
 <section id="references" class="slide level2 unnumbered scrollable">
 <h2 class="unnumbered scrollable">References</h2>
-<div id="refs" class="references csl-bib-body hanging-indent"
-role="list">
-<div id="ref-Cover:elements91" class="csl-entry" role="listitem">
-Cover, T.M., Thomas, J.A., 1991. Elements of information theory. Wiley,
-New York.
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-Cover:elements91" class="csl-entry" role="doc-biblioentry">
+Cover, T.M., Thomas, J.A., 1991. Elements of information theory. Wiley, New York.
 </div>
-<div id="ref-Jaynes-probability03" class="csl-entry" role="listitem">
-Jaynes, E.T., 2003. Probability theory: The logic of science. Cambridge
-University Press, Cambridge, UK.
+<div id="ref-Jaynes-probability03" class="csl-entry" role="doc-biblioentry">
+Jaynes, E.T., 2003. Probability theory: The logic of science. Cambridge University Press, Cambridge, UK.
 </div>
-<div id="ref-Jaynes-information63" class="csl-entry" role="listitem">
-Jaynes, E.T., 1963. Information theory and statistical mechanics, in:
-Ford, K.W. (Ed.), Brandeis University Summer Institute Lectures in
-Theoretical Physics, Vol. 3: Statistical Physics. W. A. Benjamin, Inc.,
-New York, pp. 181–218.
+<div id="ref-Jaynes-information63" class="csl-entry" role="doc-biblioentry">
+Jaynes, E.T., 1963. Information theory and statistical mechanics, in: Ford, K.W. (Ed.), Brandeis University Summer Institute Lectures in Theoretical Physics, Vol. 3: Statistical Physics. W. A. Benjamin, Inc., New York, pp. 181–218.
 </div>
-<div id="ref-Jaynes-information57" class="csl-entry" role="listitem">
-Jaynes, E.T., 1957. Information theory and statistical mechanics.
-Physical Review 106, 620–630. <a
-href="https://doi.org/10.1103/PhysRev.106.620">https://doi.org/10.1103/PhysRev.106.620</a>
+<div id="ref-Jaynes-information57" class="csl-entry" role="doc-biblioentry">
+Jaynes, E.T., 1957. Information theory and statistical mechanics. Physical Review 106, 620–630. <a href="https://doi.org/10.1103/PhysRev.106.620">https://doi.org/10.1103/PhysRev.106.620</a>
 </div>
-<div id="ref-MacKay-information03" class="csl-entry" role="listitem">
-MacKay, D.J.C., 2003. Information theory, inference and learning
-algorithms. Cambridge University Press, Cambridge, U.K.
+<div id="ref-MacKay-information03" class="csl-entry" role="doc-biblioentry">
+MacKay, D.J.C., 2003. Information theory, inference and learning algorithms. Cambridge University Press, Cambridge, U.K.
 </div>
 </div>
 </section>
@@ -1656,39 +1176,10 @@ algorithms. Cambridge University Press, Cambridge, U.K.
       // Full list of configuration options available at:
       // https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
-        // Display controls in the bottom right corner
-        controls: true,
-        // Display a presentation progress bar
-        progress: true,
         // Push each slide change to the browser history
         history: true,
-        // Enable keyboard shortcuts for navigation
-        keyboard: true,
-        // Enable the slide overview mode
-        overview: true,
-        // Vertical centering of slides
-        center: true,
-        // Enables touch navigation on devices with touch input
-        touch: true,
-        // Turns fragments on and off globally
-        fragments: true,
-        // Flags if we should show a help overlay when the questionmark
-        // key is pressed
-        help: true,
-        // Number of milliseconds between automatically proceeding to the
-        // next slide, disabled when set to 0, this value can be overwritten
-        // by using a data-autoslide attribute on your slides
-        autoSlide: 0,
-        // Stop auto-sliding after user input
-        autoSlideStoppable: true,
         // Transition style
         transition: 'none', // none/fade/slide/convex/concave/zoom
-        // Transition speed
-        transitionSpeed: 'default', // default/fast/slow
-        // Transition style for full page slide backgrounds
-        backgroundTransition: 'fade', // none/fade/slide/convex/concave/zoom
-        // Number of slides away from the current that are visible
-        viewDistance: 3,
         math: {
           mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js',
           config: 'TeX-AMS_HTML-full',
