@@ -11,7 +11,7 @@ abstract: >
   energy seeds). We reopen Laplace's ``molecule of air'' as an anachronism,
   state Bernoulli's kinetic assumptions, and introduce the statistical ensemble
   as coarse-graining. Then *Hydrodynamica*, the entropy bridge (no-go versus
-  prescription; common distributions; continuous / relative entropy named), and
+  prescription; common distributions; continuous / relative entropy introduced), and
   embodiment as bandwidth (*The Atomic Human*). As delivered we stop there.
   Week 3 is the heat thread through Helmholtz, then MacKay / grouping.
 author:
@@ -47,7 +47,7 @@ reading:
     required: false
 ---
 
-\notes{Worksheet 1 is due at the start of this session. The slot is 10:05--11:55 (110 minutes, not 120). Quiz 1 occupies the first ten minutes from 10:05. After the quiz: Laplace's molecule, Bernoulli / *Hydrodynamica*, ensemble as coarse-graining. Entropy bridge (distributions; continuous entropy and relative entropy / KL named) sat after the break; embodiment (*Atomic Human*) was the last ten minutes. As delivered we stop at embodiment --- overrun to 12:00. Week 3 is the heat thread (Black through Helmholtz), then the unfinished info game / MacKay / die coarse-graining. Do not derive the occupation from MaxEnt today --- that is week 5.}
+\notes{Worksheet 1 is due at the start of this session. The slot is 10:05--11:55 (110 minutes, not 120). Quiz 1 occupies the first ten minutes from 10:05. After the quiz: Laplace's molecule, Bernoulli / *Hydrodynamica*, ensemble as coarse-graining. Entropy bridge (distributions; continuous entropy and relative entropy / KL introduced) sat after the break; embodiment (*Atomic Human*) was the last ten minutes. As delivered we stop at embodiment --- overrun to 12:00. Week 3 is the heat thread (Black through Helmholtz), then the unfinished info game / MacKay / die coarse-graining. The MaxEnt derivation is Week 5.}
 
 \machinereviewlink
 
@@ -56,7 +56,7 @@ reading:
 \slidesincremental{
 * Quiz 1 (ten minutes)
 * Laplace's molecule → Bernoulli assumptions → ensemble as coarse-graining
-* Hydrodynamica / entropy bridge (distributions; continuous / relative entropy named)
+* Hydrodynamica / entropy bridge (distributions; continuous / relative entropy introduced)
 * Embodiment / bits as bandwidth (Atomic Human) --- stop
 * Next week: Black → Helmholtz, then MacKay / grouping
 }
@@ -69,7 +69,7 @@ reading:
 | 10:05–10:18 | Quiz 1 (paper; briefing then ~10 minutes sitting) |
 | 10:18–11:09 | Laplace molecule; Bernoulli / Hydrodynamica; ensemble / coarse-graining |
 | 11:09–11:17 | Break |
-| 11:17–11:50 | Entropy bridge; common distributions; continuous / KL named |
+| 11:17–11:50 | Entropy bridge; common distributions; continuous / KL introduced |
 | 11:50–12:00 | Embodiment / bits as bandwidth (*Atomic Human*); flag Week 3 carry-over |
 }
 
@@ -126,7 +126,7 @@ reading:
 * How was entropy discovered? (Hydrodynamica → Maxwell / Boltzmann / Gibbs)
 * $H=-\sum_i p_i\log p_i$; no-go versus prescription (first cut)
 * What are the information constraints on a human? (bandwidth, first cut)
-* Continuous entropy vs relative entropy / KL (named; formalised week 3)
+* Continuous entropy vs relative entropy / KL (introduced; formalised in Weeks 4--5)
 }
 
 \notes{Interpret later: how entropy is understood today; equilibrium versus non-equilibrium; die grouping, Gibbs / $F$, HMC, bath and Schottky (Week 3); the purely entropic Schottky reading (Week 8). Define-stage answer to "How was entropy discovered?": Carnot on engines (1824); Clausius states the second law in the 1850s and coins the name entropy in 1865; Boltzmann and Gibbs give the statistical count; Shannon and Jaynes reuse $H$ with different operational readings.}

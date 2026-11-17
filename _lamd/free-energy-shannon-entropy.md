@@ -11,8 +11,7 @@ abstract: >
   energy: Black, Carnot, Rumford, the air thermometer, Thomson's 1848 mill-scale,
   Joule. After the break, Helmholtz $F=U-TS$ on the board; Clausius after that.
   Shannon, Jaynes and Wiener appear as a close preview. The entropy game and
-  MacKay's weighing problem were named and not reached; they now open Week 4
-  after Quiz 2. Shannon axioms, HMC, $Z$, KL and Schottky live in `_lamd/parking.md`.
+  MacKay's weighing problem open Week 4 after Quiz 2.
 author:
 - given: Neil D.
   family: Lawrence
@@ -47,7 +46,7 @@ reading:
     required: false
 ---
 
-\notes{No class test *today*. Next week there is a class test, even if the webpage said otherwise on 27 October. Laptops away; notes by hand. The slot is 10:05--11:55 (110 minutes, not 120). As taught, the homework debrief ran about twenty-four minutes, then the heat thread as far as Joule before the break. Helmholtz was the LO1 payload after the break, on the visualiser, before the Clausius slides. Maxwell--Boltzmann and Gibbs were pointers, not the planned decks. Shannon / Jaynes / Wiener were a close preview. The entropy game and MacKay's weighing problem were not given; they now open Week 4 after Quiz 2. Shannon axioms, HMC, $Z$, KL, Schottky and finite-time live in `_lamd/parking.md`.}
+\notes{No class test *today*. Next week there is a class test, even if the webpage said otherwise on 27 October. Laptops away; notes by hand. The slot is 10:05--11:55 (110 minutes, not 120). As taught, the homework debrief ran about twenty-four minutes, then the heat thread as far as Joule before the break. Helmholtz was the key result after the break, on the visualiser, before the Clausius slides. Maxwell--Boltzmann and Gibbs were pointers, not the planned decks. Shannon / Jaynes / Wiener were a close preview. The entropy game and MacKay's weighing problem were not given; they now open Week 4 after Quiz 2. Shannon axioms, HMC, $Z$, KL, Schottky and finite-time are deferred.}
 
 \machinereviewlink
 
@@ -61,7 +60,7 @@ reading:
 }
 
 \notes{
-**Time plan (as delivered 27 October 2026).** Clocks from the Panopto SRT (recording 00:00 ≈ 10:00). The slot is 10:05--11:55 (110 minutes, not 120). Speech from 10:04; this session ran to about 11:58. Helmholtz on the board is the LO1 payload. Shannon / Jaynes / Wiener and Maxwell's demon as coarse-graining are previews of later weeks. MacKay / entropy game stay in the file; they were not given.
+**Time plan (as delivered 27 October 2026).** Clocks from the Panopto SRT (recording 00:00 ≈ 10:00). The slot is 10:05--11:55 (110 minutes, not 120). Speech from 10:04; this session ran to about 11:58. Helmholtz on the board is the key result. Shannon / Jaynes / Wiener and Maxwell's demon as coarse-graining are previews of later weeks. MacKay / entropy game stay in the file; they were not given.
 
 | Clock | Block |
 |------:|-------|
@@ -82,7 +81,7 @@ reading:
 | 11:48–11:54 | Clausius; Maxwell--Boltzmann pointer |
 | 11:54–11:58 | Preview: Shannon / Jaynes / Wiener; class test next week |
 
-The include order below is still Black $\to$ \ldots $\to$ Helmholtz. As taught, Helmholtz was boarded after Joule and before the Clausius slides. Protect Helmholtz. The information game, MacKay and grouping now open Week 4 after Quiz 2. Shannon / HMC / Schottky live in `_lamd/parking.md`.
+The include order below is still Black $\to$ \ldots $\to$ Helmholtz. The information game, MacKay and grouping now open Week 4 after Quiz 2.
 
 }
 
@@ -90,7 +89,7 @@ The include order below is still Black $\to$ \ldots $\to$ Helmholtz. As taught, 
 
 \subsection{From Heat to Helmholtz}
 
-\notes{Week 1 seeded the occupation $p_i \propto e^{-\beta E_i}$. Worksheet 1 told us Clausius did not make entropy a measure of uncertainty. The lecture is the heat thread that gets us to Helmholtz: Black, Carnot, Rumford, the air thermometer, Thomson's 1848 mill-scale, Joule --- then, as taught, the board work on $F=U-TS$ with $U=\expSamp{E}$, and Clausius after that. Maxwell--Boltzmann and Gibbs remain in the file after Clausius. The entropy game and MacKay's weighing problem come after that story; they were not reached on 27 October and now open Week 4 after Quiz 2. Shannon axioms live in `_lamd/parking.md`.
+\notes{Week 1 seeded the occupation $p_i \propto e^{-\beta E_i}$. Worksheet 1 told us Clausius did not make entropy a measure of uncertainty. The lecture is the heat thread that gets us to Helmholtz: Black, Carnot, Rumford, the air thermometer, Thomson's 1848 mill-scale, Joule --- then, as taught, the board work on $F=U-TS$ with $U=\expSamp{E}$, and Clausius after that. Maxwell--Boltzmann and Gibbs remain in the file after Clausius. The entropy game and MacKay's weighing problem come after that story; they were not reached on 27 October and now open Week 4 after Quiz 2. Shannon axioms are deferred.
 
 From a stationary distribution with given energy we will write the *Gibbs distribution*,
 $$
@@ -143,7 +142,7 @@ where $U=\expSamp{E}$ is inner energy, $F$ is Helmholtz free energy, $T$ is temp
 
 \subsection{After Helmholtz: Not Reached}
 
-\notes{The physics story arrived at $F=U-TS$. The information reading that Week 2 did not reach --- guessing, MacKay's weighing problem, and die coarse-graining --- was named at 10:05 on 27 October and deferred at 10:33 and again at 11:56. Those slides now open Week 4 after Quiz 2, and they are the setup for Maxwell's demon: the box as a group, the being who looks inside. Do not keep a second copy here.}
+\notes{The physics story arrived at $F=U-TS$. The information reading that Week 2 did not reach --- guessing, MacKay's weighing problem, and die coarse-graining --- opens Week 4 after Quiz 2, and is the setup for Maxwell's demon: the box as a group, the being who looks inside.}
 
 \addreading{@Callen-thermostatistics85}{Chapters 1--4}
 \addreading{@Callen-thermostatistics85}{Chapters 5--6}

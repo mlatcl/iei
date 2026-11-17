@@ -120,7 +120,7 @@
 \slidesincremental{
 * Due 10:00 at the start of lecture 4 (3 November)
 * Open on the equivalence; then press sample space, discrete vs continuous, what $p$ is over
-* Use the see-saw lesson: concede, then move. Do not rathole on the first definition.
+* Use the see-saw lesson from Worksheet 1: if the model concedes a point, move on to the next probe rather than digging in on the first definition.
 }
 
 \notes{Worksheet 2 was released in Week 2. The brief is in the notes from that session and on the course site. Ten turns, one continuous conversation, one declared model; handwritten reflection on the proforma. The subject is no longer why Shannon *named* the quantity, but what the naming *claims*. If the model says identity of form, ask what must be true of the sample space. If it says metaphor, ask what the metaphor licenses. Reflection should include how the inquiry habit has changed since Worksheet 1 --- that was the weakest of the three marks this round, and it is explicitly in the W2 rubric.}

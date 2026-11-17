@@ -210,7 +210,7 @@ So in other words we are asking you to take on the role of Socrates in these con
 * Week 2: Hydrodynamica / entropy bridge / embodiment; Week 3 clears Gibbs / $F$ / HMC then Shannon
 }
 
-\notes{In machine learning an energy is often just a negative log probability, measured in nats, which is a peculiar unit for something that in physics is measured in joules. Energy-based models are, among other things, a way of not writing the partition function $Z$. In physics $Z$ is the whole story. We return to it with free energy; do not compute it today.}
+\notes{In machine learning an energy is often just a negative log probability, measured in nats, which is a peculiar unit for something that in physics is measured in joules. Energy-based models are, among other things, a way of not writing the partition function $Z$. In physics $Z$ is the whole story. We return to it with free energy.}
 
 \speakernotes{Do not derive Lagrange multipliers today. State the formula so Worksheet 1 has a concrete claim to open and then press. Students should leave curious about why *this* exponential, what $\beta$ means, and whether entropy here is a constraint or a recipe. Point back to cross-entropy / BM pairwise energy if they ask what $E$ is. Hamiltonian / HMC demos wait for lecture 3. If asked what you gain by calling a loss an energy: the honest answer is that some people hope to avoid $Z$; LeCun's energy-based models are that habit.}
 

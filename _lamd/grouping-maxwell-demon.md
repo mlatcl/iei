@@ -38,7 +38,7 @@ reading:
     required: false
 ---
 
-\notes{Worksheet 2 is due at the start of this session. Quiz 2 occupies the opening block from 10:05 --- Weeks 2--3 as delivered (ensemble, the heat thread through Joule, Helmholtz on the board, Shannon $H$ versus Boltzmann $S$). After the quiz: questions--MacKay--die, Gaussian--Maxwell missing measure, then the demon as compartments and two ledgers. The fork is named, not resolved; Worksheet 3 is released. Shannon axioms, HMC, $Z$, KL, Schottky and finite time stay parked; Szilard, Landauer and Ellis wait for Worksheet 3.}
+\notes{Worksheet 2 is due at the start of this session. Quiz 2 occupies the opening block from 10:05 --- Weeks 2--3 as delivered (ensemble, the heat thread through Joule, Helmholtz on the board, Shannon $H$ versus Boltzmann $S$). After the quiz: questions--MacKay--die, Gaussian--Maxwell missing measure, then the demon as compartments and two ledgers. The question is posed here and left open; Worksheet 3 is released. Shannon axioms, HMC, $Z$, KL, Schottky and finite time stay parked; Szilard, Landauer and Ellis wait for Worksheet 3.}
 
 \machinereviewlink
 

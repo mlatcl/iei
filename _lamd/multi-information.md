@@ -7,14 +7,14 @@ venue: FW26, William Gates Building
 room: FW26
 transition: None
 abstract: >
-  Deepen the Week 6 information-theoretic spine: Watanabe's
+  Deepen Week 6's information-theoretic themes: Watanabe's
   multi-information and the conservation law I+H=C; prove the
   data-processing inequality (Cover–Thomas 2.8.1) stated last week;
   develop the information bottleneck as the prescription paired with
-  DPI and as a gloss after the Good Regulator Theorem (not the theorem
-  itself). Fisher I ≠ Shannon H was earned in Week 6 with the
+  DPI and as an interpretation after the Good Regulator Theorem (not the
+  theorem itself). Fisher I ≠ Shannon H was proved in Week 6 with the
   exponential-family metric; today it is optional refresh only. Von
-  Neumann / classical limit I=C waits for Week 8 if the clock is tight.
+  Neumann / classical limit I=C waits for Week 8 if time is tight.
 author:
 - given: Neil D.
   family: Lawrence
@@ -42,26 +42,26 @@ reading:
     required: false
 ---
 
-\notes{No class test today. Quiz 3 was last week (start of lecture 6). Worksheet 3 was due last week; Worksheet 4 (Skepticus dialogue on GRT and general intelligence) is already out (due 1 December, before Quiz 4). Last week earned the exponential family, the Fisher metric from $\nabla^2\psi$, Shannon capacity, stated DPI, and a Good Regulator overview. Today: multi-information / $I+H=C$, prove DPI, information bottleneck as prescription and as GRT gloss.}
+\notes{No class test today. Quiz 3 was last week (start of lecture 6). Worksheet 3 was due last week; Worksheet 4 (Skepticus dialogue on GRT and general intelligence) is already out (due 1 December, before Quiz 4). Last week proved the exponential family, the Fisher metric from $\nabla^2\psi$, Shannon capacity, stated DPI, and a Good Regulator overview. Today: multi-information / $I+H=C$, prove DPI, information bottleneck as prescription and as GRT interpretation.}
 
 \subsection{This Session}
 
 \slidesincremental{
 * Same marginals, different joints; then $I+H=C$
 * Prove the data-processing inequality
-* Information bottleneck: prescription paired with DPI; gloss on GRT
-* Optional: Fisher $I(\theta)$ $\neq$ Shannon $H$ (name only)
+* Information bottleneck: prescription paired with DPI; interpretation of GRT
+* Optional: Fisher $I(\theta)$ $\neq$ Shannon $H$ (not proved here)
 }
 
 \notes{
-**Time plan.** The slot is 10:05--11:55 (110 minutes, not 120). Protect the DPI proof and the IB block. Do not rebuild Fisher geometry, natural gradient, or geodesics.
+**Time plan.** The slot is 10:05--11:55 (110 minutes, not 120). Do not rebuild Fisher geometry, natural gradient, or geodesics.
 
 | Clock | Block |
 |------:|-------|
 | 10:05--10:50 | Same marginals, different joints; multi-information; $I+H=C$ |
 | 10:50--11:00 | Break |
 | 11:00--11:25 | Data-processing inequality (proof) |
-| 11:25--11:45 | Information bottleneck; GRT gloss callback |
+| 11:25--11:45 | Information bottleneck; GRT interpretation callback |
 | 11:45--11:55 | Optional Fisher-vs-Shannon name; preview Week 8 |
 }
 
@@ -92,7 +92,7 @@ reading:
 
 \speakernotes{LO10. Point back to velocity demos: same marginals, different joints. Inaccessible-game introduction is light colour only --- not a full axiomatic framework. (The parked notebook W4 Part A is not the live worksheet.)}
 
-\notes{Multi-information $I=\sum_i h_i-H\ge 0$ generalises mutual information. With fixed marginal entropies $C=\sum_i h_i$, conservation $I+H=C$ is a no-go: you cannot have both high stored correlation and high free uncertainty without bound. The mechanics analogy is enough: $I$ like potential (stored correlation), $H$ like kinetic (free uncertainty). A brief inaccessible-game introduction may follow as colour; do not expand it into a separate outcome.}
+\notes{Multi-information $I=\sum_i h_i-H\ge 0$ generalises mutual information. With fixed marginal entropies $C=\sum_i h_i$, conservation $I+H=C$ is a no-go: you cannot have both high stored correlation and high free uncertainty without bound. The mechanics analogy is enough: $I$ like potential (stored correlation), $H$ like kinetic (free uncertainty). A brief inaccessible-game introduction may follow.}
 
 \setupplotcode{import numpy as np
 import matplotlib.pyplot as plt
@@ -176,19 +176,19 @@ mlai.write_figure('information-bottleneck-region.svg', directory='\writeDiagrams
 
 <!-- /SNIPPET: _information/includes/information-bottleneck-curve.md -->
 
-\newslides{IB as Gloss on the Good Regulator}
+\newslides{IB as Interpretation of the Good Regulator}
 
-\slides{Last week earned $H(A\mid S)=0$. IB is a reading after that theorem.}
+\slides{Last week proved $H(A\mid S)=0$. IB is a reading after that theorem.}
 
 \slidesincremental{
-* $\min I(S;A)$ subject to $H(Z)\le\epsilon$ --- course gloss
+* $\min I(S;A)$ subject to $H(Z)\le\epsilon$ --- course interpretation
 * Not Conant and Ashby's equation
 * DPI still forbids manufacturing missing $I$ on $D\to X\to T\to A$
 }
 
 \speakernotes{Callback to Week 6 GRT. Do not re-prove. IB spends $I$ on action-relevant distinctions; GRT supplies existence of a deterministic organiser.}
 
-\notes{Week 6 already earned the Good Regulator existence claim and named the IB-shaped gloss. Today IB is a first-class LO10 theorem (relevant compression under an $I$ budget). Keep the fence: the gloss is not the theorem.}
+\notes{Week 6 already proved the Good Regulator existence claim and introduced the IB-shaped interpretation. Today IB is a first-class theorem (relevant compression under an $I$ budget). Keep the caveat: the interpretation is not the theorem.}
 
 \subsection{Optional: Fisher Refresh; MaxEnt as Projection (named)}
 
@@ -221,7 +221,7 @@ mlai.write_figure('information-bottleneck-region.svg', directory='\writeDiagrams
 * Multi-information versus mutual information?
 * Prove the data-processing inequality
 * What is the information bottleneck?
-* How does IB gloss the Good Regulator without replacing it?
+* How does IB interpret the Good Regulator without replacing it?
 }
 
 \subsection{After This Lecture}

@@ -7,17 +7,17 @@ venue: FW26, William Gates Building
 room: FW26
 transition: None
 abstract: >
-  After Quiz 3, develop the exponential family that Week 5 only named:
-  natural parameters θ=-λ, the canonical ensemble, the Gaussian, and the
-  Bernoulli as one MaxEnt family, and ψ(θ)=log Z(-θ) as a cumulant
-  generating function. The Hessian ∇²ψ is the Fisher information metric
-  on that family: Fisher's I(θ) is not Shannon's H, and ds² = dθᵀ G dθ
-  measures distinguishability. Dual charts (θ, η=∇ψ) are named; Crooks
-  thermodynamic length is not. Then Shannon's noisy-channel coding
-  theorem (R≤C), the data-processing inequality as a statement, and a
-  Good Regulator overview only: setup diagrams with disturbance D,
-  system S, action A (not R), reguland Z; the slogan and fences.
-  Full Conant–Ashby development is the Week 8 review.
+  After Quiz 3, develop the exponential family introduced at the end of
+  Week 5: natural parameters θ=-λ, the canonical ensemble, the Gaussian,
+  and the Bernoulli as one MaxEnt family, and ψ(θ)=log Z(-θ) as a
+  cumulant generating function. The Hessian ∇²ψ is the Fisher information
+  metric on that family: Fisher's I(θ) is not Shannon's H, and
+  ds² = dθᵀ G dθ measures distinguishability. Dual charts are introduced
+  briefly. Then Shannon's noisy-channel coding theorem (R≤C), the
+  data-processing inequality as a statement, and a Good Regulator
+  overview only: setup diagrams with disturbance D, system S, action A
+  (not R), reguland Z; the slogan and its two caveats. Full Conant–Ashby
+  development is the Week 8 review.
 author:
 - given: Neil D.
   family: Lawrence
@@ -30,7 +30,7 @@ in_class_test:
   id: Q3
   duration_minutes: 10
   timing: start
-  covers: [grouping, soft partitions / MI / KL, demon compartments, MaxEnt, exponential family named]
+  covers: [grouping, soft partitions / MI / KL, demon compartments, MaxEnt, exponential family introduced]
 worksheet_due: W3
 worksheet_released: W4
 reading:
@@ -56,7 +56,7 @@ reading:
     estimated_hours: 0.5
 ---
 
-\notes{Quiz 3 occupies the first ten minutes from 10:05 --- Weeks 4--5 as delivered (grouping, demon compartments and two ledgers, soft partitions / MI / KL, MaxEnt and the exponential family *named*). After the quiz, teach the exponential family that was only named on 10 November: $\theta=-\lambda$, canonical / Gaussian / Bernoulli, and $\psi(\boldsymbol{\theta})=\log Z(-\boldsymbol{\theta})$ as a cumulant generating function. The Hessian of $\psi$ *is* the Fisher information metric --- that is today's information-geometry bridge (LO8). Thermodynamic length is still dropped: do not define $\mathcal{L}$, do not state $\langle W_{\mathrm{ex}}\rangle\ge\mathcal{L}^2/\tau$, and do not open Crooks (2007). Collect Worksheet 3 as they sit (due 10:00). Release Worksheet 4 *before* the Good Regulator block: it is another Skepticus dialogue; Exchange 1 asks what the Good Regulator Theorem is and how it relates to modern notions of general intelligence, begun before that theorem is taught. Then Shannon capacity, DPI as a statement, and a Good Regulator overview. W4 due 1 December (start of lecture 8).}
+\notes{Quiz 3 occupies the first ten minutes from 10:05 --- Weeks 4--5 as delivered (grouping, demon compartments and two ledgers, soft partitions / MI / KL, MaxEnt and the exponential family introduced). After the quiz, develop the exponential family: $\theta=-\lambda$, canonical / Gaussian / Bernoulli, and $\psi(\boldsymbol{\theta})=\log Z(-\boldsymbol{\theta})$ as a cumulant generating function. The Hessian of $\psi$ *is* the Fisher information metric --- that is today's information-geometry bridge. Collect Worksheet 3 as they sit (due 10:00). Release Worksheet 4 *before* the Good Regulator block: it is another Skepticus dialogue; Exchange 1 asks what the Good Regulator Theorem is and how it relates to modern notions of general intelligence, begun before that theorem is taught. Then Shannon capacity, DPI as a statement, and a Good Regulator overview. W4 due 1 December (start of lecture 8).}
 
 \subsection{This Session}
 
@@ -69,7 +69,7 @@ reading:
 }
 
 \notes{
-**Time plan.** The slot is 10:05--11:55 (110 minutes, not 120). Quiz 3 is paper. Protect the exponential-family identification (LO6), the Fisher-geometry bridge (LO8), and the Good Regulator block. Shannon and DPI stay, shorter. Thermodynamic length is dropped; path length of $G$ is not today's object.
+**Time plan.** The slot is 10:05--11:55 (110 minutes, not 120). Quiz 3 is paper. Shannon and DPI stay, shorter. Path length of $G$ is not today's object.
 
 | Clock | Block |
 |------:|-------|
@@ -85,7 +85,7 @@ reading:
 
 \subsection{Quiz 3}
 
-\notes{Invigilated paper test, no notes, no network, no LLMs. Ten questions on Weeks 4--5 as delivered: exclusive grouping $H=H(w)+\sum_i w_i H(p_i)$, soft partitions $H(G\mid X)$ / $I(X;G)$ / KL, the missing measure, Maxwell's demon as compartments and two ledgers, MaxEnt (die / discrete proof), and the exponential family named ($\theta=-\lambda$). Not CGF, not continuous MaxEnt, not Fisher, not Legendre, not Crooks, not GRT.}
+\notes{Invigilated paper test, no notes, no network, no LLMs. Ten questions on Weeks 4--5 as delivered: exclusive grouping $H=H(w)+\sum_i w_i H(p_i)$, soft partitions $H(G\mid X)$ / $I(X;G)$ / KL, the missing measure, Maxwell's demon as compartments and two ledgers, MaxEnt (die / discrete proof), and the exponential family introduced ($\theta=-\lambda$). Not CGF, not continuous MaxEnt, not Fisher, not Legendre, not Crooks, not GRT.}
 
 \slidesincremental{
 * Paper; no notes, no network, no LLMs
@@ -148,7 +148,7 @@ H(P)=\log N-\mathrm{KL}(P\|u).
 \end{align}
 So Shannon entropy *is* a negative KL divergence against the uniform that $\#$ defines. Three immediate consequences: (i) $H\ge 0$, because each atom has counting measure 1 so $p(x)\le 1$; (ii) $H$ is unchanged by any relabelling of the outcomes ($\#$ is invariant under bijections); (iii) on a countably infinite set $\#$ has infinite total mass, there is no uniform $u$, and entropy need not be finite.
 
-The same template covers the continuous and relative cases. Lebesgue measure $\lambda$ is the continuum counterpart: differential entropy is $H_\lambda$, can be negative, and changes under nonlinear reparametrisation because $\lambda$ does. Two distinct effects meet here and should stay separate. Under a change of variable the Jacobian $|{\mathrm{d}}y/{\mathrm{d}}x|$ appears --- that is Lecture 4's density-of-states factor (for example $v^2$ in the speed coordinate). Separately, putting counting measure on a grid of spacing $\Delta$ and rescaling by $\Delta$ converges to $\lambda$ as $\Delta\to 0$; a binned Shannon entropy then carries an additive $-\log\Delta$, which is the log of that rescaling factor between $\#$ and $\lambda$, not a Jacobian. Why not just use counting measure on $\mathbb{R}$? Because $\#$ and $\lambda$ are mutually singular: $\lambda(\{x\})=0$ for every point, while a discrete law puts positive mass on points, so neither measure admits a density with respect to the other. A mixed law --- daily rainfall exactly zero with probability $0.3$, otherwise continuous --- has a density only with respect to something like $\delta_0+\lambda$. Keep that aside in the notes; do not board it live.
+The same template covers the continuous and relative cases. Lebesgue measure $\lambda$ is the continuum counterpart: differential entropy is $H_\lambda$, can be negative, and changes under nonlinear reparametrisation because $\lambda$ does. Two distinct effects meet here and should stay separate. Under a change of variable the Jacobian $|{\mathrm{d}}y/{\mathrm{d}}x|$ appears --- that is Lecture 4's density-of-states factor (for example $v^2$ in the speed coordinate). Separately, putting counting measure on a grid of spacing $\Delta$ and rescaling by $\Delta$ converges to $\lambda$ as $\Delta\to 0$; a binned Shannon entropy then carries an additive $-\log\Delta$, which is the log of that rescaling factor between $\#$ and $\lambda$, not a Jacobian. Why not just use counting measure on $\mathbb{R}$? Because $\#$ and $\lambda$ are mutually singular: $\lambda(\{x\})=0$ for every point, while a discrete law puts positive mass on points, so neither measure admits a density with respect to the other. A mixed law --- daily rainfall exactly zero with probability $0.3$, otherwise continuous --- has a density only with respect to something like $\delta_0+\lambda$.
 
 KL divergence uses a probability $Q$ as reference,
 \begin{align}
@@ -197,7 +197,7 @@ Maximum entropy relative to $\mu$ gives ${\mathrm{d}}P/{\mathrm{d}}\mu=\exp(\the
 
 \speakernotes{Board $\eta=\nabla\psi$ first. Do not yet claim the Hessian is Fisher --- that calculation is the next two slides. Do not write $\mathcal{L}$ or $\langle W_{\mathrm{ex}}\rangle\ge\mathcal{L}^2/\tau$.}
 
-\notes{The Quiz 2 debrief already read $\log Z$ as available energy, $F=-k_BT\log Z$. In exponential-family coordinates the same function is $\psi(\boldsymbol{\theta})=\log Z(-\boldsymbol{\theta})$. Its first derivative is the mean of $T$. Differentiating again will give $\mathrm{Cov}[T]$, but that identity is earned after the entropy form, not asserted here.}
+\notes{The Quiz 2 debrief already read $\log Z$ as available energy, $F=-k_BT\log Z$. In exponential-family coordinates the same function is $\psi(\boldsymbol{\theta})=\log Z(-\boldsymbol{\theta})$. Its first derivative is the mean of $T$. Differentiating again will give $\mathrm{Cov}[T]$, but we derive it after the entropy form.}
 
 \include{_information/includes/exponential-family-entropy-fisher.md}
 
@@ -210,8 +210,8 @@ Maximum entropy relative to $\mu$ gives ${\mathrm{d}}P/{\mathrm{d}}\mu=\exp(\the
 \slides{Same word; different mathematical definition.}
 
 \slidesincremental{
-* Shannon $H$: uncertainty in an outcome --- just earned as $H=\psi-\theta\cdot\eta$ (when $h_0=1$)
-* Fisher $I(\theta)$: sensitivity of $\log p$ to $\theta$ --- just earned as $\mathrm{Cov}[T]=\nabla^2\psi$
+* Shannon $H$: uncertainty in an outcome --- $H=\psi-\theta\cdot\eta$ (when $h_0=1$)
+* Fisher $I(\theta)$: sensitivity of $\log p$ to $\theta$ --- $I=\mathrm{Cov}[T]=\nabla^2\psi$
 * $H$ is a state function of $p$; $I$ is a property of a *family* $p(\cdot\mid\theta)$
 }
 
@@ -221,17 +221,17 @@ Maximum entropy relative to $\mu$ gives ${\mathrm{d}}P/{\mathrm{d}}\mu=\exp(\the
 $$
 I(\theta)=\mathbb{E}_\theta\!\left[\left(\frac{\partial}{\partial\theta}\log p(x\mid\theta)\right)^2\right].
 $$
-On an exponential family that is exactly $\nabla^2\psi=\mathrm{Cov}[T]$, already boarded. Shannon's $H$ measures uncertainty in a random variable; Fisher's $I$ measures how much a sample tells you about $\theta$. Conflating the two words is the first mistake to block --- and the exponential family is where both appear from one $\log p$.}
+On an exponential family that is exactly $\nabla^2\psi=\mathrm{Cov}[T]$, as derived above. Shannon's $H$ measures uncertainty in a random variable; Fisher's $I$ measures how much a sample tells you about $\theta$. Conflating the two words is the first mistake to block --- and the exponential family is where both appear from one $\log p$.}
 
 \newslide{Same Matrix, Three Names}
 
-\slides{You already have $G$; you are naming it.}
+\slides{These are the same matrix.}
 
 \slidesincremental{
 * $\mathrm{Cov}[T]$ from cumulants
 * Fisher $G$ from the score $T-\eta$
 * $\nabla^2\psi$ from differentiating $\eta=\nabla\psi$
-* Cramér--Rao: $\mathrm{cov}(\hat{\boldsymbol{\theta}})\succeq G^{-1}$ (name only)
+* Cramér--Rao: $\mathrm{cov}(\hat{\boldsymbol{\theta}})\succeq G^{-1}$ (stated, not proved)
 }
 
 \speakernotes{One sentence on Cramér--Rao if asked; do not board a proof. Information geometry follows because the metric is already on the board.}
@@ -264,12 +264,12 @@ $$
 * Natural parameters $\boldsymbol{\theta}$ (e-coordinates)
 * Mean parameters $\boldsymbol{\eta}=\nabla \psi=\langle T\rangle$ (m-coordinates)
 * Hessians of the dual potentials are inverse metrics
-* Full Legendre / Pythagorean development stays notes
+* Details in the notes
 }
 
 \speakernotes{Name dual flatness. $H=\psi-\theta\cdot\eta$ (when $h_0=1$) is already on the board --- that *is* $-\psi^*(\eta)$. The pair $(\theta,\eta)$ is enough to see why MaxEnt looks like an $m$-projection later. Natural gradient is optional colour only.}
 
-\notes{Amari's dual flatness: exponential families admit affine coordinates in $\boldsymbol{\theta}$ and in $\boldsymbol{\eta}=\nabla\psi$, with dual potentials whose Hessians are inverse Fisher metrics. The Legendre dual is what they already computed for entropy: $\psi^*(\eta)=\theta\cdot\eta-\psi=-H$ when $h_0=1$ (otherwise subtract $\mathbb{E}[\log h_0]$ from $H$). The Pythagorean theorem for KL on dual flats stays thin today so Shannon and the Good Regulator keep their clock.}
+\notes{Amari's dual flatness: exponential families admit affine coordinates in $\boldsymbol{\theta}$ and in $\boldsymbol{\eta}=\nabla\psi$, with dual potentials whose Hessians are inverse Fisher metrics. The Legendre dual is what they already computed for entropy: $\psi^*(\eta)=\theta\cdot\eta-\psi=-H$ when $h_0=1$ (otherwise subtract $\mathbb{E}[\log h_0]$ from $H$).}
 
 \addreading{@Amari-information16}{Fisher metric; dual flatness}
 
@@ -346,7 +346,7 @@ $$
 
 \subsection{After This Lecture}
 
-\notes{Quiz 3 opened the session, before the exponential family and Fisher geometry were developed. Worksheet 4 was released early in the session so Exchange 1 could begin before the Good Regulator overview (due 1 December, before Quiz 4). It is a Skepticus dialogue on GRT and general intelligence, not the parked notebook brief. Today's GRT block is setup and diagrams only; the full Conant--Ashby argument is the Week 8 review. Week 7 deepens multi-information, proves DPI, and develops the information bottleneck as the prescription paired with DPI --- and as a gloss after GRT, not the theorem. Week 7 does not restore thermodynamic length; dual-flatness colour may return only if clock allows.}
+\notes{Quiz 3 opened the session, before the exponential family and Fisher geometry were developed. Worksheet 4 was released early in the session so Exchange 1 could begin before the Good Regulator overview (due 1 December, before Quiz 4). It is a Skepticus dialogue on GRT and general intelligence, not the parked notebook brief. Today's GRT block is setup and diagrams only; the full Conant--Ashby argument is the Week 8 review. Week 7 deepens multi-information, proves DPI, and develops the information bottleneck as the prescription paired with DPI --- and as an interpretation after GRT, not the theorem.}
 
 \slidesincremental{
 * Worksheet 4 out (dialogue; Exchange 1 before GRT); due 1 December before Quiz 4
