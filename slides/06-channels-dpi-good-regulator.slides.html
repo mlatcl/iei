@@ -174,6 +174,9 @@ sns.set_palette('colorblind')}-->
 </section>
 <section id="exponential-family" class="slide level2">
 <h2>Exponential Family</h2>
+</section>
+<section id="exponential-family-theta-lambda" class="slide level2">
+<h2>Exponential Family: <span class="math inline">\(\theta=-\lambda\)</span></h2>
 <p>Week 5’s discrete MaxEnt solution <em>is</em> an exponential family.</p>
 <div>
 <ul>
@@ -186,6 +189,9 @@ sns.set_palette('colorblind')}-->
 <aside class="notes">
 LO6. This is the block Week 5 only named. Physics sign: Boltzmann writes <span class="math inline">\(p_i\propto e^{-\beta E_i}\)</span>, so <span class="math inline">\(\theta_1=-\beta\)</span> when <span class="math inline">\(T=E\)</span>. Fitting the <span class="math inline">\(\lambda\)</span>s is maximum likelihood; say that and move to the three members. Geometry comes after the CGF slide, not here.
 </aside>
+</section>
+<section id="three-members-one-family" class="slide level2">
+<h2>Three Members, One Family</h2>
 <p>Canonical, Gaussian, and Bernoulli are the same theorem with different <span class="math inline">\(T(x)\)</span>.</p>
 <div>
 <ul>
@@ -200,6 +206,9 @@ LO6 punchline. Two-level system is a Bernoulli. Softmax is the same calculation 
 </section>
 <section id="atheta-as-cumulant-generating-function" class="slide level2">
 <h2><span class="math inline">\(A(\theta)\)</span> as Cumulant Generating Function</h2>
+</section>
+<section id="athetalog-z-generates-cumulants" class="slide level2">
+<h2><span class="math inline">\(A(\theta)=\log Z\)</span> Generates Cumulants</h2>
 <div>
 <ul>
 <li class="fragment">Week 3: <span class="math inline">\(F=-k_BT\log Z\)</span> (available energy)</li>
@@ -216,7 +225,10 @@ Board <span class="math inline">\(\eta=\nabla A\)</span> and <span class="math i
 <h2>Fisher Metric from the Exponential Family</h2>
 <section data-background-iframe="../scripts//timer/index.html?duration=10:35&amp;title=Fisher geometry" data-background-interactive>
 </section>
-<p>Same word; different operational reading.</p>
+</section>
+<section id="fishers-information-neq-shannons-entropy" class="slide level2">
+<h2>Fisher’s Information <span class="math inline">\(\neq\)</span> Shannon’s Entropy</h2>
+<p>Same word; different mathematical definition.</p>
 <div>
 <ul>
 <li class="fragment">Shannon <span class="math inline">\(H\)</span>: uncertainty in an outcome</li>
@@ -227,6 +239,9 @@ Board <span class="math inline">\(\eta=\nabla A\)</span> and <span class="math i
 <aside class="notes">
 LO8. Hold this distinction for the rest of the module. Shannon is coming after the break as channel capacity; Fisher is already on the board as <span class="math inline">\(\nabla^2 A\)</span>.
 </aside>
+</section>
+<section id="hessian-equiv-fisher-metric" class="slide level2">
+<h2>Hessian <span class="math inline">\(\equiv\)</span> Fisher Metric</h2>
 <p>On an exponential family the CGF Hessian <em>is</em> the Fisher information.</p>
 <div>
 <ul>
@@ -238,6 +253,9 @@ LO8. Hold this distinction for the rest of the module. Shannon is coming after t
 <aside class="notes">
 This is why information geometry follows the exponential family. You already have <span class="math inline">\(G\)</span>; you are naming it. Cramér–Rao <span class="math inline">\(\mathrm{cov}(\hat\theta)\succeq G^{-1}\)</span> in one sentence if asked; do not board a proof.
 </aside>
+</section>
+<section id="information-distance" class="slide level2">
+<h2>Information Distance</h2>
 <p><span class="math display">\[
 \mathrm{d}s^2 = \mathrm{d}\boldsymbol{\theta}^\top G(\boldsymbol{\theta})\,\mathrm{d}\boldsymbol{\theta}
 \]</span></p>
@@ -251,6 +269,9 @@ This is why information geometry follows the exponential family. You already hav
 <aside class="notes">
 State the line element. Do not integrate a path to get thermodynamic length <span class="math inline">\(\mathcal{L}\)</span>. Distinguishability of nearby points is enough; Crooks path cost is dropped.
 </aside>
+</section>
+<section id="dual-charts-thetaeta" class="slide level2">
+<h2>Dual Charts <span class="math inline">\((\theta,\eta)\)</span></h2>
 <p>Exponential families are dually flat under two coordinate systems.</p>
 <div>
 <ul>
@@ -270,6 +291,9 @@ Name dual flatness; do not board <span class="math inline">\(H=A-\theta\cdot\eta
 <h2>Shannon’s Communication Theorem</h2>
 <section data-background-iframe="../scripts//timer/index.html?duration=11:05&amp;title=Shannon" data-background-interactive>
 </section>
+</section>
+<section id="shannons-noisy-channel-coding-theorem" class="slide level2">
+<h2>Shannon’s Noisy Channel Coding Theorem</h2>
 <p>A channel is a conditional <span class="math inline">\(p(y\mid x)\)</span>. Rate cannot beat capacity.</p>
 <div>
 <ul>
@@ -316,6 +340,9 @@ Mutual information for a binary symmetric channel; capacity is achieved at unifo
 <h2>Data-Processing Inequality</h2>
 <section data-background-iframe="../scripts//timer/index.html?duration=11:20&amp;title=DPI" data-background-interactive>
 </section>
+</section>
+<section id="data-processing-inequality-1" class="slide level2">
+<h2>Data-Processing Inequality</h2>
 <p>If <span class="math inline">\(X\to Y\to Z\)</span> is Markov, processing cannot create information about <span class="math inline">\(X\)</span>.</p>
 <div>
 <ul>
