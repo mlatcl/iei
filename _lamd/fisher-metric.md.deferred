@@ -8,7 +8,7 @@ transition: None
 abstract: >
   Deferred overflow. Live Week 6 teaches the exponential family and the
   Fisher metric bridge (∇²A = G; I ≠ H; ds²; dual charts named) in
-  channels-dpi-good-regulator.md. This file keeps fuller dual-flatness /
+  exponential-family-fisher-overviews.md. This file keeps fuller dual-flatness /
   KL-curvature notes. Thermodynamic length (Crooks 2007; ⟨W_ex⟩ ≥ ℒ²/τ)
   remains dropped.
 author:
@@ -33,7 +33,7 @@ reading:
     estimated_hours: 2
 ---
 
-\notes{Do not present this file as the live lecture. Week 6's live Fisher bridge is in `channels-dpi-good-regulator.md` (after the exponential-family CGF). Use this file only for overflow dual-flatness / KL notes. Thermodynamic length is dropped.}
+\notes{Do not present this file as the live lecture. Week 6's live Fisher bridge is in `exponential-family-fisher-overviews.md` (after the exponential-family CGF). Use this file only for overflow dual-flatness / KL notes. Thermodynamic length is dropped.}
 
 \subsection{This Session}
 
@@ -502,7 +502,7 @@ mlai.write_figure('gaussian-fisher-eigen.svg', directory='\writeDiagramsDir/ml')
 
 \slidesincremental{
 * This file is not the live Week 6 lecture
-* Exponential family is in `channels-dpi-good-regulator.md`
+* Exponential family is in `exponential-family-fisher-overviews.md`
 * Thermodynamic length is dropped
 }
 

@@ -35,7 +35,7 @@ parked:
     likely_home: "notes-only in the Week 5 file (unread continuous KL)"
   - id: capacity-dpi
     from_week: 3
-    likely_home: "Sorted into Week 6 (channels-dpi-good-regulator.md) — Shannon C and DPI statement; DPI proof Week 7"
+    likely_home: "Sorted into Week 6 (exponential-family-fisher-overviews.md) — Shannon C and DPI statement; DPI proof Week 7"
   - id: three-framings
     from_week: 3
     likely_home: "one-slide name in Week 7 or 8 close if clock allows; else notes"
@@ -65,7 +65,7 @@ parked:
 \notes{This file is the module parking lot. It is not a week, not a contact
 hour, and not the demon lecture. Sort an item into a live `_lamd/*.md`
 week file before presenting it. Capacity and DPI live in Week 6
-(`channels-dpi-good-regulator.md`); the DPI proof and $I+H=C$ deepen in
+(`exponential-family-fisher-overviews.md`); the DPI proof and $I+H=C$ deepen in
 Week 7. The exponential family and $\psi$ as a cumulant generating function are live in Week 6. Thermodynamic length is dropped. Legendre duality stays off the live spine.}
 
 \speakernotes{Stop. This is the parking lot. Sort before presenting.}

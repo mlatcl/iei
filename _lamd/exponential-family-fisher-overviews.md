@@ -1,5 +1,5 @@
 ---
-title: "Channels, DPI, and the Good Regulator"
+title: "Exponential Family, Fisher, and Overviews"
 week: 6
 layout: lecture
 date: 2026-11-17
@@ -92,6 +92,8 @@ reading:
 * Ten minutes
 * Worksheet 3 in as you sit
 }
+
+\classtimertitled{10:05}{Quiz 3}
 
 \include{_iei/includes/iei-notebook-setup.md}
 
