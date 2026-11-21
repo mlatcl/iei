@@ -40,7 +40,7 @@ word_count: 300
 
 \notes{Released in lecture 6 (17 November). Due by 10:00 at the start of lecture 8 (1 December), *before* Quiz 4. Estimated three hours. This worksheet is 15% of the module mark (5 curiosity + 5 skepticism + 5 reflection).}
 
-\notes{**Start Exchange 1 before the Good Regulator is taught.** Lecture 6 gives only a Good Regulator *overview* after Shannon and the data-processing inequality (setup diagrams with $D,S,A,Z$; slogan and fences). The full Conant--Ashby review is Lecture 8. Do not wait for either block, and do not read ahead in the notes to ``get the right answer.'' The point of this worksheet is that your *first* encounter with the theorem is through the LLM, under curiosity then skepticism. Later lectures will supply the careful statement, the two caveats, and the information-bottleneck gloss --- use those to refine later turns and the reflection, not to replace Exchange 1.}
+\notes{**Start Exchange 1 before the Good Regulator is taught.** Lecture 6 gave only a two-minute Good Regulator pointer (as taught; Shannon / DPI / $D,S,A,Z$ diagrams were not walked). Lecture 7 develops the GRT overview and goal measure; Lecture 8 after Quiz 4 is unassessed synthesis. Do not wait for those blocks, and do not read ahead in the notes to ``get the right answer.'' The point of this worksheet is that your *first* encounter with the theorem is through the LLM, under curiosity then skepticism. Later lectures will supply the careful statement and the two caveats --- use those to refine later turns and the reflection, not to replace Exchange 1.}
 
 \notes{Submit on Moodle as **two separate uploads**. Use your CRSid in the filenames and on the forms:
 
@@ -81,18 +81,18 @@ Put your CRSid in the dialogue YAML and on the reflection proforma. Do *not* wri
 * What is regulated? Conant--Ashby minimise $H(Z)$. Is low entropy of the outcome the same as a desirable outcome?
 * Weak ``model'': if $A=h(S)$ is enough to count as a model, does a constant action $A=a_0$ also count? When would optimality rule that out?
 * Requisite variety versus Good Regulator: Ashby demands enough variety (or enough relevant mutual information); Conant--Ashby organise an optimal policy. Which one are AGI slogans actually using?
-* Data-processing: can further processing of observations manufacture the missing information an agent needs? (DPI as a no-go; full proof comes in Week 7.)
+* Data-processing: can further processing of observations manufacture the missing information an agent needs? (DPI as a no-go; Week 7 states the moral; board proof stays enrichment.)
 * World-models and foundation models: if a large model predicts tokens or pixels well, is that the sense of ``model'' in the theorem --- or a different claim altogether?
 * Course theme: for each claim the LLM makes, is entropy a *no-go* or a *prescription*?
 
-Once you get the hang of it, take the conversation in your own directions. After lecture 6's Good Regulator block (and Week 7's DPI / information-bottleneck material), you may return for later turns or rewrite the submitted conversation --- but keep Exchange 1 as a genuine pre-lecture curiosity probe in spirit, and do not stitch different chats.}
+Once you get the hang of it, take the conversation in your own directions. After lecture 6's Good Regulator pointer (and Week 7's GRT overview / goal measure / Shannon--DPI statement), you may return for later turns or rewrite the submitted conversation --- but keep Exchange 1 as a genuine pre-lecture curiosity probe in spirit, and do not stitch different chats.}
 
 \section{What to Submit}
 
 \notes{
 * **Dialogue** ([markdown template](https://github.com/mlatcl/iei/blob/gh-pages/assessments/handouts/worksheet4-dialogue-template.md)): YAML frontmatter (LLM name and version) + exactly ten exchanges from one continuous conversation. Under each `## Exchange N`, use `### User` then `### LLM`.
 
-* **Reflection** ([handwritten proforma PDF](https://mlatcl.github.io/iei/assessments/handouts/worksheet4-reflection-proforma.pdf)): print the form, write up to 300 words by hand. What did the exchange teach you about the Good Regulator Theorem relative to claims about general intelligence? What did you learn about the model's way of linking cybernetic slogans to AGI? How does this relate to lecture 6 (and later Week 7 material) as you understand it? Has your sense of LLMs as tools of inquiry changed since Worksheet 3?
+* **Reflection** ([handwritten proforma PDF](https://mlatcl.github.io/iei/assessments/handouts/worksheet4-reflection-proforma.pdf)): print the form, write up to 300 words by hand. What did the exchange teach you about the Good Regulator Theorem relative to claims about general intelligence? What did you learn about the model's way of linking cybernetic slogans to AGI? How does this relate to lecture 6's pointer and Week 7's GRT overview as you understand it? Has your sense of LLMs as tools of inquiry changed since Worksheet 3?
 }
 
 \section{Marking}

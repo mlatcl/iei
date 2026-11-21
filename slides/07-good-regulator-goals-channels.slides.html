@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="dcterms.date" content="2026-11-24">
+  <title>Good Regulator, Goals, and Channels</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@3.9.2/css/reveal.css">
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+      /* scrollable slides: start content at top, left-align text */
+      .reveal section.scrollable {
+          overflow-y: auto !important;
+          height: 100% !important;
+          top: 0 !important;
+          text-align: left;
+      }
+      .reveal section.scrollable > h2:first-child,
+      .reveal section.scrollable > h2.scrollable:first-child {
+          margin-top: 0.2em;
+      }
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@3.9.2/css/theme/white.css" id="theme">
+  <link rel="stylesheet" href="mlatcl.css"/>
+  <link rel="stylesheet" href="slide-fonts.css"/>
+  <link rel="stylesheet" href="slide-fontsize-xs.css"/>
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'https://unpkg.com/reveal.js@3.9.2/css/print/pdf.css' : 'https://unpkg.com/reveal.js@3.9.2/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="https://unpkg.com/reveal.js@3.9.2/lib/js/html5shiv.js"></script>
+  <![endif]-->
+   <!-- Mermaid -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.6.1/mermaid.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_SVG" type="text/javascript"></script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    TeX: {
+         extensions: ["color.js"]
+      }
+    });
+  </script>
+  <script src="https://inverseprobability.com/assets/js/figure-animate.js"></script>
+  <script>
+  /* Map range slider values (min..max, often 0-based in LaMD content) to the
+     1-based frame index expected by figure-animate.js showDivs(). */
+  function lamdFrameIndex(group) {
+    var range = document.getElementById("range-" + group);
+    var val = parseInt(range.value, 10);
+    var min = parseInt(range.min, 10);
+    return val - min + 1;
+  }
+  function lamdSetDivs(group) {
+    if (typeof showDivs !== "function") return;
+    slideIndex = lamdFrameIndex(group);
+    showDivs(slideIndex, group);
+  }
+  function lamdPlusDivs(n, group) {
+    if (typeof showDivs !== "function") return;
+    var range = document.getElementById("range-" + group);
+    var min = parseInt(range.min, 10);
+    var max = parseInt(range.max, 10);
+    var val = parseInt(range.value, 10) + n;
+    if (val < min) val = max;
+    if (val > max) val = min;
+    range.value = val;
+    range.setAttribute("aria-valuenow", val);
+    slideIndex = val - min + 1;
+    showDivs(slideIndex, group);
+  }
+  </script>
+  <script>
+  /* Theme chrome (logos) sits on Reveal's full-viewport .slide-background,
+     which does not receive the deck transform. Sync --slide-scale so CSS can
+     size that chrome with the slides (see ai-cam.css / mlatcl.css / trent.css). */
+  (function () {
+    var bound = false;
+    function syncSlideScale() {
+      if (typeof Reveal === "undefined" || typeof Reveal.getScale !== "function") return false;
+      try {
+        var s = Reveal.getScale();
+        if (!s || !isFinite(s)) return false;
+        document.documentElement.style.setProperty("--slide-scale", String(s));
+        return true;
+      } catch (e) {
+        return false;
+      }
+    }
+    function bind() {
+      if (bound) return typeof Reveal !== "undefined";
+      if (typeof Reveal === "undefined" || typeof Reveal.addEventListener !== "function") return false;
+      Reveal.addEventListener("ready", syncSlideScale);
+      window.addEventListener("resize", function () {
+        setTimeout(syncSlideScale, 0);
+        setTimeout(syncSlideScale, 50);
+      });
+      bound = true;
+      return true;
+    }
+    var n = 0;
+    var t = setInterval(function () {
+      bind();
+      /* Keep polling until getScale() works — Reveal exists before initialize. */
+      if (syncSlideScale() || ++n > 200) clearInterval(t);
+    }, 50);
+  })();
+  </script>
+      
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Good Regulator, Goals, and Channels</h1>
+  <p class="author" style="text-align:center"><a href="http://inverseprobability.com">Neil D. Lawrence</a></p>
+  <p class="date" style="text-align:center"><time>2026-11-24</time></p>
+  <p class="venue" style="text-align:center">FW26, William Gates Building</p>
+</section>
+
+<section class="slide level2">
+
+<!-- CIP-0012 Track A: no-op outside HTML (overridden in talk-macros-html.gpp). -->
+<!-- Class-test timer: no-op outside slides HTML (overridden in talk-macros-slides-html.gpp). -->
+<!-- CIP-0016: mdpp expands \diagramcredit before gpp; leftover calls are empty. -->
+<!-- Do not edit this file locally. -->
+<!---->
+<!-- CIP-0012 Track A: content script load. Once-guard with alphanumeric
+     names stays in the surrounding ifndef wrapper (GPP ifndef limitation). -->
+<!-- Do not edit this file locally. -->
+<!-- The last names to be defined. Should be defined entirely in terms of macros from above-->
+</section>
+<section id="this-session" class="slide level2">
+<h2>This Session</h2>
+<div>
+<ul>
+<li class="fragment">Unmarked review of Worksheet 3 submissions</li>
+<li class="fragment">Good Regulator overview: <span class="math inline">\(D,S,A,Z\)</span>; <span class="math inline">\(\min H(Z)\)</span>; <span class="math inline">\(H(A\mid S)=0\)</span>; caveats</li>
+<li class="fragment">Goal as change of measure: <span class="math inline">\(r=-\ln(\mathrm{d}\nu/\mathrm{d}\lambda)\)</span></li>
+<li class="fragment">Shannon <span class="math inline">\(R\le C\)</span>; DPI statement (Week 6 overflow)</li>
+</ul>
+</div>
+<!--setupplotcode{import seaborn as sns
+sns.set_style('darkgrid')
+sns.set_context('paper')
+sns.set_palette('colorblind')}-->
+</section>
+<section id="submission-review" class="slide level2">
+<h2>Submission Review</h2>
+<section data-background-iframe="../scripts//timer/index.html?duration=10:05&amp;title=Worksheet 3 review" data-background-interactive>
+</section>
+<p>Unmarked review. Patterns across the cohort, not individual grades.</p>
+<div>
+<ul>
+<li class="fragment">Curiosity vs slogan collapse (LLM as Grasshopper)</li>
+<li class="fragment">Coarse-graining Maxwell: compartments and two ledgers</li>
+<li class="fragment">What good Skepticus looks like: press existence claims and conflations</li>
+<li class="fragment">Worksheet 4 already out — due 1 December before Quiz 4</li>
+</ul>
+</div>
+<aside class="notes">
+Twenty minutes maximum. No marks, no CRSid call-outs. Name recurring strengths and recurring LLM traps from W3. Remind them Exchange 1 on W4 was meant to start <em>before</em> today’s GRT block.
+</aside>
+</section>
+<section id="good-regulator-overview" class="slide level2">
+<h2>Good Regulator Overview</h2>
+<section data-background-iframe="../scripts//timer/index.html?duration=10:25&amp;title=Good Regulator" data-background-interactive>
+</section>
+</section>
+<section id="good-regulator-overview-1" class="slide level2">
+<h2>Good Regulator Overview</h2>
+</section>
+<section id="notation-d-s-a-z" class="slide level2">
+<h2>Notation: <span class="math inline">\(D\)</span>, <span class="math inline">\(S\)</span>, <span class="math inline">\(A\)</span>, <span class="math inline">\(Z\)</span></h2>
+<p>The CGF was <span class="math inline">\(\psi(\boldsymbol{\theta})\)</span>. After the break, <span class="math inline">\(A\)</span> is <em>action</em>.</p>
+<div>
+<ul>
+<li class="fragment"><span class="math inline">\(D\)</span>: disturbance</li>
+<li class="fragment"><span class="math inline">\(S\)</span>: system state</li>
+<li class="fragment"><span class="math inline">\(A\)</span>: action (the regulator’s response; Conant–Ashby often write <span class="math inline">\(R\)</span>)</li>
+<li class="fragment"><span class="math inline">\(Z\)</span>: reguland / outcome (Ashby’s essential variable)</li>
+</ul>
+</div>
+<aside class="notes">
+Board the four letters once. Classic cybernetics used <span class="math inline">\(R\)</span> for the regulator; we use <span class="math inline">\(A\)</span> for action so the policy language matches Weeks 7–8. The log-partition / CGF is <span class="math inline">\(\psi\)</span>, so there is no clash with action. Do not prove anything yet.
+</aside>
+</section>
+<section id="two-setups" class="slide level2">
+<h2>Two Setups</h2>
+<div class="figure">
+<div id="good-regulator-two-setups-figure" class="figure-frame">
+<div class="lamd-columns" style="display:flex; width:100%; justify-content:center; align-items:center; column-gap:1em;">
+<div style="flex:0 0 50%; max-width:50%;">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/information/good-regulator-cause-controlled.svg" width="100%" style=" ">
+</object>
+</div>
+<div style="flex:0 0 50%; max-width:50%;">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/information/good-regulator-error-controlled.svg" width="100%" style=" ">
+</object>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes">
+Cause-controlled regulation (left) acts on the disturbance <span class="math inline">\(D\)</span>; error-controlled regulation (right) acts on the state <span class="math inline">\(S\)</span> that <span class="math inline">\(D\)</span> caused.
+</aside>
+<div>
+<ul>
+<li class="fragment">Cause-controlled: act on <span class="math inline">\(D\)</span> (or on a model of <span class="math inline">\(D\)</span>)</li>
+<li class="fragment">Error-controlled: act on the state <span class="math inline">\(S\)</span> that <span class="math inline">\(D\)</span> caused</li>
+<li class="fragment">DPI: <span class="math inline">\(I(A;D)\le I(S;D)\)</span> when <span class="math inline">\(A\)</span> only sees <span class="math inline">\(S\)</span></li>
+</ul>
+</div>
+<aside class="notes">
+Spend the clock on the diagrams. Cause control reads the disturbance before it enters the essential variable; error control corrects after the fact. Most modern RL policies are error-controlled on the observed state. Week 8 returns to why the simplest optimum factors as a model.
+</aside>
+</section>
+<section id="what-good-means-today" class="slide level2">
+<h2>What ``Good’’ Means Today</h2>
+<p>Success is low entropy in the reguland — with two caveats.</p>
+<div>
+<ul>
+<li class="fragment">Objective sketch: <span class="math inline">\(\min_{\pi(a\mid s)} H(Z)\)</span></li>
+<li class="fragment">Slogan: every good regulator must be a model of the system</li>
+<li class="fragment">Weak reading of ``model’’: <span class="math inline">\(H(A\mid S)=0\)</span>, i.e. <span class="math inline">\(A=h(S)\)</span></li>
+<li class="fragment">Full theorem and caveats: Week 8 review</li>
+</ul>
+</div>
+<aside class="notes">
+Name the objective and the slogan. Do not board the concavity transfer <span class="math inline">\(g(\alpha)\)</span>. Two fences only: constant <span class="math inline">\(A=a_0\)</span> also has <span class="math inline">\(H(A\mid S)=0\)</span>; low <span class="math inline">\(H(Z)\)</span> is predictable, not desirable. Worksheet 4 Exchange 1 has already asked them what GRT has to do with general intelligence — leave the depth for Week 8.
+</aside>
+</section>
+<section id="requisite-variety" class="slide level2">
+<h2>Requisite Variety</h2>
+<p>Quantity bound, not the structure theorem.</p>
+<div>
+<ul>
+<li class="fragment"><span class="math inline">\(H(Z)\ge H(D)-I(D;A)\)</span></li>
+<li class="fragment">Useless variety: large <span class="math inline">\(H(A)\)</span> with small <span class="math inline">\(I(D;A)\)</span></li>
+<li class="fragment">Ashby: how much regulatory information is required</li>
+<li class="fragment">GRT (Week 8): how that information may be structured</li>
+</ul>
+</div>
+<aside class="notes">
+One slide. Same <span class="math inline">\(A\)</span> and <span class="math inline">\(Z\)</span> as the diagrams. Perfect regulation <span class="math inline">\(H(Z)=0\)</span> forces <span class="math inline">\(I(D;A)=H(D)\)</span> under the usual bound.
+</aside>
+<p>Name the existence claim. Fence the slogan.</p>
+<div>
+<ul>
+<li class="fragment">Among <span class="math inline">\(H(Z)\)</span>-minimisers there exists <span class="math inline">\(\pi\)</span> with <span class="math inline">\(H(A\mid S)=0\)</span></li>
+<li class="fragment">Caveat 1: constant <span class="math inline">\(A=a_0\)</span> also has <span class="math inline">\(H(A\mid S)=0\)</span> (weak ``model’’)</li>
+<li class="fragment">Caveat 2: low <span class="math inline">\(H(Z)\)</span> is predictability, not desirability</li>
+<li class="fragment">Concavity proof stays notes — do not board <span class="math inline">\(g(\alpha)\)</span> today</li>
+</ul>
+</div>
+<aside class="notes">
+LO12. Existence from concavity of entropy; say so without the full transfer argument. Both caveats are live for W4 skepticism and for Quiz 4.
+</aside>
+<section data-background-iframe="../scripts//timer/index.html?duration=10:50&amp;title=Break" data-background-interactive>
+</section>
+</section>
+<section id="goals-as-radonnikodym" class="slide level2">
+<h2>Goals as Radon–Nikodym</h2>
+<section data-background-iframe="../scripts//timer/index.html?duration=11:00&amp;title=Goal measure" data-background-interactive>
+</section>
+<p>Week 5: relative entropy needs a reference. Goals need one too.</p>
+<div>
+<ul>
+<li class="fragment">Channel: occupancy over <span class="math inline">\((S,A)\)</span> pushes to an outcome law on <span class="math inline">\(Z\)</span></li>
+<li class="fragment">Criterion: <span class="math inline">\(\min_\pi H(Z)\)</span> — or <span class="math inline">\(H_\nu(Z)\)</span> under a goal measure <span class="math inline">\(\nu\)</span></li>
+<li class="fragment">Base <span class="math inline">\(\lambda\)</span>; goal <span class="math inline">\(\nu\ll\lambda\)</span>; density <span class="math inline">\(\mathrm{d}\nu/\mathrm{d}\lambda\)</span></li>
+<li class="fragment">Reward reading: <span class="math inline">\(r(z)=-\ln(\mathrm{d}\nu/\mathrm{d}\lambda)\)</span></li>
+</ul>
+</div>
+<aside class="notes">
+Bridge to Week 5 Radon–Nikodym / KL language. Board <span class="math inline">\(r=-\ln(\mathrm{d}\nu/\mathrm{d}\lambda)\)</span> once. Do not open MM loops, empowerment budgets, or DeepSea.
+</aside>
+<p>The map recovers reward for a reward channel. It does not license general intelligence.</p>
+<div>
+<ul>
+<li class="fragment">Reward channel: entropy criterion collapses to return maximisation (under a volume threshold)</li>
+<li class="fragment">Regulation channel: hold a set-point with no scalar reward</li>
+<li class="fragment">Existence of a deterministic organiser <span class="math inline">\(\neq\)</span> a rich world-model</li>
+<li class="fragment">Worksheet 4: keep slogan, existence claim, and AGI talk apart</li>
+</ul>
+</div>
+<aside class="notes">
+LO12 fence for W4. One slide. No algorithm, no Thompson sampling, no belief MDP.
+</aside>
+</section>
+<section id="shannon-capacity-and-dpi" class="slide level2">
+<h2>Shannon Capacity and DPI</h2>
+<section data-background-iframe="../scripts//timer/index.html?duration=11:35&amp;title=Channels" data-background-interactive>
+</section>
+</section>
+<section id="shannons-noisy-channel-coding-theorem" class="slide level2">
+<h2>Shannon’s Noisy Channel Coding Theorem</h2>
+<p>A channel is a conditional <span class="math inline">\(p(y\mid x)\)</span>. Rate cannot beat capacity.</p>
+<div>
+<ul>
+<li class="fragment">Mutual information <span class="math inline">\(I(X;Y)\)</span> is the channel currency</li>
+<li class="fragment">Capacity <span class="math inline">\(C = \max_{p(x)} I(X;Y)\)</span></li>
+<li class="fragment">No-go: reliable communication requires <span class="math inline">\(R \le C\)</span></li>
+<li class="fragment">Prescription: the input <span class="math inline">\(p(x)\)</span> that achieves <span class="math inline">\(C\)</span></li>
+</ul>
+</div>
+<aside class="notes">
+LO10. Carnot twin: forbids rates above <span class="math inline">\(C\)</span>; does not construct a code. BSC plot from the capacity include if time.
+</aside>
+</section>
+<section id="scaffolding-not-outcomes" class="slide level2">
+<h2>Scaffolding, Not Outcomes</h2>
+</section>
+<section id="chain-rule-mutual-information-capacity" class="slide level2">
+<h2>Chain Rule, Mutual Information, Capacity</h2>
+<p>Four results we will need later — stated, not proved today.</p>
+<div>
+<ul>
+<li class="fragment">Chain rule: <span class="math inline">\(H(X,Y) = H(X) + H(Y|X)\)</span></li>
+<li class="fragment">Mutual information: <span class="math inline">\(I(X;Y) = H(X)-H(X|Y) = H(X)+H(Y)-H(X,Y)\)</span></li>
+<li class="fragment">Capacity: no rate above <span class="math inline">\(C\)</span>; achieving <span class="math inline">\(C\)</span> requires the capacity-achieving <span class="math inline">\(p(x)\)</span></li>
+<li class="fragment">Data processing: if <span class="math inline">\(X\to Y\to Z\)</span> is Markov, <span class="math inline">\(I(X;Z)\le I(X;Y)\)</span></li>
+</ul>
+</div>
+<aside class="notes">
+Define <span class="math inline">\(I\)</span> from the chain rule. State DPI; do not prove. Proof and the information bottleneck are week 8 (LO10). Capacity remains this week’s no-go/prescription pair.
+</aside>
+<div class="figure">
+<div id="bsc-capacity-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/bsc-capacity.svg" width="70%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+Mutual information for a binary symmetric channel; capacity is achieved at uniform input.
+</aside>
+</section>
+<section id="data-processing-inequality" class="slide level2">
+<h2>Data-Processing Inequality</h2>
+<p>If <span class="math inline">\(X\to Y\to Z\)</span> is Markov, processing cannot create information about <span class="math inline">\(X\)</span>.</p>
+<div>
+<ul>
+<li class="fragment">Markov: <span class="math inline">\(p(z\mid x,y)=p(z\mid y)\)</span></li>
+<li class="fragment">Statement: <span class="math inline">\(I(X;Z)\le I(X;Y)\)</span></li>
+<li class="fragment">Soft partitions (Week 5): leftover <span class="math inline">\(H(G\mid X)\)</span> already spent information</li>
+<li class="fragment">Full proof: notes / Week 8 enrichment — not today’s board</li>
+</ul>
+</div>
+<aside class="notes">
+LO10 moral only. You cannot process your way to more <span class="math inline">\(I\)</span>. Underwrites requisite variety and GRT tools.
+</aside>
+</section>
+<section id="notes-overflow-multi-information-dpi-proof-ib" class="slide level2">
+<h2>Notes Overflow: Multi-Information, DPI Proof, IB</h2>
+<!-- overflow retained for notes / Week 8 enrichment -->
+</section>
+<section id="optional-overflow-multi-information" class="slide level2">
+<h2>Optional overflow: Multi-Information</h2>
+</section>
+<section id="sampling-two-dimensional-variables" class="slide level2">
+<h2>Sampling Two Dimensional Variables</h2>
+<div id="animation-independent_velocities" class="lamd-animation" role="region" aria-label="" data-animation-group="independent_velocities">
+<noscript>
+<style>#animation-independent_velocities .animation-controls{display:none}#animation-independent_velocities .independent_velocities~.independent_velocities{display:none}</style>
+</noscript>
+<div class="animation-controls">
+<p><small></small> <input id="range-independent_velocities" type="range" min="0" max="7" value="0" aria-label="Frame slider for " aria-valuemin="0" aria-valuemax="7" aria-valuenow="0" onchange="typeof lamdSetDivs==='function'&&lamdSetDivs('independent_velocities')" oninput="typeof lamdSetDivs==='function'&&lamdSetDivs('independent_velocities')"> <button type="button" onclick="typeof lamdPlusDivs==='function'&&lamdPlusDivs(-1,'independent_velocities');" aria-label="Previous frame">❮</button> <button type="button" onclick="typeof lamdPlusDivs==='function'&&lamdPlusDivs(1,'independent_velocities');" aria-label="Next frame">❯</button></p>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+try{
+if(typeof showDivs==='function'){showDivs(1,'independent_velocities');}
+else{
+console.warn('[lamd] figure-animate.js not loaded; animation "'+'independent_velocities'+'" degraded to static first frame.');
+var c=document.getElementById('animation-independent_velocities');
+if(c){var ctrl=c.querySelector('.animation-controls');if(ctrl){ctrl.style.display='none';}}
+var f=document.getElementsByClassName('independent_velocities');
+for(var i=1;i<f.length;i++){f[i].style.display='none';}
+if(f.length>0){f[0].style.display='block';}
+}
+}catch(e){console.warn('[lamd] Animation "'+'independent_velocities'+'" failed to initialize:',e);}
+});
+</script>
+<div class="independent_velocities" style="text-align:center;" role="img" aria-label="independent_velocities" data-animation-frame="independent_velocities">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/independent_velocities000.svg" width="70%" style=" ">
+</object>
+</div>
+<div class="independent_velocities" style="text-align:center;" role="img" aria-label="independent_velocities" data-animation-frame="independent_velocities">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/independent_velocities001.svg" width="70%" style=" ">
+</object>
+</div>
+<div class="independent_velocities" style="text-align:center;" role="img" aria-label="independent_velocities" data-animation-frame="independent_velocities">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/independent_velocities002.svg" width="70%" style=" ">
+</object>
+</div>
+<div class="independent_velocities" style="text-align:center;" role="img" aria-label="independent_velocities" data-animation-frame="independent_velocities">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/independent_velocities003.svg" width="70%" style=" ">
+</object>
+</div>
+<div class="independent_velocities" style="text-align:center;" role="img" aria-label="independent_velocities" data-animation-frame="independent_velocities">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/independent_velocities004.svg" width="70%" style=" ">
+</object>
+</div>
+<div class="independent_velocities" style="text-align:center;" role="img" aria-label="independent_velocities" data-animation-frame="independent_velocities">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/independent_velocities005.svg" width="70%" style=" ">
+</object>
+</div>
+<div class="independent_velocities" style="text-align:center;" role="img" aria-label="independent_velocities" data-animation-frame="independent_velocities">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/independent_velocities006.svg" width="70%" style=" ">
+</object>
+</div>
+<div class="independent_velocities" style="text-align:center;" role="img" aria-label="independent_velocities" data-animation-frame="independent_velocities">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/independent_velocities007.svg" width="70%" style=" ">
+</object>
+</div>
+</div>
+</section>
+<section id="correlation" class="slide level2">
+<h2>Correlation</h2>
+<div>
+<ul>
+<li class="fragment">Correlation is when two variables are dependent</li>
+</ul>
+</div>
+</section>
+<section id="sampling-two-dimensional-variables-1" class="slide level2">
+<h2>Sampling Two Dimensional Variables</h2>
+<div id="animation-correlated_velocities" class="lamd-animation" role="region" aria-label="" data-animation-group="correlated_velocities">
+<noscript>
+<style>#animation-correlated_velocities .animation-controls{display:none}#animation-correlated_velocities .correlated_velocities~.correlated_velocities{display:none}</style>
+</noscript>
+<div class="animation-controls">
+<p><small></small> <input id="range-correlated_velocities" type="range" min="0" max="7" value="0" aria-label="Frame slider for " aria-valuemin="0" aria-valuemax="7" aria-valuenow="0" onchange="typeof lamdSetDivs==='function'&&lamdSetDivs('correlated_velocities')" oninput="typeof lamdSetDivs==='function'&&lamdSetDivs('correlated_velocities')"> <button type="button" onclick="typeof lamdPlusDivs==='function'&&lamdPlusDivs(-1,'correlated_velocities');" aria-label="Previous frame">❮</button> <button type="button" onclick="typeof lamdPlusDivs==='function'&&lamdPlusDivs(1,'correlated_velocities');" aria-label="Next frame">❯</button></p>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+try{
+if(typeof showDivs==='function'){showDivs(1,'correlated_velocities');}
+else{
+console.warn('[lamd] figure-animate.js not loaded; animation "'+'correlated_velocities'+'" degraded to static first frame.');
+var c=document.getElementById('animation-correlated_velocities');
+if(c){var ctrl=c.querySelector('.animation-controls');if(ctrl){ctrl.style.display='none';}}
+var f=document.getElementsByClassName('correlated_velocities');
+for(var i=1;i<f.length;i++){f[i].style.display='none';}
+if(f.length>0){f[0].style.display='block';}
+}
+}catch(e){console.warn('[lamd] Animation "'+'correlated_velocities'+'" failed to initialize:',e);}
+});
+</script>
+<div class="correlated_velocities" style="text-align:center;" role="img" aria-label="correlated_velocities" data-animation-frame="correlated_velocities">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/correlated_velocities000.svg" width="70%" style=" ">
+</object>
+</div>
+<div class="correlated_velocities" style="text-align:center;" role="img" aria-label="correlated_velocities" data-animation-frame="correlated_velocities">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/correlated_velocities001.svg" width="70%" style=" ">
+</object>
+</div>
+<div class="correlated_velocities" style="text-align:center;" role="img" aria-label="correlated_velocities" data-animation-frame="correlated_velocities">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/correlated_velocities002.svg" width="70%" style=" ">
+</object>
+</div>
+<div class="correlated_velocities" style="text-align:center;" role="img" aria-label="correlated_velocities" data-animation-frame="correlated_velocities">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/correlated_velocities003.svg" width="70%" style=" ">
+</object>
+</div>
+<div class="correlated_velocities" style="text-align:center;" role="img" aria-label="correlated_velocities" data-animation-frame="correlated_velocities">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/correlated_velocities004.svg" width="70%" style=" ">
+</object>
+</div>
+<div class="correlated_velocities" style="text-align:center;" role="img" aria-label="correlated_velocities" data-animation-frame="correlated_velocities">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/correlated_velocities005.svg" width="70%" style=" ">
+</object>
+</div>
+<div class="correlated_velocities" style="text-align:center;" role="img" aria-label="correlated_velocities" data-animation-frame="correlated_velocities">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/correlated_velocities006.svg" width="70%" style=" ">
+</object>
+</div>
+<div class="correlated_velocities" style="text-align:center;" role="img" aria-label="correlated_velocities" data-animation-frame="correlated_velocities">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/correlated_velocities007.svg" width="70%" style=" ">
+</object>
+</div>
+</div>
+</section>
+<section id="independent-gaussians" class="slide level2">
+<h2>Independent Gaussians</h2>
+<div class="figure">
+<div id="independent-gaussians-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/independent-gaussians.svg" width="60%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+Two independent Gaussians for the <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> velocity of a ball.
+</aside>
+</section>
+<section id="correlated-gaussians" class="slide level2">
+<h2>Correlated Gaussians</h2>
+<div class="figure">
+<div id="correlated-gaussians-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/correlated-gaussians.svg" width="60%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+A correlated Gaussian for the <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> velocity of a ball. If all balls were correlated in this way, this would imply that the whole box is moving towards the upper right or bottom left.
+</aside>
+</section>
+<section id="anticorrelated-gaussians" class="slide level2">
+<h2>Anticorrelated Gaussians</h2>
+<div class="figure">
+<div id="anti-correlated-gaussians-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/anti-correlated-gaussians.svg" width="60%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+An anti-correlated Gaussian for the <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> velocity of a ball. If all balls were anti-correlated in this way, this would imply that the whole box is moving towards the upper left or bottom right.
+</aside>
+</section>
+<section id="the-classical-observer" class="slide level2">
+<h2>The Classical Observer</h2>
+<div class="figure">
+<div id="observer-composite-independent-figure" class="figure-frame">
+<object class data="https://mlatcl.github.io/iei/slides/diagrams/physics/observer-composite-independent.svg" width="90%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+Here the observer is monitoring the movements of the particles. We’ve plotted the velocities alongside the 1 standard deviation contour of their theoretical distribution.
+</aside>
+</section>
+<section id="the-classical-observer---correlated" class="slide level2">
+<h2>The Classical Observer - Correlated</h2>
+<div class="figure">
+<div id="observer-composite-correlated-figure" class="figure-frame">
+<object class data="https://mlatcl.github.io/iei/slides/diagrams/physics/observer-composite-correlated.svg" width="90%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+Again the observer is monitoring the movements of the particles, but here their motion is correlated (<span class="math inline">\(\rho=0.95\)</span>).
+</aside>
+</section>
+<section id="the-classical-observer---anti-correlated" class="slide level2">
+<h2>The Classical Observer - Anti-correlated</h2>
+<div class="figure">
+<div id="observer-composite-anti-correlated-figure" class="figure-frame">
+<object class data="https://mlatcl.github.io/iei/slides/diagrams/physics/observer-composite-anti-correlated.svg" width="90%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+Here the observer is monitoring the movements of the particles, but here their motion is anti-correlated (<span class="math inline">\(\rho=-0.95\)</span>).
+</aside>
+<aside class="notes">
+Conceptually, imagine a classic physics setup where you can see inside a box: there are a number of particles moving around, sampled from random Gaussians. If you plot their velocities, they sit within a circle. In this case, the marginal <span class="math inline">\(h_i\)</span> would be their velocity in each direction. The marginal distribution in each direction is Gaussian. Now, if the particles are correlated — everything tending to move in one diagonal direction — interestingly, the marginal entropies are the same. Although these are correlated, I’m not saying anything about the correlation when I conserve the marginal entropies, because if you look at the marginal distribution in each direction, it’s the same as in the uncorrelated case. And if they’re anti-correlated, it’s the same again. So I’m not making any statements about independence with this constraint.
+</aside>
+<!-- SNIPPET: _physics/includes/multi-information-worked.md -->
+<div class="figure">
+<div id="multi-information-rho-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/multi-information-rho.svg" width="75%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+Multi-information and joint entropy for uniform-marginal binary pairs; <span class="math inline">\(I+H=C\)</span> with <span class="math inline">\(C=2\)</span>.
+</aside>
+<!-- /SNIPPET: _physics/includes/multi-information-worked.md -->
+</section>
+<section id="optional-overflow-dpi-proof-and-information-bottleneck" class="slide level2">
+<h2>Optional overflow: DPI Proof and Information Bottleneck</h2>
+</section>
+<section id="data-processing-inequality-1" class="slide level2">
+<h2>Data-Processing Inequality</h2>
+</section>
+<section id="data-processing-inequality-2" class="slide level2">
+<h2>Data-Processing Inequality</h2>
+<p>If <span class="math inline">\(X\to Y\to Z\)</span> is a Markov chain, processing cannot create information about <span class="math inline">\(X\)</span>.</p>
+<div>
+<ul>
+<li class="fragment">Markov: <span class="math inline">\(p(z\mid x,y)=p(z\mid y)\)</span>, equivalently <span class="math inline">\(I(X;Z\mid Y)=0\)</span></li>
+<li class="fragment"><span class="math inline">\(I(X;Y,Z)=I(X;Y)+I(X;Z\mid Y)=I(X;Y)\)</span></li>
+<li class="fragment"><span class="math inline">\(I(X;Y,Z)=I(X;Z)+I(X;Y\mid Z)\ge I(X;Z)\)</span></li>
+<li class="fragment">Therefore <span class="math inline">\(I(X;Z)\le I(X;Y)\)</span></li>
+</ul>
+</div>
+<aside class="notes">
+LO10. Cover and Thomas Theorem 2.8.1. Board the two expansions of <span class="math inline">\(I(X;Y,Z)\)</span>. No-go: you cannot process your way to more <span class="math inline">\(I\)</span>.
+</aside>
+</section>
+<section id="kl-decay-and-grouping" class="slide level2">
+<h2>KL Decay and Grouping</h2>
+<p>Under Markov dynamics, <span class="math inline">\(\text{KL}\left( p_t\,\|\,\pi \right)\)</span> falls — coarse-graining in time.</p>
+<div>
+<ul>
+<li class="fragment">Physics often says ``relative entropy’’; same object as week-3 / week-6 KL</li>
+<li class="fragment">Data-processing for distributions: each step cannot increase divergence to equilibrium</li>
+<li class="fragment">Same grouping split as the die, now for approach to <span class="math inline">\(\pi\)</span>:</li>
+</ul>
+</div>
+<p><small> <span class="math display">\[
+\text{KL}\left( p\,\|\,\pi \right)=\text{KL}\left( w\,\|\,w_\pi \right)+\sum_i w_i\, \text{KL}\left( p_i\,\|\,\pi_i \right)
+\]</span> </small></p>
+<aside class="notes">
+After proving DPI for mutual information, give the dynamical face. Course notation is <span class="math inline">\(\text{KL}\left( \cdot\,\|\,\cdot \right)\)</span> throughout; ``relative entropy’’ is optional physics prose. Board the split: between-group redistribution versus within-group relaxation. Hamiltonian aside: fine-grained <span class="math inline">\(H\)</span> conserved; only coarse-grained entropy grows (Ehrenfest).
+</aside>
+</section>
+<section id="arrow-of-time-from-the-same-split" class="slide level2">
+<h2>Arrow of Time from the Same Split</h2>
+<p>How much of equilibration is between groups, how much within?</p>
+<div>
+<ul>
+<li class="fragment">Between: <span class="math inline">\(\text{KL}\left( w\,\|\,w_\pi \right)\)</span> — redistribution of macro probability</li>
+<li class="fragment">Within: <span class="math inline">\(\sum_i w_i \text{KL}\left( p_i\,\|\,\pi_i \right)\)</span> — relaxation to local <span class="math inline">\(\pi_i\)</span></li>
+<li class="fragment">Demon / Crooks / transport: all move mass among groups while baths handle the rest</li>
+</ul>
+</div>
+</section>
+<section id="information-bottleneck" class="slide level2">
+<h2>Information Bottleneck</h2>
+</section>
+<section id="information-bottleneck-1" class="slide level2">
+<h2>Information Bottleneck</h2>
+<p>Least-committal <span class="math inline">\(T\)</span> given a relevance constraint — MaxEnt, now on mutual information.</p>
+<div>
+<ul>
+<li class="fragment">Markov: <span class="math inline">\(Y \leftrightarrow X \leftrightarrow T\)</span></li>
+<li class="fragment">Minimise <span class="math inline">\(I(X;T)\)</span> subject to <span class="math inline">\(I(T;Y)\ge R\)</span></li>
+<li class="fragment">Lagrangian: <span class="math inline">\(I(X;T)-\beta I(T;Y)\)</span></li>
+<li class="fragment">DPI bound: <span class="math inline">\(I(T;Y)\le I(X;Y)\)</span></li>
+</ul>
+</div>
+<aside class="notes">
+LO10. <span class="math inline">\(\beta\to 0\)</span> discards everything; <span class="math inline">\(\beta\to\infty\)</span> keeps <span class="math inline">\(T=X\)</span>. Optimal <span class="math inline">\(p(t\mid x)\)</span> is Boltzmann / exponential family. Week 8 uses this as a tool, not a new outcome.
+</aside>
+</section>
+<section id="the-inaccessible-game" class="slide level2">
+<h2>The Inaccessible Game</h2>
+<ul>
+<li>System isolated from observation</li>
+<li>External observer cannot extract information</li>
+<li>Internal state is inaccessible</li>
+<li>Zero-player game with information-theoretic rules</li>
+</ul>
+</section>
+<section id="why-inaccessible" class="slide level2">
+<h2>Why “Inaccessible?”</h2>
+<p><strong>Why “Inaccessible?”</strong></p>
+<p>From BLF axioms: Info gained = <span class="math inline">\(H(p) - H(q)\)</span></p>
+<p>Our axiom: <span class="math inline">\(\sum h_i = C\)</span> (constant)</p>
+<p><span class="math display">\[\Delta(\sum h_i) = 0 \Rightarrow \text{observer learns nothing!}\]</span></p>
+</section>
+<section id="what-makes-it-a-game" class="slide level2">
+<h2>What Makes It a Game?</h2>
+<p><strong>Game Characteristics:</strong></p>
+<ul>
+<li>Zero-player game</li>
+<li>State = probability distribution <span class="math inline">\(p(\mathbf{x}|\boldsymbol{\theta})\)</span></li>
+<li>Rule = maximize entropy production</li>
+<li>Constraint = <span class="math inline">\(\sum h_i = C\)</span></li>
+<li>Dynamics = emerge from information geometry</li>
+</ul>
+</section>
+<section id="connection-to-physical-reality" class="slide level2">
+<h2>Connection to Physical Reality</h2>
+<p><strong>Physical Connections:</strong></p>
+<ul>
+<li>GENERIC structure emerges</li>
+<li>Energy ↔︎ Entropy equivalence</li>
+<li>Landauer’s principle derivable</li>
+<li>Bridge between information and physics</li>
+</ul>
+</section>
+<section id="define-this-week" class="slide level2">
+<h2>Define This Week</h2>
+<div>
+<ul>
+<li class="fragment">Name <span class="math inline">\(D\)</span>, <span class="math inline">\(S\)</span>, <span class="math inline">\(A\)</span>, <span class="math inline">\(Z\)</span> — and what <span class="math inline">\(\min H(Z)\)</span> means</li>
+<li class="fragment">Why <span class="math inline">\(H(A\mid S)=0\)</span> is a weak reading of ``model’’</li>
+<li class="fragment">How does <span class="math inline">\(r=-\ln(\mathrm{d}\nu/\mathrm{d}\lambda)\)</span> connect goals to Week 5’s RN/KL language?</li>
+<li class="fragment">What does <span class="math inline">\(R\le C\)</span> forbid, and what does DPI state?</li>
+</ul>
+</div>
+</section>
+<section id="after-this-lecture" class="slide level2">
+<h2>After This Lecture</h2>
+<div>
+<ul>
+<li class="fragment">Worksheet 4 due 1 December, before Quiz 4</li>
+<li class="fragment">Quiz 4: first ten minutes of Week 8</li>
+<li class="fragment">Week 8: limits synthesis; no-barber <span class="math inline">\(\to\)</span> quantum motivation; course close</li>
+</ul>
+</div>
+</section>
+<section id="further-reading" class="slide level2 scrollable">
+<h2 class="scrollable">Further Reading</h2>
+<ul>
+<li><p>the Good Regulator Theorem of <span class="citation" data-cites="Conant-Ashby70">Conant and Ashby (1970)</span></p></li>
+<li><p>requisite variety; Shannon form of <span class="citation" data-cites="Ashby-introduction56">Ashby (1956)</span></p></li>
+<li><p>the Good Regulator Theorem of <span class="citation" data-cites="Conant-Ashby70">Conant and Ashby (1970)</span></p></li>
+<li><p>requisite variety of <span class="citation" data-cites="Ashby-introduction56">Ashby (1956)</span></p></li>
+<li><p>noisy channel coding / capacity of <span class="citation" data-cites="Shannon-mathematical48">Shannon (1948)</span></p></li>
+<li><p>Chapter 7 of <span class="citation" data-cites="Cover:elements91">Cover and Thomas (1991)</span></p></li>
+<li><p>Theorem 2.8.1 of <span class="citation" data-cites="Cover:elements91">Cover and Thomas (1991)</span></p></li>
+<li><p>the method; optional of <span class="citation" data-cites="Tishby:bottleneck99">Tishby et al. (1999)</span></p></li>
+</ul>
+</section>
+<section id="thanks" class="slide level2 scrollable">
+<h2 class="scrollable">Thanks!</h2>
+<ul>
+<li>company: <a href="https://trent.ai">Trent AI</a></li>
+<li>book: <a href="https://www.penguin.co.uk/books/455130/the-atomic-human-by-lawrence-neil-d/9780241625248">The Atomic Human</a></li>
+<li>twitter: <a href="https://twitter.com/lawrennd">@lawrennd</a></li>
+<li><a href="https://the-atomic-human.ai">The Atomic Human</a></li>
+<li>newspaper: <a href="http://www.theguardian.com/profile/neil-lawrence">Guardian Profile Page</a></li>
+<li>blog: <a href="http://inverseprobability.com/blog.html">http://inverseprobability.com</a></li>
+</ul>
+</section>
+<section id="references" class="slide level2 unnumbered scrollable">
+<h2 class="unnumbered scrollable">References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-Ashby-introduction56" class="csl-entry" role="doc-biblioentry">
+Ashby, W.R., 1956. An introduction to cybernetics. Chapman &amp; Hall, London.
+</div>
+<div id="ref-Conant-Ashby70" class="csl-entry" role="doc-biblioentry">
+Conant, R.C., Ashby, W.R., 1970. Every good regulator of a system must be a model of that system. International Journal of Systems Science 1, 89–97.
+</div>
+<div id="ref-Cover:elements91" class="csl-entry" role="doc-biblioentry">
+Cover, T.M., Thomas, J.A., 1991. Elements of information theory. Wiley, New York.
+</div>
+<div id="ref-Shannon-mathematical48" class="csl-entry" role="doc-biblioentry">
+Shannon, C.E., 1948. A mathematical theory of communication. The Bell System Technical Journal 27, 379–423. <a href="https://doi.org/10.1002/j.1538-7305.1948.tb01338.x">https://doi.org/10.1002/j.1538-7305.1948.tb01338.x</a>
+</div>
+<div id="ref-Tishby:bottleneck99" class="csl-entry" role="doc-biblioentry">
+Tishby, N., Pereira, F.C., Bialek, W., 1999. The information bottleneck method, in: Proceedings of the 37th Annual Allerton Conference on Communication, Control and Computing. pp. 368–377.
+</div>
+</div>
+</section>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/reveal.js@3.9.2/lib/js/head.min.js"></script>
+  <script src="https://unpkg.com/reveal.js@3.9.2/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+        // Transition style
+        transition: 'none', // none/fade/slide/convex/concave/zoom
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'https://unpkg.com/reveal.js@3.9.2/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'https://unpkg.com/reveal.js@3.9.2/plugin/zoom-js/zoom.js', async: true },
+          { src: 'https://unpkg.com/reveal.js@3.9.2/plugin/math/math.js', async: true },
+          { src: 'https://unpkg.com/reveal.js@3.9.2/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+  <!-- Mermaid: after Reveal.initialize (CIP-0012 template hygiene) -->
+  <script>
+    if (typeof Reveal !== 'undefined' && Reveal.addEventListener) {
+      Reveal.addEventListener('ready', function () {
+        if (typeof mermaid === 'undefined') return;
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: 'base',
+          themeVariables: {
+            primaryColor: '#4a90e2',
+            primaryTextColor: '#fff',
+            primaryBorderColor: '#357abd',
+            lineColor: '#67b246',
+            fontSize: '30px',
+            fontFamily: 'arial',
+            edgeLabelBackground: 'transparent',
+            tertiaryColor: 'transparent'
+          }
+        });
+      });
+    }
+  </script>
+    </body>
+</html>

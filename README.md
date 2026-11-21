@@ -22,9 +22,9 @@ Entropy appears in three apparently separate traditions — thermodynamics (Bolt
 1. probability and entropy review; Socratic LLM method; that theme via perpetual motion and the human–machine bandwidth gap of *The Atomic Human*; then the Boltzmann distribution and free energy,
 2. Shannon entropy and its formal equivalence to thermodynamic entropy; grouping / missing measure; MaxEnt and the exponential family,
 3. Maxwell's demon as compartments and two ledgers; Landauer's principle as the thermodynamic cost of decision-making,
-4. Shannon's communication theorem / channel capacity, the data-processing inequality, and a Good Regulator overview ($D,S,A,Z$ diagrams),
-5. multi-information, $I+H=C$, DPI proof, and the information bottleneck (including as a gloss after GRT),
-6. full Good Regulator review, von Neumann entropy where clock allows, and information-theoretic limits on intelligent agency (Landauer, DPI, GRT applied, human bandwidth).
+4. exponential family and Fisher $I(\theta)$ versus Shannon $H$ (Week 6 as taught); Shannon capacity and DPI recovered in Week 7,
+5. Good Regulator overview ($D,S,A,Z$), goals as change of measure, and channel no-gos ($R\le C$, DPI statement),
+6. after Quiz 4: classical limits synthesis, then no-barber motivation for von Neumann / quantum information, and the course close (unassessed).
 
 Four ten-minute in-class quizzes sit at the start of lectures 2, 4, 6 and 8.
 
@@ -45,7 +45,7 @@ Worksheets 1–4 are Socratic LLM dialogues (curiosity then skepticism) plus a h
 | LO9 | Identify MaxEnt as an $m$-projection (no natural gradients this term) | 7 |
 | LO10 | State $R\le C$, define $I+H=C$, apply DPI, and explain the information bottleneck | 6–7 |
 | LO11 | Explain why classical $I=C$ forces $H=0$, and show von Neumann entropy resolves nontrivial marginals | 8 |
-| LO12 | Articulate agency via Shannon / DPI / GRT (not transport geometry) | 8 |
+| LO12 | Articulate agency via Shannon / DPI / GRT (not transport geometry) | 7–8 |
 | LO13 | Evaluate capability claims with Landauer, $R\le C$, $I+H=C$, DPI, GRT, and human bandwidth | 6+8 |
 
 ## Assessment

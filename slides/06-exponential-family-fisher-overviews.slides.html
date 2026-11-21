@@ -154,6 +154,22 @@
 </ul>
 </div>
 </section>
+<section id="as-taught" class="slide level2">
+<h2>As Taught</h2>
+<p>Exp family and Fisher before the close. Shannon and DPI wait.</p>
+<div>
+<ul>
+<li class="fragment">MaxEnt re-derived: <span class="math inline">\(\theta=-\lambda\)</span>, <span class="math inline">\(\psi=\log Z\)</span>, <span class="math inline">\(T\)</span> as sufficient stats</li>
+<li class="fragment">CGF: <span class="math inline">\(\nabla\psi=\langle T\rangle\)</span>; Hessian is Fisher / <span class="math inline">\(\mathrm{Cov}[T]\)</span></li>
+<li class="fragment">After the break: base measure (Poisson <span class="math inline">\(1/k!\)</span>, binomial multiplicity)</li>
+<li class="fragment">Bernoulli logit / softplus; Gaussian natural params; <span class="math inline">\(H=\psi-\theta\cdot\eta\)</span></li>
+<li class="fragment">Natural gradient of entropy is <span class="math inline">\(-\theta\)</span>; GRT only as a W4 pointer</li>
+</ul>
+</div>
+<aside class="notes">
+As taught: stay on the board for <span class="math inline">\(\theta\)</span>, <span class="math inline">\(\psi\)</span>, base measure, and <span class="math inline">\(H=\psi-\theta\cdot\eta\)</span>. Do not open Shannon / DPI if the Fisher / natural-gradient block is still live. GRT is a W4 pointer only; full Conant–Ashby waits for Week 8. Continuous MaxEnt stays parked.
+</aside>
+</section>
 <section id="quiz-3" class="slide level2">
 <h2>Quiz 3</h2>
 <div>
@@ -516,16 +532,16 @@ Mutual information for a binary symmetric channel; capacity is achieved at unifo
 <li class="fragment">Markov: <span class="math inline">\(p(z\mid x,y)=p(z\mid y)\)</span></li>
 <li class="fragment">Statement: <span class="math inline">\(I(X;Z)\le I(X;Y)\)</span></li>
 <li class="fragment">Soft partitions: leftover <span class="math inline">\(H(G\mid X)\)</span> already spent information</li>
-<li class="fragment">Proof: Week 7 (Cover–Thomas 2.8.1)</li>
+<li class="fragment">Full proof: notes overflow (Cover–Thomas 2.8.1)</li>
 </ul>
 </div>
 <aside class="notes">
-State DPI; do not board the two expansions unless ahead of clock. Moral only: you cannot process your way to more <span class="math inline">\(I\)</span>. Week 7 proves it when multi-information is the object.
+State DPI; do not board the two expansions unless ahead of clock. Moral only: you cannot process your way to more <span class="math inline">\(I\)</span>. As taught this block was not reached; Week 7 states Shannon <span class="math inline">\(R\le C\)</span> and DPI as statement/moral for Quiz 4.
 </aside>
 <div>
 <ul>
 <li class="fragment">No-go: processing cannot create <span class="math inline">\(I\)</span></li>
-<li class="fragment">Week 7: prove DPI; information bottleneck as prescription</li>
+<li class="fragment">Week 7: state Shannon <span class="math inline">\(R\le C\)</span> and DPI if unread; GRT overview; goal measure</li>
 </ul>
 </div>
 </section>
@@ -618,7 +634,7 @@ One slide. Same <span class="math inline">\(A\)</span> and <span class="math inl
 <li class="fragment">Why is <span class="math inline">\(H=\psi-\theta\cdot\eta\)</span> when <span class="math inline">\(h_0=1\)</span> (and what changes for Poisson), and why does that make <span class="math inline">\(G=\nabla^2\psi=\mathrm{Cov}[T]\)</span>?</li>
 <li class="fragment">How does Fisher’s <span class="math inline">\(I(\theta)\)</span> differ from Shannon’s <span class="math inline">\(H\)</span>?</li>
 <li class="fragment">What does <span class="math inline">\(R\le C\)</span> forbid, and what does DPI state?</li>
-<li class="fragment">Name <span class="math inline">\(D\)</span>, <span class="math inline">\(S\)</span>, <span class="math inline">\(A\)</span>, <span class="math inline">\(Z\)</span> on the Good Regulator diagrams — and why full GRT waits for Week 8</li>
+<li class="fragment">Name <span class="math inline">\(D\)</span>, <span class="math inline">\(S\)</span>, <span class="math inline">\(A\)</span>, <span class="math inline">\(Z\)</span> — Week 7 develops the overview</li>
 </ul>
 </div>
 </section>
@@ -627,8 +643,8 @@ One slide. Same <span class="math inline">\(A\)</span> and <span class="math inl
 <div>
 <ul>
 <li class="fragment">Worksheet 4 out (dialogue; Exchange 1 before GRT); due 1 December before Quiz 4</li>
-<li class="fragment">Week 7: <span class="math inline">\(I+H=C\)</span>, DPI proof, information bottleneck</li>
-<li class="fragment">Week 8: full Good Regulator review, then limits synthesis</li>
+<li class="fragment">Week 7: GRT overview; goal measure; Shannon / DPI statement</li>
+<li class="fragment">Week 8: Quiz 4; limits synthesis; no-barber <span class="math inline">\(\to\)</span> quantum (unassessed)</li>
 </ul>
 </div>
 </section>

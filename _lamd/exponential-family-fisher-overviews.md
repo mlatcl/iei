@@ -56,7 +56,7 @@ reading:
     estimated_hours: 0.5
 ---
 
-\notes{Quiz 3 occupies the first ten minutes from 10:05 --- Weeks 4--5 as delivered (grouping, demon compartments and two ledgers, soft partitions / MI / KL, MaxEnt and the exponential family introduced). After the quiz, develop the exponential family: $\theta=-\lambda$, canonical / Gaussian / Bernoulli, and $\psi(\boldsymbol{\theta})=\log Z(-\boldsymbol{\theta})$ as a cumulant generating function. The Hessian of $\psi$ *is* the Fisher information metric --- that is today's information-geometry bridge. Collect Worksheet 3 as they sit (due 10:00). Release Worksheet 4 *before* the Good Regulator block: it is another Skepticus dialogue; Exchange 1 asks what the Good Regulator Theorem is and how it relates to modern notions of general intelligence, begun before that theorem is taught. Then Shannon capacity, DPI as a statement, and a Good Regulator overview. W4 due 1 December (start of lecture 8).}
+\notes{Quiz 3 opens the session --- Weeks 4--5 as delivered (grouping, demon compartments and two ledgers, soft partitions / MI / KL, MaxEnt and the exponential family introduced). Collect Worksheet 3 as they sit (due 10:00). Release Worksheet 4 early: it is another Skepticus dialogue; Exchange 1 asks what the Good Regulator Theorem is and how it relates to modern notions of general intelligence, begun before that theorem is taught. After the quiz, develop the exponential family: $\theta=-\lambda$, canonical / Gaussian / Bernoulli, $\psi(\boldsymbol{\theta})=\log Z(-\boldsymbol{\theta})$ as a cumulant generating function, and the Hessian of $\psi$ as Fisher. Shannon capacity, DPI, and a full Good Regulator overview stay in the file; as taught on 17 November they were not reached (GRT was a two-minute W4 pointer only). W4 due 1 December (start of lecture 8).}
 
 \subsection{This Session}
 
@@ -69,19 +69,21 @@ reading:
 }
 
 \notes{
-**Time plan.** The slot is 10:05--11:55 (110 minutes, not 120). Quiz 3 is paper. Shannon and DPI stay, shorter. Path length of $G$ is not today's object.
+**Time plan (as delivered 17 November 2026).** Clocks from the Whisper SRT on the Panopto capture (00:00 ≈ 10:00). The slot is 10:05--11:55 (110 minutes, not 120). Quiz 3 quiet ran to ~10:32. Shannon capacity and DPI were not walked. Path length of $G$ is not today's object. Full GRT diagrams wait for Week 7.
 
 | Clock | Block |
 |------:|-------|
-| 10:05--10:15 | Quiz 3 (paper); collect Worksheet 3 |
-| 10:15--10:20 | Release Worksheet 4 (start Exchange 1 before GRT) |
-| 10:20--10:40 | Exponential family: $\theta=-\lambda$; three members; $\psi$ as CGF |
-| 10:40--11:00 | $H=\psi-\theta\cdot\eta$ ($h_0=1$); Fisher from score; $I\neq H$; $\mathrm{d}s^2$; dual charts |
-| 11:00--11:10 | Break |
-| 11:10--11:25 | Shannon communication theorem / channel capacity |
-| 11:25--11:35 | DPI statement; Markov moral |
-| 11:35--11:55 | Good Regulator overview ($D,S,A,Z$ diagrams); preview Week 7 |
+| 10:05--10:32 | Quiz 3 (paper); collect Worksheet 3; release Worksheet 4 |
+| 10:32--10:34 | Maxwell-speed / high-d ring aside |
+| 10:34--11:00 | Exp family: $\theta=-\lambda$; $\psi=\log Z$ as CGF; cumulants |
+| 11:00--11:05 | MaxEnt property Q\&A; break called |
+| 11:05--11:15 | Break |
+| 11:15--11:42 | Base measure (Poisson / binomial); Bernoulli; Gaussian natural params |
+| 11:42--11:56 | $H=\psi-\theta\cdot\eta$; Fisher / natural gradient; NN deltas |
+| 11:56--11:58 | GRT pointer for Worksheet 4 only |
 }
+
+\include{includes/week6-as-taught.md}
 
 \subsection{Quiz 3}
 
@@ -304,16 +306,16 @@ $$
 * Markov: $p(z\mid x,y)=p(z\mid y)$
 * Statement: $I(X;Z)\le I(X;Y)$
 * Soft partitions: leftover $H(G\mid X)$ already spent information
-* Proof: Week 7 (Cover--Thomas 2.8.1)
+* Full proof: notes overflow (Cover--Thomas 2.8.1)
 }
 
-\speakernotes{State DPI; do not board the two expansions unless ahead of clock. Moral only: you cannot process your way to more $I$. Week 7 proves it when multi-information is the object.}
+\speakernotes{State DPI; do not board the two expansions unless ahead of clock. Moral only: you cannot process your way to more $I$. As taught this block was not reached; Week 7 states Shannon $R\le C$ and DPI as statement/moral for Quiz 4.}
 
-\notes{The data-processing inequality is the no-go on $I$: further processing of $Y$ cannot increase information about $X$. Week 5's soft-partition leftover $H(G\mid X)$ is the same grammar --- a stochastic map spends mutual information. Full proof waits for Week 7; today the statement is enough to underwrite the Good Regulator tools (requisite variety needs enough $I$; DPI forbids manufacturing missing $I$).}
+\notes{The data-processing inequality is the no-go on $I$: further processing of $Y$ cannot increase information about $X$. Week 5's soft-partition leftover $H(G\mid X)$ is the same grammar --- a stochastic map spends mutual information. As taught on 17 November this statement was not walked; Week 7 recovers it as statement/moral. The board proof stays notes overflow / enrichment, not assessed.}
 
 \slidesincremental{
 * No-go: processing cannot create $I$
-* Week 7: prove DPI; information bottleneck as prescription
+* Week 7: state Shannon $R\le C$ and DPI if unread; GRT overview; goal measure
 }
 
 \subsection{Good Regulator}
@@ -327,17 +329,17 @@ $$
 * Why is $H=\psi-\theta\cdot\eta$ when $h_0=1$ (and what changes for Poisson), and why does that make $G=\nabla^2\psi=\mathrm{Cov}[T]$?
 * How does Fisher's $I(\theta)$ differ from Shannon's $H$?
 * What does $R\le C$ forbid, and what does DPI state?
-* Name $D$, $S$, $A$, $Z$ on the Good Regulator diagrams --- and why full GRT waits for Week 8
+* Name $D$, $S$, $A$, $Z$ --- Week 7 develops the overview
 }
 
 \subsection{After This Lecture}
 
-\notes{Quiz 3 opened the session, before the exponential family and Fisher geometry were developed. Worksheet 4 was released early in the session so Exchange 1 could begin before the Good Regulator overview (due 1 December, before Quiz 4). It is a Skepticus dialogue on GRT and general intelligence, not the parked notebook brief. Today's GRT block is setup and diagrams only; the full Conant--Ashby argument is the Week 8 review. Week 7 deepens multi-information, proves DPI, and develops the information bottleneck as the prescription paired with DPI --- and as an interpretation after GRT, not the theorem.}
+\notes{Quiz 3 opened the session (quiet until ~10:32), before the exponential family and Fisher geometry were developed. Worksheet 4 was released so Exchange 1 could begin before any GRT material (due 1 December, before Quiz 4). It is a Skepticus dialogue on GRT and general intelligence, not the parked notebook brief. As taught, Shannon capacity and DPI were not walked; the Good Regulator was a two-minute close (entropy of $Z$; Ashby), not the $D,S,A,Z$ diagrams. Week 7 (*Good Regulator, Goals, and Channels*) takes the assessed spine: unmarked W3 review; GRT overview; goal measure via Radon--Nikodym; Shannon $R\le C$ and DPI as statement/moral. Multi-information depth, DPI board proof, and IB stay notes overflow. Week 8 after Quiz 4 / W4 is unassessed: short classical limits synthesis, then protected no-barber $\to$ von Neumann / quantum motivation, then course close.}
 
 \slidesincremental{
 * Worksheet 4 out (dialogue; Exchange 1 before GRT); due 1 December before Quiz 4
-* Week 7: $I+H=C$, DPI proof, information bottleneck
-* Week 8: full Good Regulator review, then limits synthesis
+* Week 7: GRT overview; goal measure; Shannon / DPI statement
+* Week 8: Quiz 4; limits synthesis; no-barber $\to$ quantum (unassessed)
 }
 
 \reading

@@ -58,7 +58,7 @@ outcomes:
     text: "Students will be able to state Shannon's channel-capacity bound R ≤ C, define multi-information I and the conservation law I + H = C, prove or apply the data-processing inequality for a Markov chain, and explain the information bottleneck as a prescription for spending mutual information under a relevance constraint."
     bloom_level: analyse
     week: 7
-    notes: "Live Weeks 6–7 information-theoretic toolkit. Week 6: Shannon capacity (no-go) and capacity-achieving p(x) (prescription); DPI as a statement. Week 7: multi-information / I+H=C (Watanabe); DPI proof (Cover & Thomas Thm 2.8.1); information bottleneck (Tishby, Pereira, Bialek 1999) as the prescription paired with DPI and as a gloss after GRT, not the theorem."
+    notes: "Assessed Weeks 6–7 as redesigned. Week 6 as taught: Fisher I(θ) versus H (LO8); Shannon capacity and DPI not walked. Week 7 states Shannon R≤C and DPI as statement/moral for Quiz 4. Multi-information / I+H=C, DPI board proof, and IB stay notes overflow / enrichment — not on Quiz 4."
 
   - id: LO11
     text: "Students will be able to explain why the classical limit I = C requires H = 0, argue that sustaining high marginal entropies alongside I = C forces a move beyond classical probability, and show that von Neumann entropy S(ρ) = −Tr(ρ log ρ) satisfies S = 0 for a pure entangled state while its marginals carry positive entropy."
@@ -69,14 +69,14 @@ outcomes:
   - id: LO12
     text: "Students will be able to articulate intelligent agency in information-theoretic terms — analogous to Shannon's use of probability to abstract a communication code — using channel capacity, the data-processing inequality, and the Good Regulator Theorem, rather than transport geometry."
     bloom_level: evaluate
-    week: 8
-    notes: "Live Week 8 framing after the GRT replan. Shannon abstracted a code as probability over symbols; an agent organises action given state under the same no-go / prescription grammar. Optimal transport, Wasserstein, and Schrödinger bridges remain deferred colour, not assessed live this term."
+    week: 7
+    notes: "Live Week 7 after the GRT/goals replan: D,S,A,Z overview; min H(Z); H(A|S)=0 with both caveats; goal measure r=−ln(dν/dλ). Week 8 synthesis applies the same tools to capability claims (unassessed after Quiz 4). Optimal transport, Wasserstein, and Schrödinger bridges remain deferred colour, not assessed live this term."
 
   - id: LO13
     text: "Students will be able to evaluate claims about the capabilities of intelligent systems using Landauer's principle, the perpetual motion analogy, Shannon's R ≤ C, I + H = C, the data-processing inequality, and human bandwidth; and to state the Good Regulator Theorem as an existence claim (an H(Z)-optimal regulator may be taken with H(A|S)=0), distinguishing it from Ashby's requisite variety and naming both caveats (weak model; predictability versus desirability)."
     bloom_level: evaluate
     week: 8
-    notes: "Closes the Week 1 loop. GRT overview in Week 6 (D, S, A=action not R, Z=reguland diagrams; slogan and fences). Full Conant–Ashby review in Week 8, then applied to capability claims. IB form min I(S;A) s.t. H(Z)≤ε is a course gloss after the theorem, not Conant–Ashby. Thermodynamic length ℒ²/τ is dropped. Three transport geometries are not live this term."
+    notes: "Closes the Week 1 loop. GRT overview and goal measure in Week 7; Week 8 after Quiz 4 applies Landauer / Shannon / DPI / GRT / bandwidth to capability claims in a short unassessed synthesis. Full Conant–Ashby re-proof is not the Week 8 spine. Thermodynamic length ℒ²/τ is dropped. Three transport geometries are not live this term."
 ---
 
 # Learning Outcomes
@@ -129,7 +129,7 @@ multi-perspective fluency required by LO7.
 
 ## Lecture map
 
-Eight Tuesdays, 13 October – 1 December 2026, 10:00–12:00, FW26, William Gates Building. Each slot is two hours (speech 10:05--11:55). Class tests take the first ten minutes of lectures 2, 4, 6 and 8 (weeks 2, 4, 6, 8). Week 6, after Quiz 3, develops the exponential family (canonical, Gaussian, Bernoulli; $\psi$ as a cumulant generating function), reads $\nabla^2\psi$ as the Fisher information metric (Fisher $I$ versus Shannon $H$), then Shannon capacity, a DPI statement, and a Good Regulator *overview* ($D,S,A,Z$ diagrams; slogan and fences). Thermodynamic length is dropped. Week 7 deepens $I+H=C$, proves DPI, and develops IB as gloss; Week 8 reviews GRT in full, then closes with Quiz 4 and LO13 synthesis (von Neumann / $I=C$ if clock allows).
+Eight Tuesdays, 13 October – 1 December 2026, 10:00–12:00, FW26, William Gates Building. Each slot is two hours (speech 10:05--11:55). Class tests take the first ten minutes of lectures 2, 4, 6 and 8 (weeks 2, 4, 6, 8). Week 6, after Quiz 3, develops the exponential family and Fisher $I$ versus Shannon $H$ (as taught; Shannon capacity, DPI, and full GRT diagrams were not walked). Thermodynamic length is dropped. Week 7 (*Good Regulator, Goals, and Channels*) is the assessed GRT overview, goal-as-change-of-measure, and Shannon / DPI statement. Week 8 opens with Quiz 4 and W4, then an unassessed limits synthesis and protected no-barber $\to$ von Neumann / quantum arc, then course close.
 
 | Week | Date | Topic | Outcomes | In slot |
 |------|------|-------|----------|---------|
@@ -138,9 +138,9 @@ Eight Tuesdays, 13 October – 1 December 2026, 10:00–12:00, FW26, William Gat
 | 3 | 27 Oct | Heat thread; Helmholtz $F=U-TS$. Game / MacKay named, not reached | LO1, LO2, LO3 | |
 | 4 | 3 Nov | Quiz 2; questions / MacKay / grouping; missing measure; demon as compartments and two ledgers | LO2, LO4 | Q2 (10 min); W2 due; W3 released |
 | 5 | 10 Nov | KL + MI; MaxEnt; exponential family named ($\theta=-\lambda$) | LO5, LO6 (named), LO7 | |
-| 6 | 17 Nov | Quiz 3; exponential family; Fisher metric; Shannon; DPI; GRT overview ($D,S,A,Z$) | LO6, LO8, LO10, LO13 | Q3 (10 min); W3 due; W4 released (dialogue; Exchange 1 before GRT) |
-| 7 | 24 Nov | Multi-information / $I+H=C$; DPI proof; IB as GRT gloss | LO9, LO10 | |
-| 8 | 1 Dec | Quiz 4; full GRT review; von Neumann / $I=C$ (optional); LO13 synthesis | LO11–LO13 | Q4 (10 min, LO8–LO13); W4 due (LO12, LO13) |
+| 6 | 17 Nov | Quiz 3; exponential family; Fisher metric (Shannon / DPI / GRT unread) | LO6, LO8 | Q3 (10 min); W3 due; W4 released (dialogue; Exchange 1 before GRT) |
+| 7 | 24 Nov | GRT overview; goal measure; Shannon / DPI statement | LO9, LO10, LO12 | |
+| 8 | 1 Dec | Quiz 4; limits synthesis; no-barber $\to$ von Neumann (unassessed); course close | LO11–LO13 | Q4 (10 min, LO8/LO10/LO12/LO13); W4 due (LO12, LO13) |
 
 ## Outcome summary
 

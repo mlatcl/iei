@@ -35,7 +35,7 @@ parked:
     likely_home: "notes-only in the Week 5 file (unread continuous KL)"
   - id: capacity-dpi
     from_week: 3
-    likely_home: "Sorted into Week 6 (exponential-family-fisher-overviews.md) — Shannon C and DPI statement; DPI proof Week 7"
+    likely_home: "Stated Week 7 (good-regulator-goals-channels.md) — Shannon R≤C and DPI statement/moral; board proof stays notes overflow / enrichment"
   - id: three-framings
     from_week: 3
     likely_home: "one-slide name in Week 7 or 8 close if clock allows; else notes"
@@ -64,9 +64,13 @@ parked:
 
 \notes{This file is the module parking lot. It is not a week, not a contact
 hour, and not the demon lecture. Sort an item into a live `_lamd/*.md`
-week file before presenting it. Capacity and DPI live in Week 6
-(`exponential-family-fisher-overviews.md`); the DPI proof and $I+H=C$ deepen in
-Week 7. The exponential family and $\psi$ as a cumulant generating function are live in Week 6. Thermodynamic length is dropped. Legendre duality stays off the live spine.}
+week file before presenting it. Shannon capacity and DPI were planned for
+Week 6 but as taught unread; they are *stated* in Week 7
+(`good-regulator-goals-channels.md`) for Quiz 4. The DPI board proof and
+multi-information / $I+H=C$ stay notes overflow / enrichment, not the
+assessed live spine. The exponential family and $\psi$ as a cumulant
+generating function are live in Week 6. Thermodynamic length is dropped.
+Legendre duality stays off the live spine.}
 
 \speakernotes{Stop. This is the parking lot. Sort before presenting.}
 
@@ -142,7 +146,7 @@ Week 7. The exponential family and $\psi$ as a cumulant generating function are 
 \include{_information/includes/differential-entropy-binning.md}
 \include{_information/includes/relative-entropy-reparametrisation.md}
 
-\notes{Capacity / DPI scaffolding moved into Week 6 live lecture. The include remains here only for overflow review; do not present from parking.}
+\notes{Capacity / DPI scaffolding was planned for Week 6; as taught unread. Week 7 states both for Quiz 4. The include remains here only for overflow review; do not present from parking.}
 
 \include{_information/includes/channel-capacity-chain-rule.md}
 
@@ -154,7 +158,7 @@ Week 7. The exponential family and $\psi$ as a cumulant generating function are 
 \slidesincremental{
 * No-go: $R \le C$; processing cannot create information
 * Prescription: the $p(x)$ that achieves $C$
-* Live path: Week 6 states DPI; Week 7 proves; GRT uses both
+* Live path: Week 7 states Shannon / DPI; proof stays enrichment
 }
 
 \subsection{Three Framings, First Pass}
