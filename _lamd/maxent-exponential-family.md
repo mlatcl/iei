@@ -12,7 +12,7 @@ abstract: >
   break: Jaynes' maximum entropy under constraints, Lagrange on the board,
   the die, and the discrete MaxEnt proof that recovers Boltzmann. The
   exponential family is introduced at the end ($\theta=-\lambda$); developed
-  in Week 6. Continuous MaxEnt is covered in Week 6. The exponential-family
+  in Week 6. Continuous MaxEnt stays unread overflow. The exponential-family
   tour ($\psi$ as a cumulant generating function; canonical, Gaussian,
   Bernoulli) is taught live in Week 6. Thermodynamic length is dropped.
 author:
@@ -48,7 +48,7 @@ reading:
     required: false
 ---
 
-\notes{No class test today. Quiz 2 was last week (start of lecture 4). Worksheet 2 was due last week. As delivered 10 November 2026: open with a short generative-AI policy aside (MIT report), then Quiz 2 debrief, then KL (overlap, Radon--Nikodym / Jaynes $m$, mutual information, properties). Break *before* MaxEnt. After the break: MaxEnt problem, Lagrange on the board, Laplace / sunrise, Jaynes die, discrete MaxEnt proof. Exponential family introduced at the end ($\theta=-\lambda$); developed in Week 6. Continuous MaxEnt is covered in Week 6. The exponential-family development, including $\log Z$ as a cumulant generating function, is the Week 6 opening after Quiz 3. Thermodynamic length is not that development.}
+\notes{No class test today. Quiz 2 was last week (start of lecture 4). Worksheet 2 was due last week. As delivered 10 November 2026: open with a short generative-AI policy aside (MIT report), then Quiz 2 debrief, then KL (overlap, Radon--Nikodym / Jaynes $m$, mutual information, properties). Break *before* MaxEnt. After the break: MaxEnt problem, Lagrange on the board, Laplace / sunrise, Jaynes die, discrete MaxEnt proof. Exponential family introduced at the end ($\theta=-\lambda$); developed in Week 6. Continuous MaxEnt stayed unread through Week 6. The exponential-family development, including $\log Z$ as a cumulant generating function, is the Week 6 opening after Quiz 3. Thermodynamic length is not that development.}
 
 \subsection{This Session}
 
@@ -61,7 +61,7 @@ reading:
 }
 
 \notes{
-**Time plan (as delivered 10 November 2026).** Clocks from the Whisper SRT on the Panopto capture (00:00 ≈ 10:00). The slot is 10:05--11:55 (110 minutes, not 120). Break was called *before* MaxEnt, not mid-MaxEnt. Continuous MaxEnt / $\log Z$ as CGF / full exponential-family tour were introduced at the end and developed in Week 6. That exponential-family tour is live in Week 6. Thermodynamic length is dropped.
+**Time plan (as delivered 10 November 2026).** Clocks from the Whisper SRT on the Panopto capture (00:00 ≈ 10:00). The slot is 10:05--11:55 (110 minutes, not 120). Break was called *before* MaxEnt, not mid-MaxEnt. $\log Z$ as CGF / full exponential-family tour were named at the end and developed in Week 6. Continuous MaxEnt stayed unread through Week 6. Thermodynamic length is dropped.
 
 | Clock | Block |
 |------:|-------|
@@ -123,7 +123,7 @@ reading:
 
 \speakernotes{State the problem before Lagrange. Not ``entropy is maximised in nature'' as metaphysics: given what we know (the constraints), which distribution assumes least else?}
 
-\notes{If there were no constraints beyond normalisation, Shannon entropy on a finite alphabet is maximised by the uniform distribution. Thermodynamics adds constraints: mean energy fixed, or mean and variance, or a list of moments. The maximum entropy principle asks for the distribution of largest $H$ among those that meet the constraints. That is today's discrete calculation (Jaynes' die), done after the break on 10 November. Equivalently, one may minimise $\KL{p}{m}$ to a declared reference measure $m$ under the same constraints; Continuous MaxEnt is covered in Week 6.}
+\notes{If there were no constraints beyond normalisation, Shannon entropy on a finite alphabet is maximised by the uniform distribution. Thermodynamics adds constraints: mean energy fixed, or mean and variance, or a list of moments. The maximum entropy principle asks for the distribution of largest $H$ among those that meet the constraints. That is today's discrete calculation (Jaynes' die), done after the break on 10 November. Equivalently, one may minimise $\KL{p}{m}$ to a declared reference measure $m$ under the same constraints; Continuous MaxEnt stays unread overflow (not reached in Week 6 either).}
 
 \include{_maths/includes/lagrange-multipliers.md}
 
@@ -243,7 +243,7 @@ This is the same calculation as Jaynes' die (one linear constraint on the face v
 
 \speakernotes{Same principle, continuous reading: minimise $\KL{f}{m}$ at fixed mean kinetic energy. Lebesgue on $v_x$ gives a Gaussian component; Lebesgue on $\mathbb{R}^3$ (shell $v^2$ in speed) gives Maxwell--Boltzmann. The $v^2$ is the density of states. As taught 10 November: not walked as a dedicated block.}
 
-\notes{As taught on 10 November the continuous MaxEnt / density-of-states reading was not reached after the discrete proof. Continuous MaxEnt is covered in Week 6.}
+\notes{As taught on 10 November the continuous MaxEnt / density-of-states reading was not reached after the discrete proof. It was not reached in Week 6 either and remains unread overflow.}
 
 \addreading{@MacKay-information03}{Chapter 22}
 
@@ -316,7 +316,7 @@ We use the minus sign so that high-energy states are down-weighted when $\theta_
 
 \speakernotes{LO7 in brief. As taught 10 November: not reached. Full colour waits for Worksheet 4 / week 8. Intended answer to ``how is entropy understood today?'' until week 8.}
 
-\notes{Clausius gives the macroscopic second law and names entropy. Shannon treats $H$ as a code bound; Szilard and Landauer tie one bit to $k_BT\ln 2$ of work and erasure; Boltzmann counts macrostates at equilibrium; Jaynes treats $p$ as least-committal inference under constraint. All agree: $H$ forbids, $p$ prescribes. Continuous MaxEnt is covered in Week 6.}
+\notes{Clausius gives the macroscopic second law and names entropy. Shannon treats $H$ as a code bound; Szilard and Landauer tie one bit to $k_BT\ln 2$ of work and erasure; Boltzmann counts macrostates at equilibrium; Jaynes treats $p$ as least-committal inference under constraint. All agree: $H$ forbids, $p$ prescribes. Continuous MaxEnt remains unread overflow.}
 
 \subsection{Define This Week}
 
@@ -330,7 +330,7 @@ We use the minus sign so that high-energy states are down-weighted when $\theta_
 
 \subsection{After This Lecture}
 
-\notes{No class test today. As closed on 10 November: quiz and worksheet next week. Quiz 3 is 17 November at the start of lecture 6, on Weeks 4--5 as delivered (grouping, soft partitions / MI, KL, MaxEnt, exponential family introduced). After the quiz, Week 6 develops the exponential family ($\psi$ as CGF; canonical, Gaussian, Bernoulli), then Shannon capacity, DPI, and the Good Regulator. Thermodynamic length is not on that path.}
+\notes{No class test today. As closed on 10 November: quiz and worksheet next week. Quiz 3 is 17 November at the start of lecture 6, on Weeks 4--5 as delivered (grouping, soft partitions / MI, KL, MaxEnt, exponential family introduced). After the quiz, Week 6 develops the exponential family ($\psi$ as CGF; canonical, Gaussian, Bernoulli) and Fisher / natural gradient. As taught, Shannon capacity, DPI, and full GRT diagrams were not reached on 17 November (GRT was a W4 pointer only). Thermodynamic length is not on that path.}
 
 \slidesincremental{
 * Quiz 3: 17 November, first ten minutes
