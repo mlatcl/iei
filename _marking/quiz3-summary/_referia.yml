@@ -1,0 +1,297 @@
+# Quiz 3 score summary — read-only gradebook over the marked cohort.
+#
+# Joins ../students with ../quiz3/info/quiz3_scores.csv (left). One-screen
+# inline_list plus a viewer table of totals / mean. Does not write marks —
+# edit scores in the quiz3 marking config.
+#
+# Serve from this directory or the course root:
+#   referia serve --root ~/mlatcl/iei/_marking/quiz3-summary
+#   referia serve --root ~/mlatcl/iei  → open via L172 — marking
+
+referia_config_version: 2
+strict_columns: false
+title: "L172 — Quiz 3 scores"
+date: 2026-11-17
+week: 6
+task: summary
+list_order: 63
+kind: marking
+current: true
+author: Neil D. Lawrence
+description: >
+  Cohort summary of Quiz 3 paper marks (10). Totals from
+  quiz3/info/quiz3_scores.csv joined to the class list. Read-only —
+  change marks in the quiz marking config. Feedback email lists
+  topic areas for missed items; it does not include marks.
+browser: Google Chrome.app
+
+display:
+  layout: inline_list
+  detail_field: description
+  filter_defaults:
+    _sort: family:asc
+    _group: directory
+
+# Explicit hstack so unmarked students stay visible (left join on scores).
+input:
+  type: hstack
+  index: crsid
+  specifications:
+    - type: csv
+      index: crsid
+      filename: students.csv
+      directory: ../students
+      header: 0
+    - type: csv
+      index: crsid
+      filename: quiz3_scores.csv
+      directory: ../quiz3/info
+      header: 0
+      how: left
+  compute:
+    - field: Name
+      function: render_liquid
+      args:
+        template: >-
+          {% capture index %}{% if familyName %}{{ familyName }} {% endif %}{% if givenName %}{{ givenName }}{% endif %}{% endcapture %}{{ index | strip | replace: ' ', '_' | replace: '.', '' }}
+      row_args:
+        givenName: given
+        familyName: family
+    # Checkbox Correct fields store True / False / blank — not 1 / 0.
+    # Count True/yes/1 as 1; blank/False/0 as 0. Show a total only if at
+    # least one Q score was touched (else left-join miss = unmarked).
+    - field: totalDisplay
+      function: render_liquid
+      args:
+        template: >-
+          {% assign t = 0 %}{% assign touched = 0 %}{% assign a = q1Score | append: "" | strip | downcase %}{% if a == "1" or a == "1.0" or a == "true" or a == "yes" %}{% assign t = t | plus: 1 %}{% assign touched = touched | plus: 1 %}{% elsif a == "0" or a == "0.0" or a == "false" or a == "no" %}{% assign touched = touched | plus: 1 %}{% endif %}{% assign a = q2Score | append: "" | strip | downcase %}{% if a == "1" or a == "1.0" or a == "true" or a == "yes" %}{% assign t = t | plus: 1 %}{% assign touched = touched | plus: 1 %}{% elsif a == "0" or a == "0.0" or a == "false" or a == "no" %}{% assign touched = touched | plus: 1 %}{% endif %}{% assign a = q3Score | append: "" | strip | downcase %}{% if a == "1" or a == "1.0" or a == "true" or a == "yes" %}{% assign t = t | plus: 1 %}{% assign touched = touched | plus: 1 %}{% elsif a == "0" or a == "0.0" or a == "false" or a == "no" %}{% assign touched = touched | plus: 1 %}{% endif %}{% assign a = q4Score | append: "" | strip | downcase %}{% if a == "1" or a == "1.0" or a == "true" or a == "yes" %}{% assign t = t | plus: 1 %}{% assign touched = touched | plus: 1 %}{% elsif a == "0" or a == "0.0" or a == "false" or a == "no" %}{% assign touched = touched | plus: 1 %}{% endif %}{% assign a = q5Score | append: "" | strip | downcase %}{% if a == "1" or a == "1.0" or a == "true" or a == "yes" %}{% assign t = t | plus: 1 %}{% assign touched = touched | plus: 1 %}{% elsif a == "0" or a == "0.0" or a == "false" or a == "no" %}{% assign touched = touched | plus: 1 %}{% endif %}{% assign a = q6Score | append: "" | strip | downcase %}{% if a == "1" or a == "1.0" or a == "true" or a == "yes" %}{% assign t = t | plus: 1 %}{% assign touched = touched | plus: 1 %}{% elsif a == "0" or a == "0.0" or a == "false" or a == "no" %}{% assign touched = touched | plus: 1 %}{% endif %}{% assign a = q7Score | append: "" | strip | downcase %}{% if a == "1" or a == "1.0" or a == "true" or a == "yes" %}{% assign t = t | plus: 1 %}{% assign touched = touched | plus: 1 %}{% elsif a == "0" or a == "0.0" or a == "false" or a == "no" %}{% assign touched = touched | plus: 1 %}{% endif %}{% assign a = q8Score | append: "" | strip | downcase %}{% if a == "1" or a == "1.0" or a == "true" or a == "yes" %}{% assign t = t | plus: 1 %}{% assign touched = touched | plus: 1 %}{% elsif a == "0" or a == "0.0" or a == "false" or a == "no" %}{% assign touched = touched | plus: 1 %}{% endif %}{% assign a = q9Score | append: "" | strip | downcase %}{% if a == "1" or a == "1.0" or a == "true" or a == "yes" %}{% assign t = t | plus: 1 %}{% assign touched = touched | plus: 1 %}{% elsif a == "0" or a == "0.0" or a == "false" or a == "no" %}{% assign touched = touched | plus: 1 %}{% endif %}{% assign a = q10Score | append: "" | strip | downcase %}{% if a == "1" or a == "1.0" or a == "true" or a == "yes" %}{% assign t = t | plus: 1 %}{% assign touched = touched | plus: 1 %}{% elsif a == "0" or a == "0.0" or a == "false" or a == "no" %}{% assign touched = touched | plus: 1 %}{% endif %}{% if touched > 0 %}{{ t }}{% endif %}
+      row_args:
+        q1Score: Q1 Score
+        q2Score: Q2 Score
+        q3Score: Q3 Score
+        q4Score: Q4 Score
+        q5Score: Q5 Score
+        q6Score: Q6 Score
+        q7Score: Q7 Score
+        q8Score: Q8 Score
+        q9Score: Q9 Score
+        q10Score: Q10 Score
+    - field: markedFlag
+      function: render_liquid
+      args:
+        template: >-
+          {% assign s = totalDisplay | append: "" | strip %}{% if s != blank %}yes{% else %}no{% endif %}
+      row_args:
+        totalDisplay: totalDisplay
+    # One topic per missed item (not True/yes/1). Sitting order. No marks in text.
+    - field: needWork
+      function: render_liquid
+      args:
+        template: |
+          {% if markedFlag == "yes" %}{% assign a = q1Score | append: "" | strip | downcase %}{% unless a == "1" or a == "1.0" or a == "true" or a == "yes" %}* Matching grouping quantities \(I(X;G)\), \(H(w)\), residual entropy, \(H(G\mid X)\)
+          {% endunless %}{% assign a = q2Score | append: "" | strip | downcase %}{% unless a == "1" or a == "1.0" or a == "true" or a == "yes" %}* Balanced odd/even cut: \(H(w)=1\) bit
+          {% endunless %}{% assign a = q3Score | append: "" | strip | downcase %}{% unless a == "1" or a == "1.0" or a == "true" or a == "yes" %}* Missing measure: truncated steam entropy; relative entropy as KL
+          {% endunless %}{% assign a = q4Score | append: "" | strip | downcase %}{% unless a == "1" or a == "1.0" or a == "true" or a == "yes" %}* Maxwell–Boltzmann speed and spherical shell geometry
+          {% endunless %}{% assign a = q5Score | append: "" | strip | downcase %}{% unless a == "1" or a == "1.0" or a == "true" or a == "yes" %}* MaxEnt under moment constraints recovers Maxwell–Boltzmann
+          {% endunless %}{% assign a = q6Score | append: "" | strip | downcase %}{% unless a == "1" or a == "1.0" or a == "true" or a == "yes" %}* Soft versus exclusive grouping; \(H(G\mid X)\)
+          {% endunless %}{% assign a = q7Score | append: "" | strip | downcase %}{% unless a == "1" or a == "1.0" or a == "true" or a == "yes" %}* Die grouping identity: \(H=H(w)+\sum_i w_i H(p_i)\)
+          {% endunless %}{% assign a = q8Score | append: "" | strip | downcase %}{% unless a == "1" or a == "1.0" or a == "true" or a == "yes" %}* Maxwell’s demon as membrane, compartments, and energy ledger
+          {% endunless %}{% assign a = q9Score | append: "" | strip | downcase %}{% unless a == "1" or a == "1.0" or a == "true" or a == "yes" %}* Discrete MaxEnt multipliers \(\lambda_k\) on general constraints
+          {% endunless %}{% assign a = q10Score | append: "" | strip | downcase %}{% unless a == "1" or a == "1.0" or a == "true" or a == "yes" %}* KL non-negativity and asymmetry
+          {% endunless %}{% endif %}
+      row_args:
+        markedFlag: markedFlag
+        q1Score: Q1 Score
+        q2Score: Q2 Score
+        q3Score: Q3 Score
+        q4Score: Q4 Score
+        q5Score: Q5 Score
+        q6Score: Q6 Score
+        q7Score: Q7 Score
+        q8Score: Q8 Score
+        q9Score: Q9 Score
+        q10Score: Q10 Score
+    - field: feedbackBody
+      function: render_liquid
+      args:
+        template: |
+          {% if markedFlag == "yes" %}I've looked at Quiz 3.
+
+          {% assign gaps = needWork | strip %}{% if gaps != blank %}Topics to revisit:
+
+          {{ needWork | strip }}
+          {% else %}You answered the quiz items correctly — no particular areas to flag from this paper.
+          {% endif %}{% endif %}
+      row_args:
+        markedFlag: markedFlag
+        needWork: needWork
+    - field: title
+      function: render_liquid
+      args:
+        template: >-
+          {{ family }}, {{ given }} ({{ crsid }})
+      row_args:
+        family: family
+        given: given
+        crsid: crsid
+    - field: description
+      function: render_liquid
+      args:
+        template: >-
+          {% assign s = totalDisplay | append: "" | strip %}{% if s != blank %}{{ s }} / 10{% else %}— unmarked{% endif %}{% if degree %} · {{ degree }}{% endif %}
+      row_args:
+        totalDisplay: totalDisplay
+        degree: degree
+  mapping:
+    givenName: given
+    familyName: family
+    Degree: degree
+    Email: email
+    Candidate: candidate
+    q1Score: Q1 Score
+    q2Score: Q2 Score
+    q3Score: Q3 Score
+    q4Score: Q4 Score
+    q5Score: Q5 Score
+    q6Score: Q6 Score
+    q7Score: Q7 Score
+    q8Score: Q8 Score
+    q9Score: Q9 Score
+    q10Score: Q10 Score
+    totalScore: Total Score
+    overallComment: Overall Comment
+
+# No write-back of marks — optional hub-style flags only.
+output:
+  type: yaml
+  index: crsid
+  filename: quiz3-summary.yml
+  directory: ./info
+  columns:
+    - noted
+    - emailSent
+
+sortby:
+  field: family
+  ascending: True
+
+viewer:
+  - liquid: |
+      ## Quiz 3 — score summary
+
+      Marks from [`quiz3/info/quiz3_scores.csv`](../quiz3/info/quiz3_scores.csv).
+      Edit individual papers in **L172 — Quiz 3 marking**.
+      After marking, use **Reload scores** here (browser refresh keeps the old CSV in memory).
+
+      {% assign sum = 0 %}{% assign n = 0 %}{% assign unmarked = 0 %}
+      {% for row in rows %}
+      {% assign s = row.totalDisplay | append: "" | strip %}
+      {% if s != blank and s != "nan" and s != "NaN" %}
+      {% assign sum = sum | plus: s %}
+      {% assign n = n | plus: 1 %}
+      {% else %}
+      {% assign unmarked = unmarked | plus: 1 %}
+      {% endif %}
+      {% endfor %}
+      {% if n > 0 %}
+      **Marked:** {{ n }} · **Mean:** {{ sum | times: 1.0 | divided_by: n | round: 2 }} / 10 · **Unmarked:** {{ unmarked }}
+      {% else %}
+      No marked scripts in the current filter.
+      {% endif %}
+
+  - liquid: |
+      ### Cohort
+
+      {% for row in rows %}
+      {% assign s = row.totalDisplay | append: "" | strip %}
+      - **{{ row.family }}, {{ row.given }}** (`{{ row.crsid }}`) — {% if s != blank and s != "nan" and s != "NaN" %}**{{ s }}** / 10{% else %}*unmarked*{% endif %}{% if row.degree %} · {{ row.degree }}{% endif %}
+      {% endfor %}
+
+  - liquid: |
+      ### {{ given }} {{ family }} (`{{ crsid }}`)
+
+      {% assign s = totalDisplay | append: "" | strip %}
+      - Total: {% if s != blank and s != "nan" and s != "NaN" %}**{{ s }}** / 10{% else %}*unmarked*{% endif %}
+      - Items: Q1 {% assign x = q1Score | append: "" | strip | downcase %}{% if x == "1" or x == "1.0" or x == "true" or x == "yes" %}1{% elsif markedFlag == "yes" %}0{% else %}—{% endif %} · Q2 {% assign x = q2Score | append: "" | strip | downcase %}{% if x == "1" or x == "1.0" or x == "true" or x == "yes" %}1{% elsif markedFlag == "yes" %}0{% else %}—{% endif %} · Q3 {% assign x = q3Score | append: "" | strip | downcase %}{% if x == "1" or x == "1.0" or x == "true" or x == "yes" %}1{% elsif markedFlag == "yes" %}0{% else %}—{% endif %} · Q4 {% assign x = q4Score | append: "" | strip | downcase %}{% if x == "1" or x == "1.0" or x == "true" or x == "yes" %}1{% elsif markedFlag == "yes" %}0{% else %}—{% endif %} · Q5 {% assign x = q5Score | append: "" | strip | downcase %}{% if x == "1" or x == "1.0" or x == "true" or x == "yes" %}1{% elsif markedFlag == "yes" %}0{% else %}—{% endif %} · Q6 {% assign x = q6Score | append: "" | strip | downcase %}{% if x == "1" or x == "1.0" or x == "true" or x == "yes" %}1{% elsif markedFlag == "yes" %}0{% else %}—{% endif %} · Q7 {% assign x = q7Score | append: "" | strip | downcase %}{% if x == "1" or x == "1.0" or x == "true" or x == "yes" %}1{% elsif markedFlag == "yes" %}0{% else %}—{% endif %} · Q8 {% assign x = q8Score | append: "" | strip | downcase %}{% if x == "1" or x == "1.0" or x == "true" or x == "yes" %}1{% elsif markedFlag == "yes" %}0{% else %}—{% endif %} · Q9 {% assign x = q9Score | append: "" | strip | downcase %}{% if x == "1" or x == "1.0" or x == "true" or x == "yes" %}1{% elsif markedFlag == "yes" %}0{% else %}—{% endif %} · Q10 {% assign x = q10Score | append: "" | strip | downcase %}{% if x == "1" or x == "1.0" or x == "true" or x == "yes" %}1{% elsif markedFlag == "yes" %}0{% else %}—{% endif %}
+      {% assign note = overallComment | append: "" | strip %}{% if note != blank and note != "nan" and note != "NaN" %}- Note: {{ note }}{% endif %}
+
+      {% assign fb = feedbackBody | strip %}
+      {% if fb != blank %}
+      #### Feedback email (no marks)
+
+      {{ feedbackBody }}
+      {% endif %}
+
+review:
+  # Section → listing chrome (top-level ReloadButton is skipped on inline_list).
+  - type: Section
+    title: Data
+    args:
+      collapse: false
+    entries:
+      - type: ReloadButton
+        args:
+          description: Reload scores
+  - type: Checkbox
+    field: noted
+    default: false
+    args:
+      description: Noted
+  - type: Checkbox
+    field: emailSent
+    default: false
+    args:
+      description: Feedback email sent
+  - type: SaveButton
+
+documents:
+  - type: email
+    name: "Email feedback"
+    visible_if:
+      field: markedFlag
+      equals: "yes"
+    to:
+      # Mapping Email→email overwrites the identity alias; use Email / givenName.
+      liquid: "{{ Email }}"
+    title:
+      liquid: "L172 Quiz 3 — feedback"
+    header:
+      liquid: |
+        Hi {{ givenName }},
+    body:
+      liquid: |
+        {{ feedbackBody }}
+    footer:
+      display: |
+        Best wishes,
+        Neil
+
+filters:
+  - field: markedFlag
+    type: categorical
+    label: Marked
+    values:
+      - "yes"
+      - "no"
+  - field: emailSent
+    type: boolean
+    label: Feedback email sent
+  - field: degree
+    type: categorical
+    label: Degree
+    values:
+      - MPhil
+      - Part III
+      - Auditor
+  - field: title
+    type: contains
+    label: Name
+  - field: crsid
+    type: contains
+    label: CRSid
+
+sort:
+  - field: family
+    order: asc
+  - field: given
+    order: asc

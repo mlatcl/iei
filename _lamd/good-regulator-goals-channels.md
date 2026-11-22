@@ -7,14 +7,16 @@ venue: FW26, William Gates Building
 room: FW26
 transition: None
 abstract: >
-  Open with an unmarked review of Worksheet 3 submissions, then develop
-  the Good Regulator overview Week 6 did not reach: D, S, A, Z; minimise
-  H(Z); existence of a deterministic H(A|S)=0 policy; two caveats. Map
-  that criterion onto a goal measure via Radon–Nikodym (reward as
-  −ln(dν/dλ)), bridging Week 5's relative-entropy language. Recover the
-  unread Week 6 overflow: Shannon capacity R≤C and the data-processing
-  inequality as statement and moral. Multi-information, the DPI proof,
-  and the information bottleneck stay notes overflow for Week 8.
+  Open with Quiz 3 feedback (cohort figures; missing measure; MaxEnt;
+  die grouping), then an unmarked review of Worksheet 3 submissions.
+  Develop the Good Regulator overview Week 6 did not reach: D, S, A, Z;
+  minimise H(Z); existence of a deterministic H(A|S)=0 policy; two
+  caveats. Map that criterion onto a goal measure via Radon–Nikodym
+  (reward as −ln(dν/dλ)), bridging Week 5's relative-entropy language.
+  Recover the unread Week 6 overflow: Shannon capacity R≤C and the
+  data-processing inequality as statement and moral. Multi-information,
+  the DPI proof, and the information bottleneck stay notes overflow for
+  Week 8.
 author:
 - given: Neil D.
   family: Lawrence
@@ -47,11 +49,12 @@ reading:
     required: false
 ---
 
-\notes{No class test today. Quiz 3 was last week. Worksheet 3 was due last week; Worksheet 4 (Skepticus dialogue on GRT and general intelligence) is already out (due 1 December, before Quiz 4). As taught in Week 6: exponential family / Fisher / natural gradient; Shannon capacity, DPI, and $D,S,A,Z$ diagrams were *not* walked (GRT was a two-minute W4 pointer). Today: unmarked W3 review; GRT overview; goal measure via Radon--Nikodym; Shannon $R\le C$ and DPI statement.}
+\notes{No class test today. Quiz 3 was last week (start of lecture 6). Worksheet 3 was due last week; Worksheet 4 (Skepticus dialogue on GRT and general intelligence) is already out (due 1 December, before Quiz 4). As taught in Week 6: exponential family / Fisher / natural gradient; Shannon capacity, DPI, and $D,S,A,Z$ diagrams were *not* walked (GRT was a two-minute W4 pointer). Today: Quiz 3 debrief; unmarked W3 review; GRT overview; goal measure via Radon--Nikodym; Shannon $R\le C$ and DPI statement.}
 
 \subsection{This Session}
 
 \slidesincremental{
+* Quiz 3 feedback (cohort figures; missing measure; MaxEnt; die grouping)
 * Unmarked review of Worksheet 3 submissions
 * Good Regulator overview: $D,S,A,Z$; $\min H(Z)$; $H(A\mid S)=0$; caveats
 * Goal as change of measure: $r=-\ln(\mathrm{d}\nu/\mathrm{d}\lambda)$
@@ -63,19 +66,22 @@ reading:
 
 | Clock | Block |
 |------:|-------|
-| 10:05--10:25 | Unmarked Worksheet 3 review; flag W4 due Week 8 start |
-| 10:25--10:50 | Good Regulator overview: $D,S,A,Z$; $\min H(Z)$; existence slogan; caveats |
+| 10:05--10:18 | Quiz 3 debrief (mean $6.4/10$; missing measure; MaxEnt; die identity) |
+| 10:18--10:30 | Unmarked Worksheet 3 review; flag W4 due Week 8 start |
+| 10:30--10:50 | Good Regulator overview: $D,S,A,Z$; $\min H(Z)$; existence slogan; caveats |
 | 10:50--11:00 | Break |
 | 11:00--11:35 | Goal measure / Radon--Nikodym; reward as $-\ln(\mathrm{d}\nu/\mathrm{d}\lambda)$ |
 | 11:35--11:50 | Shannon $R\le C$; DPI statement and moral |
 | 11:50--11:55 | Define-this-week; W4 reminder; Week 8 preview |
 }
 
+\include{includes/week7-homework-debrief.md}
+
 \include{_iei/includes/iei-notebook-setup.md}
 
 \subsection{Submission Review}
 
-\classtimertitled{10:05}{Worksheet 3 review}
+\classtimertitled{10:18}{Worksheet 3 review}
 
 \newslides{Worksheet 3 --- Patterns, Not Marks}
 
@@ -94,7 +100,7 @@ reading:
 
 \subsection{Good Regulator Overview}
 
-\classtimertitled{10:25}{Good Regulator}
+\classtimertitled{10:30}{Good Regulator}
 
 \notes{Week 6 reached only a two-minute W4 pointer. Today is the first live $D,S,A,Z$ overview: diagrams, $\min H(Z)$, existence of a deterministic $H(A\mid S)=0$ policy named (not proved via $g(\alpha)$), and both caveats. Week 8 will *not* re-prove Conant--Ashby; it moves to limits synthesis and quantum motivation.}
 
@@ -260,9 +266,7 @@ mlai.write_figure('multi-information-rho.svg', directory='\writeDiagramsDir/ml')
 
 \include{_information/includes/information-bottleneck.md}
 
-\notes{IB as a gloss after GRT: $\min I(S;A)$ subject to $H(Z)\le\epsilon$ is a course interpretation, not Conant and Ashby's equation. Optional LO9 name if ahead: MaxEnt as $m$-projection (geometric reading of Week 5; stated, not computed).}
-
-\include{_information-game/includes/inaccessible-game-introduction.md}
+\notes{IB as a gloss after GRT: $\min I(S;A)$ subject to $H(Z)\le\epsilon$ is a course interpretation, not Conant and Ashby's equation. Optional LO9 name if ahead: MaxEnt as $m$-projection (geometric reading of Week 5; stated, not computed). Inaccessible-game / no-barber material lives in Week 8, not here.}
 
 \subsection{Define This Week}
 
