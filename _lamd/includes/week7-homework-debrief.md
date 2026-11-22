@@ -3,11 +3,11 @@
 
 \subsection{Homework from Weeks 4--5}
 
-\notes{No class test today. Feedback on Quiz 3 first; Worksheet 3 follows as an unmarked pattern review in this session. Marks do not appear on these slides, and names do not either. The numbers below are cohort figures from the marked scripts.}
+\notes{No class test today. Feedback on Quiz 3 first; Worksheet 3 follows as an unmarked teach-back (fork, Liouville / detailed balance / trapdoor) in this session. Marks do not appear on these slides, and names do not either. The numbers below are cohort figures from the marked scripts.}
 
 \newslide{Quiz 3 Is Marked}
 
-\slides{Twelve papers. A few minutes on matters arising, then Worksheet 3 patterns and the Good Regulator.}
+\slides{Twelve papers. A few minutes on matters arising, then Worksheet 3 teach-back and the Good Regulator.}
 
 \slidesincremental{
 * Quiz 1: mean $8.2/10$
@@ -15,7 +15,7 @@
 * Quiz 3: mean $6.4/10$
 }
 
-\speakernotes{Quiz-only block for the marks. Worksheet 3 stays unmarked on the slides --- patterns only, after this debrief. Keep names off the slides.}
+\speakernotes{Quiz-only block for the marks. Worksheet 3 stays unmarked on the slides --- teach-back after this debrief. Keep names off the slides.}
 
 \subsection{Quiz 3}
 

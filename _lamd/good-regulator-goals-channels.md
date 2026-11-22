@@ -8,15 +8,16 @@ room: FW26
 transition: None
 abstract: >
   Open with Quiz 3 feedback (cohort figures; missing measure; MaxEnt;
-  die grouping), then an unmarked review of Worksheet 3 submissions.
-  Develop the Good Regulator overview Week 6 did not reach: D, S, A, Z;
-  minimise H(Z); existence of a deterministic H(A|S)=0 policy; two
-  caveats. Map that criterion onto a goal measure via Radon–Nikodym
-  (reward as −ln(dν/dλ)), bridging Week 5's relative-entropy language.
-  Recover the unread Week 6 overflow: Shannon capacity R≤C and the
-  data-processing inequality as statement and moral. Multi-information,
-  the DPI proof, and the information bottleneck stay notes overflow for
-  Week 8.
+  die grouping), then a Worksheet 3 teach-back: lecture 4's fork,
+  Liouville and detailed balance as fine- and rate-grained forms of the
+  same objection, and Smoluchowski's trapdoor in passing. Develop the
+  Good Regulator overview Week 6 did not reach: D, S, A, Z; minimise
+  H(Z); existence of a deterministic H(A|S)=0 policy; two caveats. Map
+  that criterion onto a goal measure via Radon–Nikodym (reward as
+  −ln(dν/dλ)), bridging Week 5's relative-entropy language. Recover the
+  unread Week 6 overflow: Shannon capacity R≤C and the data-processing
+  inequality as statement and moral (short). Multi-information, the DPI
+  proof, and the information bottleneck stay notes overflow for Week 8.
 author:
 - given: Neil D.
   family: Lawrence
@@ -49,29 +50,29 @@ reading:
     required: false
 ---
 
-\notes{No class test today. Quiz 3 was last week (start of lecture 6). Worksheet 3 was due last week; Worksheet 4 (Skepticus dialogue on GRT and general intelligence) is already out (due 1 December, before Quiz 4). As taught in Week 6: exponential family / Fisher / natural gradient; Shannon capacity, DPI, and $D,S,A,Z$ diagrams were *not* walked (GRT was a two-minute W4 pointer). Today: Quiz 3 debrief; unmarked W3 review; GRT overview; goal measure via Radon--Nikodym; Shannon $R\le C$ and DPI statement.}
+\notes{No class test today. Quiz 3 was last week (start of lecture 6). Worksheet 3 was due last week; Worksheet 4 (Skepticus dialogue on GRT and general intelligence) is already out (due 1 December, before Quiz 4). As taught in Week 6: exponential family / Fisher / natural gradient; Shannon capacity, DPI, and $D,S,A,Z$ diagrams were *not* walked (GRT was a two-minute W4 pointer). Today: Quiz 3 debrief; W3 teach-back (fork, Liouville / detailed balance / trapdoor); GRT overview; goal measure via Radon--Nikodym; Shannon $R\le C$ and DPI statement (short).}
 
 \subsection{This Session}
 
 \slidesincremental{
 * Quiz 3 feedback (cohort figures; missing measure; MaxEnt; die grouping)
-* Unmarked W3 Maxwell review (fork, four families, class map)
+* W3 teach-back: fork; Liouville; detailed balance; trapdoor
 * Good Regulator overview: $D,S,A,Z$; $\min H(Z)$; $H(A\mid S)=0$; caveats
 * Goal as change of measure: $r=-\ln(\mathrm{d}\nu/\mathrm{d}\lambda)$
-* Shannon $R\le C$; DPI statement (Week 6 overflow)
+* Shannon $R\le C$; DPI statement (short; Week 6 overflow)
 }
 
 \notes{
-**Time plan.** The slot is 10:05--11:55 (110 minutes, not 120). Do not rebuild Fisher geometry or natural gradient. Do not board the full Conant--Ashby concavity transfer $g(\alpha)$. Multi-information / DPI proof / IB are notes overflow --- not today's clock.
+**Time plan.** The slot is 10:05--11:55 (110 minutes, not 120). Do not rebuild Fisher geometry or natural gradient. Do not board the full Conant--Ashby concavity transfer $g(\alpha)$. Multi-information / DPI proof / IB are notes overflow --- not today's clock. W3 teach-back takes time from Shannon; keep $R\le C$ and DPI to statement and moral only.
 
 | Clock | Block |
 |------:|-------|
 | 10:05--10:18 | Quiz 3 debrief (mean $6.4/10$; missing measure; MaxEnt; die identity) |
-| 10:18--10:30 | W3 Maxwell review (compartments, four families, class map); flag W4 |
-| 10:30--10:50 | Good Regulator overview: $D,S,A,Z$; $\min H(Z)$; existence slogan; caveats |
-| 10:50--11:00 | Break |
-| 11:00--11:35 | Goal measure / Radon--Nikodym; reward as $-\ln(\mathrm{d}\nu/\mathrm{d}\lambda)$ |
-| 11:35--11:50 | Shannon $R\le C$; DPI statement and moral |
+| 10:18--10:42 | W3 teach-back (fork; Liouville / detailed balance / trapdoor; habits); flag W4 |
+| 10:42--11:00 | Good Regulator overview: $D,S,A,Z$; $\min H(Z)$; existence slogan; caveats |
+| 11:00--11:10 | Break |
+| 11:10--11:40 | Goal measure / Radon--Nikodym; reward as $-\ln(\mathrm{d}\nu/\mathrm{d}\lambda)$ |
+| 11:40--11:50 | Shannon $R\le C$; DPI statement and moral (short) |
 | 11:50--11:55 | Define-this-week; W4 reminder; Week 8 preview |
 }
 
@@ -81,13 +82,13 @@ reading:
 
 \subsection{Submission Review}
 
-\classtimertitled{10:18}{Worksheet 3 review}
+\classtimertitled{10:18}{Worksheet 3 teach-back}
 
 \include{includes/week7-maxwell-review.md}
 
 \subsection{Good Regulator Overview}
 
-\classtimertitled{10:30}{Good Regulator}
+\classtimertitled{10:42}{Good Regulator}
 
 \notes{Week 6 reached only a two-minute W4 pointer. Today is the first live $D,S,A,Z$ overview: diagrams, $\min H(Z)$, existence of a deterministic $H(A\mid S)=0$ policy named (not proved via $g(\alpha)$), and both caveats. Week 8 will *not* re-prove Conant--Ashby; it moves to limits synthesis and quantum motivation.}
 
@@ -111,11 +112,11 @@ reading:
 \addreading{@Conant-Ashby70}{the Good Regulator Theorem}
 \addreading{@Ashby-introduction56}{requisite variety}
 
-\classtimertitled{10:50}{Break}
+\classtimertitled{11:00}{Break}
 
 \subsection{Goals as Radon--Nikodym}
 
-\classtimertitled{11:00}{Goal measure}
+\classtimertitled{11:10}{Goal measure}
 
 \newslides{From Reguland to Goal Measure}
 
@@ -155,7 +156,7 @@ So ordinary reward maximisation is entropy minimisation under a tilted reference
 
 \subsection{Shannon Capacity and DPI}
 
-\classtimertitled{11:35}{Channels}
+\classtimertitled{11:40}{Channels}
 
 \notes{Week 6 planned Shannon capacity and DPI after Fisher; as taught they were not reached. State both today. Proof of DPI and multi-information / $I+H=C$ stay notes overflow for Week 8 enrichment.}
 
