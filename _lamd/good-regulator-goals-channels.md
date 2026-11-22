@@ -55,7 +55,7 @@ reading:
 
 \slidesincremental{
 * Quiz 3 feedback (cohort figures; missing measure; MaxEnt; die grouping)
-* Unmarked review of Worksheet 3 submissions
+* Unmarked W3 Maxwell review (fork, four families, class map)
 * Good Regulator overview: $D,S,A,Z$; $\min H(Z)$; $H(A\mid S)=0$; caveats
 * Goal as change of measure: $r=-\ln(\mathrm{d}\nu/\mathrm{d}\lambda)$
 * Shannon $R\le C$; DPI statement (Week 6 overflow)
@@ -67,7 +67,7 @@ reading:
 | Clock | Block |
 |------:|-------|
 | 10:05--10:18 | Quiz 3 debrief (mean $6.4/10$; missing measure; MaxEnt; die identity) |
-| 10:18--10:30 | Unmarked Worksheet 3 review; flag W4 due Week 8 start |
+| 10:18--10:30 | W3 Maxwell review (compartments, four families, class map); flag W4 |
 | 10:30--10:50 | Good Regulator overview: $D,S,A,Z$; $\min H(Z)$; existence slogan; caveats |
 | 10:50--11:00 | Break |
 | 11:00--11:35 | Goal measure / Radon--Nikodym; reward as $-\ln(\mathrm{d}\nu/\mathrm{d}\lambda)$ |
@@ -83,20 +83,7 @@ reading:
 
 \classtimertitled{10:18}{Worksheet 3 review}
 
-\newslides{Worksheet 3 --- Patterns, Not Marks}
-
-\slides{Unmarked review. Patterns across the cohort, not individual grades.}
-
-\slidesincremental{
-* Curiosity vs slogan collapse (LLM as Grasshopper)
-* Coarse-graining Maxwell: compartments and two ledgers
-* What good Skepticus looks like: press existence claims and conflations
-* Worksheet 4 already out --- due 1 December before Quiz 4
-}
-
-\speakernotes{Twenty minutes maximum. No marks, no CRSid call-outs. Name recurring strengths and recurring LLM traps from W3. Remind them Exchange 1 on W4 was meant to start *before* today's GRT block.}
-
-\notes{Worksheet 3 asked for a Skepticus dialogue on coarse-graining Maxwell. Review patterns only: where dialogues kept curiosity then skepticism apart; where models collapsed the demon into a single slogan; where students pressed compartments and two ledgers usefully. Do not announce marks. Flag Worksheet 4 due at the start of lecture 8 (1 December), before Quiz 4.}
+\include{includes/week7-maxwell-review.md}
 
 \subsection{Good Regulator Overview}
 
