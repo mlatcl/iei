@@ -46,6 +46,6 @@ ghub:
   branch: gh-pages
   directory: _lamd
 # END VIBECOURSE-GENERATED
-macrosdir: $HOME/lawrennd/lamd/lamd/macros
+macrosdir: $HOME/lawrennd/lamd-cip001B/lamd/macros
 transition: None
 
