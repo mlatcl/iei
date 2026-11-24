@@ -257,7 +257,7 @@ for ax, (title, k) in zip(axes, cases):
         ax.add_patch(plt.Circle((x, y), 0.18, facecolor='#ddeeff', edgecolor='#333333', lw=1.5))
         ax.text(x, y, s, ha='center', va='center', fontsize=13, fontweight='bold')
     if 'not' in title:
-        ax.text(0, -0.02, '↻', ha='center', va='center', fontsize=26, color='#cc4444')
+        ax.text(0, -0.02, r'$\circlearrowleft$', ha='center', va='center', fontsize=26, color='#cc4444')
     ax.set_xlim(-1.3, 1.3); ax.set_ylim(-0.95, 1.3); ax.set_aspect('equal'); ax.axis('off')
     ax.set_title(title, fontsize=12)
 fig.text(0.5, 0.02, 'Each state holds probability 1/3 in both. Numbers are probability flows (probability of state times rate). Red: a net current of 1/3 circulates.',

@@ -523,6 +523,96 @@ mechanisms distinct</li>
 Close the Maxwell block. One line on W4 due date, then Good Regulator.
 </aside>
 </section>
+<section id="shannon-capacity-and-dpi" class="slide level2">
+<h2>Shannon Capacity and DPI</h2>
+
+</section>
+<section id="shannons-noisy-channel-coding-theorem"
+class="slide level2">
+<h2>Shannon’s Noisy Channel Coding Theorem</h2>
+<p>A channel is a conditional <span class="math inline">\(p(y\mid
+x)\)</span>. Rate cannot beat capacity.</p>
+<div>
+<ul>
+<li class="fragment">Mutual information <span
+class="math inline">\(I(X;Y)\)</span> is the channel currency</li>
+<li class="fragment">Capacity <span class="math inline">\(C =
+\max_{p(x)} I(X;Y)\)</span></li>
+<li class="fragment">No-go: reliable communication requires <span
+class="math inline">\(R \le C\)</span></li>
+<li class="fragment">Prescription: the input <span
+class="math inline">\(p(x)\)</span> that achieves <span
+class="math inline">\(C\)</span></li>
+</ul>
+</div>
+<aside class="notes">
+LO10. Carnot twin: forbids rates above <span
+class="math inline">\(C\)</span>; does not construct a code. BSC plot
+from the capacity include if time.
+</aside>
+</section>
+<section id="scaffolding-not-outcomes" class="slide level2">
+<h2>Scaffolding, Not Outcomes</h2>
+</section>
+<section id="chain-rule-mutual-information-capacity"
+class="slide level2">
+<h2>Chain Rule, Mutual Information, Capacity</h2>
+<p>Four results we will need later — stated, not proved today.</p>
+<div>
+<ul>
+<li class="fragment">Chain rule: <span class="math inline">\(H(X,Y) =
+H(X) + H(Y|X)\)</span></li>
+<li class="fragment">Mutual information: <span
+class="math inline">\(I(X;Y) = H(X)-H(X|Y) =
+H(X)+H(Y)-H(X,Y)\)</span></li>
+<li class="fragment">Capacity: no rate above <span
+class="math inline">\(C\)</span>; achieving <span
+class="math inline">\(C\)</span> requires the capacity-achieving <span
+class="math inline">\(p(x)\)</span></li>
+<li class="fragment">Data processing: if <span
+class="math inline">\(X\to Y\to Z\)</span> is Markov, <span
+class="math inline">\(I(X;Z)\le I(X;Y)\)</span></li>
+</ul>
+</div>
+<aside class="notes">
+Define <span class="math inline">\(I\)</span> from the chain rule. State
+DPI; do not prove. Proof and the information bottleneck are week 8
+(LO10). Capacity remains this week’s no-go/prescription pair.
+</aside>
+<div class="figure">
+<div id="bsc-capacity-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/bsc-capacity.svg" width="70%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+Mutual information for a binary symmetric channel; capacity is achieved
+at uniform input.
+</aside>
+</section>
+<section id="data-processing-inequality" class="slide level2">
+<h2>Data-Processing Inequality</h2>
+<p>If <span class="math inline">\(X\to Y\to Z\)</span> is Markov,
+processing cannot create information about <span
+class="math inline">\(X\)</span>.</p>
+<div>
+<ul>
+<li class="fragment">Markov: <span class="math inline">\(p(z\mid
+x,y)=p(z\mid y)\)</span></li>
+<li class="fragment">Statement: <span class="math inline">\(I(X;Z)\le
+I(X;Y)\)</span></li>
+<li class="fragment">Soft partitions (Week 5): leftover <span
+class="math inline">\(H(G\mid X)\)</span> already spent information</li>
+<li class="fragment">Full proof: notes / Week 8 enrichment — not today’s
+board</li>
+</ul>
+</div>
+<aside class="notes">
+LO10 moral only. You cannot process your way to more <span
+class="math inline">\(I\)</span>. Underwrites requisite variety and GRT
+tools.
+</aside>
+</section>
 <section id="good-regulator-overview" class="slide level2">
 <h2>Good Regulator Overview</h2>
 
@@ -650,7 +740,9 @@ class="math inline">\(Z\)</span> as the diagrams. Perfect regulation
 <span class="math inline">\(H(Z)=0\)</span> forces <span
 class="math inline">\(I(D;A)=H(D)\)</span> under the usual bound.
 </aside>
-<p>Name the existence claim. Fence the slogan.</p>
+</section>
+<section id="existence-and-two-caveats" class="slide level2">
+<h2>Existence and Two Caveats</h2>
 <div>
 <ul>
 <li class="fragment">Among <span
@@ -663,18 +755,23 @@ class="math inline">\(H(A\mid S)=0\)</span> (weak “model”)</li>
 <li class="fragment">Caveat 2: low <span
 class="math inline">\(H(Z)\)</span> is predictability, not
 desirability</li>
-<li class="fragment">Concavity proof stays notes — do not board <span
-class="math inline">\(g(\alpha)\)</span> today</li>
 </ul>
 </div>
-<aside class="notes">
-LO12. Existence from concavity of entropy; say so without the full
-transfer argument. Both caveats are live for W4 skepticism and for Quiz
-4.
-</aside>
+<p>{The Good Regulator Theorem, in entropy form, is an existence result:
+among policies that minimise <span class="math inline">\(H(Z)\)</span>
+there is a deterministic one, <span
+class="math inline">\(A=h(S)\)</span>, equivalently <span
+class="math inline">\(H(A\mid S)=0\)</span> <span class="citation"
+data-cites="Conant-Ashby70">(Conant and Ashby, 1970)</span>. The full
+concavity / extreme-point argument is in the notes include; today the
+diagrams and the slogan-with-fences are enough for assessment.</p>
 </section>
 <section id="goals-as-radonnikodym" class="slide level2">
 <h2>Goals as Radon–Nikodym</h2>
+
+</section>
+<section id="the-measure-of-success" class="slide level2">
+<h2>The Measure of Success</h2>
 <p>Week 5: relative entropy needs a reference. Goals need one too.</p>
 <div>
 <ul>
@@ -696,8 +793,9 @@ Bridge to Week 5 Radon–Nikodym / KL language. Board <span
 class="math inline">\(r=-\log(\mathrm{d}\nu/\mathrm{d}\lambda)\)</span>
 once. Do not open MM loops, empowerment budgets, or DeepSea.
 </aside>
-<p>The map recovers reward for a reward channel. It does not license
-general intelligence.</p>
+</section>
+<section id="rl-recovery-and-agi" class="slide level2">
+<h2>RL Recovery and AGI</h2>
 <div>
 <ul>
 <li class="fragment">Reward channel: entropy criterion collapses to
@@ -706,103 +804,11 @@ return maximisation (under a volume threshold)</li>
 reward</li>
 <li class="fragment">Existence of a deterministic organiser <span
 class="math inline">\(\neq\)</span> a rich world-model</li>
-<li class="fragment">Worksheet 4: keep slogan, existence claim, and AGI
-talk apart</li>
 </ul>
 </div>
 <aside class="notes">
 LO12 fence for W4. One slide. No algorithm, no Thompson sampling, no
 belief MDP.
-</aside>
-</section>
-<section id="shannon-capacity-and-dpi" class="slide level2">
-<h2>Shannon Capacity and DPI</h2>
-
-</section>
-<section id="shannons-noisy-channel-coding-theorem"
-class="slide level2">
-<h2>Shannon’s Noisy Channel Coding Theorem</h2>
-<p>A channel is a conditional <span class="math inline">\(p(y\mid
-x)\)</span>. Rate cannot beat capacity.</p>
-<div>
-<ul>
-<li class="fragment">Mutual information <span
-class="math inline">\(I(X;Y)\)</span> is the channel currency</li>
-<li class="fragment">Capacity <span class="math inline">\(C =
-\max_{p(x)} I(X;Y)\)</span></li>
-<li class="fragment">No-go: reliable communication requires <span
-class="math inline">\(R \le C\)</span></li>
-<li class="fragment">Prescription: the input <span
-class="math inline">\(p(x)\)</span> that achieves <span
-class="math inline">\(C\)</span></li>
-</ul>
-</div>
-<aside class="notes">
-LO10. Carnot twin: forbids rates above <span
-class="math inline">\(C\)</span>; does not construct a code. BSC plot
-from the capacity include if time.
-</aside>
-</section>
-<section id="scaffolding-not-outcomes" class="slide level2">
-<h2>Scaffolding, Not Outcomes</h2>
-</section>
-<section id="chain-rule-mutual-information-capacity"
-class="slide level2">
-<h2>Chain Rule, Mutual Information, Capacity</h2>
-<p>Four results we will need later — stated, not proved today.</p>
-<div>
-<ul>
-<li class="fragment">Chain rule: <span class="math inline">\(H(X,Y) =
-H(X) + H(Y|X)\)</span></li>
-<li class="fragment">Mutual information: <span
-class="math inline">\(I(X;Y) = H(X)-H(X|Y) =
-H(X)+H(Y)-H(X,Y)\)</span></li>
-<li class="fragment">Capacity: no rate above <span
-class="math inline">\(C\)</span>; achieving <span
-class="math inline">\(C\)</span> requires the capacity-achieving <span
-class="math inline">\(p(x)\)</span></li>
-<li class="fragment">Data processing: if <span
-class="math inline">\(X\to Y\to Z\)</span> is Markov, <span
-class="math inline">\(I(X;Z)\le I(X;Y)\)</span></li>
-</ul>
-</div>
-<aside class="notes">
-Define <span class="math inline">\(I\)</span> from the chain rule. State
-DPI; do not prove. Proof and the information bottleneck are week 8
-(LO10). Capacity remains this week’s no-go/prescription pair.
-</aside>
-<div class="figure">
-<div id="bsc-capacity-figure" class="figure-frame">
-<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/bsc-capacity.svg" width="70%" style=" ">
-</object>
-</div>
-</div>
-<aside class="notes">
-Mutual information for a binary symmetric channel; capacity is achieved
-at uniform input.
-</aside>
-</section>
-<section id="data-processing-inequality" class="slide level2">
-<h2>Data-Processing Inequality</h2>
-<p>If <span class="math inline">\(X\to Y\to Z\)</span> is Markov,
-processing cannot create information about <span
-class="math inline">\(X\)</span>.</p>
-<div>
-<ul>
-<li class="fragment">Markov: <span class="math inline">\(p(z\mid
-x,y)=p(z\mid y)\)</span></li>
-<li class="fragment">Statement: <span class="math inline">\(I(X;Z)\le
-I(X;Y)\)</span></li>
-<li class="fragment">Soft partitions (Week 5): leftover <span
-class="math inline">\(H(G\mid X)\)</span> already spent information</li>
-<li class="fragment">Full proof: notes / Week 8 enrichment — not today’s
-board</li>
-</ul>
-</div>
-<aside class="notes">
-LO10 moral only. You cannot process your way to more <span
-class="math inline">\(I\)</span>. Underwrites requisite variety and GRT
-tools.
 </aside>
 </section>
 <section id="notes-overflow-multi-information-dpi-proof-ib"
@@ -1232,6 +1238,10 @@ class="math inline">\(\to\)</span> quantum motivation; course close</li>
 <section id="further-reading" class="slide level2 scrollable">
 <h2 class="scrollable">Further Reading</h2>
 <ul>
+<li><p>noisy channel coding / capacity of <span class="citation"
+data-cites="Shannon-mathematical48">Shannon (1948)</span></p></li>
+<li><p>Chapter 7 of <span class="citation"
+data-cites="Cover:elements91">Cover and Thomas (1991)</span></p></li>
 <li><p>the Good Regulator Theorem of <span class="citation"
 data-cites="Conant-Ashby70">Conant and Ashby (1970)</span></p></li>
 <li><p>requisite variety; Shannon form of <span class="citation"
@@ -1240,10 +1250,6 @@ data-cites="Ashby-introduction56">Ashby (1956)</span></p></li>
 data-cites="Conant-Ashby70">Conant and Ashby (1970)</span></p></li>
 <li><p>requisite variety of <span class="citation"
 data-cites="Ashby-introduction56">Ashby (1956)</span></p></li>
-<li><p>noisy channel coding / capacity of <span class="citation"
-data-cites="Shannon-mathematical48">Shannon (1948)</span></p></li>
-<li><p>Chapter 7 of <span class="citation"
-data-cites="Cover:elements91">Cover and Thomas (1991)</span></p></li>
 <li><p>Theorem 2.8.1 of <span class="citation"
 data-cites="Cover:elements91">Cover and Thomas (1991)</span></p></li>
 <li><p>the method; optional of <span class="citation"

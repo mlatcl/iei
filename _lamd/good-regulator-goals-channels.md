@@ -78,74 +78,6 @@ reading:
 
 \include{includes/week7-maxwell-review.md}
 
-\subsection{Good Regulator Overview}
-
-\blocktime{18}{Good Regulator overview: $D$,$S$,$A$,$Z$; $\min H(Z)$; existence slogan; caveats}
-
-\notes{Week 6 reached only a two-minute W4 pointer. Today is the first live $D,S,A,Z$ overview: diagrams, $\min H(Z)$, existence of a deterministic $H(A\mid S)=0$ policy named (not proved via $g(\alpha)$), and both caveats. Week 8 will *not* re-prove Conant--Ashby; it moves to limits synthesis and quantum motivation.}
-
-\include{_information/includes/good-regulator-overview.md}
-
-\newslides{Existence and Two Caveats}
-
-\slides{Name the existence claim. Fence the slogan.}
-
-\slidesincremental{
-* Among $H(Z)$-minimisers there exists $\pi$ with $H(A\mid S)=0$
-* Caveat 1: constant $A=a_0$ also has $H(A\mid S)=0$ (weak "model")
-* Caveat 2: low $H(Z)$ is predictability, not desirability
-* Concavity proof stays notes --- do not board $g(\alpha)$ today
-}
-
-\speakernotes{LO12. Existence from concavity of entropy; say so without the full transfer argument. Both caveats are live for W4 skepticism and for Quiz 4.}
-
-\notes{The Good Regulator Theorem, in entropy form, is an existence result: among policies that minimise $H(Z)$ there is a deterministic one, $A=h(S)$, equivalently $H(A\mid S)=0$ [@Conant-Ashby70]. The full concavity / extreme-point argument is in the notes include; today the diagrams and the slogan-with-fences are enough for assessment. Requisite variety remains the quantity bound $H(Z)\ge H(D)-I(D;A)$, not the structure theorem.}
-
-\addreading{@Conant-Ashby70}{the Good Regulator Theorem}
-\addreading{@Ashby-introduction56}{requisite variety}
-
-\blocktime{10}{Break}
-
-\subsection{Goals as Radon--Nikodym}
-
-\blocktime{30}{Goal measure / Radon--Nikodym; reward as $-\log(\mathrm{d}\nu/\mathrm{d}\lambda)$}
-
-\newslides{From Reguland to Goal Measure}
-
-\slides{Week 5: relative entropy needs a reference. Goals need one too.}
-
-\slidesincremental{
-* Channel: occupancy over $(S,A)$ pushes to an outcome law on $Z$
-* Criterion: $\min_\pi H(Z)$ --- or $H_\nu(Z)$ under a goal measure $\nu$
-* Base $\lambda$; goal $\nu\ll\lambda$; density $\mathrm{d}\nu/\mathrm{d}\lambda$
-* Reward reading: $r(z)=-\log(\mathrm{d}\nu/\mathrm{d}\lambda)$
-}
-
-\speakernotes{Bridge to Week 5 Radon--Nikodym / KL language. Board $r=-\log(\mathrm{d}\nu/\mathrm{d}\lambda)$ once. Do not open MM loops, empowerment budgets, or DeepSea.}
-
-\notes{Conant and Ashby minimise the entropy of the reguland. In the reinforcement-learning reading developed with Joery, the long-run state--action occupancy is pushed through a fixed channel $K(z\mid s,a)$ to an outcome law $p_\pi$ on $Z$. Minimising $H(Z)$ is concave over the occupancy polytope, so a deterministic policy is optimal --- the same structural reason as an ordinary MDP return, with a different objective.
-
-When the ``good'' outcomes are not the whole alphabet, introduce a goal measure $\nu$ absolutely continuous with respect to a base $\lambda$. Entropy relative to $\nu$ differs from entropy relative to $\lambda$ by the goal term
-$$
-\mathbb{E}\bigl[\log\tfrac{\mathrm{d}\nu}{\mathrm{d}\lambda}(Z)\bigr]=-\mathbb{E}[r(Z)],\qquad r=-\log\tfrac{\mathrm{d}\nu}{\mathrm{d}\lambda}.
-$$
-So ordinary reward maximisation is entropy minimisation under a reference block (the measure of success). This is the same change-of-measure grammar as Week 5's KL / Radon--Nikodym block. Conant and Ashby's good set $G$ is the special case that puts smaller $\nu$-volume on $G$ than on $G^c$, so the goal term pays for landing in $G$.}
-
-\newslides{RL Recovery Is Not AGI}
-
-\slides{The map recovers reward for a reward channel. It does not license general intelligence.}
-
-\slidesincremental{
-* Reward channel: entropy criterion collapses to return maximisation (under a volume threshold)
-* Regulation channel: hold a set-point with no scalar reward
-* Existence of a deterministic organiser $\neq$ a rich world-model
-* Worksheet 4: keep slogan, existence claim, and AGI talk apart
-}
-
-\speakernotes{LO12 fence for W4. One slide. No algorithm, no Thompson sampling, no belief MDP.}
-
-\notes{This is a course-level vocabulary map, not the Joery paper. Assessed: letters $D,S,A,Z$; $\min H(Z)$; $H(A\mid S)=0$ with both caveats; $r=-\log(\mathrm{d}\nu/\mathrm{d}\lambda)$ as the goal/reward bridge to Week 5. Not assessed: majorisation--minimisation, empowerment as a summand, DeepSea thresholds.}
-
 \subsection{Shannon Capacity and DPI}
 
 \blocktime{10}{Shannon $R\le C$; DPI statement and moral (short)}
@@ -184,6 +116,69 @@ So ordinary reward maximisation is entropy minimisation under a reference block 
 \speakernotes{LO10 moral only. You cannot process your way to more $I$. Underwrites requisite variety and GRT tools.}
 
 \notes{The data-processing inequality is the no-go on $I$: further processing of $Y$ cannot increase information about $X$. Week 5's soft-partition leftover is the same grammar. Cover--Thomas 2.8.1 is proved in the notes overflow below; Quiz 4 examines the statement and moral, not the two expansions.}
+
+
+\subsection{Good Regulator Overview}
+
+\blocktime{18}{Good Regulator overview: $D$,$S$,$A$,$Z$; $\min H(Z)$; existence slogan; caveats}
+
+\notes{Week 6 reached only a two-minute W4 pointer. Today is the first live $D,S,A,Z$ overview: diagrams, $\min H(Z)$, existence of a deterministic $H(A\mid S)=0$ policy named (not proved via $g(\alpha)$), and both caveats. Week 8 will *not* re-prove Conant--Ashby; it moves to limits synthesis and quantum motivation.}
+
+\include{_information/includes/good-regulator-overview.md}
+
+\newslide{Existence and Two Caveats}
+
+\slidesincremental{
+* Among $H(Z)$-minimisers there exists $\pi$ with $H(A\mid S)=0$
+* Caveat 1: constant $A=a_0$ also has $H(A\mid S)=0$ (weak "model")
+* Caveat 2: low $H(Z)$ is predictability, not desirability
+}
+
+
+\notes{The Good Regulator Theorem, in entropy form, is an existence result: among policies that minimise $H(Z)$ there is a deterministic one, $A=h(S)$, equivalently $H(A\mid S)=0$ [@Conant-Ashby70]. The full concavity / extreme-point argument is in the notes include; today the diagrams and the slogan-with-fences are enough for assessment. 
+
+\addreading{@Conant-Ashby70}{the Good Regulator Theorem}
+\addreading{@Ashby-introduction56}{requisite variety}
+
+\blocktime{10}{Break}
+
+\subsection{Goals as Radon--Nikodym}
+
+\blocktime{30}{Goal measure / Radon--Nikodym; reward as $-\log(\mathrm{d}\nu/\mathrm{d}\lambda)$}
+
+\newslide{The Measure of Success}
+
+\slides{Week 5: relative entropy needs a reference. Goals need one too.}
+
+\slidesincremental{
+* Channel: occupancy over $(S,A)$ pushes to an outcome law on $Z$
+* Criterion: $\min_\pi H(Z)$ --- or $H_\nu(Z)$ under a goal measure $\nu$
+* Base $\lambda$; goal $\nu\ll\lambda$; density $\mathrm{d}\nu/\mathrm{d}\lambda$
+* Reward reading: $r(z)=-\log(\mathrm{d}\nu/\mathrm{d}\lambda)$
+}
+
+\speakernotes{Bridge to Week 5 Radon--Nikodym / KL language. Board $r=-\log(\mathrm{d}\nu/\mathrm{d}\lambda)$ once. Do not open MM loops, empowerment budgets, or DeepSea.}
+
+\notes{Conant and Ashby minimise the entropy of the reguland. We might ask the question, how does that relate to the more usual approach in reinforcement learning where we maximise a reward function. In ongoing work (with Joery de Vries) we suggest that the long-run state--action occupancy is pushed through a fixed channel $K(z\mid s,a)$ to an outcome law $p_\pi$ on $Z$. Minimising $H(Z)$ is concave over the occupancy polytope, so a deterministic policy is optimal. 
+
+If the "good" outcomes are not the whole alphabet, then we introduce a goal measure $\nu$, a "measure of success" as it were. This must be absolutely continuous with respect to the base measure, $\lambda$. Entropy relative to $\nu$ differs from entropy relative to $\lambda$ by the goal term
+$$
+\mathbb{E}\left[\log\tfrac{\mathrm{d}\nu}{\mathrm{d}\lambda}(Z)\right]=-\mathbb{E}[r(Z)],\qquad r=-\log\tfrac{\mathrm{d}\nu}{\mathrm{d}\lambda}.
+$$
+So ordinary reward maximisation is entropy minimisation under a reference block (the measure of success). This is the same change-of-measure we reviewed when considering speed and velocity of a Maxwellian gas. Our interpretation is that Conant and Ashby's good set $G$ is the special case that puts smaller $\nu$-volume on $G$ than on $G^c$, so the goal term pays for landing in $G$.}
+
+\newslide{RL Recovery and AGI}
+
+\slidesincremental{
+* Reward channel: entropy criterion collapses to return maximisation (under a volume threshold)
+* Regulation channel: hold a set-point with no scalar reward
+* Existence of a deterministic organiser $\neq$ a rich world-model
+}
+
+\speakernotes{LO12 fence for W4. One slide. No algorithm, no Thompson sampling, no belief MDP.}
+
+\notes{This is a course-level vocabulary map, not the Joery paper. Assessed: letters $D$,$S$,$A$,$Z$; $\min H(Z)$; $H(A\mid S)=0$ with both caveats; $r=-\log(\mathrm{d}\nu/\mathrm{d}\lambda)$ as the goal/reward bridge to Week 5. Not assessed: majorisation--minimisation, empowerment as a summand, DeepSea thresholds.}
+
 
 \subsection{Notes Overflow: Multi-Information, DPI Proof, IB}
 
