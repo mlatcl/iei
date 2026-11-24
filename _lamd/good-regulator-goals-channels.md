@@ -170,9 +170,6 @@ The second term is the goal: writing $r=-\log(\mathrm{d}\nu/\mathrm{d}\lambda)$ 
 \notes{This is a course-level vocabulary map, not the Joery paper. Assessed: letters $D$,$S$,$A$,$Z$; $\min H(Z)$; $H(A\mid S)=0$ with both caveats; $r=-\log(\mathrm{d}\nu/\mathrm{d}\lambda)$ as the goal/reward bridge to Week 5. Not assessed: majorisation--minimisation, empowerment as a summand, DeepSea thresholds.}
 
 
-\subsection{Notes Overflow: Multi-Information, DPI Proof, IB}
-
-\notes{The following blocks were the previous Week 7 live spine. They remain available as notes and as Week 8 enrichment if the room wants depth after Quiz 4. They are **not** on today's clock and **not** on Quiz 4 except insofar as DPI's statement was taught above.}
 
 
 \subsection{Define This Week}
