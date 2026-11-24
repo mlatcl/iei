@@ -154,18 +154,19 @@ reading:
 * Channel: occupancy over $(S,A)$ pushes to an outcome law on $Z$
 * Criterion: $\min_\pi H(Z)$ --- or $H_\nu(Z)$ under a goal measure $\nu$
 * Base $\lambda$; goal $\nu\ll\lambda$; density $\mathrm{d}\nu/\mathrm{d}\lambda$
+* Change of base: $H_\nu(Z)=H_\lambda(Z)+\mathbb{E}\!\left[\log\tfrac{\mathrm{d}\nu}{\mathrm{d}\lambda}(Z)\right]$
 * Reward reading: $r(z)=-\log(\mathrm{d}\nu/\mathrm{d}\lambda)$
 }
 
-\speakernotes{Bridge to Week 5 Radon--Nikodym / KL language. Board $r=-\log(\mathrm{d}\nu/\mathrm{d}\lambda)$ once. Do not open MM loops, empowerment budgets, or DeepSea.}
+\speakernotes{Bridge to Week 5 Radon--Nikodym / KL language. Board the change-of-base identity, then $r=-\log(\mathrm{d}\nu/\mathrm{d}\lambda)$ once. Do not open MM loops, empowerment budgets, or DeepSea.}
 
-\notes{Conant and Ashby minimise the entropy of the reguland. We might ask the question, how does that relate to the more usual approach in reinforcement learning where we maximise a reward function. In ongoing work (with Joery de Vries) we suggest that the long-run state--action occupancy is pushed through a fixed channel $K(z\mid s,a)$ to an outcome law $p_\pi$ on $Z$. Minimising $H(Z)$ is concave over the occupancy polytope, so a deterministic policy is optimal. 
+\notes{Conant and Ashby minimise the entropy of the reguland. We might ask the question, how does that relate to the more usual approach in reinforcement learning where we maximise a reward function. In ongoing work (with Joery de Vries) we suggest that the long-run state--action occupancy is pushed through a fixed channel $K(z\mid s,a)$ to an outcome law $p_\pi$ on $Z$. Minimising $H(Z)$ is concave over the occupancy polytope, so a deterministic policy is optimal.
 
-If the "good" outcomes are not the whole alphabet, then we introduce a goal measure $\nu$, a "measure of success" as it were. This must be absolutely continuous with respect to the base measure, $\lambda$. Entropy relative to $\nu$ differs from entropy relative to $\lambda$ by the goal term
+If the "good" outcomes are not the whole alphabet, then we introduce a goal measure $\nu$, a "measure of success" as it were. This must be absolutely continuous with respect to the base measure $\lambda$. The change of base is
 $$
-\mathbb{E}\left[\log\tfrac{\mathrm{d}\nu}{\mathrm{d}\lambda}(Z)\right]=-\mathbb{E}[r(Z)],\qquad r=-\log\tfrac{\mathrm{d}\nu}{\mathrm{d}\lambda}.
+H_\nu(Z)=H_\lambda(Z)+\mathbb{E}\!\left[\log\tfrac{\mathrm{d}\nu}{\mathrm{d}\lambda}(Z)\right].
 $$
-So ordinary reward maximisation is entropy minimisation under a reference block (the measure of success). This is the same change-of-measure we reviewed when considering speed and velocity of a Maxwellian gas. Our interpretation is that Conant and Ashby's good set $G$ is the special case that puts smaller $\nu$-volume on $G$ than on $G^c$, so the goal term pays for landing in $G$.}
+The second term is the goal: writing $r=-\log(\mathrm{d}\nu/\mathrm{d}\lambda)$ makes it $-\mathbb{E}[r(Z)]$. So ordinary reward maximisation is entropy minimisation under a reference (the measure of success). This is the same change-of-measure we reviewed when considering speed and velocity of a Maxwellian gas. Our interpretation is that Conant and Ashby's good set $G$ is the special case that puts smaller $\nu$-volume on $G$ than on $G^c$, so the goal term pays for landing in $G$.}
 
 \newslide{RL Recovery and AGI}
 
