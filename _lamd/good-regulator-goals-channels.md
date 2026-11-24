@@ -83,7 +83,7 @@ reading:
 
 \blocktime{10}{Shannon $R\le C$; DPI statement and moral (short)}
 
-\notes{Week 6 planned Shannon capacity and DPI after Fisher; as taught they were not reached. State both today. Proof of DPI and multi-information / $I+H=C$ stay notes overflow for Week 8 enrichment.}
+\notes{Overview of Shannon's noisy channel coding theorem and the data processing inequality.}
 
 \newslide{Shannon's Noisy Channel Coding Theorem}
 
@@ -95,8 +95,6 @@ reading:
 * No-go: reliable communication requires $R \le C$
 * Prescription: the input $p(x)$ that achieves $C$
 }
-
-\speakernotes{LO10. Carnot twin: forbids rates above $C$; does not construct a code. BSC plot from the capacity include if time.}
 
 \include{_information/includes/channel-capacity-chain-rule.md}
 
