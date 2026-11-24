@@ -146,6 +146,8 @@ prescriptions = ['Boltzmann/MaxEnt p', 'capacity-achieving p(x)', 'GRT determini
 
 \notes{Protected unassessed arc (~35--40 minutes). Motivate why the course's classical information tools are not the last word. Course-level only: no Lawvere five-move board proof unless ahead; no NCFinProb axioms; do not claim a derivation of quantum mechanics from no-barber.}
 
+\include{_information-game/includes/inaccessible-game-introduction.md}
+
 \include{_information-game/includes/no-barber-principle.md}
 
 \newslides{Why Classical Language Presupposes Copying}

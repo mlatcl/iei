@@ -80,6 +80,7 @@ additional:
   - index: crsid
     type: markdown_directory
     how: left
+    normalize: casefold
     source:
       - directory: submissions
         glob: "*_dialogue.md"

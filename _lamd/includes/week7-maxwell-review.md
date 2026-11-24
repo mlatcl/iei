@@ -1,52 +1,52 @@
 \ifndef{weekSevenMaxwellReview}
 \define{weekSevenMaxwellReview}
 
-\subsection{Worksheet 3 --- Maxwell Teach-Back}
+\subsection{Worksheet 3 --- Maxwell Review}
 
-\notes{Unmarked review of Worksheet 3, turned into teaching. No marks, no CRSids. About twenty-four minutes: lecture 4 fork; Liouville / detailed balance / trapdoor include; short habit close and W4 flag. Then Good Regulator.}
+\notes{Unmarked review of Worksheet 3, turned into teaching. No marks, no CRSids. About twenty-four minutes: lecture 4 recap; Liouville, detailed balance and the trapdoor; a short close on habits and a Worksheet 4 reminder. Then Good Regulator.}
 
 \newslide{Worksheet 3 --- Content First}
 
 \slides{Unmarked. Teach what the dialogues forced onto the table.}
 
 \slidesincremental{
-* Lecture 4 fork (reminder)
+* Lecture 4 recap
 * Liouville, detailed balance, trapdoor
 * Habits for Worksheet 4
 }
 
-\speakernotes{Twenty-four minutes. No grades. Open with the fork, then the teach-back include, then habits and W4. GRT follows.}
+\speakernotes{Twenty-four minutes. No grades. Open with the lecture 4 recap, then Liouville, detailed balance and the trapdoor, then habits and W4. GRT follows.}
 
-\newslide{Lecture 4's Fork (Reminder)}
+\newslide{Lecture 4 Recap}
 
 \slides{The demon as bookkeeping, not a resolved paradox.}
 
 \slidesincremental{
 * Cold bulk / hot bulk / kinetic layer at the gate
-* Number flux can balance while energy flux does not
-* Maxwellians all the way to $v_\star$ are an \emph{illegal} coarse graining
+* Equal numbers crossing each way still leaves unequal energy crossing
+* So two clean Maxwellians right up to the gate is the wrong description
 }
 
-\notes{Re-show the compartment idea in one slide. Left and right bulks may be locally Maxwellian a mean free path from the membrane; the kinetic layer is not. The taught fork was that particle-flux stationarity and energy-flux stationarity cannot both hold if every velocity at the gate is drawn from a bulk Maxwellian. Worksheet 3 asked which description is legal for each compartment, and where the missing entropy is allowed to sit. The next include answers with principles the dialogues named but lecture 4 did not teach.}
+\notes{A quick reminder of where lecture 4 left things. Away from the membrane, a mean free path or more, each side of the box can be treated as a Maxwellian at its own temperature. Right next to the membrane it can't. If we pretend every molecule arriving at the gate comes from the bulk Maxwellian on its side, we find that the number crossing each way and the energy crossing each way can't both balance. Worksheet 3 asked which description is right for each part of the box, and where the missing entropy is allowed to go. Next I want to fill in three ideas that the dialogues reached for but that lecture 4 didn't teach.}
 
-\speakernotes{Do not re-run the flux-balance calculation. One sentence on the two ledgers, then the Liouville include.}
+\speakernotes{Don't re-run the flux calculation. One sentence on number and energy, then Liouville.}
 
 \include{includes/week7-liouville-detailed-balance.md}
 
 \newslide{Four Families (Still Distinct)}
 
-\slides{Different books --- keep them apart after the teach-back.}
+\slides{Four different explanations. Keep them apart.}
 
 \slidesincremental{
-* Illegal Maxwellian-to-gate (both ledgers cannot close)
-* Physical trapdoor (door in the same bath)
-* Memoryful policy (record fills; erasure later)
-* One ensemble for the whole box (sorting as a fluctuation)
+* The description is wrong: Maxwellians can't reach right up to the gate
+* The gate is a real object in the same gas (trapdoor)
+* The gate keeps a record, which must later be wiped (Landauer)
+* The sorting is just a fluctuation of one ensemble for the whole box
 }
 
-\notes{These four were the legal menu in the worksheet brief. Liouville and detailed balance underwrite the first two at different grains; Landauer underwrites the third; Maxwell's statistical second law underwrites the fourth. Models often collapsed all four into one fluent erasure story. The review question remains which family a claim is actually in.}
+\notes{These were the four options in the worksheet brief. The first is about getting the description of the gas right; it tells us the steady state isn't two Maxwellians, but not by itself that the demon fails. Detailed balance is what kills the trapdoor. Liouville, applied to the memory, is what Landauer's argument rests on. Maxwell's own view, that the second law is statistical, covers the fourth. The language models often collapsed all four into one smooth erasure story. The question to keep asking is which of the four a given claim actually belongs to.}
 
-\speakernotes{Name the four once. Students have just seen trapdoor and memory separated.}
+\speakernotes{Name the four once. They have just seen the trapdoor and the memory pulled apart.}
 
 \newslide{Grasshopper Default (Short)}
 
@@ -58,7 +58,7 @@
 * Liouville / Szilard offered as if they were the taught core
 }
 
-\notes{About ten of twelve LLM threads invoked Landauer or erasure. Liouville and detailed balance appeared when a model or student chased them --- now taught briefly so they are no longer ``out of syllabus'' slogans. Good Skepticus asked which compartment the slogan described, whether both ledgers closed, and what happens if there is no memory to erase.}
+\notes{About ten of twelve LLM threads invoked Landauer or erasure. Liouville and detailed balance appeared when a model or student chased them --- now taught briefly so they are no longer ``out of syllabus'' slogans. Good Skepticus asked which compartment the slogan described, whether number and energy both balanced, and what happens if there is no memory to erase.}
 
 \speakernotes{Name the trap without shaming. Bridge to habits.}
 
@@ -68,8 +68,8 @@
 
 \slidesincremental{
 * Curiosity first: where may the entropy sit?
-* Press: legal grain per compartment; both ledgers; door DOF named?
-* Refuse slogan closes; keep families distinct
+* Press: right description for each part of the box? number and energy both balanced? is the door a real object?
+* Refuse slogan closes; keep compartments and mechanisms distinct
 }
 
 \notes{Patterns worth keeping into Worksheet 4: open with a genuine location question; let the model commit; then chase consequences (no record; door in the bath; Maxwellians only in the bulks). Worksheet 4 is already out --- due 1 December, before Quiz 4 --- and Exchange 1 was meant to start before today's Good Regulator block.}

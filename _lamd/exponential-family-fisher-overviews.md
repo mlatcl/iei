@@ -114,6 +114,8 @@ reading:
 
 \speakernotes{LO6. This is the block Week 5 only named. Physics sign: Boltzmann writes $p_i\propto e^{-\beta E_i}$, so $\theta_1=-\beta$ when $T=E$. Fitting the $\lambda$s is maximum likelihood. Next slide: the base measure $h_0$ is counting measure as a prior --- then three members. Geometry comes after the CGF slide, not here.}
 
+\notes{Positivity of $p_i$ is not an extra Lagrange multiplier. Work in the interior of the simplex ($p_i>0$ on the declared support); the MaxEnt / exponential-family form $p_i\propto\exp(\theta\cdot T_i-\psi)$ is automatically positive. Impossible outcomes are dropped from the support ($h_0=0$), not forced to zero by a constraint. See the Week 5 MaxEnt proof note for the short argument (KKT only if you want the inequality story).}
+
 \notes{On a finite state space the constrained MaxEnt distribution is an exponential family. With sufficient statistics $T_k(x)=f_k(x)$ and base density $h_0$ of the counting measure $\#$ on the allowed outcomes,
 \begin{align}
 p(x\mid\boldsymbol{\theta}) &= \exp\bigl(\boldsymbol{\theta}\cdot T(x) - \psi(\boldsymbol{\theta})\bigr)\, h_0(x),\\

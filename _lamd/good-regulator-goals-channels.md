@@ -8,16 +8,16 @@ room: FW26
 transition: None
 abstract: >
   Open with Quiz 3 feedback (cohort figures; missing measure; MaxEnt;
-  die grouping), then a Worksheet 3 teach-back: lecture 4's fork,
-  Liouville and detailed balance as fine- and rate-grained forms of the
-  same objection, and Smoluchowski's trapdoor in passing. Develop the
-  Good Regulator overview Week 6 did not reach: D, S, A, Z; minimise
-  H(Z); existence of a deterministic H(A|S)=0 policy; two caveats. Map
+  die grouping), then a review of Worksheet 3: what lecture 4's
+  flux calculation did and didn't show, Liouville's theorem (the gate's
+  rule merges states, so the cost must go somewhere), detailed balance
+  versus stationarity, and Smoluchowski's trapdoor. Develop the
+  Good Regulator overview: $D$, $S$, $A$, $Z$; minimise $H(Z)$;
+  existence of a deterministic $H(A|S)=0$ policy; two caveats. Map
   that criterion onto a goal measure via Radon–Nikodym (reward as
-  −ln(dν/dλ)), bridging Week 5's relative-entropy language. Recover the
-  unread Week 6 overflow: Shannon capacity R≤C and the data-processing
-  inequality as statement and moral (short). Multi-information, the DPI
-  proof, and the information bottleneck stay notes overflow for Week 8.
+  $-\ln(\mathrm{d}\nu/\mathrm{d}\lambda)$), using the relative-entropy
+  language already covered. Review Shannon capacity $R\leq C$ and the
+  data-processing inequality.
 author:
 - given: Neil D.
   family: Lawrence
@@ -50,25 +50,25 @@ reading:
     required: false
 ---
 
-\notes{No class test today. Quiz 3 was last week (start of lecture 6). Worksheet 3 was due last week; Worksheet 4 (Skepticus dialogue on GRT and general intelligence) is already out (due 1 December, before Quiz 4). As taught in Week 6: exponential family / Fisher / natural gradient; Shannon capacity, DPI, and $D,S,A,Z$ diagrams were *not* walked (GRT was a two-minute W4 pointer). Today: Quiz 3 debrief; W3 teach-back (fork, Liouville / detailed balance / trapdoor); GRT overview; goal measure via Radon--Nikodym; Shannon $R\le C$ and DPI statement (short).}
+\notes{No class test today. Quiz 3 was last week (start of lecture 6). Worksheet 3 was due last week; Worksheet 4 (Skepticus dialogue on GRT and general intelligence) is already out (due 1 December, before Quiz 4). Today: Quiz 3 debrief; Worksheet 3 review (lecture 4 recap; Liouville; detailed balance; trapdoor); GRT overview; goal measure via Radon--Nikodym; Shannon $R\le C$ and DPI statement (short).}
 
 \subsection{This Session}
 
 \slidesincremental{
 * Quiz 3 feedback (cohort figures; missing measure; MaxEnt; die grouping)
-* W3 teach-back: fork; Liouville; detailed balance; trapdoor
-* Good Regulator overview: $D,S,A,Z$; $\min H(Z)$; $H(A\mid S)=0$; caveats
-* Goal as change of measure: $r=-\ln(\mathrm{d}\nu/\mathrm{d}\lambda)$
-* Shannon $R\le C$; DPI statement (short; Week 6 overflow)
+* Worksheet 3 review: Liouville; detailed balance; trapdoor
+* Good Regulator overview: $D$,$S$,$A$,$Z$; $\min H(Z)$; $H(A\mid S)=0$;
+* The goal as a measure of success: $r=-\log(\mathrm{d}\nu/\mathrm{d}\lambda)$
+* Shannon $R\le C$; data processing inequality 
 }
 
 \notes{
-**Time plan.** The slot is 10:05--11:55 (110 minutes, not 120). Do not rebuild Fisher geometry or natural gradient. Do not board the full Conant--Ashby concavity transfer $g(\alpha)$. Multi-information / DPI proof / IB are notes overflow --- not today's clock. W3 teach-back takes time from Shannon; keep $R\le C$ and DPI to statement and moral only.
+**Time plan.** The slot is 10:05--11:55 (110 minutes, not 120). Do not rebuild Fisher geometry or natural gradient. Do not board the full Conant--Ashby concavity transfer $g(\alpha)$. Multi-information / DPI proof / IB are notes overflow --- not today's clock. The Worksheet 3 review takes time from Shannon; keep $R\le C$ and DPI to statement and moral only.
 
 | Clock | Block |
 |------:|-------|
 | 10:05--10:18 | Quiz 3 debrief (mean $6.4/10$; missing measure; MaxEnt; die identity) |
-| 10:18--10:42 | W3 teach-back (fork; Liouville / detailed balance / trapdoor; habits); flag W4 |
+| 10:18--10:42 | Worksheet 3 review (lecture 4 recap; Liouville; detailed balance; trapdoor; habits); flag W4 |
 | 10:42--11:00 | Good Regulator overview: $D,S,A,Z$; $\min H(Z)$; existence slogan; caveats |
 | 11:00--11:10 | Break |
 | 11:10--11:40 | Goal measure / Radon--Nikodym; reward as $-\ln(\mathrm{d}\nu/\mathrm{d}\lambda)$ |
@@ -82,7 +82,7 @@ reading:
 
 \subsection{Submission Review}
 
-\classtimertitled{10:18}{Worksheet 3 teach-back}
+\classtimertitled{10:18}{Worksheet 3 review}
 
 \include{includes/week7-maxwell-review.md}
 

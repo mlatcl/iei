@@ -239,6 +239,10 @@ H_{\max} = \log Z + \sum_{k=1}^m \lambda_k \langle f_k\rangle.
 \end{align}
 This is the same calculation as Jaynes' die (one linear constraint on the face value) and, with $f_1(x_i)=E_i$, the canonical ensemble.}
 
+\notes{\paragraph{Positivity of $p_i$.}
+Do \emph{not} add $p_i>0$ as a Lagrange equality. Positivity is an inequality ($p_i\ge 0$); ordinary multipliers handle equalities only (normalisation and the moment constraints). The normal route is to work in the \emph{interior} of the simplex --- $p_i>0$ for every outcome in the declared support, where $\log p_i$ is differentiable --- and then check that the stationary point stays there. The exponential form does that automatically: $p_i\propto\exp(-\sum_k\lambda_k f_k(x_i))>0$. If an outcome is meant to be impossible, remove it from the support (set the base measure $h_0=0$ there) rather than forcing $p_i=0$ with a multiplier. A fuller inequality treatment uses KKT multipliers with complementary slackness; for this course the interior-plus-check is enough. Informally, Shannon entropy itself behaves like a logarithmic barrier: $\partial H/\partial p_i=-\log p_i-1\to+\infty$ as $p_i\to 0^+$, so the objective pushes mass off the faces of the simplex unless the support has already been cut.}
+
+\speakernotes{Q\&A from Week 6: positivity is not an extra Lagrange constraint. Interior of the simplex; exponential solution is automatically positive; shrink support instead of forcing zeros.}
 \include{_physics/includes/maxent-reference-measure-density-of-states.md}
 
 \speakernotes{Same principle, continuous reading: minimise $\KL{f}{m}$ at fixed mean kinetic energy. Lebesgue on $v_x$ gives a Gaussian component; Lebesgue on $\mathbb{R}^3$ (shell $v^2$ in speed) gives Maxwell--Boltzmann. The $v^2$ is the density of states. As taught 10 November: not walked as a dedicated block.}

@@ -3,11 +3,11 @@
 
 \subsection{Homework from Weeks 4--5}
 
-\notes{No class test today. Feedback on Quiz 3 first; Worksheet 3 follows as an unmarked teach-back (fork, Liouville / detailed balance / trapdoor) in this session. Marks do not appear on these slides, and names do not either. The numbers below are cohort figures from the marked scripts.}
+\notes{No class test today. Feedback on Quiz 3 first; Worksheet 3 follows as an unmarked review (Liouville, detailed balance, the trapdoor) in this session. Marks do not appear on these slides, and names do not either. The numbers below are cohort figures from the marked scripts.}
 
 \newslide{Quiz 3 Is Marked}
 
-\slides{Twelve papers. A few minutes on matters arising, then Worksheet 3 teach-back and the Good Regulator.}
+\slides{Twelve papers. A few minutes on matters arising, then a review of Worksheet 3 and the Good Regulator.}
 
 \slidesincremental{
 * Quiz 1: mean $8.2/10$
@@ -15,7 +15,7 @@
 * Quiz 3: mean $6.4/10$
 }
 
-\speakernotes{Quiz-only block for the marks. Worksheet 3 stays unmarked on the slides --- teach-back after this debrief. Keep names off the slides.}
+\notes{This block is the quiz marks only. Worksheet 3 is unmarked on the slides; the review of its ideas comes after. Names stay off the slides.}
 
 \subsection{Quiz 3}
 
@@ -43,9 +43,7 @@
 * Going continuous does \emph{not} remove the choice of measure
 }
 
-\notes{The common incomplete selection was to keep the KL reading of relative entropy and drop the steam point --- or to add the claim that a density erases the remaining measure choice. Week 4's undeclared $m$ was already a KL; declaring it does not invent a new object. Anthropomorphic entropy of steam is already a coarse-graining. Passing from bin counts to a density does not cancel that choice; shifting bins while holding the discrete probabilities fixed does not change discrete $H$ either.}
-
-\speakernotes{One sentence: KL yes; truncation yes; continuous does not finish the job. Do not re-derive RN here --- today's goal-measure block will reuse the same language.}
+\notes{The common incomplete selection was to keep the KL reading of relative entropy and drop the steam point --- or to add the claim that a density erases the remaining measure choice. Week 4's undeclared $m$ was already a KL; declaring it does not invent a new object. Anthropomorphic entropy of steam is already a coarse-graining. Passing from bin counts to a density does not cancel that choice; shifting bins while holding the discrete probabilities fixed does not change discrete $H$ either. The three points that matter: relative entropy is a KL; steam entropy is already a truncation; going continuous does not finish the job. The Radon--Nikodym language returns in today's goal-measure block.}
 
 \newslide{MaxEnt Recovers Maxwell--Boltzmann}
 
@@ -69,8 +67,6 @@
 * $H = H(w)+\sum_i w_i H(p_i)$ --- residual entropy is \emph{added}
 }
 
-\notes{About half the papers missed the exact set on the die item. The recurring distractor was the identity with a minus in front of the residual term. Total entropy is the entropy of the group weights plus the average entropy inside the groups; there is leftover uncertainty after the first cut. Soft overlapping allocations can leave $H(G\mid X)>0$; an exclusive partition does not overlap.}
-
-\speakernotes{If the room needs the one-liner: plus residual, not minus. Bridge briefly to the demon membrane (velocity gate; compartments and a non-equilibrium layer; balanced crossings need not balance energy) if time remains, then Worksheet 3 patterns.}
+\notes{About half the papers missed the exact set on the die item. The recurring distractor was the identity with a minus in front of the residual term. Total entropy is the entropy of the group weights plus the average entropy inside the groups; residual entropy is added, not subtracted. There is leftover uncertainty after the first cut. Soft overlapping allocations can leave $H(G\mid X)>0$; an exclusive partition does not overlap. The same grouping language returns for the demon membrane: a velocity gate, compartments and a non-equilibrium layer, and balanced crossings that need not balance energy.}
 
 \endif
