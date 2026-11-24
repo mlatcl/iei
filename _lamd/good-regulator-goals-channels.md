@@ -47,7 +47,7 @@ reading:
     required: false
 ---
 
-\notes{No class test today. Quiz 3 was last week (start of lecture 6). Worksheet 3 was due last week; Worksheet 4 (Skepticus dialogue on GRT and general intelligence) is already out (due 1 December, before Quiz 4). Today: Quiz 3 debrief; W3 review (fork, Liouville / detailed balance / trapdoor); GRT overview; goal measure via Radon--Nikodym; Shannon $R\le C$ and DPI statement (short).}
+\notes{No class test today. Quiz 3 was last week (start of lecture 6). Worksheet 3 was due last week; Worksheet 4 (Skepticus dialogue on GRT and general intelligence) is already out (due 1 December, before Quiz 4). Today: Quiz 3 debrief; W3 review (Liouville / detailed balance / trapdoor); GRT overview; goal measure via Radon--Nikodym and its coarse-graining reading; Shannon $R\le C$ and DPI statement (short).}
 
 \subsection{This Session}
 
@@ -56,6 +56,7 @@ reading:
 * Worksheet 3 review: Liouville; detailed balance; trapdoor
 * Good Regulator overview: $D$,$S$,$A$,$Z$; $\min H(Z)$; $H(A\mid S)=0$;
 * The goal as a measure of success: $r=-\log(\mathrm{d}\nu/\mathrm{d}\lambda)$
+* Goal measure as coarse graining (grouping / requisite variety)
 * Shannon $R\le C$; data processing inequality 
 }
 
@@ -74,7 +75,7 @@ reading:
 
 \subsection{Submission Review}
 
-\blocktime{24}{W3 review (fork; Liouville / detailed balance / trapdoor; habits); flag W4}
+\blocktime{18}{W3 review (Liouville / detailed balance / trapdoor; habits); flag W4}
 
 \include{includes/week7-maxwell-review.md}
 
@@ -144,7 +145,7 @@ reading:
 
 \subsection{Goals as Radon--Nikodym}
 
-\blocktime{30}{Goal measure / Radon--Nikodym; reward as $-\log(\mathrm{d}\nu/\mathrm{d}\lambda)$}
+\blocktime{40}{Goal measure / Radon--Nikodym; coarse-graining reading of reward}
 
 \newslide{The Measure of Success}
 
@@ -167,6 +168,8 @@ $$
 H_\nu(Z)=H_\lambda(Z)+\mathbb{E}\!\left[\log\tfrac{\mathrm{d}\nu}{\mathrm{d}\lambda}(Z)\right].
 $$
 The second term is the goal: writing $r=-\log(\mathrm{d}\nu/\mathrm{d}\lambda)$ makes it $-\mathbb{E}[r(Z)]$. So ordinary reward maximisation is entropy minimisation under a reference (the measure of success). This is the same change-of-measure we reviewed when considering speed and velocity of a Maxwellian gas. Our interpretation is that Conant and Ashby's good set $G$ is the special case that puts smaller $\nu$-volume on $G$ than on $G^c$, so the goal term pays for landing in $G$.}
+
+\include{includes/week7-goal-measure-coarse-graining.md}
 
 \newslide{RL Recovery and AGI}
 

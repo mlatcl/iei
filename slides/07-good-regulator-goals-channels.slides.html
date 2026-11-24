@@ -160,6 +160,8 @@ class="math inline">\(A\)</span>,<span class="math inline">\(Z\)</span>;
 class="math inline">\(H(A\mid S)=0\)</span>;</li>
 <li class="fragment">The goal as a measure of success: <span
 class="math inline">\(r=-\log(\mathrm{d}\nu/\mathrm{d}\lambda)\)</span></li>
+<li class="fragment">Goal measure as coarse graining (grouping /
+requisite variety)</li>
 <li class="fragment">Shannon <span class="math inline">\(R\le
 C\)</span>; data processing inequality</li>
 </ul>
@@ -307,15 +309,27 @@ area never changes.</p>
 </div>
 </div>
 <aside class="notes">
-A cloud of 40,000 pendulum starting points (red) followed through time.
-Grey curves are lines of constant energy. The cloud’s area is exactly
-the same in all three panels, so the fine-grained entropy hasn’t moved.
-But it is drawn out into a filament that touches more and more of the
-coarse grid cells (shaded), so the entropy we’d compute from the cells
-goes up.
+Phase space of a single pendulum: each point is one complete state,
+angle <span class="math inline">\(q\)</span> and momentum <span
+class="math inline">\(p\)</span>. The red cloud is 40,000 possible
+states of the same pendulum, our uncertainty about it, each followed
+forward in time. Grey curves are lines of constant energy, and every
+point travels along its own curve, clockwise (arrows). The closed ovals
+are swings; the wavy lines at top and bottom are the pendulum going
+right over the top. The left and right edges are the same angle. The
+cloud’s true area, measured from its edge, is the same in all three
+panels, so the fine-grained entropy hasn’t moved. The red ink looks
+bigger by <span class="math inline">\(t=40\)</span> only because the
+thread is thinner than a pixel. What does grow is the number of coarse
+cells (shaded) the thread touches, and so the entropy computed from the
+cells.
 </aside>
 <aside class="notes">
-Point at the area: same in all three panels. Then point at the shaded
+First say what a point is: one whole pendulum state. Trace one grey oval
+with a finger: a single swing. Then the area: the titles show it is the
+same in all three panels, even though the red looks bigger at <span
+class="math inline">\(t=40\)</span> (the thread is thinner than a pixel,
+so the drawing itself is a coarse graining). Then point at the shaded
 cells. The second law lives in the cells, not in the cloud.
 </aside>
 </section>
@@ -795,6 +809,211 @@ Bridge to Week 5 Radon–Nikodym / KL language. Board the change-of-base
 identity, then <span
 class="math inline">\(r=-\log(\mathrm{d}\nu/\mathrm{d}\lambda)\)</span>
 once. Do not open MM loops, empowerment budgets, or DeepSea.
+</aside>
+</section>
+<section id="the-measure-of-success-as-a-coarse-graining"
+class="slide level2">
+<h2>The Measure of Success as a Coarse Graining</h2>
+</section>
+<section id="which-entropy-are-we-minimising" class="slide level2">
+<h2>Which Entropy Are We Minimising?</h2>
+<p><span class="math inline">\(H(Z)\)</span> depends on what we call an
+outcome.</p>
+<div>
+<ul>
+<li class="fragment">Fine description <span
+class="math inline">\(X\)</span>; success measured on a coarse summary
+<span class="math inline">\(Z=T(X)\)</span></li>
+<li class="fragment"><span class="math inline">\(T\)</span> is a
+deterministic channel, so <span class="math inline">\(H(T(X))\le
+H(X)\)</span></li>
+<li class="fragment">Coarser <span class="math inline">\(T\)</span>:
+lower floor, more policies count as good</li>
+<li class="fragment">Coarsest <span class="math inline">\(T\)</span>
+(one cell): <span class="math inline">\(H=0\)</span> for every
+policy</li>
+</ul>
+</div>
+<aside class="notes">
+Core slide. The point to land: choosing <span
+class="math inline">\(Z\)</span> is choosing how hard the problem is.
+</aside>
+</section>
+<section id="coarser-success-needs-less-requisite-variety"
+class="slide level2">
+<h2>Coarser Success Needs Less Requisite Variety</h2>
+<p>Disturbance <span class="math inline">\(D\)</span> uniform on 8
+values; outcome <span class="math inline">\(X=(D+A)\bmod 8\)</span>;
+success class <span class="math inline">\(C=\lfloor
+X/w\rfloor\)</span>.</p>
+<div class="figure">
+<div id="coarse-success-requisite-variety-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/information/coarse-success-requisite-variety.svg" width="75%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+Minimum achievable entropy of the success class against cell width, for
+regulators with <span class="math inline">\(m\)</span> evenly spaced
+actions that observe <span class="math inline">\(D\)</span>. Each
+doubling of tolerance saves one bit, exactly as each doubling of action
+variety does.
+</aside>
+<aside class="notes">
+Board the formula; the figure is optional. Optional aside if asked: this
+is why Wentworth’s fix needs a rich family of goals. Many measures of
+success force a fine model; one coarse one forces almost none.
+</aside>
+</section>
+<section id="reward-is-minus-the-within-group-entropy"
+class="slide level2">
+<h2>Reward Is Minus the Within-Group Entropy</h2>
+<p>The Week 4 grouping formula, read as a goal.</p>
+<div>
+<ul>
+<li class="fragment"><span class="math inline">\(H(X)=H(Z)+\sum_z
+P(z)\,H(X\mid Z=z)\)</span></li>
+<li class="fragment">No grip inside a cell: uniform within, <span
+class="math inline">\(H(X\mid Z=z)=\log\nu(z)\)</span></li>
+<li class="fragment">Define <span
+class="math inline">\(r(z)=-\log\nu(z)\)</span></li>
+<li class="fragment">Then <span
+class="math inline">\(H(X)=H(Z)-\mathbb{E}[r(Z)]=H_\nu(Z)\)</span></li>
+</ul>
+</div>
+<aside class="notes">
+Core slide. This is the main idea of the block: reward = <span
+class="math inline">\(-\)</span>(log volume of the cell) = <span
+class="math inline">\(-\)</span>(entropy you have not removed by landing
+there).
+</aside>
+</section>
+<section id="one-good-state-in-ten" class="slide level2">
+<h2>One Good State in Ten</h2>
+<p>Conant and Ashby’s good set <span class="math inline">\(G\)</span> as
+two cells: <span class="math inline">\(\nu(G)=1\)</span>, <span
+class="math inline">\(\nu(G^c)=9\)</span>.</p>
+<div class="figure">
+<div id="goal-measure-one-in-ten-figure" class="figure-frame">
+<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/information/goal-measure-one-in-ten.svg" width="75%" style=" ">
+</object>
+</div>
+</div>
+<aside class="notes">
+Plain <span class="math inline">\(H(Z)\)</span> cannot tell
+always-succeed from always-fail. Entropy relative to the measure of
+success can: its minimum is at <span class="math inline">\(q=1\)</span>
+and its maximum is at <span class="math inline">\(q=0.1\)</span>, the
+uniform distribution over the ten fine states.
+</aside>
+<aside class="notes">
+Ask the room before revealing: which <span
+class="math inline">\(q\)</span> maximises <span
+class="math inline">\(H_\nu\)</span>? Answer: <span
+class="math inline">\(q=1/10\)</span>, the uniform micro distribution.
+</aside>
+</section>
+<section id="reading-any-reward-backwards" class="slide level2">
+<h2>Reading Any Reward Backwards</h2>
+<p>Given <span class="math inline">\(r\)</span>, set <span
+class="math inline">\(\nu(z)=e^{-r(z)}\)</span> and read it as a cell
+volume.</p>
+<div>
+<ul>
+<li class="fragment"><span class="math inline">\(r\mapsto r+c\)</span>:
+change of volume unit; same optimum</li>
+<li class="fragment">Good set <span class="math inline">\(G\)</span>:
+reward gap <span
+class="math inline">\(=\log\nu(G^c)/\nu(G)\)</span></li>
+<li class="fragment"><span class="math inline">\(r\mapsto\beta
+r\)</span>: volume ratios <span class="math inline">\(\mapsto\)</span>
+ratios<span class="math inline">\(^\beta\)</span>; sharper goal</li>
+<li class="fragment">Additive per-step reward: product of cells over a
+trajectory</li>
+<li class="fragment">Constant <span class="math inline">\(r\)</span>:
+equal cells; plain Conant–Ashby</li>
+</ul>
+</div>
+<aside class="notes">
+Pick two or three bullets live: shift invariance and the good set are
+enough. The trajectory product is for the notes.
+</aside>
+</section>
+<section id="when-reward-maximisation-takes-over" class="slide level2">
+<h2>When Reward Maximisation Takes Over</h2>
+<p><span class="math inline">\(H_\nu(Z)=H(Z)-\mathbb{E}[r(Z)]\)</span>,
+and <span class="math inline">\(0\le
+H(Z)\le\log|\mathcal{Z}|\)</span>.</p>
+<div>
+<ul>
+<li class="fragment">If <span
+class="math inline">\(\mathbb{E}_\pi[r]-\mathbb{E}_{\pi&#39;}[r]&gt;\log|\mathcal{Z}|\)</span>
+then <span class="math inline">\(\pi\)</span> beats <span
+class="math inline">\(\pi&#39;\)</span></li>
+<li class="fragment">Large reward gaps: entropy criterion <span
+class="math inline">\(\to\)</span> return maximisation</li>
+<li class="fragment">Concave in the occupancy: a deterministic optimum,
+as in RL</li>
+</ul>
+</div>
+<aside class="notes">
+Board the one-line inequality. Do not open MM or the Joery construction.
+</aside>
+</section>
+<section id="when-the-identity-is-only-a-bound" class="slide level2">
+<h2>When the Identity Is Only a Bound</h2>
+<p>Uniform within cells is an assumption about what the regulator cannot
+do.</p>
+<div>
+<ul>
+<li class="fragment">In general <span class="math inline">\(H(X\mid
+Z=z)\le\log\nu(z)\)</span></li>
+<li class="fragment">So <span class="math inline">\(H(X)\le
+H_\nu(Z)\)</span>: we minimise an upper bound</li>
+<li class="fragment">The reward declares what the regulator is
+<em>not</em> asked to control</li>
+</ul>
+</div>
+</section>
+<section id="choosing-a-reward-is-choosing-a-coarse-graining"
+class="slide level2">
+<h2>Choosing a Reward Is Choosing a Coarse Graining</h2>
+<div>
+<ul>
+<li class="fragment">Coarser success: less entropy to remove, less
+variety needed, cruder model forced</li>
+<li class="fragment">Reward <span class="math inline">\(=-\log\)</span>
+cell volume: the entropy left behind by landing there</li>
+<li class="fragment"><span
+class="math inline">\(H_\nu=H(Z)-\mathbb{E}[r]\)</span> is the grouping
+formula, not a new principle</li>
+<li class="fragment">Predictability vs desirability is settled by <span
+class="math inline">\(\nu\)</span>, not by <span
+class="math inline">\(H\)</span></li>
+</ul>
+</div>
+</section>
+<section id="check-yourself" class="slide level2">
+<h2>Check Yourself</h2>
+<div>
+<ul>
+<li class="fragment">Why is a constant action optimal when there is one
+success cell?</li>
+<li class="fragment">A reward is <span class="math inline">\(+5\)</span>
+for success and <span class="math inline">\(0\)</span> otherwise. What
+volume ratio does that declare?</li>
+<li class="fragment">Two policies differ in expected reward by 2 bits
+and <span class="math inline">\(|\mathcal{Z}|=8\)</span>. Can you tell
+which minimises <span class="math inline">\(H_\nu\)</span>?</li>
+</ul>
+</div>
+<aside class="notes">
+Answers. (1) <span class="math inline">\(H(T(X))=0\)</span> for every
+policy. (2) <span class="math inline">\(e^5\approx148\)</span> in nats
+(or <span class="math inline">\(2^5=32\)</span> if <span
+class="math inline">\(r\)</span> is in bits). (3) No: a 2-bit gap is
+less than <span class="math inline">\(\log_2 8=3\)</span> bits, so the
+entropy term can still flip the order.
 </aside>
 </section>
 <section id="rl-recovery-and-agi" class="slide level2">
