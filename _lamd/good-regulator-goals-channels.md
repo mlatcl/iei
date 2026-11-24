@@ -8,16 +8,13 @@ room: FW26
 transition: None
 abstract: >
   Open with Quiz 3 feedback (cohort figures; missing measure; MaxEnt;
-  die grouping), then a review of Worksheet 3: what lecture 4's
-  flux calculation did and didn't show, Liouville's theorem (the gate's
-  rule merges states, so the cost must go somewhere), detailed balance
-  versus stationarity, and Smoluchowski's trapdoor. Develop the
-  Good Regulator overview: $D$, $S$, $A$, $Z$; minimise $H(Z)$;
-  existence of a deterministic $H(A|S)=0$ policy; two caveats. Map
-  that criterion onto a goal measure via Radon–Nikodym (reward as
-  $-\ln(\mathrm{d}\nu/\mathrm{d}\lambda)$), using the relative-entropy
-  language already covered. Review Shannon capacity $R\leq C$ and the
-  data-processing inequality.
+  die grouping), then a Worksheet 3 review. Consider 
+  Liouville and detailed balance as fine- and rate-grained forms of the
+  a similar objection to Maxwell's demon. Cover Smoluchowski's trapdoor in passing. Develop the
+  Good Regulator overview the definition of $D$, $S$, $A$, $Z$ and the idea being to minimise
+  $H(Z)$. SHow the existence of a deterministic $H(A|S)=0$ policy. Show how that criterion relates to a goal measure via Radon–Nikodym (reward as
+  $−\log(\mathrm{d}\nu/\mathrm{d}\lambda)$) using the relative-entropy language we've covered. Review the Shannon capacity $R\leq C$ and the data-processing
+  inequality.
 author:
 - given: Neil D.
   family: Lawrence
@@ -50,7 +47,7 @@ reading:
     required: false
 ---
 
-\notes{No class test today. Quiz 3 was last week (start of lecture 6). Worksheet 3 was due last week; Worksheet 4 (Skepticus dialogue on GRT and general intelligence) is already out (due 1 December, before Quiz 4). Today: Quiz 3 debrief; Worksheet 3 review (lecture 4 recap; Liouville; detailed balance; trapdoor); GRT overview; goal measure via Radon--Nikodym; Shannon $R\le C$ and DPI statement (short).}
+\notes{No class test today. Quiz 3 was last week (start of lecture 6). Worksheet 3 was due last week; Worksheet 4 (Skepticus dialogue on GRT and general intelligence) is already out (due 1 December, before Quiz 4). Today: Quiz 3 debrief; W3 teach-back (fork, Liouville / detailed balance / trapdoor); GRT overview; goal measure via Radon--Nikodym; Shannon $R\le C$ and DPI statement (short).}
 
 \subsection{This Session}
 
@@ -62,19 +59,14 @@ reading:
 * Shannon $R\le C$; data processing inequality 
 }
 
-\notes{
-**Time plan.** The slot is 10:05--11:55 (110 minutes, not 120). Do not rebuild Fisher geometry or natural gradient. Do not board the full Conant--Ashby concavity transfer $g(\alpha)$. Multi-information / DPI proof / IB are notes overflow --- not today's clock. The Worksheet 3 review takes time from Shannon; keep $R\le C$ and DPI to statement and moral only.
+\sessionstart{10:05}
+\sessionlength{110}
 
-| Clock | Block |
-|------:|-------|
-| 10:05--10:18 | Quiz 3 debrief (mean $6.4/10$; missing measure; MaxEnt; die identity) |
-| 10:18--10:42 | Worksheet 3 review (lecture 4 recap; Liouville; detailed balance; trapdoor; habits); flag W4 |
-| 10:42--11:00 | Good Regulator overview: $D,S,A,Z$; $\min H(Z)$; existence slogan; caveats |
-| 11:00--11:10 | Break |
-| 11:10--11:40 | Goal measure / Radon--Nikodym; reward as $-\ln(\mathrm{d}\nu/\mathrm{d}\lambda)$ |
-| 11:40--11:50 | Shannon $R\le C$; DPI statement and moral (short) |
-| 11:50--11:55 | Define-this-week; W4 reminder; Week 8 preview |
+\notes{
+\timeplan
 }
+
+\blocktime{13}{Quiz 3 debrief}
 
 \include{includes/week7-homework-debrief.md}
 
@@ -82,13 +74,13 @@ reading:
 
 \subsection{Submission Review}
 
-\classtimertitled{10:18}{Worksheet 3 review}
+\blocktime{24}{W3 review (fork; Liouville / detailed balance / trapdoor; habits); flag W4}
 
 \include{includes/week7-maxwell-review.md}
 
 \subsection{Good Regulator Overview}
 
-\classtimertitled{10:42}{Good Regulator}
+\blocktime{18}{Good Regulator overview: $D,S,A,Z$; $\min H(Z)$; existence slogan; caveats}
 
 \notes{Week 6 reached only a two-minute W4 pointer. Today is the first live $D,S,A,Z$ overview: diagrams, $\min H(Z)$, existence of a deterministic $H(A\mid S)=0$ policy named (not proved via $g(\alpha)$), and both caveats. Week 8 will *not* re-prove Conant--Ashby; it moves to limits synthesis and quantum motivation.}
 
@@ -112,11 +104,11 @@ reading:
 \addreading{@Conant-Ashby70}{the Good Regulator Theorem}
 \addreading{@Ashby-introduction56}{requisite variety}
 
-\classtimertitled{11:00}{Break}
+\blocktime{10}{Break}
 
 \subsection{Goals as Radon--Nikodym}
 
-\classtimertitled{11:10}{Goal measure}
+\blocktime{30}{Goal measure / Radon--Nikodym; reward as $-\log(\mathrm{d}\nu/\mathrm{d}\lambda)$}
 
 \newslides{From Reguland to Goal Measure}
 
@@ -126,20 +118,20 @@ reading:
 * Channel: occupancy over $(S,A)$ pushes to an outcome law on $Z$
 * Criterion: $\min_\pi H(Z)$ --- or $H_\nu(Z)$ under a goal measure $\nu$
 * Base $\lambda$; goal $\nu\ll\lambda$; density $\mathrm{d}\nu/\mathrm{d}\lambda$
-* Reward reading: $r(z)=-\ln(\mathrm{d}\nu/\mathrm{d}\lambda)$
+* Reward reading: $r(z)=-\log(\mathrm{d}\nu/\mathrm{d}\lambda)$
 }
 
-\speakernotes{Bridge to Week 5 Radon--Nikodym / KL language. Board $r=-\ln(\mathrm{d}\nu/\mathrm{d}\lambda)$ once. Do not open MM loops, empowerment budgets, or DeepSea.}
+\speakernotes{Bridge to Week 5 Radon--Nikodym / KL language. Board $r=-\log(\mathrm{d}\nu/\mathrm{d}\lambda)$ once. Do not open MM loops, empowerment budgets, or DeepSea.}
 
 \notes{Conant and Ashby minimise the entropy of the reguland. In the reinforcement-learning reading developed with Joery, the long-run state--action occupancy is pushed through a fixed channel $K(z\mid s,a)$ to an outcome law $p_\pi$ on $Z$. Minimising $H(Z)$ is concave over the occupancy polytope, so a deterministic policy is optimal --- the same structural reason as an ordinary MDP return, with a different objective.
 
 When the ``good'' outcomes are not the whole alphabet, introduce a goal measure $\nu$ absolutely continuous with respect to a base $\lambda$. Entropy relative to $\nu$ differs from entropy relative to $\lambda$ by the goal term
 $$
-\mathbb{E}\bigl[\ln\tfrac{\mathrm{d}\nu}{\mathrm{d}\lambda}(Z)\bigr]=-\mathbb{E}[r(Z)],\qquad r=-\ln\tfrac{\mathrm{d}\nu}{\mathrm{d}\lambda}.
+\mathbb{E}\bigl[\log\tfrac{\mathrm{d}\nu}{\mathrm{d}\lambda}(Z)\bigr]=-\mathbb{E}[r(Z)],\qquad r=-\log\tfrac{\mathrm{d}\nu}{\mathrm{d}\lambda}.
 $$
-So ordinary reward maximisation is entropy minimisation under a tilted reference --- the same change-of-measure grammar as Week 5's KL / Radon--Nikodym block. Conant and Ashby's good set $G$ is the special case that puts smaller $\nu$-volume on $G$ than on $G^c$, so the goal term pays for landing in $G$.}
+So ordinary reward maximisation is entropy minimisation under a reference block (the measure of success). This is the same change-of-measure grammar as Week 5's KL / Radon--Nikodym block. Conant and Ashby's good set $G$ is the special case that puts smaller $\nu$-volume on $G$ than on $G^c$, so the goal term pays for landing in $G$.}
 
-\newslides{Fence: RL Recovery Is Not AGI}
+\newslides{RL Recovery Is Not AGI}
 
 \slides{The map recovers reward for a reward channel. It does not license general intelligence.}
 
@@ -152,11 +144,11 @@ So ordinary reward maximisation is entropy minimisation under a tilted reference
 
 \speakernotes{LO12 fence for W4. One slide. No algorithm, no Thompson sampling, no belief MDP.}
 
-\notes{This is a course-level vocabulary map, not the Joery paper. Assessed: letters $D,S,A,Z$; $\min H(Z)$; $H(A\mid S)=0$ with both caveats; $r=-\ln(\mathrm{d}\nu/\mathrm{d}\lambda)$ as the goal/reward bridge to Week 5. Not assessed: majorisation--minimisation, empowerment as a summand, DeepSea thresholds.}
+\notes{This is a course-level vocabulary map, not the Joery paper. Assessed: letters $D,S,A,Z$; $\min H(Z)$; $H(A\mid S)=0$ with both caveats; $r=-\log(\mathrm{d}\nu/\mathrm{d}\lambda)$ as the goal/reward bridge to Week 5. Not assessed: majorisation--minimisation, empowerment as a summand, DeepSea thresholds.}
 
 \subsection{Shannon Capacity and DPI}
 
-\classtimertitled{11:40}{Channels}
+\blocktime{10}{Shannon $R\le C$; DPI statement and moral (short)}
 
 \notes{Week 6 planned Shannon capacity and DPI after Fisher; as taught they were not reached. State both today. Proof of DPI and multi-information / $I+H=C$ stay notes overflow for Week 8 enrichment.}
 
@@ -258,10 +250,12 @@ mlai.write_figure('multi-information-rho.svg', directory='\writeDiagramsDir/ml')
 
 \subsection{Define This Week}
 
+\blocktime{5}{Define-this-week; W4 reminder; Week 8 preview}
+
 \slidesincremental{
 * Name $D$, $S$, $A$, $Z$ --- and what $\min H(Z)$ means
 * Why $H(A\mid S)=0$ is a weak reading of ``model''
-* How does $r=-\ln(\mathrm{d}\nu/\mathrm{d}\lambda)$ connect goals to Week 5's RN/KL language?
+* How does $r=-\log(\mathrm{d}\nu/\mathrm{d}\lambda)$ connect goals to Week 5's RN/KL language?
 * What does $R\le C$ forbid, and what does DPI state?
 }
 

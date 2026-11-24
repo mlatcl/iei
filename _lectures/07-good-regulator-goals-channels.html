@@ -3,7 +3,7 @@ title: |-
   Good Regulator, Goals, and Channels
 venue: "FW26, William Gates Building"
 abstract: |-
-  <p>Open with Quiz 3 feedback (cohort figures; missing measure; MaxEnt; die grouping), then a review of Worksheet 3: what lecture 4’s flux calculation did and didn’t show, Liouville’s theorem (the gate’s rule merges states, so the cost must go somewhere), detailed balance versus stationarity, and Smoluchowski’s trapdoor. Develop the Good Regulator overview: <span class="math inline">\(D\)</span>, <span class="math inline">\(S\)</span>, <span class="math inline">\(A\)</span>, <span class="math inline">\(Z\)</span>; minimise <span class="math inline">\(H(Z)\)</span>; existence of a deterministic <span class="math inline">\(H(A|S)=0\)</span> policy; two caveats. Map that criterion onto a goal measure via Radon–Nikodym (reward as <span class="math inline">\(-\ln(\mathrm{d}\nu/\mathrm{d}\lambda)\)</span>), using the relative-entropy language already covered. Review Shannon capacity <span class="math inline">\(R\leq C\)</span> and the data-processing inequality.</p>
+  <p>Open with Quiz 3 feedback (cohort figures; missing measure; MaxEnt; die grouping), then a Worksheet 3 review. Consider Liouville and detailed balance as fine- and rate-grained forms of the a similar objection to Maxwell’s demon. Cover Smoluchowski’s trapdoor in passing. Develop the Good Regulator overview the definition of <span class="math inline">\(D\)</span>, <span class="math inline">\(S\)</span>, <span class="math inline">\(A\)</span>, <span class="math inline">\(Z\)</span> and the idea being to minimise <span class="math inline">\(H(Z)\)</span>. SHow the existence of a deterministic <span class="math inline">\(H(A|S)=0\)</span> policy. Show how that criterion relates to a goal measure via Radon–Nikodym (reward as <span class="math inline">\(−\log(\mathrm{d}\nu/\mathrm{d}\lambda)\)</span>) using the relative-entropy language we’ve covered. Review the Shannon capacity <span class="math inline">\(R\leq C\)</span> and the data-processing inequality.</p>
 author:
 - given: Neil D.
   family: Lawrence
@@ -38,51 +38,9 @@ categories:
 <!--
 
 -->
-<p>No class test today. Quiz 3 was last week (start of lecture 6). Worksheet 3 was due last week; Worksheet 4 (Skepticus dialogue on GRT and general intelligence) is already out (due 1 December, before Quiz 4). Today: Quiz 3 debrief; Worksheet 3 review (lecture 4 recap; Liouville; detailed balance; trapdoor); GRT overview; goal measure via Radon–Nikodym; Shannon <span class="math inline">\(R\le C\)</span> and DPI statement (short).</p>
+<p>No class test today. Quiz 3 was last week (start of lecture 6). Worksheet 3 was due last week; Worksheet 4 (Skepticus dialogue on GRT and general intelligence) is already out (due 1 December, before Quiz 4). Today: Quiz 3 debrief; W3 teach-back (fork, Liouville / detailed balance / trapdoor); GRT overview; goal measure via Radon–Nikodym; Shannon <span class="math inline">\(R\le C\)</span> and DPI statement (short).</p>
 <h2 id="this-session">This Session</h2>
-<p><strong>Time plan.</strong> The slot is 10:05–11:55 (110 minutes, not 120). Do not rebuild Fisher geometry or natural gradient. Do not board the full Conant–Ashby concavity transfer <span class="math inline">\(g(\alpha)\)</span>. Multi-information / DPI proof / IB are notes overflow — not today’s clock. The Worksheet 3 review takes time from Shannon; keep <span class="math inline">\(R\le C\)</span> and DPI to statement and moral only.</p>
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: right;">Clock</th>
-<th>Block</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: right;">10:05–10:18</td>
-<td>Quiz 3 debrief (mean <span class="math inline">\(6.4/10\)</span>; missing measure; MaxEnt; die identity)</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">10:18–10:42</td>
-<td>Worksheet 3 review (lecture 4 recap; Liouville; detailed balance; trapdoor; habits); flag W4</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">10:42–11:00</td>
-<td>Good Regulator overview: <span class="math inline">\(D,S,A,Z\)</span>; <span class="math inline">\(\min H(Z)\)</span>; existence slogan; caveats</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">11:00–11:10</td>
-<td>Break</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">11:10–11:40</td>
-<td>Goal measure / Radon–Nikodym; reward as <span class="math inline">\(-\ln(\mathrm{d}\nu/\mathrm{d}\lambda)\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">11:40–11:50</td>
-<td>Shannon <span class="math inline">\(R\le C\)</span>; DPI statement and moral (short)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">11:50–11:55</td>
-<td>Define-this-week; W4 reminder; Week 8 preview</td>
-</tr>
-</tbody>
-</table>
+
 <h2 id="homework-from-weeks-45">Homework from Weeks 4–5</h2>
 <p>No class test today. Feedback on Quiz 3 first; Worksheet 3 follows as an unmarked review (Liouville, detailed balance, the trapdoor) in this session. Marks do not appear on these slides, and names do not either. The numbers below are cohort figures from the marked scripts.</p>
 <p>This block is the quiz marks only. Worksheet 3 is unmarked on the slides; the review of its ideas comes after. Names stay off the slides.</p>
@@ -112,7 +70,6 @@ sns.set_palette('colorblind')}-->
 <div style="text-align:right">
 <span class="editsection-bracket" style="">[</span><span class="editsection" style=""><a href="https://github.com/mlatcl/iei/edit/gh-pages/_lamd/good-regulator-goals-channels.md" target="_blank" onclick="ga('send', 'event', 'Edit Page', 'Edit', 'https://github.com/mlatcl/iei/edit/gh-pages/_lamd/good-regulator-goals-channels.md', 13);">edit</a></span><span class="editsection-bracket" style="">]</span>
 </div>
-<p><em>Class test timer (Worksheet 3 review): 10:18</em></p>
 <h2 id="worksheet-3-maxwell-review">Worksheet 3 — Maxwell Review</h2>
 <p>Unmarked review of Worksheet 3, turned into teaching. No marks, no CRSids. About twenty-four minutes: lecture 4 recap; Liouville, detailed balance and the trapdoor; a short close on habits and a Worksheet 4 reminder. Then Good Regulator.</p>
 <p>A quick reminder of where lecture 4 left things. Away from the membrane, a mean free path or more, each side of the box can be treated as a Maxwellian at its own temperature. Right next to the membrane it can’t. If we pretend every molecule arriving at the gate comes from the bulk Maxwellian on its side, we find that the number crossing each way and the energy crossing each way can’t both balance. Worksheet 3 asked which description is right for each part of the box, and where the missing entropy is allowed to go. Next I want to fill in three ideas that the dialogues reached for but that lecture 4 didn’t teach.</p>
@@ -220,7 +177,6 @@ sns.set_palette('colorblind')}-->
 <p>About ten of twelve LLM threads invoked Landauer or erasure. Liouville and detailed balance appeared when a model or student chased them — now taught briefly so they are no longer ``out of syllabus’’ slogans. Good Skepticus asked which compartment the slogan described, whether number and energy both balanced, and what happens if there is no memory to erase.</p>
 <p>Patterns worth keeping into Worksheet 4: open with a genuine location question; let the model commit; then chase consequences (no record; door in the bath; Maxwellians only in the bulks). Worksheet 4 is already out — due 1 December, before Quiz 4 — and Exchange 1 was meant to start before today’s Good Regulator block.</p>
 <h2 id="good-regulator-overview">Good Regulator Overview</h2>
-<p><em>Class test timer (Good Regulator): 10:42</em></p>
 <p>Week 6 reached only a two-minute W4 pointer. Today is the first live <span class="math inline">\(D,S,A,Z\)</span> overview: diagrams, <span class="math inline">\(\min H(Z)\)</span>, existence of a deterministic <span class="math inline">\(H(A\mid S)=0\)</span> policy named (not proved via <span class="math inline">\(g(\alpha)\)</span>), and both caveats. Week 8 will <em>not</em> re-prove Conant–Ashby; it moves to limits synthesis and quantum motivation.</p>
 <h2 id="good-regulator-overview-1">Good Regulator Overview</h2>
 <div style="text-align:right">
@@ -254,16 +210,13 @@ sns.set_palette('colorblind')}-->
 <p>Successful regulation, for Conant and Ashby, minimises the entropy of the reguland: <span class="math inline">\(\min_\pi H(Z)\)</span>. Among optima there exists a deterministic policy <span class="math inline">\(A=h(S)\)</span>, equivalently <span class="math inline">\(H(A\mid S)=0\)</span>. That is the sense in which the regulator is a <code>model'' --- deliberately weak. Do not collapse the slogan into</code><span class="math inline">\(A\)</span> contains a rich model of <span class="math inline">\(S\)</span>’’: a constant action also has <span class="math inline">\(H(A\mid S)=0\)</span>. Do not confuse low <span class="math inline">\(H(Z)\)</span> with a desirable outcome. Requisite variety in Shannon form will use the same letters: residual uncertainty satisfies <span class="math inline">\(H(Z)\ge H(D)-I(D;A)\)</span> when <span class="math inline">\(A\)</span> is the regulatory response. Week 8 reviews the theorem properly and applies it to capability claims.</p>
 <p>Ashby’s law of requisite variety in Shannon form <span class="citation" data-cites="Ashby-introduction56">(Ashby, 1956)</span>, written in today’s letters: residual uncertainty in the reguland is at least the disturbance entropy minus the information the action carries about the disturbance. Requisite variety asks how much relevant <span class="math inline">\(I\)</span> is required; the Good Regulator Theorem asks how that <span class="math inline">\(I\)</span> may be organised. Full development of both, with the concavity argument, is Week 8.</p>
 <p>The Good Regulator Theorem, in entropy form, is an existence result: among policies that minimise <span class="math inline">\(H(Z)\)</span> there is a deterministic one, <span class="math inline">\(A=h(S)\)</span>, equivalently <span class="math inline">\(H(A\mid S)=0\)</span> <span class="citation" data-cites="Conant-Ashby70">(Conant and Ashby, 1970)</span>. The full concavity / extreme-point argument is in the notes include; today the diagrams and the slogan-with-fences are enough for assessment. Requisite variety remains the quantity bound <span class="math inline">\(H(Z)\ge H(D)-I(D;A)\)</span>, not the structure theorem.</p>
-<p><em>Class test timer (Break): 11:00</em></p>
 <h2 id="goals-as-radonnikodym">Goals as Radon–Nikodym</h2>
-<p><em>Class test timer (Goal measure): 11:10</em></p>
 <p>Conant and Ashby minimise the entropy of the reguland. In the reinforcement-learning reading developed with Joery, the long-run state–action occupancy is pushed through a fixed channel <span class="math inline">\(K(z\mid s,a)\)</span> to an outcome law <span class="math inline">\(p_\pi\)</span> on <span class="math inline">\(Z\)</span>. Minimising <span class="math inline">\(H(Z)\)</span> is concave over the occupancy polytope, so a deterministic policy is optimal — the same structural reason as an ordinary MDP return, with a different objective.</p>
 <p>When the ``good’’ outcomes are not the whole alphabet, introduce a goal measure <span class="math inline">\(\nu\)</span> absolutely continuous with respect to a base <span class="math inline">\(\lambda\)</span>. Entropy relative to <span class="math inline">\(\nu\)</span> differs from entropy relative to <span class="math inline">\(\lambda\)</span> by the goal term <span class="math display">\[
-\mathbb{E}\bigl[\ln\tfrac{\mathrm{d}\nu}{\mathrm{d}\lambda}(Z)\bigr]=-\mathbb{E}[r(Z)],\qquad r=-\ln\tfrac{\mathrm{d}\nu}{\mathrm{d}\lambda}.
-\]</span> So ordinary reward maximisation is entropy minimisation under a tilted reference — the same change-of-measure grammar as Week 5’s KL / Radon–Nikodym block. Conant and Ashby’s good set <span class="math inline">\(G\)</span> is the special case that puts smaller <span class="math inline">\(\nu\)</span>-volume on <span class="math inline">\(G\)</span> than on <span class="math inline">\(G^c\)</span>, so the goal term pays for landing in <span class="math inline">\(G\)</span>.</p>
-<p>This is a course-level vocabulary map, not the Joery paper. Assessed: letters <span class="math inline">\(D,S,A,Z\)</span>; <span class="math inline">\(\min H(Z)\)</span>; <span class="math inline">\(H(A\mid S)=0\)</span> with both caveats; <span class="math inline">\(r=-\ln(\mathrm{d}\nu/\mathrm{d}\lambda)\)</span> as the goal/reward bridge to Week 5. Not assessed: majorisation–minimisation, empowerment as a summand, DeepSea thresholds.</p>
+\mathbb{E}\bigl[\log\tfrac{\mathrm{d}\nu}{\mathrm{d}\lambda}(Z)\bigr]=-\mathbb{E}[r(Z)],\qquad r=-\log\tfrac{\mathrm{d}\nu}{\mathrm{d}\lambda}.
+\]</span> So ordinary reward maximisation is entropy minimisation under a reference block (the measure of success). This is the same change-of-measure grammar as Week 5’s KL / Radon–Nikodym block. Conant and Ashby’s good set <span class="math inline">\(G\)</span> is the special case that puts smaller <span class="math inline">\(\nu\)</span>-volume on <span class="math inline">\(G\)</span> than on <span class="math inline">\(G^c\)</span>, so the goal term pays for landing in <span class="math inline">\(G\)</span>.</p>
+<p>This is a course-level vocabulary map, not the Joery paper. Assessed: letters <span class="math inline">\(D,S,A,Z\)</span>; <span class="math inline">\(\min H(Z)\)</span>; <span class="math inline">\(H(A\mid S)=0\)</span> with both caveats; <span class="math inline">\(r=-\log(\mathrm{d}\nu/\mathrm{d}\lambda)\)</span> as the goal/reward bridge to Week 5. Not assessed: majorisation–minimisation, empowerment as a summand, DeepSea thresholds.</p>
 <h2 id="shannon-capacity-and-dpi">Shannon Capacity and DPI</h2>
-<p><em>Class test timer (Channels): 11:40</em></p>
 <p>Week 6 planned Shannon capacity and DPI after Fisher; as taught they were not reached. State both today. Proof of DPI and multi-information / <span class="math inline">\(I+H=C\)</span> stay notes overflow for Week 8 enrichment.</p>
 <h2 id="scaffolding-not-outcomes">Scaffolding, Not Outcomes</h2>
 <div style="text-align:right">
@@ -458,6 +411,7 @@ p(t\mid x) \propto p(t)\,\exp\bigl(-\beta\,\mathrm{KL}\bigl(p(y\mid x)\,\|\,p(y\
 <p>Week 4 asked for the least-committal <span class="math inline">\(p\)</span> given moments. Here the constraint is a mutual information. Same Lagrange move, different constraint. Later in this session the bottleneck evaluates intelligence claims: a system that keeps only what is relevant for action is making an IB statement. The Good Regulator existence claim <span class="math inline">\(H(A\mid S)=0\)</span> comes from concavity of entropy; only then may one offer the control interpretation <span class="math inline">\(\min I(S;A)\)</span> subject to <span class="math inline">\(H(Z)\le\epsilon\)</span> as an IB-shaped reading — an interpretation after the theorem, not the theorem itself. Requisite variety and the Good Regulator are tools we use in Week 8; the information bottleneck itself is the relevant-compression theorem.</p>
 <p>IB as a gloss after GRT: <span class="math inline">\(\min I(S;A)\)</span> subject to <span class="math inline">\(H(Z)\le\epsilon\)</span> is a course interpretation, not Conant and Ashby’s equation. Optional LO9 name if ahead: MaxEnt as <span class="math inline">\(m\)</span>-projection (geometric reading of Week 5; stated, not computed). Inaccessible-game / no-barber material lives in Week 8, not here.</p>
 <h2 id="define-this-week">Define This Week</h2>
+
 <h2 id="after-this-lecture">After This Lecture</h2>
 <p>No class test today. Quiz 4 is 1 December at the start of lecture 8: Weeks 6–7 as delivered (Fisher from Week 6; GRT overview / goal measure / Shannon / DPI from today). Week 8 after the quiz is unassessed: short limits synthesis, then no-barber motivation for von Neumann / quantum information, then course close.</p>
 <h2 id="further-reading">Further Reading</h2>
