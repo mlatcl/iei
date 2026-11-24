@@ -174,64 +174,6 @@ The second term is the goal: writing $r=-\log(\mathrm{d}\nu/\mathrm{d}\lambda)$ 
 
 \notes{The following blocks were the previous Week 7 live spine. They remain available as notes and as Week 8 enrichment if the room wants depth after Quiz 4. They are **not** on today's clock and **not** on Quiz 4 except insofar as DPI's statement was taught above.}
 
-<!-- overflow retained for notes / Week 8 enrichment -->
-
-\subsection{Optional overflow: Multi-Information}
-
-\include{_ml/includes/velocity-independent-sample.md}
-\include{_ml/includes/velocity-correlated-sample.md}
-\include{_ml/includes/velocity-gaussian-contours.md}
-\include{_physics/includes/classical-observer-velocities.md}
-
-\notes{Independent, correlated, and anti-correlated velocities can share the same one-dimensional Gaussians. Multi-information is the leftover $I=\sum h_i-H$. With fixed marginal entropies $C=\sum_i h_i$, conservation $I+H=C$.}
-
-<!-- SNIPPET: _physics/includes/multi-information-worked.md -->
-
-\setupplotcode{import numpy as np
-import matplotlib.pyplot as plt
-import mlai
-}
-
-\plotcode{def shannon(p):
-    p = np.asarray(p, dtype=float)
-    p = p[p > 0]
-    return -np.sum(p * np.log2(p))
-
-def correlated_pair(rho):
-    return np.array([[0.25*(1+rho), 0.25*(1-rho)],
-                     [0.25*(1-rho), 0.25*(1+rho)]])
-
-rhos = np.linspace(-1, 1, 200)
-I_vals, H_vals = [], []
-for rho in rhos:
-    joint = correlated_pair(rho)
-    hx = shannon(joint.sum(axis=1))
-    hy = shannon(joint.sum(axis=0))
-    H = shannon(joint.ravel())
-    I_vals.append(hx + hy - H)
-    H_vals.append(H)
-fig, ax = plt.subplots(figsize=(7, 4))
-ax.plot(rhos, I_vals, label='$I(\\rho)$')
-ax.plot(rhos, H_vals, label='$H(\\rho)$')
-ax.set_xlabel('$\\rho$')
-ax.set_ylabel('bits')
-ax.legend()
-ax.set_title('Correlated-pair family: $I+H=2$')
-mlai.write_figure('multi-information-rho.svg', directory='\writeDiagramsDir/ml')}
-
-\figure{\includediagram{\diagramsDir/ml/multi-information-rho}{75%}}{Multi-information and joint entropy for uniform-marginal binary pairs; $I+H=C$ with $C=2$.}{multi-information-rho}
-
-<!-- /SNIPPET: _physics/includes/multi-information-worked.md -->
-
-\subsection{Optional overflow: DPI Proof, KL Decay, and Information Bottleneck}
-
-\include{_information/includes/data-processing-inequality.md}
-
-\include{_information/includes/relative-entropy-decay-grouping.md}
-
-\include{_information/includes/information-bottleneck.md}
-
-\notes{IB as a gloss after GRT: $\min I(S;A)$ subject to $H(Z)\le\epsilon$ is a course interpretation, not Conant and Ashby's equation. Optional LO9 name if ahead: MaxEnt as $m$-projection (geometric reading of Week 5; stated, not computed). Inaccessible-game / no-barber material lives in Week 8, not here.}
 
 \subsection{Define This Week}
 
