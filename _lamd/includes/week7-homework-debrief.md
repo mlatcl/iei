@@ -7,7 +7,6 @@
 
 \newslide{Quiz 3 Is Marked}
 
-\slides{Twelve papers. A few minutes on matters arising, then a review of Worksheet 3 and the Good Regulator.}
 
 \slidesincremental{
 * Quiz 1: mean $8.2/10$
@@ -19,7 +18,7 @@
 
 \subsection{Quiz 3}
 
-\notes{The quiz tested ten items on Weeks 4--5 as taught: grouping and soft partitions, the missing measure, Maxwell--Boltzmann speed geometry, MaxEnt under constraints, the die on the board, the demon as membrane and ledgers, and KL. Matching and the $H(w)=1$ blank were essentially clean. Marks were lost on multi-select items where the exact set mattered.}
+\notes{The quiz tested ten items on grouping and soft partitions, the missing measure, Maxwell--Boltzmann speed geometry, MaxEnt under constraints, the coarse graining of the die, the demon as membrane and ledgers, and KL. THe matching and the blank question were mostly got right by all. Marks were lost on multi-select items.}
 
 \newslide{Quiz 3: Where Marks Were Lost}
 
@@ -31,11 +30,9 @@
 * The die grouping identity / demon abstraction (about half)
 }
 
-\notes{Named matching of $I(X;G)$, $H(w)$, residual group entropy and $H(G\mid X)$, and the balanced odd/even blank, were mostly got. Soft exclusive versus overlapping grouping (Q6) and discrete MaxEnt multipliers (Q9) held up. KL non-negativity and asymmetry (Q10) mostly held. The expensive items were the missing-measure multi-select, MaxEnt recovering Maxwell--Boltzmann from one mean constraint, and the exact sets on the die identity and the demon membrane picture.}
+\notes{Named matching of $I(X;G)$, $H(w)$, residual group entropy and $H(G\mid X)$, and the balanced odd/even blank, were mostly correctly answerd. Soft exclusive versus overlapping grouping (Q6) and discrete MaxEnt multipliers (Q9) held up. KL non-negativity and asymmetry (Q10) mostly held. The questions where marks were lost were the missing-measure multi-select, MaxEnt recovering Maxwell--Boltzmann from one mean constraint, and the exact sets on the die identity and the demon membrane picture.}
 
 \newslide{The Measure Is Still There}
-
-\slides{Relative entropy is a KL --- and steam entropy is already a truncation.}
 
 \slidesincremental{
 * Entropy of steam already neglects other uncertainties (nuclear spins, \ldots)
@@ -43,7 +40,7 @@
 * Going continuous does \emph{not} remove the choice of measure
 }
 
-\notes{The common incomplete selection was to keep the KL reading of relative entropy and drop the steam point --- or to add the claim that a density erases the remaining measure choice. Week 4's undeclared $m$ was already a KL; declaring it does not invent a new object. Anthropomorphic entropy of steam is already a coarse-graining. Passing from bin counts to a density does not cancel that choice; shifting bins while holding the discrete probabilities fixed does not change discrete $H$ either. The three points that matter: relative entropy is a KL; steam entropy is already a truncation; going continuous does not finish the job. The Radon--Nikodym language returns in today's goal-measure block.}
+\notes{The common incomplete selection was to keep the KL reading of relative entropy and drop the steam point --- or to add the claim that a density erases the remaining measure choice.  Anthropomorphic entropy of steam is already a coarse-graining. Passing from bin counts to a density does not cancel that choice; shifting bins while holding the discrete probabilities fixed does not change discrete $H$ either. The three points that matter: relative entropy is a KL; steam entropy is already a truncation; going continuous does not finish the job. The Radon--Nikodym language returns in today's goal-measure block.}
 
 \newslide{MaxEnt Recovers Maxwell--Boltzmann}
 
@@ -59,7 +56,7 @@
 
 \newslide{Plus, Not Minus}
 
-\slides{The board identity adds residual group entropy. The minus sign is a trap.}
+\slides{The minus sign is a trap.}
 
 \slidesincremental{
 * Odd/even and ``is it a six?'' are different first cuts of the same die

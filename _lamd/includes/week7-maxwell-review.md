@@ -3,19 +3,13 @@
 
 \subsection{Worksheet 3 --- Maxwell Review}
 
-\notes{Unmarked review of Worksheet 3, turned into teaching. No marks, no CRSids. About twenty-four minutes: lecture 4 recap; Liouville, detailed balance and the trapdoor; a short close on habits and a Worksheet 4 reminder. Then Good Regulator.}
-
 \newslide{Worksheet 3 --- Content First}
-
-\slides{Unmarked. Teach what the dialogues forced onto the table.}
 
 \slidesincremental{
 * Lecture 4 recap
 * Liouville, detailed balance, trapdoor
 * Habits for Worksheet 4
 }
-
-\speakernotes{Twenty-four minutes. No grades. Open with the lecture 4 recap, then Liouville, detailed balance and the trapdoor, then habits and W4. GRT follows.}
 
 \newslide{Lecture 4 Recap}
 
@@ -28,8 +22,6 @@
 }
 
 \notes{A quick reminder of where lecture 4 left things. Away from the membrane, a mean free path or more, each side of the box can be treated as a Maxwellian at its own temperature. Right next to the membrane it can't. If we pretend every molecule arriving at the gate comes from the bulk Maxwellian on its side, we find that the number crossing each way and the energy crossing each way can't both balance. Worksheet 3 asked which description is right for each part of the box, and where the missing entropy is allowed to go. Next I want to fill in three ideas that the dialogues reached for but that lecture 4 didn't teach.}
-
-\speakernotes{Don't re-run the flux calculation. One sentence on number and energy, then Liouville.}
 
 \include{includes/week7-liouville-detailed-balance.md}
 

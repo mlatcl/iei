@@ -47,7 +47,7 @@ reading:
     required: false
 ---
 
-\notes{No class test today. Quiz 3 was last week (start of lecture 6). Worksheet 3 was due last week; Worksheet 4 (Skepticus dialogue on GRT and general intelligence) is already out (due 1 December, before Quiz 4). Today: Quiz 3 debrief; W3 teach-back (fork, Liouville / detailed balance / trapdoor); GRT overview; goal measure via Radon--Nikodym; Shannon $R\le C$ and DPI statement (short).}
+\notes{No class test today. Quiz 3 was last week (start of lecture 6). Worksheet 3 was due last week; Worksheet 4 (Skepticus dialogue on GRT and general intelligence) is already out (due 1 December, before Quiz 4). Today: Quiz 3 debrief; W3 review (fork, Liouville / detailed balance / trapdoor); GRT overview; goal measure via Radon--Nikodym; Shannon $R\le C$ and DPI statement (short).}
 
 \subsection{This Session}
 
@@ -80,7 +80,7 @@ reading:
 
 \subsection{Good Regulator Overview}
 
-\blocktime{18}{Good Regulator overview: $D,S,A,Z$; $\min H(Z)$; existence slogan; caveats}
+\blocktime{18}{Good Regulator overview: $D$,$S$,$A$,$Z$; $\min H(Z)$; existence slogan; caveats}
 
 \notes{Week 6 reached only a two-minute W4 pointer. Today is the first live $D,S,A,Z$ overview: diagrams, $\min H(Z)$, existence of a deterministic $H(A\mid S)=0$ policy named (not proved via $g(\alpha)$), and both caveats. Week 8 will *not* re-prove Conant--Ashby; it moves to limits synthesis and quantum motivation.}
 
@@ -92,7 +92,7 @@ reading:
 
 \slidesincremental{
 * Among $H(Z)$-minimisers there exists $\pi$ with $H(A\mid S)=0$
-* Caveat 1: constant $A=a_0$ also has $H(A\mid S)=0$ (weak ``model'')
+* Caveat 1: constant $A=a_0$ also has $H(A\mid S)=0$ (weak "model")
 * Caveat 2: low $H(Z)$ is predictability, not desirability
 * Concavity proof stays notes --- do not board $g(\alpha)$ today
 }

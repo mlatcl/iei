@@ -3,7 +3,7 @@
 
 \subsection{Liouville, Detailed Balance, and the Trapdoor}
 
-\notes{Many of the Worksheet 3 dialogues ended up reaching for Liouville's theorem, for detailed balance, or for Smoluchowski's trapdoor. We didn't cover any of these in lecture 4, so I want to fill in what they say and, just as importantly, what they don't say. They are often bundled together as if they were one argument. They aren't. Each answers a different question about the demon.}
+\notes{Many of the Worksheet 3 dialogues usded Liouville's theorem, the detailed balance we suggested, or Smoluchowski's trapdoor. Today we'll review a little about what those different ideas say and how they relate to our coarse graining perspective.}
 
 \setupplotcode{import numpy as np
 import matplotlib.pyplot as plt
@@ -21,9 +21,7 @@ import mlai}
 * *Smoluchowski's trapdoor*: what happens if we build the gate from the same stuff as the gas?
 }
 
-\speakernotes{Set up the three questions and keep them separate. No Hamilton's equations on the board; the pictures carry it.}
-
-\notes{The first question is about the rule itself. Maxwell's being lets fast molecules through one way and slow ones the other. Is that a rule that Newton's laws, on their own, could ever carry out? Liouville's theorem says no, and the reason is surprisingly direct. The second question is about equilibrium. If the whole box, gate included, is at one temperature, what must be true of the traffic between any two states? That's detailed balance. The third is the engineering question. Suppose we try to build the gate out of real parts --- a little hinged flap --- sitting in the same gas. Why doesn't it work? That's Smoluchowski's trapdoor, and it fails for a different reason from the memoryful demon that Landauer's argument is about.}
+\notes{The first question is about the rule itself. Maxwell's being lets fast molecules through one way and slow ones the other. Is that a rule that Newton's laws, on their own, could ever carry out? This is the question that Liouville's theorem can address. The second question is about equilibrium. If the whole box, gate included, is at one temperature, what must be true of the traffic between any two states? That's detailed balance. The third question considers a mechanism, suppose we try to build the gate out of real parts, specifically a little hinged flap sitting in the same gas. Why doesn't it work? That's Smoluchowski's trapdoor.}
 
 \newslide{Liouville: Mechanics Never Loses Volume}
 
