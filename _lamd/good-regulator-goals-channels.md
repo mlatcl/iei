@@ -181,7 +181,7 @@ The second term is the goal: writing $r=-\log(\mathrm{d}\nu/\mathrm{d}\lambda)$ 
 
 \slidesincremental{
 * Name $D$, $S$, $A$, $Z$ --- and what $\min H(Z)$ means
-* Why $H(A\mid S)=0$ is a weak reading of ``model''
+* Why $H(A\mid S)=0$ is a weak reading of "model"
 * How does $r=-\log(\mathrm{d}\nu/\mathrm{d}\lambda)$ connect goals to Week 5's RN/KL language?
 * What does $R\le C$ forbid, and what does DPI state?
 }

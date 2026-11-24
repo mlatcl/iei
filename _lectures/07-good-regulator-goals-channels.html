@@ -339,185 +339,6 @@ H_\nu(\pi)-H_\nu(\pi&#39;)=\big[H(Z_\pi)-H(Z_{\pi&#39;})\big]-\big[\mathbb{E}_\p
 <p>This is a course-level vocabulary map, not the Joery paper. Assessed: letters <span class="math inline">\(D\)</span>,<span class="math inline">\(S\)</span>,<span class="math inline">\(A\)</span>,<span class="math inline">\(Z\)</span>; <span class="math inline">\(\min H(Z)\)</span>; <span class="math inline">\(H(A\mid S)=0\)</span> with both caveats; <span class="math inline">\(r=-\log(\mathrm{d}\nu/\mathrm{d}\lambda)\)</span> as the goal/reward bridge to Week 5. Not assessed: majorisation–minimisation, empowerment as a summand, DeepSea thresholds.</p>
 <h2 id="notes-overflow-multi-information-dpi-proof-ib">Notes Overflow: Multi-Information, DPI Proof, IB</h2>
 <p>The following blocks were the previous Week 7 live spine. They remain available as notes and as Week 8 enrichment if the room wants depth after Quiz 4. They are <strong>not</strong> on today’s clock and <strong>not</strong> on Quiz 4 except insofar as DPI’s statement was taught above.</p>
-<!-- overflow retained for notes / Week 8 enrichment -->
-<h2 id="optional-overflow-multi-information">Optional overflow: Multi-Information</h2>
-<div class="figure">
-<div id="independent-velocities-7-figure" class="figure-frame">
-<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/independent_velocities007.svg" width="70%" style=" ">
-</object>
-</div>
-<div id="independent-velocities-7-magnify" class="magnify" onclick="magnifyFigure(&#39;independent-velocities-7&#39;)">
-<button type="button" class="img-button" aria-label="Enlarge figure">
-<img src="{{ '/assets/images/Magnify_Large.svg' | relative_url }}" style="width:1.5em; min-width:44px; min-height:44px; padding:0.5em">
-</button>
-</div>
-<div id="independent-velocities-7-caption" class="caption-frame">
-<p>Figure: Samples from independent Gaussian variables that represent horizontal and vertical velocities when our system is at equilibrium.</p>
-</div>
-</div>
-<h2 id="sampling-two-dimensional-variables">Sampling Two Dimensional Variables</h2>
-<div style="text-align:right">
-<span class="editsection-bracket" style="">[</span><span class="editsection" style=""><a href="https://github.com/lawrennd/snippets/edit/main/_ml/includes/velocity-correlated-sample.md" target="_blank" onclick="ga('send', 'event', 'Edit Page', 'Edit', 'https://github.com/lawrennd/snippets/edit/main/_ml/includes/velocity-correlated-sample.md', 13);">edit</a></span><span class="editsection-bracket" style="">]</span>
-</div>
-<div class="figure">
-<div id="correlated-velocities-7-figure" class="figure-frame">
-<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/correlated_velocities007.svg" width="70%" style=" ">
-</object>
-</div>
-<div id="correlated-velocities-7-magnify" class="magnify" onclick="magnifyFigure(&#39;correlated-velocities-7&#39;)">
-<button type="button" class="img-button" aria-label="Enlarge figure">
-<img src="{{ '/assets/images/Magnify_Large.svg' | relative_url }}" style="width:1.5em; min-width:44px; min-height:44px; padding:0.5em">
-</button>
-</div>
-<div id="correlated-velocities-7-caption" class="caption-frame">
-<p>Figure: Samples from <em>correlated</em> Gaussian variables that represent vertical and horizontal velocity.</p>
-</div>
-</div>
-<div class="figure">
-<div id="independent-gaussians-figure" class="figure-frame">
-<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/independent-gaussians.svg" width="60%" style=" ">
-</object>
-</div>
-<div id="independent-gaussians-magnify" class="magnify" onclick="magnifyFigure(&#39;independent-gaussians&#39;)">
-<button type="button" class="img-button" aria-label="Enlarge figure">
-<img src="{{ '/assets/images/Magnify_Large.svg' | relative_url }}" style="width:1.5em; min-width:44px; min-height:44px; padding:0.5em">
-</button>
-</div>
-<div id="independent-gaussians-caption" class="caption-frame">
-<p>Figure: Two independent Gaussians for the <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> velocity of a ball.</p>
-</div>
-</div>
-<div class="figure">
-<div id="correlated-gaussians-figure" class="figure-frame">
-<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/correlated-gaussians.svg" width="60%" style=" ">
-</object>
-</div>
-<div id="correlated-gaussians-magnify" class="magnify" onclick="magnifyFigure(&#39;correlated-gaussians&#39;)">
-<button type="button" class="img-button" aria-label="Enlarge figure">
-<img src="{{ '/assets/images/Magnify_Large.svg' | relative_url }}" style="width:1.5em; min-width:44px; min-height:44px; padding:0.5em">
-</button>
-</div>
-<div id="correlated-gaussians-caption" class="caption-frame">
-<p>Figure: A correlated Gaussian for the <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> velocity of a ball. If all balls were correlated in this way, this would imply that the whole box is moving towards the upper right or bottom left.</p>
-</div>
-</div>
-<div class="figure">
-<div id="anti-correlated-gaussians-figure" class="figure-frame">
-<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/anti-correlated-gaussians.svg" width="60%" style=" ">
-</object>
-</div>
-<div id="anti-correlated-gaussians-magnify" class="magnify" onclick="magnifyFigure(&#39;anti-correlated-gaussians&#39;)">
-<button type="button" class="img-button" aria-label="Enlarge figure">
-<img src="{{ '/assets/images/Magnify_Large.svg' | relative_url }}" style="width:1.5em; min-width:44px; min-height:44px; padding:0.5em">
-</button>
-</div>
-<div id="anti-correlated-gaussians-caption" class="caption-frame">
-<p>Figure: An anti-correlated Gaussian for the <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> velocity of a ball. If all balls were anti-correlated in this way, this would imply that the whole box is moving towards the upper left or bottom right.</p>
-</div>
-</div>
-<h2 id="the-classical-observer">The Classical Observer</h2>
-<div style="text-align:right">
-<span class="editsection-bracket" style="">[</span><span class="editsection" style=""><a href="https://github.com/lawrennd/snippets/edit/main/_physics/includes/classical-observer-velocities.md" target="_blank" onclick="ga('send', 'event', 'Edit Page', 'Edit', 'https://github.com/lawrennd/snippets/edit/main/_physics/includes/classical-observer-velocities.md', 13);">edit</a></span><span class="editsection-bracket" style="">]</span>
-</div>
-<div class="figure">
-<div id="observer-composite-independent-figure" class="figure-frame">
-<object class data="https://mlatcl.github.io/iei/slides/diagrams/physics/observer-composite-independent.svg" width="90%" style=" ">
-</object>
-</div>
-<div id="observer-composite-independent-magnify" class="magnify" onclick="magnifyFigure(&#39;observer-composite-independent&#39;)">
-<button type="button" class="img-button" aria-label="Enlarge figure">
-<img src="{{ '/assets/images/Magnify_Large.svg' | relative_url }}" style="width:1.5em; min-width:44px; min-height:44px; padding:0.5em">
-</button>
-</div>
-<div id="observer-composite-independent-caption" class="caption-frame">
-<p>Figure: Here the observer is monitoring the movements of the particles. We’ve plotted the velocities alongside the 1 standard deviation contour of their theoretical distribution.</p>
-</div>
-</div>
-<h2 id="the-classical-observer---correlated">The Classical Observer - Correlated</h2>
-<div class="figure">
-<div id="observer-composite-correlated-figure" class="figure-frame">
-<object class data="https://mlatcl.github.io/iei/slides/diagrams/physics/observer-composite-correlated.svg" width="90%" style=" ">
-</object>
-</div>
-<div id="observer-composite-correlated-magnify" class="magnify" onclick="magnifyFigure(&#39;observer-composite-correlated&#39;)">
-<button type="button" class="img-button" aria-label="Enlarge figure">
-<img src="{{ '/assets/images/Magnify_Large.svg' | relative_url }}" style="width:1.5em; min-width:44px; min-height:44px; padding:0.5em">
-</button>
-</div>
-<div id="observer-composite-correlated-caption" class="caption-frame">
-<p>Figure: Again the observer is monitoring the movements of the particles, but here their motion is correlated (<span class="math inline">\(\rho=0.95\)</span>).</p>
-</div>
-</div>
-<h2 id="the-classical-observer---anti-correlated">The Classical Observer - Anti-correlated</h2>
-<div class="figure">
-<div id="observer-composite-anti-correlated-figure" class="figure-frame">
-<object class data="https://mlatcl.github.io/iei/slides/diagrams/physics/observer-composite-anti-correlated.svg" width="90%" style=" ">
-</object>
-</div>
-<div id="observer-composite-anti-correlated-magnify" class="magnify" onclick="magnifyFigure(&#39;observer-composite-anti-correlated&#39;)">
-<button type="button" class="img-button" aria-label="Enlarge figure">
-<img src="{{ '/assets/images/Magnify_Large.svg' | relative_url }}" style="width:1.5em; min-width:44px; min-height:44px; padding:0.5em">
-</button>
-</div>
-<div id="observer-composite-anti-correlated-caption" class="caption-frame">
-<p>Figure: Here the observer is monitoring the movements of the particles, but here their motion is anti-correlated (<span class="math inline">\(\rho=-0.95\)</span>).</p>
-</div>
-</div>
-<p>Independent, correlated, and anti-correlated velocities can share the same one-dimensional Gaussians. Multi-information is the leftover <span class="math inline">\(I=\sum h_i-H\)</span>. With fixed marginal entropies <span class="math inline">\(C=\sum_i h_i\)</span>, conservation <span class="math inline">\(I+H=C\)</span>.</p>
-<!-- SNIPPET: _physics/includes/multi-information-worked.md -->
-<div class="figure">
-<div id="multi-information-rho-figure" class="figure-frame">
-<object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/multi-information-rho.svg" width="75%" style=" ">
-</object>
-</div>
-<div id="multi-information-rho-magnify" class="magnify" onclick="magnifyFigure(&#39;multi-information-rho&#39;)">
-<button type="button" class="img-button" aria-label="Enlarge figure">
-<img src="{{ '/assets/images/Magnify_Large.svg' | relative_url }}" style="width:1.5em; min-width:44px; min-height:44px; padding:0.5em">
-</button>
-</div>
-<div id="multi-information-rho-caption" class="caption-frame">
-<p>Figure: Multi-information and joint entropy for uniform-marginal binary pairs; <span class="math inline">\(I+H=C\)</span> with <span class="math inline">\(C=2\)</span>.</p>
-</div>
-</div>
-<!-- /SNIPPET: _physics/includes/multi-information-worked.md -->
-<h2 id="optional-overflow-dpi-proof-kl-decay-and-information-bottleneck">Optional overflow: DPI Proof, KL Decay, and Information Bottleneck</h2>
-<h2 id="data-processing-inequality">Data-Processing Inequality</h2>
-<div style="text-align:right">
-<span class="editsection-bracket" style="">[</span><span class="editsection" style=""><a href="https://github.com/lawrennd/snippets/edit/main/_information/includes/data-processing-inequality.md" target="_blank" onclick="ga('send', 'event', 'Edit Page', 'Edit', 'https://github.com/lawrennd/snippets/edit/main/_information/includes/data-processing-inequality.md', 13);">edit</a></span><span class="editsection-bracket" style="">]</span>
-</div>
-<p>The data-processing inequality <span class="citation" data-cites="Cover:elements91">(Cover and Thomas, 1991, Thm 2.8.1)</span> says that if <span class="math inline">\(Z\)</span> is computed from <span class="math inline">\(Y\)</span> alone, possibly with fresh randomness, then <span class="math inline">\(Z\)</span> cannot know more about <span class="math inline">\(X\)</span> than <span class="math inline">\(Y\)</span> did. Formally, if <span class="math inline">\(X\to Y\to Z\)</span> is Markov, then <span class="math inline">\(I(X;Z)\le I(X;Y)\)</span>.</p>
-<p>The proof expands <span class="math inline">\(I(X;Y,Z)\)</span> by the chain rule in two orders. Taking <span class="math inline">\(Y\)</span> first gives <span class="math inline">\(I(X;Y)+I(X;Z\mid Y)\)</span>, and the second term is zero because, once <span class="math inline">\(Y\)</span> is known, <span class="math inline">\(Z\)</span> carries nothing further about <span class="math inline">\(X\)</span>. Taking <span class="math inline">\(Z\)</span> first gives <span class="math inline">\(I(X;Z)+I(X;Y\mid Z)\)</span>, which is at least <span class="math inline">\(I(X;Z)\)</span> because conditional mutual information is never negative. Equating the two gives the inequality.</p>
-<p>Equality holds when <span class="math inline">\(I(X;Y\mid Z)=0\)</span>: once you know <span class="math inline">\(Z\)</span>, <span class="math inline">\(Y\)</span> tells you nothing more about <span class="math inline">\(X\)</span>. Then <span class="math inline">\(Z\)</span> is a <em>sufficient statistic</em> of <span class="math inline">\(Y\)</span> for <span class="math inline">\(X\)</span>; the processing has thrown away only what was irrelevant to <span class="math inline">\(X\)</span>. An invertible <span class="math inline">\(Z=f(Y)\)</span> is always sufficient.</p>
-<p>A claim that a system will “just process more” and so recover information that an earlier stage has already discarded is a claim that violates the data-processing inequality. Processing can rearrange information, make it easier to use, or throw it away. It cannot make more of it.</p>
-<p>The same inequality has a form for distributions. Let <span class="math inline">\(K(y\mid x)\)</span> be any channel, and push two input distributions <span class="math inline">\(p\)</span> and <span class="math inline">\(q\)</span> through it to get <span class="math inline">\(pK\)</span> and <span class="math inline">\(qK\)</span>. Then <span class="math display">\[
-\text{KL}\left( pK\,\|\,qK \right)\le\text{KL}\left( p\,\|\,q \right).
-\]</span> The proof is the chain rule again, now for KL divergence. Write the joint distributions <span class="math inline">\(p(x)K(y\mid x)\)</span> and <span class="math inline">\(q(x)K(y\mid x)\)</span>. Their KL divergence equals <span class="math inline">\(\text{KL}\left( p\,\|\,q \right)\)</span> (the channel parts cancel), and it also equals <span class="math inline">\(\text{KL}\left( pK\,\|\,qK \right)\)</span> plus the average divergence between the two posteriors <span class="math inline">\(p(x\mid y)\)</span> and <span class="math inline">\(q(x\mid y)\)</span>, which is never negative. Read as statistics: no processing of the data can make two hypotheses easier to tell apart. If <span class="math inline">\(K\)</span> is a one-to-one relabelling, nothing is lost and equality holds. Loss comes from merging: two inputs sent to the same output can no longer be distinguished.</p>
-<h2 id="kl-decay-and-grouping">KL Decay and Grouping</h2>
-<div style="text-align:right">
-<span class="editsection-bracket" style="">[</span><span class="editsection" style=""><a href="https://github.com/lawrennd/snippets/edit/main/_information/includes/relative-entropy-decay-grouping.md" target="_blank" onclick="ga('send', 'event', 'Edit Page', 'Edit', 'https://github.com/lawrennd/snippets/edit/main/_information/includes/relative-entropy-decay-grouping.md', 13);">edit</a></span><span class="editsection-bracket" style="">]</span>
-</div>
-<p>The data-processing inequality for distributions gives the approach to equilibrium almost for free. Let <span class="math inline">\(K\)</span> be a Markov transition kernel with stationary distribution <span class="math inline">\(\pi\)</span>, so <span class="math inline">\(\pi K=\pi\)</span>. Apply <span class="math inline">\(\text{KL}\left( pK\,\|\,qK \right)\le\text{KL}\left( p\,\|\,q \right)\)</span> with <span class="math inline">\(q=\pi\)</span>: <span class="math display">\[
-\text{KL}\left( p_{t+1}\,\|\,\pi \right)=\text{KL}\left( p_tK\,\|\,\pi K \right)\le\text{KL}\left( p_t\,\|\,\pi \right).
-\]</span> The divergence to equilibrium never increases. (Physicists often call this functional the relative entropy; it is the same object.) When <span class="math inline">\(\pi\)</span> is uniform on <span class="math inline">\(N\)</span> states, <span class="math inline">\(\text{KL}\left( p\,\|\,\pi \right)=\log N-H(p)\)</span>, so this is the statement that Shannon entropy never decreases. <span class="math inline">\(\pi\)</span> is uniform exactly when <span class="math inline">\(K\)</span> is doubly stochastic: its columns, as well as its rows, sum to one.</p>
-<p>Liouville’s theorem and the data-processing inequality fit together precisely. Deterministic Hamiltonian flow is a one-to-one map on phase space that keeps volume. One-to-one is the equality case of data processing, so the fine-grained entropy, and the KL divergence to the uniform (microcanonical) distribution, do not change at all.</p>
-<p>Now divide a region of phase space that the flow maps onto itself (an energy shell, say) into cells of equal volume, and record only which cell the state is in. Let <span class="math inline">\(P_{ij}\)</span> be the fraction of cell <span class="math inline">\(i\)</span> that the flow carries into cell <span class="math inline">\(j\)</span> over a time step. Each row sums to one. Because the flow keeps volume, each column does too: the volume arriving in cell <span class="math inline">\(j\)</span> is the volume of cell <span class="math inline">\(j\)</span>. So <span class="math inline">\(P\)</span> is doubly stochastic, and the uniform distribution over cells is stationary.</p>
-<p>If at every step we replace the true distribution by one that is uniform inside each cell, keeping only the cell weights, the cell weights evolve as a Markov chain with matrix <span class="math inline">\(P\)</span>. Data processing then says their Shannon entropy can only rise. This is the Gibbs–Ehrenfest account of the second law, and it shows exactly where the rise comes from: from the decision to forget the detail inside the cells at each step. If we keep that detail, the true dynamics is reversible, the cell sequence is not in general Markov, and the coarse-grained entropy is free to fall as well as rise (Loschmidt’s objection).</p>
-<p><span class="math display">\[
-\text{KL}\left( p\,\|\,\pi \right)=\text{KL}\left( w\,\|\,w_\pi \right)+\sum_i w_i\, \text{KL}\left( p_i\,\|\,\pi_i \right)
-\]</span></p>
-<p>Decompose <span class="math inline">\(p\)</span> into group weights <span class="math inline">\(w\)</span> and within-group conditionals <span class="math inline">\(p_i\)</span>, and likewise <span class="math inline">\(\pi\)</span> into <span class="math inline">\(w_\pi\)</span> and <span class="math inline">\(\pi_i\)</span>. The chain rule for KL divergence gives <span class="math display">\[
-\text{KL}\left( p\,\|\,\pi \right)=\text{KL}\left( w\,\|\,w_\pi \right)+\sum_i w_i\, \text{KL}\left( p_i\,\|\,\pi_i \right).
-\]</span> This is the grouping formula for entropy, now written relative to equilibrium. The first term measures how far the macroscopic weights are from their equilibrium values. The second measures what is left out of equilibrium inside the groups. The Ehrenfest step above sets every <span class="math inline">\(\text{KL}\left( p_i\,\|\,\pi_i \right)\)</span> to zero, which is why it can only lower the total. Local equilibrium is the regime where the within-group terms are already close to zero and the between-group term is still falling. Information engines and finite-time protocols mostly act on the between-group term, moving probability between macrostates, while relying on fast relaxation inside each group.</p>
-<h2 id="information-bottleneck">Information Bottleneck</h2>
-<div style="text-align:right">
-<span class="editsection-bracket" style="">[</span><span class="editsection" style=""><a href="https://github.com/lawrennd/snippets/edit/main/_information/includes/information-bottleneck.md" target="_blank" onclick="ga('send', 'event', 'Edit Page', 'Edit', 'https://github.com/lawrennd/snippets/edit/main/_information/includes/information-bottleneck.md', 13);">edit</a></span><span class="editsection-bracket" style="">]</span>
-</div>
-<p>The data-processing inequality forbids creating information by processing. It does not say which information to keep. The information bottleneck <span class="citation" data-cites="Tishby:bottleneck99">(Tishby et al., 1999)</span> is the prescription: given an observation <span class="math inline">\(X\)</span> and a relevance variable <span class="math inline">\(Y\)</span>, choose a representation <span class="math inline">\(T\)</span> of <span class="math inline">\(X\)</span> that keeps <span class="math inline">\(I(T;Y)\)</span> and discards the rest of <span class="math inline">\(I(X;T)\)</span>.</p>
-<p>The information bottleneck of Tishby, Pereira and Bialek is a constrained optimisation on mutual information. The encoder <span class="math inline">\(p(t\mid x)\)</span> is Markov given <span class="math inline">\(X\)</span>, so <span class="math inline">\(Y \leftrightarrow X \leftrightarrow T\)</span>. Data processing then supplies the bound <span class="math inline">\(I(T;Y)\le I(X;Y)\)</span>: no representation of <span class="math inline">\(X\)</span> can be more informative about <span class="math inline">\(Y\)</span> than <span class="math inline">\(X\)</span> itself. The Lagrange multiplier <span class="math inline">\(\beta\)</span> interpolates. Small <span class="math inline">\(\beta\)</span> spends almost no <span class="math inline">\(I\)</span> on the representation. Large <span class="math inline">\(\beta\)</span> keeps everything in <span class="math inline">\(X\)</span> that bears on <span class="math inline">\(Y\)</span>. The self-consistent encoder is an exponential family, <span class="math display">\[
-p(t\mid x) \propto p(t)\,\exp\bigl(-\beta\,\mathrm{KL}\bigl(p(y\mid x)\,\|\,p(y\mid t)\bigr)\bigr),
-\]</span> the same Boltzmann form that maximum entropy gives, now with a KL divergence in the exponent. We do not run Blahut–Arimoto. The point is the pair: DPI is the no-go; the bottleneck is how you spend <span class="math inline">\(I\)</span>.</p>
-<p>Maximum entropy asks for the least-committal distribution given moment constraints. Here the constraint is a mutual information. It is the same Lagrange move with a different constraint. A system that keeps only what is relevant for action is making an information-bottleneck statement. One reading of the Good Regulator Theorem is bottleneck-shaped: minimise <span class="math inline">\(I(S;A)\)</span> subject to <span class="math inline">\(H(Z)\le\epsilon\)</span>. That is an interpretation offered after the theorem, not the theorem itself, whose existence claim <span class="math inline">\(H(A\mid S)=0\)</span> comes from concavity of entropy.</p>
-<p>IB as a gloss after GRT: <span class="math inline">\(\min I(S;A)\)</span> subject to <span class="math inline">\(H(Z)\le\epsilon\)</span> is a course interpretation, not Conant and Ashby’s equation. Optional LO9 name if ahead: MaxEnt as <span class="math inline">\(m\)</span>-projection (geometric reading of Week 5; stated, not computed). Inaccessible-game / no-barber material lives in Week 8, not here.</p>
 <h2 id="define-this-week">Define This Week</h2>
 
 <h2 id="after-this-lecture">After This Lecture</h2>
@@ -530,8 +351,6 @@ p(t\mid x) \propto p(t)\,\exp\bigl(-\beta\,\mathrm{KL}\bigl(p(y\mid x)\,\|\,p(y\
 <li><p>requisite variety; Shannon form of <span class="citation" data-cites="Ashby-introduction56">Ashby (1956)</span></p></li>
 <li><p>the Good Regulator Theorem of <span class="citation" data-cites="Conant-Ashby70">Conant and Ashby (1970)</span></p></li>
 <li><p>requisite variety of <span class="citation" data-cites="Ashby-introduction56">Ashby (1956)</span></p></li>
-<li><p>Theorem 2.8.1 of <span class="citation" data-cites="Cover:elements91">Cover and Thomas (1991)</span></p></li>
-<li><p>the method; optional of <span class="citation" data-cites="Tishby:bottleneck99">Tishby et al. (1999)</span></p></li>
 </ul>
 <h2 id="thanks">Thanks!</h2>
 <p>For more information on these subjects and more you might want to check the following resources.</p>
@@ -568,9 +387,6 @@ Landauer, R., 1961. Irreversibility and heat generation in the computing process
 </div>
 <div id="ref-Shannon-mathematical48" class="csl-entry" role="listitem">
 Shannon, C.E., 1948. A mathematical theory of communication. The Bell System Technical Journal 27, 379–423. <a href="https://doi.org/10.1002/j.1538-7305.1948.tb01338.x">https://doi.org/10.1002/j.1538-7305.1948.tb01338.x</a>
-</div>
-<div id="ref-Tishby:bottleneck99" class="csl-entry" role="listitem">
-Tishby, N., Pereira, F.C., Bialek, W., 1999. <a href="https://arxiv.org/abs/physics/0004057">The information bottleneck method</a>, in: Proceedings of the 37th Annual Allerton Conference on Communication, Control and Computing. pp. 368–377.
 </div>
 </div>
 
