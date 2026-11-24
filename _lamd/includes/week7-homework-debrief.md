@@ -49,7 +49,6 @@
 \slidesincremental{
 * Objective: Shannon entropy under the constraints you wrote down
 * A single mean-energy constraint recovers Maxwell--Boltzmann
-* Extra mean constraints do not leave the uniform optimal
 }
 
 \notes{Several scripts kept the MaxEnt slogan and missed that a lone $\langle E\rangle$ constraint already recovers the Boltzmann weights, or added a free claim about non-equilibrium stationarity. The discrete derivation ends at $p_i\propto\exp(-\sum_k\lambda_k f_k(x_i))$; each $\lambda_k$ is tied to a constraint, and energy is only one allowed $f_k$. Uniform stays optimal only when the constraints are trivial.}
@@ -59,7 +58,6 @@
 \slides{The minus sign is a trap.}
 
 \slidesincremental{
-* Odd/even and ``is it a six?'' are different first cuts of the same die
 * Within one partition the groups do not overlap
 * $H = H(w)+\sum_i w_i H(p_i)$ --- residual entropy is \emph{added}
 }

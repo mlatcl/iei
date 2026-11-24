@@ -122,7 +122,7 @@ reading:
 }
 
 
-\notes{The Good Regulator Theorem, in entropy form, is an existence result: among policies that minimise $H(Z)$ there is a deterministic one, $A=h(S)$, equivalently $H(A\mid S)=0$ [@Conant-Ashby70]. The full concavity / extreme-point argument is in the notes include; today the diagrams and the slogan-with-fences are enough for assessment. 
+\notes{The Good Regulator Theorem, in entropy form, is an existence result: among policies that minimise $H(Z)$ there is a deterministic one, $A=h(S)$, equivalently $H(A\mid S)=0$ [@Conant-Ashby70]. The full concavity / extreme-point argument is in the notes include; today the diagrams and the slogan-with-fences are enough for assessment.}
 
 \addreading{@Conant-Ashby70}{the Good Regulator Theorem}
 \addreading{@Ashby-introduction56}{requisite variety}

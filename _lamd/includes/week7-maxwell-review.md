@@ -47,16 +47,15 @@
 \slidesincremental{
 * Landauer without a named record
 * Trapdoor and memory treated as one mechanism
-* Liouville / Szilard offered as if they were the taught core
 }
 
-\notes{About ten of twelve LLM threads invoked Landauer or erasure. Liouville and detailed balance appeared when a model or student chased them --- now taught briefly so they are no longer ``out of syllabus'' slogans. Good Skepticus asked which compartment the slogan described, whether number and energy both balanced, and what happens if there is no memory to erase.}
+\notes{About ten of twelve LLM threads invoked Landauer or erasure. Liouville and detailed balance appeared when a model or student chased them, so I've added some material today. Good Skepticus asked which compartment the slogan described, whether number and energy both balanced, and what happens if there is no memory to erase.}
 
 \speakernotes{Name the trap without shaming. Bridge to habits.}
 
 \newslide{Good Skepticus on Maxwell}
 
-\slides{What worked --- keep for Worksheet 4.}
+\slides{What worked - keep for Worksheet 4.}
 
 \slidesincremental{
 * Curiosity first: where may the entropy sit?
