@@ -8,13 +8,14 @@ room: FW26
 transition: None
 abstract: >
   Open with Quiz 3 feedback (cohort figures; missing measure; MaxEnt;
-  die grouping), then a Worksheet 3 review. Consider 
-  Liouville and detailed balance as fine- and rate-grained forms of the
-  a similar objection to Maxwell's demon. Cover Smoluchowski's trapdoor in passing. Develop the
-  Good Regulator overview the definition of $D$, $S$, $A$, $Z$ and the idea being to minimise
-  $H(Z)$. SHow the existence of a deterministic $H(A|S)=0$ policy. Show how that criterion relates to a goal measure via Radon–Nikodym (reward as
-  $−\log(\mathrm{d}\nu/\mathrm{d}\lambda)$) using the relative-entropy language we've covered. Review the Shannon capacity $R\leq C$ and the data-processing
-  inequality.
+  die grouping), then a Worksheet 3 review of Liouville, detailed balance,
+  and Smoluchowski's trapdoor. Read Maxwell's gate as a channel into Shannon
+  capacity and the data-processing inequality (Liouville as the equality case).
+  Develop the Good Regulator overview: $D$, $S$, $A$, $Z$ and $\min H(Z)$;
+  existence of a deterministic $H(A\mid S)=0$ policy. Relate that criterion to
+  a goal measure via Radon--Nikodym (reward as
+  $-\log(\mathrm{d}\nu/\mathrm{d}\lambda)$) using the relative-entropy language
+  already covered.
 author:
 - given: Neil D.
   family: Lawrence
@@ -47,17 +48,17 @@ reading:
     required: false
 ---
 
-\notes{No class test today. Quiz 3 was last week (start of lecture 6). Worksheet 3 was due last week; Worksheet 4 (Skepticus dialogue on GRT and general intelligence) is already out (due 1 December, before Quiz 4). Today: Quiz 3 debrief; W3 review (Liouville / detailed balance / trapdoor); GRT overview; goal measure via Radon--Nikodym and its coarse-graining reading; Shannon $R\le C$ and DPI statement (short).}
+\notes{No class test today. Quiz 3 was last week (start of lecture 6). Worksheet 3 was due last week; Worksheet 4 (Skepticus dialogue on GRT and general intelligence) is already out (due 1 December, before Quiz 4). Today: Quiz 3 debrief; W3 review (Liouville / detailed balance / trapdoor); gate as a channel into Shannon capacity and DPI; GRT overview; goal measure via Radon--Nikodym and its coarse-graining reading.}
 
 \subsection{This Session}
 
 \slidesincremental{
 * Quiz 3 feedback (cohort figures; missing measure; MaxEnt; die grouping)
 * Worksheet 3 review: Liouville; detailed balance; trapdoor
-* Good Regulator overview: $D$,$S$,$A$,$Z$; $\min H(Z)$; $H(A\mid S)=0$;
+* Gate as a channel; Shannon $R\le C$; data-processing inequality
+* Good Regulator overview: $D$,$S$,$A$,$Z$; $\min H(Z)$; $H(A\mid S)=0$
 * The goal as a measure of success: $r=-\log(\mathrm{d}\nu/\mathrm{d}\lambda)$
 * Goal measure as coarse graining (grouping / requisite variety)
-* Shannon $R\le C$; data processing inequality 
 }
 
 \sessionstart{10:05}
@@ -81,41 +82,28 @@ reading:
 
 \subsection{Shannon Capacity and DPI}
 
-\blocktime{10}{Shannon $R\le C$; DPI statement and moral (short)}
+\blocktime{25}{Gate as a channel; Shannon $R\le C$; DPI statement and moral}
 
-\notes{Overview of Shannon's noisy channel coding theorem and the data processing inequality.}
+\notes{The Liouville block ended with Maxwell's gate merging four regions of phase space into two. That picture is already a channel, and it carries us straight into Shannon's capacity and the data-processing inequality. Live today: the gate as a channel, what capacity is, and the statement and moral of the DPI. The DPI proof, its form for distributions, and the KL-decay account of the second law are in the notes overflow below.}
 
-\newslide{Shannon's Noisy Channel Coding Theorem}
-
-\slides{A channel is a conditional $p(y\mid x)$. Rate cannot beat capacity.}
-
-\slidesincremental{
-* Mutual information $I(X;Y)$ is the channel currency
-* Capacity $C = \max_{p(x)} I(X;Y)$
-* No-go: reliable communication requires $R \le C$
-* Prescription: the input $p(x)$ that achieves $C$
-}
+\include{includes/week7-gate-as-channel.md}
 
 \include{_information/includes/channel-capacity-chain-rule.md}
 
-\addreading{@Shannon-mathematical48}{noisy channel coding / capacity}
-\addreading{@Cover:elements91}{Chapter 7}
-
 \newslide{Data-Processing Inequality}
 
-\slides{If $X\to Y\to Z$ is Markov, processing cannot create information about $X$.}
+\slides{If $X\to Y\to Z$ is Markov, processing $Y$ cannot create information about $X$.}
 
 \slidesincremental{
-* Markov: $p(z\mid x,y)=p(z\mid y)$
+* Markov: $p(z\mid x,y)=p(z\mid y)$ --- $Z$ is computed from $Y$ alone
 * Statement: $I(X;Z)\le I(X;Y)$
-* Soft partitions (Week 5): leftover $H(G\mid X)$ already spent information
-* Full proof: notes / Week 8 enrichment --- not today's board
+* Equality when $Z$ keeps everything in $Y$ that bears on $X$ (a sufficient statistic)
+* The gate: nothing computed from the gas recovers the merged bit
 }
 
-\speakernotes{LO10 moral only. You cannot process your way to more $I$. Underwrites requisite variety and GRT tools.}
+\speakernotes{Statement and moral only; the two-line proof is in the notes overflow. You cannot process your way to more $I$. This underwrites requisite variety: the action can carry no more about $D$ than the observation did.}
 
-\notes{The data-processing inequality is the no-go on $I$: further processing of $Y$ cannot increase information about $X$. Week 5's soft-partition leftover is the same grammar. Cover--Thomas 2.8.1 is proved in the notes overflow below; Quiz 4 examines the statement and moral, not the two expansions.}
-
+\notes{The data-processing inequality is the no-go on mutual information. If $Z$ is computed from $Y$ alone, possibly with extra randomness, then $Z$ knows no more about $X$ than $Y$ did: $I(X;Z)\le I(X;Y)$. Equality holds when $Z$ keeps everything in $Y$ that bears on $X$, in which case $Z$ is a sufficient statistic. We use it again in a moment: in error-controlled regulation, $D\to S\to A$ is a chain, so $I(A;D)\le I(S;D)$. The proof (Cover and Thomas Theorem 2.8.1) is in the notes overflow. Quiz 4 examines the statement and the moral, not the proof.}
 
 \subsection{Good Regulator Overview}
 
@@ -143,7 +131,7 @@ reading:
 
 \subsection{Goals as Radon--Nikodym}
 
-\blocktime{40}{Goal measure / Radon--Nikodym; coarse-graining reading of reward}
+\blocktime{28}{Goal measure / Radon--Nikodym; coarse-graining reading of reward}
 
 \newslide{The Measure of Success}
 
@@ -235,7 +223,7 @@ mlai.write_figure('multi-information-rho.svg', directory='\writeDiagramsDir/ml')
 
 <!-- /SNIPPET: _physics/includes/multi-information-worked.md -->
 
-\subsection{Optional overflow: DPI Proof and Information Bottleneck}
+\subsection{Optional overflow: DPI Proof, KL Decay, and Information Bottleneck}
 
 \include{_information/includes/data-processing-inequality.md}
 

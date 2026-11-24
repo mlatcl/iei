@@ -152,18 +152,18 @@ Building</p>
 MaxEnt; die grouping)</li>
 <li class="fragment">Worksheet 3 review: Liouville; detailed balance;
 trapdoor</li>
+<li class="fragment">Gate as a channel; Shannon <span
+class="math inline">\(R\le C\)</span>; data-processing inequality</li>
 <li class="fragment">Good Regulator overview: <span
 class="math inline">\(D\)</span>,<span
 class="math inline">\(S\)</span>,<span
 class="math inline">\(A\)</span>,<span class="math inline">\(Z\)</span>;
 <span class="math inline">\(\min H(Z)\)</span>; <span
-class="math inline">\(H(A\mid S)=0\)</span>;</li>
+class="math inline">\(H(A\mid S)=0\)</span></li>
 <li class="fragment">The goal as a measure of success: <span
 class="math inline">\(r=-\log(\mathrm{d}\nu/\mathrm{d}\lambda)\)</span></li>
 <li class="fragment">Goal measure as coarse graining (grouping /
 requisite variety)</li>
-<li class="fragment">Shannon <span class="math inline">\(R\le
-C\)</span>; data processing inequality</li>
 </ul>
 </div>
 </section>
@@ -541,53 +541,122 @@ Close the Maxwell block. One line on W4 due date, then Good Regulator.
 <h2>Shannon Capacity and DPI</h2>
 
 </section>
-<section id="shannons-noisy-channel-coding-theorem"
-class="slide level2">
-<h2>Shannon’s Noisy Channel Coding Theorem</h2>
-<p>A channel is a conditional <span class="math inline">\(p(y\mid
-x)\)</span>. Rate cannot beat capacity.</p>
+<section id="the-gate-is-a-channel" class="slide level2">
+<h2>The Gate Is a Channel</h2>
+<p>Input: which region a molecule arrives from. Output: which region it
+leaves into.</p>
 <div>
 <ul>
-<li class="fragment">Mutual information <span
-class="math inline">\(I(X;Y)\)</span> is the channel currency</li>
-<li class="fragment">Capacity <span class="math inline">\(C =
-\max_{p(x)} I(X;Y)\)</span></li>
-<li class="fragment">No-go: reliable communication requires <span
-class="math inline">\(R \le C\)</span></li>
-<li class="fragment">Prescription: the input <span
-class="math inline">\(p(x)\)</span> that achieves <span
-class="math inline">\(C\)</span></li>
-</ul>
-</div>
-</section>
-<section id="scaffolding-not-outcomes" class="slide level2">
-<h2>Scaffolding, Not Outcomes</h2>
-</section>
-<section id="chain-rule-mutual-information-capacity"
-class="slide level2">
-<h2>Chain Rule, Mutual Information, Capacity</h2>
-<p>Four results we will need later — stated, not proved today.</p>
-<div>
-<ul>
-<li class="fragment">Chain rule: <span class="math inline">\(H(X,Y) =
-H(X) + H(Y|X)\)</span></li>
-<li class="fragment">Mutual information: <span
-class="math inline">\(I(X;Y) = H(X)-H(X|Y) =
-H(X)+H(Y)-H(X,Y)\)</span></li>
-<li class="fragment">Capacity: no rate above <span
-class="math inline">\(C\)</span>; achieving <span
-class="math inline">\(C\)</span> requires the capacity-achieving <span
-class="math inline">\(p(x)\)</span></li>
-<li class="fragment">Data processing: if <span
-class="math inline">\(X\to Y\to Z\)</span> is Markov, <span
-class="math inline">\(I(X;Z)\le I(X;Y)\)</span></li>
+<li class="fragment">Open hole, solid wall: one-to-one, <span
+class="math inline">\(I(\text{in};\text{out})=2\)</span> bits</li>
+<li class="fragment">Maxwell’s gate: two-to-one, <span
+class="math inline">\(I(\text{in};\text{out})=1\)</span> bit</li>
+<li class="fragment">The lost bit: <span
+class="math inline">\(H(\text{in}\mid\text{out})=1\)</span> — “came
+through, or bounced?”</li>
+<li class="fragment">Deterministic channel: capacity <span
+class="math inline">\(=\log_2(\text{number of outputs
+reached})\)</span></li>
 </ul>
 </div>
 <aside class="notes">
-Define <span class="math inline">\(I\)</span> from the chain rule. State
-DPI; do not prove. Proof and the information bottleneck are week 8
-(LO10). Capacity remains this week’s no-go/prescription pair.
+Point back at the four-panel map. Same picture, now with bits on it.
 </aside>
+</section>
+<section id="no-later-processing-gets-the-bit-back"
+class="slide level2">
+<h2>No Later Processing Gets the Bit Back</h2>
+<p><span class="math inline">\(\text{in}\to\text{out}\to\text{anything
+computed from the gas}\)</span> is a Markov chain.</p>
+<div>
+<ul>
+<li class="fragment">DPI: <span
+class="math inline">\(I(\text{in};f(\text{out}))\le
+I(\text{in};\text{out})=1\)</span> bit</li>
+<li class="fragment">A record <span class="math inline">\(M\)</span>
+kept by the gate: <span
+class="math inline">\(I(\text{in};\text{out},M)=2\)</span> bits</li>
+<li class="fragment">Wiping <span class="math inline">\(M\)</span> is
+another two-to-one channel: the bit is gone from <span
+class="math inline">\(M\)</span> too</li>
+<li class="fragment">Landauer says where it must go physically: the
+bath</li>
+</ul>
+</div>
+</section>
+<section id="liouville-is-the-equality-case" class="slide level2">
+<h2>Liouville Is the Equality Case</h2>
+<p>Data processing loses information only when a step merges states.</p>
+<div>
+<ul>
+<li class="fragment">One-to-one step: DPI holds with equality
+(Hamiltonian flow, the hole, the wall)</li>
+<li class="fragment">Many-to-one step: strict loss (the gate, erasure, a
+coarse graining)</li>
+<li class="fragment">Coarse-grained second law: data processing applied
+step after step</li>
+</ul>
+</div>
+<aside class="notes">
+This is the slide that joins the two halves of the course. If time is
+short, give the slogan: mechanics is the equality case; the second law
+lives in the merges.
+</aside>
+</section>
+<section id="channels-and-capacity" class="slide level2">
+<h2>Channels and Capacity</h2>
+</section>
+<section id="two-identities" class="slide level2">
+<h2>Two Identities</h2>
+<p>The chain rule, and mutual information defined from it.</p>
+<div>
+<ul>
+<li class="fragment">Chain rule: <span class="math inline">\(H(X,Y) =
+H(X) + H(Y\mid X)\)</span></li>
+<li class="fragment">Mutual information: <span
+class="math inline">\(I(X;Y) = H(X)-H(X\mid Y) =
+H(X)+H(Y)-H(X,Y)\)</span></li>
+<li class="fragment"><span class="math inline">\(I(X;Y)\ge 0\)</span>,
+with equality iff <span class="math inline">\(X\)</span> and <span
+class="math inline">\(Y\)</span> are independent</li>
+</ul>
+</div>
+</section>
+<section id="what-a-channel-is" class="slide level2">
+<h2>What a Channel Is</h2>
+<p>A channel is a conditional distribution <span
+class="math inline">\(p(y\mid x)\)</span>, used over and over.</p>
+<div>
+<ul>
+<li class="fragment">Send one of <span class="math inline">\(M\)</span>
+messages using <span class="math inline">\(n\)</span> uses of the
+channel</li>
+<li class="fragment">Rate <span class="math inline">\(R =
+\tfrac{1}{n}\log_2 M\)</span> bits per use</li>
+<li class="fragment">Reliable: probability of decoding the wrong message
+<span class="math inline">\(\to 0\)</span> as <span
+class="math inline">\(n\to\infty\)</span></li>
+</ul>
+</div>
+</section>
+<section id="capacity" class="slide level2">
+<h2>Capacity</h2>
+<p><span class="math inline">\(C=\max_{p(x)} I(X;Y)\)</span>, in bits
+per use.</p>
+<div>
+<ul>
+<li class="fragment">No-go: above <span
+class="math inline">\(C\)</span>, the error probability cannot go to
+zero</li>
+<li class="fragment">Achievability: every <span
+class="math inline">\(R&lt;C\)</span> is achievable</li>
+<li class="fragment">The proof picks codes at random: it shows good
+codes exist but does not build one</li>
+<li class="fragment">The maximising <span
+class="math inline">\(p(x)\)</span> says how good codes use the input
+alphabet</li>
+</ul>
+</div>
 <div class="figure">
 <div id="bsc-capacity-figure" class="figure-frame">
 <object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/ml/bsc-capacity.svg" width="70%" style=" ">
@@ -595,31 +664,41 @@ DPI; do not prove. Proof and the information bottleneck are week 8
 </div>
 </div>
 <aside class="notes">
-Mutual information for a binary symmetric channel; capacity is achieved
-at uniform input.
+Mutual information of a binary symmetric channel against the input bias,
+for several flip probabilities <span
+class="math inline">\(\epsilon\)</span>. Each curve peaks at a uniform
+input (dots), giving capacity <span
+class="math inline">\(C=1-H_2(\epsilon)\)</span>. At <span
+class="math inline">\(\epsilon=1/2\)</span> the output is independent of
+the input and <span class="math inline">\(C=0\)</span>.
 </aside>
 </section>
 <section id="data-processing-inequality" class="slide level2">
 <h2>Data-Processing Inequality</h2>
 <p>If <span class="math inline">\(X\to Y\to Z\)</span> is Markov,
-processing cannot create information about <span
-class="math inline">\(X\)</span>.</p>
+processing <span class="math inline">\(Y\)</span> cannot create
+information about <span class="math inline">\(X\)</span>.</p>
 <div>
 <ul>
 <li class="fragment">Markov: <span class="math inline">\(p(z\mid
-x,y)=p(z\mid y)\)</span></li>
+x,y)=p(z\mid y)\)</span> — <span class="math inline">\(Z\)</span> is
+computed from <span class="math inline">\(Y\)</span> alone</li>
 <li class="fragment">Statement: <span class="math inline">\(I(X;Z)\le
 I(X;Y)\)</span></li>
-<li class="fragment">Soft partitions (Week 5): leftover <span
-class="math inline">\(H(G\mid X)\)</span> already spent information</li>
-<li class="fragment">Full proof: notes / Week 8 enrichment — not today’s
-board</li>
+<li class="fragment">Equality when <span
+class="math inline">\(Z\)</span> keeps everything in <span
+class="math inline">\(Y\)</span> that bears on <span
+class="math inline">\(X\)</span> (a sufficient statistic)</li>
+<li class="fragment">The gate: nothing computed from the gas recovers
+the merged bit</li>
 </ul>
 </div>
 <aside class="notes">
-LO10 moral only. You cannot process your way to more <span
-class="math inline">\(I\)</span>. Underwrites requisite variety and GRT
-tools.
+Statement and moral only; the two-line proof is in the notes overflow.
+You cannot process your way to more <span
+class="math inline">\(I\)</span>. This underwrites requisite variety:
+the action can carry no more about <span
+class="math inline">\(D\)</span> than the observation did.
 </aside>
 </section>
 <section id="good-regulator-overview" class="slide level2">
@@ -1319,9 +1398,11 @@ class="math inline">\(C=2\)</span>.
 </aside>
 <!-- /SNIPPET: _physics/includes/multi-information-worked.md -->
 </section>
-<section id="optional-overflow-dpi-proof-and-information-bottleneck"
+<section
+id="optional-overflow-dpi-proof-kl-decay-and-information-bottleneck"
 class="slide level2">
-<h2>Optional overflow: DPI Proof and Information Bottleneck</h2>
+<h2>Optional overflow: DPI Proof, KL Decay, and Information
+Bottleneck</h2>
 </section>
 <section id="data-processing-inequality-1" class="slide level2">
 <h2>Data-Processing Inequality</h2>
@@ -1329,8 +1410,8 @@ class="slide level2">
 <section id="data-processing-inequality-2" class="slide level2">
 <h2>Data-Processing Inequality</h2>
 <p>If <span class="math inline">\(X\to Y\to Z\)</span> is a Markov
-chain, processing cannot create information about <span
-class="math inline">\(X\)</span>.</p>
+chain, processing <span class="math inline">\(Y\)</span> cannot create
+information about <span class="math inline">\(X\)</span>.</p>
 <div>
 <ul>
 <li class="fragment">Markov: <span class="math inline">\(p(z\mid
@@ -1346,52 +1427,92 @@ I(X;Y)\)</span></li>
 </ul>
 </div>
 <aside class="notes">
-LO10. Cover and Thomas Theorem 2.8.1. Board the two expansions of <span
-class="math inline">\(I(X;Y,Z)\)</span>. No-go: you cannot process your
+Board the two expansions of <span
+class="math inline">\(I(X;Y,Z)\)</span>. Moral: you cannot process your
 way to more <span class="math inline">\(I\)</span>.
 </aside>
 </section>
-<section id="kl-decay-and-grouping" class="slide level2">
-<h2>KL Decay and Grouping</h2>
-<p>Under Markov dynamics, <span class="math inline">\(\text{KL}\left(
-p_t\,\|\,\pi \right)\)</span> falls — coarse-graining in time.</p>
+<section id="data-processing-for-distributions" class="slide level2">
+<h2>Data Processing for Distributions</h2>
+<p>Pass two distributions through the same channel: they cannot get
+further apart.</p>
 <div>
 <ul>
-<li class="fragment">Physics often says ``relative entropy’’; same
-object as week-3 / week-6 KL</li>
-<li class="fragment">Data-processing for distributions: each step cannot
-increase divergence to equilibrium</li>
-<li class="fragment">Same grouping split as the die, now for approach to
-<span class="math inline">\(\pi\)</span>:</li>
+<li class="fragment">Channel <span class="math inline">\(K(y\mid
+x)\)</span>; outputs <span class="math inline">\(pK\)</span> and <span
+class="math inline">\(qK\)</span></li>
+<li class="fragment"><span class="math inline">\(\text{KL}\left(
+pK\,\|\,qK \right)\le\text{KL}\left( p\,\|\,q \right)\)</span></li>
+<li class="fragment">Equality when <span
+class="math inline">\(K\)</span> is invertible (one-to-one)</li>
+<li class="fragment">Strict when <span class="math inline">\(K\)</span>
+merges states whose ratio <span class="math inline">\(p(x)/q(x)\)</span>
+differs</li>
 </ul>
 </div>
+</section>
+<section id="kl-decay-and-grouping" class="slide level2">
+<h2>KL Decay and Grouping</h2>
+</section>
+<section id="approach-to-equilibrium-is-data-processing"
+class="slide level2">
+<h2>Approach to Equilibrium Is Data Processing</h2>
+<p>Under a Markov step with stationary <span
+class="math inline">\(\pi\)</span>, <span
+class="math inline">\(\text{KL}\left( p_t\,\|\,\pi \right)\)</span>
+cannot rise.</p>
+<div>
+<ul>
+<li class="fragment">Markov step: <span
+class="math inline">\(p_{t+1}=p_tK\)</span>, and <span
+class="math inline">\(\pi K=\pi\)</span></li>
+<li class="fragment">Data processing with <span
+class="math inline">\(q=\pi\)</span>: <span
+class="math inline">\(\text{KL}\left( p_{t+1}\,\|\,\pi
+\right)\le\text{KL}\left( p_t\,\|\,\pi \right)\)</span></li>
+<li class="fragment">If <span class="math inline">\(\pi\)</span> is
+uniform, <span class="math inline">\(\text{KL}\left( p\,\|\,\pi
+\right)=\log N - H(p)\)</span>: entropy rises</li>
+</ul>
+</div>
+</section>
+<section id="where-liouville-fits" class="slide level2">
+<h2>Where Liouville Fits</h2>
+<p>Fine-grained flow is the equality case. The rise needs a coarse
+graining that forgets.</p>
+<div>
+<ul>
+<li class="fragment">Hamiltonian flow is one-to-one and keeps volume:
+<span class="math inline">\(\text{KL}\left( \,\|\, \right)\)</span> and
+<span class="math inline">\(H\)</span> are constant</li>
+<li class="fragment">Equal-volume cells tiling an invariant region:
+cell-to-cell matrix is doubly stochastic</li>
+<li class="fragment">Forget the detail inside cells at each step
+(Ehrenfest): coarse <span class="math inline">\(H\)</span> rises
+monotonically</li>
+<li class="fragment">Keep the detail: the flow can be run backwards, and
+no monotone rise is guaranteed</li>
+</ul>
+</div>
+</section>
+<section id="arrow-of-time-from-the-grouping-split"
+class="slide level2">
+<h2>Arrow of Time from the Grouping Split</h2>
+<p>How much of equilibration is between groups, how much within?</p>
 <p><small> <span class="math display">\[
 \text{KL}\left( p\,\|\,\pi \right)=\text{KL}\left( w\,\|\,w_\pi
 \right)+\sum_i w_i\, \text{KL}\left( p_i\,\|\,\pi_i \right)
 \]</span> </small></p>
-<aside class="notes">
-After proving DPI for mutual information, give the dynamical face.
-Course notation is <span class="math inline">\(\text{KL}\left(
-\cdot\,\|\,\cdot \right)\)</span> throughout; ``relative entropy’’ is
-optional physics prose. Board the split: between-group redistribution
-versus within-group relaxation. Hamiltonian aside: fine-grained <span
-class="math inline">\(H\)</span> conserved; only coarse-grained entropy
-grows (Ehrenfest).
-</aside>
-</section>
-<section id="arrow-of-time-from-the-same-split" class="slide level2">
-<h2>Arrow of Time from the Same Split</h2>
-<p>How much of equilibration is between groups, how much within?</p>
 <div>
 <ul>
 <li class="fragment">Between: <span
 class="math inline">\(\text{KL}\left( w\,\|\,w_\pi \right)\)</span> —
-redistribution of macro probability</li>
+how far the group weights are from equilibrium</li>
 <li class="fragment">Within: <span class="math inline">\(\sum_i w_i
-\text{KL}\left( p_i\,\|\,\pi_i \right)\)</span> — relaxation to local
-<span class="math inline">\(\pi_i\)</span></li>
-<li class="fragment">Demon / Crooks / transport: all move mass among
-groups while baths handle the rest</li>
+\text{KL}\left( p_i\,\|\,\pi_i \right)\)</span> — how far each group is
+from local equilibrium</li>
+<li class="fragment">Local equilibrium: within-group terms near zero,
+between-group term still falling</li>
 </ul>
 </div>
 </section>
@@ -1416,11 +1537,12 @@ I(X;Y)\)</span></li>
 </ul>
 </div>
 <aside class="notes">
-LO10. <span class="math inline">\(\beta\to 0\)</span> discards
-everything; <span class="math inline">\(\beta\to\infty\)</span> keeps
-<span class="math inline">\(T=X\)</span>. Optimal <span
+<span class="math inline">\(\beta\to 0\)</span> discards everything;
+<span class="math inline">\(\beta\to\infty\)</span> keeps all of <span
+class="math inline">\(X\)</span> that is relevant to <span
+class="math inline">\(Y\)</span>. The optimal <span
 class="math inline">\(p(t\mid x)\)</span> is Boltzmann / exponential
-family. Week 8 uses this as a tool, not a new outcome.
+family.
 </aside>
 </section>
 <section id="define-this-week" class="slide level2">
