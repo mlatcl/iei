@@ -29,13 +29,13 @@ platform: paper
 # In-Class Quiz 4: Fisher, GRT, Goals, and Channels
 
 **Administered**: Week 8 lecture (first 10 minutes).  
-**Format**: 10-mark paper test (matching, T/F, fill-blank, selection). No notes, no internet, no LLMs.  
+**Format**: 10-mark paper test, single-answer multiple choice (no multi-select). No notes, no internet, no LLMs.  
 **Covers**: Weeks 6–7 as redesigned and delivered:
 
 - **Week 6**: exponential family / Fisher $I(\theta)$ versus Shannon $H$; natural-gradient of entropy as taught (LO8).
-- **Week 7**: Good Regulator overview ($D,S,A,Z$; minimise $H(Z)$; $H(A\mid S)=0$ existence slogan with both caveats named lightly) (LO12); goal-as-change-of-measure $r=-\ln(\mathrm{d}\nu/\mathrm{d}\lambda)$ (LO12); Shannon $R\le C$ and DPI as statement/moral (LO10); Landauer / human bandwidth tools for LO13.
+- **Week 7**: Good Regulator overview ($D,S,A,Z$; minimise $H(Z)$; $H(A\mid S)=0$ existence slogan with the constant-action (dark-room) caveat; requisite variety as a bound on $H(Z)$) (LO12); goal as a measure of success, $r=-\ln(\mathrm{d}\nu/\mathrm{d}\lambda)$, with a quadratic reward as a Gaussian goal measure (statement and example only) (LO12); Shannon $R\le C$ and DPI as statement/moral (LO10); Landauer / human bandwidth tools for LO13.
 
-**Not assessed**: continuous MaxEnt; full DPI board proof; Watanabe multi-information / $I+H=C$ depth; information bottleneck as first-class theorem; no-barber principle and quantum / von Neumann motivation (Week 8 unassessed close only); Joery algorithm / MM / DeepSea; Fisher path length; thermodynamic length; three transport geometries. The exponential family (LO6) is taught in Week 6 and is not on this paper beyond Fisher vocabulary.
+**Not assessed**: low entropy as predictability rather than desirability; the coarse-graining reading of reward (cell volumes, one good state in ten); continuous MaxEnt; full DPI board proof; Watanabe multi-information / $I+H=C$ depth; information bottleneck as first-class theorem; no-barber principle and quantum / von Neumann motivation (Week 8 unassessed close only); Joery algorithm / MM / DeepSea; Fisher path length; thermodynamic length; three transport geometries. The exponential family (LO6) is taught in Week 6 and is not on this paper beyond Fisher vocabulary.
 
 The `question_bank` path points at the existing multi-info / limits pool for tooling reuse only (`quiz-banks/q4-multiinfo-limits.yaml`); it is not the printed paper. Prefer items tagged LO8, LO10, LO12, LO13 that match the coverage contract above. Do not reuse Worksheet 4's setups on the paper sitting. Writing the actual paper items is out of scope for this metadata update.
 

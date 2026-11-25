@@ -80,6 +80,8 @@ reading:
 
 \include{includes/week7-maxwell-review.md}
 
+\blocktime{10}{Break}
+
 \subsection{Shannon Capacity and DPI}
 
 \blocktime{25}{Gate as a channel; Shannon $R\le C$; DPI statement and moral}
@@ -126,8 +128,6 @@ reading:
 
 \addreading{@Conant-Ashby70}{the Good Regulator Theorem}
 \addreading{@Ashby-introduction56}{requisite variety}
-
-\blocktime{10}{Break}
 
 \subsection{Goals as Radon--Nikodym}
 
@@ -191,6 +191,26 @@ The second term is the goal: writing $r=-\log(\mathrm{d}\nu/\mathrm{d}\lambda)$ 
 * Worksheet 4 due 1 December, before Quiz 4
 * Quiz 4: first ten minutes of Week 8
 * Week 8: limits synthesis; no-barber $\to$ quantum motivation; course close
+}
+
+\notes{**Delivery note (24 November 2026).** Clocks from the Whisper SRT of the Panopto recording (recording 00:00 is about 10:00). The first six minutes are room noise and ASR loops; usable speech starts about 00:07. Order as spoken: an opening on why the worksheets are open-ended; Quiz 3 feedback; the Worksheet 3 review (equal-numbers membrane argument, Liouville with the pendulum cloud and the coarse cells, the gate in phase space, reversible gates and the demon's record, detailed balance versus stationarity, the trapdoor, the circularity warning, how the submissions were prompted); break; data-processing inequality and Shannon capacity, told in words from the board; Good Regulator overview; the goal measure. The gate-as-channel slides were not shown; the link to the demon was spoken in two sentences. The proof of the DPI, its form for distributions and the KL-decay account were not covered. The capacity plot on screen was the earlier version, which showed a negative mutual information; the slide has since been regenerated. The Good Regulator block absorbed a long account of Ashby's group and homeostasis, a digression on teaching-led research, error- versus cause-controlled regulation (the travelator example), the dark-room problem, and two questions on whether requisite variety holds for both diagrams and on what separates $D$ from $S$ (a category-theoretic reading was floated, not developed). The goal measure was reached in the last six minutes: base measure $\lambda$, goal $\nu\ll\lambda$, reward as minus the log Radon--Nikodym derivative, and a quadratic reward as a Gaussian goal measure. The coarse-graining reading of reward (cell volumes, one good state in ten, requisite variety for coarse goals), the RL-recovery slide and the define-this-week slide were not reached. They are the opening of the Good Regulator material in the next treatment.
+
+| Clock | Block |
+|------:|-------|
+| 00:00--00:07 | Room set-up, laptop blanked, ASR loops |
+| 00:07--00:16 | Why open-ended worksheets; plan for the day; preview of goal measure and Ashby |
+| 00:16--00:21 | Quiz 3 feedback (steam and nuclear spins; MaxEnt and non-equilibrium; the minus sign in the grouping identity) |
+| 00:21--00:34 | Worksheet 3 review: membrane argument; Liouville (pendulum cloud, coarse cells, Heisenberg aside); the gate in phase space |
+| 00:34--00:42 | Reversible gates (Toffoli, XOR), the demon's record, Landauer; detailed balance versus stationarity |
+| 00:42--00:51 | Trapdoor; Ellis and circular arguments; coarse-graining questions from the room |
+| 00:51--01:02 | How the submissions were prompted (long first prompts, word limits, memory settings, model choice) |
+| 01:02--01:12 | Break |
+| 01:12--01:23 | Data-processing inequality; Shannon capacity; Gallager codes; DPI statement and sufficient statistic |
+| 01:23--01:33 | Good Regulator: $D$, $S$, $A$, $Z$; Ashby's background; teaching-led research |
+| 01:33--01:46 | Error versus cause control; dark room; $H(A\mid S)=0$; requisite variety and questions |
+| 01:46--01:52 | $D$ versus $S$; no time index; the slogan; the weak sense of model |
+| 01:52--01:58 | Goal measure; Radon--Nikodym; quadratic reward as Gaussian measure |
+| 01:58--02:00 | Close; Quiz 4 will be single-answer multiple choice |
 }
 
 \reading

@@ -251,6 +251,21 @@ This is why Liouville sits so close to Landauer's principle. A finite memory fil
 
 Earman and Norton argue that this resolution assumes some of what it sets out to prove [@Earman-exorcist98; @Earman-exorcist99]. That debate is real, and I don't want to present the erasure story as settled. But the phase-space picture is not in dispute: the gate's rule, on its own, throws away volume, and the volume has to go somewhere.}
 
+\newslide{Reversible Gates Keep the Bit}
+
+\slides{An AND gate loses a bit. A reversible gate keeps one more, and the demon's record is that bit.}
+
+\slidesincremental{
+* AND and OR map four inputs to two outputs: they are not reversible
+* Toffoli gate: $(a,b,c)\mapsto(a,b,c\oplus ab)$; with $c=0$ the third output is $a\wedge b$
+* Keeping $a$ and $b$ makes the map one-to-one
+* The demon's record plays the part of the kept bit
+}
+
+\speakernotes{Said live: classical gates that are reversible are Toffoli gates; quantum gates are always reversible. A live attempt to build the XOR case: keep one input and the XOR, and you can undo it. Feynman's lectures on computation are the source.}
+
+\notes{A conventional AND gate takes two bits to one. Three of the four inputs give $0$, so the output cannot tell us which input we had: the phase space has collapsed, and a bit has been lost. The same is true of OR. A reversible version keeps enough to run the map backwards. The Toffoli gate takes three bits $(a,b,c)$ to $(a,b,c\oplus ab)$. Set $c=0$ and the third output is exactly $a\wedge b$, but because $a$ and $b$ are still there, no information has been destroyed. For XOR the same idea is simpler: keep one input and the exclusive-or, $(a,b)\mapsto(a,a\oplus b)$, and the pair can be unpicked. The gate in the previous slide is the same situation. It merges two pasts into one present; keeping a record of whether the molecule was let through or bounced is the extra bit that makes the map one-to-one. Erasing that record is the step that has to be paid for.}
+
 \newslide{Detailed Balance}
 
 \slides{At equilibrium, every transition is matched by its reverse. Not just on average round a loop.}
