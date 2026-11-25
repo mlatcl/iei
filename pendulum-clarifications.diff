@@ -1,0 +1,78 @@
+diff --git a/_lamd/includes/week7-liouville-detailed-balance.md b/_lamd/includes/week7-liouville-detailed-balance.md
+index b634897..dc09213 100644
+--- a/_lamd/includes/week7-liouville-detailed-balance.md
++++ b/_lamd/includes/week7-liouville-detailed-balance.md
+@@ -41,11 +41,18 @@ def coarse_entropy(q, p, edges_q, edges_p):
+     w = w[w > 0]
+     return -np.sum(w*np.log(w)), counts
+ 
++def enclosed_area(q, p):
++    # Shoelace formula on the (unwrapped) boundary of the cloud.
++    return 0.5*abs(np.dot(q, np.roll(p, -1)) - np.dot(p, np.roll(q, -1)))
++
+ rng = np.random.default_rng(1)
+ n = 40000
+ r = 0.35*np.sqrt(rng.uniform(size=n))
+ theta = rng.uniform(0, 2*np.pi, size=n)
+ q0, p0 = -1.6 + r*np.cos(theta), 0.9 + r*np.sin(theta)
++# Follow the edge of the disc too, so we can measure the cloud's true area.
++phi = np.linspace(0, 2*np.pi, 100000, endpoint=False)
++qb0, pb0 = -1.6 + 0.35*np.cos(phi), 0.9 + 0.35*np.sin(phi)
+ 
+ edges_q = np.linspace(-np.pi, np.pi, 17)
+ edges_p = np.linspace(-2.5, 2.5, 13)
+@@ -53,32 +60,47 @@ qq, pp = np.meshgrid(np.linspace(-np.pi, np.pi, 300), np.linspace(-2.5, 2.5, 300
+ energy = 0.5*pp**2 - np.cos(qq)
+ 
+ times = [0, 6, 40]
+-fig, axes = plt.subplots(1, 3, figsize=(12, 4.2), sharey=True)
++fig, axes = plt.subplots(1, 3, figsize=(12, 4.6), sharey=True)
+ q, p, t_prev = q0.copy(), p0.copy(), 0
++qb, pb = qb0.copy(), pb0.copy()
+ for ax, t in zip(axes, times):
+-    q, p = leapfrog(q, p, 0.01, int((t - t_prev)/0.01))
++    steps = int(round((t - t_prev)/0.01))
++    q, p = leapfrog(q, p, 0.01, steps)
++    qb, pb = leapfrog(qb, pb, 0.01, steps)
+     t_prev = t
+     qw = (q + np.pi) % (2*np.pi) - np.pi
+     H_cg, counts = coarse_entropy(qw, p, edges_q, edges_p)
++    area = enclosed_area(qb, pb)
+     ax.pcolormesh(edges_q, edges_p, (counts.T > 0), cmap='Greys', vmin=0, vmax=4, alpha=0.6)
+     ax.contour(qq, pp, energy, levels=12, colors='#bbbbbb', linewidths=0.6, linestyles='solid')
+     ax.plot(qw, p, ',', color='#cc4444', alpha=0.4, rasterized=True)
+     for e in edges_q: ax.axvline(e, color='white', lw=0.5)
+     for e in edges_p: ax.axhline(e, color='white', lw=0.5)
+     ax.set_xlim(-np.pi, np.pi); ax.set_ylim(-2.5, 2.5)
+-    ax.set_xlabel('position $q$')
+-    ax.set_title(f't = {t}: {int((counts>0).sum())} cells, coarse entropy {H_cg:.2f} nats', fontsize=11)
++    ax.set_xlabel('angle $q$ (radians)')
++    ax.set_title(f't = {t}: true area {area:.3f}' + chr(10) + f'{int((counts>0).sum())} cells, coarse entropy {H_cg:.2f} nats', fontsize=11)
++# Direction of motion: p > 0 means q increasing, so the flow runs clockwise.
++axes[0].annotate('', xy=(0.6, 1.25), xytext=(-0.6, 1.25),
++                 arrowprops=dict(arrowstyle='->', color='#555555', lw=1.5))
++axes[0].annotate('', xy=(-0.6, -1.25), xytext=(0.6, -1.25),
++                 arrowprops=dict(arrowstyle='->', color='#555555', lw=1.5))
+ axes[0].set_ylabel('momentum $p$')
+ fig.tight_layout()
+ mlai.write_figure('liouville-pendulum-cloud.svg', directory='\writeDiagramsDir/physics')}
+ 
+-\figure{\includediagram{\diagramsDir/physics/liouville-pendulum-cloud}{95%}}{A cloud of 40,000 pendulum starting points (red) followed through time. Grey curves are lines of constant energy. The cloud's area is exactly the same in all three panels, so the fine-grained entropy hasn't moved. But it is drawn out into a filament that touches more and more of the coarse grid cells (shaded), so the entropy we'd compute from the cells goes up.}{liouville-pendulum-cloud}
++\figure{\includediagram{\diagramsDir/physics/liouville-pendulum-cloud}{95%}}{Phase space of a single pendulum: each point is one complete state, angle $q$ and momentum $p$. The red cloud is 40,000 possible states of the same pendulum, our uncertainty about it, each followed forward in time. Grey curves are lines of constant energy, and every point travels along its own curve, clockwise (arrows). The closed ovals are swings; the wavy lines at top and bottom are the pendulum going right over the top. The left and right edges are the same angle. The cloud's true area, measured from its edge, is the same in all three panels, so the fine-grained entropy hasn't moved. The red ink looks bigger by $t=40$ only because the thread is thinner than a pixel. What does grow is the number of coarse cells (shaded) the thread touches, and so the entropy computed from the cells.}{liouville-pendulum-cloud}
+ 
+-\speakernotes{Point at the area: same in all three panels. Then point at the shaded cells. The second law lives in the cells, not in the cloud.}
++\speakernotes{First say what a point is: one whole pendulum state. Trace one grey oval with a finger: a single swing. Then the area: the titles show it is the same in all three panels, even though the red looks bigger at $t=40$ (the thread is thinner than a pixel, so the drawing itself is a coarse graining). Then point at the shaded cells. The second law lives in the cells, not in the cloud.}
+ 
+ \notes{Liouville's theorem is a statement about what mechanics does to *uncertainty*. Take a state of a mechanical system --- positions $\mathbf{q}$ and momenta $\mathbf{p}$ for every particle --- and suppose we don't know it exactly. We know it lies somewhere in a region of phase space. Let each point in that region evolve under Newton's laws (or Hamilton's equations, which are the same laws written more tidily). The region moves, it stretches, it folds back on itself. But its volume doesn't change.
+ 
+-The figure shows this for a single pendulum, where phase space is just a plane. The red cloud starts as a disc. Points nearer the top of the swing move more slowly than those nearer the bottom, so the disc is sheared into a crescent and then into a long thin thread that winds round. Its area is exactly what it was at the start.
++The figure shows this for a single pendulum. Phase space is the space of complete states. For a pendulum the state is two numbers: the angle $q$ it hangs at and its momentum $p$ (mass times angular velocity). Knowing both fixes the whole future, so each point in the plane is one possible pendulum, and the motion of the pendulum is the motion of that point. Hamilton's equations say $\dot q = p$ and $\dot p = -\sin q$ (in units where mass, length and gravity are 1). So when $p$ is positive the point moves right, and gravity pulls $p$ back towards zero: the flow goes round clockwise.
++
++Energy $E=\tfrac{1}{2}p^2-\cos q$ is conserved, so each point stays on its own grey curve. The closed ovals round the centre are ordinary swings: the bottom of the swing ($q=0$) is where $|p|$ is largest, and the turning points are where the oval crosses $p=0$. The wavy lines along the top and bottom are a pendulum with enough energy to go right over the top and keep rotating. The angle wraps round, so the left and right edges of each panel are the same place ($q=\pm\pi$, pointing straight up), and the boundary between the two kinds of motion is the separatrix through those points.
++
++The red cloud is not one pendulum but 40,000 possible starting states of it. We can read it as our uncertainty: we know the pendulum is somewhere in the disc, but not where. The cloud starts as a disc on the left of the picture: the pendulum is swinging right, about 90 degrees from the bottom. Each point then moves along its own oval. But a pendulum's period grows with the size of its swing, so points on the outer ovals take longer to go round than points on the inner ones. The outer edge of the cloud falls behind the inner edge, the disc is sheared into a crescent ($t=6$), and then into a long thin thread wound round and round ($t=40$). Its area is exactly what it was at the start. The panel titles give that area, measured from the edge of the cloud, and it agrees to three decimal places at all three times.
++
++Why, then, does the red look bigger at $t=40$? Because the thread becomes thinner than a pixel, and a pixel can only be red or not. Counting red pixels gives an area about twice the true one by $t=40$. The picture is itself a coarse graining, and it shows the same effect as the shaded grid: the region we can *see* grows while the region the states actually occupy does not.
+ 
+ That has a direct consequence for entropy. If our uncertainty is spread uniformly over the cloud, its Shannon entropy is the log of the cloud's volume. Same volume, same entropy. More generally, for any density $\rho_t$ carried along by Hamiltonian flow, the fine-grained entropy $-\int \rho_t \log \rho_t$ is constant in time.
+ 

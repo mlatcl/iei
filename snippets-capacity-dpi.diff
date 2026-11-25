@@ -1,0 +1,259 @@
+diff --git a/_information/includes/channel-capacity-chain-rule.md b/_information/includes/channel-capacity-chain-rule.md
+index d09b3c6..91730cc 100644
+--- a/_information/includes/channel-capacity-chain-rule.md
++++ b/_information/includes/channel-capacity-chain-rule.md
+@@ -3,39 +3,79 @@
+ 
+ \editme
+ 
+-\subsection{Scaffolding, Not Outcomes}
++\subsection{Channels and Capacity}
+ 
+-\newslide{Chain Rule, Mutual Information, Capacity}
++\newslide{Two Identities}
+ 
+-\slides{Four results we will need later --- stated, not proved today.}
++\slides{The chain rule, and mutual information defined from it.}
+ 
+ \slidesincremental{
+-* Chain rule: $H(X,Y) = H(X) + H(Y|X)$
+-* Mutual information: $I(X;Y) = H(X)-H(X|Y) = H(X)+H(Y)-H(X,Y)$
+-* Capacity: no rate above $C$; achieving $C$ requires the capacity-achieving $p(x)$
+-* Data processing: if $X\to Y\to Z$ is Markov, $I(X;Z)\le I(X;Y)$
++* Chain rule: $H(X,Y) = H(X) + H(Y\mid X)$
++* Mutual information: $I(X;Y) = H(X)-H(X\mid Y) = H(X)+H(Y)-H(X,Y)$
++* $I(X;Y)\ge 0$, with equality iff $X$ and $Y$ are independent
+ }
+ 
+-\speakernotes{Define $I$ from the chain rule. State DPI; do not prove. Proof and the information bottleneck are week 8 (LO10). Capacity remains this week's no-go/prescription pair.}
++\notes{The chain rule $H(X,Y)=H(X)+H(Y\mid X)$ says the uncertainty in a pair is the uncertainty in the first plus what is left in the second once the first is known. Mutual information is the overlap: how much knowing $Y$ reduces uncertainty about $X$, $I(X;Y)=H(X)-H(X\mid Y)$. Substituting the chain rule gives the symmetric form $H(X)+H(Y)-H(X,Y)$. It is the KL divergence between the joint and the product of the marginals, so it is never negative and is zero only when $X$ and $Y$ are independent.}
+ 
+-\notes{The chain rule $H(X,Y)=H(X)+H(Y|X)$ is the algebraic source of multi-information. Mutual information $I(X;Y)=H(X)-H(X|Y)$ is the pairwise case; we do not yet treat $n>2$. Channel capacity $C$ is a no-go on rate; the capacity-achieving input distribution is the prescription. The data-processing inequality is the no-go on $I$: processing cannot create information. Cover and Thomas Theorem 2.8.1 is the reading; the proof waits for week 8, when $I$ is first-class.}
++\newslide{What a Channel Is}
++
++\slides{A channel is a conditional distribution $p(y\mid x)$, used over and over.}
++
++\slidesincremental{
++* Send one of $M$ messages using $n$ uses of the channel
++* Rate $R = \tfrac{1}{n}\log_2 M$ bits per use
++* Reliable: probability of decoding the wrong message $\to 0$ as $n\to\infty$
++}
++
++\notes{Shannon's setting [@Shannon-mathematical48] has three parts. A channel takes an input symbol $x$ and returns an output $y$ with probability $p(y\mid x)$, independently at each use. A code assigns each of $M$ messages a block of $n$ input symbols. The rate is how many bits of message each channel use carries, $R=\tfrac{1}{n}\log_2 M$. A rate is called achievable if there are codes at that rate whose probability of decoding error goes to zero as the blocks get longer. Note what the definition does not ask for: no single use of the channel need be reliable. Reliability is bought with block length.}
++
++\newslide{Capacity}
++
++\slides{$C=\max_{p(x)} I(X;Y)$, in bits per use.}
++
++\slidesincremental{
++* No-go: above $C$, the error probability cannot go to zero
++* Achievability: every $R<C$ is achievable
++* The proof picks codes at random: it shows good codes exist but does not build one
++* The maximising $p(x)$ says how good codes use the input alphabet
++}
++
++\notes{The noisy-channel coding theorem [@Shannon-mathematical48; @Cover:elements91, ch. 7] has two halves. The converse is a no-go: at any rate above $C$ the probability of error stays bounded away from zero, whatever code you use. The achievability half says every rate below $C$ can be reached. Shannon's proof draws the codewords at random from the capacity-achieving input distribution $p^*(x)$ and shows that the average code does well, so some code must. It is an existence proof. Building practical codes that come close to $C$ took another fifty years.
++
++Two special cases help. A *noiseless deterministic* channel, where each input gives one fixed output, has $H(Y\mid X)=0$, so $I(X;Y)=H(Y)$. Its capacity is $\log_2$ of the number of distinct outputs it can produce. If two inputs share an output, the channel can no longer tell them apart, and capacity falls. A channel whose output is independent of its input has $I(X;Y)=0$ for every $p(x)$ and capacity zero.}
+ 
+ \setupplotcode{import numpy as np
+ import matplotlib.pyplot as plt
+ import mlai}
+ 
+-\plotcode{eps = 0.1
+-p = np.linspace(0.01, 0.99, 200)
+-H = lambda q: -q*np.log2(q)-(1-q)*np.log2(1-q)
+-I = H(p) - H(eps)
++\plotcode{def Hb(q):
++    q = np.clip(q, 1e-12, 1 - 1e-12)
++    return -q*np.log2(q) - (1 - q)*np.log2(1 - q)
++
++p = np.linspace(0, 1, 401)
+ fig, ax = plt.subplots(figsize=(7, 4))
+-ax.plot(p, I, linewidth=2)
+-ax.scatter([0.5], [H(0.5) - H(eps)], s=80, color='red', zorder=3)
++for eps in [0.0, 0.05, 0.1, 0.25, 0.5]:
++    py1 = p*(1 - eps) + (1 - p)*eps          # P(Y=1)
++    I = Hb(py1) - Hb(eps)                    # I(X;Y) = H(Y) - H(Y|X)
++    line, = ax.plot(p, I, linewidth=2, label=f'$\\epsilon={eps}$')
++    ax.scatter([0.5], [1 - Hb(eps)], s=50, color=line.get_color(), zorder=3)
+ ax.set_xlabel('input bias $p(x=1)$')
+ ax.set_ylabel('$I(X;Y)$ (bits)')
+-ax.set_title('Binary symmetric channel')
++ax.set_ylim(-0.02, 1.05)
++ax.legend(title='flip probability')
++ax.set_title('Binary symmetric channel: $C = 1 - H_2(\\epsilon)$')
++plt.tight_layout()
+ mlai.write_figure('bsc-capacity.svg', directory='\writeDiagramsDir/ml')}
+ 
+-\figure{\includediagram{\diagramsDir/ml/bsc-capacity}{70%}}{Mutual information for a binary symmetric channel; capacity is achieved at uniform input.}{bsc-capacity}
++\figure{\includediagram{\diagramsDir/ml/bsc-capacity}{70%}}{Mutual information of a binary symmetric channel against the input bias, for several flip probabilities $\epsilon$. Each curve peaks at a uniform input (dots), giving capacity $C=1-H_2(\epsilon)$. At $\epsilon=1/2$ the output is independent of the input and $C=0$.}{bsc-capacity}
++
++\notes{The binary symmetric channel flips each bit with probability $\epsilon$. With $P(X=1)=p$ the output has $P(Y=1)=p(1-\epsilon)+(1-p)\epsilon$, and $H(Y\mid X)=H_2(\epsilon)$ whatever the input, so
++$$
++I(X;Y)=H_2\big(p(1-\epsilon)+(1-p)\epsilon\big)-H_2(\epsilon).
++$$
++The first term is largest when the output is uniform, which happens at $p=1/2$, so $C=1-H_2(\epsilon)$. A channel that flips one bit in ten still carries just over half a bit per use, reliably, if you code over long enough blocks.}
++
++\addreading{@Shannon-mathematical48}{noisy channel coding / capacity}
++\addreading{@Cover:elements91}{Chapter 7}
+ 
+ \endif
+diff --git a/_information/includes/data-processing-inequality.md b/_information/includes/data-processing-inequality.md
+index c1f12ac..7a94271 100644
+--- a/_information/includes/data-processing-inequality.md
++++ b/_information/includes/data-processing-inequality.md
+@@ -5,11 +5,9 @@
+ 
+ \subsection{Data-Processing Inequality}
+ 
+-\notes{Mutual information is the pairwise case of multi-information: $I(X;Y)=H(X)-H(X|Y)=H(Y)-H(Y|X)=H(X)+H(Y)-H(X,Y)$. Week 2 defined it from the chain rule and stated the data-processing inequality. We prove it now, because this week's object is $I$.}
+-
+ \newslide{Data-Processing Inequality}
+ 
+-\slides{If $X\to Y\to Z$ is a Markov chain, processing cannot create information about $X$.}
++\slides{If $X\to Y\to Z$ is a Markov chain, processing $Y$ cannot create information about $X$.}
+ 
+ \slidesincremental{
+ * Markov: $p(z\mid x,y)=p(z\mid y)$, equivalently $I(X;Z\mid Y)=0$
+@@ -18,11 +16,32 @@
+ * Therefore $I(X;Z)\le I(X;Y)$
+ }
+ 
+-\speakernotes{LO10. Cover and Thomas Theorem 2.8.1. Board the two expansions of $I(X;Y,Z)$. No-go: you cannot process your way to more $I$.}
++\speakernotes{Board the two expansions of $I(X;Y,Z)$. Moral: you cannot process your way to more $I$.}
++
++\notes{The data-processing inequality [@Cover:elements91, Thm 2.8.1] says that if $Z$ is computed from $Y$ alone, possibly with fresh randomness, then $Z$ cannot know more about $X$ than $Y$ did. Formally, if $X\to Y\to Z$ is Markov, then $I(X;Z)\le I(X;Y)$.
++
++The proof expands $I(X;Y,Z)$ by the chain rule in two orders. Taking $Y$ first gives $I(X;Y)+I(X;Z\mid Y)$, and the second term is zero because, once $Y$ is known, $Z$ carries nothing further about $X$. Taking $Z$ first gives $I(X;Z)+I(X;Y\mid Z)$, which is at least $I(X;Z)$ because conditional mutual information is never negative. Equating the two gives the inequality.
++
++Equality holds when $I(X;Y\mid Z)=0$: once you know $Z$, $Y$ tells you nothing more about $X$. Then $Z$ is a *sufficient statistic* of $Y$ for $X$; the processing has thrown away only what was irrelevant to $X$. An invertible $Z=f(Y)$ is always sufficient.}
++
++\notes{A claim that a system will "just process more" and so recover information that an earlier stage has already discarded is a claim that violates the data-processing inequality. Processing can rearrange information, make it easier to use, or throw it away. It cannot make more of it.}
+ 
+-\notes{The data-processing inequality [@Cover:elements91, Thm 2.8.1] is the no-go on $I$. If $X\to Y\to Z$ is Markov, then $I(X;Z)\le I(X;Y)$. The first expansion of $I(X;Y,Z)$ uses the chain rule and drops $I(X;Z\mid Y)$ by the Markov property. The second expansion is at least $I(X;Z)$ because conditional mutual information is non-negative. Equality holds when $I(X;Y\mid Z)=0$ — $Y$ is a sufficient statistic of $X$ for $Z$, or $Z$ already captures everything $Y$ knew about $X$.}
++\newslide{Data Processing for Distributions}
++
++\slides{Pass two distributions through the same channel: they cannot get further apart.}
++
++\slidesincremental{
++* Channel $K(y\mid x)$; outputs $pK$ and $qK$
++* $\KL{pK}{qK}\le\KL{p}{q}$
++* Equality when $K$ is invertible (one-to-one)
++* Strict when $K$ merges states whose ratio $p(x)/q(x)$ differs
++}
+ 
+-\notes{This is the same grammar as $I+H=C$. Conservation says you cannot have both high stored correlation and high free uncertainty without bound. Data processing says you cannot *increase* stored correlation by further processing. A claim that an intelligent system will “just process more” and thereby recover information that a Markov stage has already destroyed is a DPI violation.}
++\notes{The same inequality has a form for distributions. Let $K(y\mid x)$ be any channel, and push two input distributions $p$ and $q$ through it to get $pK$ and $qK$. Then
++$$
++\KL{pK}{qK}\le\KL{p}{q}.
++$$
++The proof is the chain rule again, now for KL divergence. Write the joint distributions $p(x)K(y\mid x)$ and $q(x)K(y\mid x)$. Their KL divergence equals $\KL{p}{q}$ (the channel parts cancel), and it also equals $\KL{pK}{qK}$ plus the average divergence between the two posteriors $p(x\mid y)$ and $q(x\mid y)$, which is never negative. Read as statistics: no processing of the data can make two hypotheses easier to tell apart. If $K$ is a one-to-one relabelling, nothing is lost and equality holds. Loss comes from merging: two inputs sent to the same output can no longer be distinguished.}
+ 
+ \addreading{@Cover:elements91}{Theorem 2.8.1}
+ 
+diff --git a/_information/includes/information-bottleneck.md b/_information/includes/information-bottleneck.md
+index 1b1a1cb..6d71bfc 100644
+--- a/_information/includes/information-bottleneck.md
++++ b/_information/includes/information-bottleneck.md
+@@ -18,15 +18,15 @@
+ * DPI bound: $I(T;Y)\le I(X;Y)$
+ }
+ 
+-\speakernotes{LO10. $\beta\to 0$ discards everything; $\beta\to\infty$ keeps $T=X$. Optimal $p(t\mid x)$ is Boltzmann / exponential family. Week 8 uses this as a tool, not a new outcome.}
++\speakernotes{$\beta\to 0$ discards everything; $\beta\to\infty$ keeps all of $X$ that is relevant to $Y$. The optimal $p(t\mid x)$ is Boltzmann / exponential family.}
+ 
+-\notes{The information bottleneck of Tishby, Pereira and Bialek is a constrained optimisation on mutual information. The encoder $p(t\mid x)$ is Markov given $X$, so $Y \leftrightarrow X \leftrightarrow T$. Data processing then supplies the bound $I(T;Y)\le I(X;Y)$: no representation of $X$ can be more informative about $Y$ than $X$ itself. The Lagrange multiplier $\beta$ interpolates. Small $\beta$ spends almost no $I$ on the representation. Large $\beta$ recovers $T=X$. The self-consistent encoder is an exponential family,
++\notes{The information bottleneck of Tishby, Pereira and Bialek is a constrained optimisation on mutual information. The encoder $p(t\mid x)$ is Markov given $X$, so $Y \leftrightarrow X \leftrightarrow T$. Data processing then supplies the bound $I(T;Y)\le I(X;Y)$: no representation of $X$ can be more informative about $Y$ than $X$ itself. The Lagrange multiplier $\beta$ interpolates. Small $\beta$ spends almost no $I$ on the representation. Large $\beta$ keeps everything in $X$ that bears on $Y$. The self-consistent encoder is an exponential family,
+ $$
+ p(t\mid x) \propto p(t)\,\exp\bigl(-\beta\,\mathrm{KL}\bigl(p(y\mid x)\,\|\,p(y\mid t)\bigr)\bigr),
+ $$
+-the same Boltzmann form as week 4, now with a KL sufficient statistic. We do not run Blahut--Arimoto. The point is the pair: DPI is the no-go; the bottleneck is how you spend $I$.}
++the same Boltzmann form that maximum entropy gives, now with a KL divergence in the exponent. We do not run Blahut--Arimoto. The point is the pair: DPI is the no-go; the bottleneck is how you spend $I$.}
+ 
+-\notes{Week 4 asked for the least-committal $p$ given moments. Here the constraint is a mutual information. Same Lagrange move, different constraint. Later in this session the bottleneck evaluates intelligence claims: a system that keeps only what is relevant for action is making an IB statement. The Good Regulator existence claim $H(A\mid S)=0$ comes from concavity of entropy; only then may one offer the control interpretation $\min I(S;A)$ subject to $H(Z)\le\epsilon$ as an IB-shaped reading --- an interpretation after the theorem, not the theorem itself. Requisite variety and the Good Regulator are tools we use in Week 8; the information bottleneck itself is the relevant-compression theorem.}
++\notes{Maximum entropy asks for the least-committal distribution given moment constraints. Here the constraint is a mutual information. It is the same Lagrange move with a different constraint. A system that keeps only what is relevant for action is making an information-bottleneck statement. One reading of the Good Regulator Theorem is bottleneck-shaped: minimise $I(S;A)$ subject to $H(Z)\le\epsilon$. That is an interpretation offered after the theorem, not the theorem itself, whose existence claim $H(A\mid S)=0$ comes from concavity of entropy.}
+ \addreading{@Tishby:bottleneck99}{the method; optional}
+ 
+ \endif
+diff --git a/_information/includes/relative-entropy-decay-grouping.md b/_information/includes/relative-entropy-decay-grouping.md
+index 8ac3238..a51a656 100644
+--- a/_information/includes/relative-entropy-decay-grouping.md
++++ b/_information/includes/relative-entropy-decay-grouping.md
+@@ -5,38 +5,59 @@
+ 
+ \subsection{KL Decay and Grouping}
+ 
+-\slides{Under Markov dynamics, $\KL{p_t}{\pi}$ falls --- coarse-graining in time.}
++\newslide{Approach to Equilibrium Is Data Processing}
++
++\slides{Under a Markov step with stationary $\pi$, $\KL{p_t}{\pi}$ cannot rise.}
+ 
+ \slidesincremental{
+-* Physics often says ``relative entropy''; same object as week-3 / week-6 KL
+-* Data-processing for distributions: each step cannot increase divergence to equilibrium
+-* Same grouping split as the die, now for approach to $\pi$:
++* Markov step: $p_{t+1}=p_tK$, and $\pi K=\pi$
++* Data processing with $q=\pi$: $\KL{p_{t+1}}{\pi}\le\KL{p_t}{\pi}$
++* If $\pi$ is uniform, $\KL{p}{\pi}=\log N - H(p)$: entropy rises
+ }
+ 
+-\slidesmall{
++\notes{The data-processing inequality for distributions gives the approach to equilibrium almost for free. Let $K$ be a Markov transition kernel with stationary distribution $\pi$, so $\pi K=\pi$. Apply $\KL{pK}{qK}\le\KL{p}{q}$ with $q=\pi$:
+ $$
+-\KL{p}{\pi}=\KL{w}{w_\pi}+\sum_i w_i\, \KL{p_i}{\pi_i}
++\KL{p_{t+1}}{\pi}=\KL{p_tK}{\pi K}\le\KL{p_t}{\pi}.
+ $$
++The divergence to equilibrium never increases. (Physicists often call this functional the relative entropy; it is the same object.) When $\pi$ is uniform on $N$ states, $\KL{p}{\pi}=\log N-H(p)$, so this is the statement that Shannon entropy never decreases. $\pi$ is uniform exactly when $K$ is doubly stochastic: its columns, as well as its rows, sum to one.}
++
++\newslide{Where Liouville Fits}
++
++\slides{Fine-grained flow is the equality case. The rise needs a coarse graining that forgets.}
++
++\slidesincremental{
++* Hamiltonian flow is one-to-one and keeps volume: $\KL{}{}$ and $H$ are constant
++* Equal-volume cells tiling an invariant region: cell-to-cell matrix is doubly stochastic
++* Forget the detail inside cells at each step (Ehrenfest): coarse $H$ rises monotonically
++* Keep the detail: the flow can be run backwards, and no monotone rise is guaranteed
+ }
+ 
+-\speakernotes{After proving DPI for mutual information, give the dynamical face. Course notation is $\KL{\cdot}{\cdot}$ throughout; ``relative entropy'' is optional physics prose. Board the split: between-group redistribution versus within-group relaxation. Hamiltonian aside: fine-grained $H$ conserved; only coarse-grained entropy grows (Ehrenfest).}
++\notes{Liouville's theorem and the data-processing inequality fit together precisely. Deterministic Hamiltonian flow is a one-to-one map on phase space that keeps volume. One-to-one is the equality case of data processing, so the fine-grained entropy, and the KL divergence to the uniform (microcanonical) distribution, do not change at all.
+ 
+-\notes{For a Markov process with stationary distribution $\pi$, $\KL{p_t}{\pi}$ is nonincreasing --- the data-processing inequality applied to the evolving law. (Physics literature often calls the same functional relative entropy.) Decompose $p$ into group weights $w$ and conditionals $p_i$, and likewise $\pi$ into $w_\pi$ and $\pi_i$. Then
+-\begin{align}
+-\KL{p}{\pi}=\KL{w}{w_\pi}+\sum_i w_i\, \KL{p_i}{\pi_i}.
+-\end{align}
+-The first term is how far the macro weights sit from equilibrium weights; the second is residual non-equilibrium inside groups. Local equilibrium is the regime $\KL{p_i}{\pi_i}\approx 0$ with $\KL{w}{w_\pi}$ still free to fall. Under deterministic Hamiltonian flow the fine-grained Shannon entropy of the phase-space density is conserved (Liouville); the Gibbs--Ehrenfest account of the second law is that only a \emph{coarse-grained} entropy increases. Week 2's die made the static split; this is the same algebra along a trajectory toward equilibrium.}
++Now divide a region of phase space that the flow maps onto itself (an energy shell, say) into cells of equal volume, and record only which cell the state is in. Let $P_{ij}$ be the fraction of cell $i$ that the flow carries into cell $j$ over a time step. Each row sums to one. Because the flow keeps volume, each column does too: the volume arriving in cell $j$ is the volume of cell $j$. So $P$ is doubly stochastic, and the uniform distribution over cells is stationary.
++
++If at every step we replace the true distribution by one that is uniform inside each cell, keeping only the cell weights, the cell weights evolve as a Markov chain with matrix $P$. Data processing then says their Shannon entropy can only rise. This is the Gibbs--Ehrenfest account of the second law, and it shows exactly where the rise comes from: from the decision to forget the detail inside the cells at each step. If we keep that detail, the true dynamics is reversible, the cell sequence is not in general Markov, and the coarse-grained entropy is free to fall as well as rise (Loschmidt's objection).}
+ 
+-\newslide{Arrow of Time from the Same Split}
++\newslide{Arrow of Time from the Grouping Split}
+ 
+ \slides{How much of equilibration is between groups, how much within?}
+ 
++\slidesmall{
++$$
++\KL{p}{\pi}=\KL{w}{w_\pi}+\sum_i w_i\, \KL{p_i}{\pi_i}
++$$
++}
++
+ \slidesincremental{
+-* Between: $\KL{w}{w_\pi}$ --- redistribution of macro probability
+-* Within: $\sum_i w_i \KL{p_i}{\pi_i}$ --- relaxation to local $\pi_i$
+-* Demon / Crooks / transport: all move mass among groups while baths handle the rest
++* Between: $\KL{w}{w_\pi}$ --- how far the group weights are from equilibrium
++* Within: $\sum_i w_i \KL{p_i}{\pi_i}$ --- how far each group is from local equilibrium
++* Local equilibrium: within-group terms near zero, between-group term still falling
+ }
+ 
+-\notes{Information engines and finite-time protocols act primarily on the between-group term --- changing which macrostate or which bit is occupied --- while assuming or enforcing fast decay of the within-group divergences. That is why week 2's stationary examples and week 6's paths on the equilibrium manifold belong to one story.}
++\notes{Decompose $p$ into group weights $w$ and within-group conditionals $p_i$, and likewise $\pi$ into $w_\pi$ and $\pi_i$. The chain rule for KL divergence gives
++$$
++\KL{p}{\pi}=\KL{w}{w_\pi}+\sum_i w_i\, \KL{p_i}{\pi_i}.
++$$
++This is the grouping formula for entropy, now written relative to equilibrium. The first term measures how far the macroscopic weights are from their equilibrium values. The second measures what is left out of equilibrium inside the groups. The Ehrenfest step above sets every $\KL{p_i}{\pi_i}$ to zero, which is why it can only lower the total. Local equilibrium is the regime where the within-group terms are already close to zero and the between-group term is still falling. Information engines and finite-time protocols mostly act on the between-group term, moving probability between macrostates, while relying on fast relaxation inside each group.}
+ 
+ \endif

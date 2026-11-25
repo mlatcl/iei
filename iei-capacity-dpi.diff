@@ -1,0 +1,120 @@
+diff --git a/_lamd/good-regulator-goals-channels.md b/_lamd/good-regulator-goals-channels.md
+index a63e96b..41d73ab 100644
+--- a/_lamd/good-regulator-goals-channels.md
++++ b/_lamd/good-regulator-goals-channels.md
+@@ -81,41 +81,28 @@ reading:
+ 
+ \subsection{Shannon Capacity and DPI}
+ 
+-\blocktime{10}{Shannon $R\le C$; DPI statement and moral (short)}
++\blocktime{10}{Gate as a channel; Shannon $R\le C$; DPI statement and moral}
+ 
+-\notes{Overview of Shannon's noisy channel coding theorem and the data processing inequality.}
++\notes{The Liouville block ended with Maxwell's gate merging four regions of phase space into two. That picture is already a channel, and it carries us straight into Shannon's capacity and the data-processing inequality. Live today: the gate as a channel, what capacity is, and the statement and moral of the DPI. The DPI proof, its form for distributions, and the KL-decay account of the second law are in the notes overflow below.}
+ 
+-\newslide{Shannon's Noisy Channel Coding Theorem}
+-
+-\slides{A channel is a conditional $p(y\mid x)$. Rate cannot beat capacity.}
+-
+-\slidesincremental{
+-* Mutual information $I(X;Y)$ is the channel currency
+-* Capacity $C = \max_{p(x)} I(X;Y)$
+-* No-go: reliable communication requires $R \le C$
+-* Prescription: the input $p(x)$ that achieves $C$
+-}
++\include{includes/week7-gate-as-channel.md}
+ 
+ \include{_information/includes/channel-capacity-chain-rule.md}
+ 
+-\addreading{@Shannon-mathematical48}{noisy channel coding / capacity}
+-\addreading{@Cover:elements91}{Chapter 7}
+-
+ \newslide{Data-Processing Inequality}
+ 
+-\slides{If $X\to Y\to Z$ is Markov, processing cannot create information about $X$.}
++\slides{If $X\to Y\to Z$ is Markov, processing $Y$ cannot create information about $X$.}
+ 
+ \slidesincremental{
+-* Markov: $p(z\mid x,y)=p(z\mid y)$
++* Markov: $p(z\mid x,y)=p(z\mid y)$ --- $Z$ is computed from $Y$ alone
+ * Statement: $I(X;Z)\le I(X;Y)$
+-* Soft partitions (Week 5): leftover $H(G\mid X)$ already spent information
+-* Full proof: notes / Week 8 enrichment --- not today's board
++* Equality when $Z$ keeps everything in $Y$ that bears on $X$ (a sufficient statistic)
++* The gate: nothing computed from the gas recovers the merged bit
+ }
+ 
+-\speakernotes{LO10 moral only. You cannot process your way to more $I$. Underwrites requisite variety and GRT tools.}
+-
+-\notes{The data-processing inequality is the no-go on $I$: further processing of $Y$ cannot increase information about $X$. Week 5's soft-partition leftover is the same grammar. Cover--Thomas 2.8.1 is proved in the notes overflow below; Quiz 4 examines the statement and moral, not the two expansions.}
++\speakernotes{Statement and moral only; the two-line proof is in the notes overflow. You cannot process your way to more $I$. This underwrites requisite variety: the action can carry no more about $D$ than the observation did.}
+ 
++\notes{The data-processing inequality is the no-go on mutual information. If $Z$ is computed from $Y$ alone, possibly with extra randomness, then $Z$ knows no more about $X$ than $Y$ did: $I(X;Z)\le I(X;Y)$. Equality holds when $Z$ keeps everything in $Y$ that bears on $X$, in which case $Z$ is a sufficient statistic. We use it again in a moment: in error-controlled regulation, $D\to S\to A$ is a chain, so $I(A;D)\le I(S;D)$. The proof (Cover and Thomas Theorem 2.8.1) is in the notes overflow. Quiz 4 examines the statement and the moral, not the proof.}
+ 
+ \subsection{Good Regulator Overview}
+ 
+@@ -235,7 +222,7 @@ mlai.write_figure('multi-information-rho.svg', directory='\writeDiagramsDir/ml')
+ 
+ <!-- /SNIPPET: _physics/includes/multi-information-worked.md -->
+ 
+-\subsection{Optional overflow: DPI Proof and Information Bottleneck}
++\subsection{Optional overflow: DPI Proof, KL Decay, and Information Bottleneck}
+ 
+ \include{_information/includes/data-processing-inequality.md}
+ 
+diff --git a/_lamd/includes/week7-gate-as-channel.md b/_lamd/includes/week7-gate-as-channel.md
+new file mode 100644
+index 0000000..7f1d604
+--- /dev/null
++++ b/_lamd/includes/week7-gate-as-channel.md
+@@ -0,0 +1,50 @@
++\ifndef{weekSevenGateAsChannel}
++\define{weekSevenGateAsChannel}
++
++\newslide{The Gate Is a Channel}
++
++\slides{Input: which region a molecule arrives from. Output: which region it leaves into.}
++
++\slidesincremental{
++* Open hole, solid wall: one-to-one, $I(\text{in};\text{out})=2$ bits
++* Maxwell's gate: two-to-one, $I(\text{in};\text{out})=1$ bit
++* The lost bit: $H(\text{in}\mid\text{out})=1$ --- "came through, or bounced?"
++* Deterministic channel: capacity $=\log_2(\text{number of outputs reached})$
++}
++
++\notes{The phase-space map from the Liouville block is already a channel. Its input is the region a molecule arrives from, A, B, C or D. Its output is the region it leaves into. Suppose the four arrivals are equally likely, so $H(\text{in})=2$ bits. The open hole and the solid wall are one-to-one: knowing where a molecule left tells you exactly where it came from, so $I(\text{in};\text{out})=H(\text{in})=2$ bits. Maxwell's gate sends A and C to one output and B and D to another. Now $I(\text{in};\text{out})=1$ bit, and one bit is left over, $H(\text{in}\mid\text{out})=1$: given a fast molecule leaving to the right, did it come through or bounce? That is the merge we saw in the picture, measured in bits. A deterministic channel has no noise, so its capacity is just $\log_2$ of the number of distinct outputs it can produce: 2 bits for the hole or the wall, 1 bit for the gate.}
++
++\speakernotes{Point back at the four-panel map. Same picture, now with bits on it.}
++
++\newslide{No Later Processing Gets the Bit Back}
++
++\slides{$\text{in}\to\text{out}\to\text{anything computed from the gas}$ is a Markov chain.}
++
++\slidesincremental{
++* DPI: $I(\text{in};f(\text{out}))\le I(\text{in};\text{out})=1$ bit
++* A record $M$ kept by the gate: $I(\text{in};\text{out},M)=2$ bits
++* Wiping $M$ is another two-to-one channel: the bit is gone from $M$ too
++* Landauer says where it must go physically: the bath
++}
++
++\notes{Once the gate has acted, anything we later compute from the state of the gas is a function of the output. So $\text{in}\to\text{out}\to f(\text{out})$ is a Markov chain, and the data-processing inequality says no such computation can recover more than the 1 bit that survived. The only way to keep the missing bit is to store it somewhere else as the gate acts: a record $M$ of "let through" or "bounced". With the record, $I(\text{in};\text{out},M)=2$ bits and nothing has been lost; this is the middle panel of the memory figure. Wiping the record maps both of its states to "blank", another two-to-one channel, and the same inequality says the bit is now gone from the record as well. Information theory says the bit is lost from the system we are describing. Landauer's principle is the physical claim about where it goes: into the surroundings as heat.}
++
++\newslide{Liouville Is the Equality Case}
++
++\slides{Data processing loses information only when a step merges states.}
++
++\slidesincremental{
++* One-to-one step: DPI holds with equality (Hamiltonian flow, the hole, the wall)
++* Many-to-one step: strict loss (the gate, erasure, a coarse graining)
++* Coarse-grained second law: data processing applied step after step
++}
++
++\notes{This is the bridge between the physics and the information theory. The data-processing inequality says information can only be lost along a chain, and it is lost exactly when a step merges states that carried different information. Liouville's theorem says Hamiltonian mechanics never merges states: it is a one-to-one map that keeps volume. So mechanics is the equality case of the data-processing inequality. The fine-grained entropy of the pendulum cloud stays fixed for the same reason $I(\text{in};\text{out})$ stays at 2 bits through the open hole.
++
++Strict loss needs a merge. The gate merges. Erasure merges. And a coarse graining merges every state inside a cell. The rise in the pendulum's cell entropy is data processing applied to the cells, and the KL-decay notes below make that precise: with equal-volume cells, Liouville makes the cell-to-cell transitions doubly stochastic, and forgetting the detail inside the cells at each step makes the cell entropy rise.
++
++Two cautions. First, the bits here are bookkeeping in units of $\log 2$. Turning them into heat needs Boltzmann's constant and a temperature, and that step is Landauer's, not Shannon's. Second, phase space is continuous, so mutual information between exact states is infinite. The statements are about cells, or regions like A to D, not about exact points.}
++
++\speakernotes{This is the slide that joins the two halves of the course. If time is short, give the slogan: mechanics is the equality case; the second law lives in the merges.}
++
++\endif
