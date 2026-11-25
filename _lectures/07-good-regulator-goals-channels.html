@@ -133,6 +133,70 @@ sns.set_palette('colorblind')}-->
 <p>If the gas alone can’t hold the history, maybe something else can. Suppose the gate keeps a record each time it acts: “let through” or “bounced”. Now the joint state of the gas and the record is one-to-one again. A fast molecule leaving to the right with the record “bounced” came from C; with “let through” it came from A. No volume has been lost. It has been moved from the gas into the record.</p>
 <p>This is why Liouville sits so close to Landauer’s principle. A finite memory fills up. To keep the demon running in a cycle we have to reset the record to blank, and that reset is itself a two-to-one map: “let through” and “bounced” both go to “blank”. The merge is back, this time in the memory. The only way a reset can happen in a world governed by mechanics is if the lost volume is pushed into something else, usually a heat bath. Landauer’s figure of at least <span class="math inline">\(k_BT\ln 2\)</span> of heat per erased bit is the size of that push <span class="citation" data-cites="Landauer-irreversibility61">(Landauer, 1961)</span>. Bennett used this to put the demon’s cost at erasure rather than at measurement <span class="citation" data-cites="Bennett-thermodynamics82">(Bennett, 1982)</span>.</p>
 <p>Earman and Norton argue that this resolution assumes some of what it sets out to prove <span class="citation" data-cites="Earman-exorcist98 Earman-exorcist99">(Earman and Norton, 1999, 1998)</span>. That debate is real, and I don’t want to present the erasure story as settled. But the phase-space picture is not in dispute: the gate’s rule, on its own, throws away volume, and the volume has to go somewhere.</p>
+<p>A conventional AND gate takes two bits to one. Three of the four inputs give <span class="math inline">\(0\)</span>, so the output cannot tell us which input we had: the phase space has collapsed, and a bit has been lost. OR is the same, with three of the four inputs giving <span class="math inline">\(1\)</span>. Adding a single extra output bit does not rescue AND on its own. Four inputs need four distinct outputs, and one output bit for <span class="math inline">\(a\wedge b\)</span> plus one more bit can only be unique if the extra bit separates the three inputs that gave <span class="math inline">\(0\)</span>, which a single bit cannot do. The way out is to keep the inputs.</p>
+<p>The Toffoli gate takes three bits <span class="math inline">\((a,b,c)\)</span> to <span class="math inline">\((a,b,c\oplus ab)\)</span>: the first two bits pass through unchanged, and the third is flipped exactly when both <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are <span class="math inline">\(1\)</span>. Here <span class="math inline">\(\oplus\)</span> is addition modulo two (exclusive or). Setting <span class="math inline">\(c=0\)</span> gives the third output <span class="math inline">\(0\oplus ab=a\wedge b\)</span>, so the gate computes AND. Because <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are still in the output, the input can always be read back. The map is its own inverse: applying it twice gives <span class="math inline">\(c\oplus ab\oplus ab=c\)</span>.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: right;"><span class="math inline">\(a\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(b\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(c\)</span></th>
+<th style="text-align: left;">output <span class="math inline">\((a,\,b,\,c\oplus ab)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;"><span class="math inline">\((0,0,0)\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;"><span class="math inline">\((0,1,0)\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;"><span class="math inline">\((1,0,0)\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;"><span class="math inline">\((1,1,1)\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;"><span class="math inline">\((0,0,1)\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;"><span class="math inline">\((0,1,1)\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;"><span class="math inline">\((1,0,1)\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;"><span class="math inline">\((1,1,0)\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>All eight outputs are different, so the map is one-to-one. The first four rows are AND with the working bit <span class="math inline">\(c=0\)</span>: the third column of the output is <span class="math inline">\(a\wedge b\)</span>. The same trick works for XOR with less machinery. The map <span class="math inline">\((a,b)\mapsto(a,\,a\oplus b)\)</span> keeps <span class="math inline">\(a\)</span> and produces <span class="math inline">\(a\oplus b\)</span>, and <span class="math inline">\(b\)</span> is recovered as <span class="math inline">\(a\oplus(a\oplus b)\)</span>.</p>
+<p>The gate in the previous slide is the same situation. It merges two pasts into one present. Keeping a record of whether the molecule was let through or bounced is the extra bit that makes the map one-to-one, just as keeping <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> does for AND. Erasing that record is the step that has to be paid for. Classical reversible gates of this kind are the bridge to quantum gates, which are always reversible. Feynman’s lectures on computation give a clear account.</p>
 <div class="figure">
 <div id="detailed-balance-vs-stationary-figure" class="figure-frame">
 <object class="svgplot " data="https://mlatcl.github.io/iei/slides/diagrams/physics/detailed-balance-vs-stationary.svg" width="85%" style=" ">
@@ -341,6 +405,77 @@ H_\nu(\pi)-H_\nu(\pi&#39;)=\big[H(Z_\pi)-H(Z_{\pi&#39;})\big]-\big[\mathbb{E}_\p
 
 <h2 id="after-this-lecture">After This Lecture</h2>
 <p>No class test today. Quiz 4 is 1 December at the start of lecture 8: Weeks 6–7 as delivered (Fisher from Week 6; GRT overview / goal measure / Shannon / DPI from today). Week 8 after the quiz is unassessed: short limits synthesis, then no-barber motivation for von Neumann / quantum information, then course close.</p>
+<p><strong>Delivery note (24 November 2026).</strong> Clocks from the Whisper SRT of the Panopto recording (recording 00:00 is about 10:00). The first six minutes are room noise and ASR loops; usable speech starts about 00:07. Order as spoken: an opening on why the worksheets are open-ended; Quiz 3 feedback; the Worksheet 3 review (equal-numbers membrane argument, Liouville with the pendulum cloud and the coarse cells, the gate in phase space, reversible gates and the demon’s record, detailed balance versus stationarity, the trapdoor, the circularity warning, how the submissions were prompted); break; data-processing inequality and Shannon capacity, told in words from the board; Good Regulator overview; the goal measure. The gate-as-channel slides were not shown; the link to the demon was spoken in two sentences. The proof of the DPI, its form for distributions and the KL-decay account were not covered. The capacity plot on screen was the earlier version, which showed a negative mutual information; the slide has since been regenerated. The Good Regulator block absorbed a long account of Ashby’s group and homeostasis, a digression on teaching-led research, error- versus cause-controlled regulation (the travelator example), the dark-room problem, and two questions on whether requisite variety holds for both diagrams and on what separates <span class="math inline">\(D\)</span> from <span class="math inline">\(S\)</span> (a category-theoretic reading was floated, not developed). The goal measure was reached in the last six minutes: base measure <span class="math inline">\(\lambda\)</span>, goal <span class="math inline">\(\nu\ll\lambda\)</span>, reward as minus the log Radon–Nikodym derivative, and a quadratic reward as a Gaussian goal measure. The coarse-graining reading of reward (cell volumes, one good state in ten, requisite variety for coarse goals), the RL-recovery slide and the define-this-week slide were not reached. They are the opening of the Good Regulator material in the next treatment.</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Clock</th>
+<th>Block</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">00:00–00:07</td>
+<td>Room set-up, laptop blanked, ASR loops</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">00:07–00:16</td>
+<td>Why open-ended worksheets; plan for the day; preview of goal measure and Ashby</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">00:16–00:21</td>
+<td>Quiz 3 feedback (steam and nuclear spins; MaxEnt and non-equilibrium; the minus sign in the grouping identity)</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">00:21–00:34</td>
+<td>Worksheet 3 review: membrane argument; Liouville (pendulum cloud, coarse cells, Heisenberg aside); the gate in phase space</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">00:34–00:42</td>
+<td>Reversible gates (Toffoli, XOR), the demon’s record, Landauer; detailed balance versus stationarity</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">00:42–00:51</td>
+<td>Trapdoor; Ellis and circular arguments; coarse-graining questions from the room</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">00:51–01:02</td>
+<td>How the submissions were prompted (long first prompts, word limits, memory settings, model choice)</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">01:02–01:12</td>
+<td>Break</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">01:12–01:23</td>
+<td>Data-processing inequality; Shannon capacity; Gallager codes; DPI statement and sufficient statistic</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">01:23–01:33</td>
+<td>Good Regulator: <span class="math inline">\(D\)</span>, <span class="math inline">\(S\)</span>, <span class="math inline">\(A\)</span>, <span class="math inline">\(Z\)</span>; Ashby’s background; teaching-led research</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">01:33–01:46</td>
+<td>Error versus cause control; dark room; <span class="math inline">\(H(A\mid S)=0\)</span>; requisite variety and questions</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">01:46–01:52</td>
+<td><span class="math inline">\(D\)</span> versus <span class="math inline">\(S\)</span>; no time index; the slogan; the weak sense of model</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">01:52–01:58</td>
+<td>Goal measure; Radon–Nikodym; quadratic reward as Gaussian measure</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">01:58–02:00</td>
+<td>Close; Quiz 4 will be single-answer multiple choice</td>
+</tr>
+</tbody>
+</table>
 <h2 id="further-reading">Further Reading</h2>
 <ul>
 <li><p>noisy channel coding / capacity of <span class="citation" data-cites="Shannon-mathematical48">Shannon (1948)</span></p></li>

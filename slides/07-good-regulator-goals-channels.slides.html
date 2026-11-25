@@ -394,6 +394,31 @@ derive <span class="math inline">\(k_BT\ln 2\)</span>; say where it
 comes from.
 </aside>
 </section>
+<section id="reversible-gates-keep-the-bit" class="slide level2">
+<h2>Reversible Gates Keep the Bit</h2>
+<p>An AND gate loses a bit. A reversible gate keeps one more, and the
+demon’s record is that bit.</p>
+<div>
+<ul>
+<li class="fragment">AND and OR map four inputs to two outputs: they are
+not reversible</li>
+<li class="fragment">Toffoli gate: <span
+class="math inline">\((a,b,c)\mapsto(a,b,c\oplus ab)\)</span>; with
+<span class="math inline">\(c=0\)</span> the third output is <span
+class="math inline">\(a\wedge b\)</span></li>
+<li class="fragment">Keeping <span class="math inline">\(a\)</span> and
+<span class="math inline">\(b\)</span> makes the map one-to-one</li>
+<li class="fragment">The demon’s record plays the part of the kept
+bit</li>
+</ul>
+</div>
+<aside class="notes">
+Said live: classical gates that are reversible are Toffoli gates;
+quantum gates are always reversible. A live attempt to build the XOR
+case: keep one input and the XOR, and you can undo it. Feynman’s
+lectures on computation are the source.
+</aside>
+</section>
 <section id="detailed-balance" class="slide level2">
 <h2>Detailed Balance</h2>
 <p>At equilibrium, every transition is matched by its reverse. Not just

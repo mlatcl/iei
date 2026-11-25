@@ -264,7 +264,24 @@ Earman and Norton argue that this resolution assumes some of what it sets out to
 
 \speakernotes{Said live: classical gates that are reversible are Toffoli gates; quantum gates are always reversible. A live attempt to build the XOR case: keep one input and the XOR, and you can undo it. Feynman's lectures on computation are the source.}
 
-\notes{A conventional AND gate takes two bits to one. Three of the four inputs give $0$, so the output cannot tell us which input we had: the phase space has collapsed, and a bit has been lost. The same is true of OR. A reversible version keeps enough to run the map backwards. The Toffoli gate takes three bits $(a,b,c)$ to $(a,b,c\oplus ab)$. Set $c=0$ and the third output is exactly $a\wedge b$, but because $a$ and $b$ are still there, no information has been destroyed. For XOR the same idea is simpler: keep one input and the exclusive-or, $(a,b)\mapsto(a,a\oplus b)$, and the pair can be unpicked. The gate in the previous slide is the same situation. It merges two pasts into one present; keeping a record of whether the molecule was let through or bounced is the extra bit that makes the map one-to-one. Erasing that record is the step that has to be paid for.}
+\notes{A conventional AND gate takes two bits to one. Three of the four inputs give $0$, so the output cannot tell us which input we had: the phase space has collapsed, and a bit has been lost. OR is the same, with three of the four inputs giving $1$. Adding a single extra output bit does not rescue AND on its own. Four inputs need four distinct outputs, and one output bit for $a\wedge b$ plus one more bit can only be unique if the extra bit separates the three inputs that gave $0$, which a single bit cannot do. The way out is to keep the inputs.
+
+The Toffoli gate takes three bits $(a,b,c)$ to $(a,b,c\oplus ab)$: the first two bits pass through unchanged, and the third is flipped exactly when both $a$ and $b$ are $1$. Here $\oplus$ is addition modulo two (exclusive or). Setting $c=0$ gives the third output $0\oplus ab=a\wedge b$, so the gate computes AND. Because $a$ and $b$ are still in the output, the input can always be read back. The map is its own inverse: applying it twice gives $c\oplus ab\oplus ab=c$.
+
+| $a$ | $b$ | $c$ | output $(a,\,b,\,c\oplus ab)$ |
+|---:|---:|---:|:---|
+| 0 | 0 | 0 | $(0,0,0)$ |
+| 0 | 1 | 0 | $(0,1,0)$ |
+| 1 | 0 | 0 | $(1,0,0)$ |
+| 1 | 1 | 0 | $(1,1,1)$ |
+| 0 | 0 | 1 | $(0,0,1)$ |
+| 0 | 1 | 1 | $(0,1,1)$ |
+| 1 | 0 | 1 | $(1,0,1)$ |
+| 1 | 1 | 1 | $(1,1,0)$ |
+
+All eight outputs are different, so the map is one-to-one. The first four rows are AND with the working bit $c=0$: the third column of the output is $a\wedge b$. The same trick works for XOR with less machinery. The map $(a,b)\mapsto(a,\,a\oplus b)$ keeps $a$ and produces $a\oplus b$, and $b$ is recovered as $a\oplus(a\oplus b)$.
+
+The gate in the previous slide is the same situation. It merges two pasts into one present. Keeping a record of whether the molecule was let through or bounced is the extra bit that makes the map one-to-one, just as keeping $a$ and $b$ does for AND. Erasing that record is the step that has to be paid for. Classical reversible gates of this kind are the bridge to quantum gates, which are always reversible. Feynman's lectures on computation give a clear account.}
 
 \newslide{Detailed Balance}
 
